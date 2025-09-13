@@ -1,0 +1,93 @@
+.task1 {
+  color: #F6FC1C;
+  background-color: #083F54;
+  text-align: center;
+}
+
+.task2 {
+  position: relative;
+  width: 700px;
+  height: 500px;
+}
+
+.first {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 700px;
+  height: 500px;
+}
+.second {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 300px;
+}
+.task3 {
+  background-color: #000000;
+  display: inline-block;
+  
+}
+
+.red {
+  background: red;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.yellow {
+  background: yellow;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.green {
+  background: green;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.line{
+  background: #8B0000;
+  display: grid;
+  grid-template-columns: repeat(3,3fr);
+  height: 300px;
+  width: 300px;
+  
+}
+
+.one-first{
+  border-top: 7px solid black;
+  border-left: 7px solid black;
+}
+.one-second{
+  border-top: 7px solid black;
+  border-bottom: 7px solid black;
+}
+.one-third{
+  border-top: 7px solid black;
+  border-bottom: 7px solid black;
+}
+.two-first{
+  border-bottom: 7px solid black;
+  border-left: 7px solid black;
+}
+.two-second{
+  border-bottom: 7px solid black;
+}
+.two-third{
+  border-right: 7px solid black;
+}
+.three-first{
+  border-bottom: 7px solid black;
+}
+.three-second{
+  border-bottom: 7px solid black;
+}
+.three-third{
+  border-bottom: 7px solid black;
+  border-right: 7px solid black;
+}
+
