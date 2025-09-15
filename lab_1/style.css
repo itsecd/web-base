@@ -24,3 +24,36 @@ h2 {
     margin: 0 auto 30px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
+
+
+/* 2. Картинки */
+.images {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.images__container {
+    position: relative;
+    display: inline-block;
+    max-width: 300px;
+}
+
+.images__img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.images__img--bottom {
+    position: relative;
+    z-index: 1;
+}
+
+.images__img--top {
+    position: absolute;
+    top: 220px;
+    left: 15px;
+    opacity: 0.85;
+    z-index: 2;
+    transform: scale(1.4);
+}
