@@ -5,3 +5,57 @@ p{
     background-color: #741FD0;
 
 }
+
+.image_container{
+    position: relative;
+    height: auto;
+}
+
+
+.im1, .im2{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.im1{
+    top: 0;
+   
+}
+
+.im2{
+    top: 419px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
