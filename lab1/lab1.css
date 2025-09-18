@@ -27,35 +27,35 @@ p{
     top: 419px;
 }
 
+.traffic_lights{
+    position: relative;
+}
 
+#rectangle{
+    position: absolute;
+    width: 300px;
+	height: 700px;
+	background: rgb(98, 101, 100);
+}
 
+.circle{
+    position: relative;
+    left: 50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+}
+#circleR{
+    background: red;
+    top: 25px;
+}
 
+#circleY{
+	background: yellow;
+    top: 50px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#circleG{
+	background: green;
+    top: 75px;
+}
