@@ -142,40 +142,18 @@ body {
     background: #f8f9fa;
 }
 
-.maze__cell_1 {
+.maze__cell_border-left {
     border-left: 3px solid #2c3e50;
 }
 
-.maze__cell_2 {
-    border-left: 3px solid #2c3e50;
+.maze__cell_border-top {
     border-top: 3px solid #2c3e50;
 }
 
-.maze__cell_3 {
-    border-right: 3px solid #2c3e50;
-    border-top: 3px solid #2c3e50;
-}
-
-.maze__cell_4 {
-    border-left: 3px solid #2c3e50;
-}
-
-.maze__cell_6 {
-    border-left: 3px solid #2c3e50;
+.maze__cell_border-right {
     border-right: 3px solid #2c3e50;
 }
 
-.maze__cell_7 {
-    border-left: 3px solid #2c3e50;
+.maze__cell_border-bottom {
     border-bottom: 3px solid #2c3e50;
-}
-
-.maze__cell_8 {
-    border-top: 3px solid #2c3e50;
-    border-bottom: 3px solid #2c3e50;
-}
-
-.maze__cell_9 {
-    border-bottom: 3px solid #2c3e50;
-    border-left: 3px solid #2c3e50;
 }
