@@ -59,3 +59,70 @@ p{
 	background: green;
     top: 75px;
 }
+
+.maze {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.row {
+    display: flex;
+    
+}
+
+.block {
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+}
+
+
+#b1{
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+#b2{
+    border-bottom:none ;
+    border-right: none;
+    border-left: none;
+}
+
+#b3{
+    border-left: none ;
+    border-bottom: none;
+}
+
+#b4{
+    border-right: none;
+    border-bottom: none;
+}
+
+#b5{
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+}
+
+#b6{
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+}
+
+#b7{
+    border-right: none;
+    border-top: none;
+}
+
+#b8{
+    border-right: none;
+    border-left: none;
+}
+
+#b9{
+    border-bottom: none;
+    border-left: none;
+}
