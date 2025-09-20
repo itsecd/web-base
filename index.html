@@ -1,42 +1,48 @@
 <!doctype html>
-<html>
+<html lang="ru">
 <head>
-    <title>люблю яблоки</title>
+    <meta charset="UTF-8">
+    <title>Р»СЋР±Р»СЋ СЏР±Р»РѕРєРё</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div style="background-color: #3F4531; color: #8B2CD3; text-align: left; ">
+    <div class="text-block">
         <p>
-            JavaScript (аббр. JS) — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript (стандарт ECMA-262).
-            JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.
+            JavaScript (Р°Р±Р±СЂ. JS) вЂ” РјСѓР»СЊС‚РёРїР°СЂР°РґРёРіРјРµРЅРЅС‹Р№ СЏР·С‹Рє РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёСЏ. РџРѕРґРґРµСЂР¶РёРІР°РµС‚ РѕР±СЉРµРєС‚РЅРѕ-РѕСЂРёРµРЅС‚РёСЂРѕРІР°РЅРЅС‹Р№, РёРјРїРµСЂР°С‚РёРІРЅС‹Р№ Рё С„СѓРЅРєС†РёРѕРЅР°Р»СЊРЅС‹Р№ СЃС‚РёР»Рё. РЇРІР»СЏРµС‚СЃСЏ СЂРµР°Р»РёР·Р°С†РёРµР№ СЃРїРµС†РёС„РёРєР°С†РёРё ECMAScript (СЃС‚Р°РЅРґР°СЂС‚ ECMA-262).
+            JavaScript РѕР±С‹С‡РЅРѕ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РєР°Рє РІСЃС‚СЂР°РёРІР°РµРјС‹Р№ СЏР·С‹Рє РґР»СЏ РїСЂРѕРіСЂР°РјРјРЅРѕРіРѕ РґРѕСЃС‚СѓРїР° Рє РѕР±СЉРµРєС‚Р°Рј РїСЂРёР»РѕР¶РµРЅРёР№. РќР°РёР±РѕР»РµРµ С€РёСЂРѕРєРѕРµ РїСЂРёРјРµРЅРµРЅРёРµ РЅР°С…РѕРґРёС‚ РІ Р±СЂР°СѓР·РµСЂР°С… РєР°Рє СЏР·С‹Рє СЃС†РµРЅР°СЂРёРµРІ РґР»СЏ РїСЂРёРґР°РЅРёСЏ РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕСЃС‚Рё РІРµР±-СЃС‚СЂР°РЅРёС†Р°Рј.
         </p>
     </div>
 
-    <div style="position: relative;">
-        <img src="images/cat2.jpg" style="width: 300px;">
-        <img src="images/cat1.jpg" style="position: absolute; width: 100px; left: 100px;">
+    <div class="image-container">
+        <img src="images/cat2.jpg" class="image-main">
+        <img src="images/cat1.jpg" class="image-overlay">
     </div>
-    <div style="background: red; height: 100px;"></div>
-    <div style="background: yellow; height: 100px;"></div>
-    <div style="background: green; height: 100px;"></div>
-    Вход
-        <div>
-            <div style="width: 50px; height: 50px; border: 1px solid black; border-top: none; border-bottom: none; display: inline-block;"></div>
-            <div style="width: 50px; height: 50px; border: 1px solid black; border-left: none; border-right: none; display: inline-block;"></div>
-            <div style="width: 50px; height: 50px; border: 1px solid black; border-left: none; border-bottom: none; display: inline-block;"></div>
+
+    <div class="color-blocks">
+        <div class="color-block color-red"></div>
+        <div class="color-block color-yellow"></div>
+        <div class="color-block color-green"></div>
+    </div>
+
+    Р’С…РѕРґ
+    <div class="maze">
+        <div class="maze__row">
+            <div class="maze__cell maze__cell_no-top maze__cell_no-bottom"></div>
+            <div class="maze__cell maze__cell_no-left maze__cell_no-right"></div>
+            <div class="maze__cell maze__cell_no-left maze__cell_no-bottom"></div>
         </div>
-        <div>
-            <div style="width: 50px; height: 50px; border: 1px solid black; border-top: none; border-right: none; display: inline-block;"></div>
-            <div style="width: 50px; height: 50px; border: 1px solid black; border-top: none; border-left: none; border-bottom: none; display: inline-block;"></div>
-            <div style="width: 50px; height: 50px; border: 1px solid black; border-top: none; border-left: none; border-right: none; border-bottom: none; display: inline-block; "></div>
-            Выход
+        <div class="maze__row">
+            <div class="maze__cell maze__cell_no-top maze__cell_no-right"></div>
+            <div class="maze__cell maze__cell_no-top maze__cell_no-left maze__cell_no-bottom"></div>
+            <div class="maze__cell maze__cell_no-border"></div>
+            Р’С‹С…РѕРґ
         </div>
-        <div>
-            <div style="width: 50px; height: 50px; border: 1px solid black; border-top: none; border-right: none; display: inline-block;"></div>
-            <div style="width: 50px; height: 50px; border: 1px solid black; border-top: none; border-right: none; border-left: none; display: inline-block;"></div>
-            <div style="width: 50px; height: 50px; border: 1px solid black; border-top: none; border-left: none; display: inline-block;"></div>
+        <div class="maze__row">
+            <div class="maze__cell maze__cell_no-top maze__cell_no-right"></div>
+            <div class="maze__cell maze__cell_no-top maze__cell_no-right maze__cell_no-left"></div>
+            <div class="maze__cell maze__cell_no-top maze__cell_no-left"></div>
         </div>
-  
-    
+    </div>
 </body>
 </html>
