@@ -4,7 +4,116 @@
   color: #ece870;
 }
 
-.secondcat{
-    position:absolute;
-    top: 390px;
+.task2 {
+  position: relative;
+}
+
+.secondcat {
+  position: absolute;
+  top: 180px;
+}
+
+.redpart {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+
+.yellowpart {
+  background-color: yellow;
+  width: 100px;
+  height: 100px;
+}
+
+.greenpart {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+}
+
+.task4 {
+  position: relative;
+}
+
+.lefthigh {
+  position: absolute;
+  top: 50px;
+  width: 100px;
+  height: 100px;
+  border-left: medium solid black;
+  border-top: medium solid black;
+}
+
+.middlehigh {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+  border-top: medium solid black;
+}
+
+.righthigh {
+  position: absolute;
+  top: 50px;
+  left: 200px;
+  width: 100px;
+  height: 100px;
+  border-right: medium solid black;
+  border-top: medium solid black;
+}
+
+.leftmiddle {
+  position: absolute;
+  top: 150px;
+  width: 100px;
+  height: 100px;
+  border-left: medium solid black;
+}
+
+.middlemiddle {
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+  border-right: medium solid black;
+  border-bottom: medium solid black;
+}
+
+.rightmiddle {
+  position: absolute;
+  top: 150px;
+  left: 200px;
+  width: 100px;
+  height: 100px;
+}
+
+.leftlow {
+  position: absolute;
+  top: 250px;
+  width: 100px;
+  height: 100px;
+  border-left: medium solid black;
+  border-bottom: medium solid black;
+}
+
+.middlelow {
+  position: absolute;
+  top: 250px;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+  border-right: medium solid black;
+  border-bottom: medium solid black;
+}
+
+.rightlow {
+  position: absolute;
+  top: 250px;
+  left: 200px;
+  width: 100px;
+  height: 100px;
+  border-right: medium solid black;
+  border-bottom: medium solid black;
 }
