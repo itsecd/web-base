@@ -1,0 +1,73 @@
+.text-block {
+    background-color: #3F4531;
+    color: #8B2CD3;
+    text-align: left;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-main {
+    width: 300px;
+}
+
+.image-overlay {
+    position: absolute;
+    width: 100px;
+    left: 100px;
+}
+
+.color-blocks {
+}
+
+.color-block {
+    height: 100px;
+}
+
+.color-red {
+    background: red;
+}
+
+.color-yellow {
+    background: yellow;
+}
+
+.color-green {
+    background: green;
+}
+
+
+.maze {
+}
+
+.maze__row {
+}
+
+.maze__cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.maze__cell_no-top {
+    border-top: none;
+}
+
+.maze__cell_no-bottom {
+    border-bottom: none;
+}
+
+.maze__cell_no-left {
+    border-left: none;
+}
+
+.maze__cell_no-right {
+    border-right: none;
+}
+
+.maze__cell_no-border {
+    border: none;
+}
