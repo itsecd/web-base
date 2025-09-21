@@ -8,7 +8,6 @@
 </head>
 <body>
 
-
     <!-- 1. Текст -->
     <section class="text">
         <h2 class="text__title">JavaScript</h2>
@@ -24,47 +23,43 @@
         </p>
     </section>
 
-
     <!-- 2. Картинки -->
     <section class="images">
         <h2 class="images__title">Изображения</h2>
         <div class="images__container">
-            <img src="1.jpg" alt="Изображение 1" class="images__img images__img--top">
-            <img src="2.jpg" alt="Изображение 2" class="images__img images__img--bottom">
+            <img src="1.jpg" alt="Изображение 1" class="images__img images__img_top">
+            <img src="2.jpg" alt="Изображение 2" class="images__img images__img_bottom">
         </div>
     </section>
-
 
      <!-- 3. Светофор -->
     <section class="traffic-light">
         <h2 class="traffic-light__title">Светофор</h2>
-        <div class="traffic-light__light traffic-light__light--red"></div>
-        <div class="traffic-light__light traffic-light__light--yellow"></div>
-        <div class="traffic-light__light traffic-light__light--green"></div>
+        <div class="traffic-light__light traffic-light__light_red"></div>
+        <div class="traffic-light__light traffic-light__light_yellow"></div>
+        <div class="traffic-light__light traffic-light__light_green"></div>
     </section>
-
 
     <!-- 4. Лабиринт -->
     <section class="maze">
-        <h2>Лабиринт 3x3</h2>
-        <div class="maze-container">
+        <h2 class="maze__title">Лабиринт 3x3</h2>
+        <div class="maze__container">
             <!-- Первая строка -->
-            <div class="cell open-right"></div>
-            <div class="cell open-left open-bottom"></div>
-            <div class="cell open-bottom"></div>
+            <div class="maze__cell maze__cell_open-right"></div>
+            <div class="maze__cell maze__cell_open-left maze__cell_open-bottom"></div>
+            <div class="maze__cell maze__cell_open-bottom"></div>
 
             <!-- Вторая строка -->
-            <div class="cell"></div>
-            <div class="cell open-top open-right"></div>
-            <div class="cell open-left open-bottom"></div>
+            <div class="maze__cell"></div>
+            <div class="maze__cell maze__cell_open-top maze__cell_open-right"></div>
+            <div class="maze__cell maze__cell_open-left maze__cell_open-bottom"></div>
 
             <!-- Третья строка -->
-            <div class="cell"></div>
-            <div class="cell open-top"></div>
-            <div class="cell open-top"></div>
+            <div class="maze__cell"></div>
+            <div class="maze__cell maze__cell_open-top"></div>
+            <div class="maze__cell maze__cell_open-top"></div>
         </div>
     </section>
-
 
 </body>
 </html>

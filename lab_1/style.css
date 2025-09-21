@@ -12,7 +12,6 @@ h2 {
     margin-bottom: 10px;
 }
 
-
 /* 1. Текст */
 .text {
     background-color: #D765FE;
@@ -25,6 +24,8 @@ h2 {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
+.text__title { }
+.text__paragraph { }
 
 /* 2. Картинки */
 .images {
@@ -44,12 +45,12 @@ h2 {
     display: block;
 }
 
-.images__img--bottom {
+.images__img_bottom {
     position: relative;
     z-index: 1;
 }
 
-.images__img--top {
+.images__img_top {
     position: absolute;
     top: 220px;
     left: 15px;
@@ -57,7 +58,6 @@ h2 {
     z-index: 2;
     transform: scale(1.4);
 }
-
 
 /* 3. Светофор */
 .traffic-light {
@@ -74,18 +74,9 @@ h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.traffic-light__light--red {
-    background-color: red;
-}
-
-.traffic-light__light--yellow {
-    background-color: yellow;
-}
-
-.traffic-light__light--green {
-    background-color: green;
-}
-
+.traffic-light__light_red    { background-color: red; }
+.traffic-light__light_yellow { background-color: yellow; }
+.traffic-light__light_green  { background-color: green; }
 
 /* 4. Лабиринт */
 .maze {
@@ -93,7 +84,7 @@ h2 {
     margin-top: 30px;
 }
 
-.maze-container {
+.maze__container {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
@@ -101,17 +92,14 @@ h2 {
     margin: 0 auto;
 }
 
-.cell {
+.maze__cell {
     background-color: #fff;
     border: 3px solid #000;
     box-sizing: border-box;
 }
 
 /* Белые границы — проходы */
-.open-top { border-top: 3px solid #fff; }
-.open-right { border-right: 3px solid #fff; }
-.open-bottom { border-bottom: 3px solid #fff; }
-.open-left { border-left: 3px solid #fff; }
-
-
-
+.maze__cell_open-top    { border-top: 3px solid #fff; }
+.maze__cell_open-right  { border-right: 3px solid #fff; }
+.maze__cell_open-bottom { border-bottom: 3px solid #fff; }
+.maze__cell_open-left   { border-left: 3px solid #fff; }
