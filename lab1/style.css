@@ -5,16 +5,16 @@
     padding: 10px;
     text-align: center;
     margin-bottom: 20px;
-  }
-  
- .image-container {
-  position: relative;
-  width: 300px;   
-  height: 200px; 
-  margin-bottom: 20px; 
 }
 
-.image-container img {
+.image {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.image__item {
   position: absolute;
   top: 0;
   left: 0;
@@ -22,41 +22,43 @@
   height: 200px;
 }
 
-.image-container img:first-child {
+.image__item--front {
   opacity: 1;
 }
 
-.image-container img:last-child {
+.image__item--back {
   opacity: 0.5;
 }
-  
-  .traffic-light {
-    width: 100px;
-    background: black;
-    padding: 10px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-  }
-  .light {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin: 10px auto;
-  }
-  .red { background: red; }
-  .yellow { background: yellow; }
-  .green { background: green; }
-  
+
+.traffic-light {
+  width: 100px;
+  background: black;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.traffic-light__light {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px auto;
+}
+
+.traffic-light__light--red { background: red; }
+.traffic-light__light--yellow { background: yellow; }
+.traffic-light__light--green { background: green; }
+
+
 .maze {
   display: grid;
   grid-template-columns: repeat(3, 80px);
   grid-template-rows: repeat(3, 80px);
-
   width: fit-content;
   margin-top: 20px;
 }
 
-.maze div {
+.maze__cell {
   width: 80px;
   height: 80px;
   border: 2px solid black;
@@ -67,17 +69,15 @@
   font-size: 14px;
 }
 
-.open.top {
+.maze__cell--open-top {
   border-top: none;
 }
-.open.left {
+.maze__cell--open-left {
   border-left: none;
 }
-.open.right {
+.maze__cell--open-right {
   border-right: none;
 }
-.open.bottom {
+.maze__cell--open-bottom {
   border-bottom: none;
 }
-
-  
