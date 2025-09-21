@@ -1,93 +1,73 @@
-.task1 {
+.card__block {
   color: #F6FC1C;
   background-color: #083F54;
   text-align: center;
 }
 
-.task2 {
+.media__container {
   position: relative;
   width: 700px;
   height: 500px;
 }
 
-.first {
+.media__container_first {
   position: absolute;
   top: 0;
   left: 0;
   width: 700px;
   height: 500px;
 }
-.second {
+.media__container_second {
   position: absolute;
   top: 0;
   left: 0;
   width: 200px;
   height: 300px;
 }
-.task3 {
+.traffic-light {
+  display:flex;
+  flex-direction:column;
   background-color: #000000;
-  display: inline-block;
-  
-}
-
-.red {
-  background: red;
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-}
-.yellow {
-  background: yellow;
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-}
-.green {
-  background: green;
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-}
-
-.line{
-  background: #8B0000;
-  display: grid;
-  grid-template-columns: repeat(3,3fr);
   height: 300px;
-  width: 300px;
-  
+  width: 100px;
+}
+.traffic-light__element{
+  flex: 1; 
+  border-radius: 50%; 
+}
+.trafic__light_red {
+  background: red;
+}
+.trafic__light_yellow {
+  background: yellow;
+}
+.trafic__light_green {
+  background: green;
+}
+.line {
+    background: #8B0000;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 300px;
+    width: 300px;
 }
 
-.one-first{
-  border-top: 7px solid black;
-  border-left: 7px solid black;
-}
-.one-second{
-  border-top: 7px solid black;
-  border-bottom: 7px solid black;
-}
-.one-third{
-  border-top: 7px solid black;
-  border-bottom: 7px solid black;
-}
-.two-first{
-  border-bottom: 7px solid black;
-  border-left: 7px solid black;
-}
-.two-second{
-  border-bottom: 7px solid black;
-}
-.two-third{
-  border-right: 7px solid black;
-}
-.three-first{
-  border-bottom: 7px solid black;
-}
-.three-second{
-  border-bottom: 7px solid black;
-}
-.three-third{
-  border-bottom: 7px solid black;
-  border-right: 7px solid black;
+.maze__cell {
+    position: relative; 
 }
 
+.maze__cell_border-top {
+    border-top: 7px solid black;
+}
+
+.maze__cell_border-bottom {
+    border-bottom: 7px solid black;
+}
+
+.maze__cell_border-left {
+    border-left: 7px solid black;
+}
+
+.maze__cell_border-right {
+    border-right: 7px solid black;
+}
