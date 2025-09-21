@@ -1,0 +1,73 @@
+.card__block {
+  color: #F6FC1C;
+  background-color: #083F54;
+  text-align: center;
+}
+
+.media__container {
+  position: relative;
+  width: 700px;
+  height: 500px;
+}
+
+.media__container_first {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 700px;
+  height: 500px;
+}
+.media__container_second {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 300px;
+}
+.traffic-light {
+  display:flex;
+  flex-direction:column;
+  background-color: #000000;
+  height: 300px;
+  width: 100px;
+}
+.traffic-light__element{
+  flex: 1; 
+  border-radius: 50%; 
+}
+.trafic__light_red {
+  background: red;
+}
+.trafic__light_yellow {
+  background: yellow;
+}
+.trafic__light_green {
+  background: green;
+}
+.line {
+    background: #8B0000;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 300px;
+    width: 300px;
+}
+
+.maze__cell {
+    position: relative; 
+}
+
+.maze__cell_border-top {
+    border-top: 7px solid black;
+}
+
+.maze__cell_border-bottom {
+    border-bottom: 7px solid black;
+}
+
+.maze__cell_border-left {
+    border-left: 7px solid black;
+}
+
+.maze__cell_border-right {
+    border-right: 7px solid black;
+}
