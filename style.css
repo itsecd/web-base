@@ -1,0 +1,143 @@
+body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: white;
+            color: black;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .header__title {
+            color: #333;
+            margin: 0 0 10px 0;
+        }
+        
+        .header__subtitle {
+            color: #666;
+            margin: 0;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section__title {
+            color: #333;
+            margin: 0 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .text-block {
+            background-color: #FEB431;
+            color: #85A1B7;
+            text-align: center;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .text-block__paragraph {
+            margin: 0 0 15px 0;
+        }
+        
+        .text-block__paragraph:last-child {
+            margin-bottom: 0;
+        }
+        
+        .images-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin-bottom: 20px;
+            margin: 20px auto
+        }
+        
+        .images-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 200px;
+        }
+        
+        .images-container img:first-child {
+            opacity: 1;
+        }
+        
+        .images-container img:last-child {
+           opacity: 0.5;
+        }
+        
+        .traffic-light {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            background-color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            width: 100px;
+            margin: 20px auto;
+        }
+        
+        .traffic-light__light {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #000;
+        }
+        
+        .traffic-light__light--red {
+            background-color: #ff0000;
+        }
+        
+        .traffic-light__light--yellow {
+            background-color: #ffff00;
+        }
+        
+        .traffic-light__light--green {
+            background-color: #00ff00;
+        }
+        
+        .maze {
+            display: flex;
+            flex-direction: column;
+            width: 210px;
+        }
+        
+        .maze__row {
+            display: flex;
+        }
+        
+        .maze__cell {
+            width: 70px;
+            height: 70px;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .maze__cell--top {
+            border-top: 3px solid #000;
+        }
+        
+        .maze__cell--bottom {
+            border-bottom: 3px solid #000;
+        }
+        
+        .maze__cell--left {
+            border-left: 3px solid #000;
+        }
+        
+        .maze__cell--right {
+            border-right: 3px solid #000;
+        }
