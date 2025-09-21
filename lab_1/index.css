@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.text_title,
+.image_title,
+.traffic_lights_title,
+.maze_title {
+    color: #000204;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header_title{
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.header_person{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.text_main{
+    background-color: #A91FA3;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.text_main_major{
+    color: #ABC0B0;
+    line-height: 1.5;
+    margin-bottom: 7px;
+}
+
+.image_main {
+    position: relative;
+    height: 400px;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_main_1{
+    top: 230px;
+    left: calc(50% - 180px);
+    z-index: 2;
+    position: absolute;
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+.image_main_2{
+    top: 0;
+    left: calc(50% - 130px);
+    opacity: 0.9;
+    z-index: 1;
+    position: absolute;
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+.traffic_lights_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #131313;
+    width: 120px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.traffic_lights_major{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 10px;
+    background: #444;
+}
+
+.traffic_lights_red{
+    background: linear-gradient(to bottom, #eb3939, #ea0101);
+}
+
+.traffic_lights_yellow{
+    background: linear-gradient(to bottom, #ddcc2d, #f3df05);
+}
+
+.traffic_lights_green{
+    background: linear-gradient(to bottom, #62e62d, #029f07);
+}
+
+.maze_main{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 0;
+    margin: 30px auto;
+    width: 300px;
+}
+
+.maze_unit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background: #c4dcf4;
+}
+
+.maze_unit_1{
+    border-top: 3px solid #2c3e50;
+}
+
+.maze_unit_2{
+    border-right: 3px solid #2c3e50;
+    border-top: 3px solid #2c3e50;
+}
+
+.maze_unit_3{
+    border-top: 3px solid #2c3e50;
+}
+
+.maze_unit_4{
+    border-right: 3px solid #2c3e50;
+    border-left: 3px solid #2c3e50;
+}
+
+.maze_unit_5{
+    border-right: 3px solid #2c3e50;
+}
+
+.maze_unit_6{
+    border-right: 3px solid #2c3e50;
+}
+
+.maze_unit_7{
+    border-top: 3px solid #2c3e50;
+    border-left: 3px solid #2c3e50;
+    border-bottom: 3px solid #2c3e50;
+
+}
+
+.maze_unit_8{
+    border-bottom: 3px solid #2c3e50;
+}
+
+.maze_unit_9{
+    border-bottom: 3px solid #2c3e50;
+    border-right: 3px solid #2c3e50;
+}
