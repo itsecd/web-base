@@ -1,4 +1,3 @@
-/* Базовые стили */
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +16,6 @@ body {
     margin: 0 auto;
 }
 
-/* Стили для разделов */
 section {
     margin-bottom: 60px;
     padding: 20px;
@@ -161,8 +159,6 @@ section {
 .maze__cell--left {
     border-left: 4px solid #2c3e50;
 }
-
-/* Заголовки для наглядности */
 section::before {
     content: attr(class);
     display: block;
