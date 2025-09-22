@@ -1,26 +1,26 @@
 
-        .circle {
+        .color-circle {
             width: 50px;
             height: 50px;
             border-radius: 25px;
             margin: 10px;
         }
-        .red {
+        .color-circle_red {
             background-color: red;
         }
         
-        .yellow {
+        .color-circle_yellow {
             background-color: yellow;
         }
         
-        .green {
+        .color-circle_green {
             background-color: green;
         }
         
         .container {
             width: 1000px;
         }
-        .square{
+        .maze-cell{
              width: 100px;
             height: 100px;
             display:inline-block;
@@ -28,16 +28,17 @@
             margin-right:-4px;
             vertical-align: top;
         }
-        .bottom{
+        .maze-cell_border_bottom{
             border-bottom: 3px solid black;
         }
-        .right{
+        .maze-cell_border_right{
             border-right: 3px solid black;
         }
-        .left{
+        .maze-cell_border_left{
             border-left: 3px solid black;
         }
-        .top{
+        .maze-cell_border_top{
             border-top: 3px solid black;
         }
+         
          
