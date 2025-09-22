@@ -1,27 +1,27 @@
-.task1 {
-  background-color: #051F84;
+.task--1 {
+  background-color: #051f84;
   text-align: right;
-  color: #CEF25F;
+  color: #cef25f;
 }
 
-.task2 {
+.task--2 {
   text-align: right;
 }
 
-.container {
+.task__container {
   position: relative;
   width: 400px;
   margin-left: auto;
 }
 
-.cat2 {
+.cat__two {
   position: absolute;
   top: 338px;
 }
 
-.task3 {
-  text-align: right; 
-  margin-right: auto; 
+.task--3 {
+  text-align: right;
+  margin-right: auto;
 }
 
 .traffic-light {
@@ -32,7 +32,7 @@
   width: 80px;
 }
 
-.light {
+.traffic-light__light {
   width: 60px;
   height: 60px;
   margin: 10px auto;
@@ -40,19 +40,19 @@
   background-color: gray;
 }
 
-.red {
+.traffic-light__light--red {
   background-color: red;
 }
 
-.yellow {
+.traffic-light__light--yellow {
   background-color: yellow;
 }
 
-.green {
+.traffic-light__light--green {
   background-color: green;
 }
 
-.task4 {
+.task--4 {
   position: relative;
   text-align: right;
 }
@@ -65,25 +65,25 @@
   margin-left: auto;
 }
 
-.cell {
+.labyrinth__cell {
   border: 4px solid black;
   box-sizing: border-box;
   width: 120px;
   height: 120px;
 }
 
-.noleft {
+.labyrinth__cell--no-left {
   border-left: none;
 }
 
-.noright {
+.labyrinth__cell--no-right {
   border-right: none;
 }
 
-.notop {
+.labyrinth__cell--no-top {
   border-top: none;
 }
 
-.nobottom {
+.labyrinth__cell--no-bottom {
   border-bottom: none;
 }
