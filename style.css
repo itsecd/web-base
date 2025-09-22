@@ -1,0 +1,43 @@
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            margin: 10px;
+        }
+        .red {
+            background-color: red;
+        }
+        
+        .yellow {
+            background-color: yellow;
+        }
+        
+        .green {
+            background-color: green;
+        }
+        
+        .container {
+            width: 1000px;
+        }
+        .square{
+             width: 100px;
+            height: 100px;
+            display:inline-block;
+            margin-bottom:-3px;
+            margin-right:-4px;
+            vertical-align: top;
+        }
+        .bottom{
+            border-bottom: 3px solid black;
+        }
+        .right{
+            border-right: 3px solid black;
+        }
+        .left{
+            border-left: 3px solid black;
+        }
+        .top{
+            border-top: 3px solid black;
+        }
+         
