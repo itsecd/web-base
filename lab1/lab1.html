@@ -6,56 +6,82 @@
     <title>Lab1</title>
     <link rel="stylesheet" href="lab1.css" />
   </head>
+
   <body>
-    <div class="task1">
-      <h1>Задание 1</h1>
-      <text
-        >JavaScript (аббр. JS) — мультипарадигменный язык программирования. 
-        Поддерживает объектно-ориентированный, императивный и функциональный стили. 
-        Является реализацией спецификации ECMAScript (стандарт ECMA-262).
-        JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. 
-        Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.
-        </text
-      >
+    <div class="task task--1">
+      <h1 class="task__title">Задание 1</h1>
+      <p class="task__text">
+        JavaScript (аббр. JS) — мультипарадигменный язык программирования.
+        Поддерживает объектно-ориентированный, императивный и функциональный
+        стили. Является реализацией спецификации ECMAScript (стандарт ECMA-262).
+        JavaScript обычно используется как встраиваемый язык для программного
+        доступа к объектам приложений. Наиболее широкое применение находит в
+        браузерах как язык сценариев для придания интерактивности веб-страницам.
+      </p>
     </div>
-    <div class="task2">
-    <div class="container">
-      <h1>Задание 2</h1>
-      <div class="cat1">
-        <img
-          src="cd16121609a79d95dffbfa28a326331e.jpg"
-          width="400"
-          height="500"
-        />
-        <div class="cat2">
+
+    <div class="task task--2">
+      <div class="task__container">
+        <h1 class="task__title">Задание 2</h1>
+        <div class="cat__one">
           <img
-            src="164648-kot-kotenok-privlekatelnost-golova-glaz-3840x2160.jpg"
-            width="330"
-            height="220"
+            class="cat__image cat__image--large"
+            src="cd16121609a79d95dffbfa28a326331e.jpg"
+            width="400"
+            height="500"
           />
+          <div class="cat__two">
+            <img
+              class="cat__image cat__image--small"
+              src="164648-kot-kotenok-privlekatelnost-golova-glaz-3840x2160.jpg"
+              width="330"
+              height="220"
+            />
+          </div>
         </div>
       </div>
     </div>
-    <div class="task3">
-      <h1>Задание 3</h1>
-        <div class="traffic-light">
-        <div class="light red"></div>
-        <div class="light yellow"></div>
-        <div class="light green"></div>
+
+    <div class="task task--3">
+      <h1 class="task__title">Задание 3</h1>
+      <div class="traffic-light">
+        <div class="traffic-light__light traffic-light__light--red"></div>
+        <div class="traffic-light__light traffic-light__light--yellow"></div>
+        <div class="traffic-light__light traffic-light__light--green"></div>
+      </div>
     </div>
-    </div>
-    <div class="task4">
-      <h1>Задание 4</h1>
-        <div class="labyrinth">
-        <div class="cell noleft nobottom noright"></div>
-        <div class="cell nobottom noright noleft"></div>
-        <div class="cell nobottom noleft"></div>
-        <div class="cell notop nobottom noright"></div>
-        <div class="cell noright nobottom"></div>
-        <div class="cell noleft notop nobottom"></div>
-        <div class="cell notop noright"></div>
-        <div class="cell noleft noright"></div>
-        <div class="cell noleft nobottom"></div>
+
+    <div class="task task--4">
+      <h1 class="task__title">Задание 4</h1>
+      <div class="labyrinth">
+        <div
+          class="labyrinth__cell labyrinth__cell--no-left labyrinth__cell--no-bottom labyrinth__cell--no-right"
+        ></div>
+        <div
+          class="labyrinth__cell labyrinth__cell--no-bottom labyrinth__cell--no-right labyrinth__cell--no-left"
+        ></div>
+        <div
+          class="labyrinth__cell labyrinth__cell--no-bottom labyrinth__cell--no-left"
+        ></div>
+        <div
+          class="labyrinth__cell labyrinth__cell--no-top labyrinth__cell--no-bottom labyrinth__cell--no-right"
+        ></div>
+        <div
+          class="labyrinth__cell labyrinth__cell--no-right labyrinth__cell--no-bottom"
+        ></div>
+        <div
+          class="labyrinth__cell labyrinth__cell--no-left labyrinth__cell--no-top labyrinth__cell--no-bottom"
+        ></div>
+        <div
+          class="labyrinth__cell labyrinth__cell--no-top labyrinth__cell--no-right"
+        ></div>
+        <div
+          class="labyrinth__cell labyrinth__cell--no-left labyrinth__cell--no-right"
+        ></div>
+        <div
+          class="labyrinth__cell labyrinth__cell--no-left labyrinth__cell--no-bottom"
+        ></div>
+      </div>
     </div>
   </body>
 </html>
