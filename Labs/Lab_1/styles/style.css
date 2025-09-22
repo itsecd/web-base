@@ -20,4 +20,23 @@ section {
             position: absolute;
             z-index: 1;
             width: 200px;
+        }
+.RedBlock {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+
+}
+.YellowBlock {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+}
+.BlueBlock {
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
 }
