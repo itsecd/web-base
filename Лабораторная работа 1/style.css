@@ -6,7 +6,7 @@
 
 .content-block {
   border: 10px solid white;
-  position:relative;
+  position: relative;
   height: 400px;
   width: 400px;
 }
@@ -51,8 +51,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  position: relative;
-  top: 5px;
   height: 300px;
   width: 300px;
   background-color: lightblue;
