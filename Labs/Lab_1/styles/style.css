@@ -10,3 +10,14 @@ section {
             background-color: #AF9D3E;
             display: inline-block;
         }
+.UpPic {
+            position: absolute;
+            z-index: 2;
+            left: 50px;
+            width: 100px;
+        }
+.DownPic {
+            position: absolute;
+            z-index: 1;
+            width: 200px;
+}
