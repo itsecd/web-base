@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  margin: 0;
+  margin: 0 auto;
   padding: 20px;
   background-color: white;
   color: black;
@@ -94,15 +94,15 @@ body {
   border: 2px solid #000;
 }
 
-.traffic-light__light--red {
+.traffic-light__light__red {
   background-color: #ff0000;
 }
 
-.traffic-light__light--yellow {
+.traffic-light__light__yellow {
   background-color: #ffff00;
 }
 
-.traffic-light__light--green {
+.traffic-light__light__green {
   background-color: #00ff00;
 }
 
@@ -110,6 +110,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 210px;
+  margin: 20px auto;
 }
 
 .maze__row {
@@ -125,18 +126,18 @@ body {
   justify-content: center;
 }
 
-.maze__cell--top {
+.maze__cell__top {
   border-top: 3px solid #000;
 }
 
-.maze__cell--bottom {
+.maze__cell__bottom {
   border-bottom: 3px solid #000;
 }
 
-.maze__cell--left {
+.maze__cell__left {
   border-left: 3px solid #000;
 }
 
-.maze__cell--right {
+.maze__cell__right {
   border-right: 3px solid #000;
 }
