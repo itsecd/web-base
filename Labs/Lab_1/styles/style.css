@@ -1,0 +1,12 @@
+/* style.css */
+section {
+            display: block;
+            text-align: left;
+            margin: 10px;
+            padding: 10px;
+        }        
+.styled-text {
+            color: #75256C;
+            background-color: #AF9D3E;
+            display: inline-block;
+        }
