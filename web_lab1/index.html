@@ -17,7 +17,7 @@
       браузерах как язык сценариев для придания интерактивности веб-страницам.
     </div>
 
-    <div class="image-container">
+    <div class="image">
       <img class="image image--first" src="kot.jpg" />
       <img class="image image--second" src="kot2.jpg" />
     </div>
@@ -28,16 +28,18 @@
       <div class="traffic-light__light traffic-light__light--green"></div>
     </div>
 
-    <div class="maze">
-      <div class="maze__cell"></div>
-      <div class="maze__cell"></div>
-      <div class="maze__cell"></div>
-      <div class="maze__cell"></div>
-      <div class="maze__cell"></div>
-      <div class="maze__cell"></div>
-      <div class="maze__cell"></div>
-      <div class="maze__cell"></div>
-      <div class="maze__cell"></div>
-    </div>
+<div class="maze">
+    <div class="maze__cell maze__cell--no-left maze__cell--no-right maze__cell--no-bottom"></div>
+    <div class="maze__cell maze__cell--no-right maze__cell--no-bottom"></div>
+    <div class="maze__cell maze__cell--no-bottom maze__cell--no-left"></div>
+    
+    <div class="maze__cell maze__cell--no-bottom maze__cell--no-right maze__cell--no-top"></div>
+    <div class="maze__cell maze__cell--no-left maze__cell--no-bottom maze__cell--no-right"></div>
+    <div class="maze__cell maze__cell--no-left maze__cell--no-bottom maze__cell--no-top"></div>
+    
+    <div class="maze__cell maze__cell--no-bottom maze__cell--no-right "></div>
+    <div class="maze__cell maze__cell--no-left maze__cell--no-top maze__cell--no-right"></div>
+    <div class="maze__cell maze__cell--no-top"></div>
+</div>
   </body>
 </html>

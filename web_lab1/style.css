@@ -50,67 +50,35 @@
   background-color: #33ff33;
 }
 
+/* Блок maze */
 .maze {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3, 100px);
-  margin: 20px;
+  gap: 0;
+  margin-bottom: 20px;
 }
 
+/* Элемент cell внутри maze */
 .maze__cell {
   height: 100px;
-  width: 100px;
   box-sizing: border-box;
-  border: none;
-  border-top: 2px solid black;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
+  border: 2px solid black;
 }
 
-.maze__cell:nth-child(1) {
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
-}
-.maze__cell:nth-child(2) {
-  border-bottom: none;
-  border-right: none;
-}
-
-.maze__cell:nth-child(3) {
-  border-bottom: none;
-  border-left: none;
-}
-
-.maze__cell:nth-child(4) {
-  border-right: none;
-  border-bottom: none;
+/* Модификаторы для скрытия границ */
+.maze__cell--no-top {
   border-top: none;
 }
 
-.maze__cell:nth-child(5) {
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
-}
-
-.maze__cell:nth-child(6) {
-  border-left: none;
-  border-top: none;
-  border-bottom: none;
-}
-
-.maze__cell:nth-child(7) {
-  border-bottom: none;
+.maze__cell--no-right {
   border-right: none;
 }
 
-.maze__cell:nth-child(8) {
-  border-left: none;
-  border-top: none;
-  border-right: none;
+.maze__cell--no-bottom {
+  border-bottom: none;
 }
-.maze__cell:nth-child(9) {
-  border-top: none;
+
+.maze__cell--no-left {
+  border-left: none;
 }
