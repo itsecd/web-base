@@ -1,172 +1,176 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    padding: 20px;
-    background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #f5f5f5;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-title {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.main-subtitle {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 18px;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+.section-title {
+  color: #2c3e50;
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #bdc3c7;
+  text-align: center;
+  font-weight: bold;
 }
 
 section {
-    margin-bottom: 60px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 60px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Задание 1: Текстовый блок с выравниванием по ЛЕВОМУ краю */
+/* Задание 1: Текстовый блок */
 .text-section {
-    border: 2px solid #3D5D93;
+  border: 2px solid #3d5d93;
 }
 
 .text-block {
-    padding: 30px;
-    background-color: #6F4700; /* Цвет заднего фона */
-    border-radius: 8px;
+  padding: 30px;
+  background-color: #6f4700;
+  border-radius: 8px;
 }
 
 .text-block__content {
-    color: #3D5D93; /* Цвет текста */
-    text-align: left; /* Выравнивание по левому краю */
-    font-size: 18px;
-    line-height: 1.8;
-    margin: 0;
+  color: #3d5d93;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 0;
 }
 
 /* Задание 2: Накладывающиеся картинки */
 .images-section {
-    position: relative;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  border: 2px solid #3498db;
 }
 
 .images-container {
-    position: relative;
-    width: 500px;
-    height: 350px;
+  position: relative;
+  width: 500px;
+  height: 350px;
+  margin: 0 auto;
 }
 
 .image {
-    position: absolute;
-    width: 350px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  position: absolute;
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .image--first {
-    top: 20px;
-    left: 50px;
-    z-index: 2;
-    border: 5px solid #ff6b6b;
-    transform: rotate(-5deg);
+  top: 20px;
+  left: 50px;
+  z-index: 2;
+  border: 5px solid #ff6b6b;
+  transform: rotate(-5deg);
 }
 
 .image--second {
-    top: 70px;
-    left: 100px;
-    z-index: 1;
-    border: 5px solid #4ecdc4;
-    transform: rotate(3deg);
+  top: 70px;
+  left: 100px;
+  z-index: 1;
+  border: 5px solid #4ecdc4;
+  transform: rotate(3deg);
 }
 
 /* Задание 3: Светофор */
 .traffic-light-section {
-    display: flex;
-    justify-content: center;
+  border: 2px solid #e74c3c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .traffic-light {
-    width: 120px;
-    background-color: #2c3e50;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  width: 120px;
+  background-color: #2c3e50;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .traffic-light__light {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    margin: 15px auto;
-    border: 3px solid #000;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 15px auto;
+  border: 3px solid #000;
 }
 
 .traffic-light__light--red {
-    background-color: #ff4757;
-    background: radial-gradient(circle at 30% 30%, #ff6b6b, #ff4757);
+  background: radial-gradient(circle at 30% 30%, #ff6b6b, #ff4757);
 }
 
 .traffic-light__light--yellow {
-    background-color: #ffa502;
-    background: radial-gradient(circle at 30% 30%, #ffd166, #ffa502);
+  background: radial-gradient(circle at 30% 30%, #ffd166, #ffa502);
 }
 
 .traffic-light__light--green {
-    background-color: #2ed573;
-    background: radial-gradient(circle at 30% 30%, #7bed9f, #2ed573);
+  background: radial-gradient(circle at 30% 30%, #7bed9f, #2ed573);
 }
 
-/* Задание 4: Лабиринт 3x3 */
-.maze-section {
-    display: flex;
-    justify-content: center;
-}
-
+/* Задание 4: Настоящий лабиринт */
 .maze {
-    width: 300px;
-    background-color: #ecf0f1;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.maze__row {
-    display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  width: fit-content;
+  margin-top: 20px;
 }
 
 .maze__cell {
-    width: 100px;
-    height: 100px;
-    border: 2px solid transparent;
-    background-color: white;
+  width: 80px;
+  height: 80px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
 }
 
-.maze__cell--top {
-    border-top: 4px solid #2c3e50;
+.maze__cell--open-top {
+  border-top: none;
 }
-
-.maze__cell--right {
-    border-right: 4px solid #2c3e50;
+.maze__cell--open-left {
+  border-left: none;
 }
-
-.maze__cell--bottom {
-    border-bottom: 4px solid #2c3e50;
+.maze__cell--open-right {
+  border-right: none;
 }
-
-.maze__cell--left {
-    border-left: 4px solid #2c3e50;
-}
-section::before {
-    content: attr(class);
-    display: block;
-    font-weight: bold;
-    font-size: 20px;
-    color: #2c3e50;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #bdc3c7;
-    text-transform: capitalize;
+.maze__cell--open-bottom {
+  border-bottom: none;
 }
