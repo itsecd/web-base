@@ -94,15 +94,15 @@ body {
   border: 2px solid #000;
 }
 
-.traffic-light__light__red {
+.traffic-light__light_red {
   background-color: #ff0000;
 }
 
-.traffic-light__light__yellow {
+.traffic-light__light_yellow {
   background-color: #ffff00;
 }
 
-.traffic-light__light__green {
+.traffic-light__light_green {
   background-color: #00ff00;
 }
 
@@ -120,24 +120,23 @@ body {
 .maze__cell {
   width: 70px;
   height: 70px;
-  border: 1px solid #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.maze__cell__top {
+.maze__cell_top {
   border-top: 3px solid #000;
 }
 
-.maze__cell__bottom {
+.maze__cell_bottom {
   border-bottom: 3px solid #000;
 }
 
-.maze__cell__left {
+.maze__cell_left {
   border-left: 3px solid #000;
 }
 
-.maze__cell__right {
+.maze__cell_right {
   border-right: 3px solid #000;
 }
