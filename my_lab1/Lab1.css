@@ -1,119 +1,85 @@
-.task1 {
+.texttask {
   background-color: #f4bc92;
   text-align: justify;
   color: #ece870;
 }
 
-.task2 {
+.catstask {
   position: relative;
 }
 
-.secondcat {
+.catstask_secondcat {
   position: absolute;
-  top: 180px;
+  top: 120px;
 }
 
-.redpart {
+.trafficlight {
+  background-color: #49432d;
+  width: 100px;
+}
+
+.traficlight_size {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+
+.trafficlight_red {
   background-color: red;
-  width: 100px;
-  height: 100px;
 }
 
-.yellowpart {
+.trafficlight_yellow {
   background-color: yellow;
-  width: 100px;
-  height: 100px;
 }
 
-.greenpart {
+.trafficlight_green {
   background-color: green;
-  width: 100px;
-  height: 100px;
 }
 
-.task4 {
+.maze {
   position: relative;
 }
 
-.lefthigh {
-  position: absolute;
-  top: 50px;
+.maze_cell {
   width: 100px;
   height: 100px;
-  border-left: medium solid black;
-  border-top: medium solid black;
 }
 
-.middlehigh {
-  position: absolute;
-  top: 50px;
-  left: 100px;
-  width: 100px;
-  height: 100px;
-  border-top: medium solid black;
-}
-
-.righthigh {
-  position: absolute;
-  top: 50px;
-  left: 200px;
-  width: 100px;
-  height: 100px;
-  border-right: medium solid black;
-  border-top: medium solid black;
-}
-
-.leftmiddle {
-  position: absolute;
-  top: 150px;
-  width: 100px;
-  height: 100px;
+.maze_cell_border-left {
   border-left: medium solid black;
 }
 
-.middlemiddle {
+.maze_cell_border-right {
+  border-right: medium solid black;
+}
+
+.maze_cell_border-top {
+  border-top: medium solid black;
+}
+
+.maze_cell_border-bottom {
+  border-bottom: medium solid black;
+}
+
+.maze_cell_firstline {
+  position: absolute;
+  top: 50px;
+}
+
+.maze_cell_secondline {
   position: absolute;
   top: 150px;
+}
+
+.maze_cell_thirdline {
+  position: absolute;
+  top: 250px;
+}
+
+.maze_cell_secondcolumn{
   left: 100px;
-  width: 100px;
-  height: 100px;
-  border-right: medium solid black;
-  border-bottom: medium solid black;
 }
 
-.rightmiddle {
-  position: absolute;
-  top: 150px;
+.maze_cell_thirdcolumn{
   left: 200px;
-  width: 100px;
-  height: 100px;
-}
-
-.leftlow {
-  position: absolute;
-  top: 250px;
-  width: 100px;
-  height: 100px;
-  border-left: medium solid black;
-  border-bottom: medium solid black;
-}
-
-.middlelow {
-  position: absolute;
-  top: 250px;
-  left: 100px;
-  width: 100px;
-  height: 100px;
-  border-right: medium solid black;
-  border-bottom: medium solid black;
-}
-
-.rightlow {
-  position: absolute;
-  top: 250px;
-  left: 200px;
-  width: 100px;
-  height: 100px;
-  border-right: medium solid black;
-  border-bottom: medium solid black;
 }
