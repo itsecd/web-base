@@ -35,15 +35,15 @@
   border-radius: 50%;
 }
 
-.traffic-light__circle--red {
+.traffic-light__circle_red {
   background-color: red;
 }
 
-.traffic-light__circle--orange {
+.traffic-light__circle_orange {
   background-color: orange;
 }
 
-.traffic-light__circle--green {
+.traffic-light__circle_green {
   background-color: green;
 }
 
@@ -64,18 +64,18 @@
   border: 2px solid brown;
 }
 
-.labyrinth__cell--without-right {
+.labyrinth__cell_without-right {
   border-right: none;
 }
 
-.labyrinth__cell--without-left {
+.labyrinth__cell_without-left {
   border-left: none;
 }
 
-.labyrinth__cell--without-bottom {
+.labyrinth__cell_without-bottom {
   border-bottom: none;
 }
 
-.labyrinth__cell--without-top {
+.labyrinth__cell_without-top {
   border-top: none;
 }
