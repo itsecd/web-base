@@ -100,7 +100,7 @@
     background: linear-gradient(to bottom, #62e62d, #029f07);
 }
 
-.maze_main{
+.maze{
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
@@ -114,47 +114,21 @@
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    background: #c4dcf4;
+    background: #f8f9fa;
 }
 
-.maze_unit_1{
-    border-top: 3px solid #2c3e50;
+.maze_cell_border-top{
+    border-top: 7px solid #03276583;
 }
 
-.maze_unit_2{
-    border-right: 3px solid #2c3e50;
-    border-top: 3px solid #2c3e50;
+.maze_cell_border-left{
+    border-left: 7px solid #03276583;
 }
 
-.maze_unit_3{
-    border-top: 3px solid #2c3e50;
+.maze_cell_border-right{
+    border-right: 7px solid #03276583;
 }
 
-.maze_unit_4{
-    border-right: 3px solid #2c3e50;
-    border-left: 3px solid #2c3e50;
-}
-
-.maze_unit_5{
-    border-right: 3px solid #2c3e50;
-}
-
-.maze_unit_6{
-    border-right: 3px solid #2c3e50;
-}
-
-.maze_unit_7{
-    border-top: 3px solid #2c3e50;
-    border-left: 3px solid #2c3e50;
-    border-bottom: 3px solid #2c3e50;
-
-}
-
-.maze_unit_8{
-    border-bottom: 3px solid #2c3e50;
-}
-
-.maze_unit_9{
-    border-bottom: 3px solid #2c3e50;
-    border-right: 3px solid #2c3e50;
+.maze_cell_border-bottom{
+    border-bottom: 7px solid #03276583;
 }
