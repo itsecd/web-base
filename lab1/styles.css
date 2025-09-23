@@ -38,7 +38,6 @@ html {
     animation-play-state: running;
     box-shadow: 5px 5px 2px rgb(139, 133, 133);
     border-radius: 2px;
-    
 }
 
 
@@ -78,87 +77,72 @@ html {
         text-shadow: 0 0 20px #fff, 0 0 30px #8b4dff, 0 0 40px #e14dff;
     }
 }
-.cat-image1 {
+
+.image__cat-image {
     image-rendering: optimizeQuality;
 }
 
-.cat-image2 {
-    image-rendering: optimizeQuality;
+.image__cat-image--back {
+    position: absolute;
+    z-index: 1;
+}
+
+.image__cat-image--front {
     position: relative;
-    flex-wrap: nowrap;
-    right: 20px;
-    bottom: 100px;
-    rotate: -13deg;
+    z-index: 2;
+    margin-top: 200px;
 }
 
-.lights {
+.trafficlight {
     display: inline-flexbox;
     background-color: rgb(53, 50, 50);
-    width: 110;
-    height: 320;
+    width: fit-content;
+    height: fit-content;
     padding: 5px;
 }
-.lights_light {
+.trafficlight__light {
     display: inline-flexbox;
     width: 100px;
     height: 100px;
     background: gray;
-    color: white;
-    margin: 5px;
-
+    margin: 10px;
 }
 
-#green { background: green; }
+.trafficlight__light--red { background: red; }
 
-#yellow { background: yellow; }
+.trafficlight__light--yellow { background: yellow; }
 
-#red { background: red; }
+.trafficlight__light--green { background: green; }
 
 .labyrinth {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    grid-gap: 3px
+    width: fit-content;
 }
-.labyrinth_room {
-    display: inline-flexbox;
+.labyrinth__room {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100px;
     height: 100px;
     background: gray;
-    border: gray solid 3px;
+    border: none;
+    box-sizing: border-box;
 }
 
-#room-1-1 {
-    border-left: black solid 3px;
+.labyrinth__room--top-wall {
+    border-top: black solid 10px;
 }
-#room-1-2 {
-    border-top: black solid 3px;
-    border-left: black solid 3px;
+
+.labyrinth__room--bottom-wall {
+    border-bottom: black solid 10px;
 }
-#room-1-3 {
-    border-top: black solid 3px;
-    border-right: black solid 3px;
+
+.labyrinth__room--left-wall {
+    border-left: black solid 10px;
 }
-#room-2-1 {
-    border-left: black solid 3px;
-}
-#room-2-2 {
-    border-right: black solid 3px;
-}
-#room-2-3 {
-    border-right: black solid 3px;
-    border-left: black solid 3px;
-}
-#room-3-1 {
-    border-left: black solid 3px;
-    border-bottom: black solid 3px;
-}
-#room-3-2 {
-    border-right: black solid 3px;
-    border-left: black solid 3px;
-    border-top: black solid 3px;
-}
-#room-3-3 {
-    border-bottom: black solid 3px;
-    border-right: black solid 3px;
+
+.labyrinth__room--right-wall {
+    border-right: black solid 10px;
 }
