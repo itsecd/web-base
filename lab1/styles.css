@@ -78,19 +78,29 @@ html {
     }
 }
 
-.image__cat-image {
-    image-rendering: optimizeQuality;
+.images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 500px;
 }
 
-.image__cat-image--back {
+.images__cat-image {
+    display: flex;
+    position: relative;
+    image-rendering: optimizeQuality;
+    
+}
+
+.images__cat-image--back {
     position: absolute;
     z-index: 1;
 }
 
-.image__cat-image--front {
-    position: relative;
+.images__cat-image--front {
     z-index: 2;
-    margin-top: 200px;
+    opacity: 80%;
 }
 
 .trafficlight {
@@ -131,18 +141,18 @@ html {
     box-sizing: border-box;
 }
 
-.labyrinth__room--top-wall {
+.top-border {
     border-top: black solid 10px;
 }
 
-.labyrinth__room--bottom-wall {
+.bottom-border {
     border-bottom: black solid 10px;
 }
 
-.labyrinth__room--left-wall {
+.left-border {
     border-left: black solid 10px;
 }
 
-.labyrinth__room--right-wall {
+.right-border {
     border-right: black solid 10px;
 }
