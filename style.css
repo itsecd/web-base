@@ -32,6 +32,7 @@ body {
   font-style: italic;
 }
 
+
 .section-title {
   color: #2c3e50;
   font-size: 24px;
@@ -51,10 +52,6 @@ section {
 }
 
 /* Задание 1: Текстовый блок */
-.text-section {
-  border: 2px solid #3d5d93;
-}
-
 .text-block {
   padding: 30px;
   background-color: #6f4700;
@@ -70,10 +67,6 @@ section {
 }
 
 /* Задание 2: Накладывающиеся картинки */
-.images-section {
-  border: 2px solid #3498db;
-}
-
 .images-container {
   position: relative;
   width: 500px;
@@ -90,7 +83,7 @@ section {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.image--first {
+.image_first {
   top: 20px;
   left: 50px;
   z-index: 2;
@@ -98,7 +91,7 @@ section {
   transform: rotate(-5deg);
 }
 
-.image--second {
+.image_second {
   top: 70px;
   left: 100px;
   z-index: 1;
@@ -107,8 +100,7 @@ section {
 }
 
 /* Задание 3: Светофор */
-.traffic-light-section {
-  border: 2px solid #e74c3c;
+.task-3 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,19 +122,25 @@ section {
   border: 3px solid #000;
 }
 
-.traffic-light__light--red {
+.traffic-light__light_red {
   background: radial-gradient(circle at 30% 30%, #ff6b6b, #ff4757);
 }
 
-.traffic-light__light--yellow {
+.traffic-light__light_yellow {
   background: radial-gradient(circle at 30% 30%, #ffd166, #ffa502);
 }
 
-.traffic-light__light--green {
+.traffic-light__light_green {
   background: radial-gradient(circle at 30% 30%, #7bed9f, #2ed573);
 }
 
-/* Задание 4: Настоящий лабиринт */
+/* Задание 4: лабиринт */
+.task-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .maze {
   display: grid;
   grid-template-columns: repeat(3, 80px);
@@ -162,15 +160,18 @@ section {
   font-size: 14px;
 }
 
-.maze__cell--open-top {
+.maze__cell_open-top {
   border-top: none;
 }
-.maze__cell--open-left {
+
+.maze__cell_open-left {
   border-left: none;
 }
-.maze__cell--open-right {
+
+.maze__cell_open-right {
   border-right: none;
 }
-.maze__cell--open-bottom {
+
+.maze__cell_open-bottom {
   border-bottom: none;
 }
