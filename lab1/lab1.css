@@ -1,27 +1,22 @@
-.task--1 {
+.task {
+  font-size: 20px;
+}
+
+.text {
   background-color: #051f84;
-  text-align: right;
   color: #cef25f;
-}
-
-.task--2 {
   text-align: right;
+  font-size: 20px;
 }
 
-.task__container {
+.cats__container {
   position: relative;
   width: 400px;
-  margin-left: auto;
 }
 
-.cat__two {
+.cat__small {
   position: absolute;
-  top: 338px;
-}
-
-.task--3 {
-  text-align: right;
-  margin-right: auto;
+  top: 353px;
 }
 
 .traffic-light {
@@ -40,21 +35,16 @@
   background-color: gray;
 }
 
-.traffic-light__light--red {
+.traffic-light__light_red {
   background-color: red;
 }
 
-.traffic-light__light--yellow {
+.traffic-light__light_yellow {
   background-color: yellow;
 }
 
-.traffic-light__light--green {
+.traffic-light__light_green {
   background-color: green;
-}
-
-.task--4 {
-  position: relative;
-  text-align: right;
 }
 
 .labyrinth {
@@ -62,7 +52,6 @@
   grid-template-columns: repeat(3, 120px);
   grid-template-rows: repeat(3, 120px);
   width: 360px;
-  margin-left: auto;
 }
 
 .labyrinth__cell {
@@ -72,18 +61,18 @@
   height: 120px;
 }
 
-.labyrinth__cell--no-left {
+.labyrinth__cell_no-left {
   border-left: none;
 }
 
-.labyrinth__cell--no-right {
+.labyrinth__cell_no-right {
   border-right: none;
 }
 
-.labyrinth__cell--no-top {
+.labyrinth__cell_no-top {
   border-top: none;
 }
 
-.labyrinth__cell--no-bottom {
+.labyrinth__cell_no-bottom {
   border-bottom: none;
 }
