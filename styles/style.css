@@ -1,0 +1,24 @@
+.text_block {
+    color: #BA26E2;
+    background-color: #21702C;
+    text-align: justify;
+    width:70%;
+    height: 30%;
+    font-size: large;
+}
+
+.image_1{
+    position: absolute;
+    top: ;
+    left: ;
+    width: 400px;
+    height: 500px;
+}
+
+.image_2 {
+    position: absolute;
+    top: ;
+    left: ;
+    width: 400px;
+    height: 500px;
+}
