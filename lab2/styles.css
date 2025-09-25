@@ -1,0 +1,21 @@
+html {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    padding: 2%;
+}
+
+.movie-franchises {
+    list-style-type: square;
+}
+
+.movie-franchises__franchise {
+    font-size: larger;
+    transition-property: color, text-shadow;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.movie-franchises__franchise:hover {
+    color: blueviolet;
+    text-shadow: 0 0 20px #fff, 0 0 30px #8b4dff, 0 0 40px #e14dff;
+}
