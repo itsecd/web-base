@@ -8,15 +8,33 @@
 }
 
 .image_1{
-    position: absolute;
+    position: relative;
     width: 384px;
     height: 216px;
 }
 
 .image_2 {
-    position: absolute;
+    position: relative;
     width: 118px;
     height: 209px;
-    top: 288px;
-    left: 133px;
+    left: -260px;
+    top: -3px;
+}
+
+.red_block{
+    background-color: red;
+    width: 300px;
+    height: 300px;
+}
+
+.yellow_block{  
+    background-color: yellow;
+    width: 300px;
+    height: 300px;
+}
+
+.green_block{ 
+    background-color: green;
+    width: 300px;
+    height: 300px;
 }
