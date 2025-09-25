@@ -9,16 +9,14 @@
 
 .image_1{
     position: absolute;
-    top: ;
-    left: ;
-    width: 400px;
-    height: 500px;
+    width: 384px;
+    height: 216px;
 }
 
 .image_2 {
     position: absolute;
-    top: ;
-    left: ;
-    width: 400px;
-    height: 500px;
+    width: 118px;
+    height: 209px;
+    top: 288px;
+    left: 133px;
 }
