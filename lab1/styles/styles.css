@@ -1,131 +1,124 @@
-.block-titl{
-    text-align: center;
-    padding: 3px 8px;
-    border-radius: 9px;
-    max-width: 3000px;
+.titl {
+  text-align: center;
+  padding: 3px 8px;
+  border-radius: 9px;
+  max-width: 3000px;
 }
 
 /*теккст*/
 
-.block-text {
-    color: #F6FC1C;
-    background-color: #083F54;
-    text-align: center;
-    padding: 25px 5px;
-    border-radius: 1000px;
-    max-width: 1000px;
-    margin: 0 auto; 
+.task-text {
+  color: #f6fc1c;
+  background-color: #083f54;
+  text-align: center;
+  padding: 25px 5px;
+  border-radius: 1000px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /*картинки*/
 
-.block-image{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 400px;
-    margin-top: -55px;
+.task-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  margin-top: -55px;
 }
 .image {
-    position: absolute;
-    max-width: 666px; 
+  position: absolute;
+  max-width: 666px;
 }
 .perv-image {
-    top: 195px;
-    z-index: 2;
-    width: 300px;
-    height: 200px;
+  top: 195px;
+  z-index: 2;
+  width: 300px;
+  height: 200px;
 }
 .vtor-image {
-    width: 200px;
-    height: 300px;
-    z-index: 1;
+  width: 200px;
+  height: 300px;
+  z-index: 1;
 }
 
 /*светофор*/
 
-.block-lights {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #282727;
-    width: 110px;
-    padding: 17px;
-    border-radius: 50px;
-    margin: 0 auto;
+.task-lights {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #282727;
+  width: 110px;
+  padding: 17px;
+  border-radius: 50px;
+  margin: 0 auto;
 }
 .lights {
-    width: 30px;
-    height: 30px;
-    padding: 20px;
-    border-radius: 50px;
-    margin: 5px;
+  width: 30px;
+  height: 30px;
+  padding: 20px;
+  border-radius: 50px;
+  margin: 5px;
 }
 .lights_red {
-    background: #FA0000;
-    box-shadow: 0 0 15px 6px rgba(250, 0, 0, 0.6);
+  background: #fa0000;
+  box-shadow: 0 0 15px 6px rgba(250, 0, 0, 0.6);
 }
 .lights_yellow {
-    background: #ffff00;
-    box-shadow: 0 0 15px 6px rgba(255, 255, 0, 0.6);
+  background: #ffff00;
+  box-shadow: 0 0 15px 6px rgba(255, 255, 0, 0.6);
 }
 .lights_green {
-    background: #00ff00;
-    box-shadow: 0 0 15px 6px rgba(0, 255, 0, 0.6);
+  background: #00ff00;
+  box-shadow: 0 0 15px 6px rgba(0, 255, 0, 0.6);
 }
 
 /*лабитринт*/
 
-.block-labyrinth {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 40px 0;
+.task-labyrinth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
 }
 
 .labyrinth__row {
-    display: flex;
+  display: flex;
 }
 
 .labyrinth__cell {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid black;
-    margin: -1px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  margin: -1px;
 }
 
 .labyrinth__cell_open-left {
-    border-left-color: transparent;
+  border-left-color: transparent;
 }
 
 .labyrinth__cell_open-right {
-    border-right-color: transparent;
+  border-right-color: transparent;
 }
 
 .labyrinth__cell_open-top {
-    border-top-color: transparent;
+  border-top-color: transparent;
 }
 
 .labyrinth__cell_open-bottom {
-    border-bottom-color: transparent;
+  border-bottom-color: transparent;
 }
 
 .labyrinth__cell_start {
-    border-left-color: transparent !important;
+  border-left-color: transparent !important;
 }
 
 .labyrinth__cell_end {
-    border-right-color: transparent !important;
+  border-right-color: transparent !important;
 }
-
-
-
-
-
-
-
