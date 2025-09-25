@@ -1,0 +1,130 @@
+﻿body {
+  background: #fff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.block-titl {
+  text-align: center;
+  padding: 5px;
+}
+
+/* Текст */
+.block-text {
+  color: #c4c26b;
+  background-color: #d765fe;
+  text-align: center;
+  padding: 25px 5px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 100px;
+}
+
+/* Картинки */
+.block-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  margin-top: -50px;
+}
+
+.image {
+  position: absolute;
+  max-width: 500px;
+}
+
+.first {
+  top: 195px;
+  z-index: 2;
+  width: 300px;
+  height: 200px;
+}
+
+.second {
+  width: 200px;
+  height: 300px;
+  z-index: 1;
+}
+
+/* Светофор */
+.block-lights {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #000;
+  width: 110px;
+  padding: 17px;
+  border-radius: 50px;
+  margin: 20px auto;
+}
+
+.lights {
+  width: 30px;
+  height: 30px;
+  padding: 20px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.lights_red {
+  background: rgb(255, 0, 0);
+  box-shadow: 0 0 15px 6px rgba(255, 0, 0, 0.6);
+}
+
+.lights_yellow {
+  background: rgb(255, 255, 0);
+  box-shadow: 0 0 15px 6px rgba(255, 255, 0, 0.6);
+}
+
+.lights_green {
+  background: rgb(0, 255, 0);
+  box-shadow: 0 0 15px 6px rgba(0, 255, 0, 0.6);
+}
+
+/* Лабиринт */
+.block-labyrinth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.labyrinth__row {
+  display: flex;
+}
+
+.labyrinth__cell {
+  width: 80px;
+  height: 80px;
+  border: 2px solid black;
+  margin: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.labyrinth__cell_open-left {
+  border-left-color: transparent;
+}
+
+.labyrinth__cell_open-right {
+  border-right-color: transparent;
+}
+
+.labyrinth__cell_open-top {
+  border-top-color: transparent;
+}
+
+.labyrinth__cell_open-bottom {
+  border-bottom-color: transparent;
+}
+
+.labyrinth__cell_start {
+  border-left-color: transparent !important;
+}
+
+.labyrinth__cell_end {
+  border-right-color: transparent !important;
+}
