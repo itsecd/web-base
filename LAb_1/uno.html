@@ -9,7 +9,7 @@
 <body>
     <section class="task task-1">
         <h2>Задание 1: Текст с оформлением</h2>
-        <div class="text-block">
+        <div class="task-1__text-block">
             <p>JavaScript (аббр. JS) - мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript (стандарт ECMA-262).</p>
             <p>JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.</p>
         </div>
@@ -17,10 +17,10 @@
 
     <section class="task task-2">
         <h2>Задание 2: Наложение картинок</h2>
-        <div class="images-container">
+        <div class="task-2__images-container">
             <div class="image-stack">
-                <img src="https://i.pinimg.com/236x/cd/16/12/cd16121609a79d95dffbfa28a326331e.jpg" alt="Изображение 2" class="image-bottom">
-                <img src="https://img2.akspic.ru/crops/8/4/6/4/6/164648/164648-kot-kotenok-privlekatelnost-golova-glaz-3840x2160.jpg" alt="Изображение 1" class="image-top">
+                <img src="https://i.pinimg.com/236x/cd/16/12/cd16121609a79d95dffbfa28a326331e.jpg" alt="Изображение 2" class="image-stack__image_bottom">
+                <img src="https://img2.akspic.ru/crops/8/4/6/4/6/164648/164648-kot-kotenok-privlekatelnost-golova-glaz-3840x2160.jpg" alt="Изображение 1" class="image-stack__image_top">
             </div>
         </div>
     </section>
@@ -28,29 +28,32 @@
     <section class="task task-3">
         <h2>Задание 3: Светофор</h2>
         <div class="traffic-light">
-            <div class="light red"></div>
-            <div class="light yellow"></div>
-            <div class="light green"></div>
+            <div class="traffic-light__light traffic-light__light_red"></div>
+            <div class="traffic-light__light traffic-light__light_yellow"></div>
+            <div class="traffic-light__light traffic-light__light_green"></div>
         </div>
     </section>
 
     <section class="task task-4">
         <h2>Задание 4: Лабиринт 3x3</h2>
         <div class="maze">
-            <div class="row">
-                <div class="cell top left"></div>
-                <div class="cell top"></div>
-                <div class="cell top right"></div>
+            
+            <div class="maze__row">
+                <div class="maze__cell maze__cell_wall-right maze__cell_wall-bottom"></div>
+                <div class="maze__cell maze__cell_wall-left maze__cell_wall-bottom"></div>
+                <div class="maze__cell maze__cell_wall-left maze__cell_wall-bottom"></div>
             </div>
-            <div class="row">
-                <div class="cell left"></div>
-                <div class="cell"></div>
-                <div class="cell right"></div>
+            
+            <div class="maze__row">
+                <div class="maze__cell maze__cell_wall-top maze__cell_wall-right"></div>
+                <div class="maze__cell maze__cell_wall-top maze__cell_wall-left maze__cell_wall-bottom"></div>
+                <div class="maze__cell maze__cell_wall-top maze__cell_wall-left maze__cell_wall-right"></div>
             </div>
-            <div class="row">
-                <div class="cell bottom left"></div>
-                <div class="cell bottom"></div>
-                <div class="cell bottom right"></div>
+           
+            <div class="maze__row">
+                <div class="maze__cell maze__cell_wall-top maze__cell_wall-right"></div>
+                <div class="maze__cell maze__cell_wall-top maze__cell_wall-left maze__cell_wall-right"></div>
+                <div class="maze__cell maze__cell_wall-top maze__cell_wall-left"></div>
             </div>
         </div>
     </section>

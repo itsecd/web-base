@@ -20,20 +20,20 @@ h2 {
     padding-bottom: 10px;
 }
 
-.task-1 .text-block {
-    background-color: #F4BC92; /* Цвет 20 варианта (фон) */
+.task-1__text-block {
+    background-color: #F4BC92;
     padding: 20px;
     border-radius: 5px;
 }
 
-.task-1 .text-block p {
-    color: #ECE870; /* Цвет 20 варианта (текст) */
+.task-1__text-block p {
+    color: #ECE870;
     text-align: justify;
     line-height: 1.6;
     margin: 10px 0;
 }
 
-.task-2 .images-container {
+.task-2__images-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,27 +46,26 @@ h2 {
     height: 200px;
 }
 
-.image-bottom {
+.image-stack__image_bottom {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; 
+    z-index: 1;
 }
 
-.image-top {
+.image-stack__image_top {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 200px;
     height: 150px;
-    z-index: 2; 
+    z-index: 2;
     border: 3px solid white;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
-
 
 .traffic-light {
     display: flex;
@@ -79,76 +78,53 @@ h2 {
     border-radius: 10px;
 }
 
-.light {
+.traffic-light__light {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     border: 3px solid #666;
 }
 
-.red {
+.traffic-light__light_red {
     background-color: #ff4444;
 }
 
-.yellow {
+.traffic-light__light_yellow {
     background-color: #ffcc00;
 }
 
-.green {
+.traffic-light__light_green {
     background-color: #44ff44;
 }
 
 .maze {
     display: inline-block;
     border: 2px solid #333;
+    background-color: #fff;
 }
 
-.row {
+.maze__row {
     display: flex;
 }
 
-.cell {
+.maze__cell {
     width: 80px;
     height: 80px;
     box-sizing: border-box;
 }
 
-.cell {
-    border: 1px solid transparent;
-}
-
-.cell.top {
+.maze__cell_wall-top {
     border-top: 2px solid #333;
 }
 
-.cell.bottom {
+.maze__cell_wall-bottom {
     border-bottom: 2px solid #333;
 }
 
-.cell.left {
+.maze__cell_wall-left {
     border-left: 2px solid #333;
 }
 
-.cell.right {
-    border-right: 2px solid #333;
-}
-
-.cell.top.left {
-    border-top: 2px solid #333;
-    border-left: 2px solid #333;
-}
-
-.cell.top.right {
-    border-top: 2px solid #333;
-    border-right: 2px solid #333;
-}
-
-.cell.bottom.left {
-    border-bottom: 2px solid #333;
-    border-left: 2px solid #333;
-}
-
-.cell.bottom.right {
-    border-bottom: 2px solid #333;
+.maze__cell_wall-right {
     border-right: 2px solid #333;
 }
