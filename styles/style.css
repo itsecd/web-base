@@ -22,33 +22,24 @@
 }
 
 .traffic-light{
-    width: 200px;
-    height: 600px;
+    width: 20px;
 }
 
-traffic-light .traffic-light__signal{
-    width:200px;
-    height:200px;
+.traffic-light__signal{
+    height:20px;
 }
 
-traffic-light__red-light{
+.signal_red-light{
     background-color: red;
 }
 
-traffic-light__yellow-light{
+.signal_yellow-light{
     background-color: yellow;
 }
 
-traffic-light__green-light{
+.signal_green-light{
     background-color: green;
 }
 
-.maze{
-    height: 2100px;
-    width: 2100px;
-}
 
-maze .maze__room {
-    height:700px;
-    width :700px;
-}
+
