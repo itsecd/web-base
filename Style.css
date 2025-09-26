@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f5f5f5;
+}
+
+section {
+  margin-bottom: 40px; 
+  padding: 20px;       
+  background-color: #ffffff;  
+  border-radius: 5px;       
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+h2 {
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* Задание 1: Стилизация текста по варианту 8 */
+#container {
+  text-align: center
+}
+#container1 h1 {
+  color: #ABC0B0;
+  background-color: #A91FA3;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+/* Задание 2: Позиционирование картинок */
+#image-container {
+  position: relative;
+  height: 500px; 
+  background-color: #ffffff;
+}
+
+#image1 {
+  position: absolute;
+  top: 125px;
+  left: 35%;
+  width: 300px;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+}
+
+#image2 {
+  position: absolute;
+  top: 325px;
+  left: 35%;
+  width: 300px;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+}
+
+
+/* Задание 3: Светофор  */
+#traffic-light {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100px;
+  background-color: #302d2d;
+  padding: 20px;
+  border-radius: 10px;
+}
+.light {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+
+/* Задание 4: Лабиринт */
+.maze {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  width: 300px;
+}
+.maze__cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border: 4px solid black;
+}
+
+/* Модификаторы для границ */
+.maze__cell_border-bottom_none {
+  border-bottom: none;
+}
+
+.maze__cell_border-top_none {
+  border-top: none;
+}
+
+.maze__cell_border-right_none {
+  border-right: none;
+}
+
+.maze__cell_border-left_none {
+  border-left: none;
+}
