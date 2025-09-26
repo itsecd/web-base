@@ -1,4 +1,4 @@
-.text_block {
+.text-block {
     color: #BA26E2;
     background-color: #21702C;
     text-align: justify;
@@ -7,34 +7,48 @@
     font-size: large;
 }
 
-.image_1{
+.image-1{
     position: relative;
     width: 384px;
     height: 216px;
 }
 
-.image_2 {
+.image-2 {
     position: relative;
     width: 118px;
     height: 209px;
     left: -260px;
-    top: -3px;
+    top: -3px
 }
 
-.red_block{
+.traffic-light{
+    width: 200px;
+    height: 600px;
+}
+
+traffic-light .traffic-light__signal{
+    width:200px;
+    height:200px;
+}
+
+traffic-light__red-light{
     background-color: red;
-    width: 300px;
-    height: 300px;
 }
 
-.yellow_block{  
+traffic-light__yellow-light{
     background-color: yellow;
-    width: 300px;
-    height: 300px;
 }
 
-.green_block{ 
+traffic-light__green-light{
     background-color: green;
-    width: 300px;
-    height: 300px;
+}
+
+.maze{
+    height: 2100px;
+    width: 2100px;
+}
+
+maze .maze__room {
+    height:700px;
+    width :700px;
 }
