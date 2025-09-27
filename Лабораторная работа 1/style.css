@@ -1,4 +1,12 @@
+.main-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
 .text-content-block {
+  width: 30%;
   text-align: justify;
   color: #5196ea;
   background-color: #202cb7;
