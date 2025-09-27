@@ -59,8 +59,14 @@ a {
     color: currentColor;
 }
 
-a:after {
+.programming-languages-list {
+    list-style-type: none;
+}
+
+.programming-languages-list__element::before {
     content: "🔗"; /*<- значок ссылки*/
+    position: relative;
+    right: 5px;
 }
 
 .programming-languages-list::after {
