@@ -15,6 +15,11 @@ body{
     font-size: large;
 }
 
+.image-box{
+    width:auto;
+    height: auto;
+}
+
 .image-1{
     position: relative;
     width: 384px;
