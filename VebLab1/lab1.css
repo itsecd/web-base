@@ -1,0 +1,87 @@
+.tk1{
+    background-color: #A91FA3;
+  text-align: center;
+  color: #ABC0B0;
+}
+.tk2 {
+  position: relative;
+}
+.tk2_secondcat {
+  position: absolute;
+  top:80px;
+}
+.Traffic{
+  width: 200px;
+  background-color: black;
+}
+.Traffic_size{
+  width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+.Traffic_ycolor{
+    background-color: yellow;
+}
+.Traffic_rcolor{
+    background-color: red;
+}
+.Traffic_gcolor{
+    background-color: green;
+}
+.tk4 {
+  position: relative;
+}
+.k_size{
+  width: 150px;
+  height: 150px;
+}
+.bord-ri{
+  border-right: medium solid grey;
+}
+.el-position {
+  position: absolute;
+}
+.bord-le{
+  border-left: medium solid grey;
+}
+.bord-bot{
+  border-bottom: medium solid grey;
+}
+.bord-top{
+  border-top: medium solid grey;
+}
+.elem11 {
+  top: 50px;
+}
+.elem12 {
+  top: 50px;
+  left: 150px;
+}
+.elem13 {
+  top: 50px;
+  left: 300px;
+}
+.elem21 {
+  top: 200px;
+}
+.elem22 {
+  top: 200px;
+  left: 150px;
+}
+.elem23 {
+  top: 200px;
+  left: 298px;
+}
+.elem31 {
+  top: 350px;
+}
+.elem33 {
+  top: 350px;
+  left: 300px;
+}
+.elem32 {
+  top: 350px;
+  left: 150px;
+  width: 75px;
+  height: 150px;
+}
