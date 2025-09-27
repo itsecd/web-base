@@ -1,0 +1,92 @@
+.text {
+  color: #118905;
+  background-color: #768a3a;
+  text-align: left;
+  padding: 25px 5px;
+  border-radius: 5px;
+  max-width: 1000px;
+}
+
+.images {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  margin-top: 50px;
+}
+.overlayimage {
+  max-width: 350px;
+  position: absolute;
+  top: 250px;
+  z-index: 2;
+}
+.backimage {
+  z-index: 1;
+}
+
+.trafflights {
+  margin-top: 150px;
+  margin-left: 43%;
+  background-color: #1b1b1b;
+  border-radius: 85px;
+  width: 150px;
+  height: 440px;
+  padding: 20px;
+}
+.lights {
+  width: 40px;
+  height: 40px;
+  padding: 50px;
+  border-radius: 100px;
+  margin: 7px 6px;
+}
+
+.traffred {
+  background: red;
+}
+.traffyellow {
+  background: yellow;
+}
+
+.traffgreen {
+  background: green;
+}
+
+.labyrinth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 150px;
+}
+
+.labyrinth_row {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.labyrinth_cell {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  border: 1px solid transparent;
+  margin: -1px;
+  box-sizing: border-box;
+}
+
+.labyrinth_cell_left {
+  border-left: 2px solid black;
+}
+
+.labyrinth_cell_right {
+  border-right: 2px solid black;
+}
+
+.labyrinth_cell_top {
+  border-top: 2px solid black;
+}
+
+.labyrinth_cell_bottom {
+  border-bottom: 2px solid black;
+}
