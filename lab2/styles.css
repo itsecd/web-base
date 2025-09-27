@@ -17,5 +17,59 @@ html {
 
 .movie-franchises__franchise:hover {
     color: blueviolet;
-    text-shadow: 0 0 20px #fff, 0 0 30px #8b4dff, 0 0 40px #e14dff;
+    text-shadow: 0 0 20px #fff, 0 0 30px #8b4dff, 0 0 40px #e14dff; /*Пусть будет ещё и "свечение"*/
+}
+
+.parent-1, .parent-2, .parent-3 {
+    display: inline-flexbox;
+    width: fit-content;
+    height: fit-content;
+}
+
+.parent-1__child, .parent-2__child, .parent-3__child {
+    display: flex;
+    margin: 7px;
+    justify-content: center;
+}
+
+.parent-1 > .parent-1__child {
+    color: red;
+}
+
+.parent-2 {
+    color: orange;
+}
+
+.parent-2 > .parent-2__child {
+    color: #b4005a;
+    border: 2px dashed orange ;
+}
+
+.parent-2 + .parent-3 {
+    color: green;
+}
+
+.parent-3 > .parent-2__child {
+    color: purple;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: currentColor;
+}
+
+a:after {
+    content: "🔗"; /*<- значок ссылки*/
+}
+
+.programming-languages-list::after {
+    display: flex;
+    position: relative;
+    top: 10px;
+    width: 353px;
+    height: 105px;
+    content: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+    background-color: cornflowerblue;
+    background-size: contain;
 }
