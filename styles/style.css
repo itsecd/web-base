@@ -1,9 +1,17 @@
+body{
+    font-family:Arial;
+    text-align:center;
+    align-items: center;
+    align-content: center;
+    place-items: center;
+}
+
 .text-block {
     color: #BA26E2;
     background-color: #21702C;
     text-align: justify;
-    width:70%;
-    height: 30%;
+    width: 100%;
+    height: 10%;
     font-size: large;
 }
 
@@ -22,11 +30,11 @@
 }
 
 .traffic-light{
-    width: 20px;
+    width: 60px;
 }
 
 .traffic-light__signal{
-    height:20px;
+    height:60px;
 }
 
 .signal_red-light{
@@ -41,5 +49,37 @@
     background-color: green;
 }
 
+.maze{
+    width: 150px;
+    height: 150px;
+    left: 2px;
+}
 
+.maze-row{
+    display:flex;
+    margin-bottom: 0px;
+}
 
+.maze-room{
+    display: inline;
+    width:50px;
+    height:50px;
+    margin: 0px;
+    padding:0px;
+}
+
+.maze-room_left-border{
+    border-left: 2px solid black;
+}
+
+.maze-room_right-border{
+    border-right: 2px solid red;
+}
+
+.maze-room_top-border{
+    border-top: 2px solid green;
+}
+
+.maze-room_bottom-border{
+    border-bottom: 2px solid blue;
+}
