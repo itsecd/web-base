@@ -4,9 +4,9 @@ body {
 }
 
 .text_blocks {
-    text-align: left;
-    background: #6f4700;
-    color: #3D5D93
+    text-align: justify;
+    background: #202CB7;
+    color: #5196EA;
 }
 .image_container {
     position: relative;
