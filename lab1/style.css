@@ -1,0 +1,156 @@
+body 
+{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2
+ {
+    text-align: center;
+    color: #333;
+}
+
+.subtitle
+ {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.task 
+{
+    margin: 40px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.caption 
+{
+    text-align: center;
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+
+.text-block 
+{
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: justify;
+    color: #C8CA67;
+    background-color: #01A263;
+    border-radius: 10px;
+    line-height: 1.5;
+}
+
+.text-block p 
+{
+    margin: 10px 0;
+}
+
+.images {
+    position: relative;
+    width: 550px;
+    height: 400px;
+    margin: 20px auto;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.image-bottom {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 320px;
+    height: 220px;
+    z-index: 1;
+    border: 4px solid #e9ecef;
+    border-radius: 8px;
+    opacity: 0.9;
+}
+
+.image-top {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 300px;
+    height: 210px;
+    z-index: 2;
+    border: 4px solid white;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    transform: rotate(2deg);
+}
+
+
+.traffic-light 
+{
+    width: 120px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.light 
+{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #666;
+}
+
+.red 
+{
+    background-color: #ff4444;
+}
+
+.yellow 
+{
+    background-color: #ffff44;
+}
+
+.green 
+{
+    background-color: #44ff44;
+}
+
+.maze {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 0;
+  margin: 25px auto;
+  justify-content: center;
+}
+
+.maze__cell {
+  background-color: #ffffff;
+  border: 8px solid #1a0f0f;
+  box-sizing: border-box;
+}
+
+.maze__cell_no-top {
+  border-top: none;
+}
+.maze__cell_no-right {
+  border-right: none;
+}
+.maze__cell_no-bottom {
+  border-bottom: none;
+}
+.maze__cell_no-left {
+  border-left: none;
+}
