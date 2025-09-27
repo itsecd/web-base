@@ -14,28 +14,28 @@
   width: 1500px;
 }
 
-.task2 .img1 img{
+.task2__image-container1 img{
   width: 100%;
   height: 100%;
 }
  
-.task2 .img1, .task2 .img2{
+.task2__image-container1, .task2__image-container2{
   position: absolute;
 } 
 
-.traffic_light .circle1{
+.traffic-light__circle_red{
    height: 100px;
    width: 100px;
    background-color: red;
    border-radius: 100%;
 }
-.traffic_light .circle2{
+.traffic-light__circle_yellow{
    height: 100px;
    width: 100px;
    background-color: yellow;
    border-radius: 100%;
 }
-.traffic_light .circle3{
+.traffic-light__circle_green{
    height: 100px;
    width: 100px;
    background-color: green;
@@ -48,7 +48,7 @@
     grid-template-rows: repeat(3, 100px);  
   }
   
-  .square1{
+  .labyrinth__square1{
     width: 104px;
     height: 104px;
     box-sizing: border-box;
@@ -59,7 +59,7 @@
     background-color: gray;
   }
 
-  .square2{
+  .labyrinth__square2{
     width: 104px;
     height: 104px;
     box-sizing: border-box;
@@ -70,7 +70,7 @@
     background-color: gray;
   }
 
-  .square3{
+  .labyrinth__square3{
     width: 104px;
     height: 104px;
     box-sizing: border-box;
@@ -81,7 +81,7 @@
     background-color: gray;
   }
 
-  .square4{
+  .labyrinth__square4{
     width: 104px;
     height: 104px;
     box-sizing: border-box;
@@ -91,7 +91,7 @@
     border-bottom: 3px solid gray;
     background-color: gray;
   }
-  .square5{
+  .labyrinth__square5{
     width: 104px;
     height: 104px;
     box-sizing: border-box;
@@ -101,7 +101,7 @@
     border-bottom: 3px solid gray;
     background-color: gray;
   }
-  .square6{
+  .labyrinth__square6{
     width: 104px;
     height: 104px;
     box-sizing: border-box;
@@ -111,7 +111,7 @@
     border-bottom: 3px solid gray;
     background-color: gray;
   }
-  .square7{
+  .labyrinth__square7{
     width: 104px;
     height: 104px;
     box-sizing: border-box;
@@ -121,7 +121,7 @@
     border-bottom: 3px solid black;
     background-color: gray;
   }
-  .square8{
+  .labyrinth__square8{
     width: 104px;
     height: 104px;
     box-sizing: border-box;
@@ -131,7 +131,7 @@
     border-bottom: 3px solid black;
     background-color: gray;
   }
-  .square9{
+  .labyrinth__square9{
     width: 104px;
     height: 104px;
     box-sizing: border-box;
