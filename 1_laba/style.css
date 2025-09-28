@@ -41,23 +41,14 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.svetofor__light_color_red {
-    width: 200px;
-    height: 200px;
-    background: red;
+.svetofor__light {
+  width: 200px;
+  height: 200px;
 }
 
-.svetofor__light_color_orange {
-    width: 200px;
-    height: 200px;
-    background: rgb(249, 137, 17);
-}
-
-.svetofor__light_color_green {
-    width: 200px;
-    height: 200px;
-    background: rgb(63, 255, 63);
-}
+.svetofor__light--color-red    { background: red; }
+.svetofor__light--color-orange { background: rgb(249,137,17); }
+.svetofor__light--color-green  { background: rgb(63,255,63); }
 
 .maze {
     display: grid;
@@ -82,20 +73,20 @@ body {
     justify-content: center;
 }
 
-.maze__cell_pass_right { border-right: none; }
-.maze__cell_pass_left  { border-left:  none; }
-.maze__cell_pass_up    { border-top:   none; }
-.maze__cell_pass_down  { border-bottom:none; }
+.maze__cell--pass-right { border-right: none; }
+.maze__cell--pass-left  { border-left:  none; }
+.maze__cell--pass-up    { border-top:   none; }
+.maze__cell--pass-down  { border-bottom:none; }
 
-.maze__cell_highlight {
+.maze__cell--highlight {
     color: white;
     font-weight: bold;
 }
 
-.maze__cell_type_start {
+.maze__cell--type-start {
   background-color: #2ecc71;
 }
 
-.maze__cell_type_end {
+.maze__cell--type-end {
   background-color: red;
 }
