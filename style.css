@@ -1,16 +1,16 @@
-﻿body {
+body {
   background: #fff;
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
-.block-titl {
+.title {
   text-align: center;
   padding: 5px;
 }
 
 /* Текст */
-.block-text {
+.text {
   color: #c4c26b;
   background-color: #d765fe;
   text-align: center;
@@ -21,7 +21,7 @@
 }
 
 /* Картинки */
-.block-image {
+.image {
   position: relative;
   display: flex;
   justify-content: center;
@@ -30,26 +30,26 @@
   margin-top: -50px;
 }
 
-.image {
+.image__item {
   position: absolute;
   max-width: 500px;
 }
 
-.first {
+.image__item_first {
   top: 195px;
   z-index: 2;
   width: 300px;
   height: 200px;
 }
 
-.second {
+.image__item_second {
   width: 200px;
   height: 300px;
   z-index: 1;
 }
 
 /* Светофор */
-.block-lights {
+.traffic-light {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,7 +60,7 @@
   margin: 20px auto;
 }
 
-.lights {
+.traffic-light__lamp {
   width: 30px;
   height: 30px;
   padding: 20px;
@@ -68,23 +68,23 @@
   margin: 5px;
 }
 
-.lights_red {
+.traffic-light__lamp_red {
   background: rgb(255, 0, 0);
   box-shadow: 0 0 15px 6px rgba(255, 0, 0, 0.6);
 }
 
-.lights_yellow {
+.traffic-light__lamp_yellow {
   background: rgb(255, 255, 0);
   box-shadow: 0 0 15px 6px rgba(255, 255, 0, 0.6);
 }
 
-.lights_green {
+.traffic-light__lamp_green {
   background: rgb(0, 255, 0);
   box-shadow: 0 0 15px 6px rgba(0, 255, 0, 0.6);
 }
 
 /* Лабиринт */
-.block-labyrinth {
+.labyrinth {
   display: flex;
   flex-direction: column;
   align-items: center;
