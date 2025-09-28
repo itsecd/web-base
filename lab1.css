@@ -33,18 +33,17 @@ h2 {
 }
 
 .txtblock {
-    
     position: absolute;
     top: 0;
 }
 
-.txtleft {
+.txtblock_left {
     left: 0;
 }
-.txtmiddle {
+.txtblock_middle {
     left: 400px;
 }
-.txtright {
+.txtblock_right {
     left: 800px;
 }
 
@@ -65,7 +64,7 @@ h2 {
 
 
 
-.thebox {
+.box {
     background-color: black;
     width: 300px;
     height: 730px;
@@ -73,27 +72,27 @@ h2 {
     top: 60px;
     left: 400px;
 }
-.light {
+.box_block {
     width: 200px;
     height: 200px;
     position: absolute;
     left: 50px;
 }
 
-.red {
+.box_block_red {
     background-color: red;
     top: 50px;
 }
-.yellow {
+.box_block_yellow {
     background-color: yellow;
     top: 260px;
 }
-.green{
+.box_block_green{
     background-color: green;
     top: 470px;
 }
 
-.themaze {
+.maze {
     background-color:red;
     width: 600px;
     height: 600px;
@@ -102,51 +101,51 @@ h2 {
     top: 60px;
 }
 
-.block {
+.maze_block {
     width: 200px;
     height: 200px;
     position: absolute;
 }
 
-.top{
+.maze_block_top{
     border-top: 2px solid black;
     top:0;
 }
-.hmiddle{
+.maze_block_hmiddle{
     top:200px;
 }
-.bottom{
+.maze_block_bottom{
     border-bottom: 2px solid black;
     top:400px;
 }
 
-.left{
+.maze_block_left{
     border-left: 2px solid black;
     left:0;
 }
-.vmiddle{
+.maze_block_vmiddle{
     left:200px;
 }
-.right{
+.maze_block_right{
     border-right: 2px solid black;
     left:400px;
 }
 
-.mod1{
+.maze_block_start{
     border-left: 2px solid red;
 }
-.mod4{
+.maze_block_finish{
+    border-right: 2px solid red;
+}
+.maze_block_border_top{
     border-top: 2px solid black;
 }
-.mod5{
+.maze_block_border_bottom{
     border-bottom: 2px solid black;
 }
-.mod6{
-    border-top: 2px solid black;
-}
-.mod8{
+.maze_block_border_right{
     border-right: 2px solid black;
 }
-.mod9{
-    border-right: 2px solid red;
+.maze_block_border_left{
+    border-left: 2px solid black;
 }
