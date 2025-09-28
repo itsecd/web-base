@@ -96,37 +96,35 @@ body {
 
 /* Блок: maze */
 .maze {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    gap: 0;
-    margin: 50px auto;
-    width: 300px;
-    background-color: #fff;
-    border: 3px solid #000;
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  width: fit-content;
+  margin-top: 20px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
-/* Элемент: maze__cell */
 .maze__cell {
-    width: 100px;
-    height: 100px;
-    box-sizing: border-box;
-    background-color: #f8f8f8;
+  width: 80px;
+  height: 80px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
 }
 
-/* Модификаторы границ для клеток лабиринта */
-.maze__cell_border-top {
-    border-top: 4px solid #051F84;
+.maze__cell--open-top {
+  border-top: none;
 }
-
-.maze__cell_border-right {
-    border-right: 4px solid #051F84;
+.maze__cell--open-left {
+  border-left: none;
 }
-
-.maze__cell_border-bottom {
-    border-bottom: 4px solid #051F84;
+.maze__cell--open-right {
+  border-right: none;
 }
-
-.maze__cell_border-left {
-    border-left: 4px solid #051F84;
+.maze__cell--open-bottom {
+  border-bottom: none;
 }
