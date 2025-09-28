@@ -12,23 +12,25 @@
 }
 
 .image-container{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.image-cat1{
-    position: absolute;
-    top: 600px;
-    width:300px;
-    height:auto;
-    border-radius: 15px;
-}
-
-.image-cat2{
+    position: relative;
     height: 400px;
-    width: auto;
-    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image__cat{
+    position: absolute;
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+.image__cat--first{
+    z-index: 2;
+}
+
+.image__cat--second{
+    z-index: 1;
 }
 
 .traffic-light{
@@ -42,16 +44,16 @@
     justify-content: space-between;
 }
 
-.traffic-light_lamp{
+.traffic-light__lamp{
     width: 60px;
     height: 60px;
     background: #555;
     border-radius: 50%;
 }
 
-.traffic-light_lamp_red { background: red;}
-.traffic-light_lamp_yellow{background: yellow;}
-.traffic-light_lamp_green{background: green;}
+.traffic-light__lamp--red { background: red;}
+.traffic-light__lamp--yellow{background: yellow;}
+.traffic-light__lamp--green{background: green;}
 
 .maze{
     display: grid;
@@ -64,18 +66,18 @@
     display: flex;
 }
 
-.maze__cell_border-right{
+.maze__cell--border-right{
     border-right: 3px solid black;
 }
 
-.maze__cell_border-left{
+.maze__cell--border-left{
     border-left: 3px solid black;
 }
 
-.maze__cell_border-top{
+.maze__cell--border-top{
     border-top: 3px solid black;
 }
 
-.maze__cell_border-bottom{
+.maze__cell--border-bottom{
     border-bottom: 3px solid black;
 }
