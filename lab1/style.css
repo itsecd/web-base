@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.task {
+  margin-bottom: 40px;
+}
+
+.task__title {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.text-block {
+  background-color: #2F9469; 
+  color: #E2155C;          
+  text-align: justify;
+  padding: 15px;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.text-block__content {
+  margin: 10px 0;
+}
+
+.images {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.images__item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.images__item--back {
+  top: 0;
+  left: 0;
+}
+
+.images__item--front {
+  top: 20px;
+  left: 20px;
+  opacity: 0.8;
+}
+
+.traffic-light {
+  width: 120px;
+  background: black;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.traffic-light__circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+
+.traffic-light__circle--red {
+  background-color: red;
+}
+
+.traffic-light__circle--yellow {
+  background-color: yellow;
+}
+
+.traffic-light__circle--green {
+  background-color: green;
+}
+
+.maze {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 0;
+  margin: 0 auto;
+  border: 3px solid black;
+  width: max-content;
+}
+
+.maze__cell {
+  border: 2px solid black;
+  background: #eee;
+}
