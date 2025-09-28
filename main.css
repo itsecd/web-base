@@ -11,6 +11,12 @@
     border-radius: 5px;
 }
 
+.image-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .image-cat1{
     position: absolute;
     top: 600px;
@@ -36,16 +42,16 @@
     justify-content: space-between;
 }
 
-.light{
+.traffic-light_lamp{
     width: 60px;
     height: 60px;
     background: #555;
     border-radius: 50%;
 }
 
-.red { background: red;}
-.yellow{background: yellow;}
-.green{background: green;}
+.traffic-light_lamp_red { background: red;}
+.traffic-light_lamp_yellow{background: yellow;}
+.traffic-light_lamp_green{background: green;}
 
 .maze{
     display: grid;
@@ -54,23 +60,22 @@
     width: 300px;
 }
 
-.maze_cell{
+.maze__cell{
     display: flex;
-    border: 3px solid black;
 }
 
-.maze_cell_border_right_none{
-    border-right: none;
+.maze__cell_border-right{
+    border-right: 3px solid black;
 }
 
-.maze_cell_border_left_none{
-    border-left: none;
+.maze__cell_border-left{
+    border-left: 3px solid black;
 }
 
-.maze_cell_border_top_none{
-    border-top: none;
+.maze__cell_border-top{
+    border-top: 3px solid black;
 }
 
-.maze_cell_border_bottom_none{
-    border-bottom: none;
+.maze__cell_border-bottom{
+    border-bottom: 3px solid black;
 }
