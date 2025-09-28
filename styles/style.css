@@ -60,12 +60,12 @@ body {
   left: 2px;
 }
 
-.maze-row {
+.maze__row {
   display: flex;
   margin-bottom: 0px;
 }
 
-.maze-room {
+.maze__room {
   display: inline;
   width: 50px;
   height: 50px;
@@ -73,18 +73,18 @@ body {
   padding: 0px;
 }
 
-.maze-room_left-border {
+.room_left-border {
   border-left: 2px solid black;
 }
 
-.maze-room_right-border {
+.room_right-border {
   border-right: 2px solid red;
 }
 
-.maze-room_top-border {
+.room_top-border {
   border-top: 2px solid green;
 }
 
-.maze-room_bottom-border {
+.room_bottom-border {
   border-bottom: 2px solid blue;
 }
