@@ -35,24 +35,26 @@
     </section>
 
     <section class="task task-4">
-        <h2>Задание 4: Лабиринт 3x3</h2>
-        <div class="maze">
-            
+        <h2>Задание 4: Лабиринт</h2>
+          <div class="maze">
+            <!-- Первая строка -->
             <div class="maze__row">
-                <div class="maze__cell maze__cell_wall-right maze__cell_wall-bottom"></div>
-                <div class="maze__cell maze__cell_wall-left maze__cell_wall-bottom"></div>
-                <div class="maze__cell maze__cell_wall-left maze__cell_wall-bottom"></div>
+                <div class="maze__cell maze__cell_wall-bottom"></div>
+                <div class="maze__cell maze__cell_wall-bottom"></div>
+                <div class="maze__cell"></div>
             </div>
             
+            <!-- Вторая строка -->
             <div class="maze__row">
                 <div class="maze__cell maze__cell_wall-top maze__cell_wall-right"></div>
-                <div class="maze__cell maze__cell_wall-top maze__cell_wall-left maze__cell_wall-bottom"></div>
-                <div class="maze__cell maze__cell_wall-top maze__cell_wall-left maze__cell_wall-right"></div>
+                <div class="maze__cell maze__cell_wall-left maze__cell_wall-top"></div>
+                <div class="maze__cell maze__cell_wall-bottom"></div>
             </div>
            
+            <!-- Третья строка -->
             <div class="maze__row">
-                <div class="maze__cell maze__cell_wall-top maze__cell_wall-right"></div>
-                <div class="maze__cell maze__cell_wall-top maze__cell_wall-left maze__cell_wall-right"></div>
+                <div class="maze__cell"></div>
+                <div class="maze__cell maze__cell_wall-right"></div>
                 <div class="maze__cell maze__cell_wall-top maze__cell_wall-left"></div>
             </div>
         </div>
