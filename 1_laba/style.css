@@ -3,24 +3,27 @@ body {
   min-height: 100vh;
 }
 
-.text_blocks {
+.text-blocks {
     text-align: justify;
     background: #202CB7;
     color: #5196EA;
 }
-.image_container {
+
+.image-container {
     position: relative;
     display: inline-block;
     margin-left: 50%;
     margin-top: 20%;
     transform: translate(-50%, -50%);
 }
-.image_1 {
+
+.image-container__image_1 {
     display: block;
     width: 300px;
     height: auto;
 }
-.image_2 {
+
+.image-container__image_2 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -29,6 +32,7 @@ body {
     height: auto;
     z-index: 1;
 }
+
 .svetofor {
     position: relative;
     display: inline-block;
@@ -36,22 +40,26 @@ body {
     margin-top: 20%;
     transform: translate(-50%, -50%);
 }
-#red {
+
+.svetofor__light_color_red {
     width: 200px;
     height: 200px;
     background: red;
 }
-#yellow {
+
+.svetofor__light_color_orange {
     width: 200px;
     height: 200px;
     background: rgb(249, 137, 17);
 }
-#green {
+
+.svetofor__light_color_green {
     width: 200px;
     height: 200px;
     background: rgb(63, 255, 63);
 }
-.maze_container {
+
+.maze {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -60,7 +68,8 @@ body {
     border: 3px solid black;
     margin: 50px auto;
 }
-.cell {
+
+.maze__cell {
     width: 200px;
     height: 200px;
     background: gray;
@@ -72,18 +81,21 @@ body {
     align-items: center;
     justify-content: center;
 }
-.cell_start {
-    color:white;
-    font-weight: bold;
-    background-color: #2ecc71;
-    border: 2px solid #423a3a;
-}
-.cell_end {
+
+.maze__cell_pass_right { border-right: none; }
+.maze__cell_pass_left  { border-left:  none; }
+.maze__cell_pass_up    { border-top:   none; }
+.maze__cell_pass_down  { border-bottom:none; }
+
+.maze__cell_highlight {
     color: white;
     font-weight: bold;
-    background-color: red;
-    border: 2px solid #423a3a;
 }
-.cell:nth-child(4) {border-top: none;}
-.cell:nth-child(5) {border-left: none;}
-.cell:nth-child(8) {border-top: none; border-right: none;}
+
+.maze__cell_type_start {
+  background-color: #2ecc71;
+}
+
+.maze__cell_type_end {
+  background-color: red;
+}
