@@ -1,13 +1,13 @@
-.js_des {
+.js-des {
     background-color: #A1F3F1;
 }
 
-.js_des p {
+.js-des p {
     color: #6984A7;
     text-align: left;
 }
 
-.container {
+.imgs {
     position: relative;
     display: flex;
     justify-content: center;
@@ -15,15 +15,15 @@
     margin-bottom: 20px;
 }
 
-.big_cat {
+.imgs__big-cat {
     max-width: 100%;
 }
 
-.small_img {
+.imgs__small-img {
     position: absolute;
 }
 
-.traffic_light {
+.traffic-light {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,21 +36,21 @@
     margin-bottom: 20px;
 }
 
-.red_light {
+.traffic-light__red-light {
     height: 100px;
     width: 100px;
     background-color: #ff0000;
     border-radius: 100%;
 }
 
-.yellow_light {
+.traffic-light__yellow-light {
     height: 100px;
     width: 100px;
     background-color: #eeff00;
     border-radius: 100%;
 }
 
-.green_light {
+.traffic-light__green-light {
     height: 100px;
     width: 100px;
     background-color: #3cff00;
@@ -67,67 +67,67 @@
     padding: 10px
 }
 
-.stroke {
+.maze__stroke {
     height: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.stroke > div {
+.maze__stroke > div {
     background: #ffffff;
     width: 320px;
     height: 180px;
 }
 
-.first > div:nth-child(1), .second div:nth-child(3) {
+.maze__first > div:nth-child(1), .maze__second > div:nth-child(3) {
     border: 5px solid #000000;
     border-top: 0;
     border-bottom: 0;
 }
 
-.second > div:nth-child(1) {
+.maze__second > div:nth-child(1) {
     border: 5px solid #000000;
     border-top: 0;
     border-right: 0;
 }
 
-.second > div:nth-child(2), .third div:nth-child(3) {
+.maze__second > div:nth-child(2), .maze__third div:nth-child(3) {
     border: 5px solid #000000;
     border-top: 0;
     border-left: 0;
 }
 
-.first > div:nth-child(2) {
+.maze__first > div:nth-child(2) {
     border: 5px solid #000000;
     border-right: 0;
     border-bottom: 0;
 }
 
-.first > div:nth-child(3) {
+.maze__first > div:nth-child(3) {
     border: 5px solid #000000;
     border-left: 0;
     border-bottom: 0;
 }
 
-.third > div:nth-child(2) {
+.maze__third > div:nth-child(2) {
     border: 5px solid #000000;
     border-left: 0;
     border-right: 0;
 }
 
-.third > div:nth-child(1) {
+.maze__third > div:nth-child(1) {
     border: 5px solid #000000;
     border-right: 0;
 }
 
-.start {
+.maze__stroke__start {
     width: 100%;
     height: 20px;
     background: #00ff0d;
 }
 
-.finish {
+.maze__stroke__finish {
     height: 100%;
     width: 20px;
     background: #ff0000;
