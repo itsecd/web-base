@@ -42,7 +42,7 @@ h2 {
     border: 2px dashed #ccc;
 }
 
-.image {
+.images-container__image {
     position: absolute; 
     top: 0;
     left: 0;
@@ -51,7 +51,7 @@ h2 {
     object-fit: cover;
 }
 
-.image-front {
+.images-container__image_front {
     border: 2px solid red;
     opacity: 0.7;
 }
@@ -67,7 +67,7 @@ h2 {
     margin-bottom: 30px;
 }
 
-.light {
+.traffic-light__light {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -75,15 +75,15 @@ h2 {
     border: 2px solid #000;
 }
 
-.red {
+.traffic-light__light_red {
     background-color: #ff0000;
 }
 
-.yellow {
+.traffic-light__light_yellow {
     background-color: #ffff00;
 }
 
-.green {
+.traffic-light__light_green {
     background-color: #00ff00;
 }
 
@@ -96,54 +96,25 @@ h2 {
     background-color: #fff;
 }
 
-.cell {
+.maze__cell {
     width: 100px;
     height: 100px;
     box-sizing: border-box;
     background-color: #f0f0f0;
 }
 
-.cell-1 {
+.maze__cell_top {
     border-top: 10px solid black;
-    border-right: 5px solid black;
 }
 
-.cell-2 {
-    border-top: 10px solid black;
-    border-left: 5px solid black;
-}
-
-.cell-3 {
-    border-top: 10px solid black;
-    border-right: 10px solid black;
-    border-bottom: 5px solid black;
-}
-
-.cell-4 {
-    border-left: 10px solid black;
-    border-right: 5px solid black;
-}
-
-.cell-5 {
-    border-left: 5px solid black;
-}
-
-.cell-6 {
-    border-top: 5px solid black;
+.maze__cell_right {
     border-right: 10px solid black;
 }
 
-.cell-7 {
+.maze__cell_left {
     border-left: 10px solid black;
-    border-bottom: 10px solid black;
 }
 
-.cell-8 {
-    border-bottom: 10px solid black;
-    border-right: 5px solid black;
-}
-
-.cell-9 {
-    border-left: 5px solid black;
+.maze__cell_bottom {
     border-bottom: 10px solid black;
 }
