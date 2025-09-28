@@ -15,7 +15,7 @@ h2 {
     font-size: large;
 }
 
-#text {
+.text {
     border: 3px solid black;
     font-size: medium;
     background-color: #6945a7;
@@ -26,46 +26,46 @@ h2 {
 
 
 
-#mega {
+.mega {
     position: relative;
     height: 800px;
     width: 100%;
 }
 
-#left {
+.txtblock {
+    
     position: absolute;
     top: 0;
+}
+
+.txtleft {
     left: 0;
 }
-#middle {
-    position: absolute;
-    top: 0;
+.txtmiddle {
     left: 400px;
 }
-#right {
-    position: absolute;
-    top: 0;
+.txtright {
     left: 800px;
 }
 
 
 
-#cat1 {
+.cat1 {
     width: 300px;
     position: absolute;
     top: 60px;
-    left: 0
+    left: 0;
 }
-#cat2 {
+.cat2 {
     width: 300px;
     position: absolute;
     bottom: 0;
-    left: 0
+    left: 0;
 }
 
 
 
-#thebox {
+.thebox {
     background-color: black;
     width: 300px;
     height: 730px;
@@ -73,34 +73,28 @@ h2 {
     top: 60px;
     left: 400px;
 }
+.light {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50px;
+}
 
-#red {
+.red {
     background-color: red;
-    width: 200px;
-    height: 200px;
-    position: absolute;
     top: 50px;
-    left: 50px;
 }
-#yellow {
+.yellow {
     background-color: yellow;
-    width: 200px;
-    height: 200px;
-    position: absolute;
     top: 260px;
-    left: 50px;
 }
-#green{
+.green{
     background-color: green;
-    width: 200px;
-    height: 200px;
-    position: absolute;
     top: 470px;
-    left: 50px;
 }
 
-#themaze {
-    background-color:rgb(255, 0, 0);
+.themaze {
+    background-color:red;
     width: 600px;
     height: 600px;
     position: absolute;
@@ -108,83 +102,51 @@ h2 {
     top: 60px;
 }
 
-#lu {
-    border-top: 2px solid black;
+.block {
     width: 200px;
     height: 200px;
     position: absolute;
-    left: 0;
-    top: 0;
-}
-#mu {
-    border-top: 2px solid black;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    left: 200px;
-    top: 0px;
-}
-#ru {
-    border-top: 2px solid black;
-    border-right: 2px solid black;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    left: 400px;
-    top: 0px;
-
 }
 
-#lm {
+.top{
     border-top: 2px solid black;
+    top:0;
+}
+.hmiddle{
+    top:200px;
+}
+.bottom{
+    border-bottom: 2px solid black;
+    top:400px;
+}
+
+.left{
     border-left: 2px solid black;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    left: 0px;
-    top: 200px;
+    left:0;
 }
-#mm {
-    border-bottom: 2px solid black;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    left: 200px;
-    top: 200px;
+.vmiddle{
+    left:200px;
 }
-#rm {
-    border-top: 2px solid black;
+.right{
     border-right: 2px solid black;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    left: 400px;
-    top: 200px;
+    left:400px;
 }
 
-#ld {
-    border-left: 2px solid black;
-    border-bottom: 2px solid black;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    left: 0px;
-    top: 400px;
+.mod1{
+    border-left: 2px solid red;
 }
-#md {
+.mod4{
+    border-top: 2px solid black;
+}
+.mod5{
     border-bottom: 2px solid black;
+}
+.mod6{
+    border-top: 2px solid black;
+}
+.mod8{
     border-right: 2px solid black;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    left: 200px;
-    top: 400px;
 }
-#rd {
-    border-bottom: 2px solid black;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    left: 400px;
-    top: 400px;
+.mod9{
+    border-right: 2px solid red;
 }
