@@ -1,0 +1,162 @@
+/* ОСНОВНЫЕ СТИЛИ */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+h2 {
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* ЗАДАНИЕ 1 - ТЕКСТ */
+.text-content {
+    color: #305D93;
+    background-color: #6F4700;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* ЗАДАНИЕ 2 - КАРТИНКИ */
+.image-wrapper {
+    position: relative;
+    height: 200px;
+    background-color: #ffffff;
+}
+.stacked-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 150px;
+    max-height: 150px;
+}
+.top-img { z-index: 2; }
+.base-img { z-index: 1; }
+
+/* ЗАДАНИЕ 3 - СВЕТОФОР */
+.signal-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 15px;
+}
+.signal-item {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.red-signal { background-color: red; }
+.yellow-signal { background-color: yellow; }
+.green-signal { background-color: green; }
+
+/* ЗАДАНИЕ 4 - ЛАБИРИНТ */
+.maze-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.maze {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    width: 300px;
+    height: 300px;
+    position: relative;
+    background-color: white;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* СТЕНКИ ЛАБИРИНТА */
+.maze::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid black;
+    pointer-events: none;
+}
+
+/* ВЕРТИКАЛЬНЫЕ СТЕНКИ */
+.maze::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100px;
+    width: 3px;
+    background: black;
+}
+.maze::after {
+    left: 200px;
+}
+
+/* ГОРИЗОНТАЛЬНЫЕ СТЕНКИ */
+.maze .cell:nth-child(1)::after,
+.maze .cell:nth-child(2)::after,
+.maze .cell:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: black;
+}
+
+.maze .cell:nth-child(4)::after,
+.maze .cell:nth-child(5)::after,
+.maze .cell:nth-child(6)::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: black;
+}
+
+/* ПРОХОДЫ - УБИРАЕМ СТЕНКИ */
+.maze .cell:nth-child(2)::after { background: transparent; } /* Проход между 2-5 */
+.maze .cell:nth-child(5)::after { background: transparent; } /* Проход между 5-8 */
+.maze::after:nth-child(2) { background: transparent; } /* Проход между 4-5 */
+.maze::after:nth-child(3) { background: transparent; } /* Проход между 5-6 */
+
+.maze-info {
+    display: flex;
+    gap: 180px;
+    font-weight: bold;
+}
+.maze-start::before { 
+    content: "●"; 
+    color: green;
+    margin-right: 8px;
+}
+.maze-exit::before { 
+    content: "●"; 
+    color: red;
+    margin-right: 8px;
+}
