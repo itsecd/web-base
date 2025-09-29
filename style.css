@@ -1,0 +1,52 @@
+body {
+  background: hsl(0, 0%, 96%);
+  color: #000000;
+}
+
+.side-panel {
+    background: #F4BC92;
+    color: #ECE870;
+    text-align: left;
+}
+
+.block {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 150px;
+}
+
+.block--green {
+    background-color: green;
+}
+
+.block--red{
+    background-color: #e41515;
+}
+
+.block--yellow{
+    background-color: yellow;
+}
+
+.maze {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(3, 60px);
+  gap: 0;
+  margin: 40px;
+}
+
+.maze__cell {
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  background: hsl(0, 0%, 96%);
+}
+
+.maze__cell--side-top { border-top: 3px solid #333; }
+.maze__cell--side-right { border-right: 3px solid #333; }
+.maze__cell--side-bottom { border-bottom: 3px solid #333; }
+.maze__cell--side-left { border-left: 3px solid #333; }
+
+.maze__cell--side-entrace {border-top: 3px solid green; }
+.maze__cell--side-exit {border-right: 3px solid red; }
