@@ -6,25 +6,27 @@ body {
 .side-panel {
     background: #F4BC92;
     color: #ECE870;
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
+
 }
 
-.block {
+.traffic-light {
   width: 150px;
   height: 150px;
   background-color: rgb(255, 255, 255);
   border-radius: 150px;
 }
 
-.block--green {
+.traffic-light--green {
     background-color: green;
 }
 
-.block--red{
+.traffic-light--red{
     background-color: #e41515;
 }
 
-.block--yellow{
+.traffic-light--yellow{
     background-color: yellow;
 }
 
@@ -41,6 +43,40 @@ body {
   height: 60px;
   box-sizing: border-box;
   background: hsl(0, 0%, 96%);
+}
+
+.photo-gallery {
+  position: relative;
+  width: 100%;    
+  height: 250px; 
+}
+
+.photo-gallery__photo {
+  position: absolute;
+  left: 50%;
+  width: 200px;
+  height: auto;
+}
+
+.photo1 {
+  top: 0;
+  width: 100px;
+  height: auto;
+  left: 0.2%;  
+  z-index: 2;
+}
+
+.photo2 {
+  top: 0;
+  width: 350px;
+  height: auto; 
+  left: 0;
+  z-index: 1;
+}
+
+.task {
+  background: hsl(0, 0%, 96%);            
+  border-radius: 8px;        
 }
 
 .maze__cell--side-top { border-top: 3px solid #333; }
