@@ -1,0 +1,61 @@
+html {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    padding: 2%;
+}
+
+.profile {
+    display: flexbox;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    outline: 5px solid silver;
+    border-radius: 2%;
+}
+
+.profile__image {
+    margin: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    border-radius:50%;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: 5px solid dimgrey;
+    background-color: rgb(220, 231, 236);
+
+    /*?*/
+    transition-property: rotate, background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.profile__image:active {
+    rotate: 360deg;
+    background-color: black;
+}
+
+.profile__image > img{
+    object-fit: auto;
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    top: 70%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+}
+
+.text-container {
+    margin: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.text-container__string {
+    font-size: 25;
+    font-weight: bold;
+    line-height: 0.75;
+}
