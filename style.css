@@ -1,0 +1,140 @@
+p {
+    color: #6984A7;
+    text-align: left;
+    background-color: #A1F3F1;
+}
+h1{
+     color:#6984A7;
+     text-align: center;
+}
+
+.image-stack {
+    position: relative; 
+    width: 400px; 
+    height: 100px;
+}
+
+
+.image-stack img {
+    position: absolute;
+
+    width: 75%; 
+    top: 0;
+    right: 0;
+}
+.image-stack__cat1 {
+    
+     top: 20px; 
+     left: 600px; 
+}
+.image-stack__cat2 {
+    
+     margin-top: 120px; 
+     left: 600px; 
+}
+h2{
+     color: #6984A7;
+     text-align: center;
+     margin-top: 50px;
+}
+h3{
+     color: #6984A7;
+     text-align: center;
+     margin-top: 650px;
+}
+.Traffic{
+     width: 220px;
+     height: 665px;
+     border: 30px solid black;
+     background-color: gray;
+     border-radius: 30px;
+     margin-left: 20px;
+}
+#red{
+     width: 180px;
+     height: 180px;
+     border-radius: 50%;
+     border: 20px solid rgb(52,52,52);
+     background-color: red;
+
+}
+#yellow{
+     width: 180px;
+     height: 180px;
+     border-radius: 50%;
+     border: 20px solid rgb(52,52,52);
+     background-color: yellow;
+
+}
+#green{
+     width: 180px;
+     height: 180px;
+     border-radius: 50%;
+     border: 20px solid rgb(52,52,52);
+     background-color: green;
+
+}
+.Traffic{
+     position: relative;
+     left: 600px;
+}
+h4{
+     color: #6984A7;
+     text-align: center;
+     margin-top: 50px;
+}
+    
+.grid-container{
+ display: grid;
+ grid-template-columns: repeat(3, 100px);
+ grid-template-rows: repeat(3, 100px);
+ gap: 0;
+ margin: 30px auto;
+ width: 300px;
+}
+.grid-item{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 24px;
+     background: white;
+}
+.grid-item-1 {
+     border-left: 3px solid #2c3e50;
+}
+.grid-item-2{
+     border-left: 3px solid #2c3e50;
+     border-top: 3px solid #2c3e50;
+}
+.grid-item-3 {
+     border-right: 3px solid #2c3e50;
+     border-top: 3px solid #2c3e50;
+}
+ .grid-item-4 { 
+     border-left: 3px solid #2c3e50;
+
+ } 
+ .grid-item-5 {
+      border-right: 3px solid #2c3e50;
+      border-left: 3px solid #2c3e50;
+ }
+ .grid-item-6{
+     border-right: 3px solid #2c3e50;
+ }
+ .grid-item-7{
+     border-left: 3px solid #2c3e50;
+     border-bottom:  3px solid #2c3e50;
+ }
+ .grid-item-8{
+     border-bottom:  3px solid #2c3e50;
+     border-right: 3px solid #2c3e50;
+ }
+ .grid-item-9 {
+     border-right: 3px solid #2c3e50;
+
+ }
+ h5{
+     color: #6984A7;
+     text-align: center;
+     margin-top:500px;
+ }
