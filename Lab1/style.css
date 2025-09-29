@@ -1,3 +1,19 @@
+.border-top {
+    border-top: 3px solid #000000;
+}
+
+.border-right {
+    border-right: 3px solid #000000;
+}
+
+.border-bottom {
+    border-bottom: 3px solid #000000;
+}
+
+.border-left {
+    border-left: 3px solid #000000;
+}
+
 .js-des {
     background-color: #A1F3F1;
 }
@@ -36,21 +52,21 @@
     margin-bottom: 20px;
 }
 
-.traffic-light__red-light {
+.traffic-light__light--red {
     height: 100px;
     width: 100px;
     background-color: #ff0000;
     border-radius: 100%;
 }
 
-.traffic-light__yellow-light {
+.traffic-light__light--yellow {
     height: 100px;
     width: 100px;
     background-color: #eeff00;
     border-radius: 100%;
 }
 
-.traffic-light__green-light {
+.traffic-light__light--green {
     height: 100px;
     width: 100px;
     background-color: #3cff00;
@@ -69,47 +85,6 @@
 
 .maze > div {
     background: #ffffff;
-}
-
-.maze > div:nth-child(1), .maze > div:nth-child(6) {
-    border: 3px solid#000000;
-    border-top: none;
-    border-bottom: none;
-}
-
-.maze > div:nth-child(2) {
-    border: 3px solid#000000;
-    border-right: none;
-    border-bottom: none;
-}
-
-.maze > div:nth-child(3) {
-    border: 3px solid#000000;
-    border-left: none;
-    border-bottom: none;
-}
-
-.maze > div:nth-child(4) {
-    border: 3px solid#000000;
-    border-top: none;
-    border-right: none;
-}
-
-.maze > div:nth-child(5), .maze > div:nth-child(9) {
-    border: 3px solid#000000;
-    border-top: none;
-    border-left: none;
-}
-
-.maze > div:nth-child(7) {
-    border: 3px solid#000000;
-    border-right: none;
-}
-
-.maze > div:nth-child(8) {
-    border: 3px solid#000000;
-    border-right: none;
-    border-left: none;
 }
 
 .maze__start-line {
