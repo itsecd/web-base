@@ -1,73 +1,91 @@
-.card__block {
+.task1 {
   color: #F6FC1C;
   background-color: #083F54;
   text-align: center;
 }
 
-.media__container {
+.task2 {
   position: relative;
   width: 700px;
   height: 500px;
 }
 
-.media__container_first {
+.first {
   position: absolute;
   top: 0;
   left: 0;
   width: 700px;
   height: 500px;
 }
-.media__container_second {
+.second {
   position: absolute;
   top: 0;
   left: 0;
   width: 200px;
   height: 300px;
 }
-.traffic-light {
-  display:flex;
-  flex-direction:column;
+.task3 {
   background-color: #000000;
-  height: 300px;
-  width: 100px;
+  display: inline-block;
+
 }
-.traffic-light__element{
-  flex: 1; 
-  border-radius: 50%; 
-}
-.trafic__light_red {
+
+.red {
   background: red;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
 }
-.trafic__light_yellow {
+.yellow {
   background: yellow;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
 }
-.trafic__light_green {
+.green {
   background: green;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
 }
-.line {
-    background: #8B0000;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    height: 300px;
-    width: 300px;
+.line{
+  background: #8B0000;
+  display: grid;
+  grid-template-columns: repeat(3,3fr);
+  height: 300px;
+  width: 300px;
+
 }
 
-.maze__cell {
-    position: relative; 
+.one-first{
+  border-top: 7px solid black;
+  border-left: 7px solid black;
 }
-
-.maze__cell_border-top {
-    border-top: 7px solid black;
+.one-second{
+  border-top: 7px solid black;
+  border-bottom: 7px solid black;
 }
-
-.maze__cell_border-bottom {
-    border-bottom: 7px solid black;
+.one-third{
+  border-top: 7px solid black;
+  border-bottom: 7px solid black;
 }
-
-.maze__cell_border-left {
-    border-left: 7px solid black;
+.two-first{
+  border-bottom: 7px solid black;
+  border-left: 7px solid black;
 }
-
-.maze__cell_border-right {
-    border-right: 7px solid black;
+.two-second{
+  border-bottom: 7px solid black;
+}
+.two-third{
+  border-right: 7px solid black;
+}
+.three-first{
+  border-bottom: 7px solid black;
+}
+.three-second{
+  border-bottom: 7px solid black;
+}
+.three-third{
+  border-bottom: 7px solid black;
+  border-right: 7px solid black;
 }
