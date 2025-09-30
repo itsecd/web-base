@@ -107,3 +107,32 @@ h1 {
 .parent-3 .parent-2 {
     margin: 0px;
 }
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+}
+
+a::after {
+    content: " 🌐";
+    font-weight: normal;
+}
+
+ul {
+    position: relative;
+    padding-bottom: 30px;
+}
+
+ul::after {
+            content: "Самарский Университет";
+            display: block;
+            position: absolute;
+            bottom: 10;
+            left: 10;
+            font-size: 25px;
+            color: blue;
+            height: 50px;
+            /*background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50"><text x="0" y="15" font-family="Arial" font-size="12" fill="blue">Самарский</text><text x="0" y="30" font-family="Arial" font-size="12" fill="blue">Университет</text></svg>');
+            background-repeat: no-repeat;*/
+        }
