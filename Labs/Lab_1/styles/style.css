@@ -26,6 +26,9 @@
 .task__images-container {
     position: relative;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .task__image {
@@ -35,14 +38,11 @@
 .task__image--background {
     z-index: 1;
     width: 200px;
-    left: 0;
 }
 
 .task__image--foreground {
     z-index: 2;
-    left: 50px;
     width: 100px;
-    top: 20px;
 }
 
 .traffic-light {
