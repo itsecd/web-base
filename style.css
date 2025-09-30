@@ -46,31 +46,31 @@ body {
 }
 
 .photo-gallery {
-  position: relative;
-  width: 100%;    
-  height: 250px; 
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
 }
 
-.photo-gallery__photo {
+.photo-wrap {
+  position: relative;
+  width: 350px;    
+  height: 250px;   
+}
+
+.photo-wrap img {
   position: absolute;
+  top: 50%;
   left: 50%;
-  width: 200px;
-  height: auto;
+  transform: translate(-50%, -50%);
 }
 
 .photo1 {
-  top: 0;
-  width: 100px;
-  height: auto;
-  left: 0.2%;  
+  width: 75px;     
   z-index: 2;
 }
 
 .photo2 {
-  top: 0;
-  width: 350px;
-  height: auto; 
-  left: 0;
+  width: 100%; 
   z-index: 1;
 }
 
