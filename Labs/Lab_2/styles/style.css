@@ -50,3 +50,60 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
+.parent-1 {
+    text-align: center;
+    margin: 20px;
+}
+
+.parent-1 .child {
+    padding: 5px;
+    color: red;
+    text-align: center;
+}
+
+.parent-2 {
+    margin: 20px;
+    color: orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.parent-2 .child {
+    color: #b4005a;
+    border: 1px dashed orange;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.parent-3 {
+    margin: 20px;
+    text-align: center;
+}
+
+.parent-3 .child {
+    padding: 5px;    
+}
+
+.parent-2 ~ .parent-3 {
+    padding: 5px;
+    color: green;
+}
+
+.parent-2 ~ .parent-3 .child {
+    padding: 5px;
+    text-align: center;
+    color: green;
+}
+
+.parent-3 .parent-2 .child {
+    border: none;
+    padding: 5px;
+    color: purple;
+}
+
+.parent-3 .parent-2 {
+    margin: 0px;
+}
