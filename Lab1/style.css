@@ -14,6 +14,12 @@
     border-left: 3px solid #000000;
 }
 
+.traffic-light__circles {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+
 .js-des {
     background-color: #A1F3F1;
 }
@@ -53,24 +59,15 @@
 }
 
 .traffic-light__light--red {
-    height: 100px;
-    width: 100px;
     background-color: #ff0000;
-    border-radius: 100%;
 }
 
 .traffic-light__light--yellow {
-    height: 100px;
-    width: 100px;
     background-color: #eeff00;
-    border-radius: 100%;
 }
 
 .traffic-light__light--green {
-    height: 100px;
-    width: 100px;
     background-color: #3cff00;
-    border-radius: 100%;
 }
 
 .maze {
