@@ -1,0 +1,50 @@
+.t1 {
+    font-size: 30px;
+    color:#274A78;
+    background-color: #0259F2;
+    text-align: justify;
+}
+
+.traffic-light {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    width: 120px;
+    height: 320px;
+    background-color: #333;
+    position: absolute;
+    top: 200px;
+    right: 400px;
+}
+
+        
+.light {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 10px auto;
+    background-color: #444;
+}
+.red {
+    background-color: #ff0000;
+}
+.yellow {
+    background-color: #ffff00;
+}
+.green {
+    background-color: #00ff00;
+}
+.labirint{
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  position: absolute;
+  top: 600px;
+  right: 100px;
+}
+.wall {
+    background-color: orange;
+    border: 1px solid black;
+}
+.empty{}
