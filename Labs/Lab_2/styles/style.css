@@ -1,138 +1,126 @@
 /* style.css */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #e88484;
+  margin: 0;
+  padding: 20px;
 }
 
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .animated-list {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .animated-list li {
-    background-color: #fff;
-    padding: 10px 10px;
-    border-radius: 7px;
-    border-left: 4px solid #007bff;
-    cursor: pointer;
-    color: #333;
-    font-size: 14px;
-    transition: color 1.4s ease-in-out, transform 0.7s ease;
+  background-color: #fff;
+  padding: 10px 10px;
+  border-radius: 7px;
+  border-left: 4px solid #007bff;
+  cursor: pointer;
+  color: #333;
+  font-size: 14px;
+  transition: color 1.4s ease-in-out, transform 0.7s ease;
 }
 
 .animated-list li:hover {
-    color: #007bff;
-    transform: translateX(2px); 
-    background-color: #ffffff;
-    border-left-color: #0056b3;
+  color: #007bff;
+  transform: translateX(2px);
+  background-color: #ffffff;
+  border-left-color: #0056b3;
 }
 
 .task {
-    margin: 20px 0;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 .parent-1 {
-    text-align: center;
-    margin: 20px;
+  text-align: center;
+  margin: 20px;
 }
 
-.parent-1 .child {
-    padding: 5px;
-    color: red;
-    text-align: center;
+.parent-1 .parent-1__child {
+  padding: 5px;
+  color: red;
+  text-align: center;
 }
 
 .parent-2 {
-    margin: 20px;
-    color: orange;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+  margin: 20px;
+  color: orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.parent-2 .child {
-    color: #b4005a;
-    border: 1px dashed orange;
-    border-radius: 5px;
-    padding: 5px;
+.parent-2 .parent-2__child {
+  color: #b4005a;
+  border: 1px dashed orange;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .parent-3 {
-    margin: 20px;
-    text-align: center;
+  margin: 20px;
+  text-align: center;
 }
 
-.parent-3 .child {
-    padding: 5px;    
+.parent-3 .parent-3__child {
+  padding: 5px;
 }
 
 .parent-2 ~ .parent-3 {
-    padding: 5px;
-    color: green;
+  padding: 5px;
+  color: green;
 }
 
-.parent-2 ~ .parent-3 .child {
-    padding: 5px;
-    text-align: center;
-    color: green;
+.parent-2 ~ .parent-3 .parent-3__child {
+  padding: 5px;
+  text-align: center;
+  color: green;
 }
 
-.parent-3 .parent-2 .child {
-    border: none;
-    padding: 5px;
-    color: purple;
+.parent-3 .parent-2 .parent-2__child {
+  border: none;
+  padding: 5px;
+  color: purple;
 }
 
 .parent-3 .parent-2 {
-    margin: 0px;
+  margin: 0px;
 }
 
 a {
-    text-decoration: none;
-    font-weight: bold;
-    color: inherit;
-}
-
-a::after {
-    content: " 🌐";
-    font-weight: normal;
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
 }
 
 ul {
-    position: relative;
-    padding-bottom: 30px;
+  position: relative;
+  list-style: none;
+  padding-bottom: 30px;
 }
 
-ul::after {
-            content: "Самарский Университет";
-            display: block;
-            position: absolute;
-            bottom: 10;
-            left: 10;
-            font-size: 25px;
-            color: blue;
-            height: 50px;
-            /*background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50"><text x="0" y="15" font-family="Arial" font-size="12" fill="blue">Самарский</text><text x="0" y="30" font-family="Arial" font-size="12" fill="blue">Университет</text></svg>');
-            background-repeat: no-repeat;*/
-        }
+.list::before {
+  content: " 🌐 ";
+  font-weight: bold;
+  margin-right: 5px;
+}
