@@ -83,17 +83,17 @@
     width: fit-content;
 }
 
-.maze > div {
+.maze__cell {
     background: #ffffff;
 }
 
-.maze__start-line {
+.maze__cell--start-line {
     width: 100%;
     height: 20px;
     background: #00ff0d;
 }
 
-.maze__finish-line {
+.maze__cell--finish-line {
     width: 20px;
     height: 100%;
     background: #ff3300;
