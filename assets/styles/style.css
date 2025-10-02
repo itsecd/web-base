@@ -29,3 +29,81 @@
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
+.traffic-light-box{
+    position: relative;
+    background-color: rgb(12, 12, 12);
+    height: 220px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.traffic-light{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+}
+
+#red{
+    position: absolute;
+    background-color: #CC0605;
+    transform: translate(20px, 10px);
+    border-radius: 100%;
+}
+
+#yellow{
+    position: absolute;
+    background-color: #FDDA16;
+    transform: translate(20px, 80px);
+    border-radius: 100%;
+}
+
+#green{
+    position: absolute;
+    background-color: #8c9900;
+    transform: translate(20px, 150px);
+    border-radius: 100%;
+}
+
+.maze-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 300px;
+    height: 300px;
+    background-color: gray;
+
+}
+
+.maze-elem{
+    border: 0px solid black;
+}
+
+.row1{
+    border-top-width: 3px;
+}
+
+.row3{
+    border-bottom-width: 3px;
+}
+
+.col1{
+    border-left-width: 3px;
+}
+
+.col3{
+    border-right-width: 3px;
+}
+
+#maze1{
+    border-width: 0px 3px;
+}
+#maze2{
+    border-width: 3px 0px;
+}
+#maze5{
+    border-right-width: 3px; 
+}
+#maze7{
+    border-width: 3px 0px 3px 0px;
+}
