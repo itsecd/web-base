@@ -1,0 +1,116 @@
+/* Общие стили */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg,#2A9B3D, #F7E540);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Общий фон для калькулятора и истории (акрил) */
+.calculator, .history {
+  background: rgba(255, 255, 255, 0.2); /* прозрачный белый фон */
+  backdrop-filter: blur(10px);           /* размытие фона */
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Калькулятор */
+.calculator {
+  width: 350px;
+}
+
+.calculator h1 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Поля ввода и селект */
+.inputs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.inputs input, .inputs select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100px;
+}
+
+/* Кнопка */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #6a11cb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #2575fc;
+  transform: scale(1.05);
+}
+
+/* Результат */
+.result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff; 
+}
+
+/* история вычислений */
+.history {
+  width: 220px;
+  margin: 100px; 
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.history h2 {
+  text-align: center;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+#history-list {
+  display: flex;
+  flex-direction: column-reverse; /* новые элементы сверху */
+  gap: 10px;
+}
+
+.history-item {
+  background: rgba(62, 199, 96, 0.1); /* прозрачный белый фон */
+  backdrop-filter: blur(10px);           /* размытие фона */
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  word-break: break-word;
+  transition: transform 0.2s;
+}
+
+.history-item:hover {
+  transform: scale(1.05);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
