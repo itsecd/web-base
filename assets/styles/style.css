@@ -1,0 +1,31 @@
+.js-cont{
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 10%;
+}
+
+.js-text{
+    color: #7DE0EA;
+    background-color: #FCB9A1;
+}
+
+.img-cont{
+    position: relative;
+    display: inline-block;
+}
+
+#parent.img{
+    display: block;
+    height: 300px;
+    max-height: 100%;
+
+}
+
+#child.img{
+    height: 100px;
+    max-height: 100%;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
