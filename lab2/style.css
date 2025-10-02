@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f0f0f0;
+}
+
+.task {
+  width: 600px;        /* максимальная ширина блока */
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* task 1 */
+.franchises-list {
+  list-style: none;
+  padding: 0;
+}
+
+.franchises-list__item {
+  font-size: 18px;
+  color: #333;          
+  margin-bottom: 10px;
+  transition: color 0.3s ease;  /* чтобы плавно текст менять */
+  cursor: pointer;
+}
+
+.franchises-list__item:hover {
+  color: #E91E63;
+}
+
+/* task 2 */
+
+.task--parents {
+  width: 200px;   
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.parent {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+/* все дети 1 родителя красные */
+.parent-1 .child {
+  color: red;
+}
+
+/* второй родитель */
+.parent-2 {
+  color: orange;           /* сам родитель */
+}
+
+.parent-2 .child {
+  color: #b4005a;          /* цвет детей */
+  border: 1px dashed orange;
+  padding: 3px;
+  margin: 3px 0;
+}
+
+/* третий родитель */
+.parent-3 {
+  color: inherit;           /* стандартный цвет если не после второго */
+}
+
+.parent-3 + .parent-3,
+.parent-2 + .parent-3 {
+  color: green;             /* если идёт после 2 */
+}
+
+.parent-3 .child {
+  color: inherit;
+  border: 1px solid transparent;
+  padding: 3px;
+  margin: 3px 0;
+}
+
+/* если дети 2 гостт у 3 */
+.parent-3 .child.guest {
+  color: purple;
+  border: none;
+}
+
+/* task 3 */
+
+.languages-list a {
+  font-weight: bold;       /* отличается от остального текста */
+  text-decoration: none;   /* убираем стандартное подчёркивание */
+  position: relative;
+  color: inherit;          /* наследует цвет текста */
+  transition: color 0.3s;  /* плавное изменение цвета при hover */
+}
+
+.languages-list a::before {
+  content: "🌐 ";
+  margin-right: 4px;
+}
+
+.languages-list a:hover {
+  color: #E91E63;
+}
+
+/* лого */
+.languages-list::after {
+  content: "";                         
+  display: block;
+  width: 120px;                       
+  height: 40px;   
+  padding: 5px;
+  margin-top: 15px;
+  background-color: #333;            
+  background-image: url('https://ssau.ru/i/logo/logo-white-ru.svg'); 
+  background-size: contain;             /* логотип полностью помещается */
+  background-repeat: no-repeat;         /* отключаем повтор */
+  background-position: center;      
+}
+
