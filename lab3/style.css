@@ -1,0 +1,130 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header.header {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+header .avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  transition: transform 0.3s;
+}
+
+header .avatar img:hover {
+  transform: scale(1.1);
+}
+
+header .name {
+  margin: 10px 0 5px;
+  font-size: 28px;
+  animation: slideDown 1s ease-in;
+}
+
+header .birthdate {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.section {
+  max-width: 600px;
+  background: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+}
+
+.section h2 {
+  margin-top: 0;
+  color: #2575fc;
+}
+
+.section ul {
+  padding-left: 20px;
+}
+
+.section a {
+  color: #6a11cb;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.section a:hover {
+  color: #2575fc;
+  text-decoration: underline;
+}
+
+/* Простые анимации */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideDown {
+  from {transform: translateY(-20px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+/* Блок проектов */
+.projects {
+  max-width: 600px;
+  background: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.project {
+  margin-bottom: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.project h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* расстояние между названием и иконкой */
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #2575fc;
+}
+
+.project p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.github-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s;
+}
+
+.github-icon:hover {
+  transform: scale(1.2);
+}
