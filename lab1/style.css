@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f9f9f9;
+}
+
+.task {
+  margin-bottom: 40px;
+}
+
+.task__title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* task 1 */
+.text-block {
+  background-color: #2BBF71;
+  padding: 35px;
+  border: 5px solid #99c;
+  text-align: left;
+}
+
+.text-block__title {
+  text-align: center;
+  color: #fff;
+}
+
+.text-block__content {
+  color: #AEEC23;
+}
+
+/* task 2 */
+.images-stack {
+  position: relative;  
+  width: 400px;        
+  height: 300px;       
+}
+
+.images-stack__item {
+  position: absolute;   
+  top: 0;               
+  left: 0;
+  width: 100%;          
+  height: 100%;         
+  object-fit: contain;  
+}
+
+/* task 3 */
+.traffic-light {
+  width: 100px;
+  padding: 10px;
+  background: #333;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.traffic-light__lamp {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.traffic-light__lamp--red {
+  background: red;
+}
+.traffic-light__lamp--yellow {
+  background: yellow;
+}
+.traffic-light__lamp--green {
+  background: green;
+}
+
+/* task 4 */
+.maze {
+  display: grid;
+  gap: 0;
+  --cols: 3;
+  --rows: 3;
+  grid-template-columns: repeat(var(--cols), 60px);
+  grid-template-rows: repeat(var(--rows), 60px);
+}
+
+.maze__cell {
+  border: 2px solid #000;
+  background-color: #fff;
+}
