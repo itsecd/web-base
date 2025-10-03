@@ -14,8 +14,8 @@
     height: 320px;
     background-color: #333;
     position: absolute;
-    top: 200px;
-    right: 400px;
+    margin: 10px;
+
 }
 
         
@@ -36,15 +36,82 @@
     background-color: #00ff00;
 }
 .labirint{
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
-  position: absolute;
-  top: 600px;
-  right: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    margin: 400px auto;
+    
 }
-.wall {
+
+.border {
     background-color: orange;
-    border: 1px solid black;
 }
-.empty{}
+
+.border-top {
+    background-color: orange;
+    border-top: 2px solid black;
+}
+
+.border-top-right {
+    background-color: orange;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+}
+.border-left-bottom {
+    background-color: orange;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.border-top-bottom {
+    background-color: orange;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.border-top-right-bottom {
+    background-color: orange;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.border-left-top {
+    background-color: orange;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+}
+.border-right-bottom {
+    background-color: orange;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.border-right {
+    background-color: orange;
+    border-right: 2px solid black;
+}
+.border- {
+    background-color: orange;
+    border-top: 2px solid black;
+}
+
+
+.container {
+    position: relative; 
+    display: inline-block;
+    width: 1200px;
+}
+
+.container_down {
+  display: block; 
+  float: left; 
+  width: 100%; 
+}
+.overlay-image {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  z-index: 1; 
+}
