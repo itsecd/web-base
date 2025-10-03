@@ -46,12 +46,12 @@ h1 {
   object-fit: cover;
 }
 
-.images__item--back {
+.images__item_back {
   top: 0;
   left: 0;
 }
 
-.images__item--front {
+.images__item_front {
   top: 20px;
   left: 20px;
   opacity: 0.8;
@@ -76,15 +76,15 @@ h1 {
   border: 2px solid #333;
 }
 
-.traffic-light__circle--red {
+.traffic-light__circle_red {
   background-color: red;
 }
 
-.traffic-light__circle--yellow {
+.traffic-light__circle_yellow {
   background-color: yellow;
 }
 
-.traffic-light__circle--green {
+.traffic-light__circle_green {
   background-color: green;
 }
 
