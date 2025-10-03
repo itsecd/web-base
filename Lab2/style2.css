@@ -1,0 +1,70 @@
+.body{
+  margin: 8px;
+}
+
+.section-one__list li {
+    cursor: pointer;
+    transition: all 0.4s ease-out; 
+}
+
+.section-one__list li:hover {
+    color: rgb(46, 43, 196);             
+    transform: scale(0.95);
+    animation: flame-flicker 1.5s infinite alternate;
+}
+
+.parent-1 > .parent-1__child{
+  color: red;
+}
+
+.parent-2{
+  color: orange;
+}
+
+.parent-2 > .parent-2__child{
+  color: #b4005a;
+  border: 1px dashed orange;
+  width: 80px;
+  padding: 8px;
+}
+
+.parent-2 ~ .parent-3,
+.parent-2 ~ .parent-3 > .parent-3__child{
+  color: green;
+}
+
+.parent-3 > .parent-2__child{
+  color: purple;
+}
+
+.section-two__link{
+  text-decoration: none;
+  font-weight: bold;
+  color:black;
+}
+
+.section-two__link::after{
+  content: "🔗";
+}
+
+.section-two__link:hover{
+  color: rgb(46, 43, 196);             
+  transform: scale(0.95);
+  animation: flame-flicker 1.5s infinite alternate;
+}
+
+.section-two ul::after{
+  content: "";
+  display: block;
+  width: 310px;
+  height: 100px;
+  background: url('https://ssau.ru/i/logo/logo-white-ru.svg') no-repeat left center;
+  background-size: contain;
+  background-color: rgb(103, 146, 226)
+}
+
+@keyframes flame-flicker {
+  0%   { text-shadow: 0 0 4px #ffe08a, 0 0 12px #ffb347, 0 0 24px #ff6a00, 0 0 40px #ff1e00; }
+  50%  { text-shadow: 0 0 8px #fff0b0, 0 0 18px #ff9800, 0 0 30px #ff3d00, 0 0 54px #ff6a00; }
+  100% { text-shadow: 0 0 5px #ffd27a, 0 0 14px #ffa000, 0 0 26px #ff5a00, 0 0 46px #ff2d00; }
+}
