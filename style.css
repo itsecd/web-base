@@ -2,16 +2,16 @@ body{
     margin: 8px;
 }
 
-.sectionOne{
+.section-one{
     background-color: #FEB431;
 }
 
-.textOne{
+.section-one__text--one{
     color: #85A1B7;
     text-align: center;
 }
 
-.sectionTwo{
+.section-two{
     position: relative;
     height: auto;
     width:100%;
@@ -20,23 +20,23 @@ body{
     aspect-ratio: 16 / 9;
 }
 
-.sectionTwo img{
+.section-two img{
     position: absolute;
 }
 
-.photoOne{
+.section-two__photo--one{
     width: 100%;
     z-index: 1;
 }
 
-.photoTwo{
+.section-two__photo--two{
     z-index: 2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.sectionThree{
+.section-three{
     position: relative;
     top: 20px;
     width: 130px;
@@ -50,26 +50,25 @@ body{
     justify-items: center;
 }
 
-.lamp{
+div[class^= "section-three__lamp"]{
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: #222;
 }
 
-.sectionThree .first{
+.section-three__lamp--red{
     background-color: red;
 }
 
-.sectionThree .second{
+.section-three__lamp--yellow{
     background-color: yellow;
 }
 
-.sectionThree .third{
+.section-three__lamp--green{
     background-color: green;
 }
 
-.sectionFour{
+.section-four{
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);   
@@ -79,8 +78,58 @@ body{
     margin: 40px auto;
 }
 
-.sectionFour .cell{
-    border: 2px solid #ffffff; 
+div[class^="section-four__cell"]{
+    border: 2px solid #b91919; 
     box-sizing: border-box;
     background-color: #000000;
+}
+
+.section-four__cell--entrance[class]{
+    border-bottom: none;
+    border-top: none;
+    border-right: none;
+}
+
+.section-four__cell--two[class]{
+    border-right: none;
+    border-top: none;
+}
+
+.section-four__cell--three[class]{
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+
+.section-four__cell--four[class]{
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.section-four__cell--five[class]{
+    border: none;
+}
+
+.section-four__cell--six[class]{
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+}
+
+.section-four__cell--seven[class]{
+    border-bottom: none;
+    border-left: none;
+    border-right: none;    
+}
+
+.section-four__cell--eight[class]{
+    border-bottom: none;
+    border-left: none;
+    border-right: none;    
+}
+
+.section-four__cell--exit[class]{
+    border-bottom: none;
+    border-top: none;
 }
