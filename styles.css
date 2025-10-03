@@ -1,4 +1,4 @@
-.text-block {
+﻿.text-block {
     background-color: #3F4531;
     color: #8B2CD3;
     text-align: left;
@@ -45,16 +45,21 @@
 }
 
 .maze {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 0;
+    width: fit-content;
 }
 
 .maze__row {
+    display: contents;
 }
 
 .maze__cell {
     width: 50px;
     height: 50px;
     border: 1px solid black;
-    display: inline-block;
     box-sizing: border-box;
 }
 
