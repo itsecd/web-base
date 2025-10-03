@@ -1,6 +1,6 @@
-.t1 {
+.text-block {
     font-size: 30px;
-    color:#274A78;
+    color: #274A78;
     background-color: #0259F2;
     text-align: justify;
 }
@@ -15,103 +15,94 @@
     background-color: #333;
     position: absolute;
     margin: 10px;
-
 }
 
-        
-.light {
+.traffic-light__item {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     margin: 10px auto;
     background-color: #444;
 }
-.red {
+
+.traffic-light__item--red {
     background-color: #ff0000;
 }
-.yellow {
+
+.traffic-light__item--yellow {
     background-color: #ffff00;
 }
-.green {
+
+.traffic-light__item--green {
     background-color: #00ff00;
 }
-.labirint{
+
+.labyrinth {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
     margin: 400px auto;
-    
 }
 
-.border {
+.labyrinth__cell {
     background-color: orange;
 }
 
-.border-top {
+.labyrinth__cell--top {
     background-color: orange;
     border-top: 2px solid black;
 }
 
-.border-top-right {
+.labyrinth__cell--top-right {
     background-color: orange;
     border-top: 2px solid black;
     border-right: 2px solid black;
 }
-.border-left-bottom {
+
+.labyrinth__cell--left {
     background-color: orange;
     border-left: 2px solid black;
-    border-bottom: 2px solid black;
 }
 
-.border-top-bottom {
+.labyrinth__cell--top-bottom {
     background-color: orange;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
 }
 
-.border-top-right-bottom {
-    background-color: orange;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-}
-
-.border-left-top {
+.labyrinth__cell--left-top {
     background-color: orange;
     border-left: 2px solid black;
     border-top: 2px solid black;
 }
-.border-right-bottom {
+
+.labyrinth__cell--right-bottom {
     background-color: orange;
     border-right: 2px solid black;
     border-bottom: 2px solid black;
 }
 
-.border-right {
+.labyrinth__cell--right {
     background-color: orange;
     border-right: 2px solid black;
 }
-.border- {
-    background-color: orange;
-    border-top: 2px solid black;
-}
 
-
-.container {
+.image-container {
     position: relative; 
     display: inline-block;
     width: 1200px;
 }
 
-.container_down {
-  display: block; 
-  float: left; 
-  width: 100%; 
+.image-container__background {
+    display: block; 
+    float: left; 
+    width: 100%; 
 }
-.overlay-image {
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-  z-index: 1; 
+
+.image-container__overlay {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1; 
 }
