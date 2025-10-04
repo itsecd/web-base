@@ -97,6 +97,11 @@ body {
   color: #E91E63;
 }
 
+.languages-list {
+  list-style: none; /* убираем точки */
+  padding: 0;
+}
+
 /* лого */
 .languages-list::after {
   content: "";                         
