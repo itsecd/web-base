@@ -14,20 +14,20 @@ body {
 }
 
 /* task 1 */
-.franchises-list {
+.task--franchises__list {
   list-style: none;
   padding: 0;
 }
 
-.franchises-list__item {
+.task--franchises__item {
   font-size: 18px;
-  color: #333;          
+  color: #333;
   margin-bottom: 10px;
-  transition: color 0.3s ease;  /* чтобы плавно текст менять */
+  transition: color 0.3s ease;
   cursor: pointer;
 }
 
-.franchises-list__item:hover {
+.task--franchises__item:hover {
   color: #E91E63;
 }
 
