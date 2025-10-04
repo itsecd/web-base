@@ -102,3 +102,19 @@ h1 {
   border: 2px solid black;
   background: #eee;
 }
+
+.maze__cell_border-bottom-none {
+  border-bottom: none;
+}
+
+.maze__cell_border-top-none {
+  border-top: none;
+}
+
+.maze__cell_border-left-none {
+  border-left: none;
+}
+
+.maze__cell_border-right-none {
+  border-right: none;
+}
