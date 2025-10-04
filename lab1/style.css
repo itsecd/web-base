@@ -1,22 +1,13 @@
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   text-align: center;
 }
 
-h1 {
-  margin-bottom: 30px;
-}
-
-.task {
-  margin-bottom: 40px;
-}
-
-.task__title {
-  margin-bottom: 15px;
-  color: #333;
-}
+h1 { margin-bottom: 30px; }
+.task { margin-bottom: 40px; }
+.task__title { margin-bottom: 15px; color: #333; }
 
 .text-block {
   background-color: #2F9469; 
@@ -27,10 +18,7 @@ h1 {
   margin: 0 auto;
   border-radius: 8px;
 }
-
-.text-block__content {
-  margin: 10px 0;
-}
+.text-block__content { margin: 10px 0; }
 
 .images {
   position: relative;
@@ -38,24 +26,14 @@ h1 {
   height: 200px;
   margin: 0 auto;
 }
-
 .images__item {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-.images__item_back {
-  top: 0;
-  left: 0;
-}
-
-.images__item_front {
-  top: 20px;
-  left: 20px;
-  opacity: 0.8;
-}
+.images__item_back { top: 0; left: 0; }
+.images__item_front { top: 20px; left: 20px; opacity: 0.8; }
 
 .traffic-light {
   width: 120px;
@@ -68,53 +46,34 @@ h1 {
   gap: 15px;
   align-items: center;
 }
-
 .traffic-light__circle {
   width: 70px;
   height: 70px;
   border-radius: 50%;
   border: 2px solid #333;
 }
-
-.traffic-light__circle_red {
-  background-color: red;
-}
-
-.traffic-light__circle_yellow {
-  background-color: yellow;
-}
-
-.traffic-light__circle_green {
-  background-color: green;
-}
+.traffic-light__circle_red { background-color: red; }
+.traffic-light__circle_yellow { background-color: yellow; }
+.traffic-light__circle_green { background-color: green; }
 
 .maze {
   display: grid;
   grid-template-columns: repeat(3, 80px);
   grid-template-rows: repeat(3, 80px);
-  gap: 0;
   margin: 0 auto;
-  border: 3px solid black;
   width: max-content;
 }
 
 .maze__cell {
-  border: 2px solid black;
-  background: #eee;
+  background: #fff;
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
 }
 
-.maze__cell_border-bottom-none {
-  border-bottom: none;
-}
+.maze__cell:nth-child(-n+3) { border-top: 3px solid #000; }
+.maze__cell:nth-child(3n+1) { border-left: 3px solid #000; }  
 
-.maze__cell_border-top-none {
-  border-top: none;
-}
-
-.maze__cell_border-left-none {
-  border-left: none;
-}
-
-.maze__cell_border-right-none {
-  border-right: none;
-}
+.maze__cell_no_top    { border-top:    none !important; }
+.maze__cell_no_right  { border-right:  none !important; }
+.maze__cell_no_bottom { border-bottom: none !important; }
+.maze__cell_no_left   { border-left:   none !important; }
