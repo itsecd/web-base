@@ -78,58 +78,20 @@ div[class^= "section-three__lamp"]{
     margin: 40px auto;
 }
 
-div[class^="section-four__cell"]{
-    border: 2px solid #b91919; 
+.section-four__cell{
+    border: none; 
     box-sizing: border-box;
     background-color: #000000;
 }
 
-.section-four__cell--entrance[class]{
-    border-bottom: none;
-    border-top: none;
-    border-right: none;
+.border-left{
+    border-left: 8px solid #b91919; 
 }
 
-.section-four__cell--two[class]{
-    border-right: none;
-    border-top: none;
+.section-four .border-right{
+    border-right: 8px solid #b91919; 
 }
 
-.section-four__cell--three[class]{
-    border-left: none;
-    border-top: none;
-    border-right: none;
-}
-
-.section-four__cell--four[class]{
-    border-top: none;
-    border-right: none;
-    border-bottom: none;
-}
-
-.section-four__cell--five[class]{
-    border: none;
-}
-
-.section-four__cell--six[class]{
-    border-top: none;
-    border-left: none;
-    border-bottom: none;
-}
-
-.section-four__cell--seven[class]{
-    border-bottom: none;
-    border-left: none;
-    border-right: none;    
-}
-
-.section-four__cell--eight[class]{
-    border-bottom: none;
-    border-left: none;
-    border-right: none;    
-}
-
-.section-four__cell--exit[class]{
-    border-bottom: none;
-    border-top: none;
+.section-four .border-bottom{
+    border-bottom: 8px solid #b91919; 
 }
