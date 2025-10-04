@@ -1,26 +1,26 @@
-.js-cont {
+.task1 {
   text-align: center;
   vertical-align: middle;
   margin: 0 10%;
 }
 
-.js-text {
+.task1__text-js {
   color: #7de0ea;
   background-color: #fcb9a1;
 }
 
-.img-cont {
+.task2 {
   position: relative;
   display: inline-block;
 }
 
-#parent.img {
+.task2__img_parent {
   display: block;
   height: 300px;
   max-height: 100%;
 }
 
-#child.img {
+.task2__img_child {
   height: 100px;
   max-height: 100%;
   position: absolute;
@@ -29,7 +29,7 @@
   transform: translate(-50%, -50%);
 }
 
-.traffic-light-box {
+.traffic-light {
   position: relative;
   background-color: rgb(12, 12, 12);
   height: 220px;
@@ -37,34 +37,34 @@
   border-radius: 5px;
 }
 
-.traffic-light {
+.traffic-light__lamp {
   position: absolute;
   height: 60px;
   width: 60px;
 }
 
-#red {
+.traffic-light__lamp_red {
   position: absolute;
   background-color: #cc0605;
   transform: translate(20px, 10px);
   border-radius: 100%;
 }
 
-#yellow {
+.traffic-light__lamp_yellow {
   position: absolute;
   background-color: #fdda16;
   transform: translate(20px, 80px);
   border-radius: 100%;
 }
 
-#green {
+.traffic-light__lamp_green {
   position: absolute;
   background-color: #8c9900;
   transform: translate(20px, 150px);
   border-radius: 100%;
 }
 
-.maze-box {
+.maze {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -73,35 +73,35 @@
   background-color: gray;
 }
 
-.maze-elem {
+.maze__elem {
   border: 0px solid black;
 }
 
-.row1 {
+.maze__elem_row1 {
   border-top-width: 3px;
 }
 
-.row3 {
+.maze__elem_row3 {
   border-bottom-width: 3px;
 }
 
-.col1 {
+.maze__elem_col1 {
   border-left-width: 3px;
 }
 
-.col3 {
+.maze__elem_col3 {
   border-right-width: 3px;
 }
 
-#maze1 {
+.maze__elem_row1.maze__elem_col1 {
   border-width: 0px 3px;
 }
-#maze2 {
+.maze__elem_row1.maze__elem_col2 {
   border-width: 3px 0px;
 }
-#maze5 {
+.maze__elem_row2.maze__elem_col2 {
   border-right-width: 3px;
 }
-#maze7 {
+.maze__elem_row3.maze__elem_col1 {
   border-width: 3px 0px 3px 0px;
 }
