@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #d984c7;
+    margin: 20px;
+}
+
+/* Заголовок страницы */
+.page__title {
+    text-align: center;
+}
+
+/* Общий стиль блока-задания */
+.task {
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #ccc;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.task__title {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Задание 1 */
+.text-block {
+    text-align: right;
+    color: #CEF25F;
+    background-color: #051F84;
+    padding: 20px;
+    width: 400px;
+    margin: 20px auto;
+    border: 2px solid #CEF25F;
+}
+
+/* Задание 2 */
+.image-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+}
+
+.image-container__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #fff;
+}
+
+/* Задание 3 — светофор */
+.traffic-light {
+    width: 100px;
+    padding: 10px;
+    background: #131212;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+
+.traffic-light__light {
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+    border-radius: 50%;
+}
+
+.traffic-light__light--red { background: red; }
+.traffic-light__light--yellow { background: yellow; }
+.traffic-light__light--green { background: green; }
+
+/* Задание 4 — лабиринт */
+.maze {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    margin: 20px auto;
+    width: max-content;
+}
+
+.maze__cell {
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+/* Стены лабиринта */
+.maze__cell:nth-child(1) { border-right: 4px solid black; border-bottom: 4px solid black; }
+.maze__cell:nth-child(2) { border-bottom: 4px solid black; }
+.maze__cell:nth-child(3) { border-left: 4px solid black; border-bottom: 4px solid black; }
+
+.maze__cell:nth-child(4) { border-right: 4px solid black; }
+.maze__cell:nth-child(5) { border-left: 4px solid black; border-right: 4px solid black; border-top: 4px solid black; }
+.maze__cell:nth-child(6) { border-left: 4px solid black; }
+
+.maze__cell:nth-child(7) { border-top: 4px solid black; border-right: 4px solid black; }
+.maze__cell:nth-child(8) { border-top: 4px solid black; }
+.maze__cell:nth-child(9) { border-top: 4px solid black; border-left: 4px solid black; }

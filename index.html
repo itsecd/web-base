@@ -3,95 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Лабораторная работа 1</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #e6e5e5;
-            margin: 20px;
-        }
-        h2 {
-            text-align: center;
-            margin-top: 40px;
-        }
-        .task {
-            margin: 30px auto;
-            padding: 20px;
-            background: #fff;
-            border: 2px solid #ccc;
-            width: 80%;
-            border-radius: 10px;
-        }
-
-        /* Задание 1 */
-        .text-block {
-            text-align: right;
-            color: #CEF25F;
-            background-color: #051F84;
-            padding: 20px;
-            width: 400px;
-            margin: 20px auto;
-            border: 2px solid #CEF25F;
-        }
-
-        /* Задание 2 */
-        .container {
-            position: relative;
-            width: 400px; 
-            height: 400px;
-            margin: 20px auto;
-        }
-        .container img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-       
-       
-
-        /* Задание 3 */
-        .traffic-light {
-            width: 100px;
-            padding: 10px;
-            background: #131212;
-            margin: 20px auto;
-            border-radius: 15px;
-        }
-        .light {
-            width: 80px;
-            height: 80px;
-            margin: 10px auto;
-            border-radius: 50%;
-        }
-        .red { background: red; }
-        .yellow { background: yellow; }
-        .green { background: green; }
-
-        /* Задание 4 */
-        .maze {
-            display: grid;
-            grid-template-columns: repeat(3, 100px);
-            grid-template-rows: repeat(3, 100px);
-            gap: 0;
-            margin: 20px auto;
-            width: max-content;
-        }
-        .cell {
-            width: 100px;
-            height: 100px;
-            border: 2px solid black;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1 style="text-align:center;">Лабораторная работа 1</h1>
+    <h1 class="page__title">Лабораторная работа 1</h1>
 
     <!-- Задание 1 -->
-    <div class="task">
-        <h2>Задание 1</h2>
+    <section class="task task--text">
+        <h2 class="task__title">Задание 1</h2>
         <div class="text-block">
             JavaScript (аббр. JS) — мультипарадигменный язык программирования. 
             Поддерживает объектно-ориентированный, императивный и функциональный стили. 
@@ -99,42 +19,46 @@
             JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. 
             Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.
         </div>
-    </div>
+    </section>
 
     <!-- Задание 2 -->
-    <div class="task">
-        <h2>Задание 2</h2>
-        <div class="container">
-            <img src="164648-kot-kotenok-privlekatelnost-golova-glaz-3840x2160.jpg" alt="Картинка 1">
-            <img src="cd16121609a79d95dffbfa28a326331e.jpg"  alt="Картинка 2">
+    <section class="task task--images">
+        <h2 class="task__title">Задание 2</h2>
+        <div class="image-container">
+            <img src="164648-kot-kotenok-privlekatelnost-golova-glaz-3840x2160.jpg" 
+                 alt="Картинка 1" 
+                 class="image-container__image">
+            <img src="cd16121609a79d95dffbfa28a326331e.jpg" 
+                 alt="Картинка 2" 
+                 class="image-container__image">
         </div>
-    </div>
+    </section>
 
     <!-- Задание 3 -->
-    <div class="task">
-        <h2>Задание 3</h2>
+    <section class="task task--traffic-light">
+        <h2 class="task__title">Задание 3</h2>
         <div class="traffic-light">
-            <div class="light red"></div>
-            <div class="light yellow"></div>
-            <div class="light green"></div>
+            <div class="traffic-light__light traffic-light__light--red"></div>
+            <div class="traffic-light__light traffic-light__light--yellow"></div>
+            <div class="traffic-light__light traffic-light__light--green"></div>
         </div>
-    </div>
+    </section>
 
     <!-- Задание 4 -->
-    <div class="task">
-        <h2>Задание 4</h2>
+    <section class="task task--maze">
+        <h2 class="task__title">Задание 4</h2>
         <div class="maze">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+            <div class="maze__cell"></div>
+            <div class="maze__cell"></div>
+            <div class="maze__cell"></div>
+            <div class="maze__cell"></div>
+            <div class="maze__cell"></div>
+            <div class="maze__cell"></div>
+            <div class="maze__cell"></div>
+            <div class="maze__cell"></div>
+            <div class="maze__cell"></div>
         </div>
-    </div>
+    </section>
 
 </body>
 </html>
