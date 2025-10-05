@@ -4,7 +4,7 @@ p {
     color: #E2155C;
 }
 
-.image-container {
+.images {
     position: relative; 
     display: flex;
     justify-content: center;
@@ -27,11 +27,8 @@ p {
     z-index: 2; 
 }
 
-.traffic-lights {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 150px;
+.traffic-lights{
+margin-top: 10px;
 }
 
 .light {
@@ -50,4 +47,17 @@ p {
 
 .green {
     background-color: green;
+}
+
+.maze {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+}
+
+.cube {
+    background-color: rgb(195, 95, 195);
+    border-color: black;
+    border: 2px solid;
 }
