@@ -1,0 +1,91 @@
+html {
+    background-color: aqua;
+}
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 50px;
+}
+section {
+    background-color: aquamarine;
+    border: 1px solid black;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+h1{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+
+
+.list{
+    padding-left: 10px;
+} 
+.element{
+    font-size: 16px;
+    margin-bottom: 2px;
+    color: black;
+    transition: color 0.5s ease;
+}
+.element:hover {
+            color: blue; /* Цвет при наведении */
+            cursor: pointer;
+}
+
+
+
+
+.child{
+    font-size: 16px;
+    padding-left: 10px;
+    margin-right: 80%;
+    margin-bottom: 2px;
+}
+
+.firstparent > .child {
+    color: red;
+}
+.secondparent > .child {
+    color: #b4005a ;
+    border: orange dashed 2px;
+}
+.thirdparent > .secondparent > .child{
+    border: none;
+}
+
+.secondparent{
+    color: orange;
+}
+.secondparent + .thirdparent{
+    color: green;
+}
+.firstparent + .thirdparent{
+    color: black;
+}
+
+
+.text{
+    font-size: 20px;
+}
+.link{
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
+}
+.link::before{
+    content: "🌐";
+}
+.text > .list::after{
+    content: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+}
