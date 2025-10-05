@@ -104,7 +104,7 @@ h1, h2
     gap: 15px;
 }
 
-.light 
+.traffic-light__light 
 {
     width: 80px;
     height: 80px;
@@ -112,17 +112,17 @@ h1, h2
     border: 2px solid #666;
 }
 
-.red 
+.traffic-light__light_red 
 {
     background-color: #ff4444;
 }
 
-.yellow 
+.traffic-light__light_yellow 
 {
     background-color: #ffff44;
 }
 
-.green 
+.traffic-light__light_green 
 {
     background-color: #44ff44;
 }
