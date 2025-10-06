@@ -63,6 +63,11 @@
   background-color: rgb(103, 146, 226)
 }
 
+.section-two li{
+  list-style: none;
+  margin-bottom: 8px;
+}
+
 @keyframes flame-flicker {
   0%   { text-shadow: 0 0 4px #ffe08a, 0 0 12px #ffb347, 0 0 24px #ff6a00, 0 0 40px #ff1e00; }
   50%  { text-shadow: 0 0 8px #fff0b0, 0 0 18px #ff9800, 0 0 30px #ff3d00, 0 0 54px #ff6a00; }
