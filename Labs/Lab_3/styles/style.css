@@ -1,0 +1,110 @@
+body {
+  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.background__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.background__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: backgroundFade 45s infinite;
+}
+
+.bg__1 {
+  background-image: url("../pics/forest_20_blog.webp");
+  animation-delay: 0s;
+}
+
+.bg__2 {
+  background-image: url("../pics/forest_21_blog.webp");
+  animation-delay: 15s;
+}
+
+.bg__3 {
+  background-image: url("../pics/79abadba1d01508f30c6ad571c63f7f6f80c0b13033e08d66cfd28fc36b34075.webp");
+  animation-delay: 30s;
+}
+
+@keyframes backgroundFade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  53% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.text__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.profile__image {
+  width: 80px;
+  height: 80px;
+  border-radius: 20%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.fio h1 {
+  margin: 0;
+  font-size: 1.4em;
+  color: #2c3e50;
+  line-height: 1.3;
+}
+
+.content {
+  width: 100%;
+}
+
+.content p {
+  margin: 0 0 15px 0;
+  color: #34495e;
+  text-align: left;
+  width: 100%;
+}
