@@ -75,37 +75,32 @@ body {
   background: green;
 }
 
-/* task 4 */
-/* task 4 */
+/* task maze */
+.task--maze {
+  text-align: center;
+}
+
 .maze {
   display: grid;
-  grid-template-columns: repeat(3, 60px);
-  grid-template-rows: repeat(3, 60px);
+  grid-template-columns: repeat(3, 80px); 
+  grid-template-rows: repeat(3, 80px);
   gap: 0;
+  margin: 20px auto;
+  width: max-content;
 }
 
 .maze__cell {
-  width: 60px;
-  height: 60px;
-  box-sizing: border-box;
-  border: 2px solid #000;
   background-color: #fff;
+  border: 3px solid #000;
+  box-sizing: border-box;
 }
 
-/* 🎯 Настоящий лабиринт 3x3 */
+.maze__cell_open-top    { border-top: 3px solid #fff; }
+.maze__cell_open-right  { border-right: 3px solid #fff; }
+.maze__cell_open-bottom { border-bottom: 3px solid #fff; }
+.maze__cell_open-left   { border-left: 3px solid #fff; }
 
-/* Верхний ряд */
-.maze__cell:nth-child(1) {border-left: none; border-bottom: none;background-color: #c8e6c9;} /* Вход */
-.maze__cell:nth-child(2) { border-left: none; border-right: none; border-bottom: none; } 
-.maze__cell:nth-child(3) { border-left: none; border-bottom:none;  }
+.maze__cell--start { background-color: #c8e6c9; }
+.maze__cell--finish { background-color: #ffcdd2; }
 
-/* Средний ряд */
-.maze__cell:nth-child(4) { border-top: none; border-right: none; }
-.maze__cell:nth-child(5) { border-left: none; border-top: none; }
-.maze__cell:nth-child(6) { border-top: none; border-bottom: none; border-left: none; }
-
-/* Нижний ряд */
-.maze__cell:nth-child(7) { border-top: none; border-right: none; }
-.maze__cell:nth-child(8) { border-left: none; border-right: none; border-top:none; border-bottom:none;}
-.maze__cell:nth-child(9) { border-left: none; border-top: none;  } /* Выход */
 
