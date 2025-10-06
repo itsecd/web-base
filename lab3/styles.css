@@ -2,8 +2,10 @@ html {
     font-size: 16px;
     font-family: "Open Sans", sans-serif;
     padding: 2%;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: min(13%, 8em);
+    padding-right: min(13%, 8em);
+    background-color: hsl(0, 0%, 90%);
+    color: hsl(0, 0%, 5%);
 }
 
 a {
@@ -33,37 +35,36 @@ a:hover {
 }
 
 .profile {
-    display: flexbox;
-    position: relative;
+    display: flex;
     width: fit-content;
     height: fit-content;
     justify-content: center;
     align-items: center;
-    outline: 5px solid silver;
-    border-radius: 1%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding: min(2%, 10px);
+    border-radius: 2%;
+    /* outline: 5px solid silver; */
+    background-color: hsl(0, 0%, 95%);
+    box-shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15);
 }
 
 .profile__image {
     margin: 5px;
-    display: inline-block;
-    vertical-align: middle;
     position: relative;
     border-radius:50%;
     width: 200px;
     height: 200px;
     overflow: hidden;
-    border: 5px solid dimgrey;
-    background-color: rgb(220, 231, 236);
+    border: 5px solid hsl(0, 0%, 65%);;
+    background-color: hsl(0, 0%, 85%);
 
     /*?*/
     transition-property: rotate, background-color;
     transition-timing-function: ease-in-out;
     transition-duration: 0.5s;
-}
-
-.profile__image:active {
-    rotate: 360deg;
-    background-color: black;
 }
 
 .profile__image > img{
@@ -76,21 +77,27 @@ a:hover {
     transform: translate(-50%, -50%);
 }
 
+.profile__image:active {
+    rotate: 360deg;
+    background-color: black;
+}
+
 .text-container {
     margin: 5px;
     display: inline-block;
-    vertical-align: middle;
 }
 
 .text-container__string {
     font-size: 20;
     line-height: 0.75;
-    overflow-wrap:unset;
+    overflow-wrap: unset;
 }
 
 .text-title {
     font-size: 25;
     font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .text-accent2 {
@@ -100,10 +107,10 @@ a:hover {
 
 .text-accent-low {
     font-size: 20;
-    color: grey;
+    color: hsl(0, 0%, 35%);;
 }
 
-.about-me {
+.about-me, .hard-skills, .soft-skills {
     display: flex;
     width: fit-content;
     height: fit-content;
@@ -113,22 +120,34 @@ a:hover {
     margin: 10px;
 }
 
-.about-me__title {
-    align-items: center;
-}
-
-.skills {
+.grid {
     display: flex;
-    width: fit-content;
-    height: fit-content;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    width: fit-content;
+    height: fit-content;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.skills__fig {
-    position: relative;
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+    border-radius: 2%;
+    background-color: hsl(0, 0%, 95%);
+    box-shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15);
+}
+
+.panel__title {
+    margin-bottom: 0px;
+}
+
+.click-image__image {
     cursor: pointer;
 }
 
