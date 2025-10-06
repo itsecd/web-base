@@ -1,17 +1,17 @@
-.text{
+.text-block{
     text-align:left;
     color:#8B2CD3;
     background:#3F4531;
 }
-.image{
+.images{
     position:relative;
     width: 500px;
     margin: 100px auto;
 }
-.image1{
+.images__item--first{
     width: 100%;
 }
-.image2{
+.images__item--second{
     position:absolute;
     top: 50%;
     left: 50%;
@@ -24,15 +24,15 @@
   gap: 5px;
   margin: 5px auto;
 }
-.light {
+.traffic-lights__light {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   border: 2px solid #111;
 }
-.red{background: red;}
-.yellow{background: yellow;}
-.green{background: green;}
+.traffic-lights__light--red{background: red;}
+.traffic-lights__light--yellow{background: yellow;}
+.traffic-lights__light--green{background: green;}
 
 .maze {
     display: grid;
@@ -41,28 +41,29 @@
     justify-content: center;
 }
 
-.block {
+.maze__block {
     background-color:darkgray;
     border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.high1{
+.maze__block--pos-right-up{
     border-right: none;
     color:white;
 }
-.rightcenter{
+.maze__block--pos-center-up{
     border-left: none;
     border-bottom: none;}
-.center{
+.maze__block--pos-center{
     border-top: none;
     border-bottom: none;}
-.centerbottom{
+.maze__block--pos-center-bottom{
     border-top:none;
     border-right:none;
 }
-.high2{
+.maze__block--pos-left-bottom{
     border-left:none;
     color:white;
 }
+
