@@ -1,0 +1,95 @@
+body {
+  background: #f0f9ff;
+  font-family: "Segoe UI", sans-serif;
+}
+.page {
+  background: white;
+  border-left: 5px solid #0ea5e9;
+}
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  text-align: center;
+  color: #0e4c92;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #2b80e0;
+}
+
+h2 {
+  border-left: 4px solid #fb7185;
+  padding-left: 15px;
+  background: #fce6e6;
+  color: #be123c;
+}
+
+.popular-music-genres__list li {
+  color: black;
+  transition: color 0.3s ease-in-out;
+}
+
+.popular-music-genres__list li:hover {
+  color: #2b80e0;
+}
+
+.tasks {
+  margin-bottom: 50px;
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.parent-1 .child {
+  color: red;
+}
+
+.parent-2 {
+  color: orange;
+}
+
+.parent-2 .child {
+  color: #b4005a;
+  border: 2px dashed orange;
+  max-width: 50px;
+  margin: 2px 0;
+}
+
+.parent-2 ~ .parent-3,
+.parent-2 ~ .parent-3 .child {
+  color: green;
+}
+
+.guest {
+  border: none !important;
+  color: purple !important;
+}
+
+.programming-languages a {
+  text-decoration: none !important;
+  color: black;
+  font-weight: bold;
+}
+
+.programming-languages a:after {
+  content: "🌐";
+  font-size: 0.9em;
+}
+
+.programming-languages:after {
+  content: "";
+  display: block;
+  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  background-position: center;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-color: #2b80e0;
+  padding: 20px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
