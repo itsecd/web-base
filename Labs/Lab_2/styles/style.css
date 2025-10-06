@@ -1,7 +1,7 @@
 /* style.css */
 body {
   font-family: Arial, sans-serif;
-  background-color: #e88484;
+  background-color: #d7d4d4;
   margin: 0;
   padding: 20px;
 }
@@ -9,7 +9,6 @@ body {
 .container {
   max-width: 600px;
   margin: 0 auto;
-  background: white;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -21,12 +20,12 @@ h1 {
   margin-bottom: 30px;
 }
 
-.animated-list {
+.animated__list {
   list-style-type: none;
   padding: 0;
 }
 
-.animated-list li {
+.animated__list li {
   background-color: #fff;
   padding: 10px 10px;
   border-radius: 7px;
@@ -37,7 +36,7 @@ h1 {
   transition: color 1.4s ease-in-out, transform 0.7s ease;
 }
 
-.animated-list li:hover {
+.animated__list li:hover {
   color: #007bff;
   transform: translateX(2px);
   background-color: #ffffff;
@@ -51,18 +50,18 @@ h1 {
   border-radius: 5px;
 }
 
-.parent-1 {
+.parent__1 {
   text-align: center;
   margin: 20px;
 }
 
-.parent-1 .parent-1__child {
+.parent__1 .parent__1__child {
   padding: 5px;
   color: red;
   text-align: center;
 }
 
-.parent-2 {
+.parent__2 {
   margin: 20px;
   color: orange;
   display: flex;
@@ -70,40 +69,40 @@ h1 {
   align-items: center;
 }
 
-.parent-2 .parent-2__child {
+.parent__2 .parent__2__child {
   color: #b4005a;
   border: 1px dashed orange;
   border-radius: 5px;
   padding: 5px;
 }
 
-.parent-3 {
+.parent__3 {
   margin: 20px;
   text-align: center;
 }
 
-.parent-3 .parent-3__child {
+.parent__3 .parent__3__child {
   padding: 5px;
 }
 
-.parent-2 ~ .parent-3 {
+.parent__2 ~ .parent__3 {
   padding: 5px;
   color: green;
 }
 
-.parent-2 ~ .parent-3 .parent-3__child {
+.parent__2 ~ .parent__3 .parent__3__child {
   padding: 5px;
   text-align: center;
   color: green;
 }
 
-.parent-3 .parent-2 .parent-2__child {
+.parent__3 .parent__2 .parent__2__child {
   border: none;
   padding: 5px;
   color: purple;
 }
 
-.parent-3 .parent-2 {
+.parent__3 .parent__2 {
   margin: 0px;
 }
 
@@ -123,4 +122,26 @@ ul {
   content: " 🌐 ";
   font-weight: bold;
   margin-right: 5px;
+}
+
+.logo-container {
+  width: 353px;
+  height: 105px;
+  position: relative;
+  margin: 20px auto;
+  background-color: #2c3e50; 
+  border-radius: 5px;
+}
+
+.logo-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
