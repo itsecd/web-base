@@ -1,0 +1,52 @@
+.footer{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.pages{
+    display: flex;
+    flex-direction: row;
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+}
+
+.pages > div{
+    color: black;
+    margin-right: 16px;
+    color: #F0FFFF;
+    cursor: default;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.pages > div:hover{
+    background-color: bisque;
+    color: #4B0082;
+    transform: translateY(-5px);
+}
+
+.monster{
+    padding: 10px;
+    transition: 0.3s;
+    color: #F0FFFF;
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+}
+
+body {
+    background-color: #4B0082;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
