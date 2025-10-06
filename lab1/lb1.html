@@ -1,65 +1,67 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Лабораторная работа 1. Вариант 6.</title> 
-  <link rel="stylesheet" href="l1b.css"> 
+  <title>Лабораторная работа 1. Вариант 6</title>
+  <link rel="stylesheet" href="l1b.css">
 </head>
-
 <body>
-  <main class="container">
+  <main class="page">
 
-    <section id="task1">
-      <h2>Задание 1</h2>
-      <div class="text-block" role="region" aria-label="Текст из приложения 1">
-        <p>
+    <section id="task1" class="task task--1">
+      <h2 class="task__title">Задание 1</h2>
+      <div class="text">
+        <p class="text__p">
           JavaScript (аббр. JS) — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный,
           императивный и функциональный стили. Является реализацией спецификации ECMAScript (стандарт ECMA-262).
         </p>
-        <p>
+        <p class="text__p">
           JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее
           широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.
         </p>
       </div>
     </section>
 
-    <section id="task2">
-      <h2>Задание 2</h2>
-      <div class="overlay-box">
+    <section id="task2" class="task task--2">
+      <h2 class="task__title">Задание 2</h2>
+      <div class="overlay">
         <img
-          class="overlay-img img-bottom"
+          class="overlay__img overlay__img--bottom"
           src="https://img2.akspic.ru/crops/8/4/6/4/6/164648/164648-kot-kotenok-privlekatelnost-golova-glaz-3840x2160.jpg"
           alt="Картинка 1">
         <img
-          class="overlay-img img-top"
+          class="overlay__img overlay__img--top"
           src="https://i.pinimg.com/236x/cd/16/12/cd16121609a79d95dffbfa28a326331e.jpg"
           alt="Картинка 2">
       </div>
     </section>
 
-    <section id="task3">
-      <h2>Задание 3</h2>
+    <section id="task3" class="task task--3">
+      <h2 class="task__title">Задание 3</h2>
       <div class="traffic-light">
-        <div class="lamp red"></div>
-        <div class="lamp yellow"></div>
-        <div class="lamp green"></div>
+        <div class="traffic-light__lamp traffic-light__lamp--red"></div>
+        <div class="traffic-light__lamp traffic-light__lamp--yellow"></div>
+        <div class="traffic-light__lamp traffic-light__lamp--green"></div>
       </div>
     </section>
 
-
-    <section id="task4">
-      <h2>Задание 4</h2>
+    <section id="task4" class="task task--4">
+      <h2 class="task__title">Задание 4</h2>
       <div class="maze">
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
+        <div class="maze__cell wall-t wall-l"></div>
+        <div class="maze__cell wall-t"></div>
+        <div class="maze__cell wall-t wall-r"></div>
 
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
+        <div class="maze__cell wall-l"></div>
+        <div class="maze__cell path"></div>
+        <div class="maze__cell wall-r"></div>
 
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
+        <div class="maze__cell wall-b wall-l"></div>
+        <div class="maze__cell wall-b"></div>
+        <div class="maze__cell wall-b wall-r"></div>
       </div>
     </section>
+
+  </main>
+</body>
+</html>
