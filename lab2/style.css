@@ -2,6 +2,7 @@ body{
     width: 70%;    
     margin-left: auto;
     margin-right: auto;
+    background-color: bisque; /*Изменил цвет фона, чтобы было видно логотип */
 }
 
 .list{
@@ -9,7 +10,7 @@ body{
 }
 
 .list__element{
-    top: 10px
+    
 }
 
 .list__element:hover{
@@ -47,4 +48,22 @@ body{
     color: purple;
     border: none;
     padding: 0;
+}
+
+.link::after{
+    content: "🌐";
+    font-size: 0.9em
+}
+
+
+.link{
+    font-weight: bold;
+}
+
+.logo::after{
+    content: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+    display: block;
+    margin-top: 20px;
+    width: 150px;
+    height: auto;
 }
