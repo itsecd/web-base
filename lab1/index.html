@@ -6,13 +6,13 @@
     <title>Лабораторная работа 1</title>
     <link href="assets/styles/style.css" rel="stylesheet" />
 </head>
-<body>
+<body class="page">
 
-    <h1>Лабораторная работа 1</h1>
-    <h2>Начало знакомства с версткой</h2>
+    <h1 class="page__title">Лабораторная работа 1</h1>
+    <h2 class="page__subtitle">Начало знакомства с версткой</h2>
 
-    <div class="js-cont">
-        <p class="js-text">
+    <section class="js-section">
+        <p class="js-section__text">
             JavaScript (аббр. JS) — мультипарадигменный язык программирования.
             Поддерживает объектно-ориентированный, императивный и функциональный
             стили. Является реализацией спецификации ECMAScript (стандарт ECMA-262).
@@ -20,32 +20,32 @@
             доступа к объектам приложений. Наиболее широкое применение находит в
             браузерах как язык сценариев для придания интерактивности веб-страницам.
         </p>
-    </div>
+    </section>
 
-    <div class="image-stack">
-        <img src="assets/images/image1.jpg" alt="Картинка 1">
-        <img src="assets/images/image2.jpg" alt="Картинка 2" style="opacity: 0.6;">
-    </div>
+    <section class="image-stack">
+        <img src="assets/images/image1.jpg" alt="Картинка 1" class="image-stack__image">
+        <img src="assets/images/image2.jpg" alt="Картинка 2" class="image-stack__image image-stack__image--faded">
+    </section>
 
-    <div class="traffic-light">
-        <div class="light red"></div>
-        <div class="light yellow"></div>
-        <div class="light green"></div>
-    </div>
+    <section class="traffic-light">
+        <div class="traffic-light__light traffic-light__light--red"></div>
+        <div class="traffic-light__light traffic-light__light--yellow"></div>
+        <div class="traffic-light__light traffic-light__light--green"></div>
+    </section>
 
-    <div class="maze-box">
-        <div class="maze-elem col1" id="maze1"></div>
-        <div class="maze-elem row1 row3" id="maze2"></div>
-        <div class="maze-elem row1 col3"></div>
+    <section class="maze">
+        <div class="maze__cell maze__cell--col1 maze__cell--1"></div>
+        <div class="maze__cell maze__cell--row1 maze__cell--row3 maze__cell--2"></div>
+        <div class="maze__cell maze__cell--row1 maze__cell--col3"></div>
 
-        <div class="maze-elem col1"></div>
-        <div class="maze-elem" id="maze5"></div>
-        <div class="maze-elem col3"></div>
+        <div class="maze__cell maze__cell--col1"></div>
+        <div class="maze__cell maze__cell--5"></div>
+        <div class="maze__cell maze__cell--col3"></div>
 
-        <div class="maze-elem row3 col1" id="maze7"></div>
-        <div class="maze-elem col1 col3"></div>
-        <div class="maze-elem row3 col3"></div>
-    </div>
+        <div class="maze__cell maze__cell--row3 maze__cell--col1 maze__cell--7"></div>
+        <div class="maze__cell maze__cell--col1 maze__cell--col3"></div>
+        <div class="maze__cell maze__cell--row3 maze__cell--col3"></div>
+    </section>
 
 </body>
 </html>

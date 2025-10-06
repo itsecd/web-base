@@ -1,4 +1,4 @@
-body {
+.page {
     font-family: Arial, sans-serif;
     background-color: #f3f3f3;
     display: flex;
@@ -10,7 +10,12 @@ body {
     min-height: 100vh;
 }
 
-.js-text {
+.page__title,
+.page__subtitle {
+    text-align: center;
+}
+
+.js-section__text {
     background-color: #083F54;
     color: #F6FC1C;
     text-align: center;
@@ -26,7 +31,7 @@ body {
     height: 200px;
 }
 
-.image-stack img {
+.image-stack__image {
     position: absolute;
     top: 0;
     left: 0;
@@ -34,6 +39,10 @@ body {
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.image-stack__image--faded {
+    opacity: 0.6;
 }
 
 .traffic-light {
@@ -47,17 +56,17 @@ body {
     gap: 10px;
 }
 
-.light {
+.traffic-light__light {
     width: 60px;
     height: 60px;
     border-radius: 50%;
 }
 
-.red { background-color: red; }
-.yellow { background-color: yellow; }
-.green { background-color: green; }
+.traffic-light__light--red { background-color: red; }
+.traffic-light__light--yellow { background-color: yellow; }
+.traffic-light__light--green { background-color: green; }
 
-.maze-box {
+.maze {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -66,17 +75,17 @@ body {
     background-color: gray;
 }
 
-.maze-elem {
+.maze__cell {
     border: 0 solid black;
     box-sizing: border-box;
 }
 
-.row1 { border-top: 3px solid black; }
-.row3 { border-bottom: 3px solid black; }
-.col1 { border-left: 3px solid black; }
-.col3 { border-right: 3px solid black; }
+.maze__cell--row1 { border-top: 3px solid black; }
+.maze__cell--row3 { border-bottom: 3px solid black; }
+.maze__cell--col1 { border-left: 3px solid black; }
+.maze__cell--col3 { border-right: 3px solid black; }
 
-#maze1 { border-right: 3px solid black; }
-#maze2 { border-top: 3px solid black; }
-#maze5 { border-right: 3px solid black; }
-#maze7 { border-top: 3px solid black; border-bottom: 3px solid black; }
+.maze__cell--1 { border-right: 3px solid black; }
+.maze__cell--2 { border-top: 3px solid black; }
+.maze__cell--5 { border-right: 3px solid black; }
+.maze__cell--7 { border-top: 3px solid black; border-bottom: 3px solid black; }
