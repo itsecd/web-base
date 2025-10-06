@@ -92,33 +92,18 @@ h2 {
   border: 4px solid black;
 }
 
-.maze__cell_pos1,
-.maze__cell_pos2,
-.maze__cell_pos3,
-.maze__cell_pos5,
-.maze__cell_pos6,
-.maze__cell_pos8,
-.maze__cell_pos9 {
-  border-left: none;
+.maze__cell_border-top {
+  border-top: none;
 }
-.maze__cell_pos2,
-.maze__cell_pos4,
-.maze__cell_pos7,
-.maze__cell_pos8,
-.maze__cell_pos9 {
+
+.maze__cell_border-right {
   border-right: none;
 }
-.maze__cell_pos1,
-.maze__cell_pos2,
-.maze__cell_pos3,
-.maze__cell_pos4 {
+
+.maze__cell_border-bottom {
   border-bottom: none;
 }
-.maze__cell_pos4,
-.maze__cell_pos5,
-.maze__cell_pos6,
-.maze__cell_pos7,
-.maze__cell_pos8,
-.maze__cell_pos9 {
-  border-top: none;
+
+.maze__cell_border-left {
+  border-left: none;
 }
