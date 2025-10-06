@@ -1,0 +1,17 @@
+body{
+    width: 70%;    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list{
+    position: relative;
+}
+
+.list__element{
+    top: 10px
+}
+
+.list__element:hover{
+    color: blue;
+}
