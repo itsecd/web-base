@@ -65,11 +65,11 @@ body{ margin:0; font-family: Arial, sans-serif; line-height:1.6; }
 }
 .maze__cell {
   width: 80px; height: 80 px;
-  border: 2px solid black;
+  border: 3px solid black;
 }
-.wall-t { border-right: none; border-bottom: none; border-left: none; } 
-.wall-r { border-top: none; border-bottom: none; border-left: none; }   
-.wall-b { border-top: none; border-right: none; border-left: none; }     
-.wall-l { border-top: none; border-right: none; border-bottom: none; }   
+.cut-t { border-top: none; } 
+.cut-r { border-right: none;  }   
+.cut-b { border-bottom: none; }     
+.cut-l { border-left: none; }   
 
-.path { background: #8ac3f9; }
+.path { background: #fca3d2; }
