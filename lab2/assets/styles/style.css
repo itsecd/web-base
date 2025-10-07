@@ -1,0 +1,79 @@
+.popular-movies__list-item {
+    color: black;
+    cursor: pointer;
+    transition: color 0.6s ease-in-out;
+}
+
+.popular-movies__list-item:hover {
+    color: #CD5C5C;
+}
+
+.parent-1 {
+    color: red;
+}
+
+.parent-1 h1 {
+    color: black;
+}
+
+.parent-2 h1 {
+    color: orange;
+}
+
+.parent-2 {
+    display: inline-block;
+    color: #b4005a;
+}
+
+.first, .second {
+    border: 2px dotted orange;
+}
+
+.parent-3green h1, .parent-3green p {
+    color: green;
+}
+
+.visited p {
+    color: #b4005a;
+}
+
+.task2 {
+    margin-left: 45%;
+}
+
+.task3 a {
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.task3 a::before {
+    content: "🌐";
+    margin-right: 5px;
+    display: inline-block;
+    font-size: 0.9em;
+    color: #800080;
+}
+
+.lg {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.logo::before {
+    content: "";
+    background-image: url('https://ssau.ru/pagefiles/of_docs/logo_osnovnoy_RUS1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
