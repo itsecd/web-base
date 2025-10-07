@@ -78,10 +78,13 @@ body {
 
 /* Задание 4 — лабиринт */
 .maze {
-    position: relative;
-    width: 450px; /* 3 клетки по 150px */
-    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    width: 450px;
+    height: 450px;
     margin: 20px auto;
+    box-sizing: border-box;
 }
 
 .k_size {
@@ -90,24 +93,7 @@ body {
     box-sizing: border-box;
 }
 
-.el-position {
-    position: absolute;
-}
-
 .bord-le { border-left: 4px solid black; }
 .bord-ri { border-right: 4px solid black; }
 .bord-top { border-top: 4px solid black; }
 .bord-bot { border-bottom: 4px solid black; }
-
-/* Позиции клеток */
-.elem11 { top: 0; left: 0; }
-.elem12 { top: 0; left: 150px; }
-.elem13 { top: 0; left: 300px; }
-
-.elem21 { top: 150px; left: 0; }
-.elem22 { top: 150px; left: 150px; }
-.elem23 { top: 150px; left: 300px; }
-
-.elem31 { top: 300px; left: 0; }
-.elem32 { top: 300px; left: 300px; }
-.elem33 { top: 300px; left: 300px; }
