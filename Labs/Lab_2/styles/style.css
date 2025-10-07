@@ -96,6 +96,11 @@ h1 {
   color: green;
 }
 
+.parent__2__child--guest {
+  border: none !important;
+  color: purple !important;
+}
+
 .parent__3 .parent__2 .parent__2__child {
   border: none;
   padding: 5px;
