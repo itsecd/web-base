@@ -43,7 +43,7 @@
   color:black;
 }
 
-.section-two__link::after{
+.section-two__link::before{
   content: "🔗";
 }
 
