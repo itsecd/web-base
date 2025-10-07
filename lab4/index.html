@@ -7,32 +7,33 @@
 </head>
 <body>
 
-  <div class="calculator">
-    <h1>🎋 calculator 🎃</h1>
+  <div class="calc">
+    <h1 class="calc__title">🎋 calculator 🎃</h1>
 
-    <div class="inputs">
-      <input type="number" id="num1" placeholder="Первое число">
-      <select id="operation">
+    <div class="calc__inputs">
+      <input type="number" class="calc__input calc__input--num1" placeholder="Num 1">
+      <select class="calc__select calc__select--operation">
         <option value="add">+</option>
         <option value="subtract">-</option>
         <option value="multiply">*</option>
         <option value="divide">÷</option>
       </select>
-      <input type="number" id="num2" placeholder="Второе число">
+      <input type="number" class="calc__input calc__input--num2" placeholder="Num 2">
     </div>
 
-    <button id="calculate">Вычислить</button>
+    <button class="calc__button">Calc it!</button>
 
-    <div class="result">
-      Результат: <span id="output">0</span>
+    <div class="calc__result">
+      Result: <span class="calc__output">0</span>
     </div>
   </div>
 
-  <div class="history">
-    <h2>📜 history 🦜</h2>
-    <div id="history-list"></div>
+  <div class="calc-history">
+    <h2 class="calc-history__title">📜 history 🦜</h2>
+    <div class="calc-history__list"></div>
   </div>
 
   <script src="calc.js"></script>
 </body>
 </html>
+
