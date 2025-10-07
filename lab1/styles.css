@@ -52,83 +52,21 @@ body{
     background-color: #008000;
 }
 
-
-.block-labyrinth{
-    display: flex;
-    flex-direction: column;
-    width: 420px;
-    height: 420px;
+.labyrinth{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,30px);
+    grid-template-rows: repeat(3,30px);
 }
-
-.block-labyrinth-1{
-    display: flex;
-    flex-direction: row;
-    border-top: 3px solid black;
-    height: 33%; 
+.top {
+    border-top: 4px solid black;
 }
-.block-labyrinth-1-1{
-    background-color: #4B0082;
-    width: 33%;
-     
-    border-left: 3px solid black;
+.bottom {
+    border-bottom: 4px solid black;
 }
-.block-labyrinth-1-2{
-    background-color: #4B0082;
-    width: 33%;
-    
+.left {
+    border-left: 4px solid black;
 }
-.block-labyrinth-1-3{
-    background-color: #4B0082;
-    width: 34%;
-    
-    border-right: 3px solid black;
-}
-
-.block-labyrinth-2{
-    display: flex;
-    flex-direction: row;
-    height: 33%; 
-}
-.block-labyrinth-2-1{
-    background-color: #4B0082;
-    width: 33%;
-    
-    border-left: 3px solid black;
-}
-.block-labyrinth-2-2{
-    background-color: #4B0082;
-    width: 33%;
-    border: 3px solid black;
-}
-.block-labyrinth-2-3{
-    background-color: #4B0082;
-    width: 34%;
-    
-    border-right: 3px solid black;
-    
-}
-
-.block-labyrinth-3{
-    display: flex;
-    flex-direction: row;
-    height: 34%; 
-}
-.block-labyrinth-3-1{
-    background-color: #4B0082;
-    width: 33%;
-    
-    border-bottom: 3px solid black;
-    border-left: 3px solid black;
-}
-.block-labyrinth-3-2{
-    background-color: #4B0082;
-    width: 33%;
-    border-right: 3px solid black;
-    
-}
-.block-labyrinth-3-3{
-    background-color: #4B0082;
-    border-bottom: 3px solid black;
-    width: 34%;
-    
+.right {
+    border-right: 4px solid black
 }
