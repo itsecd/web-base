@@ -3,106 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Лабораторная работа 1</title>
-    <style>
-
-        .text-block {
-            background-color: #AE5764;
-            color: #23430B;
-            text-align: right;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 600px;
-        }
-
-        .image-container {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            margin: 50px auto;
-        }
-
-        .image-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .image-top {
-            z-index: 2;
-            opacity: 0.7;
-        }
-
-        .image-bottom {
-            z-index: 1;
-        }
-
-        .traffic-light {
-            width: 100px;
-            margin: 50px auto;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .light {
-            width: 100%;
-            height: 80px;
-            border-radius: 50%;
-        }
-
-        .red { background-color: #ff0000; }
-        .yellow { background-color: #ffff00; }
-        .green { background-color: #00ff00; }
-
-        .maze {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0;
-            width: 300px;
-            margin: 50px auto;
-        }
-
-        .cell {
-            width: 100px;
-            height: 100px;
-            background-color: #ffffff;
-            border: 5px solid #333;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Задание 1 -->
     <h1>Задание 1</h1>
     <div class="text-block">
-        JavaScript (аббр. JS) — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript (стандарт ECMA-262). Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.
+        <p class="text-block__content">
+            JavaScript (аббр. JS) — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript (стандарт ECMA-262). Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.
+        </p>
     </div>
 
+    <!-- Задание 2 -->
     <h1>Задание 2</h1>
     <div class="image-container">
-        <img src="kot.jpg" alt="Фоновая картинка" class="image-overlay image-bottom">
-        <img src="kotenok.jpg" alt="Наложенная картинка" class="image-overlay image-top">
+        <img src="kot.jpg" alt="Фоновая картинка" class="image-container__image image-container__image--bottom">
+        <img src="kotenok.jpg" alt="Наложенная картинка" class="image-container__image image-container__image--top">
     </div>
 
+    <!-- Задание 3 -->
     <h1>Задание 3</h1>
     <div class="traffic-light">
-        <div class="light red"></div>
-        <div class="light yellow"></div>
-        <div class="light green"></div>
+        <div class="traffic-light__light traffic-light__light--red"></div>
+        <div class="traffic-light__light traffic-light__light--yellow"></div>
+        <div class="traffic-light__light traffic-light__light--green"></div>
     </div>
 
+    <!-- Задание 4 -->
     <h1>Задание 4</h1>
     <div class="maze">
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
+        <div class="maze__cell maze__cell--top-left"></div>
+        <div class="maze__cell maze__cell--top-center"></div>
+        <div class="maze__cell maze__cell--top-right"></div>
+        <div class="maze__cell maze__cell--middle-left"></div>
+        <div class="maze__cell maze__cell--middle-center"></div>
+        <div class="maze__cell maze__cell--middle-right"></div>
+        <div class="maze__cell maze__cell--bottom-left"></div>
+        <div class="maze__cell maze__cell--bottom-center"></div>
+        <div class="maze__cell maze__cell--bottom-right"></div>        
     </div>
+
 </body>
 </html>
