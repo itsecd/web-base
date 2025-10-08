@@ -1,63 +1,62 @@
 .main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
-    padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  padding: 40px 20px;
 }
 
 .page-title {
-    font-family: "Fjalla One", sans-serif;
-    font-size: 48px;
-    color: #F0FFFF;
-    margin-bottom: 40px;
-    text-align: center;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 48px;
+  color: #f0ffff;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .projects-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    max-width: 600px;
-    margin-bottom: 40px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 600px;
+  margin-bottom: 40px;
+  width: 100%;
 }
 
 .project-link {
-    font-family: "Fjalla One", sans-serif;
-    font-size: 24px;
-    color: #F0FFFF;
-    text-decoration: none;
-    padding: 15px 30px;
-    border: 2px solid #F0FFFF;
-    border-radius: 10px;
-    transition: 0.3s;
-    width: 80%;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.1);
+  font-family: "Fjalla One", sans-serif;
+  font-size: 24px;
+  color: #f0ffff;
+  text-decoration: none;
+  padding: 15px 30px;
+  border: 2px solid #f0ffff;
+  border-radius: 10px;
+  transition: 0.3s;
+  width: 80%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .project-link:hover {
-    background-color: #F0FFFF;
-    color: #4B0082;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: #f0ffff;
+  color: #4b0082;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .projects-back-link {
-    font-family: "Fjalla One", sans-serif;
-    font-size: 24px;
-    color: #F0FFFF;
-    text-decoration: none;
-    padding: 12px 30px;
-    border: 3px solid #F0FFFF;
-    border-radius: 25px;
-    transition: 0.3s;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 24px;
+  color: #f0ffff;
+  text-decoration: none;
+  padding: 12px 30px;
+  border: 3px solid #f0ffff;
+  border-radius: 25px;
+  transition: 0.3s;
 }
 
 .projects-back-link:hover {
-    background-color: #F0FFFF;
-    color: #4B0082;
-    transform: scale(1.05);
+  background-color: #f0ffff;
+  color: #4b0082;
+  transform: scale(1.05);
 }
-
