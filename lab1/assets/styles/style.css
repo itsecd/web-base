@@ -47,12 +47,6 @@
     z-index: 1;
 }
 
-.image-stack__image__front {
-    z-index: 1;
-}
-
-
-
 .traffic-light {
     width: 100px;
     background-color: #333;
