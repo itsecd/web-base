@@ -57,6 +57,10 @@ body {
   color: #2575fc;
 }
 
+.resume-section__text {
+  font-size: 15px;
+}
+
 .resume-section__link {
   color: #6a11cb;
   text-decoration: none;
@@ -70,17 +74,17 @@ body {
 }
 
 /* --- проекты --- */
-.project {
+.resume-section__project {
   margin-bottom: 15px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project:hover {
+.resume-section__project:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
-.project__link {
+.resume-section__project-link {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -88,25 +92,37 @@ body {
   color: #2575fc;
 }
 
-.project__icon {
+.resume-section__project-icon {
   width: 20px;
   height: 20px;
   transition: transform 0.3s;
 }
 
-.project__icon:hover {
+.resume-section__project-icon:hover {
   transform: scale(1.2);
 }
 
-.project__title {
+.resume-section__project-title {
   font-size: 18px;
   margin: 0;
 }
 
-.project__description {
+.resume-section__project-description {
   margin: 5px 0 0;
   font-size: 14px;
   color: #333;
+}
+
+/* --- скилы --- */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.skills-list__item {
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
 /* --- анимки -- */
