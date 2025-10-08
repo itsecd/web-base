@@ -50,6 +50,15 @@ h1 {
   border-radius: 5px;
 }
 
+.task__text {
+  margin: 10px 0;
+}
+
+.task__text--conclusion {
+  font-style: italic;
+  margin-top: 20px;
+}
+
 .parent__1 {
   text-align: center;
   margin: 20px;
@@ -96,9 +105,9 @@ h1 {
   color: green;
 }
 
-.parent__2__child--guest {
-  border: none !important;
-  color: purple !important;
+.parent__3 > .parent__2__child {
+  border: none;
+  color: purple;
 }
 
 .parent__3 .parent__2 .parent__2__child {
