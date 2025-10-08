@@ -47,3 +47,28 @@
 .parent3{
     color: green;
 }
+
+.task3::after{
+   content: url(https://ssau.ru/i/logo/logo-white-ru.svg); 
+}
+
+.lang{
+    text-decoration: none;
+    color: black;
+}
+
+.lang::before{
+    content: "🌐";
+}
+
+.task3::after{
+    content: "";
+    display: inline-block;
+    width: 353px;
+    height: 105px;       
+    background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+    background-size: cover;
+    margin-left: 10px; 
+    vertical-align: middle;   
+    filter: invert(1);
+}
