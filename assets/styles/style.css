@@ -1,74 +1,100 @@
-.heading{
+.heading {
     font-size: 21px;
     margin-left: 5px;
 }
-
-.sport{
+/* Задание первое */
+.sport {
     font-size: 20px;
     background-color: rgb(217, 217, 217);
 }
-.sport__list{
+.sport__list {
     color: rgb(0, 0, 0);
 }
 
-.sport__list__elem{
-    transition: 0.1s  
+.sport__list__elem {
+    transition: 0.1s;
 }
-.sport__list__elem_football:hover{
+.sport__list__elem_football:hover {
     color: lightgreen;
 }
 
-.sport__list__elem_basketball:hover{
+.sport__list__elem_basketball:hover {
     color: brown;
 }
 
-.sport__list__elem_tennis:hover{
+.sport__list__elem_tennis:hover {
     color: red;
 }
 
-.sport__list__elem_swimming:hover{
+.sport__list__elem_swimming:hover {
     color: lightblue;
 }
 
-.sport__list__elem_running:hover{
+.sport__list__elem_running:hover {
     color: darkgreen;
 }
-.parent{
-    font-size: 18px ;
+
+/* Задание второе */
+.task2{
+    font-size: 20px;
 }
 
-.parent1__children{
+.child {
+    padding: 10px 20px 10px 0px;
+    list-style-type: none;
+    display: inline-block;
+    word-break:keep-all;
+}
+
+.parent__children{
+    padding-left: 0;
+    width: 100px;
+}
+
+
+.parent1__child {
     color: red;
 }
 
-.parent2{
+.parent2 {
     color: orange;
 }
-.parent3{
+
+.parent2__child {
+    color: #b4005a;
+    border-color: orange;
+    border-style: dashed;
+}
+
+.parent2 ~ .parent3{
     color: green;
 }
 
-.task3::after{
-   content: url(https://ssau.ru/i/logo/logo-white-ru.svg); 
+.parent3 .parent2__child{
+    border-style: none;
+    color: purple;
 }
 
-.lang{
+/* Задание третье */
+
+.task3::after {
+    content: url(https://ssau.ru/i/logo/logo-white-ru.svg);
+}
+
+.lang {
     text-decoration: none;
     color: black;
 }
 
-.lang::before{
+.lang::before {
     content: "🌐";
 }
 
-.task3::after{
-    content: "";
+.task3::after {
     display: inline-block;
     width: 353px;
-    height: 105px;       
+    height: 105px;
+    text-align: right;
     background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
-    background-size: cover;
-    margin-left: 10px; 
-    vertical-align: middle;   
     filter: invert(1);
 }
