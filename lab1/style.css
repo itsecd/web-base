@@ -37,11 +37,11 @@
     margin-bottom: 20px;
 }
 
-.imgs__big-cat {
+.imgs__cat--big {
     max-width: 100%;
 }
 
-.imgs__small-img {
+.imgs__cat--small {
     position: absolute;
 }
 
