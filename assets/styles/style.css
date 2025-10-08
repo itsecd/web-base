@@ -1,0 +1,49 @@
+.heading{
+    font-size: 21px;
+    margin-left: 5px;
+}
+
+.sport{
+    font-size: 20px;
+    background-color: rgb(217, 217, 217);
+}
+.sport__list{
+    color: rgb(0, 0, 0);
+}
+
+.sport__list__elem{
+    transition: 0.1s  
+}
+.sport__list__elem_football:hover{
+    color: lightgreen;
+}
+
+.sport__list__elem_basketball:hover{
+    color: brown;
+}
+
+.sport__list__elem_tennis:hover{
+    color: red;
+}
+
+.sport__list__elem_swimming:hover{
+    color: lightblue;
+}
+
+.sport__list__elem_running:hover{
+    color: darkgreen;
+}
+.parent{
+    font-size: 18px ;
+}
+
+.parent1__children{
+    color: red;
+}
+
+.parent2{
+    color: orange;
+}
+.parent3{
+    color: green;
+}
