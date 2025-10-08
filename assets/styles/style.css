@@ -14,13 +14,13 @@
   display: inline-block;
 }
 
-.task2__img_parent {
+.task2__img_back {
   display: block;
   height: 300px;
   max-height: 100%;
 }
 
-.task2__img_child {
+.task2__img_front {
   height: 100px;
   max-height: 100%;
   position: absolute;
@@ -73,35 +73,18 @@
   background-color: gray;
 }
 
-.maze__elem {
-  border: 0px solid black;
+.border-top {
+    border-top: 3px solid black;
 }
 
-.maze__elem_row1 {
-  border-top-width: 3px;
+.border-right {
+    border-right: 3px solid black;
 }
 
-.maze__elem_row3 {
-  border-bottom-width: 3px;
+.border-bottom {
+    border-bottom: 3px solid black;
 }
 
-.maze__elem_col1 {
-  border-left-width: 3px;
-}
-
-.maze__elem_col3 {
-  border-right-width: 3px;
-}
-
-.maze__elem_row1.maze__elem_col1 {
-  border-width: 0px 3px;
-}
-.maze__elem_row1.maze__elem_col2 {
-  border-width: 3px 0px;
-}
-.maze__elem_row2.maze__elem_col2 {
-  border-right-width: 3px;
-}
-.maze__elem_row3.maze__elem_col1 {
-  border-width: 3px 0px 3px 0px;
+.border-left {
+    border-left: 3px solid black;
 }
