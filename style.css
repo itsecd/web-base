@@ -22,7 +22,7 @@ body {
     margin-top: 40px;
 }
 
-/* Задание 1 */
+/* === Задание 1 === */
 .text-block {
     text-align: right;
     color: #CEF25F;
@@ -33,7 +33,7 @@ body {
     border: 2px solid #CEF25F;
 }
 
-/* Задание 2 — котики */
+/* === Задание 2 — котики === */
 .image-container {
     position: relative;
     width: 400px;
@@ -56,7 +56,7 @@ body {
     border: 2px solid #fff;
 }
 
-/* Задание 3 — светофор */
+/* === Задание 3 — светофор === */
 .traffic-light {
     width: 100px;
     padding: 10px;
@@ -76,7 +76,7 @@ body {
 .traffic-light__light--yellow { background: yellow; }
 .traffic-light__light--green { background: green; }
 
-/* Задание 4 — лабиринт */
+/* === Задание 4 — лабиринт === */
 .maze {
     display: grid;
     grid-template-columns: repeat(3, 150px);
@@ -87,13 +87,14 @@ body {
     box-sizing: border-box;
 }
 
-.k_size {
+.maze__cell {
     width: 150px;
     height: 150px;
     box-sizing: border-box;
 }
 
-.bord-le { border-left: 4px solid black; }
-.bord-ri { border-right: 4px solid black; }
-.bord-top { border-top: 4px solid black; }
-.bord-bot { border-bottom: 4px solid black; }
+/* Модификаторы ячеек */
+.maze__cell--left   { border-left: 4px solid black; }
+.maze__cell--right  { border-right: 4px solid black; }
+.maze__cell--top    { border-top: 4px solid black; }
+.maze__cell--bottom { border-bottom: 4px solid black; }
