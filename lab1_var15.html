@@ -33,15 +33,24 @@
     <!-- Задание 4 -->
     <h1>Задание 4</h1>
     <div class="maze">
-        <div class="maze__cell maze__cell--top-left"></div>
-        <div class="maze__cell maze__cell--top-center"></div>
-        <div class="maze__cell maze__cell--top-right"></div>
-        <div class="maze__cell maze__cell--middle-left"></div>
-        <div class="maze__cell maze__cell--middle-center"></div>
-        <div class="maze__cell maze__cell--middle-right"></div>
-        <div class="maze__cell maze__cell--bottom-left"></div>
-        <div class="maze__cell maze__cell--bottom-center"></div>
-        <div class="maze__cell maze__cell--bottom-right"></div>        
+        <!-- Верхняя левая -->
+        <div class="maze__cell border-top border-bottom" style="top: 0; left: 0; width: 200px; height: 200px;"></div>
+        <!-- Верхняя центральная -->
+        <div class="maze__cell border-top" style="top: 0; left: 200px; width: 200px; height: 200px;"></div>
+        <!-- Верхняя правая -->
+        <div class="maze__cell border-bottom border-left" style="top: 0; right: 0; width: 200px; height: 200px;"></div>
+        <!-- Средняя левая -->
+        <div class="maze__cell border-left" style="top: 200px; left: 0; width: 200px; height: 200px;"></div>
+        <!-- Средняя центральная -->
+        <div class="maze__cell border-bottom border-left" style="top: 200px; left: 200px; width: 200px; height: 200px;"></div>
+        <!-- Средняя правая -->
+        <div class="maze__cell border-right" style="top: 200px; right: 0; width: 200px; height: 200px;"></div>
+        <!-- Нижняя левая -->
+        <div class="maze__cell border-left border-top" style="bottom: 0; left: 0; width: 200px; height: 200px;"></div>
+        <!-- Нижняя центральная -->
+        <div class="maze__cell border-left border-bottom" style="bottom: 0; left: 200px; width: 200px; height: 200px;"></div>
+        <!-- Нижняя правая -->
+        <div class="maze__cell border-right border-left" style="bottom: 0; right: 0; width: 200px; height: 200px;"></div>
     </div>
 
 </body>

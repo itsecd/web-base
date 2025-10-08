@@ -81,99 +81,21 @@
 .maze__cell {
     position: absolute;
     background-color: #ffffff;
-    border: 2px solid #000;
     box-sizing: border-box;
 }
 
-/* Верхняя левая */
-.maze__cell--top-left {
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 200px;
-    border-right: none;
-    border-left: none;
+.border-top {
+    border-top: 2px solid #000;
 }
 
-/* Верхняя центральная */
-.maze__cell--top-center {
-    top: 0;
-    left: 200px;
-    width: 200px;
-    height: 200px;
-    border-left: none;
-    border-bottom: none;
-    border-right: none;
+.border-right {
+    border-right: 2px solid #000;
 }
 
-/* Верхняя правая */
-.maze__cell--top-right {
-    top: 0;
-    right: 0;
-    width: 200px;
-    height: 200px;
-    border-right: none;
-    border-top: none;
+.border-bottom {
+    border-bottom: 2px solid #000;
 }
 
-/* Средняя левая */
-.maze__cell--middle-left {
-    top: 200px;
-    left: 0;
-    width: 200px;
-    height: 200px;
-    border-top: none;
-    border-bottom: none;
-    border-right: none;
-}
-
-/* Средняя центральная */
-.maze__cell--middle-center {
-    top: 200px;
-    left: 200px;
-    width: 200px;
-    height: 200px;
-    border-top: none;
-    border-right: none;
-}
-
-/* Средняя правая */
-.maze__cell--middle-right {
-    top: 200px;
-    right: 0;
-    width: 200px;
-    height: 200px;
-    border-left: none;
-    border-top: none;
-    border-bottom: none;
-}
-
-/* Нижняя левая */
-.maze__cell--bottom-left {
-    bottom: 0;
-    left: 0;
-    width: 200px;
-    height: 200px;
-    border-bottom: none;
-    border-right: none;
-}
-
-/* Нижняя центральная */
-.maze__cell--bottom-center {
-    bottom: 0;
-    left: 200px;
-    width: 200px;
-    height: 200px;
-    border-top: none;
-    border-right: none;
-}
-
-/* Нижняя правая */
-.maze__cell--bottom-right {
-    bottom: 0;
-    right: 0;
-    width: 200px;
-    height: 200px;
-    border-top: none;
-    border-bottom: none;
+.border-left {
+    border-left: 2px solid #000;
 }
