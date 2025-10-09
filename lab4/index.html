@@ -6,34 +6,27 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <div class="calc">
     <h1 class="calc__title">🎋 calculator 🎃</h1>
-
-    <div class="calc__inputs">
-      <input type="number" class="calc__input calc__input--num1" placeholder="Num 1">
-      <select class="calc__select calc__select--operation">
+    <div class="calc__inputs inputs">
+      <input type="number" class="inputs__input-form inputs__input-form--num1" placeholder="Num 1">
+      <select class="inputs__select inputs__select--operation">
         <option value="add">+</option>
         <option value="subtract">-</option>
         <option value="multiply">*</option>
         <option value="divide">÷</option>
       </select>
-      <input type="number" class="calc__input calc__input--num2" placeholder="Num 2">
+      <input type="number" class="inputs__input-form inputs__input-form--num2" placeholder="Num 2">
     </div>
-
     <button class="calc__button">Calc it!</button>
-
-    <div class="calc__result">
-      Result: <span class="calc__output">0</span>
+    <div class="calc__result result">
+      Result: <span class="result__output">0</span>
     </div>
   </div>
-
-  <div class="calc-history">
-    <h2 class="calc-history__title">📜 history 🦜</h2>
-    <div class="calc-history__list"></div>
+  <div class="calc__history history">
+    <h2 class="history__title">📜 history 🦜</h2>
+    <div class="history__list"></div>
   </div>
-
   <script src="calc.js"></script>
 </body>
 </html>
-

@@ -8,7 +8,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .calc {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
@@ -19,28 +18,24 @@ body {
   animation: fadeIn 1s ease-in;
   width: 350px;
 }
-
 .calc__title {
   margin-bottom: 20px;
   color: #fff;
 }
-
 .calc__inputs {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
   justify-content: center;
 }
-
-.calc__input,
-.calc__select {
+.inputs__input-form,
+.inputs__select {
   padding: 10px;
   font-size: 16px;
   border-radius: 6px;
   border: 1px solid #ccc;
   width: 100px;
 }
-
 .calc__button {
   padding: 10px 20px;
   font-size: 16px;
@@ -51,21 +46,18 @@ body {
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
 }
-
 .calc__button:hover {
   background: #2575fc;
   transform: scale(1.05);
 }
-
 .calc__result {
   margin-top: 20px;
   font-size: 18px;
   font-weight: bold;
   color: #fff;
 }
-
 /* --- history --- */
-.calc-history {
+.calc__history {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   padding: 30px 45px;
@@ -78,21 +70,18 @@ body {
   max-height: 500px;
   overflow-y: auto;
 }
-
-.calc-history__title {
+.history__title {
   text-align: center;
   color: #fff;
   margin-top: 0;
   margin-bottom: 15px;
 }
-
-.calc-history__list {
+.history__list {
   display: flex;
   flex-direction: column-reverse;
   gap: 10px;
 }
-
-.calc-history__item {
+.history__item {
   background: rgba(62, 199, 96, 0.1);
   backdrop-filter: blur(10px);
   color: #fff;
@@ -102,14 +91,11 @@ body {
   word-break: break-word;
   transition: transform 0.2s;
 }
-
-.calc-history__item:hover {
+.history__item:hover {
   transform: scale(1.05);
 }
-
 /* --- анимки --- */
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
 }
-
