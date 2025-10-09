@@ -7,104 +7,98 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="task-1">
+    <div class="games">
       <h4>Популярные видеоигры:</h4>
-      <ul>
-        <li>Minecraft</li>
-        <li>Fortnite</li>
-        <li>GTA V</li>
-        <li>Call of Duty</li>
-        <li>Among Us</li>
+      <ul class="games__list">
+        <li class="games__item">Minecraft</li>
+        <li class="games__item">Fortnite</li>
+        <li class="games__item">GTA V</li>
+        <li class="games__item">Call of Duty</li>
+        <li class="games__item">Among Us</li>
       </ul>
     </div>
 
-    <div class="task-2">
-      <div class="parent-1">
-        <h3>Parent 1</h3>
-        <div class="parent-1-child">
-          <p class="parent-1-child-baby">child 1</p>
-          <p class="parent-1-child-baby">child 2</p>
-          <p class="parent-1-child-baby">child 3</p>
-          <p class="parent-1-child-baby">child 4</p>
-        </div>
+    <div class="parents">
+      <div class="parent parent--first">
+        <h3 class="parent__title">Parent 1</h3>
+        <p class="parent__child parent__child--first">child 1</p>
+        <p class="parent__child parent__child--first">child 2</p>
+        <p class="parent__child parent__child--first">child 3</p>
+        <p class="parent__child parent__child--first">child 4</p>
       </div>
-      <div class="parent-3">
-        <h3>Parent 3</h3>
-        <div class="parent-3-child">
-          <p class="parent-3-child-baby">child 1</p>
-          <p class="parent-3-child-baby">child 2</p>
-        </div>
+      <div class="parent parent--third">
+        <h3 class="parent__title">Parent 3</h3>
+        <p class="parent__child parent__child--third">child 1</p>
+        <p class="parent__child parent__child--third">child 2</p>
       </div>
-      <div class="parent-2">
-        <h3>Parent 2</h3>
-        <div class="parent-2-child">
-          <p class="parent-2-child-baby">child 1</p>
-          <p class="parent-2-child-baby">child 2</p>
-        </div>
+      <div class="parent parent--second">
+        <h3 class="parent__title">Parent 2</h3>
+        <p class="parent__child parent__child--second">child 1</p>
+        <p class="parent__child parent__child--second">child 2</p>
       </div>
-      <div class="parent-3">
-        <h3>Parent 3</h3>
-        <div class="parent-3-child">
-          <p class="parent-3-child-baby">child 1</p>
-          <p class="parent-3-child-baby">child 2</p>
-          <p class="parent-2-child-baby">child 2</p>
-        </div>
+      <div class="parent parent--third">
+        <h3 class="parent__title">Parent 3</h3>
+        <p class="parent__child parent__child--third">child 1</p>
+        <p class="parent__child parent__child--third">child 2</p>
+        <p class="parent__child parent__child--second">child 2</p>
       </div>
     </div>
 
-    <div class="task-3">
-      <p>
+    <div class="language">
+      <p class="language__text">
         <b>Языки программирования</b> — это инструменты, с помощью которых
         разработчики создают программное обеспечение, веб-приложения, игры,
         алгоритмы и многое другое. Каждый язык имеет свои особенности, синтаксис
         и сферу применения. Ниже представлены некоторые из наиболее известных
         языков:
       </p>
-      <ul>
-        <li>
-          <b><a class="link" href="">Python</a></b> – высокоуровневый язык с
-          простым синтаксисом, популярный в Data Science, веб-разработке и
-          автоматизации.
+      <ul class="language__list">
+        <li class="language__item">
+          <b><a class="language__link" href="">Python</a></b> – высокоуровневый
+          язык с простым синтаксисом, популярный в Data Science, веб-разработке
+          и автоматизации.
         </li>
-        <li>
-          <b><a class="link" href="">JavaScript</a></b> – основной язык для
-          фронтенд-разработки, работает в браузерах и на сервере (Node.js).
+        <li class="language__item">
+          <b><a class="language__link" href="">JavaScript</a></b> – основной
+          язык для фронтенд-разработки, работает в браузерах и на сервере
+          (Node.js).
         </li>
-        <li>
-          <b><a class="link" href="">Java</a></b> – объектно-ориентированный
-          язык, широко используется в корпоративных приложениях и
-          Android-разработке.
+        <li class="language__item">
+          <b><a class="language__link" href="">Java</a></b> –
+          объектно-ориентированный язык, широко используется в корпоративных
+          приложениях и Android-разработке.
         </li>
-        <li>
-          <b><a class="link" href="">C++</a></b> – мощный язык для системного
-          программирования, игр и высокопроизводительных приложений.
+        <li class="language__item">
+          <b><a class="language__link" href="">C++</a></b> – мощный язык для
+          системного программирования, игр и высокопроизводительных приложений.
         </li>
-        <li>
-          <b><a class="link" href="">C#</a></b> – язык от Microsoft, применяется
-          в разработке под Windows, играх (Unity) и веб-приложениях.
+        <li class="language__item">
+          <b><a class="language__link" href="">C#</a></b> – язык от Microsoft,
+          применяется в разработке под Windows, играх (Unity) и веб-приложениях.
         </li>
-        <li>
-          <b><a class="link" href="">Go</a></b> (Golang) – созданный Google,
-          язык для высоконагруженных сетевых сервисов и облачных технологий.
+        <li class="language__item">
+          <b><a class="language__link" href="">Go</a></b> (Golang) – созданный
+          Google, язык для высоконагруженных сетевых сервисов и облачных
+          технологий.
         </li>
-        <li>
-          <b><a class="link" href="">Ruby</a></b> – известен благодаря
+        <li class="language__item">
+          <b><a class="language__link" href="">Ruby</a></b> – известен благодаря
           фреймворку Ruby on Rails для веб-разработки.
         </li>
-        <li>
-          <b><a class="link" href="">Swift</a></b> – язык Apple для разработки
-          под iOS и macOS.
+        <li class="language__item">
+          <b><a class="language__link" href="">Swift</a></b> – язык Apple для
+          разработки под iOS и macOS.
         </li>
-        <li>
-          <b><a class="link" href="">Kotlin</a></b> – современный язык,
-          официально поддерживаемый для Android-разработки.
+        <li class="language__item">
+          <b><a class="language__link" href="">Kotlin</a></b> – современный
+          язык, официально поддерживаемый для Android-разработки.
         </li>
-        <li>
-          <b><a class="link" href="">Rust</a></b> – язык системного
+        <li class="language__item">
+          <b><a class="language__link" href="">Rust</a></b> – язык системного
           программирования с акцентом на безопасность и производительность.
         </li>
       </ul>
-      <p>
+      <p class="language__text">
         Это лишь малая часть из множества существующих языков, и выбор зависит
         от задач, которые нужно решить.
       </p>
