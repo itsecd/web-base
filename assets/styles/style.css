@@ -1,0 +1,43 @@
+.grid {
+    display: grid;
+    grid-template-columns: 10% 60% 20% 10%;
+    grid-template-rows: 1fr;
+    height: 100px;
+}
+
+.grid__short-info {
+    display: grid;
+    grid-template-rows: repeat(1fr);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #f5f5f5;
+    background-color: #555555;
+    height: 120%;
+}
+
+.grid__short-info__photo {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.grid__short-info__photo img {
+    padding: 5% 15px;
+    max-width: 80%;
+    width: 80%;
+    object-fit: cover;
+}
+
+.grid__short-info__intro p{
+    font-size: 2.2vw;
+    padding-left: 4%;
+    margin: -4% 0px;
+}
+
+.grid__short-info__full-name_surname{
+    font-weight: bold;
+}
+
+.grid__short-info__intro_birhday{
+    font-weight: 200;
+}
