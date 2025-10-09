@@ -7,11 +7,11 @@
   padding: 40px 20px;
 }
 
-.avatar-container {
+.main-content__avatar-container {
   margin-bottom: 30px;
 }
 
-.avatar {
+.main-content__avatar {
   width: 400px;
   height: 400px;
   border-radius: 50%;
@@ -20,11 +20,11 @@
   transition: 0.3s;
 }
 
-.avatar:hover {
+.main-content__avatar:hover {
   transform: scale(1.05);
 }
 
-.name {
+.main-content__name {
   font-family: "Fjalla One", sans-serif;
   font-size: 32px;
   color: #f0ffff;
@@ -32,7 +32,7 @@
   text-align: center;
 }
 
-.about-link {
+.main-content__about-link {
   font-family: "Fjalla One", sans-serif;
   font-size: 24px;
   color: #f0ffff;
@@ -43,7 +43,7 @@
   transition: 0.3s;
 }
 
-.about-link:hover {
+.main-content__about-link:hover {
   background-color: #f0ffff;
   color: #4b0082;
   transform: scale(1.05);

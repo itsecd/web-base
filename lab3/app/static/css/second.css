@@ -2,52 +2,52 @@ body {
   background-color: #f5f5dc;
 }
 
-.task-1 > ul > li {
+.games__list > .games__item {
   transition: 0.1s;
   cursor: default;
 }
 
-.task-1 > ul > li:hover {
+.games__list > .games__item:hover {
   transform: 3;
   color: blueviolet;
 }
 
-.task-2 {
+.parents {
   width: 80px;
 }
 
-.parent-1 > .parent-1-child {
+.parent--first > .parent__child--first {
   color: red;
 }
 
-.parent-2 > .parent-2-child {
+.parent--second > .parent__child--second {
   color: #b4005a;
 }
-.parent-2 > .parent-2-child > p {
+.parent--second > .parent__child--second {
   border: 2px dotted orange;
 }
-.parent-2 > h3 {
+.parent--second > .parent__title {
   color: orange;
 }
 
-.parent-2 + .parent-3 {
+.parent--second + .parent--third {
   color: green;
 }
-.parent-3 > .parent-3-child > .parent-2-child-baby {
+.parent--third > .parent__child--third + .parent__child--second {
   color: purple;
 }
 
-.task-3 > ul {
+.language__list {
   list-style-type: none;
   padding-left: 20px;
 }
 
-.task-3 > ul li::before {
+.language__list .language__item::before {
   content: "🌐";
   color: red;
   margin-right: 10px;
 }
-.link {
+.language__link {
   text-decoration: none;
 }
 

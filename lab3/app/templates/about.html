@@ -15,17 +15,17 @@
   </head>
   <body>
     <div class="main-content">
-      <h1 class="page-title">Обо мне</h1>
+      <h1 class="main-content__page-title">Обо мне</h1>
 
-      <div class="info-section">
-        <div class="info-card">
-          <h2 class="info-title">🎂 Дата рождения</h2>
-          <p class="info-text">20 сентября 2007 года</p>
+      <div class="main-content__info-section">
+        <div class="main-content__info-card">
+          <h2 class="main-content__info-title">🎂 Дата рождения</h2>
+          <p class="main-content__info-text">20 сентября 2007 года</p>
         </div>
 
-        <div class="info-card">
-          <h2 class="info-title">🎮 Любимые увлечения</h2>
-          <ul class="hobbies-list">
+        <div class="main-content__info-card">
+          <h2 class="main-content__info-title">🎮 Любимые увлечения</h2>
+          <ul class="main-content__hobbies-list">
             <li>Пинтест веба</li>
             <li>Писать свои таски</li>
             <li>Велоспорт</li>
@@ -33,9 +33,9 @@
           </ul>
         </div>
 
-        <div class="info-card">
-          <h2 class="info-title">💻 Hard-скилы</h2>
-          <ul class="skills-list">
+        <div class="main-content__info-card">
+          <h2 class="main-content__info-title">💻 Hard-скилы</h2>
+          <ul class="main-content__skills-list">
             <li>Python, JavaScript, Go</li>
             <li>HTML, CSS, PHP</li>
             <li>SQL, C++</li>
@@ -44,22 +44,31 @@
         </div>
       </div>
 
-      <a href="/" class="about-link">На главную</a>
+      <a href="/" class="main-content__about-link">На главную</a>
     </div>
 
     <div class="footer">
-      <div class="monster">monster</div>
-      <div class="pages">
-        <div class="pages-welcome" onclick="window.location.href='/'">
+      <div class="footer__monster">monster</div>
+      <div class="footer__pages">
+        <div class="footer__pages-welcome" onclick="window.location.href='/'">
           welcome
         </div>
-        <div class="pages-about" onclick="window.location.href='/about'">
+        <div
+          class="footer__pages-about"
+          onclick="window.location.href='/about'"
+        >
           about
         </div>
-        <div class="pages-projects" onclick="window.location.href='/projects'">
+        <div
+          class="footer__pages-projects"
+          onclick="window.location.href='/projects'"
+        >
           projects
         </div>
-        <div class="pages-contacts" onclick="window.location.href='/contacts'">
+        <div
+          class="footer__pages-contacts"
+          onclick="window.location.href='/contacts'"
+        >
           contacts
         </div>
       </div>

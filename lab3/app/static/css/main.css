@@ -7,7 +7,7 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.pages {
+.footer__pages {
   display: flex;
   flex-direction: row;
   font-family: "Fjalla One", sans-serif;
@@ -16,7 +16,7 @@
   font-size: 22px;
 }
 
-.pages > div {
+.footer__pages > div {
   color: black;
   margin-right: 16px;
   color: #f0ffff;
@@ -25,13 +25,13 @@
   transition: all 0.3s ease;
 }
 
-.pages > div:hover {
+.footer__pages > div:hover {
   background-color: bisque;
   color: #4b0082;
   transform: translateY(-5px);
 }
 
-.monster {
+.footer__monster {
   padding: 10px;
   transition: 0.3s;
   color: #f0ffff;

@@ -6,7 +6,7 @@
   padding: 40px 20px;
 }
 
-.page-title {
+.main-content__page-title {
   font-family: "Fjalla One", sans-serif;
   font-size: 48px;
   color: #f0ffff;
@@ -14,7 +14,7 @@
   text-align: center;
 }
 
-.projects-section {
+.main-content__projects-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +24,7 @@
   width: 100%;
 }
 
-.project-link {
+.main-content__project-link {
   font-family: "Fjalla One", sans-serif;
   font-size: 24px;
   color: #f0ffff;
@@ -38,13 +38,13 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
-.project-link:hover {
+.main-content__project-link:hover {
   background-color: #f0ffff;
   color: #4b0082;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.projects-back-link {
+.main-content__projects-back-link {
   font-family: "Fjalla One", sans-serif;
   font-size: 24px;
   color: #f0ffff;
@@ -55,7 +55,7 @@
   transition: 0.3s;
 }
 
-.projects-back-link:hover {
+.main-content__projects-back-link:hover {
   background-color: #f0ffff;
   color: #4b0082;
   transform: scale(1.05);

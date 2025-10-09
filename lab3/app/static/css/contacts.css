@@ -6,7 +6,7 @@
   padding: 40px 20px;
 }
 
-.page-title {
+.main-content__page-title {
   font-family: "Fjalla One", sans-serif;
   font-size: 48px;
   color: #f0ffff;
@@ -14,7 +14,7 @@
   text-align: center;
 }
 
-.contacts-section {
+.main-content__contacts-section {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -24,7 +24,7 @@
   flex-wrap: wrap;
 }
 
-.contact-card {
+.main-content__contact-card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   padding: 30px;
@@ -35,31 +35,31 @@
   text-align: center;
 }
 
-.contact-card:hover {
+.main-content__contact-card:hover {
   transform: scale(1.05);
   background: rgba(255, 255, 255, 0.2);
 }
 
-.contact-icon {
+.main-content__contact-icon {
   font-size: 50px;
   margin-bottom: 15px;
 }
 
-.contact-title {
+.main-content__contact-title {
   font-family: "Fjalla One", sans-serif;
   font-size: 20px;
   color: #f0ffff;
   margin-bottom: 10px;
 }
 
-.contact-info {
+.main-content__contact-info {
   font-family: Arial, sans-serif;
   font-size: 16px;
   color: #f0ffff;
   margin: 0;
 }
 
-.contacts-link {
+.main-content__contacts-link {
   font-family: "Fjalla One", sans-serif;
   font-size: 24px;
   color: #f0ffff;
@@ -70,7 +70,7 @@
   transition: 0.3s;
 }
 
-.contacts-link:hover {
+.main-content__contacts-link:hover {
   background-color: #f0ffff;
   color: #4b0082;
   transform: scale(1.05);
