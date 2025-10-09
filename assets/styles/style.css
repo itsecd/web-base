@@ -59,3 +59,26 @@
     height: 70px;
     border-radius: 50%;
 }
+
+.labyrinth {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    background-color: rgb(105, 117, 145);
+}
+
+.border-top {
+    border-top: 5px solid black;
+}
+
+.border-bottom {
+    border-bottom: 5px solid black;
+}
+
+.border-left {
+    border-left: 5px solid black;
+}
+
+.border-right {
+    border-right: 5px solid black;
+}
