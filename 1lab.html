@@ -2,118 +2,34 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <style>
-        p {
-            text-align: justify;
-            line-height: 1.6;
-            background-color: #f4bc92;
-            color:#ece870;
-            margin: 20px auto;
-        }
-        img {
-            max-width: 800px;
-            height:auto;
-        }
-        .image-container{
-            position: relative;
-            width: 800px;
-            height:auto;
-        }
-        .back-image{
-            width:100%;
-            height:auto;
-            object-fit: cover;
-        }
-        .front-image{
-            position:absolute;
-            left:50%;
-            top:50%;
-            transform: translate(-50%, -50%);
-        }
-        .traffic-light{
-            position: relative;
-            width:120px;
-            height:360px;
-            background-color: black;
-        }
-        .red-light {
-            position: absolute;
-            left: 10px;
-            top:10px;
-            width: 100px;
-            height: 100px;
-            border-radius: 50px;
-            background-color: red;
-        }
-        .yellow-light{
-            position: absolute;
-            left: 10px;
-            top: 130px;
-            width: 100px;
-            height: 100px;
-            border-radius: 50px;
-            background-color: #ece870;
-        }
-        .green-light{
-            position: absolute;
-            left: 10px;
-            top:250px;
-            width: 100px;
-            height: 100px;
-            border-radius: 50px;
-            background-color: greenyellow;
-        }
-        .labyrinth-container{
-            top:20px;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px;
-        }
-        .labyrinth{
-            display: grid;
-            grid-template-columns: repeat(3,80px);
-            grid-template-rows: repeat(3,80px);
-        }
-        .cell{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            position: relative;
-        }
-        .wall-top { border-top: 4px solid #e74c3c; }
-        .wall-right { border-right: 4px solid #e74c3c; }
-        .wall-bottom { border-bottom: 4px solid #e74c3c; }
-        .wall-left { border-left: 4px solid #e74c3c; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>
+    <p class="text text--orange">
         JavaScript (аббр. JS) — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript (стандарт ECMA-262).
 JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.
     </p>
     </div>
     <div class="image-container">
-        <img class="back-image" src="https://img2.akspic.ru/crops/8/4/6/4/6/164648/164648-kot-kotenok-privlekatelnost-golova-glaz-3840x2160.jpg" alt="Котенок">
-        <img class="front-image" src="https://i.pinimg.com/236x/cd/16/12/cd16121609a79d95dffbfa28a326331e.jpg" alt="Котенок, но другой">
+        <img class="image image-container__background" src="https://img2.akspic.ru/crops/8/4/6/4/6/164648/164648-kot-kotenok-privlekatelnost-golova-glaz-3840x2160.jpg" alt="Котенок">
+        <img class="image image-container__foreground" src="https://i.pinimg.com/236x/cd/16/12/cd16121609a79d95dffbfa28a326331e.jpg" alt="Котенок, но другой">
     </div>
     <div class="traffic-light">
-        <div class="red-light"></div>
-        <div class="yellow-light"></div>
-        <div class="green-light"></div>
+        <div class="traffic-light__signal traffic-light__signal--red"></div>
+        <div class="traffic-light__signal traffic-light__signal--yellow"></div>
+        <div class="traffic-light__signal traffic-light__signal--green"></div>
     </div>
     <div class="labyrinth-container">
         <div class="labyrinth">
-            <div class="cell start wall-top wall-bottom">Старт</div>
-            <div class="cell wall-bottom wall-top">2</div>
-            <div class="cell wall-top wall-right">3</div>
-            <div class="cell wall-left">4</div>
-            <div class="cell wall-bottom">5</div>
-            <div class="cell wall-right wall-bottom">6</div>
-            <div class="cell wall-left wall-bottom">7</div>
-            <div class="cell wall-bottom">8</div>
-            <div class="cell end wall-bottom">Финиш</div>
+            <div class="labyrinth__cell labyrinth__cell--wall-top labyrinth__cell--wall-bottom">Старт</div>
+            <div class="labyrinth__cell labyrinth__cell--wall-top labyrinth__cell--wall-bottom">2</div>
+            <div class="labyrinth__cell labyrinth__cell--wall-top labyrinth__cell--wall-right">3</div>
+            <div class="labyrinth__cell labyrinth__cell--wall-left">4</div>
+            <div class="labyrinth__cell labyrinth__cell--wall-bottom">5</div>
+            <div class="labyrinth__cell labyrinth__cell--wall-right labyrinth__cell--wall-bottom">6</div>
+            <div class="labyrinth__cell labyrinth__cell--wall-left labyrinth__cell--wall-bottom">7</div>
+            <div class="labyrinth__cell labyrinth__cell--wall-bottom">8</div>
+            <div class="labyrinth__cell labyrinth__cell--wall-bottom">Финиш</div>
         </div>
     </div>
 </body>
