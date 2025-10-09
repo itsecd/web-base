@@ -1,0 +1,240 @@
+
+:root {
+    --dark-blue: #324765;
+    --light-gray-bg: #f8f8f8;
+    --resume-card-bg: #fff; 
+    --text-dark: #333;
+    --text-light: #fff;
+    --skill-border-color: #a0a0a0; 
+    --tag-border-color: #bbbbbb; 
+    --tag-text-color: #555;
+    --timeline-line-color: #dddddd;
+    --timeline-dot-color: #4b4b4b; 
+    --font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #eee; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; 
+}
+
+
+.resume-container {
+    display: flex;
+    width: 900px; 
+    max-width: 95%; 
+    background-color: var(--resume-card-bg);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; 
+}
+
+
+.sidebar {
+    width: 35%; 
+    background-color: var(--dark-blue);
+    color: var(--text-light);
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 175px;
+    height: 175px;
+    
+    object-fit: cover; 
+    margin-bottom: 20px;
+    border: 3px solid #5F9EA0; 
+}
+
+.sidebar h1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.sidebar .job-title {
+    font-size: 1em;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.contact-item .label {
+    font-weight: 500;
+    margin-right: 10px;
+}
+.contact-item .value {
+    text-align: right;
+}
+
+.sidebar .section h2 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+    padding-bottom: 5px;
+}
+
+.personal-qualities ul {
+    list-style: none; 
+}
+
+.personal-qualities ul li {
+    position: relative;
+    padding-left: 20px; 
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.personal-qualities ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--text-light); 
+    border-radius: 50%;
+}
+
+.languages .language-proficiency {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.languages .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid var(--text-light);
+}
+
+.languages .dot.filled {
+    background-color: var(--text-light);
+}
+
+.languages .dot.empty {
+    background-color: transparent;
+}
+
+
+
+.main-content {
+    width: 65%; 
+    background-color: var(--light-gray-bg);
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.main-content .section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+    color: var(--text-dark);
+}
+
+
+.main-content .section h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 50px; 
+    height: 3px;
+    background-color: var(--dark-blue); 
+}
+
+
+.about-me p {
+    font-size: 1em;
+    line-height: 1.8;
+}
+
+
+.timeline {
+    position: relative;
+    padding-left: 20px; 
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--timeline-line-color); 
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+    padding-left: 30px; 
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px; 
+    top: 5px; 
+    width: 16px;
+    height: 16px;
+    background-color: var(--timeline-dot-color);
+    border-radius: 50%;
+    border: 3px solid var(--light-gray-bg); 
+    z-index: 1; 
+}
+
+.timeline-date {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.timeline-content h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.timeline-content p {
+    font-size: 0.9em;
+    color: #666;
+}
+
