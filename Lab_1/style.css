@@ -1,0 +1,99 @@
+/* Общие стили */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: hsl(182, 81%, 15%);
+}
+
+/* Задание 1: Текст с выравниванием и цветами */
+.text-block {
+  background-color: #741FD0;   
+  color: #3D2FBB;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: left;
+  border-radius: 30px;
+ 
+}
+
+/* Задание 2: Изображения соосно друг над другом с position */
+.images-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+  
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.image-container__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border: 2px solid #a73535;
+}
+
+/* Задание 3: Светофор */
+
+.traffic-light {
+  width: 80px;
+  background-color: #1b1919;
+  padding: 10px;
+  margin-left: auto;
+  border-radius: 100px;
+  margin-bottom: 30px;
+}
+
+.traffic-light__lamp {
+  width: 60px;
+  height: 60px;
+  margin: 8px auto;
+  border-radius: 100%;
+}
+
+.traffic-light__lamp--red {
+  background-color: #d12e2e;
+}
+
+.traffic-light__lamp--yellow {
+  background-color: #f5bb28;
+}
+
+.traffic-light__lamp--green {
+  background-color: #338a38;
+}
+
+/* === Задание 4 — лабиринт === */
+.maze {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  grid-template-rows: repeat(3, 90px);
+  width: 270px;    
+  height: 270px;
+  
+  margin: 20px 0; 
+  box-sizing: border-box;
+}
+
+.maze__cell {
+  box-sizing: border-box;
+  background-color: #13b1f0;
+}
+
+/* Стены */
+.maze__cell--left   { border-left: 5px solid rgb(212, 34, 34); }
+.maze__cell--right  { border-right: 5px solid rgb(219, 205, 9); }
+.maze__cell--top    { border-top: 5px solid rgb(46, 204, 143); }
+.maze__cell--bottom { border-bottom: 5px solid rgb(86, 51, 167); }
