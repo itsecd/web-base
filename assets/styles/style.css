@@ -1,16 +1,26 @@
 .grid {
     display: grid;
-    grid-template-columns: 15% 50% 20% 15%;
+    grid-template-columns: 15% 70% 15%;
     grid-template-rows: 1fr;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-style: normal;
 }
 
+.shadow-wrapper {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 1fr;
+    box-shadow: 0px 0px 30px rgb(0, 0, 0, 0.8);
+}
 .grid__full-info {
     background-color: #dcdcdc;
-    box-shadow: -10px 0px 20px rgb(0, 0, 0,0.8);
-    border-radius: 15px 0px 0px 15px;
+}
+
+.grid__full-info__text {
+    margin-left: 8%;
+    margin-right: 7%;
+    font-size: 1.4vw;
 }
 
 .grid__short-info {
@@ -19,7 +29,6 @@
 
     color: #f5f5f5;
     background-color: #555555;
-    box-shadow: 10px 0px 20px rgb(0, 0, 0,0.8);
 }
 
 .grid__short-info__photo {
