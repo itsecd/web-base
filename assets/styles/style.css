@@ -3,7 +3,7 @@
     text-align: left;
 }
 
-.text-js {
+.text-block__text-js {
     padding-left: 10px;
     padding-right: 10px;
     color: #118905;
@@ -16,12 +16,12 @@
     height: 400px;
 }
 
-.image-back {
+.image-block__image_back {
     width: 100%;
     height: 100%;
 }
 
-.image-front {
+.image-block__image_front {
     position: absolute;
     width: 100px;
     height: 150px;
@@ -30,7 +30,7 @@
     transform: translate(-50%, -50%);
 }
 
-.traffic-light-body {
+.traffic-light {
     width: 100px;
     height: 240px;
     background-color: black;
@@ -41,19 +41,19 @@
     padding: 5px;
 }
 
-.traffic-light-red {
+.traffic-light__lamp_red {
     background-color: red;    
 }
 
-.traffic-light-yellow {
+.traffic-light__lamp_yellow {
     background-color: yellow;
 }
 
-.traffic-light-green {
+.traffic-light__lamp_green {
     background-color: green;
 }
 
-.lamp { 
+.traffic-light__lamp { 
     margin: 5px;
     width: 70px;
     height: 70px;
