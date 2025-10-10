@@ -1,0 +1,59 @@
+:root {
+  --c-red: #e53935;
+  --c-orange: orange;
+  --c-2-children: #b4005a;
+  --c-green: #2e7d32;
+  --c-purple: purple;
+  --c-text: #222;
+  --c-muted: #666;
+  --card: #ffffff;
+  --bg: #f7f7f9;
+  --border: #e5e5ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page__body {
+  margin: 0 auto;
+  padding: 24px;
+  max-width: 980px;
+  font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--c-text);
+  background: var(--bg);
+}
+
+h2,
+h3 {
+  margin: 20px 0 12px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 16px;
+  margin: 16px 0;
+}
+
+.card__title {
+  margin: 20px 0 12px;
+}
+
+/* Cписок: музыкальные жанры */
+.genres__list {
+  list-style: disc inside;
+  padding: 0;
+  margin: 0 0 16px;
+}
+
+.genres__item {
+  transition: color 0.35s ease;
+  color: var(--c-text);
+  padding: 4px 0;
+}
+
+.genres__item:hover {
+  color: var(--c-2-children);
+}
