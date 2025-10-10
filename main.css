@@ -5,13 +5,6 @@ body{
     padding: 15px;
 }
 
-.container{
-    max-width: 600px;
-    margin:0 auto;
-    padding: 25px;
-    border-radius: 10px;
-}
-
 h1{
     color:black;
     text-align: center;
@@ -35,7 +28,7 @@ h1{
 }
 
 .task-sport__list .task-sport__item:hover {
-    transform: scale(1.1) translateX(15px);  
+    transform: scale(1.0) translateX(15px);  
     background-color: lightyellow;  
     border-left-color: brown;  
     color: palevioletred;  
