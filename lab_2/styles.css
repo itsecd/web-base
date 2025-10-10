@@ -57,3 +57,63 @@ h3 {
 .genres__item:hover {
   color: var(--c-2-children);
 }
+
+
+/*Родители и дети*/
+.family__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.family__parent {
+  padding: 10px 12px;
+  margin: 10px 0;
+  background: var(--card);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.family__parent-title {
+  display: block;
+}
+
+.family__child {
+  padding: 6px 10px;
+  margin: 6px 0;
+  border-radius: 6px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  color: var(--c-text);
+}
+
+.family__parent--1 .family__child {
+  color: red;
+}
+
+.family__parent--2 {
+  color: var(--c-orange);
+}
+
+.family__parent--2 .family__child {
+  color: var(--c-2-children);
+  border-style: dashed;
+  border-color: var(--c-orange);
+}
+
+.family__parent--2 ~ .family__parent--3,
+.family__parent--2 ~ .family__parent--3 .family__child {
+  color: var(--c-green);
+}
+
+.family__child--guest-of-3 {
+  color: var(--c-purple);
+  border-style: solid;
+  border-color: #ddd;
+}
+
+
+.article__text {
+  margin: 0 0 16px;
+}
+
