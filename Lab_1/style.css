@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+/*Текст*/
+.text-block {
+  background-color: #0259F2;   
+  color: #274A78;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: justify;
+  border-radius: 30px;
+ 
+}
+
+/*Изображения*/
+.images-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+  
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.image-container__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border: 2px solid #6b0d9a;
+}
+
+/*Светофор*/
+
+.traffic-light {
+  width: 80px;
+  background-color: #000000;
+  padding: 10px;
+  margin-left: 160px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.traffic-light__lamp {
+  width: 60px;
+  height: 60px;
+  margin: 8px auto;
+  border-radius: 100%;
+}
+
+.traffic-light__lamp--red {
+  background-color: #a72626;
+}
+
+.traffic-light__lamp--yellow {
+  background-color: #ddc934;
+}
+
+.traffic-light__lamp--green {
+  background-color: #2a772e;
+}
+
+/*Лабиринт*/
+.maze {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  grid-template-rows: repeat(3, 90px);
+  width: 270px;    
+  height: 270px;
+  
+  margin: 20px 0; 
+  box-sizing: border-box;
+}
+
+.maze__cell {
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+/*Стены*/
+.maze__cell--left   { border-left: 5px solid rgb(0, 0, 0); }
+.maze__cell--right  { border-right: 5px solid rgb(0, 0, 0); }
+.maze__cell--top    { border-top: 5px solid rgb(0, 0, 0); }
+.maze__cell--bottom { border-bottom: 5px solid rgb(0, 0, 0); }
