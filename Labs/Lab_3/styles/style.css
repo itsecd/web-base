@@ -83,7 +83,7 @@ body {
   margin-bottom: 25px;
 }
 
-.text__image {
+.text__header__image {
   width: 80px;
   height: 80px;
   border-radius: 20%;
@@ -91,14 +91,14 @@ body {
   border: 3px solid rgba(255, 255, 255, 0.5);
 }
 
-.text__fio h1 {
+.text__header__fio h1 {
   margin: 0;
   font-size: 1.4em;
   color: #2c3e50;
   line-height: 1.3;
 }
 
-.text__content {
+.text {
   width: 100%;
 }
 
