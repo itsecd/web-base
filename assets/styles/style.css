@@ -74,7 +74,7 @@
 .grid__short-info__contacts {
     display: grid;
     grid-template-rows: auto 1fr;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
 }
@@ -85,7 +85,7 @@
 }
 
 .grid__short-info__contacts__qrcode_img {
-    /* display: inline-block; */
+    display: inline-block;
     justify-content: center;
     margin: auto 10%;
     height: 10vw;
