@@ -71,7 +71,7 @@
 }
 
 
-.ex-labyrinth {
+.labyrinth {
     display: flex;
     flex-direction: column;
     align-items: center;
