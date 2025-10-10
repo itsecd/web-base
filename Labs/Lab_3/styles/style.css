@@ -7,7 +7,7 @@ body {
   padding: 0;
 }
 
-.background__container {
+.background {
   position: fixed;
   top: 0;
   left: 0;
@@ -29,17 +29,17 @@ body {
   animation: backgroundFade 45s infinite;
 }
 
-.bg__1 {
+.background__image_type_1 {
   background-image: url("../pics/forest_20_blog.webp");
   animation-delay: 0s;
 }
 
-.bg__2 {
+.background__image_type_2 {
   background-image: url("../pics/forest_21_blog.webp");
   animation-delay: 15s;
 }
 
-.bg__3 {
+.background__image_type_3 {
   background-image: url("../pics/79abadba1d01508f30c6ad571c63f7f6f80c0b13033e08d66cfd28fc36b34075.webp");
   animation-delay: 30s;
 }
@@ -69,21 +69,21 @@ body {
   transform: translate(-50%, -50%);
   width: 75%;
   max-width: 500px;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.55);
   border-radius: 20px;
   padding: 40px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);
 }
 
-.header {
+.text__header {
   display: flex;
   align-items: center;
   gap: 20px;
   margin-bottom: 25px;
 }
 
-.profile__image {
+.text__image {
   width: 80px;
   height: 80px;
   border-radius: 20%;
@@ -91,20 +91,21 @@ body {
   border: 3px solid rgba(255, 255, 255, 0.5);
 }
 
-.fio h1 {
+.text__fio h1 {
   margin: 0;
   font-size: 1.4em;
   color: #2c3e50;
   line-height: 1.3;
 }
 
-.content {
+.text__content {
   width: 100%;
 }
 
-.content p {
+.text__paragraph {
   margin: 0 0 15px 0;
-  color: #34495e;
+  color: #2c3e50;
   text-align: left;
   width: 100%;
+  line-height: 1.4;
 }
