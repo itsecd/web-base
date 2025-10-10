@@ -110,14 +110,7 @@ a{
     margin-right: 7px;
 }
 
-.logo-container{
-    width: 300px;
-    height: auto;
-    position: relative;
-    border-radius: 5px;
-}
-
-.logo-container::after {
+.languages::after {
     display: flex;
     position: relative;
     top: 10px;
