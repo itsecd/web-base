@@ -8,18 +8,27 @@
   </head>
   <body>
     <div class="calculator">
-      <div id="output">Ответ:</div>
+      <div class="calculator__label">Первое число:</div>
+      <input class="calculator__input" id="num-1" type="number" />
 
-      <div>Первое число:</div>
-      <input id="num-1" type="number" />
+      <div class="calculator__label">Операция:</div>
+      <select class="calculator__input" id="operation">
+        <option value="+">+ (Сложение)</option>
+        <option value="-">- (Вычитание)</option>
+        <option value="*">* (Умножение)</option>
+        <option value="/">/ (Деление)</option>
+      </select>
 
-      <div>Второе число:</div>
-      <input id="num-2" type="number" />
+      <div class="calculator__label">Второе число:</div>
+      <input class="calculator__input" id="num-2" type="number" />
 
-      <div>Операция (+, -, *, /):</div>
-      <input id="operation" type="text" />
+      <button class="calculator__button" onclick="calculator()">
+        Вычислить
+      </button>
+    </div>
 
-      <button onclick="calculator()">Вычислить</button>
+    <div class="calculator" style="margin-top: 30px">
+      <div class="calculator__output" id="output">Ответ: 0</div>
     </div>
 
     <script src="script.js"></script>

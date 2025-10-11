@@ -6,13 +6,13 @@ body {
   background-color: #d3d3d3;
 }
 
-input {
+.calculator__input {
   width: 100%;
   padding: 8px;
   margin: 5px 0 15px 0;
 }
 
-button {
+.calculator__button {
   width: 100%;
   padding: 10px;
   background: #4caf50;

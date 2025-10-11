@@ -4,6 +4,11 @@ function calculator() {
   const operation = document.getElementById("operation").value;
   const output = document.getElementById("output");
 
+  if (!num1 || !num2 || !operation || !output) {
+    alert("Ошибка, что-то пошло не так :(");
+    return;
+  }
+
   const num1_parsed = parseFloat(num1);
   const num2_parsed = parseFloat(num2);
 
