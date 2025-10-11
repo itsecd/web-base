@@ -82,7 +82,7 @@
     list-style: none;
 }
 
-.task3_lang-list_elem{
+.lang-list_elem{
     margin-top: 5px;
 }
 
@@ -97,6 +97,7 @@
 
 .task3::after {
     display: inline-block;
+    margin-top: 10px;
     width: 353px;
     height: 105px;
     text-align: right;
