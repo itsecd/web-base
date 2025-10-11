@@ -16,7 +16,7 @@
   font-size: 22px;
 }
 
-.footer__pages-link {
+.pages__link {
   color: #f0ffff;
   text-decoration: none;
   margin-right: 16px;
@@ -27,7 +27,7 @@
   border-radius: 6px;
 }
 
-.footer__pages-link:hover {
+.pages__link:hover {
   background-color: bisque;
   color: #4b0082;
   transform: translateY(-5px);
