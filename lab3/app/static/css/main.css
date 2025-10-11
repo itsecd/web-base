@@ -16,16 +16,18 @@
   font-size: 22px;
 }
 
-.footer__pages > div {
-  color: black;
-  margin-right: 16px;
+.footer__pages-link {
   color: #f0ffff;
-  cursor: default;
+  text-decoration: none;
+  margin-right: 16px;
+  cursor: pointer;
   padding: 10px;
-  transition: all 0.3s ease;
+  transition: 0.3s;
+  border: 2px solid transparent;
+  border-radius: 6px;
 }
 
-.footer__pages > div:hover {
+.footer__pages-link:hover {
   background-color: bisque;
   color: #4b0082;
   transform: translateY(-5px);

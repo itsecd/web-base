@@ -22,7 +22,7 @@
   margin-bottom: 40px;
 }
 
-.main-content__info-card {
+.info-section__card {
   margin-right: 20px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
@@ -33,12 +33,12 @@
   max-width: 350px;
 }
 
-.main-content__info-card:hover {
+.info-section__card:hover {
   transform: scale(1.05);
   background: rgba(255, 255, 255, 0.2);
 }
 
-.main-content__info-title {
+.info-section__title {
   font-family: "Fjalla One", sans-serif;
   font-size: 24px;
   color: #f0ffff;
@@ -46,22 +46,22 @@
   text-align: center;
 }
 
-.main-content__info-text {
+.info-section__text {
   font-family: Arial, sans-serif;
   font-size: 18px;
   color: #f0ffff;
   text-align: center;
 }
 
-.main-content__hobbies-list,
-.main-content__skills-list {
+.info-section__hobbies-list,
+.info-section__skills-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.main-content__hobbies-list > li,
-.main-content__skills-list > li {
+.info-section__hobbies-list > li,
+.info-section__skills-list > li {
   font-family: Arial, sans-serif;
   font-size: 16px;
   color: #f0ffff;
