@@ -1,176 +1,180 @@
-/* Базовые стили */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    padding: 20px;
-    background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Стили для разделов */
-section {
-    margin-bottom: 60px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-/* Задание 1: Текстовый блок с выравниванием по ЛЕВОМУ краю */
-.text-section {
-    border: 2px solid #3D5D93;
+h3 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.text-block {
-    padding: 30px;
-    background-color: #6F4700; /* Цвет заднего фона */
-    border-radius: 8px;
+.animated__list {
+  list-style-type: none;
+  padding: 0;
 }
 
-.text-block__content {
-    color: #3D5D93; /* Цвет текста */
-    text-align: left; /* Выравнивание по левому краю */
-    font-size: 18px;
-    line-height: 1.8;
-    margin: 0;
+.animated__list li {
+  background-color: #fff;
+  padding: 10px 10px;
+  border-radius: 7px;
+  border-left: 4px solid #28a745;
+  cursor: pointer;
+  color: #333;
+  font-size: 14px;
+  transition: color 1.4s ease-in-out, transform 0.7s ease;
 }
 
-/* Задание 2: Накладывающиеся картинки */
-.images-section {
-    position: relative;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.animated__list li:hover {
+  color: #808080;
+  background-color: #f0f0f0; 
+  transform: translateX(2px);
+  border-left-color: #218838;
 }
 
-.images-container {
-    position: relative;
-    width: 500px;
-    height: 350px;
+.task {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-.image {
-    position: absolute;
-    width: 350px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+.task__text {
+  margin: 10px 0;
 }
 
-.image--first {
-    top: 20px;
-    left: 50px;
-    z-index: 2;
-    border: 5px solid #ff6b6b;
-    transform: rotate(-5deg);
+.task__text--conclusion {
+  font-style: italic;
+  margin-top: 20px;
 }
 
-.image--second {
-    top: 70px;
-    left: 100px;
-    z-index: 1;
-    border: 5px solid #4ecdc4;
-    transform: rotate(3deg);
-}
-
-/* Задание 3: Светофор */
-.traffic-light-section {
-    display: flex;
-    justify-content: center;
-}
-
-.traffic-light {
-    width: 120px;
-    background-color: #2c3e50;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
-
-.traffic-light__light {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    margin: 15px auto;
-    border: 3px solid #000;
-}
-
-.traffic-light__light--red {
-    background-color: #ff4757;
-    background: radial-gradient(circle at 30% 30%, #ff6b6b, #ff4757);
-}
-
-.traffic-light__light--yellow {
-    background-color: #ffa502;
-    background: radial-gradient(circle at 30% 30%, #ffd166, #ffa502);
-}
-
-.traffic-light__light--green {
-    background-color: #2ed573;
-    background: radial-gradient(circle at 30% 30%, #7bed9f, #2ed573);
-}
-
-/* Задание 4: Лабиринт 3x3 */
-.maze-section {
-    display: flex;
-    justify-content: center;
-}
-
-.maze {
-    width: 300px;
-    background-color: #ecf0f1;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.maze__row {
-    display: flex;
-}
-
-.maze__cell {
-    width: 100px;
-    height: 100px;
-    border: 2px solid transparent;
-    background-color: white;
-}
-
-.maze__cell--top {
-    border-top: 4px solid #2c3e50;
-}
-
-.maze__cell--right {
-    border-right: 4px solid #2c3e50;
-}
-
-.maze__cell--bottom {
-    border-bottom: 4px solid #2c3e50;
-}
-
-.maze__cell--left {
-    border-left: 4px solid #2c3e50;
-}
-
-/* Заголовки для наглядности */
-section::before {
-    content: attr(class);
-    display: block;
-    font-weight: bold;
+.parent__1,
+.parent__2,
+.parent__3 {
     font-size: 20px;
-    color: #2c3e50;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #bdc3c7;
-    text-transform: capitalize;
+    font-weight: bold;
 }
+
+.parent__1__child,
+.parent__2__child,
+.parent__3__child {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.parent__1 {
+  text-align: center;
+  margin: 20px;
+}
+
+.parent__1 .parent__1__child {
+  padding: 5px;
+  color: red;
+  text-align: center;
+}
+
+.parent__2 {
+  margin: 20px;
+  color: orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.parent__2 .parent__2__child {
+  color: #b4005a;
+  border: 3px dashed orange;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.parent__3 {
+  margin: 20px;
+  text-align: center;
+}
+
+.parent__3 .parent__3__child {
+  padding: 5px;
+}
+
+.parent__2 ~ .parent__3 {
+  padding: 5px;
+  color: green;
+}
+
+.parent__2 ~ .parent__3 .parent__3__child {
+  padding: 5px;
+  text-align: center;
+  color: green;
+}
+
+.parent__3 > .parent__2__child {
+  border: none;
+  color: purple;
+}
+
+.parent__3 .parent__2 .parent__2__child {
+  border: none;
+  padding: 5px;
+  color: purple;
+}
+
+.parent__3 .parent__2 {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+}
+
+ul {
+  position: relative;
+  list-style: none;
+  padding-bottom: 30px;
+}
+
+.list::before {
+  content: " 🌐 ";
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.logo-container {
+  width: 353px;
+  height: 105px;
+  position: relative;
+  margin: 20px auto;
+  background-color: #2c3e50; 
+  border-radius: 5px;
+}
+
+.logo-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+} 
