@@ -16,12 +16,12 @@
     height: 400px;
 }
 
-.image-block__image_back {
+.image-block__image--back {
     width: 100%;
     height: 100%;
 }
 
-.image-block__image_front {
+.image-block__image--front {
     position: absolute;
     width: 100px;
     height: 150px;
@@ -41,15 +41,15 @@
     padding: 5px;
 }
 
-.traffic-light__lamp_red {
+.traffic-light__lamp--red {
     background-color: red;    
 }
 
-.traffic-light__lamp_yellow {
+.traffic-light__lamp--yellow {
     background-color: yellow;
 }
 
-.traffic-light__lamp_green {
+.traffic-light__lamp--green {
     background-color: green;
 }
 
@@ -60,25 +60,28 @@
     border-radius: 50%;
 }
 
-.labyrinth {
+.maze {
     display: inline-grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    background-color: rgb(105, 117, 145); 
 }
 
-.border-top {
+.maze__cell {
+    background-color: rgb(105, 117, 145);
+}
+
+.maze__cell--top {
     border-top: 5px solid black;
 }
 
-.border-bottom {
+.maze__cell--bottom {
     border-bottom: 5px solid black;
 }
 
-.border-left {
+.maze__cell--left {
     border-left: 5px solid black;
 }
 
-.border-right {
+.maze__cell--right {
     border-right: 5px solid black;
 }
