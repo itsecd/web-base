@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.sports-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sports-list li {
+  margin: 10px 0;
+  padding: 10px;
+  transition: color 0.1s ease;
+}
+
+.sports-list li:hover {
+  color: #ff5722;
+}
+
+.parent {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#parent-1 .child {
+  color: red;
+}
+
+#parent-2 {
+  color: orange;
+}
+
+#parent-2 .child {
+  color: #b4005a;
+  border: 1px dashed orange;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+#parent-3:has(~ #parent-2) {
+  color: green;
+}
+
+#parent-3:has(~ #parent-2) .child {
+  color: green;
+}
+
+#parent-3 > #parent-2 {
+  color: inherit;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+#parent-3 > #parent-2 .child {
+  color: purple;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+.programming-text {
+  line-height: 1.6;
+  position: relative;
+}
+
+.programming-text a {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.programming-text a::after {
+  content: "🌐";
+  margin-left: 5px;
+  font-size: 0.8em;
+}
+
+.programming-text::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 60px;
+  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
