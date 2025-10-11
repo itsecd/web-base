@@ -64,7 +64,7 @@
     display: inline-grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    background-color: rgb(105, 117, 145);
+    background-color: rgb(105, 117, 145); 
 }
 
 .border-top {
