@@ -7,30 +7,30 @@
     font-size: 20px;
     background-color: rgb(217, 217, 217);
 }
-.sport__list {
+.sport_list {
     color: rgb(0, 0, 0);
 }
 
-.sport__list__elem {
+.sport_list_elem {
     transition: 0.1s;
 }
-.sport__list__elem_football:hover {
+#football:hover {
     color: lightgreen;
 }
 
-.sport__list__elem_basketball:hover {
+#basketball:hover {
     color: brown;
 }
 
-.sport__list__elem_tennis:hover {
+#tennis:hover {
     color: red;
 }
 
-.sport__list__elem_swimming:hover {
+#swimming:hover {
     color: lightblue;
 }
 
-.sport__list__elem_running:hover {
+#running:hover {
     color: darkgreen;
 }
 
@@ -39,46 +39,51 @@
     font-size: 20px;
 }
 
-.child {
-    padding: 10px 20px 10px 0px;
-    list-style-type: none;
-    display: inline-block;
-    word-break:keep-all;
-}
-
-.parent__children{
+.parent_children{
     padding-left: 0;
     width: 100px;
 }
 
 
-.parent1__child {
+.parent-1__child {
     color: red;
 }
 
-.parent2 {
+.parent-2 {
     color: orange;
 }
 
-.parent2__child {
+.parent-2_child {
     color: #b4005a;
     border-color: orange;
     border-style: dashed;
 }
 
-.parent2 ~ .parent3{
+.parent-2 ~ .parent-3{
     color: green;
 }
 
-.parent3 .parent2__child{
+.parent-3 .parent-2_child{
     border-style: none;
     color: purple;
 }
 
 /* Задание третье */
 
+.task3{
+    font-size: 18px;
+}
+
 .task3::after {
     content: url(https://ssau.ru/i/logo/logo-white-ru.svg);
+}
+
+.task3_lang-list{
+    list-style: none;
+}
+
+.task3_lang-list_elem{
+    margin-top: 5px;
 }
 
 .lang {
