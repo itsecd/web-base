@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #e6f7ff 0%, #f0f8ff 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #2c3e50;
+}
+
+.resume {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(135, 206, 250, 0.3);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(173, 216, 230, 0.5);
+}
+
+.resume__header {
+  background: linear-gradient(135deg, #87ceeb 0%, #b0e0e6 100%);
+  color: #2c3e50;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.resume__header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 1%,
+    transparent 1%
+  );
+  background-size: 20px 20px;
+  transform: rotate(30deg);
+}
+
+.resume__photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.8);
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(135, 206, 250, 0.4);
+  position: relative;
+  z-index: 2;
+}
+
+.resume__title {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resume__subtitle {
+  font-size: 1.2em;
+  opacity: 0.8;
+  color: #2c3e50;
+}
+
+.resume__section {
+  padding: 30px 40px;
+  border-bottom: 1px solid #e1f5fe;
+  position: relative;
+}
+
+.resume__section:last-child {
+  border-bottom: none;
+}
+
+.resume__section-title {
+  color: #4682b4;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.resume__section-title::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, #87ceeb, transparent);
+  margin-left: 10px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.info-grid__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f8ff;
+  transition: all 0.3s ease;
+}
+
+.info-grid__item:hover {
+  background: #f8fdff;
+  padding-left: 10px;
+  border-radius: 8px;
+}
+
+.info-grid__label {
+  color: #5f9ea0;
+}
+
+.info-grid__value {
+  color: #2c3e50;
+}
+
+.hobbies-list {
+  list-style: none;
+}
+
+.hobbies-list__item {
+  padding: 10px 0;
+  font-size: 1.1em;
+  border-bottom: 1px solid #f0f8ff;
+  transition: all 0.3s ease;
+}
+
+.hobbies-list__item:hover {
+  background: #f8fdff;
+  padding-left: 15px;
+  border-radius: 8px;
+}
+
+.hobbies-list__item:last-child {
+  border-bottom: none;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  background: linear-gradient(135deg, #87ceeb, #add8e6);
+  color: #2c3e50;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(135, 206, 250, 0.3);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(173, 216, 230, 0.5);
+}
+
+.skill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(135, 206, 250, 0.4);
+}
+
+.skill--soft {
+  background: linear-gradient(135deg, #b0e0e6, #afeeee);
+}
+
+.github__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #2c3e50;
+  font-size: 1.2em;
+  padding: 12px 24px;
+  border: 2px solid #87ceeb;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 15px rgba(135, 206, 250, 0.3);
+}
+
+.github__link:hover {
+  background: #87ceeb;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(135, 206, 250, 0.4);
+}
+
+.github__logo {
+  width: 28px;
+  height: 28px;
+}
+
+.about__text {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #2c3e50;
+}
+
+.resume__footer {
+  background: linear-gradient(135deg, #87ceeb, #b0e0e6);
+  color: #2c3e50;
+  padding: 25px 40px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.resume__contact {
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .resume__header {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .resume__section {
+    padding: 25px 20px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume__photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .resume__title {
+    font-size: 2em;
+  }
+}
