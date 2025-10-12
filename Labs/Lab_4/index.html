@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Lab 4</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+        <header>
+            <h1>Калькулятор</h1>
+            <p>Выполните математические операции над числами</p>
+        </header>
+        <main>
+            <div class="calculator">
+                <div class="input-group">
+                    <label for="num1">Первое число:</label>
+                    <input type="number" id="num1" placeholder="Введите число">
+                </div>
+
+                <div class="input-group">
+                    <label for="operation">Операция:</label>
+                    <select id="operation">
+                        <option value="add">Сложение (+)</option>
+                        <option value="subtract">Вычитание (-)</option>
+                        <option value="multiply">Умножение (×)</option>
+                        <option value="divide">Деление (÷)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="num2">Второе число:</label>
+                    <input type="number" id="num2" placeholder="Введите число">
+                </div>
+
+                <button id="calculate" class="calculate-btn">Вычислить</button>
+
+                <div class="result">
+                    <label>Результат:</label>
+                    <div id="result" class="result-output">-</div>
+                </div>
+                <div id="error" class="error-message"></div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
