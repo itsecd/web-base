@@ -1,0 +1,108 @@
+body {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+.text-block {
+  color: #5196ea;
+  background-color: #202cb7;
+  text-align: justify;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 1000px;
+  line-height: 1.5;
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  margin: 20px 0;
+}
+
+.image {
+  position: absolute;
+  max-width: 400px;
+}
+
+.background-image {
+  z-index: 1;
+}
+
+.overlay-image {
+  top: 200px;
+  z-index: 2;
+}
+
+.traffic_lights {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #4c4c4c;
+  width: 110px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.traffic_light {
+  width: 60px;
+  height: 60px;
+  padding: 20px;
+  border-radius: 50px;
+  margin: 5px;
+}
+
+.traffic_light_green {
+  background: #009900;
+}
+
+.traffic_light_yellow {
+  background: #ffff00;
+}
+
+.traffic_light_red {
+  background: #fa0000;
+}
+
+.maze {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.maze__cell {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  margin: -1px;
+}
+
+.maze__row {
+  display: flex;
+}
+
+.maze__cell_open-left {
+  border-left-color: transparent;
+}
+
+.maze__cell_open-right {
+  border-right-color: transparent;
+}
+
+.maze__cell_open-top {
+  border-top-color: transparent;
+}
+
+.maze__cell_open-bottom {
+  border-bottom-color: transparent;
+}
