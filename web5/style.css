@@ -46,11 +46,11 @@
     align-items: center;
     justify-content: center;
 }
-.top { border-top: 2px solid black; }
-.right { border-right: 2px solid black; }
-.bottom { border-bottom: 2px solid black; }
-.left { border-left: 2px solid black; }
-.all_borders { 
+.border_top { border-top: 2px solid black; }
+.border_right { border-right: 2px solid black; }
+.border_bottom { border-bottom: 2px solid black; }
+.border_left { border-left: 2px solid black; }
+.bordered { 
 	border-top: 2px solid black; 
 	border-right: 2px solid black; 
 	border-bottom: 2px solid black; 
