@@ -42,29 +42,16 @@
 
 .maze__block {
     background-color:darkgray;
-    border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.maze__block--pos-right-up{
-    border-right: none;
-    color:white;
-}
-.maze__block--pos-center-up{
-    border-left: none;
-    border-bottom: none;}
-.maze__block--pos-center{
-    border-top: none;
-    border-right: none;}
-.maze__block--pos-center-right{
-    border-bottom: none;
-	border-left: none;}
-.maze__block--pos-center-bottom{
-    border-top:none;
-    border-right:none;
-}
-.maze__block--pos-left-bottom{
-    border-top:none;
-    color:white;
-}
+.top { border-top: 2px solid black; }
+.right { border-right: 2px solid black; }
+.bottom { border-bottom: 2px solid black; }
+.left { border-left: 2px solid black; }
+.all_borders { 
+	border-top: 2px solid black; 
+	border-right: 2px solid black; 
+	border-bottom: 2px solid black; 
+	border-left: 2px solid black; }
