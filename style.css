@@ -11,12 +11,16 @@ body {
     background: #A1F3F1;
 }
 
+.text__paragraph {
+    margin-bottom: -10px;
+    line-height: 1.5; 
+}
 
 .image-container {
     position: relative;
     display: inline-block;
     margin-left: 50%;
-    margin-top: 25%;
+    margin-top: 35%;
     transform: translate(-50%, -50%);
 }
 
