@@ -1,0 +1,85 @@
+html {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    padding: 2%;
+    background-color: hsl(0, 0%, 90%);
+    display: flex;
+    justify-content: center;
+}
+
+.calculator {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    background-color: hsl(0, 0%, 97%);
+    border-radius: 1%;
+    box-shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15);
+}
+
+.calculator__inputs {
+    flex-wrap: nowrap;
+}
+
+.calculator__title {
+    font-size: 25;
+    font-weight: bold;
+    line-height: 0%;
+}
+
+.calculator__output {
+    font-size: large;
+}
+
+.calculator__button {
+    width: 100px;
+    font-size: large;
+    font-weight: bold;
+    background-color: oklch(0.6 0.11 268);
+}
+.calculator__button:active {
+    background-color:oklch(0.7 0.11 268);
+}
+
+.op-select__option {
+    text-align: center;
+}
+
+
+.toast-list {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 5px;
+    height: fit-content;
+    width: fit-content;
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.toast-list__achievement-toast {
+    animation: toast-animation ease-in-out 5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    width: 300px;
+    height: 100px;
+    background: hsl(0, 0%, 100%);
+    border-radius: 2%;
+    box-shadow: 0px 1px 1px hsla(0, 0%, 0%, 0.07), 0px 3px 3px hsla(0, 0%, 0%, 0.10);
+}
+
+@keyframes toast-animation {
+    from { opacity: 0; background: hsla(0, 0%, 100%, 0%);}
+    20% { opacity: 1; background: hsl(0, 0%, 100%, 100%); }
+    70% { opacity: 1; background: hsl(0, 0%, 100%, 100%); }
+    to {opacity: 0; background: hsla(0, 0%, 100%, 0%); }
+}
