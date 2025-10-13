@@ -4,8 +4,8 @@ body {
 }
 
 .side-panel {
-    background: #60E41D;
-    color: #D490C1;
+    background: #D490C1;
+    color: #60E41D;
     text-align:center;
 }
 
@@ -62,12 +62,12 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.photo1 {
+.photo-wrap__photo1 {
   width: 75px;     
   z-index: 2;
 }
 
-.photo2 {
+.photo-wrap__photo2 {
   width: 100%; 
   z-index: 1;
 }
