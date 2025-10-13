@@ -1,10 +1,10 @@
-.task-1__text {
+.text {
     text-align: justify;
     background-color: #2F9469;
     color: #E2155C;
 }
 
-.task-2__images {
+.images {
     position: relative; 
     display: flex;
     justify-content: center;
@@ -13,70 +13,70 @@
     height: 500px;
 }
 
-.task-2__back-image {
+.images__back-image {
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 1; 
 }
 
-.task-2__front-image {
+.images__front-image {
     position: absolute;
     width: 30%;
     height: auto;
     z-index: 2; 
 }
 
-.task-3__traffic-lights{
-margin-top: 10px;
+.traffic-lights{
+    margin-top: 10px;
 }
 
-.task-3__light {
+.traffic-lights__light {
     width: 100px;
     height: 100px;
     border-radius: 50%;
 }
 
-.task-3__light_red {
+.traffic-lights__light--red {
     background-color: red;
     border: 3px rgb(108, 11, 11) solid;
 }
 
-.task-3__light_yellow {
+.traffic-lights__light--yellow {
     background-color: yellow;
     border: 3px rgb(129, 129, 14) solid;
 }
 
-.task-3__light_green {
+.traffic-lights__light--green {
     background-color: green;
     border: 3px solid rgb(16, 68, 16);
 }
 
-.task-4__maze {
+.maze {
     margin-top: 10px;
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
 }
 
-.task-4__cube {
+.maze__cube {
     background-color: rgb(195, 95, 195);
     border-color: black;
 }
 
-.task-4__cube-border-top {
+.maze__cube--border-top {
     border-top: 3px solid;
 }
 
-.task-4__cube-border-bottom {
+.maze__cube--border-bottom {
     border-bottom: 3px solid;
 }
 
-.task-4__cube-border-left {
+.maze__cube--border-left {
     border-left: 3px solid;
 }
 
-.task-4__cube-border-right {
+.maze__cube--border-right {
     border-right: 3px solid;
 
 }
