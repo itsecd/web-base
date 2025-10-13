@@ -2,38 +2,44 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   padding: 20px;
+  margin: 0;
 }
 
-
-.text-block-variant25 {
-  text-align: left;
-  color: #3D5D93;
-  background-color: #6F4700;
+.text-block {
   padding: 20px;
   margin: 20px auto;
   border: 2px solid #5a3a00;
   border-radius: 8px;
-  font-size: 16px;
-  line-height: 1.5;
   max-width: 700px;
   box-sizing: border-box;
 }
 
+.text-block--variant25 {
+  background-color: #6F4700;
+}
 
-.image-overlay {
+.text-block__content {
+  text-align: left;
+  color: #3D5D93;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+.image-stack {
   position: relative;
   width: 300px;
   height: 200px;
   margin: 30px auto;
 }
 
-.overlay-img {
+.image-stack__item {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  
 }
 
 
@@ -49,15 +55,23 @@ body {
   border-radius: 12px;
 }
 
-.light {
+.traffic-light__lamp {
   width: 60px;
   height: 60px;
   border-radius: 50%;
 }
 
-.red    { background-color: red; }
-.yellow { background-color: yellow; }
-.green  { background-color: green; }
+.traffic-light__lamp--red {
+  background-color: red;
+}
+
+.traffic-light__lamp--yellow {
+  background-color: yellow;
+}
+
+.traffic-light__lamp--green {
+  background-color: green;
+}
 
 
 .maze {
@@ -67,7 +81,7 @@ body {
   width: fit-content;
 }
 
-.cell {
+.maze__cell {
   width: 60px;
   height: 60px;
   border: 2px solid black;
