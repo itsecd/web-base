@@ -1,0 +1,76 @@
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+h4 {
+    text-align: center;
+}
+.text_block {
+    display: block;
+    text-align: left;
+    color: #C8CA67;
+    background-color: #01A263;
+    text-align: justify;
+}
+.images{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 20px auto;
+}
+.images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-img {
+    opacity: 0.7;
+}
+.traffic_light {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    background-color: #333;
+    width: 90px;
+    border-radius: 12px;
+}
+
+.light {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: #ff0000;
+}
+
+.yellow {
+    background-color: #ffff00;
+}
+
+.green {
+    background-color: #00ff00;
+}
+.maze {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 0;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    background-color: lightgray;
+}
