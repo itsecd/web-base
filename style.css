@@ -5,34 +5,37 @@ body{
     color: #FDDF9D;
     background-color: #522818;
     }
+
     /* Задание 2 */
-    .image-stack{
-    position: relative;
+    .images{
+   position: relative;
+   height: 500px;
+   margin: 0 auto;
     }
-    .image-stack img {
+    .images img {
     position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%); 
+    height: 500px;
     }
-    .image-stack img:nth-child(1){
-     top: 0;
-     left: 0;
-     height: 600px;
+    .images_cat1{
      z-index: 1;
-    }
-    .image-stack img:nth-child(2){
-     top: 200px;
-     left: 35px;
-     height: 300px;
+    } 
+    .images_cat2{
+     opacity: 0.7;
      z-index: 2;
     }
+
     /* Задание 3 */
-    .traf-light{
-       position: relative;
-       width: 100px;
-       height: 280px;
-       background-color:black;
-       margin: 0 auto;
-       justify-content: center;
-       padding: 10px 0;
+    .traffic-light{
+      position: relative;
+      width: 100px;
+      height: 280px;
+      background-color:black;
+      margin: 0 auto;
+      justify-content: center;
+      padding: 10px 0;
     }
     .light {
     width: 80px;
@@ -49,11 +52,9 @@ body{
       display: grid;
       grid-template-columns: repeat(3, 80px);
       grid-template-rows: repeat(3, 80px);
-      
       margin: 30px auto;
       width: fit-content;
     }
-
     .maze-cell {
       width: 80px;
       height: 80px;
