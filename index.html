@@ -16,8 +16,8 @@
   </div>
 
   <div class="image-stack">
-    <img src="images/img1.jpg" alt="Картинка 1" class="image-stack__item">
-    <img src="images/img2.jpg" alt="Картинка 2" class="image-stack__item">
+    <img src="images/img1.jpg" alt="Картинка 1" class="image-stack__image image-stack__image--bottom">
+    <img src="images/img2.jpg" alt="Картинка 2" class="image-stack__image image-stack__image--top">
   </div>
 
   <div class="traffic-light">
@@ -26,17 +26,28 @@
     <div class="traffic-light__lamp traffic-light__lamp--green"></div>
   </div>
 
-  <div class="maze">
-    <div class="maze__cell"></div>
-    <div class="maze__cell"></div>
-    <div class="maze__cell"></div>
-    <div class="maze__cell"></div>
-    <div class="maze__cell"></div>
-    <div class="maze__cell"></div>
-    <div class="maze__cell"></div>
-    <div class="maze__cell"></div>
-    <div class="maze__cell"></div>
-  </div>
+<!-- Задание 4: Лабиринт 3x3 -->
+<!-- Задание 4: Лабиринт 3x3 -->
+    <div class="maze">
+        <!-- Верхняя левая -->
+        <div class="maze__cell border-top border-bottom"></div>
+        <!-- Верхняя центральная -->
+        <div class="maze__cell border-top"></div>
+        <!-- Верхняя правая -->
+        <div class="maze__cell border-bottom border-left"></div>
+        <!-- Средняя левая -->
+        <div class="maze__cell border-left"></div>
+        <!-- Средняя центральная -->
+        <div class="maze__cell border-bottom border-left"></div>
+        <!-- Средняя правая -->
+        <div class="maze__cell border-right"></div>
+        <!-- Нижняя левая -->
+        <div class="maze__cell border-left border-top"></div>
+        <!-- Нижняя центральная -->
+        <div class="maze__cell border-left border-bottom"></div>
+        <!-- Нижняя правая -->
+        <div class="maze__cell border-right border-left"></div>
+    </div>
 
 </body>
 </html>
