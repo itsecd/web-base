@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  .text-block {
+    padding: 20px;
+    margin: 20px auto;
+    border: 2px solid #8a1c85;
+    border-radius: 8px;
+    max-width: 700px;
+    box-sizing: border-box;
+  }
+  
+  .text-block--variant8 {
+    background-color: #A91FA3; 
+  }
+  
+  .text-block__content {
+    text-align: center;       
+    color: #ABC0B0;            
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  
+  .image-stack {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 50px auto;
+      overflow: hidden;
+  }
+  
+  .image-stack__image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+  }
+  
+  .image-stack__image--bottom {
+      z-index: 1;
+  }
+  
+  .image-stack__image--top {
+      z-index: 2;
+  }
+  
+  
+  .traffic-light {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 30px auto;
+    width: 80px;
+    background: #222;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .traffic-light__lamp {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  
+  .traffic-light__lamp--red {
+    background-color: red;
+  }
+  
+  .traffic-light__lamp--yellow {
+    background-color: yellow;
+  }
+  
+  .traffic-light__lamp--green {
+    background-color: green;
+  }
+  
+  
+  .maze {
+      display: grid;
+      grid-template-columns: repeat(3, 200px);
+      grid-template-rows: repeat(3, 200px);
+      width: 600px;
+      height: 600px;
+      margin: 50px auto;
+      background-color: #4b09a2;
+  }
+  
+  .maze__cell {
+      box-sizing: border-box;
+  }
+  
+  .border-top {
+      border-top: 2px solid #000;
+  }
+  
+  .border-right {
+      border-right: 2px solid #000;
+  }
+  
+  .border-bottom {
+      border-bottom: 2px solid #000;
+  }
+  
+  .border-left {
+      border-left: 2px solid #000;
+  }
