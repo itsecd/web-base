@@ -53,7 +53,7 @@
   color: purple;
 }
 
-.task3__list p {
+.item__text {
   display: inline-block;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .list__item::before {
-  content: "•";
+  content: "👉";
 }
 
 .item__link {
