@@ -3,7 +3,7 @@
   margin-bottom: 40px;
 }
 
-.task1 li {
+.task1__list > .list__item {
   color: red;
   font-size: 18px;
   width: fit-content;
@@ -13,7 +13,7 @@
   transition-delay: 0.1s;
 }
 
-.task1 li:hover {
+.task1__list > .list__item:hover {
   color: aqua;
 }
 
@@ -25,7 +25,7 @@
   font-weight: normal;
 }
 
-.task2__parent1__child {
+.parent1__child {
   color: red;
 }
 
@@ -33,39 +33,53 @@
   color: orange;
 }
 
-.task2__parent2__child {
+.parent2__child {
   color: #b4005a;
   border: 2px dashed yellow;
   width: fit-content;
 }
 
 .task2__parent1 + .task2__parent3,
-.task2__parent1 + .task2__parent3 > .task2__parent3__child {
+.task2__parent1 + .task2__parent3 > .parent3__child {
   color: auto;
 }
 
 .task2__parent2 + .task2__parent3,
-.task2__parent2 + .task2__parent3 > .task2__parent3__child {
+.task2__parent2 + .task2__parent3 > .parent3__child {
   color: green;
 }
 
-.task2__parent3 > .task2__parent2__child {
+.task2__parent3 > .parent2__child {
   color: purple;
 }
 
-.task3 ul p {
+.task3__list p {
   display: inline-block;
 }
 
-.task3__list__link {
+.task3__list {
+  list-style-type: none;
+}
+
+.list__item::before {
+  content: "•";
+}
+
+.item__link {
   font-weight: bold;
 }
 
-.task3__list__link::after {
+.item__link::after {
   content: "🌐";
   margin-left: 4px;
 }
 
 .task3__list::after {
-  content: url(https://ssau.ru/i/logo/logo-white-ru.svg);
+  content: "";
+  display: block;
+  width: 200px;
+  height: 60px;
+  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  background-size: contain;
+  background-color: black;
 }
