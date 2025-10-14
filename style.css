@@ -40,6 +40,9 @@
 .parent-2 ~.parent-3{
     color:green;
 }
+.text__list{
+    list-style: none;
+}
 a:before{
     content:"🌐";
 }
@@ -48,7 +51,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
-.text__logo::after{
+.text__list::after{
     content: "";
     display: inline-block;
     width: 353px;
