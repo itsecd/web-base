@@ -112,7 +112,7 @@ body {
 
 .projects {
   position: absolute;
-  top: calc(100% + 5px);
+  top: calc(100% + 55px);
   left: 50%;
   transform: translateX(-50%);
   width: 75%;
