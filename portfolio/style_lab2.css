@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container h3 {
+    color: #7d7d7d;
+}
+
+.task {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.animated-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.animated-list li {
+    padding: 12px 20px;
+    margin-bottom: 8px;
+    background-color: #e8f4f8;
+    border-left: 4px solid #3498db;
+    transition: color 0.5s ease, background-color 0.5s ease;
+    cursor: pointer;
+}
+
+.animated-list li:hover {
+    color: #e74c3c;
+    background-color: #f9ebea;
+}
+
+.parent-1,
+.parent-2,
+.parent-3 {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.parent-1 h3,
+.parent-2 h3,
+.parent-3 h3 {
+    color: black;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.parent-2 h3 {
+    color: orange;
+}
+
+.parent-3 h3 {
+    color: green;
+}
+
+.parent-1>[class^="child-"] {
+    color: red;
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #ffeaea;
+}
+
+.parent-2 {
+    color: orange;
+    background-color: #fff3e0;
+}
+
+.parent-2>[class^="child-"] {
+    color: #b4005a;
+    border: 2px dashed orange;
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #ffeaea;
+}
+
+.parent-2+.parent-3 {
+    color: green;
+    background-color: #e8f5e9;
+}
+
+.parent-2+.parent-3>[class^="child-"] {
+    color: green;
+    background-color: #e8f5e9;
+    border: none;
+}
+
+.parent-1+.parent-3 {
+    color: inherit;
+    background-color: white;
+}
+
+.parent-1+.parent-3 h3 {
+    color: inherit;
+    background-color: white;
+}
+
+.parent-1+.parent-3>[class^="child-"] {
+    color: inherit;
+    background-color: #f8f9fa;
+}
+
+.parent-3 .child-1.guest,
+.parent-3 .child-2.guest {
+    border: none;
+    color: purple;
+    background-color: #f3e5f5;
+}
+
+.programming-text {
+    line-height: 1.8;
+}
+
+.language-list {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.language-list li {
+    margin-bottom: 15px;
+}
+
+.language-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    padding-right: 25px;
+}
+
+.language-link::after {
+    content: "🌐";
+    position: absolute;
+    right: 5px;
+    font-size: 0.9em;
+}
+
+.language-link:hover {
+    color: #cc0202;
+}
+
+.programming-text::after {
+    content: "";
+    display: block;
+    width: 260px;
+    height: 120px;
+    margin: 30px auto;
+    background-image: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #2780e3;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.fixed-button {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.fixed-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
