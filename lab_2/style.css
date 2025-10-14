@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: #000000;
+    padding: 10px;
+}
+
+.color_play {
+    width: 70px;
+    position: relative;
+    margin: auto;
+    white-space: nowrap 
+}
+
+.color_play li{
+    transition: color 0.5s ease;
+    padding: 5px;
+    margin: auto;
+}
+
+.color_play li:hover{
+    color: blueviolet;
+}
+
+section{
+    border: 2px solid gray;
+    border-radius: 2%;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.title{
+    text-align: center;
+}
+
+.parent_1{
+    text-align: center;
+}
+
+.parent_1 .child{
+    color: red;
+    text-align: center;
+}
+
+.parent_2{
+    color: orange;
+    text-align: center;
+}
+
+.parent_2 .child{
+    display: block;
+    color: purple;
+    border: medium dashed orange;
+    width: 15%;
+    margin: auto;
+    height: 30px;
+    text-align: center;
+}
+
+.parent_3_1{
+    color: black;
+    text-align: center;
+}
+
+.parent_3{
+    color:green;
+    text-align: center;
+}
+
+.parent_3 .child{
+    text-align: center;
+    color: green;
+}
+
+#special_color{
+    color: purple;
+}
+
+.language-programm a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+}
+
+.language-programm a::after {
+    content: "🌐";
+}
+
+.language-programm a:hover {
+    color: blue;
+}
+
+.language-programm:after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 50px;
+    margin: auto;
+    background-image: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #044fa5;
+    padding: 5px;
+}
