@@ -49,13 +49,13 @@ body {
   padding-top: 20px;
 }
 
-.photo-wrap {
+.photo-gallery__photo-wrap {
   position: relative;
   width: 350px;    
   height: 250px;   
 }
 
-.photo-wrap img {
+.photo-gallery__photo-wrap img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -77,9 +77,8 @@ body {
   border-radius: 8px;        
 }
 
-.maze__cell--side-top { border-top: 3px solid #333; }
-.maze__cell--side-right { border-right: 3px solid #333; }
-.maze__cell--side-bottom { border-bottom: 3px solid #333; }
-.maze__cell--side-left { border-left: 3px solid #333; }
-
+.border-top { border-top: 3px solid #333; }
+.border-right { border-right: 3px solid #333; }
+.border-bottom { border-bottom: 3px solid #333; }
+.border-left { border-left: 3px solid #333; }
 

@@ -23,7 +23,7 @@
           Task 2.
         </h1>
       <div class = "photo-gallery">
-        <div class = "photo-wrap">
+        <div class = "photo-gallery__photo-wrap">
         <img src="image/kisa1.jpg" alt="" class="photo-wrap__photo2">
         <img src="image/kisa2.jpg" alt="" class="photo-wrap__photo1">
         </div>
@@ -46,23 +46,18 @@
       <h1>
           Task 4.
       </h1>
-      <div class="maze">
+  <div class="maze">
+  <div class="maze__cell border-left"></div>
+  <div class="maze__cell border-top border-left"></div>
+  <div class="maze__cell border-top border-right"></div>
 
-        <div class="maze__cell--side-left"></div>         
-        <div class="maze__cell--side-top maze__cell--side-left"></div>
-        <div class="maze__cell--side-top maze__cell--side-right"></div>
+  <div class="maze__cell border-left"></div>
+  <div class="maze__cell border-left border-right"></div>
+  <div class="maze__cell border-right"></div>
 
-
-        <div class="maze__cell--side-left"></div>
-        <div class="maze__cell--side-left maze__cell--side-right"></div>
-        <div class="maze__cell--side-right"></div>
-
-
-        <div class="maze__cell--side-left maze__cell--side-bottom"></div>
-        <div class="maze__cell--side-bottom maze__cell--side-right"></div>
-        <div class="maze__cell--side-bottom"></div>               
-    </div>
-  </div>
-
+  <div class="maze__cell border-left border-bottom"></div>
+  <div class="maze__cell border-bottom border-right"></div>
+  <div class="maze__cell border-bottom"></div>
+  </div>             
   </body>
 </html>
