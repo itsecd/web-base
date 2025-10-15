@@ -1,0 +1,92 @@
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.text-block {
+  width: 60%;
+  background-color: #522818;
+  color: #FDDF9D;
+  text-align: right;
+  padding: 20px;
+  margin: 20px auto;
+  border: 3px solid #FDDF9D;
+  border-radius: 10px;
+}
+
+.image-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+.image-container__image--layer1 {
+    z-index: 1;
+}
+
+.image-container__image--layer2 {
+    z-index: 2;
+}
+
+.image-container__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.traffic-light {
+  width: 150px;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 30px auto;
+  border: 2px solid #000;
+}
+
+.traffic-light__lamp {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px auto;
+  border: 2px solid #000;
+}
+
+.traffic-light__lamp--red { background-color: red; }
+.traffic-light__lamp--yellow { background-color: yellow; }
+.traffic-light__lamp--green { background-color: green; }
+
+.maze {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 0;
+  margin: 40px auto;
+  width: fit-content;
+}
+
+.maze__cell {
+  box-sizing: border-box;
+}
+
+.border--top {
+  border-top: 2px solid #000;
+}
+
+.border--right {
+  border-right: 2px solid #000;
+}
+
+.border--bottom {
+  border-bottom: 2px solid #000;
+}
+
+.border--left {
+  border-left: 2px solid #000;
+}
