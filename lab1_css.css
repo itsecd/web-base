@@ -2,7 +2,7 @@ h1{
     color: black;
     text-align: center;
 }
-p{
+.task1__text{
     text-align: center;
     color: #C4C26B;
     background-color: #D765FE;
@@ -16,49 +16,49 @@ h1{
     width: 600px;
     height: 600px;
 }
-h1{
-    color: black;
-    text-align: center;
+.image__img--back{
+    display: block;
+    height: 600px;
+    max-height: 100%;
 }
-.image img{
+.image__img--front{
+    height: 250px;
+    max-height: 100%;
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 80%;
 }
 h1{
     color: black;
     text-align: center;
 }
-.Trafic-light{
-    width: 300px;
-    height: 630px;
-    background-color: gray;
+.traffic-light{
+    display: grid;
+    position: relative;
+    align-items: center;
+    gap: 10px;
+    width: 100px;
+    height: 250px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+.traffic-light__lamp{
+    position: absolute;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
 }
-#red{
-     width: 180px;
-     height: 180px;
-     border-radius: 50%;
-     background-color: red;
-     border: 10px solid black;
-     margin-left: 50px;
+
+.traffic-light__lamp--red{
+    position: relative;
+    background-color: red;
+    border-radius: 100%;
 }
-#yellow{
-    width:180px;
-    height: 180px;
+.traffic-light__lamp--yellow{
+    position: relative;
     background-color: yellow;
-    border-radius: 50%;
-    border: 10px solid black;    
-    margin-left: 50px;
 }
-#green{
-    width: 180px;
-    height: 180px;
+.traffic-light__lamp--green{
+    position: relative;
     background-color: green;
-    border-radius: 50%;
-    border: 10px solid black;    
-    margin-left: 50px;
 }
 h1{
     color: black;
@@ -72,7 +72,20 @@ h1{
     margin: 20px auto;
     width: 300px;
 }
-.cell{
-    border: 3px solid goldenrod;
-    background-color: azure;
+
+.maze__cell{
+    background-color: rgb(202, 231, 236);
+    box-sizing: border-box;
+}
+.border-top{
+    border-top: 2px solid goldenrod;
+}
+.border-left{
+    border-left: 2px solid goldenrod;
+}
+.border-right{
+    border-right: 2px solid goldenrod;
+}
+.border-bottom{
+    border-bottom: 2px solid goldenrod;
 }
