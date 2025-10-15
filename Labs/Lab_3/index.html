@@ -57,6 +57,11 @@
           в контейнерных средах. Люблю играть в Overwatch, Factorio и сюжетные
           игры.
         </p>
+        <div class="scroll-to-projects">
+          <button class="projects-btn" onclick="scrollToProjects()">
+            К проектам ↓
+          </button>
+        </div>
       </div>
     </section>
     <section class="projects">
@@ -87,5 +92,18 @@
         </div>
       </div>
     </section>
+    <script>
+      function scrollToProjects() {
+        const projectsSection = document.querySelector(".projects");
+        if (projectsSection) {
+          projectsSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        } else {
+          console.error("Секция проектов не найдена");
+        }
+      }
+    </script>
   </body>
 </html>

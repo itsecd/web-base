@@ -111,25 +111,24 @@ body {
 }
 
 .projects {
-  position: absolute;
-  top: calc(100% + 55px);
-  left: 50%;
-  transform: translateX(-50%);
+  top: calc(87vh);
   width: 75%;
   max-width: 500px;
+  margin: 50px auto;
+  position: relative;
 }
 
 .projects-container {
   background: rgba(255, 255, 255, 0.55);
   border-radius: 20px;
-  padding: 40px;
+  padding: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);
 }
 
 .projects-container h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: #2c3e50;
   font-size: 1.8em;
 }
@@ -176,4 +175,38 @@ body {
 
 .project-link:hover {
   color: #2980b9;
+}
+
+.scroll-to-projects {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.projects-btn {
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px solid rgba(52, 152, 219, 0.8);
+  color: #3498db;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.projects-btn:hover {
+  background: rgba(52, 152, 219, 0.9);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.projects-btn:active {
+  transform: translateY(-1px);
 }
