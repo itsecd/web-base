@@ -1,10 +1,18 @@
+function getElement(id) {
+    const element = document.getElementById(id);
+    if (!element) {
+        console.error(`Элемент с id "${id}" не найден`);
+    }
+    return element;
+}
+
 // Получаем элементы
-const num1Input = document.getElementById('num1');
-const num2Input = document.getElementById('num2');
-const operationSelect = document.getElementById('operation');
-const calculateBtn = document.getElementById('calculate');
-const resultOutput = document.getElementById('result');
-const errorMessage = document.getElementById('error');
+const num1Input = getElement('num1');
+const num2Input = getElement('num2');
+const operationSelect = getElement('operation');
+const calculateBtn = getElement('calculate');
+const resultOutput = getElement('result');
+const errorMessage = getElement('error');
 
 // Функция вычисления
 function calculate() {
@@ -37,6 +45,9 @@ function calculate() {
             }
             result = num1 / num2;
             break;
+        default:
+            showError('Неизвестная операция');
+            return;
     }
     resultOutput.textContent = result;
 }
@@ -44,6 +55,9 @@ function showError(message) {
     errorMessage.textContent = message;
     errorMessage.style.display = 'block';
 }
-
 // Назначаем евент
-calculateBtn.addEventListener('click', calculate);
+if (calculateBtn) {
+    calculateBtn.addEventListener('click', calculate);
+} else {
+    console.error('Кнопка "Вычислить" не найдена');
+}
