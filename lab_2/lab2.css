@@ -62,16 +62,12 @@
 }
 
 .list__item::before {
-  content: "👉";
+  content: "🌐";
+  margin-left: 4px;
 }
 
 .item__link {
   font-weight: bold;
-}
-
-.item__link::after {
-  content: "🌐";
-  margin-left: 4px;
 }
 
 .task3__list::after {
