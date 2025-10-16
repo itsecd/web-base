@@ -1,0 +1,96 @@
+.text{
+    background: #A91FA3;
+    left: 50%;
+    top: 50%;
+    
+}
+.tx{
+    color: #ABC0B0;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: rotateY(-50%);
+}
+
+
+
+.cats{
+    display: inline-block;
+    position: relative;
+}
+
+.cat1{
+    width: 100%;
+    display: block;
+}
+
+.cat2{
+    width: 15%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.trlight{
+    width: 100px;  
+    margin: 50px auto;
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;
+}        
+
+.light{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.red{
+    background: red;
+}
+
+.yellow{
+    background: yellow;
+}
+
+.green{
+    background: green;
+}
+
+
+
+.maze{
+    width: 100%; 
+}
+
+.horiz{
+    display: flex;
+    justify-content: center;
+}
+
+.wall{
+    width: 50px;
+    height: 50px;
+    border: 3px solid white;
+    border-radius: 9%;
+    margin: 0px;
+}
+
+.top{
+    border-top-color: rebeccapurple;
+}
+
+.bottom{
+    border-bottom-color: rebeccapurple;
+}
+
+.right{
+    border-right-color: rebeccapurple;
+}
+
+.left{
+    border-left-color: rebeccapurple;
+}
