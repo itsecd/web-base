@@ -1,0 +1,75 @@
+.text-block {
+	display: flex;
+  background-color: #2F9469;
+}
+.text-block--paragraph {
+    text-align: justify;
+    color: #E2155C;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.image-wrap {
+  position: relative;
+  width: 350px;    
+  height: 250px;   
+}
+.image-wrap img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.image-gallery--photo1 {
+  width: 300px;     
+  z-index: 2;
+}
+.image-gallery--photo2 {
+  width: 400px; 
+  z-index: 1;
+}
+
+.traffic-light {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border-radius: 150px;
+}
+.traffic-light--green {
+    background-color: green;
+}
+.traffic-light--red{
+    background-color: red;
+}
+.traffic-light--yellow{
+    background-color: yellow;
+}
+
+.maze {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(3, 60px);
+  gap: 0;
+  margin: 40px;
+}
+.maze-cell {
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  background: white;
+}
+.maze-cell--side-top {
+    border-top: 3px solid black;
+}
+.maze-cell--side-right {
+    border-right: 3px solid black;
+}
+.maze-cell--side-bottom {
+    border-bottom: 3px solid black;
+}
+.maze-cell--side-left {
+    border-left: 3px solid black;
+}
