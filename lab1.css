@@ -4,7 +4,7 @@
     top: 50%;
     
 }
-.tx{
+.text__block{
     color: #ABC0B0;
     position: relative;
     text-align: center;
@@ -14,17 +14,17 @@
 
 
 
-.cats{
+.image{
     display: inline-block;
     position: relative;
 }
 
-.cat1{
+.image__cat1{
     width: 100%;
     display: block;
 }
 
-.cat2{
+.image__cat2{
     width: 15%;
     position: absolute;
     top: 50%;
@@ -42,21 +42,21 @@
     align-items: center;
 }        
 
-.light{
+.trlight__light{
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
 
-.red{
+.trlight__light--red{
     background: red;
 }
 
-.yellow{
+.trlight__light--yellow{
     background: yellow;
 }
 
-.green{
+.trlight__light--green{
     background: green;
 }
 
@@ -64,14 +64,13 @@
 
 .maze{
     width: 100%; 
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 40px);
+    grid-template-rows: repeat(3, 40px);
 }
 
-.horiz{
-    display: flex;
-    justify-content: center;
-}
-
-.wall{
+.maze__wall{
     width: 50px;
     height: 50px;
     border: 3px solid white;
@@ -79,17 +78,22 @@
     margin: 0px;
 }
 
-.top{
+.maze__wall--top{
     border-top-color: rebeccapurple;
 }
 
-.bottom{
+.maze__wall--bottom{
     border-bottom-color: rebeccapurple;
 }
 
-.right{
+.maze__wall--right{
     border-right-color: rebeccapurple;
 }
+
+.maze__wall--left{
+    border-left-color: rebeccapurple;
+}
+
 
 .left{
     border-left-color: rebeccapurple;
