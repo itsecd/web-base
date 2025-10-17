@@ -24,57 +24,60 @@ body {
   margin: 20px 0;
 }
 
-.image {
-  position: absolute;
-  max-width: 400px;
+.image-container__image {
+    position: absolute;
+    max-width: 400px;
 }
 
-.background-image {
-  z-index: 1;
+.image-container__image--background {
+    z-index: 1;
 }
 
-.overlay-image {
-  top: 200px;
-  z-index: 2;
+.image-container__image--overlay {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
-.traffic_lights {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #4c4c4c;
-  width: 110px;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 0 auto;
+
+.traffic-lights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #4c4c4c;
+    width: 110px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
 }
 
-.traffic_light {
-  width: 60px;
-  height: 60px;
-  padding: 20px;
-  border-radius: 50px;
-  margin: 5px;
+.traffic-light {
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    border-radius: 50px;
+    margin: 5px;
 }
 
-.traffic_light_green {
-  background: #009900;
+.traffic-light--green {
+    background: #009900;
 }
 
-.traffic_light_yellow {
-  background: #ffff00;
+.traffic-light--yellow {
+    background: #ffff00;
 }
 
-.traffic_light_red {
-  background: #fa0000;
+.traffic-light--red {
+    background: #fa0000;
 }
 
 .maze {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    justify-content: center;
+    margin: 40px 0;
 }
 
 .maze__cell {
