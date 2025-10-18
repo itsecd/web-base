@@ -1,0 +1,36 @@
+.main_container {
+  text-align: center;
+}
+
+.unnumerated_list li {
+  transition: all 0.3s ease 0s;
+}
+
+.unnumerated_list li:hover {
+  color: #f4bc92;
+}
+
+.parent_2 {
+  color: #f4bc92;
+}
+
+.parent_1 .child {
+  color: red;
+  width: 50px;
+}
+
+.parent_2 .child {
+  color: #b4005a;
+  border-style: dotted;
+  border-color: #f4bc92;
+  width: 50px;
+}
+
+.parent_2 ~ .parent_3,
+.parent_2 ~ .parent_3 .child {
+  color: green;
+}
+
+.parent_3 .child_2_guest{
+    color: purple;
+}
