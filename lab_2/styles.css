@@ -3,7 +3,7 @@
 }
 
 .unnumerated_list li {
-  transition: all 0.3s ease 0s;
+  transition: all 1.3s ease 0s;
 }
 
 .unnumerated_list li:hover {
@@ -31,6 +31,41 @@
   color: green;
 }
 
-.parent_3 .child_2_guest{
-    color: purple;
+.parent_3 .child_2_guest {
+  color: purple;
+}
+
+.text {
+  width: 700px;
+  text-align: justify;
+}
+
+.name {
+  text-decoration: none;
+  color: black;
+  padding-right: 5px;
+  font-weight: bold;
+}
+
+.languages li {
+  text-align: justify;
+}
+
+.languages li::before{
+  content: "🌐";
+}
+
+.text::after{
+  content: "";
+    display: block;
+    width: 260px;
+    height: 120px;
+    margin: 30px auto;
+    background-image: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #2780e3;
+    padding: 20px;
+    border-radius: 5px;
 }
