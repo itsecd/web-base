@@ -92,29 +92,21 @@ h2 {
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
     width: 300px;
+    height: 300px;
     gap: 0;
-    background-color: #fff;
+    background-color: #f9f7e8;
+    margin: 20px 0;
 }
 
 .maze__cell {
     width: 100px;
     height: 100px;
     box-sizing: border-box;
-    background-color: #f0f0f0;
+    background-color: #f9f7e8;
+    border: none;
 }
 
-.maze__cell_top {
-    border-top: 10px solid black;
-}
-
-.maze__cell_right {
-    border-right: 10px solid black;
-}
-
-.maze__cell_left {
-    border-left: 10px solid black;
-}
-
-.maze__cell_bottom {
-    border-bottom: 10px solid black;
-}
+.border-top { border-top: 2px solid black; }
+.border-bottom { border-bottom: 2px solid black; }
+.border-left { border-left: 2px solid black; }
+.border-right { border-right: 2px solid black; }
