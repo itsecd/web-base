@@ -94,18 +94,18 @@ body {
   display: flex;
 }
 
-.maze__cell_open-left {
-  border-left-color: transparent;
+.maze__cell--open-left {
+    border-left-color: transparent;
 }
 
-.maze__cell_open-right {
-  border-right-color: transparent;
+.maze__cell--open-right {
+    border-right-color: transparent;
 }
 
-.maze__cell_open-top {
-  border-top-color: transparent;
+.maze__cell--open-top {
+    border-top-color: transparent;
 }
 
-.maze__cell_open-bottom {
-  border-bottom-color: transparent;
+.maze__cell--open-bottom {
+    border-bottom-color: transparent;
 }
