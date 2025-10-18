@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page">
+    <header class="header">
+        <h1 class="header__title">Лабораторная работа 1</h1>
+        <h2 class="header__subtitle">Начало знакомства с версткой</h2>
+    </header>
+    
+    <main class="main">
+        <!-- Задание 1: Текст с выравниванием и цветами -->
+        <section class="task task--text">
+            <div class="task__container task__container--text">
+                <div class="task__content task__content--text">
+                    <h3 class="task__heading">Приложение 1</h3>
+                    <p class="task__paragraph">JavaScript (аббр. JS) — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стиль. Является реализацией спецификации ECMAScript (стандарт ECMA-262).</p>
+                    <p class="task__paragraph">JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Задание 2: Позиционирование изображений -->
+        <section class="task task--images">
+            <div class="task__container task__container--images">
+                <div class="images-stack">
+                    <img src="https://img2.akspic.ru/crops/8/4/6/4/6/164648/164648-kot-kotenok-privlekatelnost-golova-glaz-3840x2160.jpg" alt="Котик 1" class="images-stack__image images-stack__image--first">
+                    <img src="https://i.pinimg.com/236x/cd/16/12/cd16121609a79d95dffbfa28a326331e.jpg" alt="Котик 2" class="images-stack__image images-stack__image--second">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Задание 3: Светофор -->
+        <section class="task task--traffic-light">
+            <div class="task__container task__container--traffic-light">
+                <div class="traffic-light">
+                    <div class="traffic-light__light traffic-light__light--red"></div>
+                    <div class="traffic-light__light traffic-light__light--yellow"></div>
+                    <div class="traffic-light__light traffic-light__light--green"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Задание 4: Лабиринт -->
+        <section class="task task--maze">
+            <div class="task__container task__container--maze">
+                <div class="maze" data-size="3">
+                    <!-- Ячейки лабиринта генерируются через JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Генерация лабиринта с настраиваемой размерностью
+        document.addEventListener('DOMContentLoaded', function() {
+            const maze = document.querySelector('.maze');
+            const size = parseInt(maze.dataset.size);
+            
+            // Очищаем лабиринт
+            maze.innerHTML = '';
+            
+            // Создаем структуру лабиринта 3x3
+            const mazeStructure = [
+                // Первая строка
+                [
+                    { top: true, right: false, bottom: false, left: true },    // [0,0] - вход слева
+                    { top: true, right: false, bottom: true, left: false },    // [0,1]
+                    { top: true, right: true, bottom: false, left: false }     // [0,2]
+                ],
+                // Вторая строка
+                [
+                    { top: false, right: true, bottom: false, left: true },    // [1,0]
+                    { top: true, right: false, bottom: true, left: true },     // [1,1]
+                    { top: false, right: true, bottom: false, left: false }    // [1,2]
+                ],
+                // Третья строка
+                [
+                    { top: false, right: false, bottom: true, left: true },    // [2,0]
+                    { top: true, right: true, bottom: true, left: false },     // [2,1]
+                    { top: false, right: true, bottom: true, left: true }      // [2,2] - выход справа
+                ]
+            ];
+            
+            // Создаем ячейки лабиринта
+            for (let row = 0; row < size; row++) {
+                for (let col = 0; col < size; col++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'maze__cell';
+                    
+                    // Добавляем классы для стен на основе структуры лабиринта
+                    const cellWalls = mazeStructure[row][col];
+                    if (cellWalls.top) cell.classList.add('maze__cell--top');
+                    if (cellWalls.right) cell.classList.add('maze__cell--right');
+                    if (cellWalls.bottom) cell.classList.add('maze__cell--bottom');
+                    if (cellWalls.left) cell.classList.add('maze__cell--left');
+                    
+                    maze.appendChild(cell);
+                }
+            }
+            
+            // Устанавливаем размерность сетки
+            maze.style.gridTemplateColumns = `repeat(${size}, 80px)`;
+            maze.style.gridTemplateRows = `repeat(${size}, 80px)`;
+            maze.style.width = `${size * 80}px`;
+        });
+    </script>
+</body>
+</html>
