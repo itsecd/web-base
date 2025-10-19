@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -43,13 +42,16 @@ h2 {
     border: 2px dashed #ccc;
 }
 
+/* Убрана ссылка на .image, теперь стили применяются напрямую к .images-container__image */
 .images-container__image {
     position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */ /* Закомментировано */
+    object-fit: none; /* Не обрезать */
+    object-position: center; /* Центрировать содержимое */
 }
 
 .images-container__image--front {
