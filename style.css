@@ -140,7 +140,7 @@ body {
   padding: 10px;
 }
 
-.lang-list a::after {
+.lang-list a::before {
     content: " 🔗";
     font-weight: 400;
     opacity: 0.85;
