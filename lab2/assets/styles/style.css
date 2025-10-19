@@ -1,10 +1,10 @@
-.popular-movies__list-item {
+.popular-movies__item {
     color: black;
     cursor: pointer;
     transition: color 0.6s ease-in-out;
 }
 
-.popular-movies__list-item:hover {
+.popular-movies__item:hover {
     color: #CD5C5C;
 }
 
@@ -12,12 +12,8 @@
     color: red;
 }
 
-.parent-1 h1 {
+.parent-1__title {
     color: black;
-}
-
-.parent-2 h1 {
-    color: orange;
 }
 
 .parent-2 {
@@ -25,15 +21,20 @@
     color: #b4005a;
 }
 
+.parent-2__title {
+    color: orange;
+}
+
 .first, .second {
     border: 2px dotted orange;
 }
 
-.parent-3green h1, .parent-3green p {
+.parent-3green__title,
+.parent-3green__text {
     color: green;
 }
 
-.visited p {
+.visited__text {
     color: #b4005a;
 }
 
@@ -41,7 +42,7 @@
     margin-left: 45%;
 }
 
-.task3 a {
+.task3__link {
     cursor: pointer;
     position: relative;
     font-weight: bold;
@@ -49,7 +50,11 @@
     text-decoration: none;
 }
 
-.task3 a::before {
+.task3__list li {
+    list-style: none;
+}
+
+.task3__link::before {
     content: "🌐";
     margin-right: 5px;
     display: inline-block;
@@ -57,23 +62,22 @@
     color: #800080;
 }
 
-.lg {
-    display: flex;
-    justify-content: center;
-}
-
 .logo {
-    width: 300px;
-    height: 300px;
     position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #007BFF;
 }
 
 .logo::before {
     content: "";
-    background-image: url('https://ssau.ru/pagefiles/of_docs/logo_osnovnoy_RUS1.png');
+    background-image: url('https://ssau.ru/i/logo/logo-white-ru.svg');
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    width: 100%;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    width: 45%;
+    height: 80%;
+    transform: translate(-50%, -50%);
 }
