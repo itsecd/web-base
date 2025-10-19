@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -51,7 +52,7 @@ h2 {
     object-fit: cover;
 }
 
-.images-container__image_front {
+.images-container__image--front {
     border: 2px solid red;
     opacity: 0.7;
 }
@@ -106,7 +107,7 @@ h2 {
     border: none;
 }
 
-.border-top { border-top: 2px solid black; }
-.border-bottom { border-bottom: 2px solid black; }
-.border-left { border-left: 2px solid black; }
-.border-right { border-right: 2px solid black; }
+.border-top { border-top: 10px solid black; }
+.border-bottom { border-bottom: 10px solid black; }
+.border-left { border-left: 10px solid black; }
+.border-right { border-right: 10px solid black; }
