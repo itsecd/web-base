@@ -97,15 +97,9 @@ body {
   box-sizing: border-box;
   background-color: #2cb112;  
 }
-.maze .maze__cell:nth-child(5),
-.maze .maze__cell:nth-child(6),
-.maze .maze__cell:nth-child(7),
-.maze .maze__cell:nth-child(8),
-.maze .maze__cell:nth-child(13),
-.maze .maze__cell:nth-child(14),
-.maze .maze__cell:nth-child(15),
-.maze .maze__cell:nth-child(16) {
-  background-color: #000000;
+.maze__cell:nth-child(n+5):nth-child(-n+8),
+.maze__cell:nth-child(n+13):nth-child(-n+16) {
+  background-color: #0b700b;
 }
   
   .maze__cell {
