@@ -29,7 +29,6 @@ body{
 
     /* Задание 3 */
     .traffic-light{
-      position: relative;
       width: 100px;
       height: 280px;
       background-color:black;
@@ -37,15 +36,15 @@ body{
       justify-content: center;
       padding: 10px 0;
     }
-    .light {
+    .traffic-light__light {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     margin: 10px auto;
     } 
-    .red {background-color: red;}
-    .yellow {background-color: yellow;}
-    .green {background-color: green;}
+    .traffic-light__light--red {background-color: red;}
+    .traffic-light__light--yellow {background-color: yellow;}
+    .traffic-light__light--green {background-color: green;}
 
     /* Задание 4 */
     .maze {
@@ -55,7 +54,7 @@ body{
       margin: 30px auto;
       width: fit-content;
     }
-    .cell {
+    .maze-cell {
       width: 80px;
       height: 80px;
       background-color: white;
