@@ -43,7 +43,7 @@ function achievements(a, b, op, res) {
         const l1 = document.getElementById("locked1");
         l1.style.display = "block";
     }
-    if (!isFinite(res) && !ACHIEVEMENTS["inf"]) {
+    if (!isFinite(res) && !isNaN(res) && !ACHIEVEMENTS["inf"]) {
         ACHIEVEMENTS["inf"] = true;
         create_toast(ACHIEVEMENTS_STRINGS["inf"]);
     }
@@ -52,7 +52,7 @@ function achievements(a, b, op, res) {
         create_toast(ACHIEVEMENTS_STRINGS["nan"]);
     }
     if (a === 666 && b === (1/2) && op === "^" && !ACHIEVEMENTS["666"]) {
-        ACHIEVEMENTS["666"] == true;
+        ACHIEVEMENTS["666"] = true;
         create_toast(ACHIEVEMENTS_STRINGS["666"]);
     }
     if (Math.abs(res - Math.PI) < 0.001 && !ACHIEVEMENTS["pi"]) {
@@ -69,7 +69,7 @@ function achievements(a, b, op, res) {
         ACHIEVEMENTS["phi"] = true;
         create_toast(ACHIEVEMENTS_STRINGS["phi"]);
     }
-    if (a < 0 && b === (1/2) && op === "^" && !ACHIEVEMENTS["i"]) {
+    if (a < 0 && Math.abs(b) === (1/2) && op === "^" && !ACHIEVEMENTS["i"]) {
         ACHIEVEMENTS["i"] = true;
         create_toast(ACHIEVEMENTS_STRINGS["i"]);
     }
