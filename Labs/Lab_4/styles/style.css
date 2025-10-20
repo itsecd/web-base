@@ -46,7 +46,7 @@ header p {
     gap: 20px;
 }
 
-.calculator-input-group {
+.calculator__input-group {
     display: flex;
     flex-direction: column;
     gap: 8px;

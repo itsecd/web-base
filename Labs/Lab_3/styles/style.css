@@ -111,7 +111,7 @@ body {
 }
 
 .projects {
-  top: calc(87vh);
+  top: 105vh;
   width: 75%;
   max-width: 500px;
   margin: 50px auto;
