@@ -1,0 +1,158 @@
+html {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    padding: 2%;
+}
+
+.text-js {
+    text-align: justify; 
+    color: #BA26E2; /* Отвратительное сочетание цветов, если честно.. */
+    background: #21702C;
+
+    /* В таком случае для пущего эффекта */
+    font-family: "Comic Sans MS";
+    font-size: large;
+    rotate: 1.6deg;
+    text-shadow: 5px 5px 2px black;
+    box-shadow: 5px 5px 2px rgb(139, 133, 133);
+    border-radius: 5px;
+}
+
+.text-js:hover { /* Почему бы и нет */
+    animation-name: wacky-animation;
+    animation-duration: 1.3s;
+}
+
+.text-css {
+    position: absolute;
+    right: 30px;
+    width: 100px;
+    text-align: center;
+    font-size: large;
+    rotate: -3deg;
+    color: #aac3e2;
+    background: #2436c0;
+    animation-name: css-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    box-shadow: 5px 5px 2px rgb(139, 133, 133);
+    border-radius: 2px;
+}
+
+
+@keyframes wacky-animation {
+    from {
+        rotate: 2deg;
+    }
+    50% {
+        text-shadow: 50px 50px 1px black;
+        rotate: -8deg;
+    }
+    to {
+        rotate: 2deg;
+    }
+}
+
+@keyframes css-animation {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #c000e6;
+    }
+    20% {
+        transform: translateX(15px);
+        rotate: 10deg;
+        scale: 1.1;
+    }
+    50% {
+        font-size: larger;
+        scale: 1.2;
+        transform: translate(-10px, 5px);
+    }
+    80% {
+        transform: translateY(5px);
+        rotate: -10deg;
+        scale: 0.9;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #8b4dff, 0 0 40px #e14dff;
+    }
+}
+
+.images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 500px;
+}
+
+.images__cat-image {
+    display: flex;
+    position: relative;
+    image-rendering: optimizeQuality;
+    
+}
+
+.images__cat-image--back {
+    position: absolute;
+    z-index: 1;
+}
+
+.images__cat-image--front {
+    z-index: 2;
+    opacity: 80%;
+}
+
+.trafficlight {
+    display: inline-flexbox;
+    background-color: rgb(53, 50, 50);
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+}
+.trafficlight__light {
+    display: inline-flexbox;
+    width: 100px;
+    height: 100px;
+    background: gray;
+    margin: 10px;
+}
+
+.trafficlight__light--red { background: red; }
+
+.trafficlight__light--yellow { background: yellow; }
+
+.trafficlight__light--green { background: green; }
+
+.labyrinth {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    width: fit-content;
+}
+.labyrinth__room {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background: gray;
+    border: none;
+    box-sizing: border-box;
+}
+
+.top-border {
+    border-top: black solid 10px;
+}
+
+.bottom-border {
+    border-bottom: black solid 10px;
+}
+
+.left-border {
+    border-left: black solid 10px;
+}
+
+.right-border {
+    border-right: black solid 10px;
+}

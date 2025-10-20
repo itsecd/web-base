@@ -1,0 +1,56 @@
+<html lang="ru"> 
+    <head>
+        <meta charset="UTF-8">
+        <link href="styles.css" rel="stylesheet" type="text/css" />
+        <title>Резюме</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="profile">
+                <div class="profile__pfp">
+                    <img class="profile__pfp__image", src="images/Zavr.svg", alt="Фото профиля", title="Точно я"></img>
+                </div>
+                <div class="profile__text-container">
+                    <p class="profile__text-container__string text-title">Горнов Павел Денисович</p>
+                    <p class="profile__text-container__string text-accent2">Студент 2-го курса</p>
+                    <p class="profile__text-container__string text-accent-low">Дата рождения: 30.06.2006</p>
+                    <p class="profile__text-container__string">Мой GitHub: <a href="https://github.com/Pavel-Gornov">Pavel-Gornov</a></p>
+                </div>
+            </div>
+            <div class="about-me">
+                <p class="about-me__title text-title">Обо мне</p>
+                <section class="about-me__text">Студент обыкновенный. Малообщительный, скромный и немного застенчивый. Обожаю настолки, видеоигры и программирование в целом.</section>
+            </div>
+            <div class="soft-skills">
+                <p class="soft-skills__title text-title">Личные качества</p>
+                <section class="soft-skills__text">Обучаемость, ответственность, самостоятельность, широкий кругозор, грамотная разговорная речь, умение работать в команде, умение планировать сроки для выполнения поставленных задач, добросовестность, оперативность.</section>
+            </div>
+            <div class="hard-skills">
+                <p class="hard-skills__title text-title">Что я умею</p>
+                <div class="hard-skills__grid">
+                    <div class="hard-skills__grid__panel">
+                        <p class="hard-skills__grid__panel__title text-title">Уверенные знания</p>
+                        <ul class="hard-skills__grid__panel__basic-list">
+                            <li class="hard-skills__grid__panel__basic-list__string text-accent2">C и C++</li>
+                            <li class="hard-skills__grid__panel__basic-list__string text-accent2">Java</li>
+                            <li class="hard-skills__grid__panel__basic-list__string text-accent2">Python</li>
+                        </ul>
+                    </div>
+                    <div class="hard-skills__grid__panel">
+                        <p class="hard-skills__grid__panel__title text-title">Базовые знания</p>
+                        <ul class="hard-skills__grid__panel__basic-list">
+                            <li class="hard-skills__grid__panel__basic-list__string text-accent2">Git</li>
+                            <li class="hard-skills__grid__panel__basic-list__string text-accent2">HTMLL, CSS</li>
+                            <li class="hard-skills__grid__panel__basic-list__string text-accent2">Lua, Julia</li>
+                        </ul>
+                    </div>
+                </div>
+                <section class="hard-skills__text">Также обладаю навыками работы в области растровой и вектороной графики (SAI2, Inkscape); немного работал с 3d и 3d-анимацией (Blockbench).</section>
+                <div class="hard-skills__click-image">
+                    <input type="checkbox", class="hard-skills__click-image__checkbox", id="btnControl"/> <!-- Немного магии HTML + CSS-->
+                    <label class="hard-skills__click-image__btn", for="btnControl"><img class="hard-skills__click-image__image", src="images/Доминошка2.gif", alt="Одна из моих анимированных 3d моделей", title="Не тыкай в меня!", width="171", height="335"></label>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
