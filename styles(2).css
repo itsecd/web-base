@@ -23,10 +23,8 @@
 /* Общие стили для заданий */
 .task {
     margin-bottom: 40px;
-}
-
-.task__container {
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .task__heading {
@@ -40,11 +38,13 @@
 }
 
 /* Задание 1: Стилизация текста */
-.task__container--text {
+.task--text {
     background-color: #FCB9A1;
     padding: 20px;
     border-radius: 8px;
     max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .task__content--text {
@@ -52,12 +52,7 @@
 }
 
 /* Задание 2: Позиционирование изображений */
-.task__container--images {
-    display: flex;
-    justify-content: center;
-}
-
-.images-stack {
+.container__images-stack {
     position: relative;
     width: 300px;
     height: 300px;
@@ -83,12 +78,7 @@
 }
 
 /* Задание 3: Светофор */
-.task__container--traffic-light {
-    display: flex;
-    justify-content: center;
-}
-
-.traffic-light {
+.container__traffic-light {
     width: 120px;
     background-color: #333;
     border-radius: 10px;
@@ -119,66 +109,37 @@
 }
 
 /* Задание 4: Лабиринт */
-.task__container--maze {
-    display: flex;
-    justify-content: center;
-}
-
 .maze {
     display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
     gap: 0;
-    background-color: #f8f8f8;
     border: 3px solid #333;
-    position: relative;
+    background-color: #f8f8f8;
 }
 
 .maze__cell {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background-color: #f8f8f8;
     box-sizing: border-box;
-    position: relative;
 }
 
-/* Стили для стен лабиринта */
-.maze__cell--top::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background-color: #333;
+/* Классы для границ */
+.border-top {
+    border-top: 3px solid #333;
 }
 
-.maze__cell--right::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 3px;
-    background-color: #333;
+.border-right {
+    border-right: 3px solid #333;
 }
 
-.maze__cell--bottom::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background-color: #333;
+.border-bottom {
+    border-bottom: 3px solid #333;
 }
 
-.maze__cell--left::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 3px;
-    background-color: #333;
+.border-left {
+    border-left: 3px solid #333;
 }
 
 /* Адаптивность */
@@ -187,23 +148,22 @@
         padding: 10px;
     }
     
-    .task__container--text {
+    .task--text {
         padding: 15px;
     }
     
-    .images-stack {
+    .container__images-stack {
         width: 250px;
         height: 250px;
     }
     
-    .maze__cell {
-        width: 60px;
-        height: 60px;
+    .maze {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
     }
     
-    .maze {
-        grid-template-columns: repeat(3, 60px) !important;
-        grid-template-rows: repeat(3, 60px) !important;
-        width: 180px !important;
+    .maze__cell {
+        width: 80px;
+        height: 80px;
     }
 }
