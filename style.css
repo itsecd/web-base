@@ -107,13 +107,13 @@ body {
     font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
-.lang-list {
+.ssau-block__lang-list {
   list-style: none;
   padding: 0;
   margin: 12px;
 }
 
-.lang-list a {
+.ssau-block__lang-list a {
     font-weight: 700;
     text-decoration: none;
     color: white;
@@ -135,19 +135,19 @@ body {
   color: #bdc3c7;
 }
 
-.lang-list__item {
+.ssau-block__lang-list-item {
   margin: 12px 0;
   padding: 10px;
 }
 
-.lang-list a::before {
+.ssau-block__lang-list a::before {
     content: " 🔗";
     font-weight: 400;
     opacity: 0.85;
     font-size: 0.9em;
 }
 
-.lang-list li {
+.ssau-block__lang-list li {
     margin-bottom: 10px;
 }
 
