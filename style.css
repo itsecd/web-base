@@ -58,6 +58,17 @@ body{
       width: 80px;
       height: 80px;
       background-color: white;
-      border: 2px solid black;
+    }
+    .maze-cell--side-top {
+    border-top: 3px solid black;
+    }
+    .maze-cell--side-right {
+    border-right: 3px solid black;
+    }
+    .maze-cell--side-bottom {
+    border-bottom: 3px solid black;
+    }
+    .maze-cell--side-left {
+    border-left: 3px solid black;
     }
 }
