@@ -51,9 +51,8 @@ body {
   width: 80px;
   background-color: #1b1919;
   padding: 10px;
-  margin-left: auto;
+  margin: 8px auto 30px auto;
   border-radius: 100px;
-  margin-bottom: 30px;
 }
 
 .traffic-light__lamp {
@@ -63,15 +62,15 @@ body {
   border-radius: 100%;
 }
 
-.traffic-light__lamp--red {
+.traffic-light__lamp_red {
   background-color: #d12e2e;
 }
 
-.traffic-light__lamp--yellow {
+.traffic-light__lamp_yellow {
   background-color: #f5bb28;
 }
 
-.traffic-light__lamp--green {
+.traffic-light__lamp_green {
   background-color: #338a38;
 }
 
@@ -83,7 +82,7 @@ body {
   width: 270px;    
   height: 270px;
   
-  margin: 20px 0; 
+  margin: 0 auto 30px auto;
   box-sizing: border-box;
 }
 
@@ -93,7 +92,7 @@ body {
 }
 
 /* Стены */
-.maze__cell--left   { border-left: 5px solid rgb(212, 34, 34); }
-.maze__cell--right  { border-right: 5px solid rgb(219, 205, 9); }
-.maze__cell--top    { border-top: 5px solid rgb(46, 204, 143); }
-.maze__cell--bottom { border-bottom: 5px solid rgb(86, 51, 167); }
+.maze__cell_left   { border-left: 5px solid rgb(212, 34, 34); }
+.maze__cell_right  { border-right: 5px solid rgb(219, 205, 9); }
+.maze__cell_top    { border-top: 5px solid rgb(46, 204, 143); }
+.maze__cell_bottom { border-bottom: 5px solid rgb(86, 51, 167); }
