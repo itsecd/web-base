@@ -3,6 +3,7 @@ body {
     background-color: #f9f9f9;
     padding: 20px;
     margin: 0;
+    
   }
   
   .text-block {
@@ -83,80 +84,45 @@ body {
     background-color: green;
   }
   
-  
-  .maze {
-    display: grid;
-    grid-template-columns: repeat(6, 50px);
-    grid-template-rows: repeat(4, 50px);
-    gap: 0;
-    margin: 30px auto;
-    width: 300px;
-    height: 200px;
-    position: relative;
-  }
-  
-  .maze::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border: 2px solid black;
-    pointer-events: none;
-    z-index: -1;
-  }
-  
-  .maze__cell {
-    width: 50px;
-    height: 50px;
-    box-sizing: border-box;
-    border: 1px solid #000;
-  }
-  
-  .maze__cell:nth-child(6n + 1),
-  .maze__cell:nth-child(6n + 3),
-  .maze__cell:nth-child(6n + 5) {
-    background-color: #f9f9f9;
-  }
-  
-  .maze__cell:nth-child(6n + 2),
-  .maze__cell:nth-child(6n + 4),
-  .maze__cell:nth-child(6n + 6) {
-    background-color: #717171;
-  }
-  
-  
-  .maze__cell:nth-child(1) { border-right: none; border-left: none; } 
-  .maze__cell:nth-child(2) { border-right: none; }
-  .maze__cell:nth-child(3) { border-right: none; }
-  .maze__cell:nth-child(4) { border-right: none; }
-  .maze__cell:nth-child(5) { border-right: none; }
-  
-  .maze__cell:nth-child(6) { border-bottom: none; }
-  
-  .maze__cell:nth-child(11) { border-left: none; }
-  .maze__cell:nth-child(10) { border-left: none; }
-  .maze__cell:nth-child(9) { border-left: none; }
-  .maze__cell:nth-child(8) { border-left: none; }
-  .maze__cell:nth-child(7) { border-left: none; }
-  
-  .maze__cell:nth-child(7) { border-bottom: none; }
-  
-  .maze__cell:nth-child(12) { border-left: none; }
-  
-  .maze__cell:nth-child(13) { border-right: none; }
-  .maze__cell:nth-child(14) { border-right: none; }
-  .maze__cell:nth-child(15) { border-right: none; }
-  .maze__cell:nth-child(16) { border-right: none; }
-  .maze__cell:nth-child(17) { border-right: none; }
-  
-  .maze__cell:nth-child(18) { border-bottom: none; }
-  
-  .maze__cell:nth-child(23) { border-left: none; }
-  .maze__cell:nth-child(22) { border-left: none; }
-  .maze__cell:nth-child(21) { border-left: none; }
-  .maze__cell:nth-child(20) { border-left: none; }
-  .maze__cell:nth-child(19) { border-left: none; }
-  
-  .maze__cell:nth-child(24) { border-right: none; }
+.maze {
+  display: grid;
+  grid-template-columns: repeat(6, 150px);
+  grid-template-rows: repeat(4, 150px);
+  gap: 0; 
+  background: #0000003b;
+  padding: 10px;
+  width: fit-content;
+  margin: 50px auto;
+}
+
+.maze__cell {
+  box-sizing: border-box;
+}
+
+.maze__cell:nth-child(6n + 1),
+.maze__cell:nth-child(6n + 3),
+.maze__cell:nth-child(6n + 5) {
+  background: #818080; 
+}
+
+.maze__cell:nth-child(6n + 2),
+.maze__cell:nth-child(6n + 4),
+.maze__cell:nth-child(6n + 6) {
+  background: #ffffff; 
+}
+
+.border-top {
+  border-top: 2px solid #000;
+}
+
+.border-right {
+  border-right: 2px solid #000;
+}
+
+.border-bottom {
+  border-bottom: 2px solid #000;
+}
+
+.border-left {
+  border-left: 2px solid #000;
+}
