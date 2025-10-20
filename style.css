@@ -36,27 +36,39 @@ h2 {
 
 .images-container {
     position: relative;
-    width: 300px;
-    height: 300px;
-    margin-bottom: 30px;
-    border: 2px dashed #ccc;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; 
 }
 
-/* Убрана ссылка на .image, теперь стили применяются напрямую к .images-container__image */
 .images-container__image {
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* object-fit: cover; */ /* Закомментировано */
-    object-fit: none; /* Не обрезать */
-    object-position: center; /* Центрировать содержимое */
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .images-container__image--front {
-    border: 2px solid red;
-    opacity: 0.7;
+    z-index: 1;
+    position: static; 
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .traffic-light {
