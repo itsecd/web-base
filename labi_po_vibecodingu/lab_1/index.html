@@ -12,9 +12,9 @@
 
     <div class = "image-gallery">
         <div class = "image-gallery__wrap">
-            <img src="kisa2.jpg" class="image-gallery__photo--2">
-            <img src="kisa1.jpg" class="image-gallery__photo--1">
-        </div>
+        <img src="kisa2.jpg" class="image-gallery__photo image-gallery__photo--front">
+        <img src="kisa1.jpg" class="image-gallery__photo image-gallery__photo--back">
+    </div>
     </div>
 
     <div class="traffic-light">
@@ -24,19 +24,19 @@
     </div>
     
     <div class="maze">
-        <div class="maze-cell--side-top maze-cell--side-bottom"></div>         
-        <div class="maze-cell--side-top maze-cell--side-bottom"></div>
-        <div class="maze-cell--side-top maze-cell--side-right"></div>
+        <div class="maze-cell maze-cell--side-noleft maze-cell--side-noright"></div>         
+        <div class="maze-cell maze-cell--side-noleft maze-cell--side-noright"></div>
+        <div class="maze-cell maze-cell--side-noleft maze-cell--side-nobottom"></div>
 
 
-        <div class="maze-cell--side-left"></div>
-        <div class="maze-cell--side-left"></div>
-        <div class="maze-cell--side-right maze-cell--side-bottom"></div>
+        <div class="maze-cell maze-cell--side-nobottom"></div>
+        <div class="maze-cell maze-nobottom--side-noright"></div>
+        <div class="maze-cell maze-cell--side-noleft maze-cell--side-notop"></div>
 
 
-        <div class="maze-cell--side-left maze-cell--side-bottom"></div>
-        <div class="maze-cell--side-bottom"></div>
-        <div class="maze-cell--side-bottom"></div>               
+        <div class="maze-cell maze-cell--side-notop maze-cell--side-noright"></div>
+        <div class="maze-cell maze-cell--side-noleft maze-cell--side-notop maze-cell--side-noright"></div>
+        <div class="maze-cell maze-cell--side-noleft maze-cell--side-noright"></div>               
     </div>
 </body>
 </html>

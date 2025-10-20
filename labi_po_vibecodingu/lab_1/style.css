@@ -23,11 +23,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.image-gallery__photo--1 {
+.image-gallery__photo { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.image-gallery__photo--back {
   height: 100%;     
   z-index: 1;
 }
-.image-gallery__photo--2 {
+.image-gallery__photo--front {
   height: 90%; 
   z-index: 2;
 }
@@ -63,18 +69,18 @@
 .maze-cell {
   width: 60px;
   height: 60px;
-  box-sizing: border-box;
+  border: 3px solid black;
   background: white;
 }
-.maze-cell--side-top {
-    border-top: 3px solid black;
+.maze-cell--side-notop {
+    border-top: 3px solid rgba(255, 255, 255, 0);
 }
-.maze-cell--side-right {
-    border-right: 3px solid black;
+.maze-cell--side-noright {
+    border-right: 3px solid rgba(255, 255, 255, 0);
 }
-.maze-cell--side-bottom {
-    border-bottom: 3px solid black;
+.maze-cell--side-nobottom {
+    border-bottom: 3px solid rgba(255, 255, 255, 0);
 }
-.maze-cell--side-left {
-    border-left: 3px solid black;
+.maze-cell--side-noleft {
+    border-left: 3px solid rgba(255, 255, 255, 0);
 }
