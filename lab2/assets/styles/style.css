@@ -1,40 +1,63 @@
-.popular-movies__item {
+.popular-movies__list {
+    padding-left: 0;
+    margin: 0;
+}
+
+.popular-movies__list__item {
     color: black;
     cursor: pointer;
     transition: color 0.6s ease-in-out;
+    list-style: none;
+    margin-bottom: 0.4em;
 }
 
-.popular-movies__item:hover {
+.popular-movies__list__item:hover {
     color: #CD5C5C;
 }
 
-.parent-1 {
+.parent {
+    margin-bottom: 1rem;
+}
+
+.parent.red {
     color: red;
 }
 
-.parent-1__title {
+.parent.red .parent__title {
     color: black;
 }
 
-.parent-2 {
+.parent.pink {
     display: inline-block;
     color: #b4005a;
 }
 
-.parent-2__title {
+.parent.pink .parent__title {
     color: orange;
 }
 
-.first, .second {
-    border: 2px dotted orange;
+
+.parent.black .parent__title,
+.parent.black .parent__text {
+    color: black;
 }
 
-.parent-3green__title,
-.parent-3green__text {
+.parent.green .parent__title,
+.parent.green .parent__text {
     color: green;
 }
 
-.visited__text {
+.child {
+    display: block;
+}
+
+.child.first,
+.child.second {
+    border: 2px dotted orange;
+    padding: 0.25rem 0.5rem;
+}
+
+.visited .visited__text {
     color: #b4005a;
 }
 
@@ -42,7 +65,18 @@
     margin-left: 45%;
 }
 
-.task3__link {
+.task3__list {
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 1rem;
+}
+
+.task3__item {
+    list-style: none;
+    margin-bottom: 0.5em;
+}
+
+.task3__item-link {
     cursor: pointer;
     position: relative;
     font-weight: bold;
@@ -50,34 +84,23 @@
     text-decoration: none;
 }
 
-.task3__list li {
-    list-style: none;
-}
-
-.task3__link::before {
+.task3__item-link::before {
     content: "🌐";
-    margin-right: 5px;
+    margin-right: 0.5rem;
     display: inline-block;
     font-size: 0.9em;
     color: #800080;
 }
 
-.logo {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    background-color: #007BFF;
-}
-
-.logo::before {
+.task3__list::after {
     content: "";
+    display: block;
+    width: 100%;
+    height: 150px;
+    margin-top: 1.25rem;
+    background-color: #007BFF;
     background-image: url('https://ssau.ru/i/logo/logo-white-ru.svg');
-    background-size: contain;
     background-repeat: no-repeat;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 45%;
-    height: 80%;
-    transform: translate(-50%, -50%);
+    background-position: center;
+    background-size: contain;
 }
