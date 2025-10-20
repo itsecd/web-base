@@ -105,6 +105,11 @@ a:hover {
     font-style: italic;
 }
 
+.text-accent3 {
+    font-size: 19;
+    font-style: italic;
+}
+
 .text-accent-low {
     font-size: 20;
     color: hsl(0, 0%, 35%);;
