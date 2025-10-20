@@ -41,6 +41,7 @@ html {
     font-size: large;
     font-weight: bold;
     background-color: oklch(0.6 0.11 268);
+    color: white;
 }
 .calculator__button:active {
     background-color:oklch(0.7 0.11 268);
@@ -65,9 +66,13 @@ html {
 }
 
 .toast-list__achievement-toast {
+    position: relative;
     animation: toast-animation ease-in-out 5s;
     display: flex;
+    flex-direction: column;
+    text-align: center;
     justify-content: center;
+    line-height: 5px;
     align-items: center;
     font-style: italic;
     width: 300px;
@@ -77,9 +82,24 @@ html {
     box-shadow: 0px 1px 1px hsla(0, 0%, 0%, 0.07), 0px 3px 3px hsla(0, 0%, 0%, 0.10);
 }
 
+.achievement-toast__string:first-child{
+    font-size: larger;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 0%;
+}
+
+.achievement-toast__string {
+    font-size: medium;
+    line-height: 5px;
+}
+
+
+
+
 @keyframes toast-animation {
-    from { opacity: 0; background: hsla(0, 0%, 100%, 0%);}
-    20% { opacity: 1; background: hsl(0, 0%, 100%, 100%); }
+    from { opacity: 0; background: hsla(0, 0%, 100%, 0%); transform: translateX(-15px)}
+    20% { opacity: 1; background: hsl(0, 0%, 100%, 100%); transform: translateX(0px)}
     70% { opacity: 1; background: hsl(0, 0%, 100%, 100%); }
     to {opacity: 0; background: hsla(0, 0%, 100%, 0%); }
 }
