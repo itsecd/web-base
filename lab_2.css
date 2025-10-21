@@ -1,0 +1,65 @@
+.task-1>ul>li {
+    transition: 0.1s;
+    cursor: default;
+}
+
+
+.task-1>ul>li:hover {
+    transform: 3;
+    color: darkblue;
+}
+
+
+
+.task-2 {
+    width: 80px;
+    margin: 0 auto;
+}
+
+.parent-1>.parent-1-child {
+    color: red;
+}
+
+.parent-2 {
+    color: orange;
+}
+
+.parent-2>.parent-2-child {
+    color: #b4005a;
+    border: 2px dotted orange;
+}
+
+.parent-2+.parent-3 {
+    color: green;
+}
+
+.parent-3>.parent-2-child {
+    color: purple;
+}
+
+.task-3 {
+    padding-left: 50px;
+}
+
+.task-3>ul {
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+.task-3>ul::after {
+    content: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+}
+
+.task-3>ul li::before {
+    content: "🌐";
+    color: blueviolet;
+    margin-right: 10px;
+}
+
+.link {
+    list-style-type: none;
+}
+
+a {
+    color: #8A2BE2;
+}
