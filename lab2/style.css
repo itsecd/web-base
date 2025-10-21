@@ -1,0 +1,150 @@
+﻿
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background: #f5f5f5;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    color: #111;
+    line-height: 1.6;
+}
+
+
+.page {
+    max-width: 900px;
+    margin: 32px auto 56px;
+    padding: 0 16px;
+    text-align: center;
+}
+
+.page__title {
+    margin-bottom: 32px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.task {
+    margin: 48px 0;
+}
+
+.task__title {
+    margin-bottom: 24px;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center; 
+}
+
+.sports-list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 360px;
+    text-align: left;
+}
+
+.sports-list__item {
+    padding: 8px 12px;
+    margin: 6px 0;
+    border-radius: 8px;
+    transition: color .35s ease, background-color .35s ease;
+    color: #111;
+}
+
+    .sports-list__item:hover {
+        color: #e2155c;
+        background-color: #ffe6ef;
+    }
+.parent {
+    width: 260px;
+    margin: 22px auto;
+    text-align: left;
+}
+
+.parent__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.parent__child {
+    margin: 4px 0;
+    padding: 0;
+    border: 0;
+}
+
+.parent_1 .parent__child {
+    color: red;
+}
+
+.parent_2 {
+    color: orange;
+}
+
+    .parent_2 .parent__child {
+        color: #b4005a;
+        border: 2px dotted orange;
+        display: block;
+        margin: 0px 0;
+        padding: 12px 0;
+        width: 110px;
+        text-align: left;
+    }
+
+    .parent_2 ~ .parent_3,
+    .parent_2 ~ .parent_3 .parent__child {
+        color: green;
+    }
+
+        .parent_2 ~ .parent_3 .parent__child_guest {
+            color: purple;
+            border: none;
+        }
+
+.languages {
+    text-align: left;
+    max-width: 740px;
+    margin: 0 auto;
+}
+
+.languages__lead {
+    margin-bottom: 12px;
+}
+
+.languages__list {
+    margin: 0 auto;
+    padding-left: 18px;
+}
+
+.languages__item {
+    margin: 6px 0;
+}
+
+.languages__link {
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+    .languages__link::after {
+        content: " 🌐";
+        font-weight: 400;
+        font-size: .95em;
+    }
+
+.languages__list::after {
+    content: "";
+    display: block;
+    width: 220px;
+    height: 80px;
+    margin: 28px auto 0;
+    background-image: url("images/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
