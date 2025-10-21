@@ -160,3 +160,51 @@ body {
     color: #666;
     line-height: 1.5;
 }
+
+.certificate-card__title{
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-family: 'Post No Bills', sans-serif; 
+    font-weight: 800;
+    text-align: center;
+}
+
+.certificates-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+.certificate-card {
+  width: 500px;
+  height: 350px;
+  background: #262626;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+
+.certificate-card:hover {
+  transform: scale(1.1);
+}
+
+
+.certificate-card img {
+  width: 90%;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.item__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
