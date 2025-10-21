@@ -1,0 +1,105 @@
+﻿body {
+    font-family: Gill Sans, sans-serif;
+}
+p {
+    margin: 0;
+}
+.header {
+    text-align: center;
+    font-size: 30px;
+}
+.text-block {
+    text-align: left;
+    color: #40EA53;
+    background-color: #625620;
+    width: 600px;
+    padding: 30px;
+}
+.image-block {
+    position: relative;
+    top: 20px;
+    padding: 20px;
+}
+.image-bg {
+    position: relative;
+    width: 600px;
+}
+.image-fg {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    height: 300px;
+}
+.traffic-light {
+    width: 300px;
+    height: 550px;
+    background-color: #1e1e1e;
+    border: 30px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+.light {
+    width:150px;
+    height:150px;
+    border: 10px solid #4b4d4b;
+    border-radius: 50%;
+}
+.red {
+    background-color: red
+}
+.yellow {
+    background-color: yellow
+}
+.green {
+    background-color: green
+}
+.maze {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+}
+.cell-1 {
+    border-right: 5px solid black;
+    background-color: gray;
+    border-left: 5px solid black;
+}
+.cell-2 {
+    border-top: 5px solid black;
+    background-color: gray;
+}
+.cell-3 {
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    background-color: gray;
+}
+.cell-4 {
+    background-color: gray;
+    border-left: 5px solid black;
+}
+.cell-5 {
+    background-color: gray;
+}
+.cell-6 {
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    background-color: gray;
+}
+.cell-7 {
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
+    background-color: gray;
+}
+.cell-8 {
+    border-right: 5px solid black;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    background-color: gray;
+}
+.cell-9 {
+    border-right: 5px solid black;
+    background-color: gray;
+}
