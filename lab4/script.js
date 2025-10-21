@@ -124,12 +124,7 @@ function create_toast(text) {
     const toast = document.createElement("div");
     toast.className = "toast-list__achievement-toast";
     if (Array.isArray(text)) {
-        for (let string of text) {
-            const p = document.createElement("p")
-            p.textContent = string;
-            p.className = "achievement-toast__string";
-            toast.appendChild(p);
-        }
+        text.forEach((string) => {const p = document.createElement("p");  p.textContent = string; p.className = "achievement-toast__string"; toast.appendChild(p);});
     }
     else {
         toast.textContent = text;

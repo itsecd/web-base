@@ -67,7 +67,7 @@ a:hover {
     transition-duration: 0.5s;
 }
 
-.profile__pfp__image{
+.pfp__image{
     object-fit: auto;
     width: 120%;
     height: 120%;
@@ -87,7 +87,7 @@ a:hover {
     display: inline-block;
 }
 
-.profile__text-container__string {
+.text-container__string {
     font-size: 20;
     line-height: 0.75;
     overflow-wrap: unset;
@@ -138,7 +138,7 @@ a:hover {
     margin-bottom: 10px;
 }
 
-.hard-skills__grid__panel {
+.grid__panel {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -148,11 +148,11 @@ a:hover {
     box-shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15);
 }
 
-.hard-skills__grid__panel__title {
+.panel__title {
     margin-bottom: 0px;
 }
 
-.hard-skills__click-image__image {
+.click-image__image {
     cursor: pointer;
 }
 
@@ -160,13 +160,13 @@ a:hover {
     display: none;
 }
 
-.hard-skills__click-image__checkbox + .hard-skills__click-image__btn > .hard-skills__click-image__image {
+.click-image__checkbox + .click-image__btn > .click-image__image {
     animation: click1;
     animation-timing-function: ease-in-out;
     animation-duration: 0.25s;
 }
 
-.hard-skills__click-image__checkbox:not(:checked) + .hard-skills__click-image__btn > .hard-skills__click-image__image { /* Теперь доминошка подпрыгивает при каждой перезагрузке страницы */
+.click-image__checkbox:not(:checked) + .click-image__btn > .click-image__image { /* Теперь доминошка подпрыгивает при каждой перезагрузке страницы */
     animation: click2; /* Но меня такой побочный эффект вполне устраивает :) */
     animation-timing-function: ease-in-out;
     animation-duration: 0.25s;
