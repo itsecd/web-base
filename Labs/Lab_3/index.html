@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Lab 3</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="background__image background__image_type_1"></div>
+      <div class="background__image background__image_type_2"></div>
+      <div class="background__image background__image_type_3"></div>
+    </div>
+    <section class="text__container">
+      <div class="text__header">
+        <img src="pics/64727177.png" alt="Фото" class="text__header__image" />
+        <div class="text__header__fio">
+          <h1>Пикалов Никита Олегович</h1>
+        </div>
+      </div>
+      <div class="text">
+        <p class="text__paragraph"><b>Дата рождения:</b> 7.05.2006</p>
+        <p class="text__paragraph">
+          <b>Любимые увлечения:</b> Linux, одноплатники Raspberry Pi,
+          соревновательные шутеры, jrpg, слешеры, контейнерезация Docker,
+          Kubernetes
+        </p>
+        <p class="text__paragraph">
+          <b>Soft-скилы: </b>сильно развитая эмпатия, умение договариваться и
+          ладить с людьми, гуманность, тактичность
+        </p>
+        <p class="text__paragraph">
+          <b>Hard-скилы: </b>
+        </p>
+
+        <p class="text__paragraph">
+          Linux, Docker, Kubernetes, Deckhouse, ArgoCD, GitlabCI, Keycloak,
+          Grafana, Helm, Prometheus, Alertmanager, Nginx
+        </p>
+        <p class="text__paragraph">
+          Vault + YandexKMS, YandexCloud(DNS, KMS, Service Account), Appache
+          Superset, Clickhouse, WireShark, Ansible
+        </p>
+        <p class="text__paragraph">
+          DNS, VPN, Docker-compose, TCP/IP, Firewall, Телекоммуникации
+        </p>
+        <p class="text__paragraph">
+          Английский язык - чтение документации, базовое общение
+        </p>
+        <p class="text__paragraph">
+          <b>GitHub:</b> <a href="https://github.com/EnrayMaker">EnrayMaker</a>
+        </p>
+        <p class="text__paragraph"><b>О себе:</b></p>
+        <p class="text__paragraph">
+          Работаю DevOps инженером, налаживаю CI/CD процессы и запуск приложений
+          в контейнерных средах. Люблю играть в Overwatch, Factorio и сюжетные
+          игры.
+        </p>
+        <div class="scroll-to-projects">
+          <button class="projects-btn" onclick="scrollToProjects()">
+            К проектам ↓
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="projects">
+      <div class="projects-container">
+        <h2>Мои проекты</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>Лабораторная работа 1</h3>
+            <p>Базовая HTML страница</p>
+            <a href="../Lab_1/index.html" class="project-link"
+              >Посмотреть проект →</a
+            >
+          </div>
+          <div class="project-card">
+            <h3>Лабораторная работа 2</h3>
+            <p>Форма с различными элементами</p>
+            <a href="../Lab_2/index.html" class="project-link"
+              >Посмотреть проект →</a
+            >
+          </div>
+          <div class="project-card">
+            <h3>Лабораторная работа 4</h3>
+            <p>Интерактивный калькулятор</p>
+            <a href="../Lab_4/index.html" class="project-link"
+              >Посмотреть проект →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      function scrollToProjects() {
+        const projectsSection = document.querySelector(".projects");
+        if (projectsSection) {
+          projectsSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        } else {
+          console.error("Секция проектов не найдена");
+        }
+      }
+    </script>
+  </body>
+</html>
