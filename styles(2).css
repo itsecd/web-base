@@ -13,28 +13,11 @@
     margin-bottom: 10px;
 }
 
-.header__subtitle {
-    color: #444;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-    text-align: center;
-}
-
 /* Общие стили для заданий */
 .task {
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
-}
-
-.task__heading {
-    color: #7DE0EA;
-    margin-bottom: 15px;
-}
-
-.task__paragraph {
-    margin-bottom: 15px;
-    line-height: 1.6;
 }
 
 /* Задание 1: Стилизация текста */
@@ -47,12 +30,22 @@
     margin-right: auto;
 }
 
-.task__content--text {
+.task__content {
     text-align: center;
 }
 
+.content__heading {
+    color: #7DE0EA;
+    margin-bottom: 15px;
+}
+
+.content__paragraph {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
 /* Задание 2: Позиционирование изображений */
-.container__images-stack {
+.task__images-stack {
     position: relative;
     width: 300px;
     height: 300px;
@@ -78,7 +71,7 @@
 }
 
 /* Задание 3: Светофор */
-.container__traffic-light {
+.task__traffic-light {
     width: 120px;
     background-color: #333;
     border-radius: 10px;
@@ -152,7 +145,7 @@
         padding: 15px;
     }
     
-    .container__images-stack {
+    .task__images-stack {
         width: 250px;
         height: 250px;
     }
