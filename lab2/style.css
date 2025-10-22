@@ -1,0 +1,94 @@
+﻿body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  padding: 0;
+}
+
+section {
+  margin-bottom: 45px;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+
+.movies li {
+  transition: color 0.5s ease;
+  cursor: pointer;
+  padding: 7px;
+  margin: 7px 0;
+}
+
+.movies li:hover {
+  color: #8000ff;
+}
+
+.parent {
+  margin: 25px 0;
+  padding: 20px;
+  border: 3px solid #ccc;
+}
+
+.parent-1 .child {
+  color: red;
+}
+
+.parent-2 {
+  color: orange;
+}
+
+.parent-2 .child {
+  color: #b4005a;
+  border: 2px dashed orange;
+}
+
+.parent-2 ~ .parent-3 {
+  color: green;
+}
+
+.parent-2 ~ .parent-3 .child {
+  color: green;
+}
+
+.parent-3:not(.parent-2 ~ .parent-3) {
+  color: initial;
+}
+
+.parent-3:not(.parent-2 ~ .parent-3) .child {
+  color: initial;
+}
+
+.parent-3 .guest {
+  color: purple !important;
+  border: none !important;
+}
+
+.programming-languages a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #1b1b1b;
+  position: relative;
+}
+
+.programming-languages a:after {
+  content: "🌐";
+  font-size: 1em;
+}
+
+.programming-languages a:hover {
+  color: #0091ff;
+}
+
+.programming-languages:after {
+  content: "";
+  display: block;
+  margin-top: 20px;
+  padding: 25px 25px 25px 25px;
+  background-color: #1e2963;
+  border-left: 5px solid #0056b3;
+  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  background-size: 175px 60px;
+  border-radius: 7px;
+}
