@@ -106,12 +106,11 @@ h3 {
   color: var(--c-green);
 }
 
-.family__child--guest-of-3 {
-  color: var(--c-purple);
-  border-style: solid;
-  border-color: #ddd;
+.family__child--purple {
+  color: var(--c-purple) !important;
+  border: 1px solid #ddd !important;
+  border-style: solid !important;
 }
-
 
 .article__text {
   margin: 0 0 16px;
@@ -151,6 +150,14 @@ h3 {
 }
 
 /* Логотип через псевдоэлемент */
+.langs__list {
+  list-style: disc inside;
+  padding: 0;
+  margin: 0 0 16px;
+  position: relative;
+  padding-bottom: 90px;
+}
+
 .langs__list::after {
   content: "";
   position: absolute;
@@ -158,9 +165,12 @@ h3 {
   bottom: 0;
   width: 260px;
   height: 90px;
-  background: url("logo-white-ru.svg") no-repeat center / contain,
+  background:
+    url("https://ssau.ru/i/logo/logo-white-ru.svg") no-repeat center / contain,
     linear-gradient(#1b1b1b, #1b1b1b);
   border-radius: 8px;
+  outline: 1px solid rgba(255,255,255,0.6);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .note {
