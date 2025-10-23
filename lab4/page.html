@@ -1,0 +1,31 @@
+<html lang="ru"> 
+    <head>
+        <meta charset="UTF-8">
+        <link href="styles.css" rel="stylesheet" type="text/css"/>
+        <script src="script.js"></script>
+        <title>оч. крутой калькулятор</title>
+    </head>
+    <body>
+        <div class="calculator">
+            <p class="calculator__title">Калькулятор!</p>
+
+            <div class="calculator__inputs">
+                <input type="text", class="inputs__operand", id="operand1"></input>
+                <!-- <label for="op-list", class="inputs__op-lable"></label> -->
+                <select class="inputs__op-select", id="op-list">
+                    <option class="op-select__option", value="">--Выберите оператор--</option>
+                    <option class="op-select__option", value="+">+</option>
+                    <option class="op-select__option", value="-">-</option>
+                    <option class="op-select__option", value="*">*</option>
+                    <option class="op-select__option", value="/">/</option>
+                    <option class="op-select__option", value="^", id="locked1">^</option>
+                    <option class="op-select__option", value="log", id="locked2">log</option>
+                </select>
+                <input type="text", class="inputs__operand", id="operand2"></input>
+            </div>
+            <div class="calculator__output", id="output">Результат:</div>
+            <input type="button", value="ПУСК", class="calculator__button", onclick="calculate()"></input>
+        </div>
+        <div class="toast-list", id="toast-list"></div>
+    </body>
+</html>
