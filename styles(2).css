@@ -107,7 +107,6 @@
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
     gap: 0;
-    border: 3px solid #333;
     background-color: #f8f8f8;
 }
 
