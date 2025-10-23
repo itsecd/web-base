@@ -8,22 +8,22 @@
     border-radius: 5px;
 }
 
-.cv__left{
-    background: papayawhip;
-    color: white;
+.cv__item{
     padding: 30px;
     margin: 5px;
     border-radius: 6px;
+}
+
+.cv__item--left{
+    background: papayawhip;
+    color: white;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.cv__right {
+.cv__item--right {
     background: #fff;
-    padding: 30px;
-    margin: 5px;
-    border-radius: 6px;
 }
 
 .profile{
@@ -107,19 +107,19 @@
     width: 120px;
     color:black;
 }
-.language__dots{
+.dots{
     display: flex;
     gap: 6px;
 }
 
-.language__dot{
+.dots__dot{
     width: 8px;
     height: 8px;
     border-radius: 50%;
     background:rgb(255,255,255,0.6);
 }
 
-.language__dot--full{
+.dots__dot--full{
     background: gray;
 }
 
@@ -143,4 +143,15 @@
 
 .info-card__text {
     font-size: 20px;
+}
+
+.info-card__list{
+    list-style: disc inside;
+    margin: 0;
+    padding: 0;
+}
+
+.info-card__list-item{
+    font-size: 20px;
+    margin: 4px 0;
 }
