@@ -11,20 +11,20 @@ body {
     padding: 10px;
 }
 
-.color_play {
+.color-play {
     width: 70px;
     position: relative;
     margin: auto;
     white-space: nowrap 
 }
 
-.color_play li{
+.color-play li{
     transition: color 0.5s ease;
     padding: 5px;
     margin: auto;
 }
 
-.color_play li:hover{
+.color-play li:hover{
     color: blueviolet;
 }
 
@@ -39,21 +39,29 @@ section{
     text-align: center;
 }
 
-.parent_1{
+.parents-and-childrn{
     text-align: center;
 }
 
-.parent_1 .child{
+.parent-1{
+    text-align: center;
+}
+
+.parent-1>.child-1,
+.parent-1>.child-2, 
+.parent-1>.child-3, 
+.parent-1>.child-4{
     color: red;
     text-align: center;
 }
 
-.parent_2{
+.parent-2{
     color: orange;
     text-align: center;
 }
 
-.parent_2 .child{
+.parent-2>.child-2, 
+.parent-2>.child-1{
     display: block;
     color: purple;
     border: medium dashed orange;
@@ -63,40 +71,50 @@ section{
     text-align: center;
 }
 
-.parent_3_1{
+.parent-3:first-of-type {
+    text-align: center;
+    color: black;
+}
+
+.parent-3:first-of-type>.child-1,
+.parent-3:first-of-type>.child-2{
     color: black;
     text-align: center;
 }
 
-.parent_3{
+.parent-3:last-of-type {
+    color: green;
+    text-align: center;
+}
+
+.parent-3:last-of-type> .child-1,
+.parent-3:last-of-type> .child-2{
     color:green;
     text-align: center;
 }
 
-.parent_3 .child{
+.parent-3:last-of-type> .child-2:last-child,
+.parent-2~ .parent-3 .child-2:last-child {
     text-align: center;
-    color: green;
-}
-
-#special_color{
     color: purple;
+    border: none;
 }
 
-.language-programm a {
+.language-list a {
     text-decoration: none;
     font-weight: bold;
     color: #000000;
 }
 
-.language-programm a::after {
+.language-list a::after {
     content: "🌐";
 }
 
-.language-programm a:hover {
+.language-list a:hover {
     color: blue;
 }
 
-.language-programm:after {
+.language-list:after {
     content: "";
     display: block;
     width: 50%;
