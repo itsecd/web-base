@@ -1,0 +1,104 @@
+body {
+  background: #f0f9ff;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  background: #fff;
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #5b058a;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #8207c5;
+}
+
+h2 {
+  border-left: 4px solid #a25dd8;
+  padding-left: 15px;
+  background: #f0e6fa;
+  color: #6d09aa;
+  border-radius: 6px;
+}
+
+.tasks {
+  margin-bottom: 40px;
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.music-genres__list li {
+  color: #111;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.music-genres__list li:hover {
+  color: #b87de5;
+}
+
+/* === Задание 2: наследование и приоритеты === */
+.parent-1 .child {
+  color: red;
+}
+
+.parent-2 {
+  color: orange;
+}
+
+.parent-2 .child {
+  color: #b4005a;
+  border: 2px dashed orange;
+  max-width: 60px;
+  margin: 3px 0;
+  padding: 2px;
+}
+
+.parent-2 ~ .parent-3,
+.parent-2 ~ .parent-3 .child {
+  color: green;
+}
+
+.guest {
+  border: none !important;
+  color: purple !important;
+}
+
+.programming-languages a {
+  text-decoration: none !important;
+  color: black;
+  font-weight: bold;
+}
+
+.programming-desc {
+  line-height: 1.5;
+}
+
+.programming-languages a:after {
+  content: "🌐";
+  font-size: 0.9em;
+}
+
+.programming-desc:after {
+  content: "";
+  display: block;
+  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  background-position: center;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-color: #2b80e0;
+  padding: 20px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
