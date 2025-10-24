@@ -1,0 +1,38 @@
+p
+{
+	width: 850px;
+}
+a
+{
+	font-weight: bold;
+	text-decoration: none;
+	color: inherit;
+}
+
+a::after
+{
+	content: " 🌍";
+	font-size: 0.8em;
+	vertical-align: middle;
+}
+
+
+.app-section::after
+{
+	content: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+	display: block;
+	width: 370px;
+	height: auto;
+	background-color: #2780E3;
+}
+
+ul
+{
+	list-style-type: disc;
+	padding-left: 30px;
+}
+
+li
+{
+	margin-bottom: 8px;
+}

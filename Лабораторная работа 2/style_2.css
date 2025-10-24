@@ -1,0 +1,53 @@
+div[class^="parent-"]
+{
+    max-width: 100px; 
+}
+
+h2
+{
+	margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.child
+{
+    padding-left: 0px;
+    font-size: 1.1em;
+}
+
+.parent-1 .child
+{
+    color: red;
+}
+
+.parent-2 h2
+{
+    color: orange;
+}
+.parent-2 .child
+{
+    color: #b4005a;
+    border: 1px dotted orange;
+    margin: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.parent-2 + .parent-3 h2
+{
+    color: green;
+}
+
+.parent-2 + .parent-3 .child
+{
+    color: green;
+}
+
+.parent-3 .child + .parent-2 .child
+{
+    border: none;
+    color: purple;
+	padding: 0px;
+}
+
