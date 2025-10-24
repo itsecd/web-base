@@ -1,0 +1,9 @@
+.unordered-list-content-block li {
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.5s ease-in-out;
+}
+
+.unordered-list-content-block li:hover {
+    color: blueviolet;
+}
