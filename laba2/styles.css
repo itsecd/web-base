@@ -1,0 +1,128 @@
+/*  ЗАДАНИЕ 1  */
+.programming-list {
+    list-style: none;
+    padding: 0;
+}
+
+.programming-list__item {
+    margin: 10px 0;
+    padding: 10px;
+    transition: color 0.5s ease;
+}
+
+.programming-list__item:hover {
+    color: #ff6b6b;
+}
+
+/*  ЗАДАНИЕ 2  */
+.family {
+    margin: 20px 0;
+}
+
+/* 2.1 Все дети первого имеют цвет red */
+.family__parent--first .family__child {
+    color: red;
+}
+
+/* 2.2 Все дети второго имеют цвет #b4005a, родитель - orange, границы пунктирные orange */
+.family__parent--second {
+    color: orange;
+    border: 2px dashed orange;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.family__parent--second .family__child {
+    color: #b4005a;
+    border: 1px dashed orange;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+/* 2.3 Третий родитель и его дети цвета green, но только если они идут после вторых */
+.family__parent--second ~ .family__parent--third {
+    color: green;
+}
+
+.family__parent--second ~ .family__parent--third .family__child {
+    color: green;
+}
+
+/* 2.3 Если они идут между первыми и вторыми, то они стандартного цвета */
+.family__parent--first ~ .family__parent--third:not(.family__parent--second ~ .family__parent--third) {
+    color: initial;
+}
+
+.family__parent--first ~ .family__parent--third:not(.family__parent--second ~ .family__parent--third) .family__child {
+    color: initial;
+}
+
+/* 2.4 Дети второго приходят в гости к третьему */
+.family__child--guest {
+    border: none;
+    color: purple;
+}
+
+/*ЗАДАНИЕ 3  */
+.article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.article__title {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.article__text {
+    margin-bottom: 20px;
+}
+
+.languages-list {
+    list-style: none;
+    padding: 0;
+}
+
+.languages-list__item {
+    margin: 15px 0;
+}
+
+.languages-list__link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #2c3e50;
+    position: relative;
+    padding-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.languages-list__link:hover {
+    color: #3498db;
+}
+
+/* Псевдоэлемент для ссылок */
+.languages-list__link::before {
+    content: "🌐";
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-right: 8px;
+}
+
+
+.languages-list::after {
+    content: "";
+    display: block;
+    margin-top: 30px;
+    padding: 40px 0;
+    background-image: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: #005baa;
+    border-radius: 8px;
+    text-align: center;
+    min-height: 60px;
+}
