@@ -50,9 +50,9 @@
   border: none;
 }
 
-.family__parent--second + .family__parent--third,
-.family__parent--second + .family__parent--third .family__child {
-  color: green;
+.family__parent--second ~ .family__parent--third,
+.family__parent--second ~ .family__parent--third .family__child {
+    color: green;
 }
 
 .languages {
@@ -74,13 +74,13 @@
 }
 
 .languages__list::after {
-  content: "";
-  display: block;
-  width: 100px;                
-  height: 100px;              
-  margin: 15px auto 0;        
-  background-image: url("logo.svg"); 
-  background-size: contain;  
-  background-repeat: no-repeat;
-  background-position: center;
+    content: "";
+    display: block;
+    width: auto;
+    height: 100px;
+    background-color: #2780E3;
+    margin: 15px auto 0;
+    background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
