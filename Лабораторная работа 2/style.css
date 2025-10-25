@@ -1,51 +1,77 @@
 .main-block {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
 }
 
 .unordered-list-content-block li {
-    font-size: 1.5em;
-    cursor: pointer;
-    transition: color 0.5s ease-in-out;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: color 0.5s ease-in-out;
 }
 
 .unordered-list-content-block li:hover {
-    color: blueviolet;
+  color: blueviolet;
 }
 
 .child-parents-block__parent {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .child-parents-block__child {
-    padding: 10px;
+  padding: 10px;
 }
 
 .child-parents-block__parent_1 .child-parents-block__child {
-    color: red;
+  color: red;
 }
 
-.child-parents-block__parent_2 h3{
-    color: orange;
+.child-parents-block__parent_2 h3 {
+  color: orange;
 }
 
 .child-parents-block__parent_2 .child-parents-block__child {
-    color: #b4005a;
-    border: 2px dotted orange;
+  color: #b4005a;
+  border: 2px dotted orange;
 }
 
-.child-parents-block__parent_2 ~ .child-parents-block__parent_3 h3 {
-    color: green;
+.child-parents-block__parent_2 ~ .child-parents-block__parent_3 {
+  color: green;
 }
 
-.child-parents-block__parent_2 ~ .child-parents-block__parent_3 .child-parents-block__child {
-    color: green;
+.child-parents-block__parent_3 .child-parents-block__child_visiting {
+  color: purple;
 }
 
-.child-parents-block__parent_3 .child-parents-block__child.child-parents-block__child_visiting {
-    color: purple;
+.programming-languages-block {
+  width: 50%;
+}
+
+.programming-languages-block a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.programming-languages-block a::after {
+  content: " 🌐";
+  font-weight: normal;
+}
+
+.programming-languages-block::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 125px;
+  border: 10px solid black;
+  margin-top: 20px;
+  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  background-color: black;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
 }
