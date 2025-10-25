@@ -37,5 +37,36 @@ h1 {
 /* Стили для родителей и детей */
 
 .parent{
-    color:black
+    color:black;
+}
+
+
+/* Стили для текста */
+.hyperlink{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hyperlink:after{
+    white-space:nowrap;
+}
+
+.hyperlink:before{
+    content: "🌐";
+}
+
+.language-list:after{
+    content:"";
+    width: 100px;
+    height: 100px;
+    display:inline-block;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 15px;
+    background-image: url('../images/Neom_Samara_01-1.jpg');
+}
+
+language-list:marker{
+    color:blue;
 }
