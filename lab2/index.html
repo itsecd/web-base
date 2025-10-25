@@ -15,99 +15,90 @@
         <h3>Задание 1</h3>
         <p>Популярные виды спорта:</p>
         <ul class="sports-list">
-          <li>Футбол</li>
-          <li>Баскетбол</li>
-          <li>Теннис</li>
-          <li>Плавание</li>
-          <li>Бег</li>
+          <li class="sports-list__item">Футбол</li>
+          <li class="sports-list__item">Баскетбол</li>
+          <li class="sports-list__item">Теннис</li>
+          <li class="sports-list__item">Плавание</li>
+          <li class="sports-list__item">Бег</li>
         </ul>
       </section>
 
       <section>
         <h3>Задание 2</h3>
-        <div class="parent" id="parent-1">
-          <h4>Parent 1</h4>
-          <div class="child">child 1</div>
-          <div class="child">child 2</div>
-          <div class="child">child 3</div>
-          <div class="child">child 4</div>
+
+        <div class="parent parent_1">
+          <h4 class="parent__title">Parent 1</h4>
+          <div class="parent__child parent__child_origin_parent-1">child 1</div>
+          <div class="parent__child parent__child_origin_parent-1">child 2</div>
+          <div class="parent__child parent__child_origin_parent-1">child 3</div>
+          <div class="parent__child parent__child_origin_parent-1">child 4</div>
         </div>
 
-        <div class="parent" id="parent-3">
-          <h4>Parent 3</h4>
-          <div class="child">child 1</div>
-          <div class="child">child 2</div>
+        <div class="parent parent_2">
+          <h4 class="parent__title">Parent 2</h4>
+          <div class="parent__child parent__child_origin_parent-2">child 1</div>
+          <div class="parent__child parent__child_origin_parent-2">child 2</div>
         </div>
 
-        <div class="parent" id="parent-2">
-          <h4>Parent 2</h4>
-          <div class="child">child 1</div>
-          <div class="child">child 2</div>
-        </div>
-
-        <div class="parent" id="parent-3">
-          <h4>Parent 3</h4>
-          <div class="child">child 1</div>
-          <div class="child">child 2</div>
-          <div id="parent-2">
-            <div class="child">child 2</div>
-          </div>
+        <div class="parent parent_3">
+          <h4 class="parent__title">Parent 3</h4>
+          <div class="parent__child parent__child_origin_parent-3">child 1</div>
+          <div class="parent__child parent__child_origin_parent-3">child 2</div>
+          <div class="parent__child parent__child_origin_parent-2">child 2</div>
         </div>
       </section>
 
-      <section class="programming-text">
+      <section class="programming">
         <h3>Задание 3</h3>
-        <p>
+        <p class="programming__text">
           Языки программирования — это инструменты, с помощью которых
           разработчики создают программное обеспечение, веб-приложения, игры,
           алгоритмы и многое другое. Каждый язык имеет свои особенности,
-          синтаксис и сферу применения. Ниже представлены некоторые из наиболее
-          известных языков:
+          синтаксис и сферу применения.
         </p>
 
-        <p>
-          <a href="#">Python</a> – высокоуровневый язык с простым синтаксисом,
-          популярный в Data Science, веб-разработке и автоматизации.
-        </p>
-        <p>
-          <a href="#">JavaScript</a> – основной язык для фронтенд-разработки,
-          работает в браузерах и на сервере (Node.js).
-        </p>
-        <p>
-          <a href="#">Java</a> – объектно-ориентированный язык, широко
-          используется в корпоративных приложениях и Android-разработке.
-        </p>
-        <p>
-          <a href="#">C++</a> – мощный язык для системного программирования, игр
-          и высокопроизводительных приложений.
-        </p>
-        <p>
-          <a href="#">C#</a> – язык от Microsoft, применяется в разработке под
-          Windows, играх (Unity) и веб-приложениях.
-        </p>
-        <p>
-          <a href="#">Go (Golang)</a> – созданный Google, язык для
-          высоконагруженных сетевых сервисов и облачных технологий.
-        </p>
-        <p>
-          <a href="#">Ruby</a> – известен благодаря фреймворку Ruby on Rails для
-          веб-разработки.
-        </p>
-        <p>
-          <a href="#">Swift</a> – язык Apple для разработки под iOS и macOS.
-        </p>
-        <p>
-          <a href="#">Kotlin</a> – современный язык, официально поддерживаемый
-          для Android-разработки.
-        </p>
-        <p>
-          <a href="#">Rust</a> – язык системного программирования с акцентом на
-          безопасность и производительность.
-        </p>
+        <ul class="programming__list">
+          <li class="programming__item">
+            <a href="#">Python</a> – язык с простым синтаксисом, популярен в
+            Data Science, веб-разработке и автоматизации.
+          </li>
+          <li class="programming__item">
+            <a href="#">JavaScript</a> – основной язык фронтенда, работает и на
+            сервере (Node.js).
+          </li>
+          <li class="programming__item">
+            <a href="#">Java</a> – объектно-ориентированный язык для
+            корпоративных приложений и Android.
+          </li>
+          <li class="programming__item">
+            <a href="#">C++</a> – мощный язык для системного программирования и
+            игр.
+          </li>
+          <li class="programming__item">
+            <a href="#">C#</a> – язык от Microsoft, используется в Unity и
+            веб-разработке.
+          </li>
+          <li class="programming__item">
+            <a href="#">Go (Golang)</a> – язык Google для сетевых и облачных
+            сервисов.
+          </li>
+          <li class="programming__item">
+            <a href="#">Ruby</a> – популярен благодаря фреймворку Ruby on Rails.
+          </li>
+          <li class="programming__item">
+            <a href="#">Swift</a> – язык Apple для iOS и macOS.
+          </li>
+          <li class="programming__item">
+            <a href="#">Kotlin</a> – современный язык для Android-разработки.
+          </li>
+          <li class="programming__item">
+            <a href="#">Rust</a> – язык с акцентом на безопасность и
+            производительность.
+          </li>
+        </ul>
 
-        <p>
-          Это лишь малая часть из множества существующих языков, и выбор зависит
-          от задач, которые нужно решить.
+        <p class="programming__note">
+          Это лишь малая часть языков, выбор зависит от задач.
         </p>
       </section>
     </div>

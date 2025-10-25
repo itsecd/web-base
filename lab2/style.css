@@ -18,13 +18,13 @@ body {
   padding: 0;
 }
 
-.sports-list li {
+.sports-list__item {
   margin: 10px 0;
   padding: 10px;
   transition: color 0.1s ease;
 }
 
-.sports-list li:hover {
+.sports-list__item:hover {
   color: #ff5722;
 }
 
@@ -32,73 +32,74 @@ body {
   margin: 20px 0;
   padding: 10px;
   border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-#parent-1 .child {
+.parent__title {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.parent_1 .parent__child_origin_parent-1 {
   color: red;
 }
 
-#parent-2 {
-  color: orange;
-}
-
-#parent-2 .child {
+.parent_2 .parent__child_origin_parent-2 {
   color: #b4005a;
   border: 1px dashed orange;
   padding: 5px;
   margin: 5px 0;
 }
 
-#parent-3:has(~ #parent-2) {
+.parent_3 .parent__child_origin_parent-3 {
   color: green;
 }
 
-#parent-3:has(~ #parent-2) .child {
-  color: green;
-}
-
-#parent-3 > #parent-2 {
-  color: inherit;
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-#parent-3 > #parent-2 .child {
+.parent_3 .parent__child_origin_parent-2 {
   color: purple;
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: inline;
 }
 
-.programming-text {
+.programming {
   line-height: 1.6;
   position: relative;
+  padding-bottom: 80px;
+  color: black;
+  border-radius: 8px;
+  padding: 20px;
 }
 
-.programming-text a {
+.programming__list {
+  list-style-type: disc;
+  padding-left: 25px;
+}
+
+.programming__item {
+  margin-bottom: 8px;
+}
+
+.programming a {
   font-weight: bold;
   text-decoration: none;
-  color: inherit;
+  color: #000;
   position: relative;
 }
 
-.programming-text a::after {
+.programming a::after {
   content: "🌐";
   margin-left: 5px;
   font-size: 0.8em;
 }
 
-.programming-text::after {
+.programming::after {
   content: "";
   display: block;
   width: 200px;
   height: 60px;
+  background-color: #2780e3;
   background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
   margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
+  border-radius: 8px;
 }
