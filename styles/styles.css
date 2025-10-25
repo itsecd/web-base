@@ -1,0 +1,41 @@
+h1 {
+    text-decoration: underline;
+}
+
+
+/* Стили для списка */
+
+.animated-list {
+    background-color: white;
+}
+
+.animated-list__item {
+    color: grey;
+    transition: color 700ms ease;
+}
+
+.animated-list__item_marvel:hover{
+    color:red; 
+}
+
+.animated-list__item_starwars:hover{
+    color:darkblue; 
+}
+
+.animated-list__item_harry:hover{
+    color:darkorchid; 
+}
+
+.animated-list__item_lotr:hover{
+    color:gold; 
+}
+
+.animated-list__item_bond:hover{
+    color:orange; 
+}
+
+/* Стили для родителей и детей */
+
+.parent{
+    color:black
+}
