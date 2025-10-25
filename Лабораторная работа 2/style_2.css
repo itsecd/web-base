@@ -1,53 +1,53 @@
-div[class^="parent-"]
+.parent
 {
-    max-width: 100px; 
+    max-width: 100px;
 }
 
-h2
+.parent__title
 {
-	margin-top: 40px;
+    margin-top: 40px;
     margin-bottom: 10px;
     font-size: 1.5em;
 }
 
-.child
+.parent__item
 {
     padding-left: 0px;
     font-size: 1.1em;
 }
 
-.parent-1 .child
+.parent--type-1 .parent__item
 {
     color: red;
 }
 
-.parent-2 h2
+.parent--type-2 .parent__title
 {
     color: orange;
 }
-.parent-2 .child
+
+.parent--type-2 .parent__item
 {
     color: #b4005a;
     border: 1px dotted orange;
     margin: 0;
-	padding-top: 15px;
-	padding-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-.parent-2 + .parent-3 h2
+.parent--type-2 + .parent--type-3 .parent__title
 {
     color: green;
 }
 
-.parent-2 + .parent-3 .child
+.parent--type-2 + .parent--type-3 .parent__item
 {
     color: green;
 }
 
-.parent-3 .child + .parent-2 .child
+.parent--type-3 .parent__item + .parent--type-2 .parent__item
 {
     border: none;
     color: purple;
-	padding: 0px;
+    padding: 0px;
 }
-

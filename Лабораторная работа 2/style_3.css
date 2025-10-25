@@ -1,38 +1,43 @@
-p
+.page-heading
 {
-	width: 850px;
-}
-a
-{
-	font-weight: bold;
-	text-decoration: none;
-	color: inherit;
+    font-size: 1.2em;
 }
 
-a::after
+.app-section__description
 {
-	content: " 🌍";
-	font-size: 0.8em;
-	vertical-align: middle;
+    width: 850px;
 }
 
+.app-section__list
+{
+    list-style-type: disc;
+    padding-left: 30px;
+}
+
+.app-section__item
+{
+    margin-bottom: 8px;
+}
+
+.app-section__link
+{
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+}
+
+.app-section__link::after
+{
+    content: " 🌍";
+    font-size: 0.8em;
+    vertical-align: middle;
+}
 
 .app-section::after
 {
-	content: url('https://ssau.ru/i/logo/logo-white-ru.svg');
-	display: block;
-	width: 370px;
-	height: auto;
-	background-color: #2780E3;
-}
-
-ul
-{
-	list-style-type: disc;
-	padding-left: 30px;
-}
-
-li
-{
-	margin-bottom: 8px;
+    content: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+    display: block;
+    width: 370px;
+    height: auto;
+    background-color: #2780E3;
 }

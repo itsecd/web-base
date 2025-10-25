@@ -5,35 +5,37 @@
     max-width: 500px;
 }
 
-h1
+.streaming-list
 {
-    color: #555;
-    text-align:left;
-    margin-bottom: 10px;
-	font-size: 1.2em;
-
-}
-
-.streaming-list {
     list-style: disc;
-    margin: 0; 
+    margin: 0;
     padding: 0;
     margin-left: 40px;
 }
 
-.streaming-list li {
+.streaming-list__title
+{
+    color: #555;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.streaming-list__item
+{
     font-size: 1.2em;
     padding: 15px 20px;
     margin-bottom: 10px;
     cursor: pointer;
     color: #555;
-    
-    transition: color 0.4s ease-in-out, 
-                background-color 0.4s ease-in-out, 
+
+    transition: color 0.4s ease-in-out,
+                background-color 0.4s ease-in-out,
                 transform 0.2s ease-out,
                 box-shadow 0.4s ease-in-out;
 }
 
-.streaming-list li:hover {
+.streaming-list__item:hover
+{
     color: #007bff;
 }
