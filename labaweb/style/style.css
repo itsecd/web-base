@@ -29,7 +29,7 @@ body {
   margin-top: -7px;
 }
 
-.popular-film-franchises li:hover {
+.popular-stream-services li:hover {
   color: #6a009e;
 }
 
@@ -101,3 +101,4 @@ body {
   margin-top: 7px;
   margin-bottom: -10px;
 }
+
