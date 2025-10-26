@@ -188,3 +188,65 @@ p {
     border: none;
     border-left: 3px solid purple;
 }
+.programming-languages {
+    background: linear-gradient(135deg, #fff 0%, #fff0f8 100%);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #ffb6e1;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+    .programming-languages::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 15px;
+        background: #ffe6f2;
+        border: 2px solid #ffb6e1;
+        border-bottom: none;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .programming-languages ul {
+        list-style-type: none;
+        margin: 25px 0;
+    }
+
+    .programming-languages li {
+        margin-bottom: 18px;
+        padding-left: 35px;
+        position: relative;
+        text-align: justify;
+    }
+
+        .programming-languages li::before {
+            content: "💖";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 1.2rem;
+        }
+
+    .programming-languages a {
+        font-weight: bold;
+        color: #ff1493;
+        text-decoration: none;
+        position: relative;
+        transition: color 0.3s ease;
+        border-bottom: 1px dotted #ff69b4;
+    }
+
+        .programming-languages a:hover {
+            color: #ff69b4;
+            text-decoration: none;
+            border-bottom: 1px solid #ff69b4;
+        }
+
+        .programming-languages a::after {
+            content: " 🌸";
+            font-size: 0.8em;
+        }
