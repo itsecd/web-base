@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.task {
+  margin-bottom: 40px;
+}
+
+/* --- 1. Текст с форматированием --- */
+.text-block {
+  background-color: #CF6F21;
+  border: 2px solid #00838f;
+  padding: 15px;
+  text-align: right;
+  color: #B5FCEE;
+  border-radius: 10px;
+}
+
+/* --- 2. Картинки с позиционированием --- */
+.image-stack {
+  position: relative;
+  width: 1500px;
+  height: 820px;
+  margin: 50px;
+}
+
+
+.image-stack .big_im {
+  position: absolute;
+  width:700px;
+  height: 400px;
+  top: 419px;
+  left: 0px;
+}
+
+.image-stack .small_im {
+  position: absolute;
+  width:250;
+  height:420;
+  top: 0px;
+  left: 225px;
+}
+
+/* --- 3. Светофор --- */
+.traffic-light {
+  width: 100px;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 20px auto;
+}
+
+.light {
+  width: 60px;
+  height: 60px;
+  margin: 10px auto;
+  border-radius: 50%;
+  border: 2px solid #111;
+}
+
+.red { background-color: red; }
+.yellow { background-color: yellow; }
+.green { background-color: green; }
+
+/* --- 4. Лабиринт --- */
+.maze {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  box-sizing: border-box;
+  border: 2px solid transparent; 
+}
+
+.top { border-top: 2px solid black; }
+.bottom { border-bottom: 2px solid black; }
+.left { border-left: 2px solid black; }
+.right { border-right: 2px solid black; }

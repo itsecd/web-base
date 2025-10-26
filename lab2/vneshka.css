@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2, h3, h4 {
+  font-size: 24px;    
+  font-weight: bold;  
+  margin-bottom: 10px;
+}
+
+.task {
+  margin-bottom: 40px;
+}
+
+.shiny {
+    transition: color 1.5s ease;
+}
+.shiny:hover {
+  color: #00ff59;             
+}
+
+a{
+    color: inherit;          
+    text-decoration: none;
+    
+}
+
+a::after{
+    content: " 🌐";
+}
+
+.image {
+  position: relative;
+  width: 750px;
+  height: 375px;
+  margin: 20px;
+  overflow: hidden;       
+}
+
+.image img {
+  width: 100%;            
+  height: 100%;
+  object-fit: cover;      
+  display: block;         
+}
+
+.parent1{
+    color: inherit;
+}
+
+.parent1 .child {
+  color: red;
+}
+
+.parent2 {
+    color: orange;
+}
+.parent2 .child{
+    color: #b4005a;
+    border: 2px dotted orange;
+    display: block;           
+    width: fit-content;       
+    border: 2px dotted orange;
+    margin: 4px 0;            
+    padding: 2px 6px;
+}
+
+
+.parent2 + .parent3 {
+  color: green;
+}
+
+.parent2 + .parent3 .child {
+  color: green;
+}
+
+.parent1 + .parent3 {
+  color: black; 
+}
+
+.parent3 .child-from-second {
+  border: none;
+  color: purple;
+}
