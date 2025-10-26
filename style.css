@@ -117,7 +117,7 @@ body {
 }
 
 
-.skills-section__grid {
+.grid__service-card {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 20px; 
@@ -169,7 +169,7 @@ body {
     text-align: center;
 }
 
-.certificates-grid {
+.grid__card {
   display: flex;
   gap: 20px;
   justify-content: center;
