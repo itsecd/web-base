@@ -26,3 +26,45 @@ body {
     position: relative;
     min-height: 100vh;
 }
+.letter-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #fff 0%, #fff 50%, #fff0f5 100%);
+    border: 2px dashed #ffb6e1;
+    border-radius: 20px;
+    position: relative;
+}
+
+    .letter-header::before,
+    .letter-header::after {
+        content: '✻';
+        position: absolute;
+        color: #ff69b4;
+        font-size: 1.5rem;
+    }
+
+    .letter-header::before {
+        top: 10px;
+        left: 10px;
+    }
+
+    .letter-header::after {
+        top: 10px;
+        right: 10px;
+    }
+
+    .letter-header h1 {
+        color: #ff1493;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        font-family: 'Georgia', serif;
+    }
+
+.subtitle {
+    color: #ff69b4;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+}
