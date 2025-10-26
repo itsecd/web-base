@@ -1,0 +1,153 @@
+.heading {
+    font-size: 21px;
+    margin-left: 5px;
+}
+
+/* ЗАДАНИЕ 1 - Стриминговые сервисы */
+.streaming {
+    font-size: 20px;
+    background-color: rgb(240, 240, 240);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.streaming__list {
+    color: rgb(0, 0, 0);
+    padding-left: 0;
+}
+
+.streaming__item {
+    transition: 0.3s;
+    padding: 8px 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+#netflix:hover {
+    color: #E50914;
+    transform: translateX(10px);
+}
+
+#youtube-premium:hover {
+    color: #FF0000;
+    transform: translateX(10px);
+}
+
+#spotify:hover {
+    color: #1DB954;
+    transform: translateX(10px);
+}
+
+#disney-plus:hover {
+    color: #113CCF;
+    transform: translateX(10px);
+}
+
+#twitch:hover {
+    color: #9146FF;
+    transform: translateX(10px);
+}
+
+/* ЗАДАНИЕ 2 - Родители и дети */
+.parents {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.parent {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.parent__title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.parent__children {
+    padding-left: 0;
+    width: 200px;
+    margin: 0;
+}
+
+.parent__child {
+    padding: 2px 5px;
+    margin-bottom: 3px;
+    list-style-type: none; 
+}
+
+.parent--1 .parent__child {
+    color: red;
+}
+
+.parent--2 .parent__title {
+    color: orange;
+}
+
+.parent__child--2 {
+    color: #b4005a;
+    border-color: orange;
+    border-style: dashed;
+}
+
+.parent__children .parent__child--2:first-child {
+    margin-top: 0;
+}
+
+.parent--2 ~ .parent--3 {
+    color: green;
+}
+
+.parent--3:first-of-type {
+    color: black;
+}
+
+.parent__child--guest {
+    border: none !important;
+    color: purple !important;
+    margin-top: 3px; 
+}
+
+/* ЗАДАНИЕ 3 - Языки программирования */
+.languages {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.languages__text {
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.languages__list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.languages__item {
+    margin-top: 10px;
+    padding: 8px 0;
+    line-height: 1.4;
+}
+
+.languages__link {
+    text-decoration: none;
+    color: black;
+}
+
+.languages__link::before {
+     content: "🌐";
+}
+
+.languages::after {
+    content: "";
+    display: block;
+    margin-top: 20px;
+    width: 353px;
+    height: 105px;
+    background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: invert(1);
+}
