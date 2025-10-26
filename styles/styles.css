@@ -36,7 +36,27 @@ h1 {
 
 /* Стили для родителей и детей */
 
-.parent{
+.child-room{
+    background-color: white;
+}
+
+.parent1{
+    color:black;
+}
+
+.parent1 > .child{
+    color:red;
+}
+
+.parent2{
+    color:orange;
+}
+
+.parent2 > .child{
+    color:#b4005a;
+}
+
+.parent3{
     color:black;
 }
 
@@ -57,16 +77,17 @@ h1 {
 
 .language-list:after{
     content:"";
-    width: 100px;
+    width: 100%;
     height: 100px;
-    display:inline-block;
-    background-size:cover;
+    display:block;
+    white-space: pre;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     margin: 15px;
     background-image: url('../images/Neom_Samara_01-1.jpg');
 }
 
-language-list:marker{
-    color:blue;
+.language-list li{
+    list-style-type: none;
 }
