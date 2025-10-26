@@ -1,0 +1,76 @@
+h2 {
+text-align: center;  
+color: #444444;
+}
+p {
+color: #E2155C;
+background-color: #2F9469;
+text-align: justify;
+}
+.img2 {         
+position: relative;
+left: -390px;
+}   
+.traffic_light {
+ width: 300px;
+ background-color: rgb(68, 65, 65);
+ border-radius: 10px;
+ 
+}
+
+.traffic_light_part {
+ margin: 10px;
+ width: 275px;
+ height: 275px;
+ border-radius: 300px;
+ background-color: rgb(54, 50, 50);
+}
+
+.traffic_light_red {
+ background-color: rgb(212, 12, 12)
+}
+
+.traffic_light_yellow {
+ background-color: rgb(255, 230, 0)
+}
+
+.traffic_light_green {
+ background-color: rgb(7, 173, 7)
+}
+
+.maze {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 0;
+    margin: 20px auto;
+    width: 300px;
+    background-color: white;
+}
+
+.maze__cell {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #666;
+    border: 3px solid #333
+}
+
+.maze__cell_no-top {
+    border-top: none;
+}
+
+.maze__cell_no-right {
+    border-right: none;
+}
+
+.maze__cell_no-bottom {
+    border-bottom: none;
+}
+
+.maze__cell_no-left {
+    border-left: none;
+}
