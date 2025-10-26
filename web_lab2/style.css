@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+}
+
+.task {
+  margin-bottom: 60px;
+}
+
+.genres__title {
+  margin-bottom: 15px;
+}
+
+.genres__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.genres__item {
+  padding: 5px 0;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+  display: block;
+  width: fit-content;
+}
+
+.genres__item:hover {
+  color: #ff6b6b;
+}
+
+.parents-container {
+  line-height: 1.5;
+}
+
+.parent {
+  margin-bottom: 25px;
+}
+
+.parent__title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.parent__child {
+  padding: 4px 8px;
+  margin: 6px 0;
+  display: block;
+  width: fit-content;
+}
+
+.parent_theme_first .parent__child {
+  color: red;
+  border: 1px solid transparent;
+}
+
+.parent_theme_second .parent__title {
+  color: orange;
+}
+
+.parent_theme_second .parent__child {
+  color: #b4005a;
+  border: 1px dashed #ffa500;
+}
+
+.parent_theme_second ~ .parent_theme_third .parent__title,
+.parent_theme_second ~ .parent_theme_third .parent__child {
+  color: green;
+}
+
+.parent_theme_second ~ .parent_theme_third .parent__child {
+  border: 1px solid transparent;
+}
+
+.parent__child_theme_guest {
+  color: purple !important;
+  border: 1px solid transparent !important;
+}
+
+.programming-languages {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.programming-languages__title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.programming-languages__content {
+  text-align: justify;
+}
+
+.programming-languages__list {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.programming-languages__list li {
+  margin-bottom: 12px;
+}
+
+.programming-languages__link {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.programming-languages__link::after {
+  content: " 🔗";
+  font-weight: normal;
+  font-size: 0.9em;
+}
+
+.programming-languages__logo {
+  text-align: center;
+  margin-top: 30px;
+  padding: 30px;
+  background-color: #000000;
+  border-radius: 8px;
+}
+
+.programming-languages__logo-link {
+  display: inline-block;
+}
+
+.programming-languages__logo-image {
+  max-width: 250px;
+  height: auto;
+  display: block;
+}
