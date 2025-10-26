@@ -176,3 +176,15 @@ p {
             background-color: rgba(0, 128, 0, 0.08);
             color: darkgreen;
         }
+
+#parent-1 ~ #parent-3 .children-list li {
+    color: initial;
+    border-left-color: #ccc;
+}
+
+#parent-2 .children-list li ~ #parent-3 .children-list li,
+#parent-3 .children-list li:has(~ #parent-2) {
+    color: purple;
+    border: none;
+    border-left: 3px solid purple;
+}
