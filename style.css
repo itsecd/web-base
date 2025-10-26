@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  padding: 0;
+}
+
+.task {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.task__title {
+  color: #2b80e0;
+  margin-top: 0;
+}
+
+.task__text {
+  margin-bottom: 15px;
+}
+
+/* Задание 1 */
+.games-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.games-list__item {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  transition: color 0.5s ease;
+}
+
+.games-list__item:hover {
+  color: #ff5722;
+}
+
+/* Задание 2 */
+.parent {
+  margin: 15px 0;
+  padding: 10px;
+}
+
+.parent__title {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.parent__child {
+  margin: 5px 0;
+  padding: 5px 10px;
+}
+
+.parent_color_red .parent__child {
+  color: red;
+}
+
+.parent_color_orange {
+  color: orange;
+}
+
+.parent_color_orange .parent__child {
+  color: #b4005a;
+  border: 2px dashed orange;
+  padding: 8px;
+  margin: 4px;
+  border-radius: 4px;
+}
+
+.parent_color_orange ~ .parent_color_green {
+  color: green;
+}
+
+.parent_color_orange ~ .parent_color_green .parent__child {
+  color: green;
+}
+
+.parent_color_green:not(.parent_color_orange ~ .parent_color_green) {
+  color: initial;
+}
+
+.parent_color_green:not(.parent_color_orange ~ .parent_color_green)
+  .parent__child {
+  color: initial;
+}
+
+.parent_color_green .parent__child_color_purple {
+  color: purple;
+  border: none;
+}
+
+.parent_color_orange ~ .parent_color_green .parent__child_color_purple {
+  color: purple;
+}
+
+/* Задание 3 */
+.languages-list {
+  padding-left: 20px;
+}
+
+.languages-list__item {
+  margin-bottom: 8px;
+}
+
+.languages-list__link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.languages-list__link::after {
+  content: "🌐";
+  font-size: 0.9em;
+  margin-left: 4px;
+}
+
+.languages-list__link:hover {
+  color: #267fe4;
+}
+
+.languages-list::after {
+  content: "";
+  display: block;
+  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  background-position: center;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-color: #2b80e0;
+  padding: 20px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
