@@ -250,3 +250,26 @@ p {
             content: " 🌸";
             font-size: 0.8em;
         }
+
+    .programming-languages::after {
+        content: "СамГУ";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        height: 120px;
+        margin: 30px auto 0;
+        background: radial-gradient(circle at center, transparent 30%, #ff69b4 31%, #ff69b4 40%, transparent 41%), radial-gradient(circle at center, #ff1493 50%, transparent 51%);
+        background-size: 100% 100%, 80% 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 8px double #ff1493;
+        border-radius: 50%;
+        position: relative;
+        box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+        font-family: 'Times New Roman', serif;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
