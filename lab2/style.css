@@ -58,49 +58,65 @@ h2 {
 .parent-1, .parent-2, .parent-3 {
     margin: 25px 0;
     padding: 20px;
-    border: 2px solid #ddd;
     border-radius: 8px;
     background-color: #fafafa;
 }
 
-.parent-1 h3, .parent-2 h3, .parent-3 h3 {
-    margin-top: 0;
-    color: #2c3e50;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 8px;
+.parent-1 {
+    border: 2px solid #ddd;
 }
 
+.parent-1 h3 {
+    color: #333;
+    margin-top: 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
 
-.parent-1 > div {
+.parent-1_child {
     color: red;
     padding: 8px 12px;
     margin: 5px 0;
-    background-color: #ffeaea;
     border-radius: 4px;
     border: 1px solid #ffcccc;
 }
 
 .parent-2 {
-    background-color: orange;
+    color: orange;
     border: 2px dashed orange;
 }
 
-.parent-2 > div {
-    color: #4488aa;
-    border: 1px dashed orange;
+.parent-2 h3 {
+    color: orange;
+    margin-top: 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.parent-2_child {
+    color: purple !important;
     padding: 8px 12px;
     margin: 5px 0;
     background-color: white;
     border-radius: 4px;
+    border: 1px dashed orange;
 }
-
 
 .parent-3 {
-    background-color: green;
+    color: green;
     border: 2px solid green;
+    margin-top: 40px;
+    position: relative;
 }
 
-.parent-3 > div {
+.parent-3 h3 {
+    color: green;
+    margin-top: 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.parent-3_child {
     color: green;
     padding: 8px 12px;
     margin: 5px 0;
@@ -108,16 +124,26 @@ h2 {
     border-radius: 4px;
 }
 
-
-.parent-3 .child-1,
-.parent-3 .child-2 {
-    color: purple !important;
-    border: none !important;
-    background-color: #f0e6ff !important;
+.parent-3::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ccc;
+    margin: 0 auto;
+    width: 80%;
 }
 
+.parent-3 .parent-2_child {
+    color: purple !important;
+    border: none !important;
 
-.Prog-text {
+}
+
+.prog-text {
     line-height: 1.7;
 }
 
@@ -161,7 +187,7 @@ h2 {
     font-size: 0.9em;
 }
 
-.Prog-text p:last-child::after {
+.prog-text p:last-child::after {
     content: "";
     display: block;
     text-align: center;
