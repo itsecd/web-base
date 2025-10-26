@@ -1,23 +1,11 @@
-const operationButtons = document.querySelectorAll('[data-operation]');
-const outputElement = document.querySelector('.js-output');
-const inputA = document.querySelector('.js-number-a');
-const inputB = document.querySelector('.js-number-b');
 
-function sum(a, b){
-    return a + b;
-}
+const sum = (a, b) => a + b
 
-function sub(a, b){
-    return a - b;
-}
+const sub = (a, b) => a - b
 
-function multiplication(a, b){
-    return a * b;
-}
+const multiplication = (a, b) => a * b
 
-function div(a, b){
-    return a / b;
-}
+const div = (a, b) => a / b
 
 const OPERATIONS = {
     sum: '+',
@@ -28,57 +16,41 @@ const OPERATIONS = {
 
 let selectedOperation = null;
 
-document.querySelectorAll('[data-operation]').forEach(btn => {
+document.querySelectorAll('.calculator__button').forEach(btn => {
     btn.addEventListener('click', () => {
         selectedOperation = btn.getAttribute('data-operation');
-        document.querySelectorAll('[data-operation]').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+        document.querySelectorAll('.calculator__button').forEach(b => b.classList.remove('.calculator__button-active'));
+        btn.classList.add('.calculator__button-active');
     });
 });
 
-document.querySelector('.js-btn-calc').addEventListener('click', () => {
-    const a = parseFloat(document.querySelector('.js-number-a').value);
-    const b = parseFloat(document.querySelector('.js-number-b').value);
-    const output = document.querySelector('.js-output');
+const calcButton = document.querySelector('.calculator__calc-button');
+if (calcButton) {
+    document.querySelector('.calculator__calc-button').addEventListener('click', () => {
+        const a = parseFloat(document.querySelector('.calculator__input-number-a').value);
+        const b = parseFloat(document.querySelector('.calculator__input-number-b').value);
+        const output = document.querySelector('.calculator__output');
 
-    if (selectedOperation === null || isNaN(a) || isNaN(b)) {
-        output.textContent = "Выберите операцию";
-        return;
-    }
+        if (selectedOperation === null || isNaN(a) || isNaN(b)) {
+            output.textContent = "Введите число!";
+            return;
+        }
 
-    if (selectedOperation === '/' && b === 0) {
-        output.textContent = "Ошибка: деление на ноль!";
-        output.classList.add("error");
-        return;
-    }
+        if (selectedOperation === '/' && b === 0) {
+            output.textContent = "Ошибка: деление на ноль!";
+            output.classList.add("error");
+            return;
+        }
 
-    let result;
-    switch (selectedOperation) {
-        case '+': result = sum(a, b); break;
-        case '-': result = sub(a, b); break;
-        case '*': result = multiplication(a, b); break;
-        case '/': result = div(a, b); break;
-    }
-    output.textContent = result;
-});
-
-function calculate ({a, b, operation}){
-    let result = null;
-    switch (operation){
-        case OPERATIONS.sum:
-            result = sum(a, b);
-            break;
-        case OPERATIONS.sub:
-            result = sub(a, b);
-            break;
-        case OPERATIONS.multiplication:
-            result = multiplication(a, b);
-            break;
-        case OPERATIONS.div:
-            result = div(a, b);
-            break;
-        default:
-            break;
-    }
-    return result;
+        let result;
+        switch (selectedOperation) {
+            case '+': result = sum(a, b); break;
+            case '-': result = sub(a, b); break;
+            case '*': result = multiplication(a, b); break;
+            case '/': result = div(a, b); break;
+        }
+        output.textContent = result;
+    });
+} else {
+    console.error('Кнопка не найдена');
 }
