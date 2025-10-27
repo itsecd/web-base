@@ -1,4 +1,4 @@
-body {
+.page {
   background-color: burlywood;
 }
 .list {
@@ -6,7 +6,13 @@ body {
   justify-content: center;
 }
 
-.list__item:hover {
+.items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.items__item:hover {
   color: red;
   transition: color 2s ease;
 }
@@ -33,7 +39,7 @@ body {
   align-items: center;
 }
 
-.languages__item {
+.languages__lang-item {
   display: flex;
   justify-content: center;
   color: black;
@@ -51,13 +57,13 @@ body {
   color: black;
 }
 
-.languages__link {
+.lang-item__link {
   color: inherit;
   text-decoration: none;
   font-weight: 700;
 }
 
-.languages__link::before {
+.lang-item__link::before {
   content: '🌐';
 }
 
