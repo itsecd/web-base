@@ -55,7 +55,7 @@ h2 {
 }
 
 
-.parent-1, .parent-2, .parent-3 {
+.parent {
     margin: 25px 0;
     padding: 20px;
     border-radius: 8px;
@@ -73,11 +73,14 @@ h2 {
     border-bottom: 1px solid #eee;
 }
 
-.parent-1_child {
-    color: red;
+.parent__child {
     padding: 8px 12px;
     margin: 5px 0;
     border-radius: 4px;
+}
+
+.parent-1 .parent__child {
+    color: red;
     border: 1px solid #ffcccc;
 }
 
@@ -93,37 +96,59 @@ h2 {
     border-bottom: 1px solid #eee;
 }
 
-.parent-2_child {
-    color: purple !important;
-    padding: 8px 12px;
-    margin: 5px 0;
+.parent-2 .parent__child {
+    color: purple;
     background-color: white;
-    border-radius: 4px;
     border: 1px dashed orange;
 }
 
 .parent-3 {
-    color: green;
-    border: 2px solid green;
+    color: black;
+    border: 2px solid black;
     margin-top: 40px;
     position: relative;
 }
 
 .parent-3 h3 {
-    color: green;
+    color: black;
     margin-top: 0;
     padding-bottom: 8px;
     border-bottom: 1px solid #eee;
 }
 
-.parent-3_child {
-    color: green;
+.parent-3 .parent__child {
+    color: black;
     padding: 8px 12px;
     margin: 5px 0;
-    background-color: #e8f5e8;
+    background-color: #f0f0f0;
     border-radius: 4px;
 }
 
+.parent-2 ~ .parent-3,
+.parent-2 ~ .parent-3 h3,
+.parent-2 ~ .parent-3 .parent__child {
+    color: green;
+    border-color: green;
+}
+
+.parent-2 ~ .parent-3 .parent__child {
+    background-color: #e8f5e8;
+}
+
+.parent-3 .parent-2_child {
+    color: purple !important;
+    border: none !important;
+    background-color: white !important;
+    margin: 5px 0;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.parent-2 ~ .parent-3 .parent-2_child {
+    color: purple !important;
+    border: none !important;
+    background-color: white !important;
+}
 .parent-3::before {
     content: "";
     display: block;
@@ -135,12 +160,6 @@ h2 {
     background-color: #ccc;
     margin: 0 auto;
     width: 80%;
-}
-
-.parent-3 .parent-2_child {
-    color: purple !important;
-    border: none !important;
-
 }
 
 .prog-text {
