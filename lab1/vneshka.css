@@ -30,19 +30,18 @@ h1 {
   margin: 50px;
 }
 
-
-.image-stack .big_im {
+.image-stack__big {
   position: absolute;
-  width:700px;
+  width: 700px;
   height: 400px;
   top: 419px;
   left: 0px;
 }
 
-.image-stack .small_im {
+.image-stack__small {
   position: absolute;
-  width:250;
-  height:420;
+  width: 250px;
+  height: 420px;
   top: 0px;
   left: 225px;
 }
@@ -56,7 +55,7 @@ h1 {
   margin: 20px auto;
 }
 
-.light {
+.traffic-light__light {
   width: 60px;
   height: 60px;
   margin: 10px auto;
@@ -64,9 +63,9 @@ h1 {
   border: 2px solid #111;
 }
 
-.red { background-color: red; }
-.yellow { background-color: yellow; }
-.green { background-color: green; }
+.traffic-light__light_red { background-color: red; }
+.traffic-light__light_yellow { background-color: yellow; }
+.traffic-light__light_green { background-color: green; }
 
 /* --- 4. Лабиринт --- */
 .maze {
@@ -75,14 +74,14 @@ h1 {
   grid-template-rows: repeat(3, 80px);
 }
 
-.cell {
+.maze__cell {
   width: 80px;
   height: 80px;
   box-sizing: border-box;
   border: 2px solid transparent; 
 }
 
-.top { border-top: 2px solid black; }
-.bottom { border-bottom: 2px solid black; }
-.left { border-left: 2px solid black; }
-.right { border-right: 2px solid black; }
+.maze__cell_top { border-top: 2px solid black; }
+.maze__cell_bottom { border-bottom: 2px solid black; }
+.maze__cell_left { border-left: 2px solid black; }
+.maze__cell_right { border-right: 2px solid black; }
