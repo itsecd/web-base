@@ -1,4 +1,4 @@
-﻿
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -138,13 +138,14 @@ body {
     }
 
 .languages__list::after {
-    content: "";
-    display: block;
-    width: 220px;
-    height: 80px;
-    margin: 28px auto 0;
-    background-image: url("images/logo.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+  content: "";
+  display: block;
+  width: 220px;
+  height: 80px;
+  margin: 28px auto 0;
+  background-color: #2780E3;
+  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
