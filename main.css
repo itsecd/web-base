@@ -98,16 +98,16 @@
     gap: 8px;
 }
 
-.language__row{
+.list__row{
     display: flex;
     align-items: center;
 }
 
-.language__name{
+.row__name{
     width: 120px;
     color:black;
 }
-.dots{
+.row__dots{
     display: flex;
     gap: 6px;
 }
@@ -131,7 +131,7 @@
     border-left: 6px solid goldenrod;
 }
 
-.info-card__title{
+.item__title{
     background: #222;
     color: #fff;
     padding: 6px 12px;
@@ -141,17 +141,17 @@
     margin-top: 20px;
 }
 
-.info-card__text {
+.item__text {
     font-size: 20px;
 }
 
-.info-card__list{
+.item__list{
     list-style: disc inside;
     margin: 0;
     padding: 0;
 }
 
-.info-card__list-item{
+.list-item{
     font-size: 20px;
     margin: 4px 0;
 }
