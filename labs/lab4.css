@@ -21,7 +21,7 @@ body {
     margin-bottom: 18px;
 }
 
-.calculator__button {
+.operations__button {
     background: #734939;
     color: #ffffff;
     border: none;
@@ -32,7 +32,7 @@ body {
     transition: background .2s, box-shadow .2s;
 }
 
-.calculator__button:hover {
+.operations__button:hover {
     background: #A68877;
     box-shadow: 0 2px 8px #eee;
 }
@@ -66,7 +66,7 @@ body {
     width: 320px;
 }
 
-.calculator__button-active {
+.operations__button-active {
     background: #ffd6ec;
     color: #181818;
 }

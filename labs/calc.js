@@ -16,19 +16,23 @@ const OPERATIONS = {
 
 let selectedOperation = null;
 
-document.querySelectorAll('.calculator__button').forEach(btn => {
+document.querySelectorAll('.operations__button').forEach(btn => {
     btn.addEventListener('click', () => {
         selectedOperation = btn.getAttribute('data-operation');
-        document.querySelectorAll('.calculator__button').forEach(b => b.classList.remove('.calculator__button-active'));
-        btn.classList.add('.calculator__button-active');
+        document.querySelectorAll('.operations__button').forEach(b => b.classList.remove('.operations__button-active'));
+        btn.classList.add('.operations__button-active');
     });
 });
 
 const calcButton = document.querySelector('.calculator__calc-button');
 if (calcButton) {
     document.querySelector('.calculator__calc-button').addEventListener('click', () => {
-        const a = parseFloat(document.querySelector('.calculator__input-number-a').value);
-        const b = parseFloat(document.querySelector('.calculator__input-number-b').value);
+        const inputA = document.querySelector('.calculator__input-number-a');
+        const inputB = document.querySelector('.calculator__input-number-b');
+
+        const a = parseFloat(inputA?.value);
+        const b = parseFloat(inputB?.value);
+
         const output = document.querySelector('.calculator__output');
 
         if (selectedOperation === null || isNaN(a) || isNaN(b)) {
