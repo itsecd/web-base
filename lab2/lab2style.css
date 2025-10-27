@@ -7,7 +7,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    list-style: none;
+    padding: 0;
 }
+
+.items__item {
+    padding: 5px 0;
+}
+
+    .items__item:hover {
+        color: red;
+        transition: color 0.3s ease;
+    }
 
 .parent--first,
 .parent--second,
@@ -15,45 +26,59 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
 }
 
 .parent__title {
-    display: flex;
-    justify-content: center;
+    margin: 0 0 10px 0;
 }
 
 .parent__child {
-    display: flex;
-    justify-content: center;
+    margin: 5px 0;
 }
 
 .languages {
     display: flex;
     flex-direction: column;
     align-items: center;
+    list-style: none;
+    padding: 0;
 }
 
 .languages__item {
     display: flex;
     justify-content: center;
     color: black;
+    margin: 8px 0;
+    text-align: center;
 }
 
 .text {
     display: flex;
     justify-content: center;
     color: black;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .page__title {
     display: flex;
     justify-content: center;
     color: black;
+    margin-top: 30px;
 }
 
-.list__item--hover:hover {
-    color: red;
-    transition: color 2s ease;
+.header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+}
+
+.header__text {
+    margin: 0;
+    font-weight: bold;
 }
 
 .languages__link {
@@ -63,13 +88,15 @@
 }
 
     .languages__link::before {
-        content: '🌐';
+        content: '🌐 ';
     }
 
+
 .languages::after {
-    content: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+    content: url('https://ssau.ru/i/logo/logo-ru.svg'); 
     display: block;
     margin-top: 20px;
+    height: 40px;
 }
 
 .parent--first .parent__child--first {
@@ -85,14 +112,15 @@
         width: 100px;
         color: #b4005a;
         border: 2px dashed orange;
+        text-align: center;
     }
 
-    .parent--second ~ .parent--third {
-        color: green;
-    }
+.parent--third {
+    color: green;
+}
 
-    .parent--third .parent--second .parent__child--second,
-    .parent--second .parent--third .parent__child--third {
+    /* Дополнительные вложенные стили при необходимости */
+    .parent--third .parent--second .parent__child--second {
         color: purple !important;
         border: none !important;
     }

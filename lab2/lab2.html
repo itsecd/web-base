@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Лабораторная работа номер 1</title>
+    <title>Лабораторная работа 2</title>
     <link rel="stylesheet" href="laba2style.css" />
 </head>
-<header class="header">
-    <p class="header__text">Лабораторная работа 2</p>
-</header>
 <body class="page">
+    <header class="header">
+        <p class="header__text">Лабораторная работа 2</p>
+    </header>
+
     <h1 class="page__title">Задание 1</h1>
     <div class="list">
         <ul class="list__items">
-            <li class="list__item list__item--hover">Minecraft</li>
-            <li class="list__item list__item--hover">Fortnite</li>
-            <li class="list__item list__item--hover">GTA V</li>
-            <li class="list__item list__item--hover">Call of Duty</li>
-            <li class="list__item list__item--hover">Among Us</li>
+            <li class="items__item">Minecraft</li>
+            <li class="items__item">Fortnite</li>
+            <li class="items__item">GTA V</li>
+            <li class="items__item">Call of Duty</li>
+            <li class="items__item">Among Us</li>
         </ul>
     </div>
+
     <h1 class="page__title">Задание 2</h1>
     <div class="parent parent--first">
         <h2 class="parent__title">parent-1</h2>
@@ -34,11 +36,6 @@
     </div>
 
     <div class="parent parent--third">
-        <h2 class="parent__title">parent-3</h2>
-        <div class="parent__child parent__child--third">Ребёнок 3-1</div>
-        <div class="parent__child parent__child--third">Ребёнок 3-2</div>
-    </div>
-    <div class="parent parent--third">
         <h2 class="parent__title">Parent 3</h2>
         <div class="parent__child parent__child--third">child 1</div>
         <div class="parent__child parent__child--third">child 2</div>
@@ -46,75 +43,51 @@
             <div class="parent__child parent__child--second">child 1</div>
         </div>
     </div>
-        <h1 class="page__title">Задание 3</h1>
-        <p class="text">
-            Языки программирования — это инструменты, с помощью которых разработчики
-            создают программное обеспечение, веб-приложения, игры, алгоритмы и многое
-            другое. Каждый язык имеет свои особенности, синтаксис и сферу применения.
-            Ниже представлены некоторые из наиболее известных языков:
-        </p>
-        <ul class="languages">
-            <li class="languages__item">
-                <a class="languages__link" href="">
-                    Python – высокоуровневый язык с простым синтаксисом, популярный в
-                    Data Science, веб-разработке и автоматизаци
-                </a>
-            </li>
-            <li class="languages__item">
-                <a class="languages__link" href="">
-                    JavaScript – основной язык для фронтенд-разработки, работает в
-                    браузерах и на сервере (Node.js).
-                </a>
-            </li>
-            <li class="languages__item">
-                <a class="languages__link" href="">
-                    Java – объектно-ориентированный язык, широко используется в
-                    корпоративных приложениях и Android-разработке.
-                </a>
-            </li>
-            <li class="languages__item">
-                <a class="languages__link" href="">
-                    C++ – мощный язык для системного программирования, игр и
-                    высокопроизводительных приложений.
-                </a>
-            </li>
-            <li class="languages__item">
-                <a class="languages__link" href="">
-                    C# – язык от Microsoft, применяется в разработке под Windows, играх
-                    (Unity) и веб-приложениях.
-                </a>
-            </li>
-            <li class="languages__item">
-                <a class="languages__link" href="">
-                    Go (Golang) – созданный Google, язык для высоконагруженных сетевых
-                    сервисов и облачных технологий.
-                </a>
-            </li>
-            <li class="languages__item">
-                <a class="languages__link" href="">
-                    Ruby – известен благодаря фреймворку Ruby on Rails для
-                    веб-разработки.
-                </a>
-            </li>
-            <li class="languages__item">
-                <a class="languages__link" href="">Swift – язык Apple для разработки под iOS и macOS.</a>
-            </li>
-            <li class="languages__item">
-                <a class="languages__link" href="">
-                    Kotlin – современный язык, официально поддерживаемый для
-                    Android-разработки.
-                </a>
-            </li>
-            <li class="languages__item">
-                <a class="languages__link" href="">
-                    Rust – язык системного программирования с акцентом на безопасность и
-                    производительность.
-                </a>
-            </li>
-        </ul>
-        <p class="text">
-            Это лишь малая часть из множества существующих языков, и выбор зависит от
-            задач, которые нужно решить.
-        </p>
+
+    <h1 class="page__title">Задание 3</h1>
+    <p class="text">
+        Языки программирования — это инструменты, с помощью которых разработчики
+        создают программное обеспечение, веб-приложения, игры, алгоритмы и многое
+        другое. Каждый язык имеет свои особенности, синтаксис и сферу применения.
+        Ниже представлены некоторые из наиболее известных языков:
+    </p>
+
+    <ul class="languages">
+        <li class="languages__item">
+            <a class="languages__link" href="#">Python</a> – высокоуровневый язык с простым синтаксисом, популярный в Data Science, веб-разработке и автоматизации.
+        </li>
+        <li class="languages__item">
+            <a class="languages__link" href="#">JavaScript</a> – основной язык для фронтенд-разработки, работает в браузерах и на сервере (Node.js).
+        </li>
+        <li class="languages__item">
+            <a class="languages__link" href="#">Java</a> – объектно-ориентированный язык, широко используется в корпоративных приложениях и Android-разработке.
+        </li>
+        <li class="languages__item">
+            <a class="languages__link" href="#">C++</a> – мощный язык для системного программирования, игр и высокопроизводительных приложений.
+        </li>
+        <li class="languages__item">
+            <a class="languages__link" href="#">C#</a> – язык от Microsoft, применяется в разработке под Windows, играх (Unity) и веб-приложениях.
+        </li>
+        <li class="languages__item">
+            <a class="languages__link" href="#">Go (Golang)</a> – созданный Google, язык для высоконагруженных сетевых сервисов и облачных технологий.
+        </li>
+        <li class="languages__item">
+            <a class="languages__link" href="#">Ruby</a> – известен благодаря фреймворку Ruby on Rails для веб-разработки.
+        </li>
+        <li class="languages__item">
+            <a class="languages__link" href="#">Swift</a> – язык Apple для разработки под iOS и macOS.
+        </li>
+        <li class="languages__item">
+            <a class="languages__link" href="#">Kotlin</a> – современный язык, официально поддерживаемый для Android-разработки.
+        </li>
+        <li class="languages__item">
+            <a class="languages__link" href="#">Rust</a> – язык системного программирования с акцентом на безопасность и производительность.
+        </li>
+    </ul>
+
+    <p class="text">
+        Это лишь малая часть из множества существующих языков, и выбор зависит от
+        задач, которые нужно решить.
+    </p>
 </body>
 </html>
