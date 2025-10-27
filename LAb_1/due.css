@@ -1,0 +1,130 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.task {
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.task-1__text-block {
+    background-color: #F4BC92;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.task-1__text-block p {
+    color: #ECE870;
+    text-align: justify;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.task-2__images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.image-stack {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.image-stack__image_bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.image-stack__image_top {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 150px;
+    z-index: 2;
+    border: 3px solid white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.traffic-light {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 120px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.traffic-light__light {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #666;
+}
+
+.traffic-light__light_red {
+    background-color: #ff4444;
+}
+
+.traffic-light__light_yellow {
+    background-color: #ffcc00;
+}
+
+.traffic-light__light_green {
+    background-color: #44ff44;
+}
+
+.maze {
+    display: inline-block;
+    border: 2px solid #333;
+    background-color: #fff;
+}
+
+.maze__row {
+    display: flex;
+}
+
+.maze__cell {
+    width: 80px;
+    height: 80px;
+    box-sizing: border-box;
+}
+
+.maze__cell_wall-top {
+    border-top: 2px solid #333;
+}
+
+.maze__cell_wall-bottom {
+    border-bottom: 2px solid #333;
+}
+
+.maze__cell_wall-left {
+    border-left: 2px solid #333;
+}
+
+.maze__cell_wall-right {
+    border-right: 2px solid #333;
+}
