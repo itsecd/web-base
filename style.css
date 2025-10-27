@@ -126,7 +126,7 @@ body {
 }
 
 
-.grid__service-card {
+.service__card {
     background-color: #000000;
     padding: 30px;
     border-radius: 8px;
@@ -135,19 +135,19 @@ body {
     transition: transform 0.3s;
 }
 
-.grid__service-card:hover {
+.service__card:hover {
     transform: translateY(-5px);
 }
 
 
-.grid__service-card-icon {
+.service__card-icon {
     color: #ffffff; 
     font-size: 40px;
     margin-bottom: 15px;
 }
 
 
-.grid__service-card-title {
+.service__card-title {
     font-size: 18px;
     font-weight: bold;
     margin-top: 0;
@@ -155,7 +155,7 @@ body {
 }
 
 
-.grid__service-card-text {
+.service__card-text {
     font-size: 14px;
     color: #666;
     line-height: 1.5;
@@ -176,7 +176,7 @@ body {
 }
 
 
-.grid__card {
+.certificate__card {
   width: 500px;
   height: 350px;
   background: #262626;
@@ -190,12 +190,12 @@ body {
 }
 
 
-.grid__card:hover {
+.certificate__card:hover {
   transform: scale(1.1);
 }
 
 
-.grid__card img {
+.certificate__card img {
   width: 90%;
   height: auto;
   margin-bottom: 8px;
