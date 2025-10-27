@@ -47,10 +47,7 @@ section{
     text-align: center;
 }
 
-.parent-1>.child-1,
-.parent-1>.child-2, 
-.parent-1>.child-3, 
-.parent-1>.child-4{
+.parent-1__child{
     color: red;
     text-align: center;
 }
@@ -60,8 +57,7 @@ section{
     text-align: center;
 }
 
-.parent-2>.child-2, 
-.parent-2>.child-1{
+.parent-2__child{
     display: block;
     color: purple;
     border: medium dashed orange;
@@ -71,33 +67,30 @@ section{
     text-align: center;
 }
 
-.parent-3:first-of-type {
+.parent-3{
     text-align: center;
     color: black;
 }
 
-.parent-3:first-of-type>.child-1,
-.parent-3:first-of-type>.child-2{
+.parent-3__child{
     color: black;
     text-align: center;
 }
 
-.parent-3:last-of-type {
+.parent-2 ~ .parent-3 {
     color: green;
     text-align: center;
 }
 
-.parent-3:last-of-type> .child-1,
-.parent-3:last-of-type> .child-2{
-    color:green;
+.parent-2 ~ .parent-3 .parent-3__child{
+    color: green;
     text-align: center;
 }
 
-.parent-3:last-of-type> .child-2:last-child,
-.parent-2~ .parent-3 .child-2:last-child {
-    text-align: center;
+.parent-2 ~ .parent-3 .parent-3__child:nth-child(4){
+    display: block;
     color: purple;
-    border: none;
+    text-align: center;
 }
 
 .language-list a {
