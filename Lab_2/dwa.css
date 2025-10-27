@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
+:root {
+  --c-red: #e53935;
+  --c-orange: orange;
+  --c-2-children: #b4005a;
+  --c-green: #2e7d32;
+  --c-purple: purple;
+  --c-text: #222;
+  --c-muted: #666;
+  --card: #ffffff;
+  --bg: #f7f7f9;
+  --border: #e5e5ea;
+}
+
 body {
     font-family: 'Indie Flower', cursive;
     margin: 0;
@@ -32,12 +45,12 @@ h2 {
     margin-top: 0;
 }
 
-.sport-list {
+.service-list {
     list-style-type: none;
     padding: 0;
 }
 
-.sport-list li {
+.service-list li {
     padding: 12px 20px;
     margin: 8px 0;
     background-color: #e8f5e9;
@@ -48,102 +61,79 @@ h2 {
     border-radius: 4px;
 }
 
-.sport-list li:hover {
+.service-list li:hover {
     color: #2e7d32; 
     background-color: #c8e6c9;
     transform: translateX(10px);
     border-left-color: #2e7d32;
 }
 
-/* Общие стили для всех родителей */
-.parent-1, .parent-2, .parent-3 {
-    margin: 25px 0;
-    padding: 20px;
-    border-radius: 8px;
+.family__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
 }
 
-.parent-1 h3, .parent-2 h3, .parent-3 h3 {
-    margin-top: 0;
-    color: #4e342e;
-    border-bottom: 1px solid #d7ccc8;
-    padding-bottom: 8px;
+.family__parent {
+  padding: 10px 12px;
+  margin: 10px 0;
+  background: var(--card);
+  border-radius: 10px;
+  border: 1px solid var(--border);
 }
 
-/* Стили для parent 1 */
-.parent-1 {
-    border: 2px solid #bcaaa4;
-    background-color: #efebe9;
+.family__parent-title {
+  display: block;
 }
 
-.parent-1 > div {
-    color: #c62828;
-    padding: 8px 12px;
-    margin: 5px 0;
-    background-color: #ffebee;
-    border-radius: 4px;
-    border: 1px solid #ef9a9a;
+.family__child {
+  padding: 6px 10px;
+  margin: 6px 0;
+  border-radius: 6px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  color: var(--c-text);
 }
 
-/* Стили для parent 2 */
-.parent-2 {
-    background-color: #ffb74d;
-    border: 2px dashed #f57c00;
+.family__parent--1 .family__child {
+  color: red;
 }
 
-.parent-2 > div {
-    color: #1565c0;
-    border: 1px dashed #ff9800;
-    padding: 8px 12px;
-    margin: 5px 0;
-    background-color: #e3f2fd;
-    border-radius: 4px;
+.family__parent--2 {
+  color: var(--c-orange);
 }
 
-/* parent 3 по умолчанию (стандартный цвет - когда идет до parent-2) */
-.parent-3 {
-    background-color: #efebe9;
-    border: 2px solid #bcaaa4;
+.family__parent--2 .family__child {
+  color: var(--c-2-children);
+  border-style: dashed;
+  border-color: var(--c-orange);
 }
 
-.parent-3 > div {
-    color: #1b5e20;
-    padding: 8px 12px;
-    margin: 5px 0;
-    background-color: #e8f5e9;
-    border-radius: 4px;
-    border: 1px solid #388e3c;
+.family__parent--2 ~ .family__parent--3,
+.family__parent--2 ~ .family__parent--3 .family__child {
+  color: var(--c-green);
 }
 
-/* parent 3 становится зеленым только если идет после parent 2 */
-.parent-2 ~ .parent-3 {
-    background-color: #66bb6a;
-    border: 2px solid #388e3c;
+.family__parent--3 .family__child.family__child--purple {
+  color: var(--c-purple);
+  border-color: var(--c-purple);
 }
 
-.parent-2 ~ .parent-3 > div {
-    color: #1b5e20;
-    background-color: #e8f5e9;
-    border: 1px solid #388e3c;
+.family__child--purple {
+  color: inherit;
+  border-color: #ddd;
 }
 
-/* Дети второго в гостях у третьего (фиолетовые без границы) */
-.parent-3.visiting .child-1,
-.parent-3.visiting .child-2 {
-    color: #6a1b9a !important;
-    border: none !important;
-    background-color: #f3e5f5 !important;
-}
-
-.prog-text {
+.prog__text {
     line-height: 1.7;
 }
 
-.prog-lang-list {
+.prog__lang-list {
     list-style-type: none;
     padding: 0;
 }
 
-.prog-lang-list li {
+.prog__lang-list li {
     margin: 12px 0;
     padding: 15px;
     background-color: #e3f2fd;
@@ -152,31 +142,31 @@ h2 {
     transition: all 0.3s ease;
 }
 
-.prog-lang-list li:hover {
+.prog__lang-list li:hover {
     background-color: #bbdefb;
     transform: translateY(-2px);
     box-shadow: 0 2px 8px rgba(93, 64, 55, 0.2);
 }
 
-.prog-lang-list a {
+.prog__lang-list a {
     font-weight: bold;
     color: #4527a0;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.prog-lang-list a:hover {
+.prog__lang-list a:hover {
     color: #d84315;
 }
 
-.prog-lang-list a::after {
+.prog__lang-list a::after {
     content: "🌐";
     font-weight: normal;
     margin-left: 6px;
     font-size: 0.9em;
 }
 
-.prog-text p:last-child::after {
+.prog__text p:last-child::after {
     content: "";
     display: block;
     text-align: center;
