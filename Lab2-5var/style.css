@@ -1,8 +1,8 @@
-.list-animated li {
+.list--animated li {
     transition: color 0.5s ease-in;
 }
 
-.list-animated li:hover {
+.list--animated li:hover {
     color:red;
 }
 
@@ -40,7 +40,7 @@
 .parents__parent-2 ~.parents__parent-3{
     color:green;
 }
-.text__list{
+.task__list{
     list-style: none;
 }
 a:before{
@@ -51,7 +51,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
-.text__list::after{
+.task__list::after{
     content: "";
     display: inline-block;
     width: 353px;
