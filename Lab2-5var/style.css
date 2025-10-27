@@ -6,41 +6,41 @@
     color:red;
 }
 
-.parent1{
+.parents__parent-1{
     text-align: center;
     margin: 30px auto;
 }
-.parent1_child {
+.parent-1__child {
     padding: 5px;
     color:red;
 }
-.parent2 {
+.parents__parent-2 {
     width: 100px;
     text-align: center;
     margin: 30px auto; 
     color:orange;
 }
-.parent2_child{
+.parent-2__child{
     border: 1px dashed orange;
     border-radius:5px;
     padding: 5px;
     color:#b4005a;
 }
-.parent3{
+.parents__parent-3{
     text-align: center;
     margin: 30px auto;
 }
-.parent3_child{
+.parent-3__child{
     padding: 5px;
 }
-.parent3 .parent2_child {
+.parents__parent-3 .parent-2__child {
   border: none;
   color: purple;
 }
-.parent2 ~.parent3{
+.parents__parent-2 ~.parents__parent-3{
     color:green;
 }
-.text_list{
+.text__list{
     list-style: none;
 }
 a:before{
@@ -51,7 +51,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
-.text_list::after{
+.text__list::after{
     content: "";
     display: inline-block;
     width: 353px;
