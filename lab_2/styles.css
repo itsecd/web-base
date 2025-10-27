@@ -106,10 +106,14 @@ h3 {
   color: var(--c-green);
 }
 
+.family__parent--3 .family__child.family__child--purple {
+  color: var(--c-purple);
+  border-color: var(--c-purple);
+}
+
 .family__child--purple {
-  color: var(--c-purple) !important;
-  border: 1px solid #ddd !important;
-  border-style: solid !important;
+  color: inherit;
+  border-color: #ddd;
 }
 
 .article__text {
