@@ -25,48 +25,59 @@ h2 {
 .list {
   padding-left: 10px;
 }
-.element {
+.list__element {
   font-size: 16px;
   color: black;
   transition: color 0.5s ease;
 }
-.element:hover {
+.list__element:hover {
   color: blue; /* Цвет при наведении */
   cursor: pointer;
 }
 
-.child {
+
+.third-parent__child {
   font-size: 16px;
   padding-left: 10px;
   margin-right: 80%;
 }
 
-.first__parent > .child {
-  color: red;
+.first-parent__child {
+  color: red; 
+  font-size: 16px;
+  padding-left: 10px;
+  margin-right: 80%;
 }
-.second__parent > .child {
-  color: #b4005a;
+.second-parent__child {
+  color: #b4005a; 
+  font-size: 16px;
+  padding-left: 10px;
+  margin-right: 80%;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: orange dashed 2px;
 }
-.last ~ .child {
+.third-parent__child ~ .second-parent__child {
   border: none;
   color: #b4005a;
 }
 
-.second__parent {
+.second-parent {
   color: orange;
 }
-.second__parent + .third__parent {
+.second-parent + .third-parent {
   color: green;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
-.first__parent + .third__parent {
+.first-parent + .third-parent {
   color: black;
 }
 
 .text {
   font-size: 20px;
 }
-.link {
+.text__list__link {
   font-size: 16px;
 }
 
@@ -75,9 +86,12 @@ a {
   text-decoration: none;
   font-weight: bolder;
 }
-.link::before {
+.text__list__link::before {
   content: "🌐";
 }
-.text ~ .list::after {
+.text__list {
+  padding-left: 10px;
+}
+.text__list::after {
   content: url("https://ssau.ru/i/logo/logo-white-ru.svg");
 }
