@@ -1,0 +1,154 @@
+:root {
+  --accent: #1e2963;
+  --border: #ddd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+h1 {
+  margin-bottom: 24px;
+}
+
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+
+.languages__title {
+  margin: 0 0 12px;
+}
+
+.lang-list {
+  list-style: disc inside;
+  padding: 0;
+  margin: 0;
+}
+
+.lang-list__item {
+  cursor: pointer;
+  padding: 6px 4px;
+  margin: 4px 0;
+  transition: color 0.7s ease;
+}
+
+.lang-list__item:hover {
+  color: #ee3030;
+}
+
+
+.family__title {
+  margin: 0 0 12px;
+}
+
+.parent {
+  margin: 16px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.parent__title {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.parent__child {
+  margin: 0;
+}
+
+.parent--type-1 .parent__child {
+  color: red;
+}
+
+.parent--type-2 {
+  color: orange;
+}
+
+.parent--type-2 .parent__child {
+  color: #b4005a;
+  border: 2px dashed orange;
+  padding: 4px 6px;
+  border-radius: 4px;
+  margin: 4px 0;
+}
+
+
+.parent--type-3 {
+  color: green;
+}
+
+.parent--type-3 .parent__child {
+  color: green;
+}
+
+
+.parent--black {
+  color: black !important;
+}
+
+.parent--black .parent__child {
+  color: black !important;
+}
+
+.parent__child--guest {
+  color: purple !important;
+  border: none !important;
+}
+
+.pl__title {
+  margin-bottom: 12px;
+}
+
+.pl__text {
+  margin-bottom: 16px;
+}
+
+.pl-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pl-list__item {
+  margin-bottom: 8px;
+}
+
+.pl-list__link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  position: relative;
+}
+
+.pl-list__link::after {
+  content: "🌐";
+  font-size: 0.9em;
+  margin-left: 0.35em;
+}
+
+.pl-list__link:hover {
+  color: #26dee4;
+}
+
+.pl__badge {
+  margin-top: 16px;
+  padding: 20px;
+  background-color: var(--accent);
+  border-left: 4px solid #0056b3;
+  border-radius: 6px;
+  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  background-size: 150px 40px;
+}
