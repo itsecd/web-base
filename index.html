@@ -1,64 +1,85 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Лабораторная работа 1</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Лабораторная работа 2 — Более сложные ситуации при вёрстке</title>
+  <link rel="stylesheet" href="style1.css"/>
 </head>
 <body>
+  <h1>Более сложные ситуации при вёрстке</h1>
 
-<h1 class="page__title">Лабораторная работа 1</h1>
+  <!-- Задание 1 -->
+  <section class="languages">
+    <h2 class="languages__title">Популярные языки программирования:</h2>
+    <ul class="languages__lang-list">
+      <li class="lang-list__item">Python</li>
+      <li class="lang-list__item">JavaScript</li>
+      <li class="lang-list__item">Java</li>
+      <li class="lang-list__item">C++</li>
+      <li class="lang-list__item">Go</li>
+    </ul>
+  </section>
 
-<!-- Задание 1 -->
-<section class="task task--text">
-    <h2 class="task__title">Задание 1</h2>
-    <div class="text-block">
-        JavaScript (аббр. JS) — мультипарадигменный язык программирования. 
-        Поддерживает объектно-ориентированный, императивный и функциональный стили. 
-        Является реализацией спецификации ECMAScript (стандарт ECMA-262).<br><br>
-        JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. 
-        Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.
+  <!-- Задание 2 -->
+  <section class="family">
+    <h2 class="family__title">Задачка о детях и родителях</h2>
+
+
+    <div class="parent-1">
+      <strong class="parent-1__title">Parent 1</strong>
+      <div class="parent-1__child">child 1</div>
+      <div class="parent-1__child">child 2</div>
+      <div class="parent-1__child">child 3</div>
+      <div class="parent-1__child">child 4</div>
     </div>
-</section>
 
-<!-- Задание 2 -->
-<section class="task task--images">
-    <h2 class="task__title">Задание 2</h2>
-    <div class="image-container">
-        <img src="164648-kot-kotenok-privlekatelnost-golova-glaz-3840x2160.jpg" 
-             alt="Картинка 1" 
-             class="image-container__image">
-        <img src="cd16121609a79d95dffbfa28a326331e.jpg" 
-             alt="Картинка 2" 
-             class="image-container__image">
+
+    <div class="parent-3--black">
+      <strong class="parent-3--black__title">Parent 3</strong>
+      <div class="parent-3--black__child">child 1</div>
+      <div class="parent-3--black__child">child 2</div>
     </div>
-</section>
 
-<!-- Задание 3 -->
-<section class="task task--traffic-light">
-    <h2 class="task__title">Задание 3</h2>
-    <div class="traffic-light">
-        <div class="traffic-light__light traffic-light__light--red"></div>
-        <div class="traffic-light__light traffic-light__light--yellow"></div>
-        <div class="traffic-light__light traffic-light__light--green"></div>
+
+    <div class="parent-2">
+      <strong class="parent-2__title">Parent 2</strong>
+      <div class="parent-2__child">child 1</div>
+      <div class="parent-2__child">child 2</div>
     </div>
-</section>
 
-<!-- Задание 4 -->
-<section class="task task--maze">
-    <h2 class="task__title">Задание 4</h2>
-    <div class="maze">
-        <div class="maze__cell maze__cell--left elem11"></div>
-        <div class="maze__cell maze__cell--top maze__cell--left elem12"></div>
-        <div class="maze__cell maze__cell--top maze__cell--right elem13"></div>
-        <div class="maze__cell maze__cell--bottom maze__cell--left elem21"></div>
-        <div class="maze__cell maze__cell--bottom elem22"></div>
-        <div class="maze__cell maze__cell--left maze__cell--right elem23"></div>
-        <div class="maze__cell maze__cell--bottom maze__cell--left elem31"></div>
-        <div class="maze__cell elem32"></div>
-        <div class="maze__cell maze__cell--right maze__cell--bottom elem33"></div>
+
+    <div class="parent-3">
+      <strong class="parent-3__title">Parent 3</strong>
+      <div class="parent-3__child">child 1</div>
+      <div class="parent-3__child">child 2</div>
+      <div class="parent-2__child">child 2</div> 
     </div>
-</section>
+  </section>
 
+  <!-- Задание 3 -->
+  <section class="pl">
+    <h2 class="pl__title">Языки программирования</h2>
+    <p class="pl__text">
+      Языки программирования — это инструменты, с помощью которых разработчики создают программное обеспечение,
+      веб-приложения, игры, алгоритмы и многое другое. Каждый язык имеет свои особенности, синтаксис и сферу применения.
+      Ниже представлены некоторые из наиболее известных языков:
+    </p>
+
+    <ul class="pl__pl-list">
+      <li class="pl__pl-list-item"><a class="pl__pl-list-link" href="#">Python</a> – высокоуровневый язык с простым синтаксисом.</li>
+      <li class="pl__pl-list-item"><a class="pl__pl-list-link" href="#">JavaScript</a> – основной язык для фронтенд-разработки.</li>
+      <li class="pl__pl-list-item"><a class="pl__pl-list-link" href="#">Java</a> – используется в корпоративных приложениях и Android.</li>
+      <li class="pl__pl-list-item"><a class="pl__pl-list-link" href="#">C++</a> – мощный язык для системного программирования.</li>
+      <li class="pl__pl-list-item"><a class="pl__pl-list-link" href="#">C#</a> – язык от Microsoft.</li>
+      <li class="pl__pl-list-item"><a class="pl__pl-list-link" href="#">Go (Golang)</a> – язык для облачных технологий.</li>
+      <li class="pl__pl-list-item"><a class="pl__pl-list-link" href="#">Ruby</a> – известен благодаря Ruby on Rails.</li>
+      <li class="pl__pl-list-item"><a class="pl__pl-list-link" href="#">Swift</a> – язык Apple для iOS и macOS.</li>
+      <li class="pl__pl-list-item"><a class="pl__pl-list-link" href="#">Kotlin</a> – официальный язык для Android.</li>
+      <li class="pl__pl-list-item"><a class="pl__pl-list-link" href="#">Rust</a> – язык с акцентом на безопасность.</li>
+    </ul>
+
+    <div class="pl__badge"></div>
+  </section>
 </body>
 </html>
