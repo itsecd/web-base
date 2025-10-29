@@ -1,0 +1,105 @@
+.list {
+    padding-left: 0;
+    margin: 0;
+}
+
+.list__item {
+    color: black;
+    cursor: pointer;
+    transition: color 0.6s ease-in-out;
+    list-style: none;
+    margin-bottom: 0.4em;
+}
+
+.list__item:hover {
+    color: #CD5C5C;
+}
+
+.parent-1 {
+    margin-bottom: 1rem;
+}
+
+.parent-1.red {
+    color: red;
+}
+
+.parent-1.red .parent-1__title {
+    color: black;
+}
+
+.parent-1.pink {
+    display: inline-block;
+    color: #b4005a;
+}
+
+.parent-1.pink .parent-1__title {
+    color: orange;
+}
+
+.parent-1.black .parent-1__title,
+.parent-1.black .parent-1__child {
+    color: black;
+}
+
+.parent-1.green .parent-1__title,
+.parent-1.green .parent-1__child {
+    color: green;
+}
+
+.parent-1__child {
+    display: block;
+}
+
+.parent-1__child--first,
+.parent-1__child--second {
+    border: 2px dotted orange;
+    padding: 0.25rem 0.5rem;
+}
+
+.parent-1__child--visited {
+    color: #b4005a;
+}
+
+.centered {
+    margin-left: 45%;
+}
+
+.list--languages {
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 1rem;
+}
+
+.list--languages__item {
+    list-style: none;
+    margin-bottom: 0.5em;
+}
+
+.list--languages__item-link {
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.list--languages__item-link::before {
+    content: "🌐";
+    margin-right: 0.5rem;
+    display: inline-block;
+    font-size: 0.9em;
+    color: #800080;
+}
+
+.list--languages::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 150px;
+    margin-top: 1.25rem;
+    background-color: #007BFF;
+    background-image: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
