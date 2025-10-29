@@ -1,0 +1,165 @@
+:root { 
+  --accent: #1e2963; 
+  --border: #ddd; 
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+h1 { margin-bottom: 24px; }
+
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.languages__title { margin: 0 0 12px; }
+
+.languages__lang-list {
+  list-style: disc inside;
+  padding: 0;
+  margin: 0;
+}
+
+.lang-list__item {
+  cursor: pointer;
+  padding: 6px 4px;
+  margin: 4px 0;
+  transition: color 0.7s ease;
+}
+
+.lang-list__item:hover { color: #ee3030; }
+
+
+.parent-1 {
+  margin: 16px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.parent-1__title {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.parent-1__child {
+  margin: 0;
+  color: red;
+}
+
+.parent-2 {
+  margin: 16px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: orange;
+}
+.parent-2__title {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.parent-2__child {
+  margin: 0;
+  color: #b4005a;
+  border: 2px dashed orange;
+  padding: 4px 6px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+
+.parent-3--black {
+  margin: 16px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: black;
+}
+.parent-3--black__title {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: black;
+}
+.parent-3--black__child {
+  margin: 0;
+  color: black;
+}
+
+.parent-3 {
+  margin: 16px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: green;
+}
+.parent-3__title {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: green;
+}
+.parent-3__child {
+  margin: 0;
+  color: green;
+}
+
+
+.parent-3 .parent-2__child {
+  color: purple;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+.pl__title { margin-bottom: 12px; }
+.pl__text { margin-bottom: 16px; }
+
+.pl__pl-list { list-style: none; padding: 0; margin: 0; }
+.pl__pl-list-item { margin-bottom: 8px; }
+
+.pl__pl-list-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+
+.pl__pl-list-link::before {
+  content: "🌐";
+  font-size: 0.9em;
+}
+
+.pl__pl-list-link:hover { color: #26dee4; }
+
+.pl__badge {
+  position: relative;
+  margin-top: 16px;
+  height: 80px;
+  background-color: var(--accent);
+  border-left: 4px solid #0056b3;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.pl__badge::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  width: 150px;
+  height: 40px;
+  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.95;
+}
