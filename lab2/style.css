@@ -13,7 +13,7 @@
 
 .streaming__list {
     color: rgb(0, 0, 0);
-    padding-left: 0;
+    padding-left: 20px;
 }
 
 .list__item {
@@ -82,7 +82,6 @@
 .parent-3__child {
     padding: 2px 5px;
     margin-bottom: 3px;
-    list-style-type: none;
 }
 
 .parent-1__child {
@@ -111,9 +110,9 @@
     color: black;
 }
 
-.parent-2__child--guest {
-    border: none !important;
-    color: purple !important;
+.parent-3 .parent-2__child {
+    border: none;
+    color: purple;
     margin-top: 3px;
 }
 
@@ -142,20 +141,18 @@
 .item__link {
     text-decoration: none;
     color: black;
+    font-weight: bold; 
 }
 
 .item__link::before {
-     content: "🌐";
+    content: "🌐";
 }
 
 .languages::after {
-    content: "";
+    content: url("https://ssau.ru/i/logo/logo-white-ru.svg");
     display: block;
     margin-top: 20px;
+    filter: invert(1);
     width: 353px;
     height: 105px;
-    background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    filter: invert(1);
 }
