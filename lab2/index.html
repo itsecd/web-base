@@ -8,61 +8,95 @@
 </head>
 <body>
 
-<section class="popular-movies">
-    <h3 class="popular-movies__title">Популярные кинофраншизы:</h3>
-    <ul class="popular-movies__list">
-        <li class="popular-movies__list__item popular-movies__list__item--one">Marvel Cinematic Universe</li>
-        <li class="popular-movies__list__item popular-movies__list__item--two">Звёздные войны</li>
-        <li class="popular-movies__list__item popular-movies__list__item--three">Гарри Поттер</li>
-        <li class="popular-movies__list__item popular-movies__list__item--four">Властелин колец</li>
-        <li class="popular-movies__list__item popular-movies__list__item--five">Джеймс Бонд</li>
+<section class="list-section">
+    <h3 class="list__title">Популярные кинофраншизы:</h3>
+    <ul class="list">
+        <li class="list__item list__item--one">Marvel Cinematic Universe</li>
+        <li class="list__item list__item--two">Звёздные войны</li>
+        <li class="list__item list__item--three">Гарри Поттер</li>
+        <li class="list__item list__item--four">Властелин колец</li>
+        <li class="list__item list__item--five">Джеймс Бонд</li>
     </ul>
 </section>
 
-<section class="task2">
-    <div class="parent red">
-        <h1 class="parent__title">Parent 1</h1>
-        <p class="parent__text">child 1</p>
-        <p class="parent__text">child 2</p>
-        <p class="parent__text">child 3</p>
-        <p class="parent__text">child 4</p>
+<section class="centered">
+    <div class="parent-1 red">
+        <h1 class="parent-1__title">Parent 1</h1>
+        <p class="parent-1__child">child 1</p>
+        <p class="parent-1__child">child 2</p>
+        <p class="parent-1__child">child 3</p>
+        <p class="parent-1__child">child 4</p>
     </div>
 
-    <div class="parent black">
-        <h1 class="parent__title">Parent 3</h1>
-        <p class="parent__text">child 1</p>
-        <p class="parent__text">child 2</p>
+    <div class="parent-1 black">
+        <h1 class="parent-1__title">Parent 2</h1>
+        <p class="parent-1__child">child 1</p>
+        <p class="parent-1__child">child 2</p>
     </div>
 
-    <div class="parent pink">
-        <h1 class="parent__title">Parent 2</h1>
-        <div class="child first"><p class="child__text">child 1</p></div>
-        <div class="child second"><p class="child__text">child 2</p></div>
+    <div class="parent-1 pink">
+        <h1 class="parent-1__title">Parent 3</h1>
+        <div class="parent-1__child parent-1__child--first">
+            <p class="parent-1__child-text">child 1</p>
+        </div>
+        <div class="parent-1__child parent-1__child--second">
+            <p class="parent-1__child-text">child 2</p>
+        </div>
     </div>
 
-    <div class="parent green">
-        <h1 class="parent__title">Parent 3</h1>
-        <p class="parent__text">child 1</p>
-        <p class="parent__text">child 2</p>
-        <div class="visited"><p class="visited__text">child 2</p></div>
+    <div class="parent-1 green">
+        <h1 class="parent-1__title">Parent 4</h1>
+        <p class="parent-1__child">child 1</p>
+        <p class="parent-1__child">child 2</p>
+        <div class="parent-1__child parent-1__child--visited">
+            <p class="parent-1__child-text">child 3</p>
+        </div>
     </div>
 </section>
 
-<section class="task3">
-    <p class="task3__text">Языки программирования — это инструменты, с помощью которых разработчики создают программное обеспечение, веб-приложения, игры, алгоритмы и многое другое. Каждый язык имеет свои особенности, синтаксис и сферу применения. Ниже представлены некоторые из наиболее известных языков:</p>
-    <ul class="task3__list">
-        <li class="task3__item"><a href="#" class="task3__item-link">Python</a> – высокоуровневый язык с простым синтаксисом, популярный в Data Science, веб-разработке и автоматизации.</li>
-        <li class="task3__item"><a href="#" class="task3__item-link">JavaScript</a> – основной язык для фронтенд-разработки, работает в браузерах и на сервере (Node.js).</li>
-        <li class="task3__item"><a href="#" class="task3__item-link">Java</a> – объектно-ориентированный язык, широко используется в корпоративных приложениях и Android-разработке.</li>
-        <li class="task3__item"><a href="#" class="task3__item-link">C++</a> – мощный язык для системного программирования, игр и высокопроизводительных приложений.</li>
-        <li class="task3__item"><a href="#" class="task3__item-link">C#</a> – язык от Microsoft, применяется в разработке под Windows, играх (Unity) и веб-приложениях.</li>
-        <li class="task3__item"><a href="#" class="task3__item-link">Go (Golang)</a> – созданный Google, язык для высоконагруженных сетевых сервисов и облачных технологий.</li>
-        <li class="task3__item"><a href="#" class="task3__item-link">Ruby</a> – известен благодаря фреймворку Ruby on Rails для веб-разработки.</li>
-        <li class="task3__item"><a href="#" class="task3__item-link">Swift</a> – язык Apple для разработки под iOS и macOS.</li>
-        <li class="task3__item"><a href="#" class="task3__item-link">Kotlin</a> – современный язык, официально поддерживаемый для Android-разработки.</li>
-        <li class="task3__item"><a href="#" class="task3__item-link">Rust</a> – язык системного программирования с акцентом на безопасность и производительность.</li>
+<section class="list--languages-section">
+    <p class="list--languages__text">
+        Языки программирования — это инструменты, с помощью которых разработчики создают программное обеспечение,
+        веб-приложения, игры, алгоритмы и многое другое. Каждый язык имеет свои особенности, синтаксис и сферу применения.
+        Ниже представлены некоторые из наиболее известных языков:
+    </p>
+
+    <ul class="list list--languages">
+        <li class="list--languages__item">
+            <a href="#" class="list--languages__item-link">Python</a> – высокоуровневый язык с простым синтаксисом, популярный в Data Science, веб-разработке и автоматизации.
+        </li>
+        <li class="list--languages__item">
+            <a href="#" class="list--languages__item-link">JavaScript</a> – основной язык для фронтенд-разработки, работает в браузерах и на сервере (Node.js).
+        </li>
+        <li class="list--languages__item">
+            <a href="#" class="list--languages__item-link">Java</a> – объектно-ориентированный язык, широко используется в корпоративных приложениях и Android-разработке.
+        </li>
+        <li class="list--languages__item">
+            <a href="#" class="list--languages__item-link">C++</a> – мощный язык для системного программирования, игр и высокопроизводительных приложений.
+        </li>
+        <li class="list--languages__item">
+            <a href="#" class="list--languages__item-link">C#</a> – язык от Microsoft, применяется в разработке под Windows, играх (Unity) и веб-приложениях.
+        </li>
+        <li class="list--languages__item">
+            <a href="#" class="list--languages__item-link">Go (Golang)</a> – созданный Google, язык для высоконагруженных сетевых сервисов и облачных технологий.
+        </li>
+        <li class="list--languages__item">
+            <a href="#" class="list--languages__item-link">Ruby</a> – известен благодаря фреймворку Ruby on Rails для веб-разработки.
+        </li>
+        <li class="list--languages__item">
+            <a href="#" class="list--languages__item-link">Swift</a> – язык Apple для разработки под iOS и macOS.
+        </li>
+        <li class="list--languages__item">
+            <a href="#" class="list--languages__item-link">Kotlin</a> – современный язык, официально поддерживаемый для Android-разработки.
+        </li>
+        <li class="list--languages__item">
+            <a href="#" class="list--languages__item-link">Rust</a> – язык системного программирования с акцентом на безопасность и производительность.
+        </li>
     </ul>
-    <p class="task3__text">Это лишь малая часть из множества существующих языков, и выбор зависит от задач, которые нужно решить.</p>
+
+    <p class="list--languages__text">
+        Это лишь малая часть из множества существующих языков, и выбор зависит от задач, которые нужно решить.
+    </p>
 </section>
 
 </body>
