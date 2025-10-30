@@ -87,7 +87,7 @@ section{
     text-align: center;
 }
 
-.parent-2 ~ .parent-3 .parent-3__child:nth-child(4){
+.parent-2 ~ .parent-3 .parent-2__guest{
     display: block;
     color: purple;
     text-align: center;
