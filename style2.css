@@ -37,7 +37,7 @@ section {
 }
 
 
-.parent-1 .child {
+.parent-1 .parent__child {
     color: red;
 }
 
@@ -48,7 +48,7 @@ section {
 }
 
 
-.parent-2 .child {
+.parent-2 .parent__child {
     color: #b4005a;
     border: 2px dashed orange; 
 }
@@ -58,7 +58,7 @@ section {
     color: green;
 }
 
-.parent-2 ~ .parent-3 .child {
+.parent-2 ~ .parent-3 .parent__child {
     color: green;
 }
 
@@ -67,12 +67,12 @@ section {
     color: initial;
 }
 
-.parent-3:not(.parent-2 ~ .parent-3) .child {
+.parent-3:not(.parent-2 ~ .parent-3) .parent__child {
     color: initial;
 }
 
 
-.parent-3 .guest {
+.parent__child_guest {
     color: purple !important;
     border: none !important;
 }
