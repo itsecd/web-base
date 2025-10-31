@@ -4,7 +4,7 @@ body {
 }
 
 .person-card {
-    width: 40%;
+    width: 50%;
     display: inline-block;
 }
 
@@ -63,4 +63,48 @@ body {
 .hobby-box__public::before {
     content: "Выступления на публику: ";
     color: aqua;
+}
+
+/* Skills */
+.skill-box {
+    width: 60%;
+    height: fit-content;
+    display: inline-block;
+}
+
+.skill-box__hard-skills {
+    width: 50%;
+    display: inline-block;
+}
+
+.skill-box__hard-skills::before {
+    content: "Hard-Skills";
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.skill-box__soft-skills {
+    width: 50%;
+    display: inline-block;
+}
+
+.skill-box__soft-skills::before {
+    content: "Soft-Skills";
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* About me */
+.about-box {
+    display: block;
+    width: 100%;
+    height: fit-content;
+}
+
+.about-box::before {
+    content: "About ME";
+    width: 100%;
+    text-align: center;
 }
