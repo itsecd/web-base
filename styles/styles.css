@@ -1,6 +1,6 @@
 body {
     background-color: #f0b41b;
-    font-size: large;
+    font-size: 3ch;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -27,7 +27,7 @@ body {
     display: inline-block;
     background-size: contain;
     background-position: center;
-    background-image: url('../images/github_logo.jpg');
+    background-image: url('../images/icons/github_logo.jpg');
     background-repeat: no-repeat;
 }
 
@@ -131,6 +131,25 @@ body {
     border-bottom: 3px dashed gold;
 }
 
+.achievements {
+    border: 4px double cadetblue;
+    display: block;
+}
+
+.achievements::before {
+    content: "My Achievements";
+    display: block;
+    white-space: pre;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    border-bottom: 2px double powderblue;
+}
+
+.achievements>img {
+    display: block;
+}
+
 .hard-list {
     list-style: none;
 }
@@ -141,7 +160,7 @@ body {
     width: 20px;
     height: 20px;
     display: inline-block;
-    background-image: url('../images/arrow.png');
+    background-image: url('../images/icons/arrow.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -160,7 +179,7 @@ body {
     width: 20px;
     height: 20px;
     display: inline-block;
-    background-image: url('../images/arrow_pencil.png');
+    background-image: url('../images/icons/arrow_pencil.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
