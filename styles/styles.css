@@ -1,7 +1,6 @@
 body {
     font-family: Arial;
     justify-self: center;
-    justify-items: center;
     width: fit-content;
     height: fit-content;
 }
@@ -48,71 +47,57 @@ h1 {
 
 /* Стили для родителей и детей */
 
-.child-room {
-    width:fit-content;
+.parent__child-room {
+    width: fit-content;
     height: fit-content;
     background-color: white;
     justify-self: center;
     font-weight: bold;
     display: block;
-    alig
 }
 
 
 
-.child {
+.parent__child {
     width: fit-content;
     height: fit-content;
     font-weight: lighter;
 }
 
-.parent1 {
+.parent-1 {
     color: black;
 }
 
-.parent1>.child {
+.parent-1 > .parent__child {
     color: red;
 }
 
-.parent2 {
+.parent-2 {
     color: orange;
 }
 
-.parent2>.child {
+.parent-2 > .parent__child {
     color: #b4005a;
     border-style: dashed;
     border-width: 2px;
     border-color: orange;
 }
 
-.parent3 {
+.parent-3 {
     color: black;
 }
 
-.parent3>.parent2>.child {
+.parent-3 > .parent-2 > .parent__child {
     color: purple;
     border-style: none;
 }
 
-.parent2~.parent3 {
+.parent-2 ~ .parent-3 {
     color: green;
 }
 
 
 /* Стили для текста */
-.hyperlink {
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.hyperlink:after {
-    white-space: nowrap;
-}
-
-.hyperlink:before {
-    content: "🌐";
-}
-
 .language-list:after {
     content: "";
     width: 100%;
@@ -128,4 +113,17 @@ h1 {
 
 .language-list li {
     list-style-type: none;
+}
+
+.language-list__hyperlink {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.language-list__hyperlink:after {
+    white-space: nowrap;
+}
+
+.language-list__hyperlink:before {
+    content: "🌐";
 }
