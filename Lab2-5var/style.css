@@ -52,10 +52,9 @@ a {
     color: inherit;
 }
 .task__list::after{
-    content: "";
     display: inline-block;
     width: 353px;
     height: 105px; 
     background-color: black;
-    background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+    content: url("https://ssau.ru/i/logo/logo-white-ru.svg");
 }
