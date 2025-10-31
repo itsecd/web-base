@@ -1,10 +1,16 @@
 body {
     background-color: #f0b41b;
     font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.row-box {
+    display: inline-flex;
+    width: 100%;
 }
 
 .person-card {
-    width: 50%;
+    width: 30%;
     display: inline-block;
 }
 
@@ -12,6 +18,17 @@ body {
 .person-box {
     font-style: italic;
     border: 3px dotted olive;
+}
+
+.person-box__github::before {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-size: contain;
+    background-position: center;
+    background-image: url('../images/github_logo.jpg');
+    background-repeat: no-repeat;
 }
 
 .person-box__avatar-box {
@@ -69,7 +86,18 @@ body {
 .skill-box {
     width: 60%;
     height: fit-content;
-    display: inline-block;
+    display: block;
+    border: solid purple;
+}
+
+.skill-box::before {
+    content: "MY SKILLS";
+    display: block;
+    white-space: pre;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    border-bottom: 2px double plum;
 }
 
 .skill-box__hard-skills {
@@ -79,25 +107,68 @@ body {
 
 .skill-box__hard-skills::before {
     content: "Hard-Skills";
+    display: block;
     width: 100%;
     text-align: center;
     font-weight: bold;
+    white-space: pre;
+    border-bottom: 3px dashed gold
 }
 
 .skill-box__soft-skills {
     width: 50%;
     display: inline-block;
+    border-left: 2px dashed black;
 }
 
 .skill-box__soft-skills::before {
     content: "Soft-Skills";
+    display: block;
+    white-space: pre;
     width: 100%;
     text-align: center;
     font-weight: bold;
+    border-bottom: 3px dashed gold;
+}
+
+.hard-list {
+    list-style: none;
+}
+
+
+.hard-list>li::before {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-image: url('../images/arrow.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.math-list>li::marker {
+    content: "∫ ";
+}
+
+.soft-list {
+    list-style: none;
+}
+
+.soft-list>li::before {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-image: url('../images/arrow_pencil.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* About me */
 .about-box {
+    border: dashed white;
     display: block;
     width: 100%;
     height: fit-content;
@@ -105,6 +176,8 @@ body {
 
 .about-box::before {
     content: "About ME";
+    display: block;
     width: 100%;
     text-align: center;
+    font-weight: bold;
 }
