@@ -2,6 +2,10 @@ body {
     background-color: #f0b41b;
     font-size: 3ch;
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../images/wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .row-box {
@@ -69,17 +73,17 @@ body {
 
 .hobby-box__math::before {
     content: "Математика: ";
-    color: aqua;
+    color: grey;
 }
 
 .hobby-box__tourism::before {
     content: "Пешеходный туризм: ";
-    color: aqua;
+    color: grey;
 }
 
 .hobby-box__public::before {
     content: "Выступления на публику: ";
-    color: aqua;
+    color: grey;
 }
 
 /* Skills */
