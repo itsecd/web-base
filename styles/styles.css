@@ -99,8 +99,8 @@ h1 {
     border-color: orange;
 }
 
-.parent-2>.parent-3__child_guest{
-    color:yellow;
+.parent-2>.parent-3__child_guest {
+    color: yellow;
 }
 
 .parent-3 {
