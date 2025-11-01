@@ -1,0 +1,103 @@
+* {
+  font-size: 25px;
+}
+
+body {
+  font-weight: 500;
+}
+
+.titl {
+  font-size: 9px;
+  text-align: center;
+  padding: 3px 8px;
+  border-radius: 9px;
+  max-width: 3000px;
+}
+
+.popular-streaming-service {
+  display: inline-block;
+  text-align: left;
+  padding: 0;
+  margin-top: -3px;
+}
+
+.popular-streaming-service li {
+  list-style-position: inside;
+  transition: color 0.3s ease-in-out;
+  padding: 8px 0;
+  cursor: pointer;
+  margin-top: -7px;
+}
+
+.popular-streaming-service li:hover {
+  color: #03bbb2;
+}
+
+.parent-1 .child {
+  color: red;
+  margin-left: -45px;
+}
+
+.parent-3 .child {
+  margin-left: -45px;
+}
+
+.parent-2 {
+  color: orange
+}
+
+.parent-2 .child {
+  color: #b4005a;
+  border-top: 2px dashed orange;
+  border-right: 2px dashed orange;
+  border-bottom: 2px dashed orange;
+  border-left: 2px dashed orange;
+  line-height: 70px;
+  height: 70px;
+  width: 100px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.parent-3 .child_guest {
+  color: purple;
+  margin-left: -45px;
+}
+
+.parent-2~.parent-3,
+.parent-2~.parent-3 .child {
+  color: green;
+}
+
+.programming-languages {
+  padding-left: 25px;
+  display: inline-block;
+  text-align: left;
+  margin-top: -7px;
+}
+
+.programming-languages a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+}
+
+.programming-languages a::after {
+  content: "🌐";
+  font-size: 0.9em;
+  margin-left: 4px;
+}
+
+.programming-languages::after {
+  content: "";
+  display: block;
+  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  background-position: center;
+  background-size: 90px;
+  background-repeat: no-repeat;
+  background-color: #006dc0;
+  padding: 25px;
+  border-radius: 0px;
+  margin-top: 7px;
+  margin-bottom: -10px;
+}
