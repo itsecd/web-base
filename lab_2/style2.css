@@ -1,0 +1,59 @@
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 40px;
+    color: aquamarine;
+    background-color: black;
+}
+a, input, textarea, select, button{
+    color:aquamarine;
+}
+.link{
+    font-weight: bold;
+    text-decoration: none;
+}
+.link::before{
+    content:"🔗";
+}
+.task-header{
+    text-align: left;
+    margin: 10px auto;
+}
+.streaming-services{
+    padding:10px 0;
+}
+.streaming-services__item{
+    margin:3px 10px;
+    transform: color ease 0,3s;
+}
+.streaming-services__item:hover{
+    color: aqua;
+}
+.family{
+    margin: 10px auto;
+}
+.family__parent{
+    margin: 10px auto;
+}
+.family__child{
+    display: inline-block;
+    border: 2px dashed transparent;
+    padding:2px;
+    margin: 5px auto;
+}
+.family__parent--1 .family__child{
+    color: red;
+}
+.family__parent--2 {
+    color: orange;
+}
+.family__parent--2 .family__child{
+    color:#b4005a;
+    border-color: orange;
+}
+.family__parent--2 ~ .family__parent--3,
+.family__parent--2 ~ .family__parent--3 .family__child{
+    color: greenyellow;
+}
+.family__parent--2 ~ .family__parent--3 .family__child--from-2{
+    color: blueviolet;
+}
