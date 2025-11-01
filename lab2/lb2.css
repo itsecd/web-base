@@ -26,32 +26,35 @@ h2 { margin: 16px 0 8px; }
 }
 
 /*Задание 2*/
-.family {}
-.family__parent {
+.family {
+  margin: 20px 0;
+  display: inline-block;
+  text-align: center;
+}
+.family__parent-1__child {
+  color: red;
+}
+.family__parent-2{
+  color: orange;
   border: 2px dashed transparent; 
   padding: 8px;
-  margin: 14px 0;
+  margin: 12px 0;
 }
-.family__title { margin: 0 0 6px; }
-.family__child {
-  display: block;
-  margin: 4px 0;
-  border: 2px dashed transparent; 
+.family__parent-2__child {
+  color: #b4005a;
+  border: 2px dashed orange; 
   padding: 2px 6px;
+  margin: 3px 0;
 }
 
-.family__parent--1 .family__child { color: red; }
-.family__parent--2 { color: orange; border-color: orange; }
-.family__parent--2 .family__child { color: #b4005a; border-color: orange; }
-
-.family__parent--2 ~ .family__parent--3,
-.family__parent--2 ~ .family__parent--3 .family__child {
+.family__parent-2 ~ .family__parent-3,
+.family__parent-2 ~ .family__parent-3 .family__parent-3__child {
   color: green;
 }
 
-.family__parent--3 .family__child--from-second {
+.family__parent-3__child--from-second {
   color: purple;
-  border-color: transparent;
+  border: none !important;
 }
 
 /*Задание 3*/
@@ -74,18 +77,18 @@ h2 { margin: 16px 0 8px; }
   margin-bottom: 16px;
 }
 
-.languages__list {
+.languages__lang-list {
   list-style: none;
   padding: 0;
   margin: 0;
   width: 100%;
 }
 
-.languages__item {
+.lang-list__item {
   margin-bottom: 8px;
 }
 
-.languages__link {
+.item__link {
   font-weight: bold;
   text-decoration: none;
   color: #000000;
@@ -95,42 +98,32 @@ h2 { margin: 16px 0 8px; }
   gap: 0.35em;
 }
 
-.languages__link:visited {
+.item__link:visited {
   color: rgb(115, 43, 115);
 }
 
-.languages__link::before {
+.item__link::before {
   content: "🌐";
   font-size: 0.9em;
   font-family: "Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif;
 }
 
-.languages__link:hover {
+.item__link:hover {
   color: rgb(0, 8, 255);
 }
 
-.languages__badge {
-  position: relative;
-  margin-top: 25px;
-  width: 100%;
-  height: 80px;
-  background-color: #1e2963;
-  border-left: 4px solid #0056b3;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.languages__badge::before {
+.languages::after {
   content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 170px;
-  height: 45px;
+  display: block;
+  margin-top: 25px;
+  max-width: 700px;
+  width: 100%;
+  height: 70px;
+  background-color: #1e2963;
   background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 180px auto;
   background-position: center;
-  opacity: 1;
+  border-left: 4px solid #0056b3;
+  border-radius: 6px;
 }
