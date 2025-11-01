@@ -81,22 +81,27 @@
     font-weight: bold;
 }
 
-.languages__link {
+.item__link {
     color: inherit;
     text-decoration: none;
     font-weight: 700;
 }
 
-    .languages__link::before {
+    .item__link::before {
         content: '🌐 ';
     }
 
 
 .languages::after {
-    content: url('https://ssau.ru/i/logo/logo-ru.svg'); 
+    content: url('https://ssau.ru/i/logo/logo-ru.svg');
     display: block;
     margin-top: 20px;
     height: 40px;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .parent--first .parent__child--first {
@@ -119,7 +124,6 @@
     color: green;
 }
 
-    /* Дополнительные вложенные стили при необходимости */
     .parent--third .parent--second .parent__child--second {
         color: purple !important;
         border: none !important;
