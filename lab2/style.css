@@ -17,16 +17,16 @@ body{
     color: blue;
 }
 
-.Parent-1__child{
+.parent-1__child{
     color: red;
 }
 
-.Parent-2{
+.parent-2{
     color: orange;
     width: auto;
 }
 
-.Parent-2__child{
+.parent-2__child{
     color: #b4005a;
     padding: 16px;
     border: 1px dashed orange;
@@ -36,15 +36,15 @@ body{
     box-sizing: border-box;    
 }
 
-.Parent-2 ~ .Parent-3{
+.parent-2 ~ .parent-3{
     color: green;
 }
 
-.Parent-2 ~.Parent-3:not(.Parent-2~ .Parent-3){
+.parent-2 ~.parent-3:not(.parent-2~ .parent-3){
 
 }
 
-.Parent-3>.Parent-2__child{
+.parent-3>.parent-2__child{
     color: purple;
     border: none;
     padding: 0;
