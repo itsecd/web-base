@@ -1,0 +1,99 @@
+.resume {
+  display: flex;
+  flex-direction: column;
+  background-color: darkgrey;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 20px;
+  gap: 20px;
+  height: fit-content;
+  width: fit-content;
+}
+
+.resume__head {
+  display: flex;
+  align-items: flex-start;
+  border: 5px, dashed;
+  border-color: darkgreen;
+  background-color: darkseagreen;
+  border-radius: 10px;
+  padding: 20px;
+  gap: 20px;
+  height: fit-content;
+  width: fit-content;
+}
+
+.resume__body {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  padding: 20px;
+}
+
+.resume__body > * {
+  border: 2px, dashed;
+  border-color: darkmagenta;
+  background-color: tan;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.head__image {
+  width: 100px;
+  height: 150px;
+  border-radius: 30%;
+  border: 2px solid;
+  border-color: blue;
+}
+
+.head__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.info__fullname {
+  flex: 1;
+}
+
+.info__birthday {
+  flex: 1;
+}
+
+.fullname__h,
+.birthday__h {
+  color: gray;
+  font-size: 14px;
+  margin: 0 0 5px 0;
+}
+
+.fullname__p,
+.birthday__p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.resume__body > * > h3 {
+  font-size: 14px;
+  margin: 0 0 5px 0;
+}
+
+.resume__body > * > p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.skills__p--bold {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.git__link {
+  font-size: 14px;
+  margin: 0;
+}
