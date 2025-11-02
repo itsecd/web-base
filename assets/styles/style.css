@@ -1,14 +1,22 @@
 .list-header {
-    margin-top: auto;
+    margin-top: 20px;
     margin-bottom: 5px;
 }
 
-.services-list {
+.services {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+}
+
+.services-list,
+.languages-list {
     margin: auto;
 }
 
 .services-list li {
     color: rgb(0, 0, 0);
+    width: max-content;
     transition: color 0.5s ease;
 }
 
@@ -62,4 +70,33 @@
 .parent-3 > .parent-2__child {
     border: none;
     color: purple;
+}
+
+.languages-list li {
+    margin: auto;
+}
+
+.languages-list li a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.languages-list li a::after {
+    content: "🌐";
+}
+
+.languages::after {
+  content: "";
+  display: block;
+  margin-top: 10px;
+  max-width: 700px;
+  width: 100%;
+  height: 70px;
+  background-color: #2d1add;
+  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  background-repeat: no-repeat;
+  background-size: 180px auto;
+  background-position: center;
+  border-radius: 6px;
 }
