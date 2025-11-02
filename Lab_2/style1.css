@@ -1,0 +1,211 @@
+* { 
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  background-color: #dcc0ee;
+}
+
+h1 { 
+  margin-bottom: 24px; 
+  color: #3D5D93;
+  background-color: #6F4700;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #d7a6ee;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.596);
+}
+
+.languages_title { 
+  margin: 0 0 12px; 
+}
+
+.languages_lang_list {
+  list-style: disc inside;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+
+.lang_list_item {
+  cursor: pointer;
+  padding: 0px 4px;
+  margin: 4px 0;
+  transition: color 1s ease;
+}
+
+/* .lang_list_item:hover { 
+  color: #24c997; 
+} */
+
+/* Задание 2: Родители и дети */
+
+.parent_1 {
+  margin: 16px 0;
+  padding: 4px 8px;
+}
+
+.parent_1_title {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.parent_1_child {
+  margin: 0;
+  color: red;
+}
+
+.parent_2 {
+  margin: 16px 0;
+  padding: 4px 8px;
+  color: orange;
+}
+
+.parent_2_title {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.parent_2_child {
+  margin: 0;
+  color: #b4005a;
+  border: 10px dashed orange;
+  padding: 6px 6px;
+  border-radius: 30px;
+  margin-top: 4px;
+}
+
+.parent_3_black {
+  margin: 16px 0;
+  padding: 4px 8px;
+}
+
+.parent_3_black_title {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: black;
+}
+
+.parent_3_black_child {
+  margin: 0;
+  color: black;
+}
+
+.parent_3 {
+  margin: 16px 0;
+  padding: 4px 8px;
+  color: green;
+}
+
+.parent_3_title {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: green;
+}
+
+.parent_3_child {
+  margin: 0;
+  color: green;
+}
+
+/* Дети второго родителя, когда находятся в третьем родителе */
+.parent_3 .parent_2_child {
+  color: purple;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Задание 3: Ссылки и логотип */
+
+.pl_title { 
+  margin-bottom: 12px; 
+}
+
+.pl_text { 
+  margin-bottom: 16px; 
+}
+
+.pl_pl_list { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+}
+
+.pl_pl_list_item { 
+  margin-bottom: 8px; 
+}
+
+.pl_pl_list_link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.pl_pl_list_link::before {
+  content: "🌐";
+  font-size: 1em;
+}
+
+.pl_pl_list_link:hover { 
+  color: #2659e4; 
+}
+
+.pl_badge {
+  position: relative;
+  margin-top: 16px;
+  height: 80px;
+  background-color: #920e2b;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.pl_badge::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  width: 150px;
+  height: 40px;
+  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+
+.lang_list_item:hover {
+  text-shadow: 0 0 10px currentColor;
+  animation: colorChange 3s infinite ease-in-out;
+}
+
+@keyframes colorChange {
+    10%  { color: #da1c1c; }   
+    20%  { color: #ff8800; } 
+    30%  { color: #e9ec10; }  
+    40%  { color: #7ecc19; } 
+    50%  { color: #00ff40; } 
+    60%  { color: #28f1f8; }
+    70%  { color: #1316d8; }
+    80%  { color: #ae00ff; }
+    90%  { color: #4d066e; }
+    100% { color: #d87777; }
+}
