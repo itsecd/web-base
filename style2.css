@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #fafafa;
+  color: #333;
+}
+
+h2 {
+  margin-top: 30px;
+  color: #2c3e50;
+}
+
+.music-genres {
+  list-style: none;
+  padding-left: 0;
+}
+
+.music-genres__item {
+  color: #333;
+  font-size: 18px;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 6px;
+  transition: color 0.4s ease-out, background-color 0.4s ease;
+  cursor: pointer;
+}
+
+.music-genres__item:hover {
+  color: #e63946;
+  background-color: #fff8f8;
+}
+
+.family {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.family__title {
+  margin: 0 0 10px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.family--type-1 .family__child {
+  color: red;
+}
+
+.family--type-2 {
+  color: orange;
+}
+.family--type-2 .family__child {
+  color: #b4005a;
+  border: 1px dashed orange;
+  padding: 6px;
+  margin: 4px 0;
+  border-radius: 4px;
+}
+
+.family--type-2 ~ .family--type-3 .family__child {
+  color: green;
+}
+
+.family--type-2 ~ .family--type-3 .family__child--guest {
+  color: purple;
+  border: none;
+  background-color: transparent;
+}
+
+.lang-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.lang-list__link {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+.lang-list__link:hover {
+  color: #2a7ae2;
+}
+
+.lang-list__link::after {
+  content: " 🌐";
+  font-weight: normal;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.lang-list::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 60px;
+  background-image: url('https://samgtu.ru/local/templates/sstu/images/logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 25px auto;
+  opacity: 0.9;
+}
