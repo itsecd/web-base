@@ -73,24 +73,6 @@ section {
   margin-top: 4px;
 }
 
-
-.parent-3--black {
-  margin: 16px 0;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  color: black;
-}
-.parent-3--black__title {
-  display: inline-block;
-  margin-bottom: 8px;
-  color: black;
-}
-.parent-3--black__child {
-  margin: 0;
-  color: black;
-}
-
 .parent-3 {
   margin: 16px 0;
   padding: 12px;
@@ -109,6 +91,14 @@ section {
 }
 
 
+.parent-3.black {
+  color: black;
+}
+.parent-3.black .parent-3__title,
+.parent-3.black .parent-3__child {
+  color: black;
+}
+
 .parent-3 .parent-2__child {
   color: purple;
   border: none;
@@ -119,10 +109,15 @@ section {
 .pl__title { margin-bottom: 12px; }
 .pl__text { margin-bottom: 16px; }
 
-.pl__pl-list { list-style: none; padding: 0; margin: 0; }
+.pl__pl-list { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0;
+  position: relative;
+}
 .pl__pl-list-item { margin-bottom: 8px; }
 
-.pl__pl-list-link {
+.pl__pl-list-item__link {
   font-weight: bold;
   text-decoration: none;
   color: #333;
@@ -132,34 +127,24 @@ section {
   gap: 0.35em;
 }
 
-
-.pl__pl-list-link::before {
+.pl__pl-list-item__link::before {
   content: "🌐";
   font-size: 0.9em;
 }
 
-.pl__pl-list-link:hover { color: #26dee4; }
+.pl__pl-list-item__link:hover { color: #26dee4; }
 
-.pl__badge {
-  position: relative;
+.pl__pl-list::after {
+  content: "";
+  display: block;
   margin-top: 16px;
   height: 80px;
   background-color: var(--accent);
   border-left: 4px solid #0056b3;
   border-radius: 6px;
-  overflow: hidden;
-}
-.pl__badge::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%);
-  width: 150px;
-  height: 40px;
   background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
+  background-position: 16px center;
   opacity: 0.95;
 }

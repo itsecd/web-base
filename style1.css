@@ -3,7 +3,9 @@
   --border: #ddd; 
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -11,7 +13,9 @@ body {
   margin: 20px;
 }
 
-h1 { margin-bottom: 24px; }
+h1 {
+  margin-bottom: 24px;
+}
 
 section {
   margin-bottom: 40px;
@@ -20,7 +24,11 @@ section {
   border-radius: 8px;
 }
 
-.languages__title { margin: 0 0 12px; }
+/* ====== Задание 1 ====== */
+
+.languages__title {
+  margin: 0 0 12px;
+}
 
 .languages__lang-list {
   list-style: disc inside;
@@ -35,8 +43,11 @@ section {
   transition: color 0.7s ease;
 }
 
-.lang-list__item:hover { color: #ee3030; }
+.lang-list__item:hover {
+  color: #ee3030;
+}
 
+/* ====== Задание 2 ====== */
 
 .parent-1 {
   margin: 16px 0;
@@ -44,15 +55,18 @@ section {
   border: 1px solid #ccc;
   border-radius: 6px;
 }
+
 .parent-1__title {
   display: inline-block;
   margin-bottom: 8px;
 }
+
 .parent-1__child {
   margin: 0;
   color: red;
 }
 
+/* Parent 2 */
 .parent-2 {
   margin: 16px 0;
   padding: 12px;
@@ -60,10 +74,12 @@ section {
   border-radius: 6px;
   color: orange;
 }
+
 .parent-2__title {
   display: inline-block;
   margin-bottom: 8px;
 }
+
 .parent-2__child {
   margin: 0;
   color: #b4005a;
@@ -73,23 +89,7 @@ section {
   margin-top: 4px;
 }
 
-
-.parent-3--black {
-  margin: 16px 0;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  color: black;
-}
-.parent-3--black__title {
-  display: inline-block;
-  margin-bottom: 8px;
-  color: black;
-}
-.parent-3--black__child {
-  margin: 0;
-  color: black;
-}
+/* ====== Parent 3 (база — зелёный) ====== */
 
 .parent-3 {
   margin: 16px 0;
@@ -98,29 +98,57 @@ section {
   border-radius: 6px;
   color: green;
 }
+
 .parent-3__title {
   display: inline-block;
   margin-bottom: 8px;
   color: green;
 }
+
 .parent-3__child {
   margin: 0;
   color: green;
 }
 
-
+/* если внутри .parent-3 встретится .parent-2__child — перекрасить */
 .parent-3 .parent-2__child {
   color: purple;
   border: none;
   padding: 0;
   margin: 0;
 }
- 
-.pl__title { margin-bottom: 12px; }
-.pl__text { margin-bottom: 16px; }
 
-.pl__pl-list { list-style: none; padding: 0; margin: 0; }
-.pl__pl-list-item { margin-bottom: 8px; }
+/* ====== ВАЖНО: это правило должно перебить всё выше ====== */
+/* первый .parent-3 в .family — чёрный */
+section.family > .parent-3:first-of-type {
+  color: black !important;
+}
+
+/* и его заголовок, и его дети — тоже чёрные */
+section.family > .parent-3:first-of-type .parent-3__title,
+section.family > .parent-3:first-of-type .parent-3__child {
+  color: black !important;
+}
+
+/* ====== Задание 3 ====== */
+
+.pl__title {
+  margin-bottom: 12px;
+}
+
+.pl__text {
+  margin-bottom: 16px;
+}
+
+.pl__pl-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pl__pl-list-item {
+  margin-bottom: 8px;
+}
 
 .pl__pl-list-link {
   font-weight: bold;
@@ -132,13 +160,14 @@ section {
   gap: 0.35em;
 }
 
-
 .pl__pl-list-link::before {
   content: "🌐";
   font-size: 0.9em;
 }
 
-.pl__pl-list-link:hover { color: #26dee4; }
+.pl__pl-list-link:hover {
+  color: #26dee4;
+}
 
 .pl__badge {
   position: relative;
@@ -149,6 +178,7 @@ section {
   border-radius: 6px;
   overflow: hidden;
 }
+
 .pl__badge::before {
   content: "";
   position: absolute;
