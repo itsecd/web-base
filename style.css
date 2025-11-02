@@ -1,0 +1,153 @@
+body {
+    background-color: rgb(240, 247, 249);
+    color: rgb(14, 6, 6);
+}
+
+.animated {
+    list-style: inside;
+    margin: 0;
+    padding: 0;
+}
+
+.animated-title{
+    text-align: center;
+}
+
+.animated-list{
+    display: center;
+}
+
+.animated-item {
+    margin: auto;
+    font-size: 1.15em;
+    color: rgb(14, 6, 6);
+    cursor: pointer;
+    text-align: center;
+    transition: color 0.5s ease;
+}
+
+.animated-item:hover {
+    color: #4a60e0;
+}
+
+.family {
+    padding: 10px;
+    color:black;
+    margin: auto;
+    max-width: 100px;
+}
+
+.parent h3 {
+    text-align: center;     
+    font-size: 1.15em;       
+    margin: 10px;       
+}
+
+.parent ul {
+    text-align: center; 
+    list-style: none;       
+    padding: 0;             
+    margin: 0;                  
+}
+
+.parent__child {
+    font-size: 0.5em; 
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+.parent-1 .parent-1__child{
+    color: red;
+}
+
+.parent-2 h3{
+    color: orange;
+}
+
+.parent-2 .parent-2__child{
+    color: #b4005a;
+    border: 2px dashed orange;
+}
+
+.parent-3 h3 {
+    color: black;
+}
+
+.parent-3 .parent-3__child{
+    color: black;
+}
+
+.parent-2 + .parent-3 h3 {
+    color: green;
+}
+
+.parent-2 + .parent-3 .parent-3__child:nth-child(n+3){
+    color: #b4005a;
+}
+
+.parent-2 + .parent-3 .parent-3__child{
+    color: green;
+}
+
+.ssau-block{
+    color: rgb(14, 6, 6);
+    background-color: rgb(180, 231, 132);
+    padding: 25px 10px;
+    max-width: 750px;
+    margin: auto;
+    border-radius: 0px;
+}
+
+.ssau-block-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+}
+
+.ssau-block-list a {
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(14, 6, 6);
+    position: relative;
+}
+
+.ssau-block__title {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0 0 15px;
+  color: rgb(14, 6, 6);
+}
+
+.ssau-block__text {
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0 0 20px;
+  color: rgb(14, 6, 6);
+}
+
+.ssau-block-item {
+  margin: 10px 0;
+  padding: 2px;
+}
+
+.ssau-block-list a::before {
+    content: "🌐";
+    font-weight: 350;
+    font-size: 0.7em;
+    opacity: 0.5;
+}
+
+.ssau-block-list li {
+    margin-bottom: 5px;
+}
+
+.ssau-block::after {
+    content: "";
+    display: block;
+    height: 75px;
+    width: 200px;
+    margin: 15px;
+    background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
