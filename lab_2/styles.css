@@ -10,28 +10,28 @@
   color: #f4bc92;
 }
 
-.parent_2 {
+.parent-2 {
   color: #f4bc92;
 }
 
-.parent_1 .child {
+.parent-1 .parent_child {
   color: red;
   width: 50px;
 }
 
-.parent_2 .child {
+.parent-2 .parent_child {
   color: #b4005a;
   border-style: dotted;
   border-color: #f4bc92;
   width: 50px;
 }
 
-.parent_2 ~ .parent_3,
-.parent_2 ~ .parent_3 .child {
+.parent-2 ~ .parent-3,
+.parent-2 ~ .parent-3 .parent_child {
   color: green;
 }
 
-.parent_3 .child_2_guest {
+.parent-2 ~ .parent-3 .parent_child_guest-from-2 {
   color: purple;
 }
 
