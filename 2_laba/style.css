@@ -1,0 +1,97 @@
+.animated-list li {
+  transition: all 0.3s ease;
+}
+
+.animated-list li:hover {
+  transform: translateX(10px);
+  color: #aa02fe;
+  font-weight: bold;
+}
+
+.programming-languages a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.programming-languages a::before {
+  content: "🌐";
+  color: blue;
+}
+
+.programming-languages::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-image: url("https://ssau.ru/i/logo/logo-ru.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 10px;
+}
+
+
+.family {
+    font-family: sans-serif;
+    padding: 20px;
+    color: #333;
+    max-width: 100px;
+    margin: auto;
+}
+
+.parent h3 {
+    text-align: center;     
+    font-size: 1.2em;       
+    margin: 0 0 12px;       
+}
+
+.parent ul {
+    list-style: none;       
+    padding: 0;             
+    margin: 0;              
+    text-align: center;     
+}
+
+.parent {
+    margin-bottom: 24px;
+}
+
+.parent__child {
+    padding: 4px 8px;
+    margin: 4px 0;
+    font-size: 0.7em; 
+}
+
+.parent-1 .parent-1__child{
+    color: red;
+}
+
+.parent-2 h3{
+    color: orange;
+}
+
+.parent-2 .parent-2__child{
+    color: #8f1093;
+    border: 2px dashed orange;
+}
+
+.parent-3 h3 {
+    color: rgb(0, 0, 0);
+}
+
+.parent-3 .parent-3__child{
+    color: black;
+}
+
+.parent-2 + .parent-3 h3 {
+    color: green;
+}
+
+.parent-2 + .parent-3 .parent-3__child:nth-child(n+3){
+    color: rgb(166, 27, 166);
+}
+
+.parent-2 + .parent-3 .parent-3__child{
+    color: green;
+}
