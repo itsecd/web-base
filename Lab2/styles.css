@@ -1,0 +1,71 @@
+﻿body {
+    font-size: 25px;
+}
+
+
+.list-item {
+    transition: 0.4s;
+}
+.list-item:hover{
+    color: red;
+}
+
+
+.families {
+    display: inline-block;
+    text-align: center;
+}
+.parent-1, .parent-2, .parent-3{
+    font-size: 30px;
+    margin: 20px;
+}
+.parent-1-child, .parent-2-child, .parent-3-child{
+    font-size: 20px;
+}
+.parent-1 {
+    font-family: Times New Roman;
+}
+.parent-1-child {
+    color: red;
+    margin: 15px;
+}
+.parent-2 {
+    color: orange;
+    font-family: Jokerman;
+}
+.parent-2-child {
+    border: dashed orange;
+    color: #b4005a;
+    font-family: Jokerman;
+    margin: 5px;
+}
+.parent-3 {
+    font-family: Impact;
+}
+.parent-3-child {
+    font-family: Impact;
+    margin: 10px;
+}
+.parent-2 ~ .parent-3 {
+    color: green;
+}
+.parent-3 .parent-2-child{
+    border: none;
+    color: purple;
+}
+
+
+#langs a{
+    color: black;
+    font-weight:bold;
+    text-decoration: none;
+}
+#langs a::before{
+    content: "🌐";
+}
+#langs::after::after {
+    content: "";
+    background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+    background-position: center;
+    background-size: contain;
+}
