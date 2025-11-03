@@ -1,158 +1,157 @@
-body 
-{
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Задание 1: Стилизация списка игр */
+.games-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 300px;
+}
+
+.games-list__item {
+    margin: 10px 0;
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: color 0.5s ease;
+}
+
+.games-list__item:hover {
+    color: #ff4500;
+}
+
+.parent_1 {
+  margin: 16px 0;
+  padding: 4px 8px;
+}
+
+.parent_1_title {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.parent_1_child {
   margin: 0;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-}
-
-.container 
-{
-  max-width: 1000px;
-  margin: 0 auto;
-  background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-}
-
-h1, h2, h3, h4 
-{
-  color: #333;
-}
-
-section 
-{
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-/* Задание 1:  */
-.games-list 
-{
-  list-style-type: none;
-  padding: 0;
-  max-width: 300px;
-}
-
-.games-list li 
-{
-  margin: 10px 0;
-  padding: 10px 15px;
-  background-color: #f9f9f9;
-  border-radius: 5px;
-  transition: color 0.5s ease;
-}
-
-.games-list li:hover 
-{
-  color: #ff4500;
-}
-
-/* Задание 2: */
-.parent
- {
-  margin: 20px 0;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.child 
-{
-  padding: 8px;
-  margin: 5px 0;
-  border: 1px solid transparent;
-}
-
-
-#parent-1 .child 
-{
   color: red;
 }
 
-
-#parent-2 
-{
+.parent_2 {
+  margin: 16px 0;
+  padding: 4px 8px;
   color: orange;
-  
 }
 
-#parent-2 .child
- {
+.parent_2_title {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.parent_2_child {
   color: #b4005a;
-  border: 1px dashed orange;
+    border: 1px dashed orange;
 }
 
-#parent-2 h4
- {
-  color: orange;
+
+.parent_3_black {
+  margin: 16px 0;
+  padding: 4px 8px;
 }
 
-#parent-3
- {
+.parent_3_black_title {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: black;
+}
+
+.parent_3_black_child {
+  margin: 0;
+  color: black;
+}
+
+.parent_3 {
+  margin: 16px 0;
+  padding: 4px 8px;
   color: green;
 }
 
-#parent-3 h4 
-{
+.parent_3_title {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: bold;
   color: green;
 }
 
-#parent-2 ~ #parent-3,
-#parent-2 ~ #parent-3 .child
- {
+.parent_3_child {
+  margin: 0;
   color: green;
 }
 
-
-#parent-1 + #parent-3,
-#parent-1 + #parent-3 .child 
-{
-  color: initial;
-}
-
-#parent-3:has(~ #parent-2) .child 
-{
-  color: green;
-}
-
-#parent-3 #parent-2 .child
- {
-  border: none;
+/* Дети второго родителя, когда находятся в третьем родителе */
+.parent_3 .parent_2_child {
   color: purple;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Задание 3:  */
-.programming-text
- {
-  line-height: 1.6;
+
+/* Задание 3: Стилизация текста о языках программирования */
+.app-section {
+    line-height: 1.6;
 }
 
-.programming-text a 
-{
-  font-weight: bold;
-  text-decoration: none;
-  color: inherit;
+.programming-languages {
+    list-style-type: none;
+    padding: 0;
 }
 
-.programming-text a::after 
-{
-  content: "🌐";
-  margin-left: 5px;
+.programming-languages__item {
+    margin-bottom: 10px;
 }
 
-.programming-text::after 
-{
-  content: "Самарский Университет";
-  display: block;
-  width: 200px;
-  height: 60px;
-  margin-top: 30px;
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  line-height: 60px;
-  font-weight: bold;
-  border-radius: 5px;
+.programming-languages__link {
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+}
+
+.programming-languages__link::after {
+    content: "🌐";
+    margin-left: 5px;
+}
+
+.app-section::after {
+    content: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+    display: block;
+    width: 370px;
+    height: auto;
+    background-color: #12519a;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 3px;
 }
