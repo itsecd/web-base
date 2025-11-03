@@ -1,0 +1,84 @@
+.heading {
+    font-size: 21px;
+    margin-left: 5px;
+}
+
+/* Задание 1 */
+.animated-list {
+    padding-left: 0;
+}
+
+.animated-list li {
+    position: relative;
+    margin: 5px 0;
+    transition: color 1s ease;
+}
+
+.animated-list li:hover {
+    color: #e74c3c;
+}
+
+/* Задание 2 */
+.parent {
+    margin: 20px 0;
+    padding: 15px;
+}
+
+.parent__title {
+    margin: 0 0 10px;
+    font-weight: bold;
+}
+
+.parent__child {
+    margin: 5px 0;
+    padding: 5px 10px;
+}
+
+/* Parent 1*/
+.parent--first .parent__child {
+    color: red;
+}
+
+/* Parent 2 */
+.parent--second .parent__title {
+    color: orange;
+}
+
+.parent--second .parent__children-wrapper {
+    border: 2px dotted orange;
+    display: inline-block;
+}
+
+.parent--second .parent__child {
+    color: #b4005a;
+    padding: 4px 8px;
+}
+
+.parent--second .parent__child + .parent__child {
+    border-top: 2px dotted orange;
+}
+
+/* Parent 3 */
+.parent--second ~ .parent--third .parent__title,
+.parent--second ~ .parent--third .parent__child {
+    color: green;
+}
+
+.parent--third .parent__child:nth-child(4) {
+    color: purple;
+}
+
+/* Задание 3 */
+.language-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+.language-link::after {
+    content: "🌐";
+    margin-left: 5px;
+    font-size: 0.9em;
+    vertical-align: middle;
+}
