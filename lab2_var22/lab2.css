@@ -27,24 +27,24 @@
     row-gap: 5px; 
 }
 
-.parent-1 > [class^="child-"] {
+.parents__parent-1 > [class^="child-"] {
     color: red;
 }
 
-.parent-2 {
+.parents__parent-2 {
     color: orange;
 }
 
-.parent-2 > [class^="child-"] {
+.parents__parent-2 > [class^="child-"] {
     color: #b4005a;
     border: dotted orange;
 }
 
-.parent-2 + .parent-3 {
+.parents__parent-2 + .parents__parent-3 {
     color: green;
 }
 
-.parent-3 .parent-2 {
+.parents__parent-3 .parents__parent-2 {
     color: purple;
     border: none;
 }
