@@ -48,16 +48,15 @@ h2 {
   color: #b87de5;
 }
 
-/* === Задание 2: наследование и приоритеты === */
-.parent-1 .child {
+.parent--1 .parent__child {
   color: red;
 }
 
-.parent-2 {
+.parent--2 {
   color: orange;
 }
 
-.parent-2 .child {
+.parent--2 .parent__child {
   color: #b4005a;
   border: 2px dashed orange;
   max-width: 60px;
@@ -65,14 +64,14 @@ h2 {
   padding: 2px;
 }
 
-.parent-2 ~ .parent-3,
-.parent-2 ~ .parent-3 .child {
+.parent--2 ~ .parent--3,
+.parent--2 ~ .parent--3 .parent__child {
   color: green;
 }
 
-.guest {
-  border: none !important;
-  color: purple !important;
+.parent--2 ~ .parent--3 .parent__child.parent__child_guest {
+  border: none;
+  color: purple;
 }
 
 .programming-languages a {
