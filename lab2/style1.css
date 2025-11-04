@@ -78,18 +78,15 @@ section {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  color: green;
 }
-.parent-3__title {
-  display: inline-block;
-  margin-bottom: 8px;
-  color: green;
-}
+.parent-3__title,
 .parent-3__child {
-  margin: 0;
-  color: green;
+  color: inherit;
 }
 
+.parent-2 + .parent-3 { color: green; }
+.parent-2 + .parent-3 .parent-3__title,
+.parent-2 + .parent-3 .parent-3__child { color: green; }
 
 .parent-3.black {
   color: black;
@@ -117,7 +114,7 @@ section {
 }
 .pl__pl-list-item { margin-bottom: 8px; }
 
-.pl__pl-list-item__link {
+.pl-list-item__link {
   font-weight: bold;
   text-decoration: none;
   color: #333;
@@ -127,12 +124,12 @@ section {
   gap: 0.35em;
 }
 
-.pl__pl-list-item__link::before {
+.pl-list-item__link::before {
   content: "🌐";
   font-size: 0.9em;
 }
 
-.pl__pl-list-item__link:hover { color: #26dee4; }
+.pl-list-item__link:hover { color: #26dee4; }
 
 .pl__pl-list::after {
   content: "";
