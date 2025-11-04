@@ -1,0 +1,135 @@
+body {
+  background: #fff0f6;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  color: #4a0433;
+}
+
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 50px rgba(255, 105, 180, 0.2);
+  border-left: 5px solid #ec4899;
+}
+
+h1 {
+  text-align: center;
+  color: #be185d;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #f472b6;
+}
+
+h2 {
+  border-left: 4px solid #f472b6;
+  padding-left: 15px;
+  background: #ffe4ec;
+  color: #a21caf;
+  margin: 0 0 14px;
+}
+
+.tasks {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #fff5f9;
+  border-radius: 10px;
+}
+
+.simple-list {
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+.simple-list li {
+  color: #500724;
+  transition: color 0.3s ease-in-out;
+  margin: 8px 0;
+  font-weight: 600;
+}
+.simple-list li:hover {
+  color: #db2777;
+}
+
+.parent-1 .child {
+  color: #e11d48;
+}
+.parent-2 {
+  color: #db2777;
+}
+.parent-2 .child {
+  color: #b91c1c;
+  border: 2px dashed #f9a8d4;
+  max-width: 140px;
+  margin: 6px 0;
+  padding: 6px;
+}
+.parent-2 ~ .parent-3,
+.parent-2 ~ .parent-3 .child {
+  color: #9d174d;
+}
+.guest {
+  border: none !important;
+  color: #be185d !important;
+}
+
+.programming-languages {
+  margin: 0 0 0 20px;
+  padding: 0;
+  list-style: disc;
+}
+
+.programming-languages li {
+  margin: 10px 0;
+  line-height: 1.45;
+}
+
+.pl-link {
+  text-decoration: none !important;
+  color: #831843;
+  font-weight: bold;
+}
+.pl-link::after {
+  content: "🌐";
+  font-size: 0.9em;
+  margin-left: 6px;
+}
+.programming-languages::after {
+  content: "";
+  display: block;
+  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  background-position: center;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-color: #0e4c92;
+  padding: 20px;
+  border-radius: 4px;
+  margin-top: 10px;
+  width: 140px;
+  height: 72px;
+}
+
+.note {
+  color: #9d174d;
+  margin-top: 12px;
+}
+
+.cta {
+  margin-top: 14px;
+}
+
+.pinterest-link {
+  display: inline-block;
+  background: #ec4899;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.pinterest-link:hover {
+  opacity: 0.95;
+  background: #db2777;
+}
