@@ -55,17 +55,22 @@
 }
 
 
-#langs a{
+.langs a{
     color: black;
     font-weight:bold;
     text-decoration: none;
 }
-#langs a::before{
+.langs a::before{
     content: "🌐";
 }
-#langs::after::after {
+.langs::after {
     content: "";
+    display: block;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #1596d1;
     background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
     background-position: center;
     background-size: contain;
+    background-repeat: no-repeat;
 }
