@@ -52,7 +52,7 @@ h2 { margin: 16px 0 8px; }
   color: green;
 }
 
-.family__parent-3__child--from-second {
+.family__parent-2__child--guest {
   color: purple;
   border: none !important;
 }
@@ -113,17 +113,13 @@ h2 { margin: 16px 0 8px; }
 }
 
 .languages::after {
-  content: "";
+  content: url("https://ssau.ru/i/logo/logo-white-ru.svg");
   display: block;
-  margin-top: 25px;
-  max-width: 700px;
   width: 100%;
-  height: 70px;
-  background-color: #1e2963;
-  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
-  background-repeat: no-repeat;
-  background-size: 180px auto;
-  background-position: center;
-  border-left: 4px solid #0056b3;
+  margin: 30px;
+  line-height: 0;
+  text-align: center;
   border-radius: 6px;
+  background-color: #1e2963;
+  padding: 12px 0;
 }
