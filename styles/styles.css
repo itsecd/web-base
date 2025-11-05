@@ -1,5 +1,5 @@
 body {
-    background-color: #f0b41b;
+    background-color: grey;
     font-size: 3ch;
     font-family: Arial, Helvetica, sans-serif;
     background-image: url("../images/wallpaper.jpg");
@@ -88,7 +88,7 @@ body {
 
 /* Skills */
 .skill-box {
-    width: 60%;
+    width: 70%;
     height: fit-content;
     display: block;
     border: solid purple;
