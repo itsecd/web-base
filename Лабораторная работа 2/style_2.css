@@ -16,17 +16,17 @@
     font-size: 1.1em;
 }
 
-.parent--type-1 .parent__item
+.parent_type-1 .parent__item
 {
     color: red;
 }
 
-.parent--type-2 .parent__title
+.parent_type-2 .parent__title
 {
     color: orange;
 }
 
-.parent--type-2 .parent__item
+.parent_type-2 .parent__item
 {
     color: #b4005a;
     border: 1px dotted orange;
@@ -35,17 +35,17 @@
     padding-bottom: 15px;
 }
 
-.parent--type-2 + .parent--type-3 .parent__title
+.parent_type-2 ~ .parent_type-3 .parent__title
 {
     color: green;
 }
 
-.parent--type-2 + .parent--type-3 .parent__item
+.parent_type-2 ~ .parent_type-3 .parent__item
 {
     color: green;
 }
 
-.parent--type-3 .parent__item + .parent--type-2 .parent__item
+.parent_type-3 .parent__item ~ .parent_type-2
 {
     border: none;
     color: purple;
