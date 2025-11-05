@@ -1,12 +1,13 @@
-.animated-list li {
+.animated-list__item {
   transition: all 0.3s ease;
 }
 
-.animated-list li:hover {
+.animated-list__item:hover {
   transform: translateX(10px);
   color: #aa02fe;
   font-weight: bold;
 }
+
 
 .programming-languages a {
     text-decoration: none;
@@ -20,17 +21,10 @@
 }
 
 .programming-languages::after {
-    content: "";
+    content: url("https://ssau.ru/i/logo/logo-ru.svg");
     display: block;
-    width: 100px;
-    height: 100px;
-    background-image: url("https://ssau.ru/i/logo/logo-ru.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 10px;
+    width: 80px;
 }
-
 
 .family {
     font-family: sans-serif;
@@ -41,7 +35,7 @@
 }
 
 .parent h3 {
-    text-align: center;     
+    text-align: center;
     font-size: 1.2em;       
     margin: 0 0 12px;       
 }
@@ -88,10 +82,10 @@
     color: green;
 }
 
-.parent-2 + .parent-3 .parent-3__child:nth-child(n+3){
-    color: rgb(166, 27, 166);
+.parent-2 + .parent-3 .parent-3__child {
+  color: green;
 }
 
-.parent-2 + .parent-3 .parent-3__child{
-    color: green;
+.parent-2 + .parent-3 .parent-3__child--visited {
+  color: rgb(166, 27, 166);
 }
