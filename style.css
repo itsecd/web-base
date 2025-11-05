@@ -3,30 +3,30 @@ body {
     color: rgb(14, 6, 6);
 }
 
-.animated {
+.animated-sports-list {
     list-style: inside;
     margin: 0;
     padding: 0;
 }
 
-.animated-title{
+.animated-sports-list__title{
     text-align: center;
 }
 
-.animated-list{
+.animated-sports-list__list{
     display: center;
 }
 
-.animated-item {
+.animated-sports-list__item {
     margin: auto;
     font-size: 1.15em;
     color: rgb(14, 6, 6);
     cursor: pointer;
     text-align: center;
-    transition: color 0.5s ease;
+    transition: color 1s ease;
 }
 
-.animated-item:hover {
+.animated-sports-list__item:hover {
     color: #4a60e0;
 }
 
@@ -98,13 +98,13 @@ body {
     border-radius: 0px;
 }
 
-.ssau-block-list {
+.ssau-block__list {
   list-style: none;
   padding: 0;
   margin: 10px;
 }
 
-.ssau-block-list a {
+.ssau-block__list a {
     font-weight: 700;
     text-decoration: none;
     color: rgb(14, 6, 6);
@@ -125,19 +125,19 @@ body {
   color: rgb(14, 6, 6);
 }
 
-.ssau-block-item {
-  margin: 10px 0;
+.ssau-block-list__item {
+  margin: 10px;
   padding: 2px;
 }
 
-.ssau-block-list a::before {
-    content: "🌐";
+.ssau-block__list a::before {
+    content: "🌐 ";
     font-weight: 350;
     font-size: 0.7em;
     opacity: 0.5;
 }
 
-.ssau-block-list li {
+.ssau-block__list li {
     margin-bottom: 5px;
 }
 
@@ -147,7 +147,5 @@ body {
     height: 75px;
     width: 200px;
     margin: 15px;
-    background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+    content: url("https://ssau.ru/i/logo/logo-ru.svg");
 }
