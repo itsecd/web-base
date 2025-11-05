@@ -1,11 +1,11 @@
-.sport-list li {
+.sport-list__item {
     transition: all 2s;
     cursor: pointer;
     list-style: none;
     line-height: 1.5;
 }
 
-.sport-list li:hover {
+.sport-list__item:hover {
     color: red;
 }
 
@@ -50,12 +50,12 @@
     height: 100px;
 }
 
-.progr-langs__list > li > a {
+.progr-langs__list__item > a {
     text-decoration: none;
     color: #000;
     font-weight: bold;
 }
 
-.progr-langs__list > li > a::before {
+.progr-langs__list__item > a::before {
     content: "🌐";
 }
