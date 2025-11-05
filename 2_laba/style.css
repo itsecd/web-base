@@ -3,6 +3,7 @@ body {
     color: black;
 }
 
+
 .animated-list {
     list-style: disc inside;
     margin: 0;
@@ -10,14 +11,17 @@ body {
     font-family: sans-serif;
 }
 
+
 .animated-list__title{
     text-align: center;
     font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
+
 .animated-list__list {
   display: block;
 }
+
 
 .animated-list__item {
     margin: 8px 0;
@@ -28,9 +32,11 @@ body {
     text-align: center;
 }
 
+
 .animated-list__item:hover {
     color: #12dbbd;
 }
+
 
 .family {
     font-family: sans-serif;
@@ -72,7 +78,7 @@ body {
 }
 
 .parent-2 .parent-2__child{
-    color: #b4005a;
+    color: #8f1093;
     border: 2px dashed orange;
 }
 
@@ -88,13 +94,14 @@ body {
     color: green;
 }
 
-.parent-2 + .parent-3 .parent-3__child:nth-child(n+3){
-    color: rgb(166, 27, 166);
+.parent-2 + .parent-3 .parent-3__child {
+  color: green;
 }
 
-.parent-2 + .parent-3 .parent-3__child{
-    color: green;
+.parent-2 + .parent-3 .parent-3__child--visited {
+  color: rgb(166, 27, 166);
 }
+
 
 
 .ssau-block{
@@ -107,18 +114,21 @@ body {
     font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
-.ssau-block__lang-list {
+
+.lang-list {
   list-style: none;
   padding: 0;
   margin: 12px;
 }
 
-.ssau-block__lang-list a {
+
+.lang-list a {
     font-weight: 700;
     text-decoration: none;
     color: white;
     position: relative;
 }
+
 
 .ssau-block__title {
   text-align: center;
@@ -128,6 +138,7 @@ body {
 }
 
 
+
 .ssau-block__description {
   font-size: 1em;
   line-height: 1.6;
@@ -135,31 +146,29 @@ body {
   color: #bdc3c7;
 }
 
-.ssau-block__lang-list-item {
+
+.lang-list__item {
   margin: 12px 0;
   padding: 10px;
 }
 
-.ssau-block__lang-list a::before {
-    content: " 🔗";
 
+.lang-list a::before {
+    content: " 🔗";
     font-weight: 400;
     opacity: 0.85;
     font-size: 0.9em;
 }
 
-.ssau-block__lang-list li {
+
+.lang-list li {
     margin-bottom: 10px;
 }
 
+
 .ssau-block::after {
-    content: "";
+    content: url("https://ssau.ru/i/logo/logo-white-ru.svg");
     display: block;
     width: 220px;
-    height: 56px;
     margin: 20px 0 0;
-    background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left center;
 }
