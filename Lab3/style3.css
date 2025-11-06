@@ -138,13 +138,13 @@ body{
 .list__dot--green{background:#19c48b}
 .list__dot--purple{background:#a78bfa}
 
-.lang{display:grid;gap:10px;font-size:13px}
-.lang__lang-item{
+.card__lang{display:grid;gap:10px;font-size:13px}
+.card__lang-item{
   display:flex;
   align-items:center;
   justify-content:space-between;
 }
-.lang__lang-item small{color:var(--muted)}
+.card__lang-item small{color:var(--muted)}
 
 .cv__main{
     padding: 28px 28px 40px;
