@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -69,37 +68,43 @@ h3 {
     border-radius: 8px;
 }
 
-.child {
+
+.parent-1__child {
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 4px;
+    color: red;
+}
+
+.parent-2 {
+    color: orange;
+}
+
+.parent-2__child {
+    padding: 6px 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    color: #b4085a;
+    border: 2px dashed orange;
+}
+
+.parent-2 ~ .parent-3 {
+    color: green;
+}
+
+.parent-2 ~ .parent-3 .parent-3__child {
+    color: green;
+}
+
+.parent-3__child {
     padding: 8px 12px;
     margin: 5px 0;
     border-radius: 4px;
 }
 
 
-.parent-1 .child {
-    color: red;
-}
-
-
-.parent-2 {
-    color: orange;
-}
-
-.parent-2 .child {
-    color: #b4085a;
-    border: 2px dashed orange;
-    padding: 6px 10px;
-}
-
-
-.parent-2 ~ .parent-3,
-.parent-2 ~ .parent-3 .child {
-    color: green;
-}
-
-
-.parent-3 .parent-2 .child,
-.parent-2 .child ~ .parent-3 .child {
+.parent-3 .parent-2__child,
+.parent-2__child ~ .parent-3 .parent-3__child {
     color: purple;
     border: none;
     padding: 8px 12px;
@@ -111,50 +116,43 @@ h3 {
     color: #333;
 }
 
-.languages-list {
+.programming-text__languages-list {
     list-style: none;
     padding: 0;
 }
 
-.languages-list li {
+.languages-list__item {
     margin-bottom: 15px;
-    padding-left: 25px;
+    padding-left: 30px;
     position: relative;
 }
 
-.languages-list li::before {
-    content: "•";
-    color: #666;
-    position: absolute;
-    left: 10px;
-}
-
-.languages-list__link {
-    font-weight: bold;
-    color: inherit;
-    text-decoration: none;
-    position: relative;
-    padding-right: 20px;
-}
-
-.languages-list__link::after {
+.languages-list__item::before {
     content: "🔍";
     position: absolute;
-    right: 0;
-    font-size: 12px;
+    left: 5px;
+    top: 2px;
+    font-size: 14px;
     opacity: 0.7;
 }
 
-.languages-list__link:hover {
+.languages-item__link {
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+}
+
+.languages-item__link:hover {
     color: #007bff;
 }
 
 
-.languages-list::after {
-    content: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+.programming-text__languages-list::after {
+    content: "";
     display: block;
     width: 200px;
     height: 60px;
     margin: 30px auto 0;
-    text-align: center;
+    background: url('https://ssau.ru/i/logo/logo-white-ru.svg') center/contain no-repeat;
+    filter: brightness(0.2);
 }
