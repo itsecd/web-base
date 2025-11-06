@@ -6,7 +6,7 @@ body {
   font-weight: 500;
 }
 
-.titl {
+.page__title {
   font-size: 9px;
   text-align: center;
   padding: 3px 8px;
@@ -14,14 +14,14 @@ body {
   max-width: 3000px;
 }
 
-.popular-film-franchises {
+.film-list {
   display: inline-block;
   text-align: left;
   padding: 0;
   margin-top: -3px;
 }
 
-.popular-film-franchises li {
+.film-list__item {
   list-style-position: inside;
   transition: color 0.3s ease-in-out;
   padding: 8px 0;
@@ -29,24 +29,24 @@ body {
   margin-top: -7px;
 }
 
-.popular-film-franchises li:hover {
+.film-list__item:hover {
   color: #6a009e;
 }
 
-.parent-1 .child {
+.parent--1 .parent__child {
   color: red;
   margin-left: -45px;
 }
 
-.parent-3 .child {
+.parent--3 .parent__child {
   margin-left: -45px;
 }
 
-.parent-2 {
+.parent--2 {
   color: orange
 }
 
-.parent-2 .child {
+.parent--2 .parent__child {
   color: #b4005a;
   border-top: 2px dashed orange;
   border-right: 2px dashed orange;
@@ -59,36 +59,36 @@ body {
   margin: 0 auto;
 }
 
-.parent-3 .child_guest {
-  color: purple;
+.parent--3 .parent__child--guest1 {
+  color: purple !important;
   margin-left: -45px;
 }
 
-.parent-2~.parent-3,
-.parent-2~.parent-3 .child {
+.parent--2~.parent--3,
+.parent--2~.parent--3 .parent__child {
   color: green;
 }
 
-.programming-languages {
+.language-list {
   padding-left: 25px;
   display: inline-block;
   text-align: left;
   margin-top: -7px;
 }
 
-.programming-languages a {
+.language-list__link {
   text-decoration: none;
   color: inherit;
   font-weight: 700;
 }
 
-.programming-languages a::after {
+.language-list__link::after {
   content: "🌐";
   font-size: 0.9em;
   margin-left: 4px;
 }
 
-.programming-languages::after {
+.language-list::after {
   content: "";
   display: block;
   background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
@@ -102,6 +102,7 @@ body {
   margin-bottom: -10px;
 }
 
-
-
-
+.parent--3 .parent__child--parent-guest {
+  color: olive !important;
+  margin-left: 25px;
+}
