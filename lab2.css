@@ -29,6 +29,7 @@ h1 {
     border: 2px;
     border-style: dotted;
     border-color: orange;
+    width: fit-content;
 }
 .parent-2+.parent-3{
     color: green;
@@ -44,10 +45,10 @@ h1 {
     list-style-type: none;
     padding-left: 20px;
 }
-.task-3__item::before{
+.task-3-list__item::before{
     content: "🌐";
 }
-.task-3__link{
+.item__link{
     list-style: none;
 }
 a{
