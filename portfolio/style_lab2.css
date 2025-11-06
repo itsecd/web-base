@@ -183,7 +183,7 @@ h3 {
     border-radius: 5px;
 }
 
-.fixed-button {
+.container__return-button {
     position: fixed;
     left: 20px;
     bottom: 20px;
@@ -198,7 +198,7 @@ h3 {
     z-index: 1000;
 }
 
-.fixed-button:hover {
+.container__return-button:hover {
     background-color: #c0392b;
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);

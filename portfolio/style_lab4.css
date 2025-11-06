@@ -5,7 +5,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
+.page {
     background: linear-gradient(135deg, #d0eb49 0%, #fc5e25 100%);
     color: #333;
     min-height: 100vh;
@@ -15,16 +15,16 @@ body {
     padding: 20px;
 }
 
-.calculator-container {
+.page__calculator-container {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     padding: 30px;
     width: 100%;
-    max-width: 550px;
+    max-width: 600px;
 }
 
-h1 {
+.page__calculator-container_title {
     text-align: center;
     margin-bottom: 25px;
     color: #2c3e50;
@@ -38,19 +38,18 @@ h1 {
     margin-bottom: 25px;
 }
 
-.input-group {
+.calculator__input-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-label {
+.calculator__input-group_label {
     font-weight: 600;
     color: #2c3e50;
 }
 
-input,
-select {
+.calculator__input-group_text {
     padding: 12px 15px;
     border: 2px solid #e0e0e0;
     border-radius: 8px;
@@ -58,14 +57,13 @@ select {
     transition: all 0.3s;
 }
 
-input:focus,
-select:focus {
+.calculator__input-group_text:focus {
     border-color: #3498db;
     outline: none;
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
-button {
+.calculator_calculate-button {
     background: #193a50;
     color: white;
     border: none;
@@ -78,20 +76,22 @@ button {
     margin-top: 10px;
 }
 
-button:hover {
+.calculator_calculate-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-button:active {
+.calculator_calculate-button:active {
     transform: translateY(0);
 }
 
-.result {
+.calculator__result-text {
     margin-top: 15px;
-}
-
-#result {
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
     background-color: #f8f9fa;
     font-weight: bold;
     color: #2c3e50;
@@ -110,7 +110,7 @@ button:active {
     display: none;
 }
 
-.fixed-button {
+.page__return-button {
     position: fixed;
     left: 20px;
     bottom: 20px;
@@ -125,7 +125,7 @@ button:active {
     z-index: 1000;
 }
 
-.fixed-button:hover {
+.page__return-button:hover {
     background-color: #c0392b;
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
