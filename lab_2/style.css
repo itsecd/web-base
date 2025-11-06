@@ -19,7 +19,7 @@ body {
   display: block;
 }
 
-.animated-list__item {
+.animated-list__list__item {
     margin: 8px 0;
     font-size: 1.1em;
     color: #000000;
@@ -28,7 +28,7 @@ body {
     text-align: center;
 }
 
-.animated-list__item:hover {
+.animated-list__list__item:hover {
     color: #4ae05b;
 }
 
@@ -144,9 +144,13 @@ body {
 }
 
 
-.ssau-block__lang-list-item {
+.lang-list__lang-list-item {
   margin: 12px 0;
   padding: 10px;
+}
+
+.ssau-block__lang-list a:hover {
+    box-shadow: 0px 4px 5px #07d5ff;
 }
 
 .ssau-block__lang-list a::before {
