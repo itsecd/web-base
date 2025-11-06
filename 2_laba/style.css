@@ -47,7 +47,7 @@ body {
 }
 
 .parent h3 {
-    text-align: center;     
+    text-align: center;
     font-size: 1.2em;       
     margin: 0 0 12px;       
 }
@@ -77,9 +77,12 @@ body {
     color: orange;
 }
 
-.parent-2 .parent-2__child{
+.parent-2 li{
+    border: 2px dashed #ffa500;
+}
+
+.parent-2__child{
     color: #8f1093;
-    border: 2px dashed orange;
 }
 
 .parent-3 h3 {
@@ -96,10 +99,6 @@ body {
 
 .parent-2 + .parent-3 .parent-3__child {
   color: green;
-}
-
-.parent-2 + .parent-3 .parent-3__child--visited {
-  color: rgb(166, 27, 166);
 }
 
 
