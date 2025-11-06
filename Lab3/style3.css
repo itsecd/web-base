@@ -59,7 +59,7 @@ body{
 
 }
 
-.card{
+.cv__card{
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -102,7 +102,7 @@ body{
   text-transform:uppercase;
 }
 
-.skill{
+.card__skill{
     margin-top: 10px;
 }
 
@@ -111,7 +111,7 @@ body{
     margin: 12px 0 6px;
 }
 
-.skills__list{
+.skill__list{
     display: block;
 }
 
@@ -151,11 +151,11 @@ body{
     background-color: #ffffff;
 }
 
-.cv__main-header{
+.main__header{
     border-bottom:1px solid var(--line);
 }
 
-.main-header__name{
+.header_name{
     margin:0;
     padding:26px 28px;
     font-size:44px;
@@ -164,9 +164,9 @@ body{
     letter-spacing:.02em;
 }
 
-.main-header__name span{display:block}
+.main__header span{display:block}
 
-.intro{
+.cv__intro{
     padding: 12px 0 0;
     border-bottom:1px solid var(--line);
 }
@@ -189,7 +189,7 @@ body{
     font-size:20px;
 }
 
-.contact{
+.cv__contact{
   display:grid;
   gap:10px;
   margin-top:12px;
@@ -209,7 +209,7 @@ body{
   font-size:18px;
   margin:18px 0 8px;
 } 
-.list{list-style:none;margin:0;padding:0}
+.edu__list{list-style:none;margin:0;padding:0}
 .list__item{
   padding:14px 0;
   border-bottom:1px solid var(--line);
