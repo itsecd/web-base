@@ -14,14 +14,14 @@ body {
   max-width: 3000px;
 }
 
-.popular-stream-services {
+.stream-services {
   display: inline-block;
   text-align: left;
   padding: 0;
   margin-top: -3px;
 }
 
-.popular-stream-services li {
+.stream-services__item {
   list-style-position: inside;
   transition: color 0.3s ease-in-out;
   padding: 8px 0;
@@ -29,29 +29,26 @@ body {
   margin-top: -7px;
 }
 
-.popular-stream-services li:hover {
+.stream-services__item:hover {
   color: #6a009e;
 }
 
-.parent-1 .child {
+.parent_1 .parent__child_from-1 {
   color: red;
   margin-left: -45px;
 }
 
-.parent-3 .child {
+.parent_3 .parent__child_from-3 {
   margin-left: -45px;
 }
 
-.parent-2 {
+.parent_2 {
   color: orange;
 }
 
-.parent-2 .child {
+.parent_2 .parent__child_from-2 {
   color: #b4005a;
-  border-top: 2px dashed orange;
-  border-right: 2px dashed orange;
-  border-bottom: 2px dashed orange;
-  border-left: 2px dashed orange;
+  border: 2px dashed orange;
   line-height: 70px;
   height: 70px;
   width: 100px;
@@ -59,28 +56,28 @@ body {
   margin: 0 auto;
 }
 
-.parent-2 .child_guest1 {
+.parent_2 .parent__child_guest-1 {
   color: olive;
   margin-left: -45px;
-
 }
 
 
-.parent-3 .child_guest2 {
-  color: purple;
+.parent_3 .parent__child_guest-2 {
+  color: purple !important;
   margin-left: -45px;
 }
 
-.parent-3 .child_guest1 {
-  color: yellow;
+.parent_3 .parent__child_guest-1 {
+  color: yellow !important;
   margin-left: -45px;
-
 }
 
-.parent-2 ~ .parent-3,
-.parent-2 ~ .parent-3 .child {
+
+.parent_2 ~ .parent_3,
+.parent_2 ~ .parent_3 .parent__child_from-3 {
   color: green;
 }
+
 
 .programming-languages {
   padding-left: 25px;
@@ -89,13 +86,13 @@ body {
   margin-top: -7px;
 }
 
-.programming-languages a {
+.programming-languages__link {
   text-decoration: none;
   color: inherit;
   font-weight: 700;
 }
 
-.programming-languages a::after {
+.programming-languages__link::after {
   content: "🌐";
   font-size: 0.9em;
   margin-left: 4px;
