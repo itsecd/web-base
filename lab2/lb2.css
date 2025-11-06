@@ -31,28 +31,32 @@ h2 { margin: 16px 0 8px; }
   display: inline-block;
   text-align: center;
 }
-.family__parent-1__child {
+.parent-1__child {
   color: red;
 }
+.parent-3__child {
+  color:black ;
+}
+
 .family__parent-2{
   color: orange;
   border: 2px dashed transparent; 
   padding: 8px;
   margin: 12px 0;
 }
-.family__parent-2__child {
-  color: #b4005a;
+
+.parent-2__child {
+  color: purple;
   border: 2px dashed orange; 
   padding: 2px 6px;
   margin: 3px 0;
 }
-
-.family__parent-2 ~ .family__parent-3,
-.family__parent-2 ~ .family__parent-3 .family__parent-3__child {
+.parent-3-green .parent__title,
+.parent-3-green .parent-3__child {
   color: green;
 }
 
-.family__parent-2__child--guest {
+.parent-3-green .parent-2__child {
   color: purple;
   border: none !important;
 }
