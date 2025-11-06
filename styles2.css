@@ -1,0 +1,172 @@
+/* styles.css */
+
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.task {
+    margin-bottom: 50px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.task__title {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.task__subtitle {
+    margin-bottom: 15px;
+    color: #34495e;
+    font-size: 1.1rem;
+}
+
+/* Задание 1: Анимированный список */
+.animated-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.animated-list__item {
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.animated-list__item:hover {
+    color: #e74c3c;
+}
+
+/* Задание 2: Дети и родители */
+.parents-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.parent {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.parent__title {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.parent__children {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.child {
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+/* Все дети первого родителя красные */
+.parent--1 .child {
+    color: red;
+}
+
+/* Второй родитель оранжевый, его дети с пунктирной границей */
+.parent--2 {
+    color: orange;
+}
+
+.parent--2 .child {
+    color: #b4005a;
+    border: 1px dashed orange;
+}
+
+/* Третий родитель и его дети зеленые, но только если идут после вторых */
+.parent--3-after {
+    color: green;
+}
+
+.parent--3-after .child {
+    color: green;
+}
+
+/* Дети второго, приходящие в гости к третьему */
+.child--visiting {
+    color: purple !important;
+    border: none !important;
+}
+
+/* Задание 3: Языки программирования */
+.text-content {
+    line-height: 1.7;
+}
+
+.languages-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.languages-list__item {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.languages-list__item::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+.languages-list__link {
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+}
+
+.languages-list__link::after {
+    content: "🌐";
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+.languages-list__link:hover {
+    text-decoration: underline;
+}
+
+/* Логотип Самарского университета после всего текста */
+.text-content::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 60px;
+    margin: 30px auto 0;
+    background-image: url('https://ssau.ru/i/logo/logo-ru.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px;
+}
