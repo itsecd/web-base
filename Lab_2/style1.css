@@ -25,59 +25,56 @@ section {
   background-color: rgba(255, 255, 255, 0.596);
 }
 
-.languages_title { 
+.languages__title { 
   margin: 0 0 12px; 
 }
 
-.languages_lang_list {
+.languages__lang_list {
   list-style: disc inside;
   padding: 0;
   margin: 0;
   font-size: 20px;
 }
 
-.lang_list_item {
+.lang_list__item {
   cursor: pointer;
   padding: 0px 4px;
   margin: 4px 0;
   transition: color 1s ease;
 }
 
-/* .lang_list_item:hover { 
-  color: #24c997; 
-} */
 
 /* Задание 2: Родители и дети */
 
-.parent_1 {
+.parent-1 {
   margin: 16px 0;
   padding: 4px 8px;
 }
 
-.parent_1_title {
+.parent-1__title {
   display: inline-block;
   margin-bottom: 8px;
   font-weight: bold;
 }
 
-.parent_1_child {
+.parent-1__child {
   margin: 0;
   color: red;
 }
 
-.parent_2 {
+.parent-2 {
   margin: 16px 0;
   padding: 4px 8px;
   color: orange;
 }
 
-.parent_2_title {
+.parent-2__title {
   display: inline-block;
   margin-bottom: 8px;
   font-weight: bold;
 }
 
-.parent_2_child {
+.parent-2__child {
   margin: 0;
   color: #b4005a;
   border: 10px dashed orange;
@@ -86,43 +83,43 @@ section {
   margin-top: 4px;
 }
 
-.parent_3_black {
+.parent-3-black {
   margin: 16px 0;
   padding: 4px 8px;
 }
 
-.parent_3_black_title {
+.parent-3-black__title {
   display: inline-block;
   margin-bottom: 8px;
   font-weight: bold;
   color: black;
 }
 
-.parent_3_black_child {
+.parent-3-black__child {
   margin: 0;
   color: black;
 }
 
-.parent_3 {
+.parent-3 {
   margin: 16px 0;
   padding: 4px 8px;
   color: green;
 }
 
-.parent_3_title {
+.parent-3__title {
   display: inline-block;
   margin-bottom: 8px;
   font-weight: bold;
   color: green;
 }
 
-.parent_3_child {
+.parent-3__child {
   margin: 0;
   color: green;
 }
 
 /* Дети второго родителя, когда находятся в третьем родителе */
-.parent_3 .parent_2_child {
+.parent-3 .parent-2__child {
   color: purple;
   border: none;
   padding: 0;
@@ -131,15 +128,15 @@ section {
 
 /* Задание 3: Ссылки и логотип */
 
-.pl_title { 
+.pl__title { 
   margin-bottom: 12px; 
 }
 
-.pl_text { 
+.pl__text { 
   margin-bottom: 16px; 
 }
 
-.pl_pl_list { 
+.pl__pl-list { 
   list-style: none; 
   padding: 0; 
   margin: 0; 
@@ -164,11 +161,11 @@ section {
   font-size: 1em;
 }
 
-.pl_pl_list_link:hover { 
+.pl__pl-list a:hover { 
   color: #2659e4; 
 }
 
-.pl_badge {
+.pl__badge {
   position: relative;
   margin-top: 16px;
   height: 80px;
@@ -177,7 +174,7 @@ section {
   overflow: hidden;
 }
 
-.pl_badge::before {
+.pl__badge::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -192,7 +189,7 @@ section {
 
 }
 
-.lang_list_item:hover {
+.lang_list__item:hover {
   text-shadow: 0 0 10px currentColor;
   animation: colorChange 3s infinite ease-in-out;
 }
