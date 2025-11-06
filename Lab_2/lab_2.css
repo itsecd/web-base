@@ -4,7 +4,7 @@
 
 }
 
-.task1__list li:hover {
+.list__point:hover {
     color: rgb(232, 30, 232);
 }
 
