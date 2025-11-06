@@ -15,48 +15,36 @@
     color: #CD5C5C;
 }
 
-.parent-1 {
-    margin-bottom: 1rem;
+.parents > div {
+    padding: 20px;
 }
 
-.parent-1__child {
+.parent-1 > div {
     color: red;
 }
 
-.parent-1__title {
+.parent-1 + .parent-3 > h1, .parent-1 + .parent-3 > div {
     color: black;
 }
 
-.parent-3 {
-    display: inline-block;
-    
-}
-
-.parent-3__child {
-    color: #b4005a;
-    border: 2px dotted orange;
-    padding: 0.25rem 0.5rem;
-}
-
-.parent-3__title {
+.parent-2 > h1 {
     color: orange;
 }
 
-.parent-2__title, .parent-2__child {
-    color: black;
+.parent-2__child > span {
+    color: #b4005a;
+    border: 2px orange dotted;
+    padding: 10px;
 }
 
-.parent-4__title,
-.parent-4__child {
+.parent-3 > div, .parent-3 > h1 {
     color: green;
 }
 
-.parent-1__child {
-    display: block;
-}
-
-.parent-3__child--visited {
-    color: #b4005a;
+.parent-3 > .parent-2__child > span {
+    border: none;
+    color: purple;
+    padding: 0;
 }
 
 .centered {
@@ -74,7 +62,7 @@
     margin-bottom: 0.5em;
 }
 
-.laguages-list__item--link {
+.laguages-list__item__link {
     cursor: pointer;
     position: relative;
     font-weight: bold;
@@ -82,7 +70,7 @@
     text-decoration: none;
 }
 
-.laguages-list__item--link::before {
+.laguages-list__item__link::before {
     content: "🌐";
     margin-right: 0.5rem;
     display: inline-block;
