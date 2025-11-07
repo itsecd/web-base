@@ -1,15 +1,25 @@
 .heading {
-    font-size: 21px;
+    font-size: 30px;
     margin-left: 5px;
 }
 
 /* Задание 1 */
+.games {
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
 .animated-list {
     padding-left: 0;
+    list-style: none;
+}
+
+.animated-item {
+    padding-left: 10px;
+    font-size: 20px;
 }
 
 .animated-list li {
-    position: relative;
     margin: 5px 0;
     transition: color 1s ease;
 }
@@ -19,66 +29,97 @@
 }
 
 /* Задание 2 */
-.parent {
-    margin: 20px 0;
-    padding: 15px;
+.parents {
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
-.parent__title {
-    margin: 0 0 10px;
+.parent_1,
+.parent_2,
+.parent_3 {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.parent_1-title,
+.parent_2-title,
+.parent_3-title {
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
-.parent__child {
-    margin: 5px 0;
+.parent_1-children,
+.parent_2-children,
+.parent_3-children {
+    padding-left: 0;
+    margin: 0;
+}
+
+.parent_1-child,
+.parent_2-child,
+.parent_3-child {
     padding: 5px 10px;
 }
 
-/* Parent 1*/
-.parent--first .parent__child {
+.parent_1-child {
     color: red;
 }
 
-/* Parent 2 */
-.parent--second .parent__title {
+.parent_2-title {
     color: orange;
 }
 
-.parent--second .parent__children-wrapper {
-    border: 2px dotted orange;
-    display: inline-block;
-}
-
-.parent--second .parent__child {
+.parent_2-child {
     color: #b4005a;
-    padding: 4px 8px;
+    border: 2px dashed orange;
+    width: fit-content;
 }
 
-.parent--second .parent__child + .parent__child {
-    border-top: 2px dotted orange;
-}
-
-/* Parent 3 */
-.parent--second ~ .parent--third .parent__title,
-.parent--second ~ .parent--third .parent__child {
+.parent_2 ~ .parent_3 {
     color: green;
 }
 
-.parent--third .parent__child:nth-child(4) {
+.parent_3:last-of-type .parent_3-child:last-child {
     color: purple;
 }
 
 /* Задание 3 */
-.language-link {
-    font-weight: bold;
-    text-decoration: none;
-    color: inherit;
-    position: relative;
+.languages {
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
-.language-link::after {
+.list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.item {
+    margin-bottom: 8px;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+.text {
+    margin-top: 16px;
+}
+
+.link::after {
     content: "🌐";
     margin-left: 5px;
     font-size: 0.9em;
     vertical-align: middle;
+}
+
+.languages::after {
+    content: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+    display: block;
+    margin-top: 20px;
+    filter: invert(1);
+    width: 353px;
+    height: 105px;
 }
