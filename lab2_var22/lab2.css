@@ -53,19 +53,20 @@ body h2 {
     border: none;
 }
 
-ul {
-    list-style: none;;
+.links {
+    list-style: none;
+    padding-left: 0;
 }
 
-.link {
+.links__link {
     font-weight: bold;
 }
 
-.link::before {
+.links__link::before {
     content: "🌐";
 }
 
-.links::after {
+.programming-languages::after {
     content: url('https://ssau.ru/i/logo/logo-white-ru.svg');
     display: block;
     background-color: blue;
