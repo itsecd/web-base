@@ -15,7 +15,7 @@ body {
   border-left: 5px solid #ec4899;
 }
 
-h1 {
+.page__title {
   text-align: center;
   color: #be185d;
   margin-bottom: 30px;
@@ -23,7 +23,14 @@ h1 {
   border-bottom: 3px solid #f472b6;
 }
 
-h2 {
+.task {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #fff5f9;
+  border-radius: 10px;
+}
+
+.task__title {
   border-left: 4px solid #f472b6;
   padding-left: 15px;
   background: #ffe4ec;
@@ -31,74 +38,69 @@ h2 {
   margin: 0 0 14px;
 }
 
-.tasks {
-  margin-bottom: 30px;
-  padding: 20px;
-  background: #fff5f9;
-  border-radius: 10px;
-}
-
-.simple-list {
+.list {
   margin: 0 0 0 20px;
   padding: 0;
 }
 
-.simple-list li {
+.list__item {
   color: #500724;
   transition: color 0.3s ease-in-out;
   margin: 8px 0;
   font-weight: 600;
 }
-.simple-list li:hover {
+.list__item:hover {
   color: #db2777;
 }
 
-.parent-1 .child {
+.parent-1__child {
   color: #e11d48;
 }
+
 .parent-2 {
   color: #db2777;
 }
-.parent-2 .child {
+.parent-2__child {
   color: #b91c1c;
   border: 2px dashed #f9a8d4;
   max-width: 140px;
   margin: 6px 0;
   padding: 6px;
 }
+
 .parent-2 ~ .parent-3,
-.parent-2 ~ .parent-3 .child {
+.parent-2 ~ .parent-3 .parent-3__child {
   color: #9d174d;
 }
-.guest {
+
+.parent-3__child--guest {
   border: none !important;
   color: #be185d !important;
 }
 
-.programming-languages {
+.languages {
   margin: 0 0 0 20px;
   padding: 0;
   list-style: disc;
 }
 
-.programming-languages li {
+.languages__item {
   margin: 10px 0;
   line-height: 1.45;
 }
 
-.pl-link {
+.languages__link {
   text-decoration: none !important;
   color: #831843;
   font-weight: bold;
 }
-.pl-link::after {
+.languages__link::after {
   content: "🌐";
   font-size: 0.9em;
   margin-left: 6px;
 }
-.programming-languages::after {
-  content: "";
-  display: block;
+
+.languages__logo {
   background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
   background-position: center;
   background-size: 100px;
@@ -111,16 +113,16 @@ h2 {
   height: 72px;
 }
 
-.note {
+.task__note {
   color: #9d174d;
   margin-top: 12px;
 }
 
-.cta {
+.task__cta {
   margin-top: 14px;
 }
 
-.pinterest-link {
+.task__pinterest-link {
   display: inline-block;
   background: #ec4899;
   color: #fff;
@@ -129,7 +131,7 @@ h2 {
   text-decoration: none;
   font-weight: 700;
 }
-.pinterest-link:hover {
+.task__pinterest-link:hover {
   opacity: 0.95;
   background: #db2777;
 }
