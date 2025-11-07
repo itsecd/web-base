@@ -139,12 +139,12 @@ body{
 .list__dot--purple{background:#a78bfa}
 
 .card__lang{display:grid;gap:10px;font-size:13px}
-.card__lang-item{
+.lang__item{
   display:flex;
   align-items:center;
   justify-content:space-between;
 }
-.card__lang-item small{color:var(--muted)}
+.lang__item small{color:var(--muted)}
 
 .cv__main{
     padding: 28px 28px 40px;
@@ -166,7 +166,7 @@ body{
 
 .main__header span{display:block}
 
-.cv__intro{
+.main__intro{
     padding: 12px 0 0;
     border-bottom:1px solid var(--line);
 }
@@ -189,7 +189,7 @@ body{
     font-size:20px;
 }
 
-.cv__contact{
+.main__contact{
   display:grid;
   gap:10px;
   margin-top:12px;
