@@ -34,48 +34,53 @@ h2 {
   padding-left: 20px;
 }
 
-.services li {
+.services__item {
   margin: 10px 0;
   font-size: 20px;
 }
 
-.services a {
+.services__item a {
   text-decoration: none;
   font-weight: normal;
   color: #000;
   transition: color 0.5s ease;
 }
 
-.services a:hover {
+.services__item a:hover {
   color: #39ff14; 
 }
 
 /*2*/
 .parents {
-  margin-top: 20px;
+  max-width: 420px;
+  margin: 0 auto;
+  display: block;
+  text-align: left;
 }
 
-.parent {
-  margin-bottom: 30px;
+.parent-1__title {
+  font-weight: 700;
+  margin-bottom: 8px;
 }
-
-.parent h3 {
-  margin-bottom: 10px;
-}
-
-.parent-1 h3 {
-  color: black;
-}
-
-.parent-1 .child {
+.parent-1__child {
   color: red;
+  display: block;
+  margin: 6px 0;
 }
 
-.parent-2 h3 {
+.parent-2__title {
   color: orange;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
-.parent-2 .child {
+.parent-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.parent-2__child {
   color: #b4005a;
   border: 1px dashed orange;
   padding: 3px;
@@ -84,48 +89,56 @@ h2 {
   margin: 5px 0;
 }
 
-.parent-3-before h3,
-.parent-3-before .child {
+.parent-3__title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.parent-3__child {
   color: black;
+  display: block;
+  margin: 6px 0;
 }
 
-.parent-3-after h3,
-.parent-3-after .child {
+.parent-2 + .parent-3 .parent-3__title,
+.parent-2 + .parent-3 .parent-3__child {
   color: green;
 }
 
-.parent-3-after .child.guest {
+.parent-3 .parent-2__child {
   color: purple;
   border: none;
+  padding: 0px 0;
+  display: block;
 }
 
+
 /*3*/
-.languages {
-  list-style-type: disc;
+.task__languages {
+  list-style-type: none;
   padding: 0;
   text-align: left;
   max-width: 600px;
   margin: 0 auto;
 }
 
-.languages li {
-  margin: 8px 0;
-  font-size: 18px;
+.task__language {
+  margin-bottom: 10px;
 }
 
-.languages a {
-  text-decoration: none;
+.task__link {
   font-weight: bold;
-  color: #333;
+  text-decoration: none;
+  color: black;
   position: relative;
+  transition: color 0.4s ease;
 }
 
-.languages a::after {
+.task__link::before {
   content: " 🌐";
   font-weight: normal;
 }
 
-.languages::after {
+.task__languages::after {
   content: "";
   display: block;
   width: 150px;
@@ -133,3 +146,4 @@ h2 {
   margin: 30px auto 0;
   background: url("https://ssau.ru/i/logo/logo-white-ru.svg") no-repeat center / contain;
 }
+
