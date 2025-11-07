@@ -1,0 +1,70 @@
+.resume {
+    display: flex;
+    width: 100%;
+}
+
+.resume__left {
+    flex: 1;
+    background-color: grey;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.resume__right {
+    flex: 2;
+    background-color: white;
+    padding: 20px;
+}
+
+.resume__image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.resume__main-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.resume__info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.resume__info-title {
+    color: rgb(24, 190, 190);
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.resume__info-text {
+    color: white;
+    font-size: 18px;
+    margin: 0;
+}
+
+.resume__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.resume__grid-item {
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+.resume__grid-item>h3 {
+    background-color: rgb(24, 190, 190);
+}
+
+.resume__skill-category {
+    font-weight: bold;
+}
