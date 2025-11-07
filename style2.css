@@ -78,23 +78,27 @@ h2 {
   padding-left: 0;
 }
 
-.lang-list__link {
+.lang-list__item {
+  margin-bottom: 10px;
+}
+
+.lang-list__item-link {
   font-weight: bold;
   text-decoration: none;
   color: inherit;
   transition: color 0.2s;
 }
 
-.lang-list__link:hover {
+.lang-list__item-link:hover {
   color: #2a7ae2;
 }
 
-.lang-list__link::before {
+.lang-list__item-link::before {
   content: "🌐 ";
   font-weight: normal;
   color: #666;
   font-size: 0.9em;
-  margin-right: 5px;
+  margin-right: 6px;
 }
 
 .lang-list::after {
