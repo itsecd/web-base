@@ -17,7 +17,7 @@ body {
     display: center;
 }
 
-.animated-sports-list__item {
+.list__item {
     margin: auto;
     font-size: 1.15em;
     color: rgb(14, 6, 6);
@@ -81,7 +81,7 @@ body {
     color: green;
 }
 
-.parent-2 + .parent-3 .parent-3__child:nth-child(n+3){
+.parent-2 + .parent-3 {
     color: #b4005a;
 }
 
