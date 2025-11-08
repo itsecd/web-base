@@ -80,13 +80,6 @@ body {
   color: green;
 }
 
-.parent-2__child--guest {
-  border: none !important;
-  color: purple !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
 .languages {
   margin: 0 0 0 20px;
   padding: 0;
@@ -153,3 +146,4 @@ body {
   opacity: 0.95;
   background: #db2777;
 }
+
