@@ -43,30 +43,36 @@ section{
     text-align: center;
 }
 
-.parent-1{
-    text-align: center;
-}
-
-.parent-1__child {
+.parent-1 .child {
     color: red;
-    text-align: center;
 }
 
-.parent-2 .child-2 {
-    color: green;
-    border: 2px solid green;
-}
-
-.parent-3 .child-2 {
+.parent-2 {
     color: orange;
-    border: 2px solid orange;
 }
 
-.parent-3 .child-2 {
-    color: purple;
-    border: none;
+.parent-2 .child {
+    color: #b4005a;
+    border: 2px dashed orange;
+    padding: 5px;
+    margin: 5px;
 }
 
+.parent-1 ~ .parent-2 ~ .parent-3,
+.parent-1 ~ .parent-2 ~ .parent-3 .child {
+    color: green;
+}
+
+.parent-3 .child.guest,
+.parent-3 .child-2.guest {
+    color: purple !important;
+    border: none !important;
+}
+
+.child {
+    padding: 5px;
+    margin: 5px;
+}
 
 .language-list a {
     text-decoration: none;
