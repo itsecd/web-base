@@ -49,68 +49,84 @@ body {
   margin: 8px 0;
   font-weight: 600;
 }
+
 .list__item:hover {
   color: #db2777;
 }
 
 .parent-1__child {
-  color: #e11d48;
+  color: red;
 }
 
 .parent-2 {
-  color: #db2777;
+  color: orange;
 }
+
 .parent-2__child {
-  color: #b91c1c;
-  border: 2px dashed #f9a8d4;
-  max-width: 140px;
+  color: #b4005a;
+  border: 2px dotted orange;
+  max-width: 180px;
   margin: 6px 0;
   padding: 6px;
 }
 
-.parent-2 ~ .parent-3,
-.parent-2 ~ .parent-3 .parent-3__child {
-  color: #9d174d;
+.parent-3__child {
+  color: inherit;
 }
 
-.parent-3__child--guest {
+.parent-2 ~ .parent-3,
+.parent-2 ~ .parent-3 .parent-3__title,
+.parent-2 ~ .parent-3 .parent-3__child {
+  color: green;
+}
+
+.parent-2__child--guest {
   border: none !important;
-  color: #be185d !important;
+  color: purple !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .languages {
   margin: 0 0 0 20px;
   padding: 0;
-  list-style: disc;
+  list-style: none;
+  position: relative;
+}
+
+.languages::after {
+  content: "";
+  display: block;
+  background: #0e4c92 url("https://ssau.ru/i/logo/logo-white-ru.svg  ") center/100px no-repeat;
+  width: 140px;
+  height: 72px;
+  border-radius: 4px;
+  margin-top: 15px;
 }
 
 .languages__item {
   margin: 10px 0;
   line-height: 1.45;
+  position: relative;
+  padding-left: 24px;
 }
 
-.languages__link {
-  text-decoration: none !important;
+.languages__item::before {
+  content: "🌐";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1em;
+}
+
+.languages__item__link {
+  text-decoration: none;
   color: #831843;
   font-weight: bold;
 }
-.languages__link::after {
-  content: "🌐";
-  font-size: 0.9em;
-  margin-left: 6px;
-}
 
-.languages__logo {
-  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
-  background-position: center;
-  background-size: 100px;
-  background-repeat: no-repeat;
-  background-color: #0e4c92;
-  padding: 20px;
-  border-radius: 4px;
-  margin-top: 10px;
-  width: 140px;
-  height: 72px;
+.languages__item__link:hover {
+  color: #db2777;
 }
 
 .task__note {
@@ -122,7 +138,7 @@ body {
   margin-top: 14px;
 }
 
-.task__pinterest-link {
+.cta__pinterest-link {
   display: inline-block;
   background: #ec4899;
   color: #fff;
@@ -130,8 +146,10 @@ body {
   border-radius: 6px;
   text-decoration: none;
   font-weight: 700;
+  transition: 0.3s;
 }
-.task__pinterest-link:hover {
+
+.cta__pinterest-link:hover {
   opacity: 0.95;
   background: #db2777;
 }
