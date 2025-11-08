@@ -6,10 +6,9 @@
 
 .animated-list li{
     transition: all 0.3s ease;
-    
 }
 
-.animated-list li:hover {
+.animated-list__item:hover {
     transform: translateX(10px);
     color: blue;
     font-weight: bold;
@@ -107,7 +106,7 @@
   text-decoration: none;
 }
 
-.program-block-item {
+.program-block-list__item {
   margin: 10px 0;
   padding: 2px;
 }
