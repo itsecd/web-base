@@ -35,7 +35,7 @@ h3 {
   padding: 0;
 }
 
-.list-item {
+.prog-lang-list__item {
   padding: 12px 20px;
   margin-bottom: 8px;
   background-color: #e8f4f8;
@@ -44,7 +44,7 @@ h3 {
   cursor: pointer;
 }
 
-.list-item:hover {
+.prog-lang-list__item:hover {
   color: #e74c3c;
   background-color: #f9ebea;
 }
@@ -97,9 +97,10 @@ h3 {
   color: green;
 }
 
-.parent-3__child--guest {
-  color: purple !important;
-  border: none !important;
+.parent-2 + .parent-3 .parent-2__child {
+  color: purple;
+  border: none;
+  padding: 8px 0;
 }
 
 .langs {
