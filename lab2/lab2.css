@@ -16,55 +16,41 @@ body {
   color: red;
 }
 
+.families {
+  display: inline-block;
+  text-align: center;
+}
+
 .parent {
   font-size: 30px;
-  margin: 10px ;
-  padding: 20px;
+  margin: 20px;
 }
 
-.parent-1 {
-  color: rgb(0, 0, 0);
+.parent__child {
+  font-size: 20px;
 }
 
-.parent-1-child {
-  font-size: 25px;
-  padding: 8px 8px;
+.parent_1 .parent__child_origin-1 {
   color: red;
 }
 
-.parent-2 {
+.parent_2 {
   color: orange;
 }
 
-.parent-2-child {
-  font-size: 25px;
-  padding: 8px 8px;
-  border: 3px dashed orange;
+.parent_2 .parent__child_origin-2 {
+  border: dashed orange;
   color: #b4005a;
-  width: fit-content;
-  max-width: 400px
 }
 
-
-.parent-3 {
+.parent_2 ~ .parent_3 {
   color: green;
 }
 
-.parent-3-child {
-  font-size: 25px;
-  padding: 8px 8px;
-}
-
-.parent-2 ~ .parent-3 {
-  color: green;
-}
-
-.parent-3 .parent-2-child {
+.parent_3 .parent__child_origin-2 {
   border: none;
   color: purple;
 }
-
-
 
 .langs a {
   color: black;
@@ -84,6 +70,7 @@ body {
   content: "";
   display: block;
   height: 200px;
-  background: #1596d1 url("https://ssau.ru/i/logo/logo-white-ru.svg") center/contain no-repeat;
+  background: #1596d1 url("https://ssau.ru/i/logo/logo-white-ru.svg") center/contain
+    no-repeat;
   margin-top: 30px;
 }
