@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-.list-section__item {
+.list__item {
     color: black;
     cursor: pointer;
     transition: color 0.6s ease-in-out;
@@ -11,7 +11,7 @@
     margin-bottom: 0.4em;
 }
 
-.list-section__item:hover {
+.list__item:hover {
     color: #CD5C5C;
 }
 
@@ -57,12 +57,12 @@
     margin-bottom: 1rem;
 }
 
-.laguages__laguages-list__item {
+.laguages-list__lang-item {
     list-style: none;
     margin-bottom: 0.5em;
 }
 
-.laguages__laguages-list__item__link {
+.lang-item__link {
     cursor: pointer;
     position: relative;
     font-weight: bold;
@@ -70,7 +70,7 @@
     text-decoration: none;
 }
 
-.laguages__laguages-list__item__link::before {
+.lang-item__link::before {
     content: "🌐";
     margin-right: 0.5rem;
     display: inline-block;
