@@ -1,0 +1,111 @@
+body {
+    background: linear-gradient(90deg,#292732 0%, #281c4f 50%, #0b3352 100%);
+    /*background:linear-gradient(330deg, #314779 0%, #182848 100%);*/
+}
+a {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.Task1 {
+    background: linear-gradient(90deg,#5d0a7d 0%, #5b3fb6 50%, #14619d 100%);
+    border: 3px solid #71dbff;
+    border-style: double;
+    border-radius: 30px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.Task1-sports-list {
+    list-style: none;
+    padding-left: 20px;
+}
+.Task1-sports-list__item {
+    font-size: 30px;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+.Task1-sports-list__item:hover {
+    color: #00ff08;
+}
+
+.Task2 {
+    background: rgba(255, 255, 255, 1);
+    padding-top: 10px;
+    border: 3px solid #71dbff;
+    border-style: double;
+    border-radius: 30px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    text-align:center;
+}
+.parent {
+    margin-bottom: 20px;
+}
+.parent__title {
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+.parent__child {
+    margin: 2px 0 2px 20px;
+}
+.parent--1 .parent__child {
+    color: red;
+}
+.parent--2 .parent__title {
+    color: orange;
+}
+.parent--2 .parent__child {
+    color: #b4005a;
+    border: 1px dotted orange;
+}
+.parent--2 + .parent--3 .parent__title {
+    color: green;
+}
+.parent--2 + .parent--3 .parent__child {
+    color: green;
+}
+.parent--3 .parent--2 .parent__child {
+    color: purple;
+    border: none;
+}
+
+.Task3 {
+    background: linear-gradient(90deg,#5d0a7d 0%, #5b3fb6 50%, #14619d 100%);
+    border: 3px solid #71dbff;
+    border-style: double;
+    border-radius: 30px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Task3::after{
+    content: "";
+    display:block;
+    width: 330px;
+    height: 84px;
+    margin: 10px 10px;
+    background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+    background-repeat: no-repeat;
+    background-size: contain; 
+}
+.Task3__list-item a::before{
+    content: "🌐";
+}
+.Task3__list-item{
+    color: white;
+    margin-left: 20px;
+}
+.Task3__text{
+    color:white;
+    margin-left: 30px;
+}
