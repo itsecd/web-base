@@ -1,9 +1,9 @@
-.list {
+.list-section__list {
     padding-left: 0;
     margin: 0;
 }
 
-.list__item {
+.list-section__item {
     color: black;
     cursor: pointer;
     transition: color 0.6s ease-in-out;
@@ -11,7 +11,7 @@
     margin-bottom: 0.4em;
 }
 
-.list__item:hover {
+.list-section__item:hover {
     color: #CD5C5C;
 }
 
@@ -51,18 +51,18 @@
     margin-left: 45%;
 }
 
-.languages-list {
+.laguages__laguages-list {
     padding-left: 0;
     margin-left: 0;
     margin-bottom: 1rem;
 }
 
-.laguages-list__item {
+.laguages__laguages-list__item {
     list-style: none;
     margin-bottom: 0.5em;
 }
 
-.laguages-list__item__link {
+.laguages__laguages-list__item__link {
     cursor: pointer;
     position: relative;
     font-weight: bold;
@@ -70,7 +70,7 @@
     text-decoration: none;
 }
 
-.laguages-list__item__link::before {
+.laguages__laguages-list__item__link::before {
     content: "🌐";
     margin-right: 0.5rem;
     display: inline-block;
@@ -90,3 +90,4 @@
     background-position: center;
     background-size: contain;
 }
+
