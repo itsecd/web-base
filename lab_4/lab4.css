@@ -1,0 +1,15 @@
+.task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.task__button {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.task__result {
+  margin: 0 auto;
+}
