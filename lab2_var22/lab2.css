@@ -53,16 +53,16 @@ body h2 {
     border: none;
 }
 
-.links {
+.programming-languages__list {
     list-style: none;
     padding-left: 0;
 }
 
-.links__link {
+.list-item__link {
     font-weight: bold;
 }
 
-.links__link::before {
+.list-item__link::before {
     content: "🌐";
 }
 
