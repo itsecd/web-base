@@ -91,19 +91,20 @@
   margin: 0 0 20px;
 }
 
-.program-block-list {
+.program-block__list {
   list-style: none;
   padding: 0;
   margin: 10px;
 }
 
-.program-block-list a::before {
+.program-block__list a::before {
     content: "🌐";
 }
 
-.program-block-list a {
+.program-block__list a {
   font-weight: 700;
   text-decoration: none;
+  color: black;
 }
 
 .program-block-list__item {
