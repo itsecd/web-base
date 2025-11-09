@@ -67,7 +67,7 @@ h2 {
   color: green;
 }
 
-.parent-2 ~ .parent-3 .parent-3__child--guest {
+.parent-2 ~ .parent-3 .parent-2__child {
   color: purple;
   border: none;
   background-color: transparent;
@@ -82,18 +82,18 @@ h2 {
   margin-bottom: 10px;
 }
 
-.lang-list__item-link {
+.lang-list__item_link {
   font-weight: bold;
   text-decoration: none;
   color: inherit;
   transition: color 0.2s;
 }
 
-.lang-list__item-link:hover {
+.lang-list__item_link:hover {
   color: #2a7ae2;
 }
 
-.lang-list__item-link::before {
+.lang-list__item_link::before {
   content: "🌐 ";
   font-weight: normal;
   color: #666;
