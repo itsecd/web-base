@@ -1,0 +1,143 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a202c;
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+  padding-bottom: 10%;
+}
+
+.main-block {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background-color: #e0effa;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.8);
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: #fff7f7;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.profile__picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile__name {
+  margin: 0 0 10px 0;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+.profile__year {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.skills {
+  display: flex;
+  gap: 20px;
+}
+
+.skills__group {
+  flex: 1;
+}
+
+.skills__title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.skills__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills__item {
+  font-size: 1.1em;
+  padding: 5px 0;
+}
+
+.github {
+  text-align: center;
+}
+
+.github__link {
+  font-size: 2em;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  text-decoration: none;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+}
+
+.about__link:hover,
+.github__link:hover {
+  color: blueviolet;
+}
+
+.github__link::before {
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-right: 8px;
+  background-image: url("https://github.githubassets.com/favicons/favicon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.about__title {
+  margin-top: 0;
+}
+
+.about__text {
+  font-size: 1.5em;
+}
+
+.about__link {
+  color: black;
+  transition: color 0.3s ease-in-out;
+}
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.showcase__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.showcase__title,
+.showcase__caption {
+  padding-top: 10px;
+  text-align: center;
+  color: white;
+}
