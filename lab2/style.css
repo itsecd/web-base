@@ -80,6 +80,13 @@ body {
   color: green;
 }
 
+.parent-3 .parent-2__child {
+  border: none !important;
+  color: purple !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .languages {
   margin: 0 0 0 20px;
   padding: 0;
@@ -112,13 +119,13 @@ body {
   font-size: 1em;
 }
 
-.languages__item__link {
+.item__link {
   text-decoration: none;
   color: #831843;
   font-weight: bold;
 }
 
-.languages__item__link:hover {
+.item__link:hover {
   color: #db2777;
 }
 
@@ -146,4 +153,3 @@ body {
   opacity: 0.95;
   background: #db2777;
 }
-
