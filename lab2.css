@@ -9,7 +9,7 @@
   margin-bottom: 20px;
 }
 
-.header-text {
+.header__text {
   font-size: 24px;
   font-weight: bold;
 }
@@ -25,75 +25,79 @@
   padding-left: 0;
 }
 
-.list-item {
+.list__item {
   margin: 6px 0;
   font-size: 18px;
   cursor: pointer;
   transition: color 0.4s ease;
 }
 
-.list-item:hover {
+.list__item:hover {
   color: #1a73e8;
 }
 
-.group-one {
+.group {
   margin-top: 20px;
 }
 
-.group-one .child {
-  color: red;
+.group__title {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.group__child {
   margin-left: 15px;
   margin-bottom: 6px;
 }
 
-.group-two {
-  color: orange;
-  margin-top: 20px;
+.group_one .group__child {
+  color: red;
 }
 
-.group-two .child {
+.group_two {
+  color: orange;
+}
+
+.group_two .group__child {
   color: #b4005a;
   border: 1px dotted orange;
-  margin-left: 15px;
   padding: 3px 6px;
-  margin-bottom: 6px;
   display: inline-block;
 }
 
-.group-three {
-    margin-top: 20px;
+.group_three,
+.group_three .group__child {
+  color: black;
 }
 
-.group-three,
-.group-three .child {
-    color: black;
+.group__child_guest {
+  color: purple;
+  border: none;
 }
 
-.group-three .child {
-    margin-left: 15px;
-    margin-bottom: 6px;
+.group_two ~ .group_three,
+.group_two ~ .group_three .group__child {
+  color: green;
 }
 
-.group-three .guest {
-    color: purple;
-    border: none;
-    margin-left: 15px;
-    margin-bottom: 6px;
+.programming-languages {
+  list-style: none;
+  padding-left: 0;
 }
 
-.group-two ~ .group-three,
-.group-two ~ .group-three .child {
-    color: green;
+.programming-languages__item {
+  margin-bottom: 8px;
 }
 
-.language-link {
+.programming-languages__link {
   font-weight: bold;
   color: inherit;
   text-decoration: none;
 }
 
-.language-link::before {
-  content: "🌐 ";
+.programming-languages__link::before {
+  content: "Globe ";
 }
 
 .programming-languages::after {
@@ -104,5 +108,4 @@
   height: 40px;
   background: url("https://ssau.ru/i/logo/logo-white-ru.svg") no-repeat center;
   background-size: contain;
-
 }
