@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #fafafa;
+  color: #333;
+}
+
+h2 {
+  margin-top: 30px;
+  color: #000000;
+}
+
+.video-games {
+  list-style: none;
+  padding-left: 0;
+}
+
+.video-games__item {
+  color: #333;
+  font-size: 18px;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 6px;
+  transition: color 0.4s ease-out, background-color 0.4s ease;
+  cursor: pointer;
+}
+
+.video-games__item:hover {
+  color: #e63946;
+  background-color: #fff8f8;
+}
+
+.family {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.family__title {
+  margin: 0 0 12px;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #eee;
+  color: #2c3e50;
+}
+
+.family__child {
+  padding: 8px 12px;
+  margin: 6px 0;
+  border-radius: 5px;
+  color: #333;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.family--type1 .family__title {
+  color: rgb(0, 0, 0);
+}
+
+.family__child--type1 {
+  color: #c00;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+}
+.family--type2 .family__title {
+  color: orange;
+}
+.family--type3-between .family__title {
+  color: #000000; 
+}
+.family--type3-between .family__child {
+  color: #000000; 
+}
+.family--type3-between .family__child:hover {
+  color: #000;
+}
+.family__child--type2 {
+  color: #b4005a;
+  background-color: #ffffff;
+  border: 1px dashed orange;
+}
+.family--type3-after .family__title {
+  color: green;
+}
+.family__child--type3 {
+  color: green;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.family__child--like-family2 {
+  color: #800080;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.lang-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.lang-list__item {
+  margin-bottom: 10px;
+}
+
+.lang-list__item_link {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+.lang-list__item_link:hover {
+  color: #2a7ae2;
+}
+
+.lang-list__item_link::before {
+  content: "🌐 ";
+  font-weight: normal;
+  color: #666;
+  font-size: 0.9em;
+  margin-right: 6px;
+}
+
+.lang-list::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 75px;
+  margin: 5px auto;
+  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 12px;
+  background-color: #8b8989;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  opacity: 0.9;
+}
