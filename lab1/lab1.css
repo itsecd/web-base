@@ -1,0 +1,14 @@
+.text_task {
+  background-color: #FEB431;
+  text-align: center;
+  color: #85A1B7;
+}
+
+.cats_task {
+  position: relative;
+}
+
+.cats_task_second {
+  position: absolute;
+  top: 120px;
+}
