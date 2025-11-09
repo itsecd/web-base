@@ -1,0 +1,96 @@
+body {
+  font-family: georgia;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #f9f9f9;
+  color: #222;
+}
+.photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+  border: 3px solid #4a90e2;
+}
+.photo__item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+h1 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.date-of-birth {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #555;
+}
+section {
+  margin-bottom: 20px;
+}
+h2 {
+  border-bottom: 2px solid #4a90e2;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.skills {
+  display: flex;
+  gap: 40px;
+}
+.skills ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.skills ul li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 6px;
+}
+.skills ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #4a90e2;
+}
+.links a {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+  text-decoration: none;
+  color: #4a90e2;
+  font-weight: bold;
+}
+
+.links a.links__item--github::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  background: url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png') no-repeat center/100%;
+  border-radius: 50%;
+}
+.links a.links__item--telegram::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg') no-repeat center/100%;
+  border-radius: 50%;
+}
