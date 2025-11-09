@@ -23,7 +23,7 @@ h1, h2, h3, h4 {
     border-bottom: 1px solid #eee;
 }
 
-/* Задание 1: Стилизация списка игр */
+
 .games-list {
     list-style-type: none;
     padding: 0;
@@ -42,85 +42,36 @@ h1, h2, h3, h4 {
     color: #ff4500;
 }
 
-.parent_1 {
-  margin: 16px 0;
-  padding: 4px 8px;
+.parent {
+  margin: 20px 0;
+  padding: 10px;
 }
 
-.parent_1_title {
-  display: inline-block;
-  margin-bottom: 8px;
+.parent__title {
+  margin-bottom: 10px;
   font-weight: bold;
 }
 
-.parent_1_child {
-  margin: 0;
+.parent_1 .parent__child_origin_parent-1 {
   color: red;
 }
 
-.parent_2 {
-  margin: 16px 0;
-  padding: 4px 8px;
-  color: orange;
-}
-
-.parent_2_title {
-  display: inline-block;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-
-.parent_2_child {
+.parent_2 .parent__child_origin_parent-2 {
   color: #b4005a;
-    border: 1px dashed orange;
+  border: 1px dashed orange;
+  padding: 5px;
+  margin: 5px 0;
 }
 
-
-.parent_3_black {
-  margin: 16px 0;
-  padding: 4px 8px;
-}
-
-.parent_3_black_title {
-  display: inline-block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: black;
-}
-
-.parent_3_black_child {
-  margin: 0;
-  color: black;
-}
-
-.parent_3 {
-  margin: 16px 0;
-  padding: 4px 8px;
+.parent_3 .parent__child_origin_parent-3 {
   color: green;
 }
 
-.parent_3_title {
-  display: inline-block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: green;
-}
-
-.parent_3_child {
-  margin: 0;
-  color: green;
-}
-
-/* Дети второго родителя, когда находятся в третьем родителе */
-.parent_3 .parent_2_child {
+.parent_3 .parent__child_origin_parent-2 {
   color: purple;
-  border: none;
-  padding: 0;
-  margin: 0;
 }
 
 
-/* Задание 3: Стилизация текста о языках программирования */
 .app-section {
     line-height: 1.6;
 }
@@ -155,3 +106,4 @@ h1, h2, h3, h4 {
     padding: 10px;
     border-radius: 3px;
 }
+
