@@ -81,26 +81,26 @@
   color: green;
 }
 
-.programming-languages {
+.languages {
   list-style: none;
   padding-left: 0;
 }
 
-.programming-languages__item {
+.languages__item {
   margin-bottom: 8px;
 }
 
-.programming-languages__link {
+.languages__link {
   font-weight: bold;
   color: inherit;
   text-decoration: none;
 }
 
-.programming-languages__link::before {
+.languages__link::before {
   content: "Globe ";
 }
 
-.programming-languages::after {
+.languages::after {
   content: "";
   display: block;
   margin-top: 25px;
