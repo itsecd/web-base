@@ -1,0 +1,64 @@
+.bulleted-list__header{
+    color: rgb(13, 68, 79);
+}
+
+.bulleted-list__item{
+    color: rgb(13, 68, 79);
+    transition: color 1s;
+}
+
+.bulleted-list__item:hover{
+    color: rgb(99, 197, 53);
+}
+
+
+
+.Parents__Parent-1__child{
+    color: red;
+}
+
+
+.Parents__Parent-2__header{
+    color: orange;
+}
+
+.Parents__Parent-2__header ~ .Parents__Parent-2__child{
+    color: #b4005a;
+    border-style: dashed;
+    border-color: orange;
+    width: 70px;    
+    padding: 10px;
+    margin: 0px;
+    
+}
+
+.Parents__Parent-3__header ~ .Parents__Parent-2__child{
+    color: purple;
+} 
+
+
+.Parents__Parent-2 ~ .Parents__Parent-3{
+    color: green;
+}
+
+
+
+.text-languages__link{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+
+.text-languages__list li{
+    list-style: none;
+    text-indent: -1em;
+}
+
+.text-languages__link::before{
+    content: " 🌐";
+    padding-right: 5px;
+}
+
+.text-languages__list::after{
+    content: url("https://ssau.ru/i/logo/logo_goriz_ru.svg");
+}
