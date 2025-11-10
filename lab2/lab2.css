@@ -10,10 +10,10 @@
 .unordered_list li {
     padding: 8px 12px;
     margin: 4px 0;
-    transition: color 0.8s ease, background-color 0.8s ease;
+    transition: color 1.2s ease, background-color 1.2s ease;
 }
 
 .unordered_list li:hover {
-    color: #f4bc92;
+    color: #f99665;
     background-color: #f0f0f0;
 }
