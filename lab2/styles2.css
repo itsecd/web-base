@@ -31,6 +31,7 @@ h2 {
   background-color: #80a1e4;
 }
 
+
 .parent-1,
 .parent-2,
 .parent-3 {
@@ -67,34 +68,39 @@ h2 {
   color: green;
 }
 
-.parent-2 ~ .parent-3 .parent-3__child--guest {
+.parent-2__child {
   color: purple;
   border: none;
   background-color: transparent;
 }
+
 
 .lang-list {
   list-style: none;
   padding-left: 0;
 }
 
-.lang-list__link {
+.lang-list__item {
+  margin-bottom: 10px;
+}
+
+.lang-list__item-link {
   font-weight: bold;
   text-decoration: none;
   color: inherit;
   transition: color 0.2s;
 }
 
-.lang-list__link:hover {
+.lang-list__item-link:hover {
   color: #2a7ae2;
 }
 
-.lang-list__link::before {
+.lang-list__item-link::before {
   content: "🌐 ";
   font-weight: normal;
   color: #666;
   font-size: 0.9em;
-  margin-right: 5px;
+  margin-right: 6px;
 }
 
 .lang-list::after {
@@ -107,7 +113,7 @@ h2 {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  border: 1px solid #89c9f8;
+  border: 1px solid #ccc;
   border-radius: 6px;
   padding: 12px;
   background-color: #191919;
