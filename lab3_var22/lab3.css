@@ -1,0 +1,32 @@
+body {
+    background-color: #9e9fa7;
+    padding: 20px;
+}
+
+.resume {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    /* padding: 20px; */
+}
+
+.resume > [class^="box_"] {
+    background-color: #f6f6f6;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.box_1 {
+    grid-column: 1 / 3;
+}
+
+.box_3 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+}
+/* .image__avatar {
+    border-radius: 50%;
+} */
