@@ -1,12 +1,24 @@
 const button = document.getElementById("calc");
 
-button.addEventListener("click", function () {
+if (
+  !button ||
+  !document.getElementById("num1") ||
+  !document.getElementById("num2") ||
+  !document.getElementById("operation")
+) {
+  alert("Ошибка! Не все элементы найдены на странице!");
+  throw new Error("Ошибка! Не все элементы найдены на странице!");
+}
+
+button?.addEventListener("click", function () {
   const num1 = parseFloat(document.getElementById("num1").value);
   const operation = document.getElementById("operation").value;
   const num2 = parseFloat(document.getElementById("num2").value);
+
   if (isNaN(num1) || isNaN(num2)) {
     return;
   }
+
   let result;
   if (operation === "+") {
     result = num1 + num2;
@@ -25,5 +37,7 @@ button.addEventListener("click", function () {
       result = num1 / num2;
     }
   }
-  document.getElementById("result").textContent = "Результат: " + result;
+  document.getElementById("result")
+    ? (document.getElementById("result").textContent = "Результат: " + result)
+    : alert("Результат: " + result);
 });
