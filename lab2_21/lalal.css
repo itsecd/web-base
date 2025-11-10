@@ -1,14 +1,12 @@
-html {
-  height: 100%;
-  background: linear-gradient(45deg, pink, purple) !important;
-}
 body {
   min-height: 100%;
   font-family: Arial, sans-serif;
   line-height: 1.6;
   padding: 40px;
-  color: #000000;
-  background: transparent;
+  color: #000;
+  background: linear-gradient(45deg, pink, purple);
+  background-attachment: fixed;
+  background-size: cover;
   margin: 0;
 }
 
@@ -125,22 +123,22 @@ h2 {
   margin: 25px 0 40px;
 }
 
-.item {
+.lang-list__item {
   margin-bottom: 12px;
 }
 
-.item__link {
+.lang-list__item-link {
   font-weight: bold;
   text-decoration: none;
   color: inherit;
   transition: color 0.2s;
 }
 
-.item__link:hover {
+.lang-list__item-link:hover {
   color: #2a7ae2;
 }
 
-.item__link::before {
+.lang-list__item-link::before {
   content: "🌐 ";
   font-weight: normal;
   color: #666;
