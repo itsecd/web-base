@@ -20,19 +20,19 @@
 }
 
 /* 2.1 Все дети первого имеют цвет red */
-.family__parent--first .family__child {
+.family__parent_type_first .family__child {
     color: red;
 }
 
 /* 2.2 Все дети второго имеют цвет #b4005a, родитель - orange, границы пунктирные orange */
-.family__parent--second {
+.family__parent_type_second {
     color: orange;
     border: 2px dashed orange;
     padding: 10px;
     margin: 10px 0;
 }
 
-.family__parent--second .family__child {
+.family__parent_type_second .family__child {
     color: #b4005a;
     border: 1px dashed orange;
     margin: 5px 0;
@@ -40,30 +40,39 @@
 }
 
 /* 2.3 Третий родитель и его дети цвета green, но только если они идут после вторых */
-.family__parent--second ~ .family__parent--third {
+.family__parent_type_second ~ .family__parent_type_third {
     color: green;
 }
 
-.family__parent--second ~ .family__parent--third .family__child {
+.family__parent_type_second ~ .family__parent_type_third .family__child {
     color: green;
-}
-
-/* 2.3 Если они идут между первыми и вторыми, то они стандартного цвета */
-.family__parent--first ~ .family__parent--third:not(.family__parent--second ~ .family__parent--third) {
-    color: initial;
-}
-
-.family__parent--first ~ .family__parent--third:not(.family__parent--second ~ .family__parent--third) .family__child {
-    color: initial;
 }
 
 /* 2.4 Дети второго приходят в гости к третьему */
-.family__child--guest {
-    border: none;
-    color: purple;
+.family__child_role_guest {
+    border: none !important;
+    color: purple !important;
 }
 
-/*ЗАДАНИЕ 3  */
+/* 2.5 Дети первого родителя в гостях */
+/* При посещении второго родителя - olive */
+.family__parent_type_second .family__child_role_first-guest {
+    color: olive !important;
+    border: 1px dotted olive !important;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+/* При посещении третьего родителя - yellow */
+.family__parent_type_third .family__child_role_first-guest {
+    color: yellow !important;
+    background-color: #333;
+    border: 1px dotted yellow !important;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+/*  ЗАДАНИЕ 3  */
 .article {
     max-width: 800px;
     margin: 0 auto;
@@ -110,7 +119,6 @@
     top: 0;
     margin-right: 8px;
 }
-
 
 .languages-list::after {
     content: "";

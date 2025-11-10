@@ -21,7 +21,7 @@
 
     <!-- Задание 2 - родители и дети -->
     <section class="family">
-        <div class="family__parent family__parent--first">
+        <div class="family__parent family__parent_type_first">
             Родитель 1
             <div class="family__child">Ребенок 1-1</div>
             <div class="family__child">Ребенок 1-2</div>
@@ -29,28 +29,35 @@
         </div>
 
         <!-- Третий родитель МЕЖДУ первым и вторым - стандартный цвет -->
-        <div class="family__parent family__parent--third">
+        <div class="family__parent family__parent_type_third">
             Родитель 3 (между 1 и 2) - стандартный цвет
             <div class="family__child">Ребенок 3-1</div>
             <div class="family__child">Ребенок 3-2</div>
+            <!-- Дети первого в гостях у третьего -->
+            <div class="family__child family__child_role_first-guest">Ребенок 1-4 (в гостях у 3)</div>
         </div>
 
-        <div class="family__parent family__parent--second">
+        <div class="family__parent family__parent_type_second">
             Родитель 2
             <div class="family__child">Ребенок 2-1</div>
             <div class="family__child">Ребенок 2-2</div>
             <div class="family__child">Ребенок 2-3</div>
+            <!-- Дети первого в гостях у второго -->
+            <div class="family__child family__child_role_first-guest">Ребенок 1-5 (в гостях у 2)</div>
         </div>
 
         <!-- Третий родитель ПОСЛЕ второго - зеленый -->
-        <div class="family__parent family__parent--third">
+        <div class="family__parent family__parent_type_third">
             Родитель 3 (после 2) - зеленый
             <div class="family__child">Ребенок 3-3</div>
             <div class="family__child">Ребенок 3-4</div>
             
             <!-- Дети второго приходят в гости к третьему -->
-            <div class="family__child family__child--guest">Ребенок 2-4 (в гостях)</div>
-            <div class="family__child family__child--guest">Ребенок 2-5 (в гостях)</div>
+            <div class="family__child family__child_role_guest">Ребенок 2-4 (в гостях)</div>
+            <div class="family__child family__child_role_guest">Ребенок 2-5 (в гостях)</div>
+            
+            <!-- Дети первого в гостях у третьего -->
+            <div class="family__child family__child_role_first-guest">Ребенок 1-6 (в гостях у 3)</div>
         </div>
     </section>
 
