@@ -2,10 +2,50 @@
 
 ### [Таблица с успеваемостью](https://docs.google.com/spreadsheets/d/1E9OKPixylDZm_OoSQpLpkEL9mWMCCnHHv3-npW79cJE/edit?gid=0#gid=0)
 
+## Лекции
+
+<table>
+<th>№</th>
+<th>Название</th>
+<th>Ссылка PDF</th>
+<th>Ссылка PPTX</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Введение</td>
+<td><a href="https://github.com/itsecd/web-base/blob/main/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/pdf/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%201.pdf">pdf</a></td>
+<td><a href="https://github.com/itsecd/web-base/blob/main/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/pptx/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%201.pptx">pptx</a></td>
+</tr>
+<tr>
+  
+<td>2</td>
+<td>Введение в HTML</td>
+<td><a href="https://github.com/itsecd/web-base/blob/main/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/pdf/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%202.pdf">pdf</a></td>
+<td><a href="https://github.com/itsecd/web-base/blob/main/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/pptx/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%202.pptx">pptx</a></td>
+</tr>
+<tr>
+  
+<td>3</td>
+<td>Продвинутый HTML</td>
+<td><a href="https://github.com/itsecd/web-base/blob/main/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/pdf/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%203.pdf">pdf</a></td>
+<td><a href="https://github.com/itsecd/web-base/blob/main/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/pptx/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%203.pptx">pptx</a></td>
+</tr>
+<tr>
+  
+<td>4</td>
+<td>Каскадная таблица стилей</td>
+<td><a href="https://github.com/itsecd/web-base/blob/main/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/pdf/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%204.pdf">pdf</a></td>
+<td><a href="https://github.com/itsecd/web-base/blob/main/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/pptx/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%204.pptx">pptx</a></td>
+</tr>
+
+</table>
+
 ## Лабораторные работы
 
 <table>
 <tr>
+
 <th>№</th>
 <th>Название</th>
 <th>Ссылка</th>
