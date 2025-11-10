@@ -1,0 +1,58 @@
+.streaming-services-list__item {
+    transition: color 0.4 ease;
+    width: fit-content;
+}
+.streaming-services-list__item:hover {
+    color: purple;
+}
+
+
+
+.family__child {
+    width: fit-content;
+    padding: 5px 10px;
+}
+
+.family__parent-1 .family__child {
+    color: red;
+}
+
+.family__parent-2 {
+    color: orange;
+}
+
+.family__parent-2 .family__child {
+    color: #b4005a;
+    border: 1px dashed orange;
+}
+
+.family__parent-2 ~ .family__parent-3,
+.family__parent-2 ~ .family__parent-3 .family__child {
+    color: green;
+}
+
+.family__parent-3 .family__child-2 {
+    color: purple !important;
+}
+
+
+
+.langs-list__item a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.langs-list__item a::after {
+    content: "🌐";
+}
+
+.langs-list::after {
+    content: "";
+    display: block;
+    width: 240px;
+    height: 80px;
+    background: url("https://ssau.ru/i/logo/logo-white-ru.svg") no-repeat center / contain;
+    background-color: gray;
+    border-radius: 10px;
+}
