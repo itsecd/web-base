@@ -37,19 +37,15 @@
     border-radius: 50%;
 }
 
-.traffic-light__lamp_red {background-color: red;}
-.traffic-light__lamp_yellow {background-color: yellow;}
-.traffic-light__lamp_green {background-color: green;}
+.traffic-light__lamp--red {background-color: red;}
+.traffic-light__lamp--yellow {background-color: yellow;}
+.traffic-light__lamp--green {background-color: green;}
 
 
 
 .maze {
-    display: flex;
-    flex-direction: column;
-}
-
-.maze__row {
-    display: flex;
+    display: grid;
+	grid-template-columns: repeat(3, 80px);
 }
 
 .maze__cell {
@@ -59,18 +55,18 @@
     height: 80px;
 }
 
-.maze__cell_top {
+.maze__cell--top {
     border-top: 5px solid black;
 }
 
-.maze__cell_bottom {
+.maze__cell--bottom {
     border-bottom: 5px solid black;
 }
 
-.maze__cell_left {
+.maze__cell--left {
     border-left: 5px solid black;
 }
 
-.maze__cell_right {
+.maze__cell--right {
     border-right: 5px solid black;
 }
