@@ -71,7 +71,7 @@ a {
 .parent-2 + .parent-3 .parent-3__child {
     color: green;
 }
-.parent-3 .parent-2 .parent-2__child {
+.parent-3 .parent-2__child {
     color: purple;
     border: none;
 }
@@ -98,10 +98,10 @@ a {
     background-repeat: no-repeat;
     background-size: contain; 
 }
-.Task3__list__item a::before{
+.list__item a::before{
     content: "🌐";
 }
-.Task3__list__item{
+.list__item{
     list-style: none;
     color: white;
     margin-left: 10px;
