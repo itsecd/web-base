@@ -1,3 +1,4 @@
+/* Базовые переменные */
 :root {
   --dark-blue: #324765;
   --light-gray-bg: #f8f8f8;
@@ -29,8 +30,7 @@ body {
   min-height: 100vh;
   padding: 20px;
 }
-
-.resume-container {
+.resume__container {
   display: flex;
   width: 900px;
   max-width: 95%;
@@ -39,8 +39,7 @@ body {
   border-radius: 8px;
   overflow: hidden;
 }
-
-.sidebar {
+.resume__sidebar {
   width: 35%;
   background-color: var(--dark-blue);
   color: var(--text-light);
@@ -49,70 +48,58 @@ body {
   flex-direction: column;
   gap: 30px;
 }
-
-.profile-header {
+.sidebar__profile-header {
   text-align: center;
   margin-bottom: 20px;
 }
-
 .profile-pic {
   width: 175px;
   height: 175px;
-
   object-fit: cover;
   margin-bottom: 20px;
   border: 3px solid #5f9ea0;
 }
-
-.sidebar h1 {
+.sidebar__profile-header h1 {
   font-size: 1.8em;
   margin-bottom: 5px;
   font-weight: 600;
 }
-
-.sidebar .job-title {
+.job-title {
   font-size: 1em;
   font-weight: 400;
   opacity: 0.9;
 }
-
-.contact-info {
+.sidebar__contact-info {
   margin-bottom: 20px;
 }
-
 .contact-item {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
   font-size: 0.9em;
 }
-
-.contact-item .label {
+.label {
   font-weight: 500;
   margin-right: 10px;
 }
-.contact-item .value {
+.value {
   text-align: right;
 }
-
-.sidebar .section h2 {
+.sidebar__section h2 {
   font-size: 1.3em;
   margin-bottom: 15px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   padding-bottom: 5px;
 }
-
 .personal-qualities ul {
   list-style: none;
 }
-
 .personal-qualities ul li {
   position: relative;
   padding-left: 20px;
   margin-bottom: 8px;
   font-size: 0.9em;
 }
-
 .personal-qualities ul li::before {
   content: "";
   position: absolute;
@@ -124,29 +111,24 @@ body {
   background-color: var(--text-light);
   border-radius: 50%;
 }
-
 .languages .language-proficiency {
   display: flex;
   gap: 5px;
   margin-top: 10px;
 }
-
-.languages .dot {
+.dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   border: 1px solid var(--text-light);
 }
-
-.languages .dot.filled {
+.dot.filled {
   background-color: var(--text-light);
 }
-
-.languages .dot.empty {
+.dot.empty {
   background-color: transparent;
 }
-
-.main-content {
+.resume__main-content {
   width: 65%;
   background-color: var(--light-gray-bg);
   padding: 40px 30px;
@@ -154,16 +136,14 @@ body {
   flex-direction: column;
   gap: 30px;
 }
-
-.main-content .section h2 {
+.section h2 {
   font-size: 1.8em;
   margin-bottom: 20px;
   font-weight: 600;
   position: relative;
   color: var(--text-dark);
 }
-
-.main-content .section h2::before {
+.section h2::before {
   content: "";
   position: absolute;
   left: 0;
@@ -172,18 +152,15 @@ body {
   height: 3px;
   background-color: var(--dark-blue);
 }
-
 .about-me p {
   font-size: 1em;
   line-height: 1.8;
 }
-
-.timeline {
+.education__timeline {
   position: relative;
   padding-left: 20px;
 }
-
-.timeline::before {
+.education__timeline::before {
   content: "";
   position: absolute;
   left: 0;
@@ -192,14 +169,12 @@ body {
   width: 2px;
   background-color: var(--timeline-line-color);
 }
-
-.timeline-item {
+.timeline__item {
   position: relative;
   margin-bottom: 25px;
   padding-left: 30px;
 }
-
-.timeline-item::before {
+.timeline__item::before {
   content: "";
   position: absolute;
   left: -8px;
@@ -211,21 +186,50 @@ body {
   border: 3px solid var(--light-gray-bg);
   z-index: 1;
 }
-
-.timeline-date {
+.timeline__date {
   font-size: 0.9em;
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 5px;
 }
-
-.timeline-content h3 {
+.timeline__content h3 {
   font-size: 1.1em;
   margin-bottom: 5px;
   font-weight: 500;
 }
-
-.timeline-content p {
+.timeline__content p {
   font-size: 0.9em;
   color: #666;
+}
+.projects a {
+  cursor: pointer;
+  position: relative;
+  color: #555;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .resume__container {
+    flex-direction: column;
+  }
+  .resume__sidebar,
+  .resume__main-content {
+    width: 100%;
+  }
+
+  body {
+    font-size: 14px;
+  }
+  .resume__sidebar h1 {
+    font-size: 1.6em;
+  }
+  .section h2 {
+    font-size: 1.6em;
+  }
+  .timeline__item {
+    margin-bottom: 20px;
+  }
+  .projects a {
+    font-size: 0.9em;
+  }
 }
