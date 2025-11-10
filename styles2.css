@@ -1,107 +1,174 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторная работа 2</title>
-    <link rel="stylesheet" href="styles2.css">
-</head>
-<body>
-    <!-- Задание 1: Анимированный список -->
-    <section class="task task--animated-list">
-        <h2 class="task__title">Задание 1: Анимированный список</h2>
-        <h3 class="task__subtitle">Популярные виды спорта:</h3>
-        <ul class="animated-list">
-            <li class="animated-list__item">Футбол</li>
-            <li class="animated-list__item">Баскетбол</li>
-            <li class="animated-list__item">Теннис</li>
-            <li class="animated-list__item">Плавание</li>
-            <li class="animated-list__item">Бег</li>
-        </ul>
-    </section>
+/* styles.css */
 
-    <!-- Задание 2: Дети и родители -->
-    <section class="task task--parents-children">
-        <h2 class="task__title">Задание 2: Дети и родители</h2>
-        <div class="task__parents-container">
-            <div class="parent-1">
-                <h3 class="parent-1__title">Parent 1</h3>
-                <div class="parent-1__children">
-                    <div class="parent-1__child">child 1</div>
-                    <div class="parent-1__child">child 2</div>
-                    <div class="parent-1__child">child 3</div>
-                    <div class="parent-1__child">child 4</div>
-                </div>
-            </div>
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-            <div class="parent-3">
-                <h3 class="parent-3__title">Parent 3</h3>
-                <div class="parent-3__children">
-                    <div class="parent-3__child">child 1</div>
-                    <div class="parent-3__child">child 2</div>
-                </div>
-            </div>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-            <div class="parent-2">
-                <h3 class="parent-2__title">Parent 2</h3>
-                <div class="parent-2__children">
-                    <div class="parent-2__child">child 1</div>
-                    <div class="parent-2__child">child 2</div>
-                </div>
-            </div>
+.task {
+    margin-bottom: 50px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
 
-            <div class="parent-3 parent-3--after">
-                <h3 class="parent-3__title">Parent 3</h3>
-                <div class="parent-3__children">
-                    <div class="parent-3__child">child 1</div>
-                    <div class="parent-2__child parent-2__child--visiting">child 2</div>
-                    <div class="parent-3__child">child 2</div>
-                </div>
-            </div>
-        </div>
-    </section>
+.task__title {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
 
-    <!-- Задание 3: Текст с языками программирования -->
-    <section class="task task--programming-languages">
-        <h2 class="task__title">Задание 3: Языки программирования</h2>
-        <div class="task__text-content">
-            <p>Языки программирования — это инструменты, с помощью которых разработчики создают программное обеспечение, веб-приложения, игры, алгоритмы и многое другое. Каждый язык имеет свои особенности, синтаксис и сферу применения. Ниже представлены некоторые из наиболее известных языков:</p>
-            
-            <ul class="task__languages-list">
-                <li class="languages-list__item">
-                    <a href="#" class="item__link">Python</a> – высокоуровневый язык с простым синтаксисом, популярный в Data Science, веб-разработке и автоматизации.
-                </li>
-                <li class="languages-list__item">
-                    <a href="#" class="item__link">JavaScript</a> – основной язык для фронтенд-разработки, работает в браузерах и на сервере (Node.js).
-                </li>
-                <li class="languages-list__item">
-                    <a href="#" class="item__link">Java</a> – объектно-ориентированный язык, широко используется в корпоративных приложениях и Android-разработке.
-                </li>
-                <li class="languages-list__item">
-                    <a href="#" class="item__link">C++</a> – мощный язык для системного программирования, игр и высокопроизводительных приложений.
-                </li>
-                <li class="languages-list__item">
-                    <a href="#" class="item__link">C#</a> – язык от Microsoft, применяется в разработке под Windows, играх (Unity) и веб-приложениях.
-                </li>
-                <li class="languages-list__item">
-                    <a href="#" class="item__link">Go (Golang)</a> – созданный Google, язык для высоконагруженных сетевых сервисов и облачных технологий.
-                </li>
-                <li class="languages-list__item">
-                    <a href="#" class="item__link">Ruby</a> – известен благодаря фреймворку Ruby on Rails для веб-разработки.
-                </li>
-                <li class="languages-list__item">
-                    <a href="#" class="item__link">Swift</a> – язык Apple для разработки под iOS и macOS.
-                </li>
-                <li class="languages-list__item">
-                    <a href="#" class="item__link">Kotlin</a> – современный язык, официально поддерживаемый для Android-разработки.
-                </li>
-                <li class="languages-list__item">
-                    <a href="#" class="item__link">Rust</a> – язык системного программирования с акцентом на безопасность и производительность.
-                </li>
-            </ul>
-            
-            <p>Это лишь малая часть из множества существующих языков, и выбор зависит от задач, которые нужно решить.</p>
-        </div>
-    </section>
-</body>
-</html>
+.task__subtitle {
+    margin-bottom: 15px;
+    color: #34495e;
+    font-size: 1.1rem;
+}
+
+/* Задание 1: Анимированный список */
+.animated-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.animated-list__item {
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.animated-list__item:hover {
+    color: #e74c3c;
+}
+
+/* Задание 2: Дети и родители */
+.task__parents-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.parent-1,
+.parent-2,
+.parent-3 {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.parent-1__title,
+.parent-2__title,
+.parent-3__title {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.parent-1__children,
+.parent-2__children,
+.parent-3__children {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.parent-1__child,
+.parent-2__child,
+.parent-3__child {
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+/* Все дети первого родителя красные */
+.parent-1__child {
+    color: red;
+}
+
+/* Второй родитель оранжевый, его дети с пунктирной границей */
+.parent-2 {
+    color: orange;
+}
+
+.parent-2__child {
+    color: #b4005a;
+    border: 1px dashed orange;
+}
+
+/* Третий родитель и его дети зеленые, но только если идут после вторых */
+.parent-3--after {
+    color: green;
+}
+
+.parent-3--after .parent-3__child {
+    color: green;
+}
+
+/* Дети второго, приходящие в гости к третьему */
+.parent-2__child--visiting {
+    color: purple !important;
+    border: none !important;
+}
+
+/* Задание 3: Языки программирования */
+.task__text-content {
+    line-height: 1.7;
+}
+
+.task__languages-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.languages-list__item {
+    margin-bottom: 15px;
+    padding-left: 0;
+    position: relative;
+}
+
+.item__link {
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    padding-left: 25px;
+}
+
+.item__link::before {
+    content: "🌐";
+    position: absolute;
+    left: 0;
+    font-size: 1em;
+}
+
+.item__link:hover {
+    text-decoration: underline;
+}
+
+/* Логотип Самарского университета после всего текста */
+.task__text-content::after {
+    content: url('https://ssau.ru/i/logo/logo-ru.svg');
+    display: block;
+    max-width: 200px;
+    margin: 30px auto 0;
+    padding: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
