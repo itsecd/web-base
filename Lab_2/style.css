@@ -25,25 +25,25 @@ section {
   background-color: rgba(255, 255, 255, 0.596);
 }
 
-.languages_title { 
+.languages__title { 
   margin: 0 0 12px; 
 }
 
-.languages_lang_list {
+.lang-list {
   list-style: disc inside;
   padding: 0;
   margin: 0;
   font-size: 20px;
 }
 
-.lang_list_item {
+.lang-list__item {
   cursor: pointer;
   padding: 0px 4px;
   margin: 4px 0;
   transition: color 1s ease;
 }
 
-.lang_list_item:hover { 
+.lang-list__item:hover { 
   color: #0b8307; 
 }
 
@@ -52,13 +52,13 @@ section {
   padding: 4px 8px;
 }
 
-.parent_1_title {
+.parent_1__title {
   display: inline-block;
   margin-bottom: 8px;
   font-weight: bold;
 }
 
-.parent_1_child {
+.parent_1__child {
   margin: 0;
   color: red;
 }
@@ -69,13 +69,13 @@ section {
   color: orange;
 }
 
-.parent_2_title {
+.parent_2__title {
   display: inline-block;
   margin-bottom: 8px;
   font-weight: bold;
 }
 
-.parent_2_child {
+.parent_2__child {
   margin: 0;
   color: #b4005a;
   border: 5px dashed orange;
@@ -88,14 +88,14 @@ section {
   padding: 4px 8px;
 }
 
-.parent_3_black_title {
+.parent_3_black__title {
   display: inline-block;
   margin-bottom: 8px;
   font-weight: bold;
   color: black;
 }
 
-.parent_3_black_child {
+.parent_3_black__child {
   margin: 0;
   color: black;
 }
@@ -106,19 +106,19 @@ section {
   color: green;
 }
 
-.parent_3_title {
+.parent_3__title {
   display: inline-block;
   margin-bottom: 8px;
   font-weight: bold;
   color: green;
 }
 
-.parent_3_child {
+.parent_3__child {
   margin: 0;
   color: green;
 }
 
-.parent_3 .parent_2_child {
+.parent_3 .parent_2__child {
   color: purple;
   border: none;
   padding: 0;
@@ -127,25 +127,25 @@ section {
 
 /* Задание 3: Ссылки и логотип */
 
-.pl_title { 
+.pl__title { 
   margin-bottom: 12px; 
 }
 
-.pl_text { 
+.pl__text { 
   margin-bottom: 16px; 
 }
 
-.pl_pl_list { 
+.pl-list { 
   list-style: none; 
   padding: 0; 
   margin: 0; 
 }
 
-.pl_pl_list_item { 
+.pl-list__item { 
   margin-bottom: 8px; 
 }
 
-.pl_pl_list_link {
+.item__link {
   font-weight: bold;
   text-decoration: none;
   color: #333;
@@ -155,16 +155,16 @@ section {
   gap: 0.35em;
 }
 
-.pl_pl_list_link::before {
+.item__link::before {
   content: "🌐";
   font-size: 1em;
 }
 
-.pl_pl_list_link:hover { 
+.item__link:hover { 
   color: #17dd7a; 
 }
 
-.pl_badge {
+.pl__badge {
   position: relative;
   margin-top: 16px;
   height: 80px;
@@ -172,7 +172,7 @@ section {
   overflow: hidden;
 }
 
-.pl_badge::before {
+.pl__badge::before {
   content: "";
   position: absolute;
   top: 50%;
