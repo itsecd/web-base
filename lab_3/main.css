@@ -1,0 +1,157 @@
+.cv{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 800px;
+    width: 1200px;
+    background-color:gray;
+    margin: 32px auto;
+    border-radius: 5px;
+}
+
+.cv__item{
+    padding: 30px;
+    margin: 5px;
+    border-radius: 6px;
+}
+
+.cv__item--left{
+    background: papayawhip;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cv__item--right {
+    background: #fff;
+}
+
+.profile{
+    display: flex;
+}
+
+.profile__photo img{
+    border-radius: 10px;
+    margin-right: 50px;
+    height: 200px;
+}
+
+.profile__intro {
+    color: black;
+    font-size: 25px;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact__item{
+    display: flex;
+    align-items: center;
+    background: burlywood;
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: white;
+    font-size: 20px;
+}
+
+.item__icon{
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.item__text{
+    color: black;
+}
+
+.item__icon-github{
+    content:url("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png");
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.language{
+    align-items: center;
+    background: burlywood;
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: white;
+    font-size: 20px;
+}
+
+.language__title{
+    color:black;
+    margin: 0 0 10px;
+}
+
+.language__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.list__row{
+    display: flex;
+    align-items: center;
+}
+
+.row__name{
+    width: 120px;
+    color:black;
+}
+.row__dots{
+    display: flex;
+    gap: 6px;
+}
+
+.dots__dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background:rgb(255,255,255,0.6);
+}
+
+.dots__dot--full{
+    background: gray;
+}
+
+.info-card{
+    width: 400px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    border-left: 6px solid goldenrod;
+}
+
+.item__title{
+    background: #222;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.item__text {
+    font-size: 20px;
+}
+
+.item__list{
+    list-style: disc inside;
+    margin: 0;
+    padding: 0;
+}
+
+.list-item{
+    font-size: 20px;
+    margin: 4px 0;
+}
