@@ -119,9 +119,9 @@ body {
 }
 
 /* Дети второго, приходящие в гости к третьему */
-.parent-2__child--visiting {
-    color: purple !important;
-    border: none !important;
+.parent-3--after .parent-2__child {
+    color: purple;
+    border: none;
 }
 
 /* Задание 3: Языки программирования */
@@ -162,13 +162,15 @@ body {
 
 /* Логотип Самарского университета после всего текста */
 .task__text-content::after {
-    content: url('https://ssau.ru/i/logo/logo-ru.svg');
+    content: "";
     display: block;
-    max-width: 200px;
+    width: 200px;
+    height: 60px;
     margin: 30px auto 0;
-    padding: 10px;
+    background-image: url('https://ssau.ru/i/logo/logo-ru.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-
+    padding: 10px;
+    box-sizing: border-box;
 }
