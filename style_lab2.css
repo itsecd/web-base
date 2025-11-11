@@ -1,86 +1,88 @@
-﻿list__items {
-    list-style-type: disc;
-    padding-right: 20px;
+.list__items {
+  list-style-type: disc;
+  padding-right: 20px;
 }
 
-.list__item{
-    color: black;
-    transition: color 0.5s ease;
+.items__item {
+  color: black;
+  transition: color 0.5s ease;
 }
 
-.list__item:hover{
-    color: green;
+.items__item:hover {
+  color: green;
 }
 
-.family__parent{
-    margin-bottom: 40px;
+
+.parent {
+  margin-bottom: 40px;
 }
 
-.family__title{
-    font-weight: bold;
+.parent__title {
+  font-weight: bold;
 }
 
-.family__child{
-    margin-left: 20px;
-    padding: 2px 4px;
+.parent--1__child,
+.parent--2__child,
+.parent--3__child {
+  margin-left: 20px;
+  padding: 2px 4px;
 }
 
-.family__parent--first .family__child{
-    color: red;
+.parent--1 .parent--1__child {
+  color: red;
 }
 
-.family__parent--second{
-    color: orange;
+.parent--2 {
+  color: orange;
 }
 
-.family__parent--second .family__child{
-    color: #b4005a;
-    border: 1px dotted orange;
-    width: 100px;
+.parent--2 .parent--2__child {
+  color: #b4005a;
+  border: 1px dotted orange;
+  width: 100px;
+  display: inline-block;
 }
 
-.family__parent--third{
-    color: inherit;
+.parent--3 {
+  color: inherit;
 }
 
-.family__parent--third .family__child--guest{
-    color:purple;
-    margin-left: 20px;
-    padding: 2px 4px;
-    border: none;
+.parent--3 .parent--3__child--guest {
+  color: purple;
+  margin-left: 20px;
+  padding: 2px 4px;
+  border: none;
 }
 
-.family__parent--second ~ .family__parent--third,
-.family__parent--second ~ .family__parent--third .family__child{
-    color: green;
+.parent--2 ~ .parent--3,
+.parent--2 ~ .parent--3 .parent--3__child {
+  color: green;
 }
 
-.languages{
-    max-width: 700px;
-    margin-top: 20px;
-    line-height: 1.5;
+
+.languages {
+  max-width: 700px;
+  margin-top: 20px;
+  line-height: 1.5;
 }
 
-.languages__link{
-    font-weight: bold;
-    text-decoration:none;
-    color: inherit;
-    position: relative;
+.languages__link {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
 }
 
 .languages__link::after {
-        content: " 🌐";
-        font-weight: normal;
+  content: " 🌐";
+  font-weight: normal;
 }
 
 .languages__list::after {
-    content: "";
-    display: block;
-    width: auto;
-    height: 100px;
-    background-color: #2780E3;
-    margin: 15px auto 0;
-    background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  content: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  display: block;
+  width: auto;
+  height: 100px;
+  background-color: #2780E3;
+  margin: 15px auto 0;
 }
