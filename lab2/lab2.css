@@ -17,3 +17,28 @@
     color: #f99665;
     background-color: #f0f0f0;
 }
+
+.parent_2 {
+    color: #f4bc92;
+}
+
+.parent_1 .parent_child {
+  color: red;
+  width: 50px;
+}
+
+.parent_2 .parent_child {
+  color: #b4005a;
+  border-style: dotted;
+  border-color: #f4bc92;
+  width: 50px;
+}
+
+.parent_2 ~ .parent_3,
+.parent_2 ~ .parent_3 .parent_child {
+  color: green;
+}
+
+.parent_2 ~ .parent_3 .parent_child_guest-from-2 {
+  color: purple;
+}
