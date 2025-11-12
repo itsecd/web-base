@@ -12,7 +12,6 @@
   color: green;
 }
 
-
 .parent {
   margin-bottom: 40px;
 }
@@ -47,7 +46,7 @@
   color: inherit;
 }
 
-.parent--3 .parent--3__child--guest {
+.parent--3__child--guest {
   color: purple;
   margin-left: 20px;
   padding: 2px 4px;
@@ -58,7 +57,6 @@
 .parent--2 ~ .parent--3 .parent--3__child {
   color: green;
 }
-
 
 .languages {
   max-width: 700px;
