@@ -83,19 +83,15 @@ section {
   margin-top: 4px;
 }
 
-.parent-3-black {
-  margin: 16px 0;
-  padding: 4px 8px;
-}
 
-.parent-3-black__title {
+.family > .parent-3:nth-child(3) .parent-3__title {
   display: inline-block;
   margin-bottom: 8px;
   font-weight: bold;
   color: black;
 }
 
-.parent-3-black__child {
+.family > .parent-3:nth-child(3) .parent-3__child {
   margin: 0;
   color: black;
 }
@@ -137,16 +133,17 @@ section {
 }
 
 .pl__pl-list { 
+  position: relative;
   list-style: none; 
   padding: 0; 
   margin: 0; 
 }
 
-.pl_pl_list_item { 
+.pl-list__item { 
   margin-bottom: 8px; 
 }
 
-.pl_pl_list_link {
+.item__link {
   font-weight: bold;
   text-decoration: none;
   color: #333;
@@ -156,7 +153,7 @@ section {
   gap: 0.35em;
 }
 
-.pl_pl_list_link::before {
+.item__link::before {
   content: "🌐";
   font-size: 1em;
 }
@@ -165,28 +162,17 @@ section {
   color: #2659e4; 
 }
 
-.pl__badge {
-  position: relative;
-  margin-top: 16px;
+.pl__pl-list::after {
+  content: "";
+  display: block;
   height: 80px;
+  margin-top: 16px;
   background-color: #920e2b;
   border-radius: 6px;
-  overflow: hidden;
-}
-
-.pl__badge::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%);
-  width: 150px;
-  height: 40px;
   background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-
+  background-position: 16px center; 
+  background-size: auto 40px;     
 }
 
 .lang_list__item:hover {
