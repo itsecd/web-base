@@ -14,10 +14,6 @@
                 <input type="number" id="a" class="field__input" placeholder="Введите первое число" />
             </div>
             <div class="calculator__field">
-                <label for="b" class="field__label">Второе число</label>
-                <input type="number" id="b" class="field__input" placeholder="Введите второе число" />
-            </div>
-            <div class="calculator__field">
                 <label for="op" class="field__label">Операция</label>
                 <select id="op" class="field__select">
                     <option value="+">Сложение (+)</option>
@@ -25,6 +21,10 @@
                     <option value="*">Умножение (*)</option>
                     <option value="/">Деление (/)</option>
                 </select>
+            </div>
+            <div class="calculator__field">
+                <label for="b" class="field__label">Второе число</label>
+                <input type="number" id="b" class="field__input" placeholder="Введите второе число" />
             </div>
             <button class="calculator__button" onclick="calculate()">Вычислить</button>
             <div class="calculator__result">

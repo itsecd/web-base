@@ -1,29 +1,39 @@
-function calculate(){
+function calculate() {
     const a = parseFloat(document.getElementById("a").value);
     const b = parseFloat(document.getElementById("b").value);
     const op = document.getElementById("op").value;
-    if (isNaN(a) || isNaN(b)){
-        alert("Введите оба два числа");
+
+    if (!document.getElementById("a") || !document.getElementById("b") || !document.getElementById("op")) {
+        alert("Не все элементы были найдены!");
+        return;
+    }
+
+    if (isNaN(a) || isNaN(b)) {
+        alert("Введите оба числа!");
         return;
     }
 
     let result;
-    if(op === "+"){
+    if (op === "+") {
         result = a + b;
-    } else if(op === "-"){
+    } else if (op === "-") {
         result = a - b;
-    } else if(op === "*"){
+    } else if (op === "*") {
         result = a * b;
-    } else if(op === "/"){
-        if(b === 0){
-            alert("Нельзя");
-            return ;
+    } else if (op === "/") {
+        if (b === 0) {
+            alert("Деление на ноль невозможно!");
+            return;
         }
         result = a / b;
-    } else{
+    } else {
         alert("Неправильная операция");
-        return ;
+        return;
     }
 
-    document.getElementById("result").innerText = result;
+    if (result !== undefined) {
+        document.getElementById("result").innerText = result;
+    } else {
+        alert("Ошибка в вычислениях");
+    }
 }
