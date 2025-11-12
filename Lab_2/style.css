@@ -83,19 +83,15 @@ section {
   margin-top: 10px;
 }
 
-.parent_3_black {
-  margin: 16px 0;
-  padding: 4px 8px;
-}
 
-.parent_3_black__title {
+.family > .parent_3:nth-child(3) .parent_3__title {
   display: inline-block;
   margin-bottom: 8px;
   font-weight: bold;
   color: black;
 }
 
-.parent_3_black__child {
+.family > .parent_3:nth-child(3) .parent_3__child {
   margin: 0;
   color: black;
 }
