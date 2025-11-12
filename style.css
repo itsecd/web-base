@@ -17,7 +17,7 @@ body {
   width: 200px;
   height: 200px;
 }
-.header__photos{
+.info__photos{
   border-radius: 13px;
   width: 26px;
   height: 26px;
@@ -27,7 +27,7 @@ body {
 .text{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows:repeat(3, 1fr) ;
+  grid-template-rows:repeat(2, 1fr) ;
   gap:10px;
   justify-content: center;
   margin:50px;
@@ -39,4 +39,11 @@ body {
   border-radius: 10px;
   padding:50px;
   text-align: center;
+  transform: all 0.1s ease-in-out;
 }
+.text__item:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  background: #edecec;
+}
+
