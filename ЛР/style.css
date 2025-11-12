@@ -8,31 +8,35 @@
 
 
 
-.family__child {
+.family__parent-1__child {
+    color: red;
     width: fit-content;
     padding: 5px 10px;
-}
-
-.family__parent-1 .family__child {
-    color: red;
 }
 
 .family__parent-2 {
     color: orange;
 }
 
-.family__parent-2 .family__child {
+.family__parent-2__child {
     color: #b4005a;
     border: 1px dashed orange;
+    width: fit-content;
+    padding: 5px 10px;
 }
 
 .family__parent-2 ~ .family__parent-3,
-.family__parent-2 ~ .family__parent-3 .family__child {
+.family__parent-2 ~ .family__parent-3 .family__parent-3__child {
     color: green;
+    width: fit-content;
+    padding: 5px 10px;
 }
 
-.family__parent-3 .family__child-2 {
+.family__parent-3 .family__parent-2__child {
     color: purple !important;
+    border: none;
+    width: fit-content;
+    padding: 5px 10px;
 }
 
 
@@ -55,4 +59,13 @@
     background: url("https://ssau.ru/i/logo/logo-white-ru.svg") no-repeat center / contain;
     background-color: gray;
     border-radius: 10px;
+}
+
+.langs-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.langs-list__item::before {
+    content: "🌐";
 }
