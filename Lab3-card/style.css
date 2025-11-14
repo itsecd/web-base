@@ -6,25 +6,24 @@ body {
   background: #f9f9f9;
   color: #222;
 }
-.photo {
+.header {
+  text-align: center;
+}
+.header__photo {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   border: 3px solid #4a90e2;
 }
-.photo__item {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-h1 {
+.header__name {
   font-size: 28px;
   text-align: center;
   margin-bottom: 5px;
 }
-.date-of-birth {
+.header__date-of-birth {
   text-align: center;
   font-style: italic;
   margin-bottom: 15px;
@@ -72,8 +71,10 @@ ul {
   font-weight: bold;
 }
 
-.links a.links__item--github::before {
+.links a.links--github::before {
   content: "";
+  display: block;
+  background-size: cover;
   position: absolute;
   left: 0px;
   top: 50%;
@@ -83,7 +84,7 @@ ul {
   background: url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png') no-repeat center/100%;
   border-radius: 50%;
 }
-.links a.links__item--telegram::before {
+.links a.links--telegram::before {
   content: "";
   position: absolute;
   left: 0px;
