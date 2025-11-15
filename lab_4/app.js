@@ -1,12 +1,17 @@
 function calculate() {
-    const a = parseFloat(document.getElementById("a").value);
-    const b = parseFloat(document.getElementById("b").value);
-    const op = document.getElementById("op").value;
+    const aEl = document.getElementById("a");
+    const bEl = document.getElementById("b");
+    const opEl = document.getElementById("op");
+    const resultEl = document.getElementById("result");
 
-    if (!document.getElementById("a") || !document.getElementById("b") || !document.getElementById("op")) {
+    if (!aEl || !bEl || !opEl || !resultEl) {
         alert("Не все элементы были найдены!");
         return;
     }
+
+    const a = parseFloat(aEl.value);
+    const b = parseFloat(bEl.value);
+    const op = opEl.value;
 
     if (isNaN(a) || isNaN(b)) {
         alert("Введите оба числа!");
@@ -31,9 +36,9 @@ function calculate() {
         return;
     }
 
-    if (result !== undefined) {
+    if(Boolean(result) || result === 0){
         document.getElementById("result").innerText = result;
     } else {
-        alert("Ошибка в вычислениях");
+        alert("Ошибка в вычисленияx");
     }
 }
