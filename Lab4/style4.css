@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.calculator {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 40px 30px;
+    text-align: center;
+    background-image: url("back-ground.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+}
+
+.calculator__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calculator__group--input {
+    width: 100%;
+}
+
+.calculator__group--operation {
+    width: 100%;
+}
+
+.calculator__label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #222;
+}
+
+.calculator__input,
+.calculator__select {
+    width: 70%;
+    min-width: 220px;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calculator__input:focus,
+.calculator__select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.6);
+}
+
+.calculator__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.calculator__button {
+    min-width: 120px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, opacity 0.2s ease;
+}
+
+.calculator__button--calculate {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.calculator__button--clear {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.calculator__button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.calculator__button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.calculator__result {
+    margin-top: 10px;
+    padding: 10px;
+    min-height: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #111;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 6px;
+    display: inline-block;
+}
