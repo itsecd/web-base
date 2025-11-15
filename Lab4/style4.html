@@ -9,13 +9,13 @@
 <body>
     <div class="calculator">
         <div class="calculator__group calculator__group--input">
-            <label class="calculator__label" for="number1">Number first</label>
-            <input class="calculator__input" type="number" id="number1" placeholder="Enter number">
+            <label class="group__label" for="number1">Number first</label>
+            <input class="group__input" type="number" id="number1" placeholder="Enter number">
         </div>
 
         <div class="calculator__group calculator__group--operation">
-            <label class="calculator__label" for="operation">Select the operation</label>
-            <select class="calculator__select" id="operation">
+            <label class="group__label" for="operation">Select the operation</label>
+            <select class="group__select" id="operation">
                 <option value="+">(+)</option>
                 <option value="-">(-)</option>
                 <option value="*">(×)</option>
@@ -24,13 +24,13 @@
         </div>
 
         <div class="calculator__group calculator__group--input ">
-            <label class="calculator__label" for="number2">Number second</label>
-            <input class="calculator__input" type="number" id="number2" placeholder="Enter number">
+            <label class="group__label" for="number2">Number second</label>
+            <input class="group__input" type="number" id="number2" placeholder="Enter number">
         </div>
 
-        <div class="calculator__buttons">
-            <button class="calculator__button calculator__button--calculate" onclick="calculate()">Calculate</button>
-            <button class="calculator__button calculator__button--clear" onclick="clearAll()">Delete all</button>
+        <div class="calculator__btn">
+            <button class="btn__button btn__button--calculate" onclick="calculate()">Calculate</button>
+            <button class="btn__button btn__button--clear" onclick="clearAll()">Delete all</button>
         </div>
 
         <div class="calculator__result" id="result">Result: </div>

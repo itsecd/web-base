@@ -4,6 +4,11 @@ function calculate(){
     const number2_input = document.getElementById('number2');
     const result_ele = document.getElementById('result');
 
+    if(!number1_input || !operation_select || !number2_input || !result_ele){
+        alert("Error!!! not found all elements on page.");
+        return;
+    }
+
     const number1 = parseFloat(number1_input.value);
     const number2 = parseFloat(number2_input.value);
     const operation = operation_select.value; 
@@ -19,12 +24,15 @@ function calculate(){
     switch(operation){
         case '+':
             result = number1 + number2;
+            result_ele.style.color = '#111';
             break;
         case '-':
             result = number1 - number2;
+            result_ele.style.color = '#111';
             break;
         case '*':
             result = number1 * number2;
+            result_ele.style.color = '#111';
             break;
         case '/':
             if(number2 === 0){
@@ -32,6 +40,7 @@ function calculate(){
                 result_ele.style.color = 'red';
                 return;
             }
+            result_ele.style.color = '#111';
             if(number1 % number2 === 0){
                 result = number1 / number2;
             }else{
@@ -42,19 +51,24 @@ function calculate(){
             return;    
     }
 
-    result_ele.textContent = 'Result:' + result;
+    result_ele.textContent = 'Result: ' + result;
 }
 
 function clearAll() {
     const number1_input = document.getElementById('number1');
-    const operation_seclect = document.getElementById('operation');
+    const operation_select = document.getElementById('operation');
     const number2_input = document.getElementById('number2');
     const result_ele = document.getElementById('result');
 
+    if(!number1_input || !operation_select || !number2_input || !result_ele){
+        alert("Error!!! not found all elements on page.");
+        return;
+    }
+
     number1_input.value = '';
     number2_input.value = '';
-    operation_seclect.value = '+';
+    operation_select.value = '+';
 
     result_ele.textContent = 'Result: ';
-    result_ele.style.color = '#111111';
+    result_ele.style.color = '';
 }
