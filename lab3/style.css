@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+    min-height: 100vh;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Стили для header */
+.header {
+    background: rgba(10, 10, 20, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(64, 224, 208, 0.3);
+    padding: 25px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #40e0d0, transparent);
+}
+
+.header__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header__photo-container {
+    flex: 0 0 150px;
+}
+
+.header__photo {
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid #40e0d0;
+    box-shadow: 0 0 15px rgba(64, 224, 208, 0.5);
+}
+
+.header__info {
+    flex: 1;
+}
+
+.header__name {
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #40e0d0, #20b2aa);
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+    margin-bottom: 8px;
+}
+.header__position {
+    font-size: 18px;
+    color: #b0b0b0;
+    font-weight: 300;
+}
+
+/* Стили для основного содержания */
+.content {
+    flex: 1;
+    padding: 40px 0;
+}
+
+.content__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content__grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+
+.content__column--left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.content__column--right {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Стили для секций */
+.personal-info, .skills, .languages, .github, .about, .soft-skills, .hobbies, .education, .achievements {
+    background: rgba(20, 20, 35, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid rgba(64, 224, 208, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.personal-info:hover, .skills:hover, .languages:hover, .github:hover, 
+.about:hover, .soft-skills:hover, .hobbies:hover, .education:hover, 
+.achievements:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.personal-info__title, .skills__title, .languages__title, .github__title, 
+.about__title, .soft-skills__title, .hobbies__title, .education__title, 
+.achievements__title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #40e0d0;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Стили для личной информации */
+.personal-info__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.personal-info__item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.personal-info__label {
+    font-weight: 500;
+    color: #b0b0b0;
+}
+
+.personal-info__value {
+    color: #e0e0e0;
+}
+
+/* Стили для навыков */
+.skills__category {
+    margin-bottom: 20px;
+}
+
+.skills__category:last-child {
+    margin-bottom: 0;
+}
+
+.skills__subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #20b2aa;
+}
+
+.skills__list {
+    list-style-type: none;
+}
+
+.skills__item {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 20px;
+    color: #e0e0e0;
+}
+
+.skills__item::before {
+    content: '▹';
+    color: #40e0d0;
+    position: absolute;
+    left: 0;
+}
+
+/* Стили для языков */
+.languages__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.languages__item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.languages__name {
+    font-weight: 500;
+}
+
+.languages__level {
+    color: #b0b0b0;
+    font-size: 14px;
+}
+
+/* Стили для GitHub */
+.github__link {
+    color: #40e0d0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.github__link:hover {
+    color: #20b2aa;
+    text-decoration: underline;
+}
+
+/* Стили для раздела "О себе" */
+.about__text {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #d0d0d0;
+}
+
+.about__text:last-child {
+    margin-bottom: 0;
+}
+
+/* Стили для Soft Skills */
+.soft-skills__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.soft-skills__item {
+    padding: 15px;
+    background: rgba(30, 30, 45, 0.5);
+    border-radius: 8px;
+    border-left: 3px solid #40e0d0;
+}
+
+.soft-skills__subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #e0e0e0;
+}
+
+.soft-skills__description {
+    font-size: 14px;
+    color: #b0b0b0;
+    line-height: 1.5;
+}
+
+/* Стили для увлечений */
+.hobbies__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.hobbies__item {
+    padding: 15px;
+    background: rgba(30, 30, 45, 0.5);
+    border-radius: 8px;
+    border-left: 3px solid #20b2aa;
+}
+
+.hobbies__subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #e0e0e0;
+}
+
+.hobbies__description {
+    font-size: 14px;
+    color: #b0b0b0;
+    line-height: 1.5;
+}
+
+/* Стили для образования */
+.education__item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.education__item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.education__institution {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #e0e0e0;
+}
+
+.education__faculty {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #b0b0b0;
+}
+
+.education__specialty {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #b0b0b0;
+}
+
+.education__period {
+    font-size: 14px;
+    color: #40e0d0;
+}
+
+/* Стили для достижений */
+.achievements__item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.achievements__item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.achievements__name {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #e0e0e0;
+}
+
+.achievements__organization {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #b0b0b0;
+}
+
+.achievements__year {
+    font-size: 14px;
+    color: #40e0d0;
+}
+
+/* Стили для footer */
+.footer {
+    background: rgba(10, 10, 20, 0.9);
+    border-top: 1px solid rgba(64, 224, 208, 0.3);
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer__text {
+    font-size: 14px;
+    color: #b0b0b0;
+}
+
+
+
