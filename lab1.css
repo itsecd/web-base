@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #3498db;
+}
+
+.task {
+  margin-bottom: 50px;
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.task h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.text-block {
+  background: #202cb7;
+  color: #5196ea;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.text-block p {
+  margin-bottom: 15px;
+  text-indent: 20px;
+}
+
+.images {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.images__item {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border: 5px solid white;
+  border-radius: 10px;
+}
+
+.images__item_pos_top {
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.images__item_pos_bottom {
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.traffic-light {
+  width: 120px;
+  background: #2c3e50;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.traffic-light__light {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 15px auto;
+  border: 3px solid #34495e;
+}
+
+.traffic-light__light_red {
+  background: #e74c3c;
+}
+
+.traffic-light__light_yellow {
+  background: #f39c12;
+}
+
+.traffic-light__light_green {
+  background: #2ecc71;
+}
+
+.maze {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 0;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+.maze__cell {
+  background-color: #f8f9fa;
+  border: 2px solid #333;
+  box-sizing: border-box;
+}
+
+.maze__cell_no-top {
+  border-top: none;
+}
+.maze__cell_no-right {
+  border-right: none;
+}
+.maze__cell_no-bottom {
+  border-bottom: none;
+}
+.maze__cell_no-left {
+  border-left: none;
+}
