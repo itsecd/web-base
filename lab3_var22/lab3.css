@@ -1,7 +1,24 @@
 body {
-    background-color: #7f7f7f;
+    background-color: #012E40;
     padding: 20px;
     font-family: FreeMono, monospace;
+    color: #012E40;
+}
+
+#sub-heading {
+    color: #F28705;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0; 
+}
+
+#tertiary-heading {
+    color: #03A696;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0; 
+    margin-top: 0; 
 }
 
 .resume {
@@ -12,14 +29,9 @@ body {
     grid-row-gap: 30px;
 }
 
-.resume > [class^="resume__"] {
+[class^="resume__"] {
     background-color: #f6f6f6;
     border-radius: 30px;
-}
-
-.resume__third-block {
-    grid-column: 2 / 3;
-    grid-row: 2 / 4;
 }
 
 .resume__first-block {
@@ -29,6 +41,15 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+.first-block__image-avatar {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: solid 5px #012E40;
+    object-fit: cover;
+    margin-left: 15%
+} 
 
 .first-block__info {
     display: flex;
@@ -41,30 +62,76 @@ body {
 }
 
 .info__full-name {
-    color: #880015;
+    color: #F28705;
     text-transform: uppercase;
     font-size: 60px;
     font-weight: bold;
     margin: 0;
 }
 
-.info__proffesion {
-    color: #7f7f7f;
+.info__github-link {
+    color: #012E40;
     font-size: 30px;
     margin: 10px 0 0 0;
     text-decoration: none;
 }
 
-.info__proffesion:hover {
-    color: #ffc90e;
+.info__github-link:hover {
+    color: #03A696;
     text-decoration: underline;
 }
 
-.first-block__image-avatar {
+.resume__second-block {
+    background-color: #03A696;
+}
+
+.second-block__info {
+    color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    border: solid 5px #7f7f7f;
-    object-fit: cover;
-    margin-left: 15%
-} 
+    margin: 0 5% 0 5%;
+}
+
+.info__about-me {
+    margin-top: 5px;
+}
+
+.second-block__info > #sub-heading {
+    color: #f6f6f6;
+}
+
+.resume__third-block {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+}
+
+.third-block__info {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5% 5% 5%;
+}
+
+.info__soft-skills, .info__hard-skills {
+    height: 200px;
+}
+
+.hard-skills__list, .soft-skills__list, .activities__list {
+    list-style-type: none;
+}
+
+[class^="list__"]::before {
+    content: "";
+    background-image: url(images/Ouegu+.png);
+    background-size: contain;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.fourth-block__info {
+    margin: 0 5% 5% 5%;
+}
