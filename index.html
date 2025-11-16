@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моё Портфолио - Лабораторная №3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header с фото и базовой инфо -->
+    <header class="header">
+        <div class="header__photo-container">
+            <img src="avatar.jpg" alt="Моё фото" class="header__photo">
+        </div>
+        <div class="header__info">
+            <h1 class="header__name">Харитонов Артем Сергеевич</h1>
+            <p class="header__birth">Дата рождения: 25.01.2006</p>
+            <a href="https://github.com/ARGONfm" class="header__github">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </header>
+
+    <!-- Раздел "О себе" -->
+    <section class="about">
+        <h2 class="about__title">О себе</h2>
+        <p class="about__text">
+            Я студент Самарского университета, учусь на специальности "информационная безопасность автоматизированных систем". 
+            За время обучение научился программировать на Python, C++, HTML, CSS.
+            Свободное время провожу за прослушиванием музыки или чтением книг.  
+        </p>
+    </section>
+
+    <!-- Увлечения -->
+    <section class="hobbies">
+        <h2 class="hobbies__title">Любимые увлечения</h2>
+        <ul class="hobbies__list">
+            <li><i class="fas fa-music"></i> Музыка</li>
+            <li><i class="fas fa-book"></i> Чтение</li>
+            <li><i class="fas fa-dumbbell"></i> Спорт</li>
+        </ul>
+    </section>
+
+    <!-- Навыки -->
+    <section class="skills">
+        <h2 class="skills__title">Навыки</h2>
+        <div class="skills__grid">
+            <div class="skills__card">
+                <h3>Hard Skills</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Python</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            <div class="skills__card">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Креативность</li>
+                    <li>Умение коммуницировать с людьми</li>
+                    <li>Работа в команде</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
