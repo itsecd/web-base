@@ -1,0 +1,369 @@
+:root {
+    --primary: #3A86FF;
+    --primary-dark: #2667CC;
+    --secondary: #6C757D;
+    --dark: #212529;
+    --light: #F8F9FA;
+    --border: #E9ECEF;
+    --accent: #FF006E;
+    --success: #38B000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark);
+    background-color: var(--light);
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.resume {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    min-height: 100vh;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background: var(--dark);
+    color: white;
+    padding: 40px 30px;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile__image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary);
+    margin: 0 auto 20px;
+}
+
+.profile__name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.profile__title {
+    font-size: 16px;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact__item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.contact__icon {
+    width: 20px;
+    margin-right: 10px;
+    color: var(--primary);
+}
+
+.skills__list {
+    list-style: none;
+}
+
+.skills__item {
+    margin-bottom: 10px;
+}
+
+.skill__name {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.skill__bar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill__level {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 3px;
+    transition: width 1s ease;
+}
+
+.languages__item {
+    margin-bottom: 10px;
+}
+
+.language__name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 40px;
+}
+
+.about {
+    margin-bottom: 40px;
+}
+
+.about__text {
+    color: var(--secondary);
+    line-height: 1.8;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+}
+
+.timeline__item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline__item::before {
+    content: '';
+    position: absolute;
+    left: -36px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+.timeline__date {
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.timeline__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.timeline__subtitle {
+    font-size: 16px;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.timeline__description {
+    color: var(--secondary);
+    font-size: 14px;
+}
+
+/* Goals Section */
+.goals {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.goal__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: var(--light);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.goal__item:hover {
+    transform: translateY(-2px);
+}
+
+.goal__icon {
+    font-size: 24px;
+    color: var(--primary);
+    margin-top: 5px;
+}
+
+.goal__content {
+    flex: 1;
+}
+
+.goal__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+
+.goal__description {
+    font-size: 14px;
+    color: var(--secondary);
+    line-height: 1.5;
+}
+
+.project__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project__tag {
+    background: var(--primary);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--dark);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* Анимации для появления элементов */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.goal__item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.goal__item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .resume {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        text-align: center;
+    }
+    
+    .contact__item {
+        justify-content: center;
+    }
+    
+    .goal__item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .goal__icon {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-content {
+        padding: 20px;
+    }
+    
+    .profile__image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .profile__name {
+        font-size: 20px;
+    }
+    
+    .goals {
+        gap: 15px;
+    }
+    
+    .goal__item {
+        padding: 15px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .resume {
+        box-shadow: none;
+    }
+    
+    .social-links {
+        display: none;
+    }
+}
