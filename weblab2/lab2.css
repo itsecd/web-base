@@ -1,0 +1,119 @@
+
+ul {
+  padding-left: 3rem;
+  padding-top: 3rem;
+  list-style: none;
+}
+
+li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+li {
+  color: #000;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+li:hover {
+  animation: smoothColorFlow 3s ease-in-out;
+  transform: translateX(5px);
+}
+
+@keyframes smoothColorFlow {
+  0% {
+    color: red;
+  }
+  25% {
+    color: red;
+  }
+  50% {
+    color: orange;
+  }
+  75% {
+    color: orange;
+  }
+  100% {
+    color: green;
+  }
+}
+
+.parent-1 .parent-1__child {
+  color: red;
+}
+
+.parent-2 {
+  color: orange;
+}
+.parent-2 .parent-2__child {
+  color: #b4005a;
+  border: 2px dashed orange;
+}
+
+.parent-2 ~ .parent-3 {
+  color: green;
+}
+.parent-2 ~ .parent-3 .parent-3__child {
+  color: green;
+}
+
+.parent-3 .parent-2__child {
+  color: purple;
+  border: 2px dotted purple;
+  background-color: #f0e6ff;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.parent-3 .parent-2 .parent-2__child {
+  color: purple;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.parent-3 > .parent-2__child {
+  color: purple;
+  border: 2px dotted purple;
+  background-color: #f0e6ff;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.text {
+  width: 700px;
+  text-align: justify;
+}
+
+.languages__name {
+  text-decoration: none;
+  color: black;
+  padding-right: 5px;
+  font-weight: bold;
+}
+
+.languages li {
+  text-align: justify;
+}
+
+.languages li::before {
+  content: "🌐";
+}
+
+.text::after {
+  content: "";
+  display: block;
+  width: 260px;
+  height: 120px;
+  margin: 30px auto;
+  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #2780e3;
+  padding: 20px;
+  border-radius: 5px;
+}
