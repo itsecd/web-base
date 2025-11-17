@@ -102,7 +102,8 @@ body {
   margin-bottom: -10px;
 }
 
-.parent--3 .parent__child--parent-guest {
-  color: olive !important;
+/* ИСПРАВЛЕНИЕ: Правильные стили для родителя-гостя и его ребенка */
+.parent--3 .parent--2 .parent__child {
+  color: olive;
   margin-left: 25px;
 }
