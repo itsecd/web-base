@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор - Лабораторная 4</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <div class="navigation">
+        <a href="lab3.html" class="nav-link"> Резюме</a>
+        <a href="lab1.html" class="nav-link"> Лаба 1</a>
+        <a href="lab2.html" class="nav-link"> Лаба 2</a>
+    </div>
+
+    <div class="calculator">
+        <h1 class="calculator__title">Калькулятор</h1>
+        
+        <div class="calculator__form">
+            <div class="calculator__field">
+                <label class="calculator__label" for="num1">Первое число:</label>
+                <input class="calculator__input" type="number" id="num1" placeholder="Введите число">
+            </div>
+            
+            <div class="calculator__field">
+                <label class="calculator__label" for="operation">Операция:</label>
+                <select class="calculator__select" id="operation">
+                    <option value="+">Сложение (+)</option>
+                    <option value="-">Вычитание (-)</option>
+                    <option value="*">Умножение (×)</option>
+                    <option value="/">Деление (÷)</option>
+                </select>
+            </div>
+            
+            <div class="calculator__field">
+                <label class="calculator__label" for="num2">Второе число:</label>
+                <input class="calculator__input" type="number" id="num2" placeholder="Введите число">
+            </div>
+            
+            <button class="calculator__button" id="calculate">Вычислить 🎀</button>
+            
+            <div class="calculator__result">
+                <label class="calculator__result-label">Результат:</label>
+                <div id="result" class="calculator__result-value">—</div>
+            </div>
+            
+            <div id="error" class="calculator__error"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+
+    <style>
+        .navigation {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #fff0f5;
+            border-radius: 10px;
+            border: 2px solid #ffb6c1;
+        }
+        .nav-link {
+            margin: 0 15px;
+            padding: 10px 20px;
+            background: #ff69b4;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .nav-link:hover {
+            background: #ff1493;
+        }
+    </style>
+</body>
+</html>
