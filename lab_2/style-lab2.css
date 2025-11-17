@@ -1,0 +1,184 @@
+:root {
+  --c-red: #e53935;
+  --c-orange: orange;
+  --c-2-children: #b4005a;
+  --c-green: #2e7d32;
+  --c-purple: purple;
+  --c-text: #222;
+  --c-muted: #666;
+  --card: #ffffff;
+  --bg: #f7f7f9;
+  --border: #e5e5ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page__body {
+  margin: 0 auto;
+  padding: 24px;
+  max-width: 980px;
+  font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--c-text);
+  background: var(--bg);
+}
+
+h2,
+h3 {
+  margin: 20px 0 12px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 16px;
+  margin: 16px 0;
+}
+
+.card__title {
+  margin: 20px 0 12px;
+}
+
+/* Cписок: музыкальные жанры */
+.genres__list {
+  list-style: disc inside;
+  padding: 0;
+  margin: 0 0 16px;
+}
+
+.genres__item {
+  transition: color 0.35s ease;
+  color: var(--c-text);
+  padding: 4px 0;
+}
+
+.genres__item:hover {
+  color: var(--c-2-children);
+}
+
+
+/*Родители и дети*/
+.family__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.family__parent {
+  padding: 10px 12px;
+  margin: 10px 0;
+  background: var(--card);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.family__parent-title {
+  display: block;
+}
+
+.family__child {
+  padding: 6px 10px;
+  margin: 6px 0;
+  border-radius: 6px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  color: var(--c-text);
+}
+
+.family__parent--1 .family__child {
+  color: red;
+}
+
+.family__parent--2 {
+  color: var(--c-orange);
+}
+
+.family__parent--2 .family__child {
+  color: var(--c-2-children);
+  border-style: dashed;
+  border-color: var(--c-orange);
+}
+
+.family__parent--2 ~ .family__parent--3,
+.family__parent--2 ~ .family__parent--3 .family__child {
+  color: var(--c-green);
+}
+
+.family__parent--3 .family__child.family__child--purple {
+  color: var(--c-purple);
+  border-color: var(--c-purple);
+}
+
+.family__child--purple {
+  color: inherit;
+  border-color: #ddd;
+}
+
+.article__text {
+  margin: 0 0 16px;
+}
+
+
+/* Текст приложения */
+.langs__list {
+  list-style: disc inside;
+  padding: 0;
+  margin: 0 0 16px;
+  position: relative;
+  padding-bottom: 90px;
+}
+
+.langs__item {
+  transition: color 0.35s ease;
+  color: var(--c-text);
+  padding: 4px 0;
+}
+
+.langs__item:hover {
+  color: var(--c-2-children);
+}
+
+.langs__link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+  position: relative;
+}
+
+.langs__link::after {
+  content: " 🌐";
+  font-weight: 400;
+  color: var(--c-muted);
+}
+
+/* Логотип через псевдоэлемент */
+.langs__list {
+  list-style: disc inside;
+  padding: 0;
+  margin: 0 0 16px;
+  position: relative;
+  padding-bottom: 90px;
+}
+
+.langs__list::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 260px;
+  height: 90px;
+  background:
+    url("https://ssau.ru/i/logo/logo-white-ru.svg") no-repeat center / contain,
+    linear-gradient(#1b1b1b, #1b1b1b);
+  border-radius: 8px;
+  outline: 1px solid rgba(255,255,255,0.6);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.note {
+  color: var(--c-muted);
+  font-size: 14px;
+  margin-top: 6px;
+}
