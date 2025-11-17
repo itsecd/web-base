@@ -11,6 +11,7 @@ body {
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 0; 
+    margin-top: 0; 
 }
 
 #tertiary-heading {
@@ -83,16 +84,15 @@ body {
 
 .resume__second-block {
     background-color: #03A696;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .second-block__info {
     color: #f6f6f6;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    height: 200px;
-    margin: 0 5% 0 5%;
+    margin: 5%;
 }
 
 .info__about-me {
@@ -105,17 +105,18 @@ body {
 
 .resume__third-block {
     grid-column: 2 / 3;
-    grid-row: 2 / 4;
+    grid-row: 2 / 3;
 }
 
-.third-block__info {
+.resume__fifth-block {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.third-block__info, .fifth-block__info, .fourth-block__info {
     display: flex;
     flex-direction: column;
-    margin: 0 5% 5% 5%;
-}
-
-.info__soft-skills, .info__hard-skills {
-    height: 200px;
+    margin: 5%;
 }
 
 .hard-skills__list, .soft-skills__list, .activities__list {
@@ -127,11 +128,9 @@ body {
     background-image: url(images/Ouegu+.png);
     background-size: contain;
     display: inline-block;
+    background-repeat: no-repeat;
+    background-position: right bottom;
     width: 20px;
     height: 20px;
     margin-right: 10px;
-}
-
-.fourth-block__info {
-    margin: 0 5% 5% 5%;
 }
