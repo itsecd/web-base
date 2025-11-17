@@ -1,9 +1,9 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <title> Лабораторная работа 2 </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторная работа 2</title>
   <link href="style/style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -46,12 +46,15 @@
         <div class="parent__child">child 2</div>
       </div>
 
+      <!-- ИСПРАВЛЕНИЕ: Правильная структура с родителем-гостем -->
       <div class="parent parent--3">
         <h4>Parents 3</h4>
         <div class="parent__child">child 1</div>
         <div class="parent__child">child 2</div>
         <div class="parent__child parent__child--guest1">child 2</div>
-        <div class="parent__child parent__child--parent-guest">parent and child 2</div>
+        <div class="parent parent--2">
+          <div class="parent__child">parent and child 2</div>
+        </div>
       </div>
     </article>
 
@@ -88,5 +91,4 @@
     </article>
   </div>
 </body>
-
 </html>
