@@ -1,0 +1,44 @@
+.main_container {
+  text-align: center;
+}
+
+.unordered_list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.unordered_list li {
+    padding: 8px 12px;
+    margin: 4px 0;
+    transition: color 1.2s ease, background-color 1.2s ease;
+}
+
+.unordered_list li:hover {
+    color: #f99665;
+    background-color: #f0f0f0;
+}
+
+.parent_2 {
+    color: #f4bc92;
+}
+
+.parent_1 .parent_child {
+  color: red;
+  width: 50px;
+}
+
+.parent_2 .parent_child {
+  color: #b4005a;
+  border-style: dotted;
+  border-color: #f4bc92;
+  width: 50px;
+}
+
+.parent_2 ~ .parent_3,
+.parent_2 ~ .parent_3 .parent_child {
+  color: green;
+}
+
+.parent_2 ~ .parent_3 .parent_child_guest-from-2 {
+  color: purple;
+}
