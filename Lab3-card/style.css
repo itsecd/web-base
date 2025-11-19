@@ -50,16 +50,16 @@ ul {
 .skills__columns{
 	flex: 1;
 }
-.skills__column ul {
+.skills__columns ul {
   list-style-type: none;
   padding-left: 0;
 }
-.skills__column ul li {
+.skills__columns ul li {
   position: relative;
   padding-left: 15px;
   margin-bottom: 6px;
 }
-.skills__column ul li::before {
+.skills__columns ul li::before {
   content: "•";
   position: absolute;
   left: 0;
