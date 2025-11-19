@@ -46,6 +46,14 @@
   color: inherit;
 }
 
+.parent--3 > .parent--2__child {
+  color: violet;
+  font-weight: bold;
+  border: 1px dashed violet;
+  padding: 4px;
+  background-color: #f0e6ff;
+}
+
 .parent--3__child--guest {
   color: purple;
   margin-left: 20px;
