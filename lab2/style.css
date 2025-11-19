@@ -1,0 +1,221 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+.task {
+    margin-bottom: 40px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+h2 {
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+
+.sport-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sport-list li {
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: #f8f9fa;
+    border-left: 4px solid #3498db;
+    font-size: 18px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.sport-list li:hover {
+    color: #7DE0EA; 
+    background-color: #e3f2fd;
+    transform: translateX(10px);
+    border-left-color: #7DE0EA;
+}
+
+
+.parent {
+    margin: 25px 0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+.parent_1 {
+    border: 2px solid #ddd;
+}
+
+.parent_2 {
+    color: orange;
+    border: 2px dashed orange;
+}
+
+.parent_3 {
+    color: black;
+    border: 2px solid black;
+    position: relative;
+}
+
+.parent__title {
+    margin-top: 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.parent_1 .parent__title {
+    color: #333;
+}
+
+.parent_2 .parent__title {
+    color: orange;
+}
+
+.parent_3 .parent__title {
+    color: black;
+}
+
+.parent__child {
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+.parent__child_origin_parent-1 {
+    color: red;
+    border: 1px solid #ffcccc;
+}
+
+.parent__child_origin_parent-2 {
+    color: purple;
+    background-color: white;
+    border: 1px dashed orange;
+}
+
+.parent__child_origin_parent-3 {
+    color: black;
+    background-color: #f0f0f0;
+}
+
+.parent__child_visiting {
+    color: purple !important;
+    border: none !important;
+    background-color: white !important;
+}
+
+.parent_2 ~ .parent_3 {
+    color: green;
+    border-color: green;
+    margin-top: 40px;
+}
+
+.parent_2 ~ .parent_3::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ccc;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.parent_2 ~ .parent_3 .parent__title {
+    color: green;
+}
+
+.parent_2 ~ .parent_3 .parent__child_origin_parent-3 {
+    color: green;
+    border-color: green;
+    background-color: #e8f5e8;
+}
+
+.parent_2 ~ .parent_3 .parent__child_visiting {
+    color: purple !important;
+    border: none !important;
+    background-color: white !important;
+}
+
+.prog-text {
+    line-height: 1.7;
+}
+
+.prog_lang-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.prog_lang-list li {
+    margin: 12px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    border-left: 4px solid #9b59b6;
+    transition: all 0.3s ease;
+}
+
+.prog_lang-list li:hover {
+    background-color: #e8f4f8;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+.prog_lang-list a {
+    font-weight: bold;
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.prog_lang-list a:hover {
+    color: #e74c3c;
+}
+
+
+.prog_lang-list a::after {
+    content: "🌐";
+    font-weight: normal;
+    margin-left: 6px;
+    font-size: 0.9em;
+}
+
+.prog-text p:last-child::after {
+    content: "";
+    display: block;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    padding: 25px;
+    background-color: #0000FF;
+    border-radius: 8px;
+    width: 250px;
+    height: 70px;
+    background-image: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+}
+
