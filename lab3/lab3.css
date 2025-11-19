@@ -148,30 +148,37 @@ body {
         border-bottom: 3px solid #ffcc00;
         padding: 20px;
         box-shadow: inset 0 -1px 5px rgba(255, 204, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
     }
-
-    .sidebar__avatar {
-        width: 120px;
-        height: 120px;
-    }
-
-    .main-content {
-        padding: 20px 15px;
-    }
-
+    
     .skills__list {
         flex-direction: column;
         gap: 10px;
+        align-items: flex-start;
     }
-
-    .skills__list-item {
+    
+    .sidebar__list {
         width: 100%;
-        text-align: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
     }
 
+    .skills__list-item,
     .sidebar__list-item {
-        font-size: 16px;
-        padding: 6px 10px;
+        width: auto;
+        max-width: 90%;
+        text-align: center;
+        margin-left: 10px;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.1);
     }
 
     .section__title {
