@@ -42,20 +42,24 @@ ul {
   list-style-type: disc;
   padding-left: 20px;
 }
-.skills {
+.skills__title {
   display: flex;
   gap: 40px;
 }
-.skills ul {
+
+.skills__columns{
+	flex: 1;
+}
+.skills__column ul {
   list-style-type: none;
   padding-left: 0;
 }
-.skills ul li {
+.skills__column ul li {
   position: relative;
   padding-left: 15px;
   margin-bottom: 6px;
 }
-.skills ul li::before {
+.skills__column ul li::before {
   content: "•";
   position: absolute;
   left: 0;
@@ -71,27 +75,23 @@ ul {
   font-weight: bold;
 }
 
-.links a.links--github::before {
+.links a::before {
   content: "";
-  display: block;
-  background-size: cover;
   position: absolute;
   left: 0px;
   top: 50%;
   transform: translateY(-50%);
   width: 22px;
   height: 22px;
-  background: url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png') no-repeat center/100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 50%;
 }
+
+.links a.links--github::before {
+  background: url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png') no-repeat center/100%;
+}
 .links a.links--telegram::before {
-  content: "";
-  position: absolute;
-  left: 0px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 22px;
-  height: 22px;
   background: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg') no-repeat center/100%;
-  border-radius: 50%;
 }
