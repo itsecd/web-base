@@ -37,6 +37,7 @@ h2 {
   padding-bottom: 5px;
   margin-bottom: 10px;
   font-size: 20px;
+  cursor: default;
 }
 ul {
   list-style-type: disc;
@@ -95,3 +96,4 @@ ul {
 .links a.links--telegram::before {
   background: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg') no-repeat center/100%;
 }
+
