@@ -133,3 +133,53 @@ body {
 .skills__subtitle {
     margin-bottom: 6px;
 }
+
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+        margin: 20px;
+        max-width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex: none;
+        border-right: none;
+        border-bottom: 3px solid #ffcc00;
+        padding: 20px;
+        box-shadow: inset 0 -1px 5px rgba(255, 204, 0, 0.3);
+    }
+
+    .sidebar__avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    .skills__list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skills__list-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sidebar__list-item {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    .section__title {
+        font-size: 1.2rem;
+    }
+
+    .about__text {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+}
