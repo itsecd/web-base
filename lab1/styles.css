@@ -1,0 +1,102 @@
+/* БЛОК: text-block */
+
+.text-block {
+    background-color: #AE5764;
+    color: #23430B;
+    text-align: right;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.text-block__content {
+    margin: 0;
+}
+
+/* БЛОК: image-container */
+
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.image-container__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.image-container__image--bottom {
+    z-index: 1;
+}
+
+.image-container__image--top {
+    z-index: 2;
+}
+
+/* БЛОК: traffic-light */
+
+.traffic-light {
+    width: 100px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.traffic-light__light {
+    width: 100%;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.traffic-light__light--red {
+    background-color: #ff0000;
+}
+
+.traffic-light__light--yellow {
+    background-color: #ffff00;
+}
+
+.traffic-light__light--green {
+    background-color: #00ff00;
+}
+
+/* БЛОК: maze */
+
+.maze {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    width: 600px;
+    height: 600px;
+    margin: 50px auto;
+    background-color: #ffffff;
+}
+
+.maze__cell {
+    box-sizing: border-box;
+}
+
+.border-top {
+    border-top: 2px solid #000;
+}
+
+.border-right {
+    border-right: 2px solid #000;
+}
+
+.border-bottom {
+    border-bottom: 2px solid #000;
+}
+
+.border-left {
+    border-left: 2px solid #000;
+}
