@@ -1,6 +1,10 @@
 body {
     background-color: rgba(52, 217, 226, 0.373);
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .profile {
@@ -17,6 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    justify-content: center;
    
     
     
@@ -27,15 +32,16 @@ body {
     border-radius: 8px;
     border: 1px solid #ccc;
     
+    
 }
 
-.left__title{
+.selection__title{
     font-size: 36px;
     margin: 0;
     color: #333;
 }
 
-.left__text {
+.selection__text {
     font-size: 18px;
     margin: 0;
     color: #342f2f;
@@ -55,15 +61,8 @@ body {
     height: auto;
     border-radius: 10px;
     object-fit: cover;
-    
 }
 
-.right__text{
-    font-size: 18px;
-    margin: 0;
-    color: #302f2f;
-    text-align: center;
-}
 
 .github-link {
     color: black;
