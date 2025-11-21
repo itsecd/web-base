@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+:root {
+  --c-red: #e53935;
+  --c-orange: orange;
+  --c-2-children: #b4005a;
+  --c-green: #2e7d32;
+  --c-purple: purple;
+  --c-text: #222;
+  --c-muted: #666;
+  --card: #ffffff;
+  --bg: #f7f7f9;
+  --border: #e5e5ea;
+}
+
+body {
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0e6d2;
+    line-height: 1.6;
+}
+
+.task {
+    margin-bottom: 40px;
+    padding: 25px;
+    background-color: #fff8e1;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(139, 69, 19, 0.2);
+}
+
+h1, h2, h3 {
+    color: #5d4037;
+}
+
+h1 {
+    text-align: center;
+    color: #4e342e;
+    margin-bottom: 30px;
+}
+
+h2 {
+    border-bottom: 2px solid #8d6e63;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.service-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-list li {
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: #e8f5e9;
+    border-left: 4px solid #66bb6a;
+    font-size: 18px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.service-list li:hover {
+    color: #2e7d32; 
+    background-color: #c8e6c9;
+    transform: translateX(10px);
+    border-left-color: #2e7d32;
+}
+
+.family__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.family__parent {
+  padding: 10px 12px;
+  margin: 10px 0;
+  background: var(--card);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.family__parent-title {
+  display: block;
+}
+
+.family__child {
+  padding: 6px 10px;
+  margin: 6px 0;
+  border-radius: 6px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  color: var(--c-text);
+}
+
+.family__parent--1 .family__child {
+  color: red;
+}
+
+.family__parent--2 {
+  color: var(--c-orange);
+}
+
+.family__parent--2 .family__child {
+  color: var(--c-2-children);
+  border-style: dashed;
+  border-color: var(--c-orange);
+}
+
+.family__parent--2 ~ .family__parent--3,
+.family__parent--2 ~ .family__parent--3 .family__child {
+  color: var(--c-green);
+}
+
+.family__parent--3 .family__child.family__child--purple {
+  color: var(--c-purple);
+  border-color: var(--c-purple);
+}
+
+.family__child--purple {
+  color: inherit;
+  border-color: #ddd;
+}
+
+.prog__text {
+    line-height: 1.7;
+}
+
+.prog__lang-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.prog__lang-list li {
+    margin: 12px 0;
+    padding: 15px;
+    background-color: #e3f2fd;
+    border-radius: 6px;
+    border-left: 4px solid #5e35b1;
+    transition: all 0.3s ease;
+}
+
+.prog__lang-list li:hover {
+    background-color: #bbdefb;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(93, 64, 55, 0.2);
+}
+
+.prog__lang-list a {
+    font-weight: bold;
+    color: #4527a0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.prog__lang-list a:hover {
+    color: #d84315;
+}
+
+.prog__lang-list a::after {
+    content: "🌐";
+    font-weight: normal;
+    margin-left: 6px;
+    font-size: 0.9em;
+}
+
+.prog__text p:last-child::after {
+    content: "";
+    display: block;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    padding: 25px;
+    background-color: #3949ab;
+    border-radius: 8px;
+    width: 250px;
+    height: 70px;
+    background-image: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+}
