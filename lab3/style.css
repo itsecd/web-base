@@ -72,3 +72,27 @@ footer {
   padding: 30px;
   color: #777;
 }
+
+.project-list {
+  list-style: none;
+  padding: 0;
+}
+
+.project-list li {
+  margin: 10px 0;
+}
+
+.project-list a {
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: #4678e8;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.project-list a:hover {
+  background-color: #3456b3;
+}
