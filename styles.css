@@ -150,24 +150,3 @@ body {
     font-size: 14px;
 }
 
-@media (max-width: 768px) {
-    .resume {
-        flex-direction: column;
-    }
-    
-    .resume__left {
-        text-align: center;
-    }
-    
-    .resume__contacts {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-    
-    .contact__item {
-        flex: 1;
-        min-width: 150px;
-    }
-}
