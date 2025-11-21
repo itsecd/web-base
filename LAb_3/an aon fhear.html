@@ -6,420 +6,48 @@
     <title>Резюме студента</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #fffaf0 0%, #fdf6e3 100%);
-            color: #5d4037;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 25px rgba(255, 87, 34, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .profile-img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 6px solid rgba(255, 255, 255, 0.3);
-            margin-bottom: 20px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .profile-img:hover {
-            transform: scale(1.05);
-        }
-
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .subtitle {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            font-weight: 300;
-        }
-
-        .main-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 30px;
-        }
-
-        @media (max-width: 768px) {
-            .main-content {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .sidebar, .content {
-            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.1);
-            border: 1px solid #ffd54f;
-        }
-
-        h2 {
-            color: #e65100;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #ffb74d;
-            display: flex;
-            align-items: center;
-            font-size: 1.5rem;
-        }
-
-        h2::before {
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            margin-right: 12px;
-            font-size: 1.4rem;
-            color: #ff6f00;
-        }
-
-        .info-item {
-            margin-bottom: 18px;
-            display: flex;
-            align-items: center;
-            padding: 8px;
-            border-radius: 8px;
-            transition: background-color 0.3s;
-        }
-
-        .info-item:hover {
-            background-color: rgba(255, 193, 7, 0.1);
-        }
-
-        .info-label {
-            font-weight: 600;
-            color: #6d4c41;
-            min-width: 160px;
-            display: flex;
-            align-items: center;
-        }
-
-        .info-label::before {
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            margin-right: 10px;
-            color: #ff9800;
-            width: 20px;
-            text-align: center;
-        }
-
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 15px;
-        }
-
-        .skill {
-            background: linear-gradient(135deg, #ffecb3 0%, #ffd54f 100%);
-            padding: 10px 18px;
-            border-radius: 25px;
-            font-size: 0.95rem;
-            color: #5d4037;
-            border: 2px solid #ffb300;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-        }
-
-        .skill:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 179, 0, 0.3);
-        }
-
-        .skill::before {
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            margin-right: 8px;
-            color: #e65100;
-        }
-
-        .hobby {
-            background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 100%);
-            padding: 10px 18px;
-            border-radius: 25px;
-            font-size: 0.95rem;
-            color: #5d4037;
-            border: 2px solid #ff9800;
-            display: inline-flex;
-            align-items: center;
-            margin: 6px;
-            transition: all 0.3s ease;
-        }
-
-        .hobby:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
-        }
-
-        .hobby::before {
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            margin-right: 8px;
-            color: #e65100;
-        }
-
-        .github-link {
-            display: inline-flex;
-            align-items: center;
-            background: linear-gradient(135deg, #455a64 0%, #263238 100%);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            margin-top: 15px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .github-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-            background: linear-gradient(135deg, #546e7a 0%, #37474f 100%);
-        }
-
-        .github-link::before {
-            font-family: 'Font Awesome 6 Brands';
-            font-weight: 400;
-            margin-right: 10px;
-            font-size: 1.2rem;
-        }
-
-        .language-item {
-            margin-bottom: 20px;
-            padding: 10px;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.5);
-        }
-
-        .progress-bar {
-            height: 10px;
-            background-color: #ffccbc;
-            border-radius: 5px;
-            margin-top: 8px;
-            overflow: hidden;
-            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
-        }
-
-        .progress {
-            height: 100%;
-            background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
-            border-radius: 5px;
-            transition: width 1s ease-in-out;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding: 25px;
-            color: #8d6e63;
-            font-size: 0.95rem;
-            background: linear-gradient(135deg, #ffecb3 0%, #ffd54f 100%);
-            border-radius: 10px;
-            border: 1px solid #ffb300;
-        }
-
-
-        .decorative-element {
-            font-size: 4rem;
-            color: rgba(255, 255, 255, 0.1);
-            position: absolute;
-            z-index: 0;
-        }
-
-        .decorative-1 {
-            top: 20px;
-            left: 20px;
-        }
-
-        .decorative-2 {
-            bottom: 20px;
-            right: 20px;
-        }
-
-        .decorative-3 {
-            top: 50%;
-            left: 10%;
-        }
-
-        .decorative-4 {
-            top: 30%;
-            right: 15%;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .sidebar, .content {
-            animation: fadeIn 0.8s ease-out;
-        }
-
-        .sidebar {
-            animation-delay: 0.2s;
-        }
-
-        .content {
-            animation-delay: 0.4s;
-        }
-
-        .certificates-list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .certificate-item {
-            margin-bottom: 25px;
-            padding: 20px;
-            border-left: 5px solid #ff9800;
-            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
-            border-radius: 0 12px 12px 0;
-            transition: all 0.3s ease;
-        }
-
-        .certificate-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.2);
-        }
-
-        .certificate-link {
-            display: inline-flex;
-            align-items: center;
-            color: #e65100;
-            text-decoration: none;
-            font-weight: 600;
-            margin-bottom: 12px;
-            transition: color 0.3s;
-            font-size: 1.1rem;
-        }
-
-        .certificate-link:hover {
-            color: #ff5722;
-            text-decoration: underline;
-        }
-
-        .certificate-link::before {
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            margin-right: 12px;
-            font-size: 1.3rem;
-        }
-
-        .certificate-preview {
-            max-width: 220px;
-            border-radius: 10px;
-            border: 3px solid #ffb74d;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .certificate-preview:hover {
-            transform: scale(1.08);
-            box-shadow: 0 8px 25px rgba(255, 87, 34, 0.3);
-        }
-
-        .certificate-description {
-            color: #8d6e63;
-            font-size: 0.95rem;
-            margin-top: 8px;
-            font-style: italic;
-        }
-
-        .personal-info h2::before { content: "\f2bb"; }
-        .skills h2::before { content: "\f085"; }
-        .languages h2::before { content: "\f1ab"; }
-        .github h2::before { content: "\f008"; }
-        .about h2::before { content: "\f007"; }
-        .hobbies h2::before { content: "\f005"; }
-        .education h2::before { content: "\f19d"; }
-        .certificates h2::before { content: "\f0a3"; }
-
-        .info-label[class*="Дата"]::before { content: "\f073"; }
-        .info-label[class*="Место"]::before { content: "\f3c5"; }
-        .info-label[class*="Email"]::before { content: "\f0e0"; }
-        .info-label[class*="Телефон"]::before { content: "\f095"; }
-
-        .skill::before { content: "\f121"; }
-        .hobby::before { content: "\f06b"; }
-        .github-link::before { content: "\f09b"; }
-        .certificate-link::before { content: "\f0a3"; }
-
-        .decorative-1::before { content: "🚀"; font-family: initial; }
-        .decorative-2::before { content: "💻"; font-family: initial; }
-        .decorative-3::before { content: "⭐"; font-family: initial; }
-        .decorative-4::before { content: "🔥"; font-family: initial; }
-    </style>
+    <link rel="stylesheet" href="drugi.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="decorative-element decorative-1"></div>
-            <div class="decorative-element decorative-2"></div>
-            <div class="decorative-element decorative-3"></div>
-            <div class="decorative-element decorative-4"></div>
+        <header class="header">
+            <div class="header__decorative header__decorative--top-left">🚀</div>
+            <div class="header__decorative header__decorative--bottom-right">💻</div>
+            <div class="header__decorative header__decorative--center-left">⭐</div>
+            <div class="header__decorative header__decorative--center-right">🔥</div>
             
-            <img src="https://sun1-90.userapi.com/s/v1/ig2/UR2gY9LaFJgVYfTSlSpjc9Rc8IosmCzMp20qMx5JijZDHy1M_i7U2_3Cr7rG5hMBBrH3l_Ey0hQZM-Y1zEilfUDm.jpg?quality=96&crop=1,473,1212,1212&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200" alt="Фото студента" class="profile-img">
-            <h1>Стукалин Александр Александрович</h1>
-            <p class="subtitle">Студент специальности ИБАС группы 6211</p>
+            <img src="https://sun1-90.userapi.com/s/v1/ig2/UR2gY9LaFJgVYfTSlSpjc9Rc8IosmCzMp20qMx5JijZDHy1M_i7U2_3Cr7rG5hMBBrH3l_Ey0hQZM-Y1zEilfUDm.jpg?quality=96&crop=1,473,1212,1212&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200" 
+                 alt="Фото студента" 
+                 class="header__img">
+            <h1 class="header__title">Стукалин Александр Александрович</h1>
+            <p class="header__subtitle">Студент специальности ИБАС группы 6211</p>
         </header>
 
         <div class="main-content">
             <div class="sidebar">
-                <section class="personal-info">
-                    <h2>Личная информация</h2>
+                <section class="personal-info section" aria-labelledby="personal-info-heading">
+                    <h2 class="section__title section__title--user" id="personal-info-heading">Личная информация</h2>
                     <div class="info-item">
-                        <div class="info-label">Дата рождения:</div>
-                        <div>7 августа 2006 года</div>
+                        <div class="info-item__label info-item__label--date">Дата рождения:</div>
+                        <div class="info-item__value">7 августа 2006 года</div>
                     </div>
                     <div class="info-item">
-                        <div class="info-label">Место проживания:</div>
-                        <div>г. Самара</div>
+                        <div class="info-item__label info-item__label--location">Место проживания:</div>
+                        <div class="info-item__value">г. Самара</div>
                     </div>
                     <div class="info-item">
-                        <div class="info-label">Email:</div>
-                        <div>Stykalinalex@mail.ru</div>
+                        <div class="info-item__label info-item__label--email">Email:</div>
+                        <div class="info-item__value">Stykalinalex@mail.ru</div>
                     </div>
                     <div class="info-item">
-                        <div class="info-label">Телефон:</div>
-                        <div>+7 (917) 149-00-36</div>
+                        <div class="info-item__label info-item__label--phone">Телефон:</div>
+                        <div class="info-item__value">+7 (917) 149-00-36</div>
                     </div>
                 </section>
 
-                <section class="skills">
-                    <h2>Hard Skills</h2>
-                    <div class="skills-container">
+                <section class="skills section" aria-labelledby="hard-skills-heading">
+                    <h2 class="section__title section__title--skills" id="hard-skills-heading">Hard Skills</h2>
+                    <div class="skills__container">
                         <span class="skill">HTML/CSS</span>
                         <span class="skill">Python</span>
                         <span class="skill">Git</span>
@@ -427,56 +55,56 @@
                     </div>
                 </section>
 
-                <section class="skills">
-                    <h2>Soft Skills</h2>
-                    <div class="skills-container">
+                <section class="skills section" aria-labelledby="soft-skills-heading">
+                    <h2 class="section__title section__title--skills" id="soft-skills-heading">Soft Skills</h2>
+                    <div class="skills__container">
                         <span class="skill">Я МУЖЧИНА</span>
                         <span class="skill">ДОБРЫЙ И ВЕРНЫЙ</span>
                         <span class="skill">КРЕАТИВНЫЙ И ЗАДОРНЫЙ</span>
                         <span class="skill">ОТВЕТСТВЕННЫЙ И ПОНИМАЮЩИЙ</span>
-                        <span class="skill">ПРОСТО ГОЯЧИЙ</span>
+                        <span class="skill">ПРОСТО ГОРЯЧИЙ</span>
                         <span class="skill">ЧИЛЛОВЫЙ ПАРЕНЬ</span>
                     </div>
                 </section>
 
-                <section class="languages">
-                    <h2>Языки</h2>
+                <section class="languages section" aria-labelledby="languages-heading">
+                    <h2 class="section__title section__title--languages" id="languages-heading">Языки</h2>
                     <div class="language-item">
-                        <div>Русский (родной)</div>
+                        <div class="language-item__name">Русский (родной)</div>
                         <div class="progress-bar">
-                            <div class="progress" style="width: 100%"></div>
+                            <div class="progress-bar__fill progress-bar__fill--full"></div>
                         </div>
                     </div>
                     <div class="language-item">
-                        <div>Язык фактов</div>
+                        <div class="language-item__name">Язык фактов</div>
                         <div class="progress-bar">
-                            <div class="progress" style="width: 75%"></div>
+                            <div class="progress-bar__fill progress-bar__fill--75"></div>
                         </div>
                     </div>
                     <div class="language-item">
-                        <div>Английский (ну так на пальцах раскидаю)</div>
+                        <div class="language-item__name">Английский (ну так на пальцах раскидаю)</div>
                         <div class="progress-bar">
-                            <div class="progress" style="width: 40%"></div>
+                            <div class="progress-bar__fill progress-bar__fill--40"></div>
                         </div>
                     </div>
                 </section>
 
-                <section class="github">
-                    <h2>GitHub</h2>
-                    <a href="https://github.com/sanek4338" class="github-link" target="_blank">Перейти в профиль</a>
+                <section class="github section" aria-labelledby="github-heading">
+                    <h2 class="section__title section__title--github" id="github-heading">GitHub</h2>
+                    <a href="https://github.com/sanek4338" class="github__link" target="_blank">Перейти в профиль</a>
                 </section>
             </div>
 
             <div class="content">
-                <section class="about">
-                    <h2>О себе</h2>
-                    <p>Я студент 2 курса ИБАС. Я отец информатики и основатель матанализа. Мне было скучно, и я придумал язык JS. Цитаты для Джейсона Стэтхэма придумывал я.</p>
-                    <p>В свободное время анализирую рынок китая, лего и других игрушек. Свободного времени нет, так как я деловая колбаса.</p>
+                <section class="about section" aria-labelledby="about-heading">
+                    <h2 class="section__title section__title--about" id="about-heading">О себе</h2>
+                    <p class="about__text">Я студент 2 курса ИБАС. Я отец информатики и основатель матанализа. Мне было скучно, и я придумал язык JS. Цитаты для Джейсона Стэтхэма придумывал я.</p>
+                    <p class="about__text">В свободное время анализирую рынок китая, лего и других игрушек. Свободного времени нет, так как я деловая колбаса.</p>
                 </section>
 
-                <section class="hobbies">
-                    <h2>Увлечения</h2>
-                    <div>
+                <section class="hobbies section" aria-labelledby="hobbies-heading">
+                    <h2 class="section__title section__title--hobbies" id="hobbies-heading">Увлечения</h2>
+                    <div class="hobbies__container">
                         <span class="hobby">Программирование</span>
                         <span class="hobby">Музыка</span>
                         <span class="hobby">Путешествия (до магазина и обратно)</span>
@@ -486,53 +114,55 @@
                     </div>
                 </section>
 
-                <section class="education">
-                    <h2>Образование</h2>
+                <section class="education section" aria-labelledby="education-heading">
+                    <h2 class="section__title section__title--education" id="education-heading">Образование</h2>
                     <div class="info-item">
-                        <div class="info-label">2024 - настоящее время</div>
-                        <div>
+                        <div class="info-item__label info-item__label--date">2024 - настоящее время</div>
+                        <div class="info-item__value">
                             <strong>Самарский национальный исследовательский университет имени академика С.П. Королева</strong><br>
                             Институт Информатики и Кибернетики. Направление: ИБАС
                         </div>
                     </div>
                     <div class="info-item">
-                        <div class="info-label">2013 - 2024</div>
-                        <div>
+                        <div class="info-item__label info-item__label--date">2013 - 2024</div>
+                        <div class="info-item__value">
                             <strong>Школа ГБОУ СОШ с.Красный Яр</strong><br>
                             Среднее общее образование
                         </div>
                     </div>
                 </section>
 
-                <section class="certificates">
-                    <h2>Сертификаты</h2>
-                    <ul class="certificates-list">
-                        <li class="certificate-item">
-                            <a href="https://русскиймедвежонок.рф" class="certificate-link" target="_blank">
+                <section class="certificates section" aria-labelledby="certificates-heading">
+                    <h2 class="section__title section__title--certificates" id="certificates-heading">Сертификаты</h2>
+                    <ul class="certificates__list">
+                        <li class="certificate">
+                            <a href="https://русскиймедвежонок.рф" class="certificate__link" target="_blank">
                                 Чемпион мира по Русскому медвежонку
                             </a>
-                            <div>
-                                <img src="https://kur-licjuk.gosuslugi.ru/netcat_files/53/575/RusskiyMedvezhonok.jpg" 
-                                     alt="Сертификат 'Русский медвежонок'" 
-                                     class="certificate-preview"
-                                     onclick="window.open('https://русскиймедвежонок.рф', '_blank')">
+                            <div class="certificate__preview">
+                                <a href="https://русскиймедвежонок.рф" target="_blank">
+                                    <img src="https://kur-licjuk.gosuslugi.ru/netcat_files/53/575/RusskiyMedvezhonok.jpg" 
+                                         alt="Сертификат 'Русский медвежонок'" 
+                                         class="certificate__image">
+                                </a>
                             </div>
-                            <div class="certificate-description">
+                            <div class="certificate__description">
                                 Выдан: 2022 год | Организация: Русский Медвежонок
                             </div>
                         </li>
                         
-                        <li class="certificate-item">
-                            <a href="https://youtu.be/xvFZjo5PgG0?si=FuaXywM-t6xmUtko" class="certificate-link" target="_blank">
+                        <li class="certificate">
+                            <a href="https://youtu.be/xvFZjo5PgG0?si=FuaXywM-t6xmUtko" class="certificate__link" target="_blank">
                                 Ребёнок года по мнению Деда Мороза!!!
                             </a>
-                            <div>
-                                <img src="https://shablon.klev.club/uploads/posts/2024-09/shablon-klev-club-q4p8-p-shabloni-novogodnii-sertifikat-ot-deda-mor-2.jpg" 
-                                     alt="Сертификат 'Ребёнок года' от Деда Мороза" 
-                                     class="certificate-preview"
-                                     onclick="window.open('https://youtu.be/xvFZjo5PgG0?si=FuaXywM-t6xmUtko', '_blank')">
+                            <div class="certificate__preview">
+                                <a href="https://youtu.be/xvFZjo5PgG0?si=FuaXywM-t6xmUtko" target="_blank">
+                                    <img src="https://shablon.klev.club/uploads/posts/2024-09/shablon-klev-club-q4p8-p-shabloni-novogodnii-sertifikat-ot-deda-mor-2.jpg" 
+                                         alt="Сертификат 'Ребёнок года' от Деда Мороза" 
+                                         class="certificate__image">
+                                </a>
                             </div>
-                            <div class="certificate-description">
+                            <div class="certificate__description">
                                 Выдан: 2024 год | Организация: Дед Мороз & другие
                             </div>
                         </li>
@@ -541,50 +171,9 @@
             </div>
         </div>
 
-        <footer>
-            <p>© 2025 Резюме студента. Все права защищены. | Сделано с ❤️ и ☕</p>
+        <footer class="footer">
+            <p class="footer__text">© 2025 Резюме студента. Все права защищены. | Сделано с ❤️ и ☕</p>
         </footer>
     </div>
-
-    <script>
-
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(section);
-        });
-
-        // увеличиваем изображения (на всякий)
-        document.querySelectorAll('.certificate-preview').forEach(img => {
-            img.addEventListener('click', function() {
-                const link = this.closest('.certificate-item').querySelector('.certificate-link').href;
-                window.open(link, '_blank');
-            });
-        });
-
-        // Анимации прогресс-баров
-        document.querySelectorAll('.progress').forEach(progress => {
-            const width = progress.style.width;
-            progress.style.width = '0';
-            setTimeout(() => {
-                progress.style.width = width;
-            }, 500);
-        });
-    </script>
 </body>
 </html>
