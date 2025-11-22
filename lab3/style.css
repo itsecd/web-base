@@ -37,7 +37,7 @@
     padding: 3rem 2rem;
 }
 
-.header-content {
+.header__content {
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -45,7 +45,7 @@
     margin: 0 auto;
 }
 
-.header-photo {
+.header__photo {
     width: 140px;
     height: 140px;
     border-radius: 50%;
@@ -54,25 +54,25 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.header-text {
+.header__text {
     flex: 1;
 }
 
-.header-name {
+.header__name {
     font-size: 2.5rem;
     font-weight: 300;
     margin-bottom: 0.5rem;
     letter-spacing: -0.5px;
 }
 
-.header-title {
+.header__title {
     font-size: 1.2rem;
     font-weight: 400;
     opacity: 0.9;
     margin-bottom: 0.25rem;
 }
 
-.header-subtitle {
+.header__subtitle {
     font-size: 1rem;
     opacity: 0.8;
     font-weight: 300;
@@ -105,33 +105,44 @@
     margin-bottom: 2rem;
 }
 
-.contact-item {
+.contact__item {
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
 }
 
-.contact-label {
+.contact__label {
     font-size: 0.85rem;
     color: var(--text-light);
     font-weight: 500;
     margin-bottom: 0.25rem;
 }
 
-.contact-value {
+.contact__value {
     font-weight: 400;
     color: var(--text);
 }
 
-.contact-link {
-    color: var(--accent);
+.contact__value a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact__value a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.contact__link {
+    color: var(--primary);
     text-decoration: none;
     font-weight: 400;
     transition: color 0.2s ease;
 }
 
-.contact-link:hover {
-    color: var(--primary);
+.contact__link:hover {
+    color: var(--secondary);
     text-decoration: underline;
 }
 
@@ -139,24 +150,24 @@
     margin-bottom: 2rem;
 }
 
-.education-item {
+.education__item {
     margin-bottom: 1.5rem;
 }
 
-.education-place {
+.education__place {
     font-size: 1rem;
     font-weight: 600;
     color: var(--text);
     margin-bottom: 0.25rem;
 }
 
-.education-specialty {
+.education__specialty {
     font-size: 0.9rem;
     color: var(--text-light);
     margin-bottom: 0.25rem;
 }
 
-.education-period {
+.education__period {
     font-size: 0.85rem;
     color: var(--accent);
     font-weight: 500;
@@ -172,7 +183,7 @@
     gap: 0.75rem;
 }
 
-.interest-item {
+.interest__item {
     padding: 0.75rem 1rem;
     background: white;
     border-radius: 8px;
@@ -181,12 +192,12 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.interest-item:hover {
+.interest__item:hover {
     transform: translateX(4px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.interest-name {
+.interest__name {
     font-weight: 500;
     color: var(--text);
 }
@@ -352,18 +363,18 @@
         border-bottom: 1px solid var(--border);
     }
     
-    .header-content {
+    .header__content {
         flex-direction: column;
         text-align: center;
         gap: 1.5rem;
     }
     
-    .header-photo {
+    .header__photo {
         width: 120px;
         height: 120px;
     }
     
-    .header-name {
+    .header__name {
         font-size: 2rem;
     }
     
@@ -386,11 +397,11 @@
 }
 
 @media (max-width: 480px) {
-    .header-name {
+    .header__name {
         font-size: 1.75rem;
     }
     
-    .header-title {
+    .header__title {
         font-size: 1.1rem;
     }
     
