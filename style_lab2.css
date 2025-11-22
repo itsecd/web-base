@@ -1,0 +1,94 @@
+.list__items {
+  list-style-type: disc;
+  padding-right: 20px;
+}
+
+.items__item {
+  color: black;
+  transition: color 0.5s ease;
+}
+
+.items__item:hover {
+  color: green;
+}
+
+.parent {
+  margin-bottom: 40px;
+}
+
+.parent__title {
+  font-weight: bold;
+}
+
+.parent--1__child,
+.parent--2__child,
+.parent--3__child {
+  margin-left: 20px;
+  padding: 2px 4px;
+}
+
+.parent--1 .parent--1__child {
+  color: red;
+}
+
+.parent--2 {
+  color: orange;
+}
+
+.parent--2 .parent--2__child {
+  color: #b4005a;
+  border: 1px dotted orange;
+  width: 100px;
+  display: inline-block;
+}
+
+.parent--3 {
+  color: inherit;
+}
+
+.parent--3 > .parent--2__child {
+  color: violet;
+  font-weight: bold;
+  border: 1px dashed violet;
+  padding: 4px;
+  background-color: #f0e6ff;
+}
+
+.parent--3__child--guest {
+  color: purple;
+  margin-left: 20px;
+  padding: 2px 4px;
+  border: none;
+}
+
+.parent--2 ~ .parent--3,
+.parent--2 ~ .parent--3 .parent--3__child {
+  color: green;
+}
+
+.languages {
+  max-width: 700px;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.languages__link {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.languages__link::after {
+  content: " 🌐";
+  font-weight: normal;
+}
+
+.languages__list::after {
+  content: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  display: block;
+  width: auto;
+  height: 100px;
+  background-color: #2780E3;
+  margin: 15px auto 0;
+}
