@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    padding: 20px;
+    color: #333;
+}
+
+.resume {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.resume__header {
+    background: #2c3e50;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.resume__photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.resume__name {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.resume__title {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.resume__content {
+    display: flex;
+    padding: 0;
+}
+
+.resume__left {
+    flex: 1;
+    background: #34495e;
+    color: white;
+    padding: 25px;
+}
+
+.resume__right {
+    flex: 2;
+    padding: 25px;
+}
+
+.resume__section {
+    margin-bottom: 25px;
+}
+
+.section__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+.resume__left .section__title {
+    color: white;
+    border-bottom: 2px solid #3498db;
+}
+
+.resume__info {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.resume__info strong {
+    min-width: 120px;
+    display: inline-block;
+}
+
+.resume__list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resume__list li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.resume__list li:before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.resume__github {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.resume__github:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .resume__content {
+        flex-direction: column;
+    }
+    
+    .resume__left {
+        order: 2;
+    }
+    
+    .resume__right {
+        order: 1;
+    }
+}
