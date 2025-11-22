@@ -1,0 +1,84 @@
+.text-block {
+  margin-bottom: 50px;
+  text-align: left;
+  background-color: #af9d3e;
+  color: #75256c;
+}
+
+.image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image--first {
+  width: 300px;
+  z-index: 3;
+}
+.image--second {
+  width: 400px;
+  z-index: 2;
+}
+
+.traffic-light {
+  margin-bottom: 50px;
+  background-color: #333;
+  width: 120px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.traffic-light__light {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: grey;
+}
+
+.traffic-light__light--red {
+  background-color: #ff3333;
+}
+.traffic-light__light--yellow {
+  background-color: #ffff33;
+}
+.traffic-light__light--green {
+  background-color: #33ff33;
+}
+
+/* Блок maze */
+.maze {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 0;
+  margin-bottom: 20px;
+}
+
+/* Элемент cell внутри maze */
+.maze__cell {
+  height: 100px;
+  box-sizing: border-box;
+  border: 2px solid black;
+}
+
+/* Модификаторы для скрытия границ */
+.maze__cell--no-top {
+  border-top: none;
+}
+
+.maze__cell--no-right {
+  border-right: none;
+}
+
+.maze__cell--no-bottom {
+  border-bottom: none;
+}
+
+.maze__cell--no-left {
+  border-left: none;
+}
