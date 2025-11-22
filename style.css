@@ -1,0 +1,112 @@
+:root {
+    --primary-color: #c45510f4;
+    --text-color: black;
+    --sidebar-bg-color: #31d128cc;
+    --border-color: #c45510f4;
+}
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    line-height: 0.7;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(94, 83, 211);
+}
+
+.container {
+    display: flex;
+    max-width: 1100px;
+    margin: 35px auto;
+    background-color: rgba(255, 255, 255, 0.821);
+    box-shadow: 0 15px 70px black; 
+    border-radius: 35px; 
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 45%; 
+    background-color: var(--sidebar-bg-color);
+    padding: 20px 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+
+.sidebar-header {
+    margin-bottom: -15px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
+    border: 4px solid var(--primary-color);
+    object-fit: cover;
+}
+
+.sidebar-header h2 {
+    font-size: 1.85em;
+}
+
+.sidebar-section {
+    margin-bottom: -25px;
+    width: 100%; 
+}
+
+.sidebar-section h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--border-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-section li {
+    margin-bottom: 10px;
+    font-size: 1em;
+    display: flex; 
+    align-items: center;
+}
+
+.sidebar-section li i { 
+    margin-right: 10px;
+    color: var(--primary-color);
+    font-size: 1em;
+    width: 25px; 
+    text-align: center;
+}
+
+.sidebar-section a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.main-content {
+    width: 50%; 
+    padding: 40px 50px;
+}
+
+.main-content h2 {
+    font-size: 2em;
+    color: var(--primary-color); 
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--primary-color); 
+}
+
+.main-content p {
+    font-size: 1.05em;
+    margin-bottom: 20px;
+}
+
+.main-content .about-me p {
+    margin-bottom: 0; 
+     line-height: 2.2;
+}
