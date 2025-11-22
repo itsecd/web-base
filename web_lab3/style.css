@@ -105,3 +105,54 @@
   margin: 0;
   line-height: 1.7;
 }
+
+@media (max-width: 768px) {
+  .resume {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .resume__header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .resume__photo {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .resume__name {
+    font-size: 22px;
+  }
+
+  .resume__skills {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .resume__skill-category {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume {
+    padding: 15px;
+  }
+
+  .resume__photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .resume__name {
+    font-size: 20px;
+  }
+
+  .resume__section-title {
+    font-size: 18px;
+  }
+}
