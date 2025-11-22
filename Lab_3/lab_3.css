@@ -1,0 +1,145 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+}
+
+
+
+.resume{
+    background:linear-gradient(1deg, rgb(197, 157, 221), rgb(94, 29, 158));
+    padding: 30px;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    border: 5px solid rgba(94, 29, 158, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 800px;
+}
+
+
+
+.resume__row1 {
+    display: flex;
+    gap: 50px;
+}
+
+.row1__block1{
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    flex: 1;
+}
+
+.row1__block2{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+}
+.block2__photo{
+    width: 180px;
+    height: 180px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+
+
+.resume__row2 {
+    display: flex;
+    gap: 50px;
+}
+
+.row2__block3{
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    flex: 1;
+    font-size: 18px;
+}
+
+.row2__block4 {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    flex: 1;
+    font-size: 18px;
+}
+.block4__hobbies{
+    list-style: none;
+    padding: 0px;
+}
+.hobbies__hobby{
+    margin-bottom: 10px;
+}
+.hobbies__hobby::before{
+    content: "💜 ";
+}
+
+
+
+.resume__row3 {
+    display: flex;
+    gap: 50px;
+}
+
+.row3__block5{
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    flex: 1;
+    font-size: 18px;
+}
+.block5__hards{
+    list-style: none;
+    padding: 0px;
+}
+.hards__hard{
+    margin-bottom: 10px;
+}
+.hards__hard::before{
+    content: "🟣 ";
+}
+
+.row3__block6{
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    flex: 1;
+    font-size: 18px;
+}
+.block6__softs{
+    list-style: none;
+    padding: 0px;
+}
+.softs__soft{
+    margin-bottom: 10px;
+}
+.softs__soft::before{
+    content: "🟣 ";
+}
+
+
+
+.resume__row4 {
+    display: flex;
+    gap: 50px;
+}
+
+.row4__block7{
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    flex: 1;
+    font-size: 18px;
+}
+.block7__link{
+    text-decoration: none;
+}
