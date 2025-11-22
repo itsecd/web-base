@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STAFF Calculator - Лабораторная работа 4</title>
+    <link rel="stylesheet" href="lab4.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 class="main-title">STAFF</h1>
+        <p class="subtitle">electronic calculator</p>
+      </div>
+
+      <div class="result-container">
+        <div id="result" class="result"></div>
+      </div>
+
+      <div class="calculator">
+        <div class="input-group">
+          <input
+            type="number"
+            id="num1"
+            placeholder="Введите первое число"
+            class="input-field"
+          />
+          <input
+            type="number"
+            id="num2"
+            placeholder="Введите второе число"
+            class="input-field"
+          />
+        </div>
+
+        <select id="operation" class="operation-select">
+          <option value="add">Сложение (+)</option>
+          <option value="subtract">Вычитание (-)</option>
+          <option value="multiply">Умножение (×)</option>
+          <option value="divide">Деление (÷)</option>
+        </select>
+
+        <button id="calculate" class="calculate-btn">ВЫЧИСЛИТЬ</button>
+
+        <div id="error" class="error-message"></div>
+      </div>
+    </div>
+
+    <script src="lab4.js"></script>
+  </body>
+</html>
