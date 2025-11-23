@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #33423b;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  min-height: 100vh;
+}
+
+.resume {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  background: white;
+  border: 2px solid #849eb7;
+  min-height: 80vh;
+  box-shadow: 0 8px 25px rgba(101, 43, 58, 0.1);
+}
+
+.layout__left {
+  background: linear-gradient(135deg, #652b3a, #7a3a4a);
+}
+
+.layout__right {
+  padding: 40px;
+  background: white;
+}
+
+.resume__title {
+  font-family: "Georgia", serif;
+  font-size: 4em;
+  color: #652b3a;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: normal;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #849eb7;
+  padding-bottom: 15px;
+}
+
+.profile-card {
+  text-align: center;
+  color: white;
+}
+
+.resume__photo {
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 4px solid #849eb7;
+  margin-bottom: 30px;
+}
+
+.profile-card__name {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  font-weight: bold;
+  padding: 0 20px;
+}
+
+.resume__birthdate {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.contact-section {
+  padding: 0 20px 20px;
+}
+
+.github__link {
+  display: block;
+  background: #849eb7;
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #6a87a0;
+  transition: 0.3s;
+}
+
+.github__link:hover {
+  background: #6a87a0;
+  transform: translateY(-2px);
+}
+
+.qr-code {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.qr-code__image {
+  width: 150px;
+  height: auto;
+  border: 2px solid #849eb7;
+  border-radius: 4px;
+}
+
+.about-section {
+  padding: 20px;
+  text-align: left;
+}
+
+.layout__left .resume__section-title {
+  font-size: 1.3em;
+  color: #849eb7;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #849eb7;
+  padding-bottom: 8px;
+  font-family: "Arial", sans-serif;
+}
+
+.about__text {
+  font-size: 0.95em;
+  opacity: 0.9;
+}
+
+.layout__right .resume__section-title {
+  color: #652b3a;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #849eb7;
+  padding-bottom: 8px;
+  font-family: "Georgia", serif;
+}
+
+.skills-section__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.skills-section__column {
+  width: 100%;
+}
+
+.skills-section__subtitle {
+  font-size: 1.2em;
+  margin-bottom: 12px;
+  font-family: "Georgia", serif;
+  color: #33423b;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.skill {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #f8f9fa;
+  border: 1px solid #849eb7;
+  border-radius: 0;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.skill:hover {
+  border-color: #652b3a;
+  transform: translateX(5px);
+}
+
+.skill--hard:hover {
+  background: #b27a88;
+}
+
+.skill--soft:hover {
+  background: #c4d0bf;
+}
+
+.hobbies-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 0;
+  margin-bottom: 35px;
+}
+
+.hobbies-list__item {
+  padding: 12px;
+  background: #f8f9fa;
+  border: 1px solid #849eb7;
+  margin-bottom: 4px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.hobbies-list__item:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+  border-color: #652b3a;
+}
+
+.info-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.info-grid__item {
+  padding: 12px 15px;
+  background: #c4d0bf;
+  border: 1px solid #849eb7;
+  color: #33423b;
+}
+
+@media (max-width: 968px) {
+  .layout {
+    grid-template-columns: 300px 1fr;
+  }
+
+  .skills-section__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .resume__title {
+    font-size: 3em;
+  }
+
+  .hobbies-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .layout__right {
+    padding: 20px;
+  }
+
+  .resume__title {
+    font-size: 2.5em;
+  }
+}
