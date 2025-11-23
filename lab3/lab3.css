@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #667eea;
+}
+
+.personal-info {
+    flex: 1;
+}
+
+.name {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.birthdate, .github {
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.github a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.github a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+.main-content {
+    display: grid;
+    gap: 20px;
+}
+
+.section {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: #667eea;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 8px;
+}
+
+.hobbies-list {
+    list-style: none;
+}
+
+.hobbies-list li {
+    padding: 8px 0;
+    font-size: 1.1em;
+    border-bottom: 1px solid #eee;
+}
+
+.hobbies-list li:last-child {
+    border-bottom: none;
+}
+
+.skill-item {
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.skill-bar {
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 10px;
+}
+
+.skill-level {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.soft-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.soft-skill {
+    background: #667eea;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.soft-skill:hover {
+    background: #764ba2;
+    transform: translateY(-2px);
+}
