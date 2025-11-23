@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.resume-container {
+    background-color: #ffffff;
+    border: 3px solid #9678b6;
+    padding: 40px;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(150, 120, 182, 0.2);
+}
+
+.header-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.student-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.name-section {
+    flex: 1;
+}
+
+.student-name {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.section-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-list, .hobbies-list, .skills-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-item, .hobby-item, .skill-item {
+    padding: 8px 0;
+    color: #000000;
+    font-size: 1.1em;
+}
+
+.info-item strong {
+    color: #000000;
+}
+
+.skills-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 10px;
+}
+
+.skills-column {
+    margin-bottom: 0;
+}
+
+.github-link {
+    display: inline-block;
+    color: #9678b6;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #9678b6;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.github-link:hover {
+    background-color: #9678b6;
+    color: #ffffff;
+}
+
+.about-text {
+    color: #000000;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.divider {
+    border-bottom: 2px solid #9678b6;
+    margin: 25px 0;
+    width: 100%;
+}
