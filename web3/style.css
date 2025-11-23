@@ -1,0 +1,152 @@
+.resume {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.resume__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+.resume__photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 60px;
+}
+
+.resume__info {
+  display: flex;
+  gap: 30px;
+}
+
+.resume__name {
+  margin: 0 0 15px 0;
+  color: #444;
+  font-size: 26px;
+}
+
+.resume__birthdate {
+  margin: 5px 0;
+}
+
+.resume__github {
+  margin: 5px 0;
+  color: #444;
+}
+
+.resume__link {
+  color: #00f;
+  text-decoration: none;
+}
+
+.resume__link:hover {
+  text-decoration: underline;
+}
+
+.resume__content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.resume__section {
+  margin-bottom: 0;
+}
+
+.resume__section-title {
+  color: #444;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.resume__list {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: square;
+}
+
+.resume__list-item {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.resume__skills {
+  display: flex;
+  gap: 40px;
+}
+
+.resume__skill-category {
+  flex: 1;
+}
+
+.resume__skill-title {
+  color: #444;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.resume__about-text {
+  text-align: justify;
+  color: #444;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .resume {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .resume__header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .resume__photo {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .resume__name {
+    font-size: 20px;
+  }
+
+  .resume__skills {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .resume__skill-category {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume {
+    padding: 10px;
+  }
+
+  .resume__photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .resume__name {
+    font-size: 20px;
+  }
+
+  .resume__section-title {
+    font-size: 20px;
+  }
+}
