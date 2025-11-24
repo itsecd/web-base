@@ -1,10 +1,6 @@
 body {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 100vh;
 }
 
 .profile {
@@ -34,7 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 1200px;
+  max-width: 50%;
   margin: 0 auto;
   width: 100%;
 }
