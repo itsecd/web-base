@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.header {
+  background: linear-gradient(135deg, #ff8c00 0%, #ff5f00 100%);
+  color: white;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.header__photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 20px;
+}
+
+.header__title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.header__subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  padding: 30px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-card {
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-card__title {
+  color: #ff5f00;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 8px;
+}
+
+.info-card__item {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.info-card__item:last-child {
+  margin-bottom: 0;
+}
+
+.info-card__label {
+  display: block;
+  color: #ff5f00;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.info-card__value {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.link--github {
+  background: linear-gradient(135deg, #ff8c00 0%, #ff5f00 100%);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.link--github:hover {
+  background: linear-gradient(135deg, #ff5f00 0%, #e65100 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 95, 0, 0.4);
+}
+
+.main {
+  padding: 10px 0;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.section__title {
+  color: #ff5f00;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #eaeaea;
+  position: relative;
+}
+
+.section__title::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #ff8c00;
+}
+
+.about {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #ff8c00;
+}
+
+.about__text {
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.skills__category {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.skills__subtitle {
+  color: #ff5f00;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, #ff8c00 0%, #ff5f00 100%);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(255, 95, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .header {
+    padding: 30px 20px;
+  }
+
+  .header__title {
+    font-size: 2rem;
+  }
+
+  .header__photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .skills__list {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 10px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .header__title {
+    font-size: 1.8rem;
+  }
+
+  .header__photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .info-card {
+    padding: 15px;
+  }
+
+  .skills__category {
+    padding: 15px;
+  }
+}
