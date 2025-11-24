@@ -14,29 +14,35 @@ body {
     padding: 40px;
     border-bottom: 1px solid #ddd;
     gap: 40px;
+    flex-wrap: wrap;              /* ← добавляем */
+    justify-content: center;      /* ← центрируем при переносе */
 }
 
-.header__photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid #007bff;
+.header__photo-container {
+    flex: 0 0 150px;              /* ← фиксированная ширина фото */
 }
 
-.header__name {
-    font-size: 32px;
-    margin: 0;
+.header__info {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
 }
 
-.header__birth {
-    font-size: 18px;
-    color: #666;
-}
-
-.header__github {
-    font-size: 18px;
-    color: #007bff;
-    text-decoration: none;
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .header__photo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .header__name {
+        font-size: 28px;
+    }
 }
 
 .about {
@@ -72,11 +78,6 @@ body {
     padding: 0;
 }
 
-.hobbies__list li {
-    font-size: 18px;
-    color: #007bff;
-}
-
 .skills {
     padding: 40px 20px;
 }
@@ -109,4 +110,38 @@ body {
 .skills__card ul {
     list-style: none;
     padding: 0;
+}
+
+.hobbies__item {
+    font-size: 18px;
+    color: #007bff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hobbies__item::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #007bff;
+}
+
+.hobbies__item_music::before   { content: "\f001"; }
+.hobbies__item_book::before    { content: "\f02d"; }
+.hobbies__item_dumbbell::before { content: "\f44b"; }
+
+.header__github {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header__github::before {
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+    content: "\f09b";
+    font-size: 20px;
 }
