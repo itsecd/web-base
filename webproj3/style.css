@@ -1,0 +1,123 @@
+:root {
+  --main-color: #1d3557;
+  --secondary-color: #dbd9af;
+  --paper-width: 700px;
+  --paper-height: 987px;
+}
+
+html {
+  background-color: var(--main-color);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.blank {
+  background-color: black;
+  position: relative;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+.blank:hover {
+  background-color: var(--secondary-color);
+}
+
+header {
+  font-size: 20px;
+}
+
+.papersheet {
+  background-color: var(--secondary-color);
+  width: var(--paper-width);
+  height: var(--paper-height);
+  padding: 40px 50px;
+  display: grid;
+  grid-template-rows: 10% 30% 30% 22%;
+  gap: 2%;
+}
+
+.papersheet__header {
+  grid-row: 1;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 35% 65%;
+}
+
+.papersheet__header__text {
+  grid-row: 1;
+  grid-column: 1;
+}
+.papersheet__header__stamp {
+  grid-row: 1;
+  grid-column: 2;
+  display: flex;
+  justify-content: right;
+  padding-bottom: 30px;
+}
+.papersheet__header__stamp > img {
+  width: auto;
+  height: auto;
+  transform: rotate(-10deg);
+}
+
+.papersheet__first_part {
+  border: 2px solid black;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.papersheet__firts_part__info {
+  grid-column: 1;
+  border-right: 1px solid black;
+}
+.papersheet__first_part__photo {
+  grid-column: 2;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+}
+.papersheet__first_part__photo > img {
+  width: 60%;
+  height: auto;
+  transform: rotate(8deg);
+}
+h1 {
+  margin: 0;
+  padding: 5px;
+  font-weight: lighter;
+  font-size: 20px;
+  border: 1px solid black;
+}
+h2 {
+  padding: 5px;
+  font-weight: lighter;
+  font-size: 15px;
+  border-bottom: 1px dashed black;
+}
+
+ul {
+  margin: 0;
+  padding-left: 15px;
+  font-size: 15px;
+  font-weight: lighter;
+  border-right: 1px solid black;
+}
+li {
+  margin-bottom: 5px;
+  padding: 5px;
+  border-bottom: 1px dashed black;
+}
+
+.papersheet__second_part {
+  border: 2px solid black;
+  grid-row: 3;
+  display: grid;
+  grid-template-rows: 15% auto;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.papersheet__about {
+  grid-row: 4;
+  border: 2px solid black;
+}
