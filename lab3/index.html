@@ -1,76 +1,97 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Персональный сайт</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Персональный сайт</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <section class="profile">
+        <div class="profile__photo-block">
+          <img class="profile__photo" src="ava.jpg" alt="Фото" />
+        </div>
+        <div class="profile__info">
+          <h2 class="profile__title">Обо мне</h2>
+          <p class="profile__text">
+            Борисик Мирон Владимирович. Учусь в СНИУ на специальности: ИБАС.
+            Занимаюсь весёлым временем препровождения!
+          </p>
+          <p class="profile__text profile__text_birth">
+            <strong>Дата рождения:</strong> 22.04.2006
+          </p>
+        </div>
+      </section>
 
-<div class="container">
-  <section class="flex">
-    <div class="photo">
-      <img src="ava.jpg" alt="Фото" />
-    </div>
-    <div>
-      <h2>Обо мне</h2>
-      <p>Борисик Мирон Владимирович. Учусь в СНИУ на специальности: ИБАС. Занимаюсь весёлым временем препровождения!</p>
-      <p><strong>Дата рождения:</strong> 22.04.2006</p>
-    </div>
-  </section>
-  
-  <section>
-    <h2>Навыки</h2>
-    <div class="flex">
-      <div>
-        <h3>Hard skills</h3>
-        <ul>
-          <li>HTML, CSS, JavaScript</li>
-          <li>Python, C/C++, Golang</li>
-          <li>Git</li>
+      <section class="skills">
+        <h2 class="skills__title">Навыки</h2>
+
+        <div class="skills__lists">
+          <div class="skills__group">
+            <h3 class="skills__subtitle">Hard skills</h3>
+            <ul class="skills__list">
+              <li class="skills__item">HTML, CSS, JavaScript</li>
+              <li class="skills__item">Python, C/C++, Golang</li>
+              <li class="skills__item">Git</li>
+            </ul>
+          </div>
+
+          <div class="skills__group">
+            <h3 class="skills__subtitle">Soft skills</h3>
+            <ul class="skills__list">
+              <li class="skills__item">Коммуникабельность</li>
+              <li class="skills__item">Ответственность</li>
+              <li class="skills__item">Работа в команде</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="hobby">
+        <h2 class="hobby__title">Увлечения</h2>
+        <ul class="hobby__list">
+          <li class="hobby__item">Музыка</li>
+          <li class="hobby__item">Спорт</li>
+          <li class="hobby__item">Книги</li>
+          <li class="hobby__item">Спать</li>
         </ul>
-      </div>
+      </section>
 
-      <div>
-        <h3>Soft skills</h3>
-        <ul>
-          <li>Коммуникабельность</li>
-          <li>Ответственность</li>
-          <li>Работа в команде</li>
+      <section class="projects">
+        <h2 class="projects__title">Мои проекты</h2>
+        <ul class="projects__list">
+          <li class="projects__item">
+            <a class="projects__link" href="../lab1/index.html" target="_blank"
+              >Лабораторная работа 1</a
+            >
+          </li>
+          <li class="projects__item">
+            <a class="projects__link" href="../lab2/index.html" target="_blank"
+              >Лабораторная работа 2</a
+            >
+          </li>
+          <li class="projects__item">
+            <a class="projects__link" href="../lab4/index.html" target="_blank"
+              >Лабораторная работа 4</a
+            >
+          </li>
         </ul>
-      </div>
+      </section>
+
+      <section class="github">
+        <h2 class="github__title">GitHub</h2>
+        <p class="github__text">
+          <a
+            class="github__link"
+            href="https://github.com/mer4ir"
+            target="_blank"
+            >Перейти в профиль</a
+          >
+        </p>
+      </section>
     </div>
-  </section>
 
-  <section>
-    <h2>Увлечения</h2>
-    <ul>
-      <li>Музыка</li>
-      <li>Спорт</li>
-      <li>Книги</li>
-      <li>Спать</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Мои проекты</h2>
-    <ul class="project-list">
-      <li><a href="../lab1/index.html" target="_blank">Лабораторная работа 1</a></li>
-      <li><a href="../lab2/index.html" target="_blank">Лабораторная работа 2</a></li>
-      <li><a href="../lab4/index.html" target="_blank">Лабораторная работа 4</a></li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>GitHub</h2>
-    <p><a href="https://github.com/mer4ir" target="_blank">Перейти в профиль</a></p>
-  </section>
-</div>
-
-<footer>
-  © 2025 Персональный сайт студента
-</footer>
-
-</body>
+    <footer class="footer">© 2025 Персональный сайт студента</footer>
+  </body>
 </html>

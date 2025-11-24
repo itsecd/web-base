@@ -1,59 +1,60 @@
 body {
-    font-family: "Segoe UI", sans-serif;
-    background: linear-gradient(135deg, #c12008, #ff69b4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #c12008, #ff69b4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .calc-container {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    text-align: center;
-    color: white;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
 }
 
 .inputs {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-input, select {
-    padding: 10px;
-    font-size: 18px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
+input,
+select {
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    background-color: #ffcc00;
-    color: #000;
-    transition: 0.2s;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #ffcc00;
+  color: #000;
+  transition: 0.2s;
 }
 
 button:hover {
-    background-color: #ffaa00;
+  background-color: #ffaa00;
 }
 
 #result {
-    margin-top: 20px;
-    font-size: 24px;
-    font-weight: bold;
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
