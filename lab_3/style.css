@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(90deg, #25bf2d 0%, #ff3030 100%);
+    color: #222;
+}
+
+.resume {
+    display: flex;
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    box-shadow: 0 0 14px #ddd;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.resume__sidebar {
+    background: #ededed;
+    width: 320px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resume__avatar {
+    width: 135px;
+    height: 135px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 12px #ccc;
+    border: 2px solid #25bf2d;
+}
+
+.resume__name-block {
+    text-align: center;
+    margin-bottom: 19px;
+}
+
+.resume__fullname {
+    font-size: 1.85em;
+    font-weight: bold;
+    margin: 0 0 7px;
+    letter-spacing: 2px;
+}
+
+.resume__position {
+    font-size: 1.1em;
+    color: #444;
+    letter-spacing: 2px;
+    margin-top: -6px;
+}
+
+.resume__birthdate {
+    margin: 10px 0 18px 0;
+    text-align: center;
+    font-size: 1.08em;
+    color: #555;
+}
+
+.resume__birthdate-label {
+    font-weight: bold;
+}
+
+.resume__section {
+    margin-bottom: 18px;
+}
+
+.resume__section-title {
+    margin: 18px 0 8px 0;
+    font-size: 1.06em;
+    font-weight: bold;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 4px;
+}
+
+.resume__skills-list {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.resume__skills-item {
+    font-size: 0.97em;
+    margin-bottom: 5px;
+}
+
+.resume__section--contacts {
+    margin-bottom: 12px;
+}
+
+.resume__contact-block {
+    font-size: 1.05em;
+}
+
+.resume__contact {
+    margin-bottom: 6px;
+}
+
+.resume__github-link {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+.resume__main {
+    flex: 1;
+    padding: 36px 44px;
+}
+
+.resume__section--experience {
+    margin-top: 10px;
+}
+
+.resume__experience-item {
+    margin-bottom: 24px;
+}
+
+.resume__hobby-title,
+.resume__games-title {
+    color: #25bf2d;
+    font-weight: 600;
+    font-size: 1.06em;
+    margin-bottom: 5px;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.resume__hobby-details,
+.resume__games-details {
+    padding-left: 23px;
+    margin: 0;
+}
+
+.resume__hobby-details li,
+.resume__games-details li {
+    font-size: 1em;
+    margin-bottom: 3px;
+}
+.resume__section--gallery {
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.resume__gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 14px;
+    margin-top: 12px;
+    padding: 0 12px;
+}
+
+.resume__gallery-item {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px #ddd;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.resume__gallery-item:hover {
+    transform: scale(1.07);
+    box-shadow: 0 4px 20px #aaa;
+}
+
+.resume__gallery-img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+}
