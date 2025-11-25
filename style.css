@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.header p {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #222;
+    margin: 8px 0;
+}
+
+h2 {
+    text-align: center;
+    color: #444;
+    margin: 50px 0 20px;
+}
+
+.text-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #6F4700;
+    color: #3D5D93;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.images-overlay {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 50px auto;
+    border: 3px solid #333;
+}
+
+.img1, .img2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: auto;
+}
+
+.img2 { z-index: 10; }
+
+.traffic-light {
+    width: 120px;
+    height: 300px;
+    background-color: #222;
+    margin: 60px auto;
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.light {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.red    { background-color: #c0392b; }
+.yellow { background-color: #f1c40f; }
+.green  { background-color: #27ae60; }
+
+.maze {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 0;
+    margin: 60px auto;
+    width: fit-content;
+    border: 4px solid #000;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.wall-top    { border-top: 8px solid #000; }
+.wall-right  { border-right: 8px solid #000; }
+.wall-bottom { border-bottom: 8px solid #000; }
+.wall-left   { border-left: 8px solid #000; }
+
+.maze .cell:nth-child(1),
+.maze .cell:nth-child(9) {
+    background-color: #dff0d8;
+}
