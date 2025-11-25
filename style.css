@@ -1,337 +1,363 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Сброс отступов и включение границ в размер элемента */
 body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    background: linear-gradient(135deg, #f0f4ff 0%, #e6e9ff 100%);
-    min-height: 100vh;
-    padding: 20px;
-    color: #1e1b4b;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e6e9ff 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #1e1b4b;
 }
 
 /* Основной контейнер резюме */
 .resume {
-    max-width: 800px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 24px;
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(99, 102, 241, 0.2);
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(99, 102, 241, 0.2);
 }
 
 /* Шапка с градиентом и декором */
 .resume__header {
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-    color: white;
-    padding: 50px 40px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  padding: 50px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Точки-узор на фоне шапки */
 .resume__header::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 100%;
-    height: 200%;
-    background: radial-gradient(
-        circle,
-        rgba(255, 255, 255, 0.2) 1%,
-        transparent 1%
-    );
-    background-size: 25px 25px;
-    transform: rotate(25deg);
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 1%,
+    transparent 1%
+  );
+  background-size: 25px 25px;
+  transform: rotate(25deg);
 }
 
 /* Контейнер для фото с анимированной рамкой */
 .resume__photo-container {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 25px;
 }
 
 /* Само фото - круглое с белой рамкой */
 .resume__photo {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 6px solid rgba(255, 255, 255, 0.9);
-    object-fit: cover;
-    box-shadow: 0 15px 35px rgba(79, 70, 229, 0.4);
-    position: relative;
-    z-index: 2;
-    transition: all 0.3s ease;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, 0.9);
+  object-fit: cover;
+  box-shadow: 0 15px 35px rgba(79, 70, 229, 0.4);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
 }
 
 /* Эффект при наведении на фото */
 .resume__photo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 20px 45px rgba(79, 70, 229, 0.6);
+  transform: scale(1.05);
+  box-shadow: 0 20px 45px rgba(79, 70, 229, 0.6);
 }
 
 /* Вращающаяся градиентная рамка вокруг фото */
 .resume__photo-container::after {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border-radius: 50%;
-    background: conic-gradient(from 0deg, #4f46e5, #7c3aed, #4f46e5);
-    animation: rotate 3s linear infinite;
-    z-index: 1;
-    opacity: 0.7;
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #4f46e5, #7c3aed, #4f46e5);
+  animation: rotate 3s linear infinite;
+  z-index: 1;
+  opacity: 0.7;
 }
 
 /* Анимация вращения рамки */
 @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Главный заголовок имени */
 .resume__title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8em;
-    font-weight: 700;
-    margin-bottom: 12px;
-    color: white;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Playfair Display", serif;
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Подзаголовок профессии */
 .resume__subtitle {
-    font-size: 1.3em;
-    opacity: 0.9;
-    color: white;
-    font-weight: 400;
-    letter-spacing: 0.5px;
+  font-size: 1.3em;
+  opacity: 0.9;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 /* Карточка секции (каждый блок информации) */
 .resume__section {
-    padding: 35px 40px;
-    position: relative;
-    background: white;
-    margin: 15px;
-    border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(99, 102, 241, 0.08);
-    transition: all 0.3s ease;
+  padding: 35px 40px;
+  position: relative;
+  background: white;
+  margin: 15px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(99, 102, 241, 0.08);
+  transition: all 0.3s ease;
 }
 
 /* Эффект поднятия секции при наведении */
 .resume__section:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.12);
 }
 
 /* Заголовок секции с цветной полоской слева */
 .resume__section-title {
-    color: #4f46e5;
-    margin-bottom: 25px;
-    font-size: 1.6em;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-family: 'Playfair Display', serif;
-    position: relative;
+  color: #4f46e5;
+  margin-bottom: 25px;
+  font-size: 1.6em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Playfair Display", serif;
+  position: relative;
 }
 
 /* Цветная полоска слева от заголовка */
 .resume__section-title::before {
-    content: "";
-    width: 4px;
-    height: 25px;
-    background: linear-gradient(135deg, #4f46e5, #7c3aed);
-    border-radius: 2px;
-    display: inline-block;
+  content: "";
+  width: 4px;
+  height: 25px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  border-radius: 2px;
+  display: inline-block;
 }
 
 /* Сетка для основной информации (дата рождения, направление) */
+
 .info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
-/* Карточка элемента информации */
 .info-grid__item {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: flex-start; /* Изменено с center на flex-start */
+  gap: 15px;
+  padding: 16px 20px;
+  background: #e0e7ff;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border-left: 4px solid #4f46e5;
+}
+
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
     gap: 15px;
-    padding: 16px 20px;
-    background: #e0e7ff;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    border-left: 4px solid #4f46e5;
-}
+  }
 
-/* Эффект при наведении на инфо-карточку */
-.info-grid__item:hover {
-    background: #c7d2fe;
-    transform: translateX(5px);
-}
+  .info-grid__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 20px;
+  }
 
-/* Метка информации (Дата рождения, Направление) */
-.info-grid__label {
+  .info-grid__label {
+    min-width: auto;
+    font-size: 0.95em;
     color: #4f46e5;
     font-weight: 600;
-    min-width: 120px;
+  }
+
+  .info-grid__value {
+    font-size: 1em;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+  }
 }
 
-/* Значение информации */
-.info-grid__value {
-    color: #3730a3;
-    font-weight: 500;
+/* Дополнительно для очень маленьких экранов */
+@media (max-width: 480px) {
+  .info-grid__item {
+    padding: 18px 16px;
+  }
+
+  .info-grid__value {
+    font-size: 0.95em;
+    text-align: left;
+  }
 }
 
 /* Сетка для увлечений */
 .hobbies-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  list-style: none;
 }
 
 /* Карточка увлечения */
 .hobbies-list__item {
-    padding: 18px 20px;
-    background: #e0e7ff;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    text-align: center;
-    font-weight: 500;
-    color: #3730a3;
-    border: 2px solid transparent;
+  padding: 18px 20px;
+  background: #e0e7ff;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-weight: 500;
+  color: #3730a3;
+  border: 2px solid transparent;
 }
 
 /* Эффект при наведении на увлечение */
 .hobbies-list__item:hover {
-    background: #4f46e5;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
-    border-color: #7c3aed;
+  background: #4f46e5;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+  border-color: #7c3aed;
 }
 
-/* Контейнер для навыков */
 .skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
 }
 
-/* Отдельный навык в виде капсулы */
-.skill {
-    background: linear-gradient(135deg, #4f46e5, #7c3aed);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 0.95em;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
-    transition: all 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    position: relative;
-    overflow: hidden;
+.skills__item {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.95em;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Анимация блика на навыке */
-.skill::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s ease;
+.skills__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
 }
 
-.skill:hover::before {
-    left: 100%;
+.skills__item:hover::before {
+  left: 100%;
 }
 
-/* Эффект при наведении на навык */
-.skill:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+.skills__item:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
 }
 
 /* Ссылка на GitHub */
 .github__link {
-    display: inline-flex;
-    align-items: center;
-    gap: 15px;
-    text-decoration: none;
-    color: #3730a3;
-    font-size: 1.2em;
-    padding: 18px 30px;
-    border: 2px solid #4f46e5;
-    border-radius: 16px;
-    transition: all 0.3s ease;
-    background: rgba(224, 231, 255, 0.7);
-    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.15);
-    font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: #3730a3;
+  font-size: 1.2em;
+  padding: 18px 30px;
+  border: 2px solid #4f46e5;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  background: rgba(224, 231, 255, 0.7);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.15);
+  font-weight: 600;
 }
 
 /* Эффект при наведении на GitHub */
 .github__link:hover {
-    background: #4f46e5;
-    color: white;
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 12px 30px rgba(79, 70, 229, 0.3);
+  background: #4f46e5;
+  color: white;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.3);
 }
 
 /* Логотип GitHub */
 .github__logo {
-    width: 32px;
-    height: 32px;
-    filter: brightness(0.8);
-    transition: all 0.3s ease;
+  width: 32px;
+  height: 32px;
+  filter: brightness(0.8);
+  transition: all 0.3s ease;
 }
 
 .github__link:hover .github__logo {
-    filter: brightness(1);
+  filter: brightness(1);
 }
 
 /* Текст в разделе "О себе" */
 .about__text {
-    margin-bottom: 20px;
-    font-size: 1.1em;
-    line-height: 1.8;
-    color: #3730a3;
-    text-align: justify;
-    padding: 0 10px;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #3730a3;
+  text-align: justify;
+  padding: 0 10px;
 }
 
 /* Футер с контактной информацией */
 .resume__footer {
-    background: linear-gradient(135deg, #4f46e5, #7c3aed);
-    color: white;
-    padding: 30px 40px;
-    text-align: center;
-    margin-top: 20px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  padding: 30px 40px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 /* Контактная информация в футере */
 .resume__contact {
-    margin: 8px 0;
-    font-weight: 500;
-    font-size: 1.1em;
-    letter-spacing: 0.5px;
+  margin: 8px 0;
+  font-weight: 500;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
 }
-
