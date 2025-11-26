@@ -42,7 +42,9 @@ body {
     box-shadow: 0 8px 18px rgba(204, 0, 102, 0.4);
 }
 
-.resume__section {
+/* ===== section ===== */
+
+.section {
     margin-bottom: 25px;
     background: #ffd0e8;
     padding: 20px;
@@ -50,29 +52,58 @@ body {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.resume__section:hover {
+.section:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(204, 0, 102, 0.25);
 }
 
-.resume__section-title {
+.section__title {
     text-align: center;
     color: #cc0066;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
-.resume__text {
-    margin: 0;
-}
+/* ===== list in section ===== */
 
-.resume__list {
+.section__list {
     margin: 0;
     padding-left: 20px;
 }
 
-.resume__list-item {
+.list__item {
     margin-bottom: 4px;
+}
+
+/* ===== разные тени для модификаторов section ===== */
+
+.section--birth:hover {
+    box-shadow: 0 8px 16px rgba(204, 0, 102, 0.25);   /* розовый */
+}
+
+.section--hobbies:hover {
+    box-shadow: 0 8px 16px rgba(153, 51, 255, 0.25);  /* фиолетовый */
+}
+
+.section--hard-skills:hover {
+    box-shadow: 0 8px 16px rgba(0, 153, 255, 0.25);   /* голубой */
+}
+
+.section--soft-skills:hover {
+    box-shadow: 0 8px 16px rgba(0, 204, 153, 0.25);   /* зелёный */
+}
+
+.section--github:hover {
+    box-shadow: 0 8px 16px rgba(255, 153, 0, 0.25);   /* оранжевый */
+}
+
+.section--about:hover {
+    box-shadow: 0 8px 16px rgba(102, 0, 153, 0.25);   /* тёмно-фиолетовый */
+}
+
+/* ===== остальные стили ===== */
+
+.resume__text {
+    margin: 0;
 }
 
 .resume__link {
