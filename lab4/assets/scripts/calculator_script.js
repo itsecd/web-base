@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const inputs = document.querySelectorAll(".top-wrapper__input");
     const select = document.querySelector(".top-wrapper__selection");
     const button = document.querySelector(".bottom-wrapper__result");
-    const output = document.querySelector(".central-wrapper__output");
+    const output = document.querySelector(".main-wrapper__output");
 
     button.addEventListener("click", () => {
         const num1 = parseFloat(inputs[0].value);
