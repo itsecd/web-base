@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/calculator_style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+</head>
+<body class="background">
+    <div class="background__central-wrapper">
+        <div class="central-wrapper__top-wrapper">
+            <input class="top-wrapper__input" type="number">
+            <select class="top-wrapper__selection">
+                <option class="selection__action" value="+">Сложить +</option>
+                <option class="selection__action" value="-">Вычесть -</option>
+                <option class="selection__action" value="*">Умножить *</option>
+                <option class="selection__action" value="/">Делить /</option>
+            </select>
+            <input class="top-wrapper__input" type="number">
+        </div>
+        <div class="central-wrapper__bottom-wrapper"> 
+            <button class="bottom-wrapper__result">Вычислить</button>
+        </div>
+
+        <!-- блок результата -->
+        <div class="central-wrapper__output">Результат появится здесь</div>
+    </div>
+
+    <script src="assets/scripts/calculator_script.js"></script>
+</body>
+
+</html>
