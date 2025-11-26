@@ -166,6 +166,17 @@ body {
     color: #e0e0e0;
 }
 
+.personal-info__link {
+    color: #40e0d0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.personal-info__link:hover {
+    color: #20b2aa;
+    text-decoration: underline;
+}
+
 /* Стили для навыков */
 .skills__category {
     margin-bottom: 20px;
@@ -384,6 +395,52 @@ body {
 .footer__text {
     font-size: 14px;
     color: #b0b0b0;
+}
+
+/* Для мобильных устройств*/
+
+@media (max-width: 480px) {
+    .header__name {
+        font-size: 24px;
+    }
+    
+    .header__position {
+        font-size: 16px;
+    }
+    
+    .personal-info, .skills, .languages, .github, .about, 
+    .soft-skills, .hobbies, .education, .certificates {
+        padding: 20px 15px;
+    }
+    
+    .personal-info__item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .personal-info__label {
+        font-size: 14px;
+    }
+    
+    .personal-info__value {
+        font-size: 16px;
+    }
+    
+    .content__container {
+        padding: 0 15px;
+    }
+    
+    .soft-skills__grid,
+    .hobbies__grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .soft-skills__item,
+    .hobbies__item {
+        padding: 12px;
+    }
 }
 
 
