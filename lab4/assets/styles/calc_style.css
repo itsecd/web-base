@@ -1,0 +1,120 @@
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+    background: #E8E2D8;
+    background: linear-gradient(90deg, rgba(232, 226, 216, 1) 0%, rgba(255, 250, 196, 1) 52%, rgba(232, 226, 216, 1) 100%);
+}
+
+
+
+.background__central-wrapper {
+    padding: 40px;
+
+    background-color: rgba(145, 145, 145, 0.5);
+
+    border-radius: 15px;
+}
+
+
+
+.central-wrapper__top-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+
+
+.top-wrapper__selection {
+    padding: 5px 10px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    font-weight: 500;
+
+    background-color: rgb(242, 242, 242);
+    border: 1px solid rgba(148, 148, 148, 0.5);
+    border-radius: 5px;
+
+    box-shadow: 2px 2px 10px 0 rgba(39, 39, 39, 0.127);
+    transition: 0.2s;
+}
+
+.top-wrapper__selection:active {
+    box-shadow: none;
+}
+
+.top-wrapper__selection:focus {
+    outline: 0;
+    box-shadow: none;
+    transition: 0.2s;
+}
+
+
+
+.top-wrapper__input {
+    padding: 15px 10px;
+    margin: 0 10px;
+
+    font-family: "Science Gothic", serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgb(26, 26, 26);
+
+    background-color: rgb(242, 242, 242);
+    border: 1px solid rgba(148, 148, 148, 0.5);
+    border-radius: 5px;
+
+    box-shadow: 2px 2px 10px 0 rgba(39, 39, 39, 0.127);
+    transition: 0.2s;
+}
+
+.top-wrapper__input:active {
+    box-shadow: none;
+}
+
+.top-wrapper__input:focus {
+    outline: 0;
+    box-shadow: none;
+    border: 1px solid white;
+}
+
+
+
+.central-wrapper__bottom-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20%;
+}
+
+
+
+
+.bottom-wrapper__result {
+    padding: 10px 25px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(26, 26, 26);
+
+    background-color: rgb(242, 242, 242);
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 5px;
+
+    box-shadow: 2px 2px 10px 0 rgba(39, 39, 39, 0.225);
+    transition: 0.2s;
+}
+
+.bottom-wrapper__result:active {
+    background-color: rgb(203, 203, 203);
+    border: 1px solid rgb(178, 178, 178);
+    box-shadow: none;
+}
