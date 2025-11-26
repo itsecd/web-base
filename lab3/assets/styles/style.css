@@ -71,19 +71,33 @@ body {
     border-style: dashed; 
 }
 
-p {
-    margin: 0px;
-}
-
-ul {
+.skills__skills-list,
+.contacts__contacts-list,
+.hobbies__hobbies-list {
     margin: 3px;
 }
 
-.resume__github p {
-    margin: 10px;
+.skills__list-header,
+.contacts__list-header,
+.hobbies__list-header,
+.info__header {
+    margin: 0px;
+    font-weight: bold;
 }
 
-.resume__header__main-info p {
+.skills-list__el,
+.contacts-list__el,
+.hobbies-list__el,
+.info__text {
+    margin: 0px;
+}
+
+.github__text {
+    margin: 10px;
+    font-weight: bold;
+}
+
+.main-info__text {
     margin: 10px;
     font-size: 20px;
 }
