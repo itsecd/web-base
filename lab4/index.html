@@ -1,110 +1,123 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="assets/styles/index_style.css" />
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portfolio</title>
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
 
-    <body>
-        <div class="grid">
-            <div></div>
-            <div class="grid__shadow-wrapper">
-                <div class="shadow-wrapper__full-info">
-                    <div class="full-info__birhday full-info__section">
-                        <h3 class="birthday_header info-header">Рождение</h3>
-                        <p class="birthday_text full-info__text">
-                            Родился на севере, в пятницу 13-го 2006 года.
-                            Октябрь тогда выдался нелегким. Даже календарь
-                            намекнул, что жизнь будет интересной (не кринж)
-                        </p>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/styles/index_style.css" />
+</head>
+
+<body>
+    <div class="grid">
+        <div></div>
+
+        <div class="grid__shadow-wrapper">
+            <div class="shadow-wrapper__full-info">
+
+                <div class="full-info__birhday full-info__section">
+                    <h3 class="birthday_header info-header">Рождение</h3>
+                    <p class="birthday_text full-info__text">
+                        Родился на севере, в пятницу 13-го 2006 года. Октябрь тогда
+                        выдался нелегким. Даже календарь намекнул, что жизнь будет
+                        интересной (не кринж)
+                    </p>
+                </div>
+
+                <div class="full-info__hobby full-info__section">
+                    <h3 class="hobby_header info-header">Хобби</h3>
+                    <p class="hobby_text full-info__text">
+                        Я увлекаюсь компютерами и программирование, люблю поиграть в игры.
+                    </p>
+                </div>
+
+                <div class="full-info__skills full-info__section">
+                    <h3 class="skills_header info-header">Hard- и Soft- скиллы</h3>
+                    <p class="skills_text full-info__text">
+                        Программирую на Python, C++, HTML, CSS, JS
+                    </p>
+                    <p class="skills_text full-info__text">
+                        Могу завести разговор с любым человеком
+                    </p>
+                </div>
+
+                <div class="full-info__profile full-info__section">
+                    <h3 class="profile_header info-header">О себе</h3>
+                    <p class="profile_text full-info__text">
+                        Я студент второго курса ИБАС, Самарского университета.
+                    </p>
+                    <p class="profile_text full-info__text">
+                        Совсем недавно прошел "Hollow Knight: SilkSong" на истинную концовку
+                    </p>
+                </div>
+
+                <div class="full-info__projects full-info__section">
+                    <h3 class="projects_header info-header">Проекты</h3>
+                    <a href="lab1.html" class="projects_text full-info__text">
+                        Лабораторная работа №1
+                    </a>
+                    <a href="lab2.html" class="projects_text full-info__text">
+                        Лабораторная работа №2
+                    </a>
+                    <a href="calculator.html" class="projects_text full-info__text">
+                        Калькулятор
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="shadow-wrapper__short-info">
+
+                <div class="short-info__photo">
+                    <img
+                        class="photo_selfie"
+                        src="assets/images/photo.jpg"
+                        alt="NotFound!"
+                    />
+                </div>
+
+                <div class="short-info__intro">
+                    <p class="intro_firstname">Роман</p>
+                    <p class="intro_surname">Матушкин</p>
+                    <p class="intro_nickname">Clay</p>
+                </div>
+
+                <div class="short-info__specialization">
+                    <h3 class="specialization_header info-header">Специальность</h3>
+                    <p class="specialization_text text">
+                        Информационная безопасность автоматизированных систем
+                    </p>
+                </div>
+
+                <div class="short-info__contacts">
+                    <h3 class="contacts_header info-header">Контакты</h3>
+
+                    <div class="contacts__qrcode">
+                        <a href="https://clck.ru/3Pfe56" target="_blank">
+                            <img
+                                src="assets/images/clck.svg"
+                                class="qrcode_img"
+                                alt=""
+                            />
+                        </a>
                     </div>
-                    <div class="full-info__hobby full-info__section">
-                        <h3 class="hobby_header info-header">Хобби</h3>
-                        <p class="hobby_text full-info__text">
-                            Я увлекаюсь компютерами и программирование, люблю
-                            поиграть в игры.
-                        </p>
-                    </div>
-                    <div class="full-info__skills full-info__section">
-                        <h3 class="skills_header info-header">
-                            Hard- и Soft- скиллы
-                        </h3>
-                        <p class="skills_text full-info__text">
-                            Программирую на Python, C++, HTML, CSS, JS
-                        </p>
-                        <p class="skills_text full-info__text">
-                            Могу завести разговор с любым человеком
-                        </p>
-                    </div>
-                    <div class="full-info__profile full-info__section">
-                        <h3 class="profile_header info-header">О себе</h3>
-                        <p class="profile_text full-info__text">
-                            Я студент второго курса ИБАС, Самарского
-                            университета.
-                        </p>
-                        <p class="profile_text full-info__text">
-                            Совсем недавно прошел "Hollow Knight: SilkSong" на
-                            истинную концовку
-                        </p>
-                    </div>
-                    <div class="full-info__projects full-info__section">
-                        <h3 class="projects_header info-header">Проекты</h3>
-                            <a href="lab1.html" class="projects_text full-info__text">Лабораторная работа №1</a>
-                            <a href="lab2.html" class="projects_text full-info__text">Лабораторная работа №2</a>
-                            <a href="calculator.html" class="projects_text full-info__text">Калькулятор</a>
+
+                    <div class="contacts__link">
+                        <a href="https://vk.com/clay0ff" class="link_vk">VK</a>
+                        <a href="https://github.com/clayy4" class="link_github">GIT</a>
                     </div>
                 </div>
-                <div class="shadow-wrapper__short-info">
-                    <div class="short-info__photo">
-                        <img
-                            class="photo_selfie"
-                            src="assets/images/photo.jpg"
-                            alt="NotFound!"
-                        />
-                    </div>
-                    <div class="short-info__intro">
-                        <p class="intro_firstname">Роман</p>
-                        <p class="intro_surname">Матушкин</p>
-                        <p class="intro_nickname">Clay</p>
-                    </div>
-                    <div class="short-info__specialization">
-                        <h3 class="specialization_header info-header">
-                            Специальность
-                        </h3>
-                        <p class="specialization_text text">
-                            Информационная безопасность автоматизированных
-                            систем
-                        </p>
-                    </div>
-                    <div class="short-info__contacts">
-                        <h3 class="contacts_header info-header">Контакты</h3>
-                        <div class="contacts__qrcode">
-                            <a href="https://clck.ru/3Pfe56" target="_blank">
-                                <img src="assets/images/clck.svg"
-                                class="qrcode_img alt="">
-                            </a>
-                        </div>
-                        <div class="contacts__link">
-                            <a href="https://vk.com/clay0ff" 
-                               class="link_vk"
-                               >VK
-                            </a>
-                            <a  href="https://github.com/clayy4"
-                                class="link_github"
-                                >GIT
-                            </a>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
-    </body>
+
+    </div>
+</body>
 </html>

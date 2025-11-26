@@ -1,77 +1,98 @@
+
+
 .task1 {
-  text-align: center;
-  vertical-align: middle;
-  margin: 0 10%;
+    text-align: center;
+    vertical-align: middle;
+
+    margin: 0 10%;
 }
 
 .task1__text-js {
-  color: #7de0ea;
-  background-color: #fcb9a1;
+    color: #7de0ea;
+    background-color: #fcb9a1;
 }
 
+
 .task2 {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .task2__img_back {
-  display: block;
-  height: 300px;
-  max-height: 100%;
+    display: block;
+
+    height: 300px;
+    max-height: 100%;
 }
 
 .task2__img_front {
-  height: 100px;
-  max-height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    height: 100px;
+    max-height: 100%;
+
+    transform: translate(-50%, -50%);
 }
 
+
 .traffic-light {
-  position: relative;
-  background-color: rgb(12, 12, 12);
-  height: 220px;
-  width: 100px;
-  border-radius: 5px;
+    position: relative;
+
+    width: 100px;
+    height: 220px;
+
+    background-color: rgb(12, 12, 12);
+    border-radius: 5px;
 }
 
 .traffic-light__lamp {
-  position: absolute;
-  height: 60px;
-  width: 60px;
+    position: absolute;
+
+    width: 60px;
+    height: 60px;
 }
 
 .traffic-light__lamp_red {
-  position: absolute;
-  background-color: #cc0605;
-  transform: translate(20px, 10px);
-  border-radius: 100%;
+    position: absolute;
+
+    background-color: #cc0605;
+    border-radius: 100%;
+
+    transform: translate(20px, 10px);
 }
 
 .traffic-light__lamp_yellow {
-  position: absolute;
-  background-color: #fdda16;
-  transform: translate(20px, 80px);
-  border-radius: 100%;
+    position: absolute;
+
+    background-color: #fdda16;
+    border-radius: 100%;
+
+    transform: translate(20px, 80px);
 }
 
 .traffic-light__lamp_green {
-  position: absolute;
-  background-color: #8c9900;
-  transform: translate(20px, 150px);
-  border-radius: 100%;
+    position: absolute;
+
+    background-color: #8c9900;
+    border-radius: 100%;
+
+    transform: translate(20px, 150px);
 }
 
+
 .maze {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  width: 300px;
-  height: 300px;
-  background-color: gray;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    width: 300px;
+    height: 300px;
+
+    background-color: gray;
 }
+
 
 .border-top {
     border-top: 3px solid black;

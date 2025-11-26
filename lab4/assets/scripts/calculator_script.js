@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const inputs = document.querySelectorAll(".top-wrapper__input");
     const select = document.querySelector(".top-wrapper__selection");
-    const button = document.querySelector(".bottom-wrapper__result");
+    const button = document.querySelector(".bottom-wrapper__calculate");
     const output = document.querySelector(".main-wrapper__output");
 
     button.addEventListener("click", () => {

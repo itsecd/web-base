@@ -1,13 +1,22 @@
 body {
     height: 100vh;
+
     background: #E8E2D8;
-    background: linear-gradient(90deg, rgba(232, 226, 216, 1) 0%, rgba(255, 250, 196, 1) 52%, rgba(232, 226, 216, 1) 100%);
+    background: linear-gradient(
+        90deg,
+        rgba(232, 226, 216, 1) 0%,
+        rgba(255, 250, 196, 1) 52%,
+        rgba(232, 226, 216, 1) 100%
+    );
 }
+
+/* ================= GRID ================= */
 
 .grid {
     display: grid;
     grid-template-columns: 15% 70% 15%;
     grid-template-rows: 1fr;
+
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -17,8 +26,12 @@ body {
     display: grid;
     grid-template-columns: 65% 35%;
     grid-template-rows: 1fr;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
+
+/* ================= FULL INFO ================= */
+
 .shadow-wrapper__full-info {
     background-color: #d9d9d0;
 }
@@ -26,10 +39,11 @@ body {
 .full-info__text {
     margin-left: 8%;
     margin-right: 7%;
+
     font-size: 1.4vw;
 }
 
-.full-info__section{
+.full-info__section {
     margin-bottom: 3%;
 }
 
@@ -39,10 +53,12 @@ body {
     gap: 1vw;
 }
 
-.projects_text{
+.projects_text {
     color: black;
-    text-decoration: None;    
+    text-decoration: none;
 }
+
+/* ================= SHORT INFO ================= */
 
 .shadow-wrapper__short-info {
     display: grid;
@@ -55,19 +71,22 @@ body {
 .short-info__photo {
     text-align: center;
     vertical-align: middle;
+
     height: auto;
 }
 
 .short-info__photo img {
     padding: 5% 15px;
+
     max-width: 80%;
     width: 80%;
+
     object-fit: cover;
 }
 
 .short-info__intro > p {
     font-size: 2.2vw;
-    margin: -3% 0px -3% 6%;
+    margin: -3% 0 -3% 6%;
 }
 
 .intro_surname {
@@ -79,9 +98,12 @@ body {
     font-weight: 200;
 }
 
+/* ================= HEADERS & TEXT ================= */
+
 .info-header {
     font-size: 1.6vw;
     font-weight: 500;
+
     border: 1px solid;
     padding: 2% 2%;
     margin: 1% 7%;
@@ -90,16 +112,21 @@ body {
 .specialization_text {
     font-size: 1.1vw;
     font-weight: 400;
+
     padding-left: 9%;
 }
 
+/* ================= CONTACTS ================= */
+
 .short-info__contacts {
     display: grid;
-    bottom: 0;
     grid-template-rows: auto 1fr;
     grid-template-columns: 1fr 1fr;
+
     align-items: center;
     justify-content: center;
+
+    bottom: 0;
 }
 
 .contacts_header {
@@ -110,42 +137,52 @@ body {
 .qrcode_img {
     display: inline-block;
     justify-content: center;
+
     margin: auto 10%;
     height: 10vw;
 }
+
 .contacts__link {
     display: flex;
     flex-direction: column;
     gap: 1.5vw;
+
     margin: 0 1.7vw;
 }
 
 .contacts__link a {
     text-decoration: none;
     font-size: 1.4vw;
+
     color: #f5f5f5;
 }
+
+/* ================= ICONS ================= */
 
 .link_vk::before {
     content: "";
     display: inline-block;
-    margin-right: 0.35vw;
+
     width: 2vw;
     height: 2vw;
+    margin-right: 0.35vw;
+
     background-image: url("/assets/images/vkontakte.svg");
     background-size: cover;
+
     vertical-align: middle;
 }
 
 .link_github::before {
     content: "";
     display: inline-block;
-    margin-right: 0.35vw;
+
     width: 2vw;
     height: 2vw;
+    margin-right: 0.35vw;
+
     background-image: url("/assets/images/github.svg");
     background-size: cover;
+
     vertical-align: middle;
-
 }
-
