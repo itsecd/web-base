@@ -54,7 +54,7 @@ header p {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-h2 {
+.section__title {
     color: #ffffff;
     margin-bottom: 15px;
     padding-bottom: 10px;
@@ -67,18 +67,18 @@ h3 {
     font-size: 1.3rem;
 }
 
-.skills__container {
+.skills {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.hard__skills, .soft__skills {
+.skills__category {
     flex: 1;
     min-width: 250px;
 }
 
-.skill__item {
+.skill {
     margin-bottom: 15px;
 }
 
@@ -106,12 +106,12 @@ h3 {
     list-style-type: none;
 }
 
-.hobby__list li {
+.hobby-list__item {
     padding: 8px 0;
     border-bottom: 1px solid #ffffff;
 }
 
-.hobby__list li:before {
+.hobby-list__item:before {
     content: "•";
     color: #ffffff;
     font-weight: bold;
