@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    background: linear-gradient(145deg, #11cb49 30%, #2575fc 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px;
+}
+
+.page__container {
+    max-width: 800px;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(to right, #2575fca1, #11cb49);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.header__title {
+    font-size: 5rem;
+    margin-bottom: 5px;
+}
+
+.calculator {
+    padding: 30px;
+}
+
+.calculator__body {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.calculator__inputs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.calculator__field {
+    flex: 1;
+    min-width: 200px;
+}
+
+.calculator__label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.calculator__input,
+.calculator__select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #dddee0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.calculator__input:focus,
+.calculator__select:focus {
+    border-color: #00e0af;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 224, 175, 0.1);
+}
+
+.calculator__operation {
+    margin-bottom: 20px;
+}
+
+.calculator__button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #2fb471;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 25px;
+}
+
+.calculator__button:hover {
+    background: #28a165;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.calculator__button:active {
+    transform: translateY(0);
+}
+
+.calculator__result {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.calculator__result-label {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.calculator__result-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #6399fd;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator__error {
+    color: #e74c3c;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    min-height: 24px;
+}
+
+.calculator__result-value--error {
+    color: #e74c3c;
+}
+
+.calculator__input--error {
+    border-color: #e74c3c;
+}

@@ -1,0 +1,127 @@
+.resume {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.resume__left {
+    flex: 1;
+    background-color: grey;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.resume__right {
+    flex: 2;
+    background-color: white;
+    padding: 20px;
+}
+
+.left__image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.left__main-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-info__item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.main-info__title {
+    color: rgb(24, 190, 190);
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.main-info__text {
+    color: white;
+    font-size: 18px;
+    margin: 0;
+}
+
+.right__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grid__item {
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+
+}
+
+.item__title {
+    font-size: 20px;
+    margin: 0 0 15px 0;
+    background-color: rgb(24, 190, 190);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.item__text {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.item__skills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.skills__category {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.skills__list {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+.item__link {
+    font-size: 18px;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #0066cc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.item__link:hover {
+    background-color: #0066cc;
+    color: white;
+}
