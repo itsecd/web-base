@@ -1,26 +1,32 @@
-.container ,.additional-info {
+.resume , .resume__block {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: max-content;
     padding: 20px;
     border-radius: 10px;
-    background-color: rgb(192, 192, 192);
+    background-color: #03A696;
     align-items: center;
 }
 
-.header {
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resume__header {
     display: flex;
     flex-direction: row;
     gap: 30px;
     width: 100%;
     align-items: center;
     padding: 10px;
-    background-color: rgb(112, 112, 112);
+    background-color: #E1FF00;
     border-radius: 10px;
 }
 
-.image-container {
+.resume__header__image-container {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -28,13 +34,13 @@
     overflow: hidden;
 }
 
-.image-container__image {
+.resume__header__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.main-info {
+.resume__header__main-info {
     border-style: dashed;
     border-radius: 10px;
     padding: 10px;
@@ -43,34 +49,24 @@
     align-self: center;
 }
 
-.additional-info {
+.resume__block {
     width: 100%;
     gap: 20px;
     padding: 10px;
-    background-color: rgb(170, 170, 170);
+    background-color: #FDF6E3;
 }
 
-.additional-info__line {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    border-radius: 10px;
-}
-
-.additional-info__line--bottom {
+.resume__github {
     display: inline-flex;
     border-radius: 10px;
     align-items: center;
     border-style: dashed;
 }
 
-.contacts, .hobbies, .info, .skills {
+.resume__block__contacts, .resume__block__hobbies, 
+.resume__block__info, .resume__block__skills {
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 10px;
+    padding: 5px;
     border-radius: 10px;
     border-style: dashed; 
 }
@@ -79,7 +75,15 @@ p {
     margin: 0px;
 }
 
-.main-info p {
+ul {
+    margin: 3px;
+}
+
+.resume__github p {
+    margin: 10px;
+}
+
+.resume__header__main-info p {
     margin: 10px;
     font-size: 20px;
 }
