@@ -1,53 +1,88 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторная работа 1</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <section class="task-1">
-        <h2>Задание 1: Текст</h2>
-        <div class="text-block">
-            <p>JavaScript (аббр. JS) — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript (стандарт ECMA-262).
-            JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.</p>
-        </div>
-    </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Резюме студента</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page">
+    <div class="container">
+      <header class="header">
+        <img src="img.jpg" alt="Фото студента" class="header__photo" />
+        <h1 class="header__title">Макаров Никита Иванович</h1>
+        <p class="header__subtitle">Студент 2-го курса направления ИБАС</p>
+      </header>
 
-    <section class="task-2">
-        <h2>Задание 2: Наложение картинок</h2>
-        <div class="images-container">
-            <img src="img_1.jpg" alt="Фоновое изображение" class="images-container__image">
-            <img src="img_2.jpg" alt="Накладываемое изображение" class="images-container__image images-container__image--front">
-        </div>
-    </section>
+      <div class="content">
+        <aside class="sidebar">
+          <div class="info-card">
+            <h3 class="info-card__title">Личная информация</h3>
+            <div class="info-card__item">
+              <span class="info-card__label">Дата рождения</span>
+              <span class="info-card__value">19.03.2006</span>
+            </div>
 
-    <section class="task-3">
-        <h2>Задание 3: Светофор</h2>
-        <div class="traffic-light">
-            <div class="traffic-light__light traffic-light__light_red"></div>
-            <div class="traffic-light__light traffic-light__light_yellow"></div>
-            <div class="traffic-light__light traffic-light__light_green"></div>
-        </div>
-    </section>
+            <div class="info-card__item">
+              <span class="info-card__label">Контактная информация</span>
+              <span class="info-card__value">Email: makarovnikita305@gmail.com</span>
+              <span class="info-card__value">Telegram: NikMak77</span>
+            </div>
 
-    <section class="task-4">
-        <h2>Задание 4: Лабиринт 3x3</h2>
-        <div class="maze">
-            <!-- Ряд 1 -->
-            <div class="maze__cell border-bottom border-top"></div>
-            <div class="maze__cell border-top"></div>
-            <div class="maze__cell border-bottom border-left "></div>
-            <!-- Ряд 2 -->
-            <div class="maze__cell border-left border-right border-bottom"></div>
-            <div class="maze__cell border-bottom"></div>
-            <div class="maze__cell border-right"></div>
-            <!-- Ряд 3 -->
-            <div class="maze__cell border-left border-right"></div>
-            <div class="maze__cell border-bottom border-right"></div>
-            <div class="maze__cell border-right"></div>
-        </div>
-    </section>
-</body>
+            <div class="info-card__item">
+              <span class="info-card__label">GitHub</span>
+              <a
+                href="https://github.com/NikMak77"
+                class="link link--github"
+                target="_blank"
+                >Посмотреть профиль</a
+              >
+            </div>
+          </div>
+        </aside>
+
+        <main class="main">
+          <section class="section">
+            <h2 class="section__title">О себе</h2>
+            <div class="about">
+              <p class="about__text">
+                Я студент 2-го курса ИБАС с желанием изучать новое. 
+                Не боюсь сложных и объемных задач, ведь только решая их, можно стать лучше. 
+                Умение быстро включаться в работу и длительное время быть сконцентрированным позволяет мне максимально качественно и быстро достигать своих целей.
+                В свободное время я занимаюсь спортом и саморазвитием.
+              </p>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section__title">Навыки</h2>
+            <div class="skills">
+              <div class="skills__category">
+                <h3 class="skills__subtitle">Hard-skills</h3>
+                <div class="skills__list">
+                  <span class="skills__tag">HTML/CSS</span>
+                  <span class="skills__tag">Python</span>
+                  <span class="skills__tag">С++</span>
+                  <span class="skills__tag">С</span>
+                  <span class="skills__tag">Git</span>
+                </div>
+              </div>
+
+              <div class="skills__category">
+                <h3 class="skills__subtitle">Soft-skills</h3>
+                <div class="skills__list">
+                    <span class="skills__tag">Целеустремленность</span>
+                    <span class="skills__tag">Отвественность</span>
+                    <span class="skills__tag">Дисциплинированность</span>
+                    <span class="skills__tag">Амбициозность</span>
+                    <span class="skills__tag">Коммуникабельность</span>
+                    <span class="skills__tag">Концентрация</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
 </html>
