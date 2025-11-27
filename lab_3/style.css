@@ -24,7 +24,7 @@ body {
     align-items: center;
 }
 
-.resume__avatar {
+.sidebar__avatar {
     width: 135px;
     height: 135px;
     border-radius: 10px;
@@ -34,41 +34,41 @@ body {
     border: 2px solid #25bf2d;
 }
 
-.resume__name-block {
+.sidebar__name-block {
     text-align: center;
     margin-bottom: 19px;
 }
 
-.resume__fullname {
+.name-block__fullname {
     font-size: 1.85em;
     font-weight: bold;
     margin: 0 0 7px;
     letter-spacing: 2px;
 }
 
-.resume__position {
+.name-block__position {
     font-size: 1.1em;
     color: #444;
     letter-spacing: 2px;
     margin-top: -6px;
 }
 
-.resume__birthdate {
+.sidebar__birthdate {
     margin: 10px 0 18px 0;
     text-align: center;
     font-size: 1.08em;
     color: #555;
 }
 
-.resume__birthdate-label {
+.sidebar__birthdate-label {
     font-weight: bold;
 }
 
-.resume__section {
+.sidebar__section {
     margin-bottom: 18px;
 }
 
-.resume__section-title {
+.sidebar__section-title {
     margin: 18px 0 8px 0;
     font-size: 1.06em;
     font-weight: bold;
@@ -76,29 +76,29 @@ body {
     padding-bottom: 4px;
 }
 
-.resume__skills-list {
+.sidebar__skills-list {
     padding-left: 18px;
     margin: 0;
 }
 
-.resume__skills-item {
+.sidebar__skills-item {
     font-size: 0.97em;
     margin-bottom: 5px;
 }
 
-.resume__section--contacts {
+.sidebar__section--contacts {
     margin-bottom: 12px;
 }
 
-.resume__contact-block {
+.sidebar__contact-block {
     font-size: 1.05em;
 }
 
-.resume__contact {
+.sidebar__contact {
     margin-bottom: 6px;
 }
 
-.resume__github-link {
+.sidebar__github-link {
     color: #0366d6;
     text-decoration: none;
 }
@@ -108,16 +108,16 @@ body {
     padding: 36px 44px;
 }
 
-.resume__section--experience {
+.main__section--experience {
     margin-top: 10px;
 }
 
-.resume__experience-item {
+.main__experience-item {
     margin-bottom: 24px;
 }
 
-.resume__hobby-title,
-.resume__games-title {
+.main__hobby-title,
+.main__games-title {
     color: #25bf2d;
     font-weight: 600;
     font-size: 1.06em;
@@ -126,23 +126,23 @@ body {
     letter-spacing: 1px;
 }
 
-.resume__hobby-details,
-.resume__games-details {
+.main__hobby-details,
+.main__games-details {
     padding-left: 23px;
     margin: 0;
 }
 
-.resume__hobby-details li,
-.resume__games-details li {
+.main__hobby-details li,
+.main__games-details li {
     font-size: 1em;
     margin-bottom: 3px;
 }
-.resume__section--gallery {
+.main__section--gallery {
     margin-bottom: 18px;
     text-align: center;
 }
 
-.resume__gallery {
+.main__gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     gap: 14px;
@@ -150,7 +150,7 @@ body {
     padding: 0 12px;
 }
 
-.resume__gallery-item {
+.main__gallery-item {
     margin: 0;
     padding: 0;
     background: #fff;
@@ -160,12 +160,12 @@ body {
     transition: transform 0.2s;
 }
 
-.resume__gallery-item:hover {
+.main__gallery-item:hover {
     transform: scale(1.07);
     box-shadow: 0 4px 20px #aaa;
 }
 
-.resume__gallery-img {
+.main__gallery-img {
     width: 100%;
     height: 100px;
     object-fit: cover;
