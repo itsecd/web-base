@@ -7,35 +7,31 @@
 
 <body>
   <div class="calculator">
-    <div class="head">
+    <div class="calculator__head">
       <h1>Калькулятор</h1>
     </div>
-    <div class="input">
-      <input type="number" id="display" placeholder=0>
+    <div class="calculator__input">
+      <p>Первое число:</p>
+      <input type="number" id="num1" placeholder=0>
+      <p>Второе число:</p>
+      <input type="number" id="num2" placeholder=0>
     </div>
-    <div class="items">
-      <div class="items__element">AC</div>
-      <div class="items__element">+/-</div>
-      <div class="items__element">%</div>
-      <div class="items__element">+</div>
-      <div class="items__element">7</div>
-      <div class="items__element">8</div>
-      <div class="items__element">9</div>
-      <div class="items__element">x</div>
-      <div class="items__element">4</div>
-      <div class="items__element">5</div>
-      <div class="items__element">6</div>
-      <div class="items__element">/</div>
-      <div class="items__element">1</div>
-      <div class="items__element">2</div>
-      <div class="items__element">3</div>
-      <div class="items__element">-</div>
-      <div class="items__element zero">0</div>
-      <div class="items__element">.</div>
-      <div class="items__element">=</div>
+    <div class="calculator__operation">
+      <p>Операция:</p>
+      <select id="operation">
+        <option value="+">Сложение (+)</option>
+        <option value="-">Вычитание (-)</option>
+        <option value="*">Умножение (*)</option>
+        <option value="/">Деление (/)</option>
+      </select>
+    </div>
+    <button class="calculator__button" id="calculate">Вычислить</button>
+    <div class="calculator__result">
+      <p>Результат:</p>
+      <div class="calculator__result output" id="result">-</div>
     </div>
   </div>
-  <script src="style_js.js"></script>
+  <script src="js_4.js"></script>
 </body>
 
 </html>
