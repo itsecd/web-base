@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+/* Задание 1: Текстовый блок */
+.text-block {
+    text-align: center;
+    color: #85A1B7;
+    background-color: #FEB431;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/*Задание 2 */
+.images{
+   position: relative;
+   height: 500px;
+   margin: 0 auto;
+    }
+    .images img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%); 
+    height: 500px;
+    }
+    .images_cat--cat-big{
+     z-index: 1;
+    } 
+    .images_cat--cat-small{
+     opacity: 0.7;
+     z-index: 2;
+    }
+
+/* Задание 3: Светофор */
+.traffic-light {
+    width: 80px;
+    height: 240px;
+    background-color: #333;
+    border-radius: 12px;
+    margin: 20px auto;
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.light {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 5px auto;
+    background-color: #444;
+}
+
+.red { background-color: #ff4444; }
+.yellow { background-color: #ffdd00; }
+.green { background-color: #44ff44; }
+
+
+
+.maze {
+      display: grid;
+      grid-template-columns: repeat(3, 80px);
+      grid-template-rows: repeat(3, 80px);
+      margin: 30px auto;
+      width: fit-content;
+    }
+    .maze_cell {
+      width: 80px;
+      height: 80px;
+      background-color: white;
+    }
+    .maze_cell--side-top {
+    border-top: 3px solid black;
+    }
+    .maze_cell--side-right {
+    border-right: 3px solid black;
+    }
+    .maze_cell--side-bottom {
+    border-bottom: 3px solid black;
+    }
+    .maze_cell--side-left {
+    border-left: 3px solid black;
+    }
+
