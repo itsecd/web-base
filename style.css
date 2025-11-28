@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.section-title {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #bdc3c7;
+    text-align: center;
+    font-weight: bold;
+}
+
+section {
+    margin-bottom: 60px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-block {
+    padding: 30px;
+    background-color: #CF6F21; /* Цвет заднего фона по варианту */
+    border-radius: 8px;
+}
+
+.text-block__content {
+    color: #B5FCEE; /* Цвет текста по варианту */
+    text-align: right; /* Выравнивание по правому краю по варианту */
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.images-container {
+    position: relative;
+    width: 500px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.image {
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.image_first {
+    top: 20px;
+    left: 50px;
+    z-index: 2;
+    border: 5px solid #ff6b6b;
+}
+
+.image_second {
+    top: 70px;
+    left: 100px;
+    z-index: 1;
+    border: 5px solid #4ecdc4;
+}
+
+.task-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.traffic-light {
+    width: 120px;
+    background-color: #2c3e50;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.traffic-light__light {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 15px auto;
+    border: 3px solid #000;
+}
+
+.traffic-light__light_red {
+    background-color: #c0392b;
+}
+
+.traffic-light__light_yellow {
+    background-color: #f39c12;
+}
+
+.traffic-light__light_green {
+    background-color: #27ae60;
+}
+
+.task-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.maze {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    width: fit-content;
+    margin-top: 20px;
+}
+
+.maze__cell {
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+.maze__cell_open-top {
+    border-top: none;
+}
+
+.maze__cell_open-left {
+    border-left: none;
+}
+
+.maze__cell_open-right {
+    border-right: none;
+}
+
+.maze__cell_open-bottom {
+    border-bottom: none;
+}
