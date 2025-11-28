@@ -1,33 +1,34 @@
-.main_container {
+.main-container {
   text-align: center;
 }
 
-.unordered_list {
+.unordered-list {
     list-style-type: none;
     padding: 0;
 }
 
-.unordered_list li {
+.unordered-list li {
     padding: 8px 12px;
     margin: 4px 0;
     transition: color 1.2s ease, background-color 1.2s ease;
 }
 
-.unordered_list li:hover {
+.unordered-list li:hover {
     color: #f99665;
     background-color: #f0f0f0;
 }
 
+/* Блок parent с модификаторами */
 .parent_2 {
     color: #f4bc92;
 }
 
-.parent_1 .parent_child {
+.parent_1 .parent__child {
   color: red;
   width: 50px;
 }
 
-.parent_2 .parent_child {
+.parent_2 .parent__child {
   color: #b4005a;
   border-style: dotted;
   border-color: #f4bc92;
@@ -35,31 +36,31 @@
 }
 
 .parent_2 ~ .parent_3,
-.parent_2 ~ .parent_3 .parent_child {
+.parent_2 ~ .parent_3 .parent__child {
   color: green;
 }
 
-.parent_2 ~ .parent_3 .parent_child_guest-from-2 {
+.parent_2 ~ .parent_3 .parent__child_guest-from-2 {
   color: purple;
 }
 
 .text {
   width: 700px;
-  text-align: justify;
+  text-align: left;
 }
 
-.programming_language {
+.programming-language {
   text-decoration: none;
   color: black;
   padding-right: 5px;
   font-weight: bold;
 }
 
-.languages li {
-  text-align: justify;
+.languages-list li {
+   text-align: left;
 }
 
-.languages li::before{
+.languages-list li::before{
   content: "🌐";
 }
 
@@ -76,4 +77,23 @@
     background-color: #2780e3;
     padding: 20px;
     border-radius: 5px;
+}
+
+/* Дополнительные стили для новой структуры */
+.task {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.parent {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.parent__child {
+  margin: 5px 0;
+  padding: 5px;
 }
