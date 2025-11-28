@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .main-title {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 36px;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        .section-title {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #bdc3c7;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        section {
+            margin-bottom: 60px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Задание 1: Анимированный список видеоигр */
+        .games-list {
+            list-style-type: none;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .games-list__item {
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .games-list__item:hover {
+            background-color: #3498db;
+            color: white;
+            transform: translateX(10px);
+            border-left-color: #2980b9;
+        }
+
+        /* Задание 2: Родители и дети */
+        .family-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .parent {
+            flex: 1;
+            padding: 20px;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+        }
+
+        .parent__title {
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .child {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        /* Стили для первого родителя */
+        #parent-1 .child {
+            color: red;
+        }
+
+        /* Стили для второго родителя */
+        #parent-2 {
+            color: orange;
+        }
+
+        #parent-2 .child {
+            color: #b4005a;
+            border: 1px dashed orange;
+        }
+
+        /* Стили для третьего родителя */
+        #parent-3, 
+        #parent-3 .child {
+            color: green;
+        }
+
+        /* Дети третьего родителя, которые идут после вторых */
+        #parent-2 ~ #parent-3 .child {
+            color: green;
+        }
+
+        /* Дети третьего родителя, которые идут между первыми и вторыми */
+        #parent-1 + #parent-3 .child {
+            color: initial;
+        }
+
+        /* Дети второго родителя в гостях у третьего */
+        #parent-3 .child.visitor {
+            color: purple;
+            border: none;
+        }
+
+        /* Задание 3: Текст с языками программирования */
+        .programming-text {
+            line-height: 1.8;
+            font-size: 16px;
+            position: relative;
+        }
+
+        .programming-text a {
+            font-weight: bold;
+            text-decoration: none;
+            color: #2c3e50;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .programming-text a:hover {
+            color: #e74c3c;
+        }
+
+        /* Псевдоэлемент для ссылок */
+        .programming-text a::after {
+            content: " 🌐";
+            font-size: 14px;
+        }
+
+        /* Псевдоэлемент для логотипа после списка */
+        .programming-text::after {
+            content: "";
+            display: block;
+            width: 200px;
+            height: 60px;
+            margin: 30px auto 0;
+            background-image: url('samynivers.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">Лабораторная работа 2</h1>
+
+        <!-- Задание 1: Анимированный список видеоигр -->
+        <section class="task-1">
+            <h2 class="section-title">Популярные видеоигры</h2>
+            <ul class="games-list">
+                <li class="games-list__item">Minecraft</li>
+                <li class="games-list__item">Fortnite</li>
+                <li class="games-list__item">GTA V</li>
+                <li class="games-list__item">Call of Duty</li>
+                <li class="games-list__item">Among Us</li>
+            </ul>
+        </section>
+
+        <!-- Задание 2: Родители и дети -->
+        <section class="task-2">
+            <h2 class="section-title">Родители и дети</h2>
+            <div class="family-container">
+                <div class="parent" id="parent-1">
+                    <h3 class="parent__title">Первый родитель</h3>
+                    <div class="child">Ребенок 1</div>
+                    <div class="child">Ребенок 2</div>
+                    <div class="child">Ребенок 3</div>
+                </div>
+                
+                <div class="parent" id="parent-2">
+                    <h3 class="parent__title">Второй родитель</h3>
+                    <div class="child">Ребенок 1</div>
+                    <div class="child">Ребенок 2</div>
+                    <div class="child">Ребенок 3</div>
+                </div>
+                
+                <div class="parent" id="parent-3">
+                    <h3 class="parent__title">Третий родитель</h3>
+                    <div class="child">Ребенок 1</div>
+                    <div class="child">Ребенок 2</div>
+                    <div class="child visitor">Ребенок в гостях</div>
+                    <div class="child">Ребенок 3</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Задание 3: Текст с языками программирования -->
+        <section class="task-3">
+            <h2 class="section-title">Языки программирования</h2>
+            <div class="programming-text">
+                <p>
+                    Языки программирования — это инструменты, с помощью которых разработчики создают программное обеспечение, 
+                    веб-приложения, игры, алгоритмы и многое другое. Каждый язык имеет свои особенности, синтаксис и сферу применения. 
+                    Ниже представлены некоторые из наиболее известных языков:
+                </p>
+                <p>
+                    <a href="#">Python</a> – высокоуровневый язык с простым синтаксисом, популярный в Data Science, веб-разработке и автоматизации.<br>
+                    <a href="#">JavaScript</a> – основной язык для фронтенд-разработки, работает в браузерах и на сервере (Node.js).<br>
+                    <a href="#">Java</a> – объектно-ориентированный язык, широко используется в корпоративных приложениях и Android-разработке.<br>
+                    <a href="#">C++</a> – мощный язык для системного программирования, игр и высокопроизводительных приложений.<br>
+                    <a href="#">C#</a> – язык от Microsoft, применяется в разработке под Windows, играх (Unity) и веб-приложениях.<br>
+                    <a href="#">Go (Golang)</a> – созданный Google, язык для высоконагруженных сетевых сервисов и облачных технологий.<br>
+                    <a href="#">Ruby</a> – известен благодаря фреймворку Ruby on Rails для веб-разработки.<br>
+                    <a href="#">Swift</a> – язык Apple для разработки под iOS и macOS.<br>
+                    <a href="#">Kotlin</a> – современный язык, официально поддерживаемый для Android-разработки.<br>
+                    <a href="#">Rust</a> – язык системного программирования с акцентом на безопасность и производительность.
+                </p>
+                <p>
+                    Это лишь малая часть из множества существующих языков, и выбор зависит от задач, которые нужно решить.
+                </p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
