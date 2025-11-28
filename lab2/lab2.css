@@ -18,7 +18,6 @@
     background-color: #f0f0f0;
 }
 
-/* Блок parent с модификаторами */
 .parent_2 {
     color: #f4bc92;
 }
@@ -79,7 +78,6 @@
     border-radius: 5px;
 }
 
-/* Дополнительные стили для новой структуры */
 .task {
   margin-bottom: 30px;
   padding: 20px;
