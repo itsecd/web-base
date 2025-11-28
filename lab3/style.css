@@ -64,11 +64,45 @@ body {
     padding: 25px;
 }
 
-.resume__section {
-    margin-bottom: 25px;
+.left_section {
+    margin-bottom: 30px;
 }
 
-.section__title {
+.left_section__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: white;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+.left_section__info {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.left_section__info strong {
+    min-width: 120px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.left_section__link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.left_section__link:hover {
+    text-decoration: underline;
+}
+
+.right_section {
+    margin-bottom: 30px;
+}
+
+.right_section__title {
     font-size: 20px;
     margin-bottom: 15px;
     color: #2c3e50;
@@ -76,51 +110,27 @@ body {
     padding-bottom: 5px;
 }
 
-.resume__left .section__title {
-    color: white;
-    border-bottom: 2px solid #3498db;
+.right_section__info {
+    margin-bottom: 10px;
 }
 
-.resume__info {
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-}
-
-.resume__info strong {
-    min-width: 120px;
-    display: inline-block;
-}
-
-.resume__list {
+.right_section__list {
     list-style: none;
     padding-left: 0;
 }
 
-.resume__list li {
+.right_section__list li {
     margin-bottom: 8px;
     padding-left: 20px;
     position: relative;
 }
 
-.resume__list li:before {
+.right_section__list li:before {
     content: "•";
     color: #3498db;
     font-weight: bold;
     position: absolute;
     left: 0;
-}
-
-.resume__github {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.resume__github:hover {
-    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
