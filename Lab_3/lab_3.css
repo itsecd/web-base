@@ -5,7 +5,6 @@ body{
 }
 
 
-
 .resume{
     background:linear-gradient(1deg, rgb(197, 157, 221), rgb(94, 29, 158));
     padding: 30px;
@@ -19,24 +18,29 @@ body{
 }
 
 
-
-.resume__row1 {
+.resume__row{
     display: flex;
     gap: 50px;
 }
 
-.row1__block1{
+
+.row__block{
     background: rgba(255, 255, 255, 0.2);
     padding: 30px;
     border-radius: 50px;
     border: 5px solid rgba(255, 255, 255, 0.2);
     flex: 1;
+    font-size: 18px;
 }
 
-.row1__block2{
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50px;
-    border: 5px solid rgba(255, 255, 255, 0.2);
+
+.row__block1{
+    font-size: initial;
+}
+
+.row__block2{
+    padding: 0;
+    flex: none;
 }
 .block2__photo{
     width: 180px;
@@ -46,29 +50,6 @@ body{
 }
 
 
-
-.resume__row2 {
-    display: flex;
-    gap: 50px;
-}
-
-.row2__block3{
-    background: rgba(255, 255, 255, 0.2);
-    padding: 30px;
-    border-radius: 50px;
-    border: 5px solid rgba(255, 255, 255, 0.2);
-    flex: 1;
-    font-size: 18px;
-}
-
-.row2__block4 {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 30px;
-    border-radius: 50px;
-    border: 5px solid rgba(255, 255, 255, 0.2);
-    flex: 1;
-    font-size: 18px;
-}
 .block4__hobbies{
     list-style: none;
     padding: 0px;
@@ -81,20 +62,6 @@ body{
 }
 
 
-
-.resume__row3 {
-    display: flex;
-    gap: 50px;
-}
-
-.row3__block5{
-    background: rgba(255, 255, 255, 0.2);
-    padding: 30px;
-    border-radius: 50px;
-    border: 5px solid rgba(255, 255, 255, 0.2);
-    flex: 1;
-    font-size: 18px;
-}
 .block5__hards{
     list-style: none;
     padding: 0px;
@@ -106,14 +73,6 @@ body{
     content: "🟣 ";
 }
 
-.row3__block6{
-    background: rgba(255, 255, 255, 0.2);
-    padding: 30px;
-    border-radius: 50px;
-    border: 5px solid rgba(255, 255, 255, 0.2);
-    flex: 1;
-    font-size: 18px;
-}
 .block6__softs{
     list-style: none;
     padding: 0px;
@@ -126,20 +85,7 @@ body{
 }
 
 
-
-.resume__row4 {
-    display: flex;
-    gap: 50px;
-}
-
-.row4__block7{
-    background: rgba(255, 255, 255, 0.2);
-    padding: 30px;
-    border-radius: 50px;
-    border: 5px solid rgba(255, 255, 255, 0.2);
-    flex: 1;
-    font-size: 18px;
-}
 .block7__link{
     text-decoration: none;
+    color: #7f3bc4;
 }
