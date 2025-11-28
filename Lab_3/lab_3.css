@@ -4,7 +4,6 @@ body{
     padding: 50px;
 }
 
-
 .resume{
     background:linear-gradient(1deg, rgb(197, 157, 221), rgb(94, 29, 158));
     padding: 30px;
@@ -17,12 +16,10 @@ body{
     max-width: 800px;
 }
 
-
 .resume__row{
     display: flex;
     gap: 50px;
 }
-
 
 .row__block{
     background: rgba(255, 255, 255, 0.2);
@@ -33,59 +30,37 @@ body{
     font-size: 18px;
 }
 
-
-.row__block1{
-    font-size: initial;
-}
-
-.row__block2{
-    padding: 0;
-    flex: none;
-}
-.block2__photo{
+.block__photo{
     width: 180px;
     height: 180px;
     border-radius: 50px;
     object-fit: cover;
 }
 
-
-.block4__hobbies{
-    list-style: none;
-    padding: 0px;
-}
-.hobbies__hobby{
-    margin-bottom: 10px;
-}
-.hobbies__hobby::before{
-    content: "💜 ";
-}
-
-
-.block5__hards{
-    list-style: none;
-    padding: 0px;
-}
-.hards__hard{
-    margin-bottom: 10px;
-}
-.hards__hard::before{
-    content: "🟣 ";
-}
-
-.block6__softs{
-    list-style: none;
-    padding: 0px;
-}
-.softs__soft{
-    margin-bottom: 10px;
-}
-.softs__soft::before{
-    content: "🟣 ";
-}
-
-
-.block7__link{
+.block__link{
     text-decoration: none;
     color: #7f3bc4;
+}
+
+.clear-font {
+    font-size: initial;
+}
+.clear-padding {
+    padding: 0;
+}
+.no-flex {
+    flex: none;
+}
+.no-list-style{
+    list-style: none;
+}
+.list__point{
+    margin-bottom: 10px;
+}
+
+.heart-marker::before{
+    content: "💜 ";
+}
+.point-marker::before{
+    content: "🟣 ";
 }
