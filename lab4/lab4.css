@@ -13,7 +13,7 @@
     padding: 100px 20px;
 }
 
-.page__container {
+.container {
     max-width: 800px;
     width: 100%;
     background-color: white;
@@ -21,7 +21,7 @@
     overflow: hidden;
 }
 
-.header {
+.container__header {
     background: linear-gradient(to right, #2575fca1, #11cb49);
     color: white;
     padding: 30px;
@@ -33,7 +33,7 @@
     margin-bottom: 5px;
 }
 
-.calculator {
+.container__calculator {
     padding: 30px;
 }
 
@@ -44,7 +44,7 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-.calculator__inputs {
+.body__inputs {
     display: flex;
     gap: 10px;
     margin-bottom: 25px;
@@ -79,7 +79,7 @@
     box-shadow: 0 0 0 3px rgba(0, 224, 175, 0.1);
 }
 
-.calculator__operation {
+.body__operations {
     margin-bottom: 20px;
 }
 

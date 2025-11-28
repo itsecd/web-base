@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Лабораторная работа 4</title>
     <link rel="stylesheet" href="lab4.css" />
+    <script src="lab4.js" defer></script>
 </head>
 
 <body class="page">
-    <div class="page__container container">
-        <header class="header">
+    <div class="container">
+        <header class="container__header header">
             <h1 class="header__title">Калькулятор</h1>
         </header>
 
-        <div class="calculator">
+        <div class="container__calculator calculator">
             <div class="calculator__body">
-                <div class="calculator__inputs">
+                <div class="body__inputs calculator__inputs">
                     <div class="calculator__field">
                         <div class="calculator__label">Первое число:</div>
                         <input type="number" class="calculator__input" id="num1" placeholder="Введите число" />
@@ -27,7 +28,7 @@
                     </div>
                 </div>
 
-                <div class="calculator__operation">
+                <div class="body__operations calculator__operation">
                     <div class="calculator__label">Операция:</div>
                     <select class="calculator__select" id="operation">
                         <option value="add">Сложение (+)</option>
@@ -47,8 +48,6 @@
             </div>
         </div>
     </div>
-
-    <script src="lab4.js"></script>
 </body>
 
 </html>

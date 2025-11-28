@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const resultDiv = document.getElementById('result');
     const errorDiv = document.getElementById('error');
 
+    if (!num1Input || !num2Input || !operationSelect || !calculateBtn || !resultDiv || !errorDiv) {
+        console.error('Не все необходимые элементы найдены на странице');
+        return;
+    }
+
     calculateBtn.addEventListener('click', handleCalculation);
 
     function handleCalculation() {
@@ -24,11 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const calculationResult = performCalculation(num1, num2, operation);
 
-        if (calculationResult.success) {
-            displayResult(calculationResult.value);
-        } else {
-            displayError(calculationResult.error);
-        }
+        const displayFunction = typeof calculationResult === 'number'
+            ? displayResult
+            : displayError;
+
+        displayFunction(calculationResult);
     }
 
     function clearDisplay() {
@@ -57,39 +62,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function performCalculation(num1, num2, operation) {
-        let result;
-
         switch (operation) {
             case 'add':
-                result = num1 + num2;
-                break;
+                return num1 + num2;
             case 'subtract':
-                result = num1 - num2;
-                break;
+                return num1 - num2;
             case 'multiply':
-                result = num1 * num2;
-                break;
+                return num1 * num2;
             case 'divide':
                 if (num2 === 0) {
-                    return {
-                        success: false,
-                        error: 'Ошибка: деление на ноль невозможно'
-                    };
+                    return 'Ошибка: деление на ноль невозможно';
                 }
-                result = num1 / num2;
-                break;
+                return num1 / num2;
             default:
-                return {
-                    success: false,
-                    error: 'Неизвестная операция'
-                };
+                return 'Неизвестная операция';
         }
-
-
-        return {
-            success: true,
-            value: result
-        };
     }
 
     function displayResult(result) {
@@ -102,5 +89,4 @@ document.addEventListener('DOMContentLoaded', function () {
         resultDiv.textContent = 'Ошибка';
         resultDiv.classList.add('calculator__result-value--error');
     }
-
 });
