@@ -1,0 +1,113 @@
+body{
+    background-image: url('v882batch2-kul-16-e.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.profile{
+    border-radius: 2px;
+}
+
+.profile__picture-image{
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
+    object-fit: cover;
+    border: 5px solid skyblue;
+    box-shadow: 0 4px 12px black;
+    transition: all 0.3s ease
+}
+
+.profile__picture-image:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 0 4px rgb(1, 24, 34), 0 0 20px rgb(255, 238, 1);
+}
+
+.profile__info-item{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.profile__title{
+    display: inline-block;
+    font-size: 25px;
+    color: #4B0082;
+    padding: 4px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease, box-shadow 0.2s ease;
+}
+
+.profile__title:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 0 4px rgb(1, 24, 34), 0 0 20px rgb(77, 1, 87);
+}
+
+.profile__text{
+    font-weight: bolder;
+    color: #1A1A1A;
+}
+
+.profile__section{
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 2px solid #eeeeee;
+}
+
+.profile__section-title{
+    text-align: left;
+    color: #4B0082;
+}
+
+.profile__list {
+    list-style: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 0 auto 12px;
+}
+
+.profile__list-item {
+    background: #ecd4e5;
+    padding: 10px 16px;
+    margin-bottom: 10px;
+    border-left: 4px solid #af49df;
+    border-radius: 0 6px 6px 0;
+    font-size: 18px;
+}
+
+.profile__skill-type {
+    text-align: center;
+    margin: 20px 0 12px;
+    color: #2c3e50;
+    font-size: 20px;
+}
+
+.profile__text-self {
+    max-width: 1000px;
+    background: #ecd4e5;
+    padding: 10px 16px;
+    margin-bottom: 10px;
+    border-left: 4px solid #af49df;
+    border-right: 4px solid #af49df;
+    border-radius: 6px 6px 6px 6px;
+    font-size: 18px;
+}
+
+.profile__link {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #af49df;              
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(175, 73, 223, 0.4);
+  transition: all 0.3s ease;
+}
+
+.profile__link:hover {
+  background: #8a2be2;            
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(175, 73, 223);
+}
