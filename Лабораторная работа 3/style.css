@@ -8,6 +8,7 @@ body
 
 .resume
 {
+	display: flex; 
 	width: 800px;
 	max-width: 100%;
 	background: white;
@@ -18,9 +19,9 @@ body
 
 .resume__sidebar
 {
-	float: left;
 	width: 220px;
 	padding-right: 16px;
+	flex-shrink: 0;
 }
 
 .resume__photo
@@ -56,9 +57,10 @@ body
 
 .resume__content
 {
-	margin-left: 250px;
+	flex-grow: 1;
 	box-sizing: border-box;
 	padding-bottom: 10px;
+	padding-left: 30px; 
 }
 
 h2
@@ -89,7 +91,49 @@ li
 	margin: 4px 6px 4px 0;
 }
 
-.resume__clear
+.resume__contacts-group
 {
-	clear: both;
+    margin-top: 8px;
 }
+
+.resume__github-group
+{
+    margin-top: 10px;
+}
+
+.resume__h2-spaced
+{
+    margin-top: 12px;
+}
+
+@media (max-width: 600px)
+{
+    .resume
+	{
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .resume__sidebar
+	{
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .resume__photo
+	{
+        margin: 0 0 8px 0;
+    }
+
+    .resume__content
+	{
+        padding-left: 0; 
+        margin-top: 16px;
+    }
+}
+
