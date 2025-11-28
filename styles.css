@@ -7,7 +7,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #265a7e;
     background-color: #f5f5f5;
 }
 
@@ -21,8 +21,8 @@ body {
 
 .resume__left {
     flex: 1;
-    background: #2c3e50;
-    color: white;
+    background: #265a7e;
+    color: #dce4e9;
     padding: 30px;
 }
 
@@ -31,110 +31,111 @@ body {
     padding: 40px;
 }
 
-.resume__photo {
+.left__photo {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.resume__image {
+.photo__image {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #34495e;
+    border: 5px solid #1a4661;
 }
-
-.resume__title {
+.section__title {
     font-size: 18px;
-    color: #3498db;
+    color: #3498da;
     margin-bottom: 15px;
     padding-bottom: 5px;
-    border-bottom: 2px solid #3498db;
+    border-bottom: 2px solid #3498da;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.resume__left .resume__title {
-    color: #ecf0f1;
-    border-bottom: 2px solid #ecf0f1;
+.resume__left .section__title {
+    color: #dce4e9;
+    border-bottom: 2px solid #dce4e9;
 }
 
-.resume__header {
+.right__header {
     margin-bottom: 30px;
     text-align: center;
 }
 
-.resume__name {
+.header__name {
     font-size: 32px;
-    color: #2c3e50;
+    color: #265a7e;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-.resume__position {
+.header__position {
     font-size: 18px;
     color: #7f8c8d;
-    font-style: italic;
+    /* Убрал курсив */
 }
 
-.resume__contacts {
+.section__contacts {
     margin-bottom: 20px;
 }
 
-.contact__item {
+.contacts__item {
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.contact__label {
+.item__label {
     font-weight: bold;
     color: #bdc3c7;
     font-size: 14px;
 }
 
-.contact__link, .contact__text {
-    color: white;
+.item__link, .item__text {
+    color: #dce4e9;
     text-decoration: none;
     margin-top: 2px;
 }
 
-.contact__link:hover {
-    color: #3498db;
+.item__link:hover {
+    color: #3498da;
 }
 
-.skills__list, .hobbies__list {
+.section__skills, .section__hobbies {
     list-style: none;
     margin-bottom: 20px;
 }
 
 .skills__item, .hobbies__item {
-    background: #34495e;
+    background: #1a4661;
     margin-bottom: 8px;
     padding: 8px 12px;
     border-radius: 4px;
     font-size: 14px;
 }
 
-.resume__about, .goals {
+/* О себе и другие разделы */
+.section__about, .section__goals {
     margin-bottom: 20px;
     text-align: justify;
 }
 
-.resume__about p, .goals p {
+.section__about p, .section__goals p {
     margin-bottom: 10px;
 }
 
-.education__item {
+/* Образование */
+.section__education {
     margin-bottom: 25px;
     padding: 15px;
     background: #f8f9fa;
-    border-left: 4px solid #3498db;
+    border-left: 4px solid #3498da;
 }
 
 .education__title {
     font-size: 18px;
-    color: #2c3e50;
+    color: #265a7e;
     margin-bottom: 5px;
     font-weight: bold;
 }
@@ -142,11 +143,10 @@ body {
 .education__specialty {
     color: #7f8c8d;
     margin-bottom: 5px;
-    font-style: italic;
+    /* Убрал курсив */
 }
 
 .education__period {
     color: #95a5a6;
     font-size: 14px;
 }
-
