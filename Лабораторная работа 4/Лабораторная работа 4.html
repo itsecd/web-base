@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="calculator-container">
+	
+        <h1>Калькулятор</h1>
+        
+        <div class="input-group">
+		
+            <label for="num1">Первое число:</label>
+			
+            <input type="number" id="num1" value="0" placeholder="Введите число">
+			
+        </div>
+        
+        <div class="input-group">
+		
+            <label for="operation">Операция:</label>
+			
+            <select id="operation">
+			
+                <option value="add">+</option>
+				
+                <option value="subtract">-</option>
+				
+                <option value="multiply">*</option>
+				
+                <option value="divide">/</option>
+				
+            </select>
+			
+        </div>
+        
+        <div class="input-group">
+		
+            <label for="num2">Второе число:</label>
+			
+            <input type="number" id="num2" value="0" placeholder="Введите число">
+			
+        </div>
+        
+        <button onclick="calculate()">Вычислить</button>
+        
+        <div class="result-group">
+		
+            <h2>Результат:</h2>
+			
+            <div id="result" class="result-box">0</div>
+			
+        </div>
+        
+        <div id="error-message" class="error-message"></div>
+		
+    </div>
+	
+	<script src="calculator.js"></script>
+	 
+</body>
+</html>

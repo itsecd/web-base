@@ -1,0 +1,53 @@
+.parent
+{
+    max-width: 100px;
+}
+
+.parent__title
+{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.parent__item
+{
+    padding-left: 0px;
+    font-size: 1.1em;
+}
+
+.parent_type-1 .parent__item
+{
+    color: red;
+}
+
+.parent_type-2 .parent__title
+{
+    color: orange;
+}
+
+.parent_type-2 .parent__item
+{
+    color: #b4005a;
+    border: 1px dotted orange;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.parent_type-2 ~ .parent_type-3 .parent__title
+{
+    color: green;
+}
+
+.parent_type-2 ~ .parent_type-3 .parent__item
+{
+    color: green;
+}
+
+.parent_type-3 .parent__item ~ .parent__item_guest-from-2
+{
+    border: none;
+    color: purple;
+    padding: 0px;
+}

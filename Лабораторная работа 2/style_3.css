@@ -1,0 +1,43 @@
+.page-heading
+{
+    font-size: 1.2em;
+}
+
+.app-section__description
+{
+    width: 850px;
+}
+
+.app-section__list
+{
+    list-style-type: disc;
+    padding-left: 30px;
+}
+
+.app-section__item
+{
+    margin-bottom: 8px;
+}
+
+.app-section__link
+{
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+}
+
+.app-section__link::after
+{
+    content: " 🌍";
+    font-size: 0.8em;
+    vertical-align: middle;
+}
+
+.app-section::after
+{
+    content: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+    display: block;
+    width: 370px;
+    height: auto;
+    background-color: #2780E3;
+}

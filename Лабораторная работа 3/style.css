@@ -1,0 +1,139 @@
+body
+{
+	font-family: Arial, Helvetica, sans-serif;
+	background: #f3f6fb;
+	margin: 0;
+	padding: 20px;
+}
+
+.resume
+{
+	display: flex; 
+	width: 800px;
+	max-width: 100%;
+	background: white;
+	margin: 0 auto;
+	padding: 16px;
+	border-radius: 6px;
+}
+
+.resume__sidebar
+{
+	width: 220px;
+	padding-right: 16px;
+	flex-shrink: 0;
+}
+
+.resume__photo
+{
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-bottom: 8px;
+	border: 2px solid #ddd;
+}
+
+.resume__photo img
+{
+	width: 100%;
+	height: 100%;
+	display:block;
+}
+
+.resume__name
+{
+	font-size: 18px;
+	font-weight: bold;
+	margin: 6px 0;
+}
+
+.resume__detail
+{
+	color: black;
+	font-size: 14px;
+	margin: 4px 0;
+}
+
+.resume__content
+{
+	flex-grow: 1;
+	box-sizing: border-box;
+	padding-bottom: 10px;
+	padding-left: 30px; 
+}
+
+h2
+{
+	margin: 6px 0 8px 0;
+	font-size: 18px;
+}
+
+ul
+{
+	padding-left: 18px;
+	margin: 6px 0;
+}
+    
+li
+{
+	margin-bottom: 4px;
+}
+
+.resume__skill-tag
+{
+	display: inline-block;
+	background: #eef3ff;
+	color: blue;
+	padding: 6px 10px;
+	border-radius: 12px;
+	font-size: 13px;
+	margin: 4px 6px 4px 0;
+}
+
+.resume__contacts-group
+{
+    margin-top: 8px;
+}
+
+.resume__github-group
+{
+    margin-top: 10px;
+}
+
+.resume__h2-spaced
+{
+    margin-top: 12px;
+}
+
+@media (max-width: 600px)
+{
+    .resume
+	{
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .resume__sidebar
+	{
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .resume__photo
+	{
+        margin: 0 0 8px 0;
+    }
+
+    .resume__content
+	{
+        padding-left: 0; 
+        margin-top: 16px;
+    }
+}
+
