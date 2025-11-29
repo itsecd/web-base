@@ -14,10 +14,10 @@ body {
     align-items: center;
     flex-direction: column;
     padding-top: 150px;
-    padding-bottom: 200px;
+    padding-bottom: 150px;
     margin-top: 125px;
     width: 40%;
-    height: 100vh;
+    min-height: 100%;
     background: linear-gradient(to bottom, #2e3c57, #0d1529);
     box-shadow: 13px 14px 13px -2px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
@@ -44,15 +44,13 @@ body {
     color: #d8d8d8;
     font-size: 20px;
     font-weight: 500;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
 } 
 
-.left-section__socials-text {
+.left-section__socials-title {
     color: #ffffff;
-    font-size: 28px;
+    font-size: 40px;
     font-weight: 900;
-    align-self: start;
-    margin-left: 5%;
     margin-bottom: 100px;
 }
 
@@ -83,7 +81,7 @@ body {
 }
 
 .gh:hover {
-    background: #24292f;
+    background: #1c242b;
 }
 
 .left-section__socials-objs__link img {
@@ -91,9 +89,53 @@ body {
 }
 
 .right-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 60%;
-    height: 200px;
-    background-color: #fff;
+    min-height: 100%;
+    background-color: #2d3b55;
     box-shadow: 13px 14px 13px -2px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
+}
+
+.right-section__hobbies-title {
+    color: #eef5ff;
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 30px;
+    padding-top: 20px;
+}
+
+.right-section__hobbies-objs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 20px;
+    width: 100%;
+    justify-items: center;
+}
+
+.right-section__hobbies-objs__el {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    height: 140px;
+    width: 270px;
+    border-radius: 30px;
+    box-shadow: 0px 13px 19px 12px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    padding-top: 10px;
+}
+
+.right-section__hobbies-objs__el img {
+    height: 100px;
+    width: 100px;
+}
+
+.right-section__hobbies-objs__el span {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 900;
 }
