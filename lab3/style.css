@@ -110,3 +110,76 @@ body {
     color: #000;
 }
     
+@media (max-width: 900px) {
+    .resume {
+        flex-direction: column;
+    }
+    
+    .resume__photo {
+        flex: none;
+        order: -1;
+        padding: 30px 20px;
+    }
+    
+    .resume__photo img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .resume__content {
+        padding: 30px;
+    }
+    
+    .header__name {
+        font-size: 2em;
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .resume__content {
+        padding: 25px;
+    }
+    
+    .header__name {
+        font-size: 1.8em;
+    }
+    
+    .info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume__content {
+        padding: 20px;
+    }
+    
+    .header__name {
+        font-size: 1.5em;
+    }
+    
+    .header__title {
+        font-size: 1em;
+    }
+    
+    .resume__photo img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .about__title,
+    .info__item h3 {
+        font-size: 0.9em;
+    }
+    
+    .about__text,
+    .info__item p {
+        font-size: 0.9em;
+    }
+}
