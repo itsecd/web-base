@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #0f1a20;
+  color: #e8e8e8;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.resume {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 50px;
+  padding: 25px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.resume__photo--main {
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 3px solid #4a5d63;
+}
+
+.resume__photo--main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.resume__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.resume__name {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.resume__birth {
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+.section {
+  margin-bottom: 40px;
+  padding: 25px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(3px);
+}
+
+.section__title {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.skills-columns {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.skills-columns__column {
+  width: 50%;
+}
+
+.skills-columns__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skills-columns__list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.skills-columns__item {
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.github__link a,
+.fun-test a {
+  color: #9fd8ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.github__link a:hover,
+.fun-test a:hover {
+  text-decoration: underline;
+}
+
+.cats__photo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.cats__photo img {
+  width: 60%;
+  border-radius: 20px;
+  border: 2px solid rgba(255,255,255,0.1);
+}
+
+.bg-wave {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("ocean.jpg") center/cover no-repeat;
+  opacity: 0.15;
+  z-index: -1;
+  filter: grayscale(70%);
+}
