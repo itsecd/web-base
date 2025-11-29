@@ -1,0 +1,118 @@
+body {
+    background: linear-gradient(90deg,#420e56 0%, #423276 50%, #154569 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+.resume {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    gap: 30px;
+
+}
+
+.left__cap{
+    width: 50%;
+    height: auto;
+    margin-top: 10px;
+    background: linear-gradient(90deg,#5d0a7d 0%, #5b3fb6 50%, #14619d 100%);
+    border: 5px solid #71dbff;
+    border-style:groove;
+    border-radius: 10px;
+}
+
+.left__cap .selection__text{
+    font-size: 40px;
+}
+
+.right__selection .selection__text{
+    font-size: 30px;
+}
+
+.resume__right {
+    flex: 3;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+
+
+
+}
+
+.right__selection{
+    background: linear-gradient(90deg,#5d0a7d 0%, #5b3fb6 50%, #14619d 100%);
+    padding: 20px;
+    border-radius: 8px;
+    border: 5px solid #71dbff;
+    border-style:groove;
+
+}
+
+.selection__title{
+    font-size: 36px;
+    margin: 0;
+    color: rgb(113, 219, 255);
+}
+
+.selection__text {
+    font-size: 18px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.selection__text li{
+    font-size: 30px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.resume__left {
+    flex: 1;
+    flex-direction: column; 
+    display: flex;
+    align-items: center;      
+    justify-content: center; 
+    padding: 40px;
+}
+
+.resume__left .left__cap{
+    width: 75%;
+}
+
+.left__image{
+    width: 75%;
+    height: auto;
+    border: 5px solid #71dbff;
+    border-style:groove;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+.selection__link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.5s ease;
+}
+
+.selection__text .selection__link {
+    font-size: 30px;
+}
+
+.selection__link:hover {
+    color: #1eff47;
+}
+
+.selection__link::before {
+    content: "🔗";
+}
+
