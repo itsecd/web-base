@@ -1,0 +1,192 @@
+/* общие стили */
+.page {
+    margin: 0;
+    padding: 0;
+    font-family: Calibri, sans-serif;
+    background: linear-gradient(180deg, #B44C53 0%, #800A08 100%);
+    min-height: 100vh;
+}
+
+
+.resume {
+    display: flex;
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    gap: 20px;
+
+}
+
+/* левая колонка */
+.resume__left {
+    flex: 1;
+    background: rgba(255,255,255,0.6);
+    color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+
+/* правая колонка */
+.resume__right {
+    flex: 2;
+    background: rgba(255,255,255,0.8);
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 10px;
+}
+
+/* заглавная инфа */
+.person {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.person__photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 3px solid white;
+    margin-bottom: 15px;
+}
+
+.person__name {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+.person__birthdate {
+    font-size: 16px;
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* контакты */
+.contacts {
+    margin-bottom: 30px;
+}
+
+.contacts__title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #4E3232;
+    padding-bottom: 5px;
+}
+
+.contacts__link {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.contacts__phone, .contacts__address {
+    margin: 8px 0;
+}
+
+/* языки и хобби */
+.languages, .hobbies {
+    margin-bottom: 30px;
+}
+
+.languages__title, .hobbies__title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #4E3232;
+    padding-bottom: 5px;
+}
+
+.languages__list, .hobbies__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.languages__item, .hobbies__item {
+    padding: 5px 0;
+}
+
+/* о себе */
+.about__title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #4E3232;
+}
+
+.about__text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #4E3232;
+    margin: 0;
+}
+
+/* мини пинтерест */
+.pins__title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #4E3232;
+}
+
+.pins__container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pins__image {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* первый скилл и третий */
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.skills__column {
+    background: rgba(180,76,83,0.5);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.skills__title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #4E3232;
+    text-align: center;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #4E3232; 
+}
+
+.skills__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills__item {
+    padding: 6px 0;
+}
+
+/* футер */
+.footer {
+    margin-top: auto;
+    text-align: center;
+    padding-top: 20px;
+/*    border-top: 1px solid #f1ecec;*/
+}
+
+.footer__text {
+    font-size: 14px;
+    color: #f1ecec;
+    margin: 0;
+}
