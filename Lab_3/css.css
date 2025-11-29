@@ -1,0 +1,125 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  padding: 20px;
+  min-height: 100vh;
+
+  /* Фоновое изображение */
+  background-image: url('photos/fon.png');
+  background-size: 40%;         
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+/* Затемнение фона для читаемости */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* === Блок шапки === */
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.header__info h1 {
+  margin: 0 0 12px;
+  font-size: 1.8em;
+  color: #222;
+}
+
+.header__traits {
+  margin: 0;
+  padding-left: 1em;
+  font-size: 0.95em;
+  color: #444;
+}
+
+.header__trait {
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+/* === Аватар === */
+.avatar {
+  flex-shrink: 0;
+}
+
+.avatar__image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; 
+  object-fit: cover; 
+  display: block;
+  border: 2px solid #eee; 
+}
+
+/* === Основной контент === */
+.resume__item {
+  margin-bottom: 14px;
+}
+
+.resume__link {
+  color: #1872ad;
+  text-decoration: none;
+}
+
+.resume__link:hover {
+  text-decoration: underline;
+}
+
+.resume__about {
+  margin-top: 8px;
+}
+
+/* === Галерея фотографий === */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.photo-gallery__image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.5s;
+}
+
+.photo-gallery__image:hover {
+  transform: scale(2);
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(24, 154, 194, 0.25);
+  position: relative;
+}
