@@ -9,84 +9,96 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <img src="my_photo.jpg" alt="Фото студента" class="profile-img">
-            <h1>Лозгачев Матвей Сергеевич</h1>
-            <p class="subtitle">Студент Самарского университета</p>
+        <header class="header">
+            <img src="my_photo.jpg" alt="Фото студента" class="header__photo">
+            <h1 class="header__title">Лозгачев Матвей Сергеевич</h1>
+            <p class="header__subtitle">Студент Самарского университета</p>
         </header>
-        
+
         <div class="content">
             <div class="sidebar">
-                <h2>Контактная информация</h2>
-                
-                <div class="info-item">
-                    <div class="info-label">Дата рождения:</div>
-                    <div>19.09.2006</div>
-                </div>
-                
-                <div class="info-item">
-                    <div class="info-label">Местоположение:</div>
-                    <div>Россия, Самарская область, Самара</div>
-                </div>
-                
-                <div class="info-item">
-                    <div class="info-label">Email:</div>
-                    <div>Lozgachev200@gmail.com</div>
-                </div>
-                
-                <div class="contact-links">
-                    <a href="https://github.com/skrltn" class="contact-link" target="_blank">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub профиль</span>
-                    </a>
-                </div>
-                
-                <h2>Навыки</h2>
-                <div class="info-item">
-                    <div class="info-label">Hard-скиллы:</div>
-                    <div class="skills">
-                        <div class="skill hard-skill">HTML & CSS</div>
-                        <div class="skill hard-skill">Python</div>
-                        <div class="skill hard-skill">C++</div>
-                        <div class="skill hard-skill">Git</div>
+                <h2 class="sidebar__title">Контактная информация</h2>
+
+                <div class="info">
+                    <div class="info__item">
+                        <div class="info__label">Дата рождения:</div>
+                        <div class="info__value">19.09.2006</div>
+                    </div>
+
+                    <div class="info__item">
+                        <div class="info__label">Местоположение:</div>
+                        <div class="info__value">Россия, Самарская область, Самара</div>
+                    </div>
+
+                    <div class="info__item">
+                        <div class="info__label">Email:</div>
+                        <div class="info__value">Lozgachev200@gmail.com</div>
                     </div>
                 </div>
-                
-                <div class="info-item">
-                    <div class="info-label">Soft-скиллы:</div>
-                    <div class="skills">
-                        <div class="skill soft-skill">Быстрота обучения</div>
-                        <div class="skill soft-skill">Математическое мышление</div>
-                        <div class="skill soft-skill">Логическое мышление</div>
-                        <div class="skill soft-skill">Командная работа</div>
-                        <div class="skill soft-skill">Усердность и упорство</div>
-                        <div class="skill soft-skill">Дисциплинированность</div>
+
+                <div class="contacts">
+                    <a href="https://github.com/skrltn" class="contacts__link" target="_blank">
+                        <i class="fab fa-github contacts__icon"></i>
+                        <span class="contacts__text">GitHub профиль</span>
+                    </a>
+                </div>
+
+                <h2 class="sidebar__title">Навыки</h2>
+                <div class="info">
+                    <div class="info__item">
+                        <div class="info__label">Hard-скиллы:</div>
+                        <div class="skills">
+                            <div class="skills__item skills__item_hard">HTML & CSS</div>
+                            <div class="skills__item skills__item_hard">Python</div>
+                            <div class="skills__item skills__item_hard">C++</div>
+                            <div class="skills__item skills__item_hard">Git</div>
+                        </div>
+                    </div>
+
+                    <div class="info__item">
+                        <div class="info__label">Soft-скиллы:</div>
+                        <div class="skills">
+                            <div class="skills__item skills__item_soft">Быстрота обучения</div>
+                            <div class="skills__item skills__item_soft">Математическое мышление</div>
+                            <div class="skills__item skills__item_soft">Логическое мышление</div>
+                            <div class="skills__item skills__item_soft">Командная работа</div>
+                            <div class="skills__item skills__item_soft">Усердность и упорство</div>
+                            <div class="skills__item skills__item_soft">Дисциплинированность</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="main-content">
-                <h2>О себе</h2>
-                <p>Студент Самарского университета, обучающийся в институте информатики и кибернетики на специальности ИБАС (Информационная Безопасность Автоматизированных Систем).</p>
-                <p>Увлекаюсь программированием и постоянно развиваюсь в этой области. Стремлюсь к получению глубоких знаний в сфере информационной безопасности и разработки защищенных систем. В свободное время занимаюсь самообразованием, изучаю новые технологии и практикуюсь в решении сложных задач. Обладаю аналитическим складом ума и ответственным подходом к выполнению поставленных задач.</p>
-                
-                <h2>Образование</h2>
-                <div class="info-item">
-                    <div class="info-label">Самарский университет</div>
-                    <div>Институт информатики и кибернетики</div>
-                    <div>Специальность: ИБАС (Информационная Безопасность Автоматизированных Систем)</div>
-<div>Годы обучения: 2024 - настоящее время</div>
-                </div>
-                
-                <h2>Увлечения</h2>
-                <div class="hobbies">
-                    <div class="hobby">Занятия в тренажёрном зале</div>
-                    <div class="hobby">Длительные прогулки на свежем воздухе</div>
-                    <div class="hobby">Гонки на машинах</div>
-                    <div class="hobby">Игра на гитаре</div>
-                    <div class="hobby">Учёба</div>
-                    <div class="hobby">Программирование</div>
-                </div>
+                <section class="about">
+                    <h2 class="about__title">О себе</h2>
+                    <p class="about__text">Студент Самарского университета, обучающийся в институте информатики и кибернетики на специальности ИБАС (Информационная Безопасность Автоматизированных Систем).</p>
+                    <p class="about__text">Увлекаюсь программированием и постоянно развиваюсь в этой области. Стремлюсь к получению глубоких знаний в сфере информационной безопасности и разработки защищенных систем. В свободное время занимаюсь самообразованием, изучаю новые технологии и практикуюсь в решении сложных задач. Обладаю аналитическим складом ума и ответственным подходом к выполнению поставленных задач.</p>
+                </section>
+
+                <section class="education">
+                    <h2 class="education__title">Образование</h2>
+                    <div class="info">
+                        <div class="info__item">
+                            <div class="info__label">Самарский университет</div>
+                            <div class="info__value">Институт информатики и кибернетики</div>
+                            <div class="info__value">Специальность: ИБАС (Информационная Безопасность Автоматизированных Систем)</div>
+                            <div class="info__value">Годы обучения: 2024 - настоящее время</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="hobbies">
+                    <h2 class="hobbies__title">Увлечения</h2>
+                    <div class="hobbies__list">
+                        <div class="hobbies__item">Занятия в тренажёрном зале</div>
+                        <div class="hobbies__item">Длительные прогулки на свежем воздухе</div>
+                        <div class="hobbies__item">Гонки на машинах</div>
+                        <div class="hobbies__item">Игра на гитаре</div>
+                        <div class="hobbies__item">Учёба</div>
+                        <div class="hobbies__item">Программирование</div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
