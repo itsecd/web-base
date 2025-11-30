@@ -1,0 +1,105 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  padding: 24px;
+  min-height: 100vh;
+  background-color: #cccccc;
+}
+
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.94);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Заголовок резюме */
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.header__avatar {
+  flex-shrink: 0;
+}
+
+.header__image {
+  width: 192px;
+  height: 144px;
+  border-radius: 14px;
+  object-fit: cover;
+  display: block;
+  border: 2px solid #eee;
+}
+
+.header__name {
+  margin: 0;
+  font-size: 1.75em;
+  color: #222;
+}
+
+/* Резюме */
+.resume__item {
+  margin-bottom: 16px;
+}
+
+.resume__about {
+  margin-top: 10px;
+}
+
+.resume__link {
+  color: #1872ad;
+  text-decoration: none;
+}
+
+.resume__link:hover {
+  text-decoration: underline;
+}
+
+/* Стиль для всех фото */
+.photo-item {
+  width: calc((100% - 42px) / 4);
+  max-width: 176px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease;
+  position: relative;
+}
+
+.photo-item:hover {
+  transform: scale(2.5);
+  z-index: 10;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+/* Блоки с фото */
+.nature-photos__title,.pets-photos__title {
+  margin-bottom: 16px;
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.nature-photos__list,.pets-photos__list {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.nature-photos__list {
+  margin-bottom: 24px;
+}
