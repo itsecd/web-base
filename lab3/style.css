@@ -17,7 +17,8 @@ body {
     padding: 20px;
 }
 
-header {
+/* Header Block */
+.header {
     background: linear-gradient(135deg, #2c3e50, #4a6491);
     color: white;
     padding: 40px 0;
@@ -27,7 +28,7 @@ header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.profile-img {
+.header__photo {
     width: 180px;
     height: 180px;
     border-radius: 50%;
@@ -37,22 +38,24 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
+.header__title {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-.subtitle {
+.header__subtitle {
     font-size: 1.2rem;
     opacity: 0.9;
 }
 
+/* Content Layout */
 .content {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 30px;
 }
 
+/* Sidebar Block */
 .sidebar {
     background-color: white;
     padding: 25px;
@@ -60,61 +63,38 @@ h1 {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-.main-content {
-    background-color: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-h2 {
+.sidebar__title {
     color: #2c3e50;
     margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 2px solid #eaeaea;
 }
 
-.info-item {
+/* Info Block */
+.info {
+    margin-bottom: 20px;
+}
+
+.info__item {
     margin-bottom: 15px;
 }
 
-.info-label {
+.info__label {
     font-weight: bold;
     color: #2c3e50;
+    margin-bottom: 5px;
 }
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
+.info__value {
+    color: #666;
 }
 
-.skill {
-    background-color: #eef2f7;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 0.9rem;
+/* Contacts Block */
+.contacts {
+    margin: 20px 0;
 }
 
-.hard-skill {
-    background-color: #e1f5fe;
-    border-left: 4px solid #0288d1;
-}
-
-.soft-skill {
-    background-color: #f3e5f5;
-    border-left: 4px solid #7b1fa2;
-}
-
-.contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.contact-link {
+.contacts__link {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -124,35 +104,109 @@ h2 {
     transition: background-color 0.3s;
 }
 
-.contact-link:hover {
+.contacts__link:hover {
     background-color: #f0f0f0;
 }
 
-.contact-link i {
+.contacts__icon {
     margin-right: 10px;
     font-size: 1.2rem;
 }
 
-.hobbies {
+.contacts__text {
+    font-weight: 500;
+}
+
+/* Skills Block */
+.skills {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 10px;
 }
 
-.hobby {
+.skills__item {
+    background-color: #eef2f7;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.skills__item_hard {
+    background-color: #e1f5fe;
+    border-left: 4px solid #0288d1;
+}
+
+.skills__item_soft {
+    background-color: #f3e5f5;
+    border-left: 4px solid #7b1fa2;
+}
+
+/* Main Content */
+.main-content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* About Block */
+.about__title {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eaeaea;
+}
+
+.about__text {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Education Block */
+.education {
+    margin: 30px 0;
+}
+
+.education__title {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eaeaea;
+}
+
+/* Hobbies Block */
+.hobbies {
+    margin: 30px 0;
+}
+
+.hobbies__title {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eaeaea;
+}
+
+.hobbies__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hobbies__item {
     background-color: #e8f5e9;
     padding: 8px 15px;
     border-radius: 20px;
     font-size: 0.9rem;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
     .content {
         grid-template-columns: 1fr;
     }
     
-    h1 {
+    .header__title {
         font-size: 2rem;
     }
 }
