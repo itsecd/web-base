@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная 4</title>
+    <link rel="stylesheet" href="styles_lab4.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1 class="calculator__title">Калькулятор</h1>
+
+        <div class="calculator__input-group">
+            <label for="number1" class="calculator__label">Первое число:</label>
+            <input type="number" id="number1" class="calculator__input" placeholder="Введите первое число">
+        </div>
+
+        <div class="calculator__input-group">
+            <label for="number2" class="calculator__label">Второе число:</label>
+            <input type="number" id="number2" class="calculator__input" placeholder="Введите второе число">
+        </div>
+
+        <div class="calculator__operation-group">
+            <label for="operation" class="calculator__label">Операция:</label>
+            <select id="operation" class="calculator__select">
+                <option value="add">Сложение (+)</option>
+                <option value="subtract">Вычитание (-)</option>
+                <option value="multiply">Умножение (*)</option>
+                <option value="divide">Деление (/)</option>
+            </select>
+        </div>
+
+        <button id="calculateBtn" class="calculator__button">Вычислить</button>
+
+        <div class="calculator__result-container">
+            <p class="calculator__result-label">Результат:</p>
+            <div id="result" class="calculator__result">-</div>
+        </div>
+    </div>
+
+    <script src="calc.js"></script>
+</body>
+</html>

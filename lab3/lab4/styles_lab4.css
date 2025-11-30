@@ -1,0 +1,123 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.calculator__title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.calculator__input-group,
+.calculator__operation-group {
+    margin-bottom: 20px;
+}
+
+.calculator__label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.calculator__input,
+.calculator__select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+    .calculator__input:focus,
+    .calculator__select:focus {
+        outline: none;
+        border-color: #4CAF50;
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+    }
+
+.calculator__select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.calculator__button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .calculator__button:hover {
+        background-color: #45a049;
+        transform: translateY(-2px);
+    }
+
+    .calculator__button:active {
+        transform: translateY(0);
+    }
+
+.calculator__result-container {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.calculator__result-label {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.calculator__result {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8f5e8;
+    border-radius: 8px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.calculator__result--error {
+    background-color: #ffebee;
+    color: #c62828;
+}
