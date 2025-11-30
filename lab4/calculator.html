@@ -15,21 +15,23 @@
 <body>
     <div class="main-wrapper">
         <div class="main-wrapper__top-wrapper">
-            <input class="top-wrapper__input" type="number">
+            <input class="top-wrapper__input" id="num1" type="number">
             <select class="top-wrapper__selection">
                 <option value="+">Сложить +</option>
                 <option value="-">Вычесть -</option>
                 <option value="*">Умножить *</option>
                 <option value="/">Делить /</option>
             </select>
-            <input class="top-wrapper__input" type="number">
+            <input class="top-wrapper__input" id="num2" type="number">
         </div>
 
         <div class="main-wrapper__bottom-wrapper">
             <button class="bottom-wrapper__calculate">Вычислить</button>
         </div>
 
-        <div class="main-wrapper__output">Результат появится здесь</div>
+        <div class="main-wrapper__output">
+            <span class="output__text">Результат появится здесь</span> 
+        </div>
     </div>
 </body>
 </html>

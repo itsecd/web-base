@@ -10,7 +10,6 @@ body {
     );
 }
 
-/* ================= GRID ================= */
 
 .grid {
     display: grid;
@@ -30,7 +29,6 @@ body {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-/* ================= FULL INFO ================= */
 
 .shadow-wrapper__full-info {
     background-color: #d9d9d0;
@@ -58,7 +56,6 @@ body {
     text-decoration: none;
 }
 
-/* ================= SHORT INFO ================= */
 
 .shadow-wrapper__short-info {
     display: grid;
@@ -98,7 +95,6 @@ body {
     font-weight: 200;
 }
 
-/* ================= HEADERS & TEXT ================= */
 
 .info-header {
     font-size: 1.6vw;
@@ -116,7 +112,6 @@ body {
     padding-left: 9%;
 }
 
-/* ================= CONTACTS ================= */
 
 .short-info__contacts {
     display: grid;
@@ -157,7 +152,6 @@ body {
     color: #f5f5f5;
 }
 
-/* ================= ICONS ================= */
 
 .link_vk::before {
     content: "";
