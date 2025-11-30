@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Резюме студента</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      background: #f5f5f5;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding-right: 100px;
+    }
+
+    /* Левая панель */
+    .sidebar {
+      width: 280px;
+      background: white;
+      padding: 30px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      display: block;
+      border: 3px solid #ffd700;
+    }
+
+    .name {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    .title {
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .info-item {
+      display: flex;
+      justify-content: space-between;
+      margin: 15px 0;
+      padding: 8px 10px;
+      background: #fafafa;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .info-label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .info-value {
+      color: #555;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 25px 0 10px;
+      color: #333;
+    }
+
+    .skills-list {
+      list-style: none;
+    }
+
+    .skills-list li {
+      display: flex;
+      align-items: center;
+      margin: 8px 0;
+    }
+
+    .skills-list li::before {
+      content: "•";
+      color: #ffd700;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+
+    .progress-bar {
+      height: 6px;
+      background: #e0e0e0;
+      border-radius: 3px;
+      margin-top: 5px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: #ffd700;
+      border-radius: 3px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background: #ffd700;
+      color: #333;
+      text-align: center;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffcc00;
+    }
+
+    /* Центральная часть */
+    .main-content {
+      flex: 1;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .avatar-large {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 2px solid #ddd;
+    }
+
+    .intro {
+      flex: 1;
+    }
+
+    .intro h1 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .intro h2 {
+      font-size: 24px;
+      color: #ffd700;
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      color: #666;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .hire-btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #ffd700;
+      color: #333;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .hire-btn:hover {
+      background: #ffcc00;
+    }
+
+    .services {
+      margin-top: 40px;
+    }
+
+    .services-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background: #fafafa;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .service-icon {
+      font-size: 40px;
+      color: #ffd700;
+      margin-bottom: 15px;
+    }
+
+    .service-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .service-desc {
+      font-size: 14px;
+      color: #666;
+    }
+
+
+    .right-sidebar {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      width: 60px;
+      background: white;
+      padding: 20px 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      z-index: 1000;
+    }
+    
+
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      background: #f0f0f0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .icon-btn:hover {
+      background: #ffd700;
+      color: #333;
+    }
+
+    .icon-btn.active {
+      background: #ffd700;
+      color: #333;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      .sidebar, .right-sidebar {
+        width: 100%;
+        max-width: 100%;
+      }
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .avatar-large {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .sidebar {
+        padding: 20px;
+      }
+      .main-content {
+        padding: 20px;
+      }
+      .info-item {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Левая панель -->
+    <aside class="sidebar">
+      <img src="https://i.pinimg.com/736x/a8/05/34/a805344956fc43ef7741f075b302a9bd.jpg" alt="Фото студента" class="profile-pic">
+      <div class="name">Шакин Даниил Вадимович</div>
+      <div class="title">Студент факультета информационной безопасности автоматизированных систем</div>
+
+      <div class="info-item">
+        <span class="info-label">Возраст:</span>
+        <span class="info-value">18 лет</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Дата рождения:</span>
+        <span class="info-value">29 декабря 2006</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Город:</span>
+        <span class="info-value">Самара </span>
+      </div>
+
+      <div class="section-title">Языки</div>
+      <div class="info-item">
+        <span class="info-label">Русский</span>
+        <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Английский</span>
+        <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
+      </div>
+      <div class="info-item">
+        <span class="info-label">C++</span>
+        <div class="progress-bar"><div class="progress-fill" style="width: 70%"></div></div>
+      </div>
+
+      <div class="section-title">Hard Skills</div>
+      <ul class="skills-list">
+        <li>HTML / CSS</li>
+        <li>JavaScript</li>
+        <li>Python (Django)</li>
+        <li>Git / GitHub</li>
+        <li>SQL</li>
+      </ul>
+
+      <div class="section-title">Soft Skills</div>
+      <ul class="skills-list">
+        <li>Коммуникабельность</li>
+        <li>Работа в команде</li>
+        <li>Тайм-менеджмент</li>
+        <li>Критическое мышление</li>
+      </ul>
+
+      <div class="section-title">Увлечения</div>
+      <ul class="skills-list">
+        <li>Программирование</li>
+        <li>Игры</li>
+        <li>Зальчик</li>
+        <li>Дзюдо</li>
+      </ul>
+
+      <a href="https://github.com/kapystapro" target="_blank" class="btn">GitHub →</a>
+    </aside>
+
+    <main class="main-content">
+      <div class="header">
+        <img src="https://i.pinimg.com/736x/a8/05/34/a805344956fc43ef7741f075b302a9bd.jpg" alt="Большое фото" class="avatar-large">
+        <div class="intro">
+          <h1>Шакин Даниил Вадимович</h1>
+          <h2>Студент IT-факультета</h2>
+          <p>Целеустремлённый студент Аэрокоса ИБАСа, увлечённый разработкой и технологиями. Умею быстро учиться новому, работать в команде и находить нестандартные решения. </p>
+          <a href="#contact" class="hire-btn">Связаться со мной: danil.shakin2016@yandex.ru</a>
+        </div>
+      </div>
+
+      <div class="services">
+        <h2 class="services-title">Любимые увлечения</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">💻</div>
+            <div class="service-title">Web Development</div>
+            <div class="service-desc">Создание сайтов, JavaScript, React</div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🏋️‍♂️</div>
+            <div class="service-title">Спортзальчик</div>
+            <div class="service-desc">жим 150</div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🤼</div>
+            <div class="service-title">Дзюдо</div>
+            <div class="service-desc"></div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🎮</div>
+            <div class="service-title">Компьютерные игры</div>
+            <div class="service-desc">9 lvl faceit</div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🧠</div>
+            <div class="service-title">Problem Solving</div>
+            <div class="service-desc">Аналитическое мышление, алгоритмы, логика</div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">💬</div>
+            <div class="service-title">Communication</div>
+            <div class="service-desc">Презентации, командная работа, переговоры</div>
+          </div>
+        </div>
+      </div>
+    <!-- Правая панель -->
+    <aside class="right-sidebar">
+      <div class="icon-btn active">📊</div>
+      <div class="icon-btn">📁</div>
+      <div class="icon-btn">📝</div>
+      <div class="icon-btn">📞</div>
+      <div class="icon-btn">🌐</div>
+      <div class="icon-btn">⚙️</div>
+    </aside>
+
+  </div>
+</body>
+</html>
