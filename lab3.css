@@ -1,0 +1,68 @@
+body {
+    background: linear-gradient(60deg, #80d8ea, #186ef8);
+}
+
+.resume {
+    display: flex;
+}
+
+.resume__left {
+    flex: 2;
+    flex-direction: column; 
+    display: flex;
+    align-items: center;      
+    justify-content: center; 
+    padding: 30px;
+}
+
+.resume__right {
+    flex: 2;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    gap: 15px;
+}
+
+
+.left__foto{
+    width: 50%;
+    height: auto;
+    border-radius: 25%;
+}
+
+.right__block{
+    background-color: #81b7e4f2;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.block__foto{
+    width: 50%;
+    height: auto;
+    border-radius: 10%;
+}
+
+.left__me{
+    font-size: 35px;
+    margin: 20;
+    text-align: center;
+}
+
+.left__date{
+    font-size: 20px;
+    margin: 20;
+    text-align: center;
+}
+
+.left__github{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 1s;
+}
+
+.left__github:hover{
+    color: #3be821;
+}
+
