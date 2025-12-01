@@ -1,0 +1,699 @@
+/* Базовые сбросы и настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Цветовая палитра, специально не кислотные цвета чтобы глазкам бобо не было*/
+    --color-primary-light: #F5F0FF;
+    --color-primary-soft: #E6E0FF;
+    --color-primary-medium: #8A6CEF;
+    --color-primary-dark: #6B4BC3;
+    --color-primary-darkest: #4A2F9E;
+    
+    --color-accent-purple: #9D7AFF;
+    --color-accent-lavender: #C5B3FF;
+    --color-accent-pink: #FF9FE5;
+    
+    --color-text-dark: #333344;
+    --color-text-medium: #666677;
+    --color-text-light: #888899;
+    
+    --color-success: #5CDB95;
+    --color-warning: #FF9A3D;
+    --color-error: #FF6B6B;
+    
+    /* Тени */
+    --shadow-soft: 0 8px 32px rgba(106, 76, 195, 0.1);
+    --shadow-medium: 0 12px 40px rgba(106, 76, 195, 0.15);
+    --shadow-strong: 0 20px 60px rgba(106, 76, 195, 0.2);
+    
+    /* Скругления */
+    --border-radius: 16px;
+    --border-radius-small: 10px;
+    
+    /* Анимации */
+    --transition: all 0.3s ease;
+}
+
+/* Страница */
+.page {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-primary-light);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.page__container {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Фон */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background__shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+    filter: blur(40px);
+}
+
+.background__shape--1 {
+    width: 400px;
+    height: 400px;
+    background: var(--color-accent-purple);
+    top: -150px;
+    right: -100px;
+}
+
+.background__shape--2 {
+    width: 300px;
+    height: 300px;
+    background: var(--color-accent-pink);
+    bottom: -100px;
+    left: -50px;
+}
+
+.background__shape--3 {
+    width: 250px;
+    height: 250px;
+    background: var(--color-primary-medium);
+    top: 50%;
+    left: 10%;
+}
+
+.background__shape--4 {
+    width: 200px;
+    height: 200px;
+    background: var(--color-accent-lavender);
+    bottom: 30%;
+    right: 15%;
+}
+
+/* Эффект матового стекла */
+.calculator__card--glass,
+.info-card--glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: var(--shadow-soft);
+}
+
+/* Хедер */
+.header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.header__content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.header__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--color-primary-darkest);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header__icon {
+    color: var(--color-primary-medium);
+    font-size: 2.5rem;
+}
+
+.header__subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-medium);
+    font-weight: 400;
+}
+
+/* Основной контейнер калькулятора */
+.calculator {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 1200px) {
+    .calculator {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* Карточка калькулятора */
+.calculator__card {
+    border-radius: var(--border-radius);
+    padding: 30px;
+    transition: var(--transition);
+}
+
+.calculator__card:hover {
+    box-shadow: var(--shadow-medium);
+}
+
+.calculator__header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(138, 108, 239, 0.2);
+}
+
+.calculator__icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--color-primary-medium), var(--color-accent-purple));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+    color: white;
+    box-shadow: 0 10px 20px rgba(138, 108, 239, 0.3);
+}
+
+.calculator__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    color: var(--color-primary-darkest);
+    margin-bottom: 10px;
+}
+
+.calculator__subtitle {
+    color: var(--color-text-medium);
+    font-size: 1rem;
+}
+
+/* Секция ввода */
+.input-section__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .input-section__row {
+        grid-template-columns: 1fr auto 1fr;
+    }
+}
+
+.input,
+.operation {
+    display: flex;
+    flex-direction: column;
+}
+
+.input__label,
+.operation__label {
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--color-primary-darkest);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.input__icon,
+.operation__icon {
+    color: var(--color-primary-medium);
+    font-size: 0.9rem;
+}
+
+.input__wrapper {
+    position: relative;
+}
+
+.input__field {
+    width: 100%;
+    padding: 18px 20px;
+    padding-right: 50px;
+    border: 2px solid var(--color-primary-soft);
+    border-radius: var(--border-radius-small);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-text-dark);
+    background-color: white;
+    transition: var(--transition);
+}
+
+.input__field:focus {
+    outline: none;
+    border-color: var(--color-primary-medium);
+    box-shadow: 0 0 0 3px rgba(138, 108, 239, 0.2);
+}
+
+.input__icon-right {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-primary-medium);
+    font-size: 1rem;
+}
+
+/* Селект операций */
+.select {
+    position: relative;
+}
+
+.select__element {
+    width: 100%;
+    padding: 18px 20px;
+    border: 2px solid var(--color-primary-soft);
+    border-radius: var(--border-radius-small);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-text-dark);
+    background-color: white;
+    appearance: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.select__element:focus {
+    outline: none;
+    border-color: var(--color-primary-medium);
+    box-shadow: 0 0 0 3px rgba(138, 108, 239, 0.2);
+}
+
+.select__arrow {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-primary-medium);
+    pointer-events: none;
+}
+
+/* Кнопка вычисления */
+.calculate__button {
+    background: linear-gradient(135deg, var(--color-primary-medium), var(--color-accent-purple));
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    box-shadow: 0 10px 20px rgba(138, 108, 239, 0.3);
+    margin-bottom: 15px;
+}
+
+.calculate__button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(138, 108, 239, 0.4);
+}
+
+.calculate__button:active {
+    transform: translateY(0);
+}
+
+.calculate__icon {
+    font-size: 1.3rem;
+}
+
+.calculate__hint {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Секция результата */
+.result__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.result__icon {
+    color: var(--color-primary-medium);
+    font-size: 1.5rem;
+}
+
+.result__title {
+    font-size: 1.4rem;
+    color: var(--color-primary-darkest);
+}
+
+.result__display {
+    position: relative;
+    min-height: 180px;
+}
+
+.result__placeholder,
+.result__container {
+    width: 100%;
+    height: 180px;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result__placeholder {
+    background: linear-gradient(135deg, var(--color-primary-soft), var(--color-primary-light));
+    border: 2px dashed var(--color-accent-lavender);
+}
+
+.result-placeholder__content {
+    text-align: center;
+    max-width: 300px;
+}
+
+.result-placeholder__icon {
+    font-size: 2.5rem;
+    color: var(--color-primary-medium);
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+
+.result-placeholder__text {
+    color: var(--color-text-medium);
+    font-size: 1.1rem;
+}
+
+.result__container {
+    background: white;
+    border: 2px solid var(--color-primary-soft);
+    flex-direction: column;
+    padding: 30px;
+}
+
+.result__container--hidden {
+    display: none;
+}
+
+.result__operation {
+    font-size: 1.3rem;
+    color: var(--color-text-medium);
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.result__value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-primary-darkest);
+    text-align: center;
+}
+
+.result__status {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 10px;
+    padding: 6px 15px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* Секция обработки ошибок */
+.errors__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.errors__icon {
+    color: var(--color-primary-medium);
+    font-size: 1.5rem;
+}
+
+.errors__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+@media (min-width: 768px) {
+    .errors__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    background: white;
+    border-radius: var(--border-radius-small);
+    border: 1px solid var(--color-primary-soft);
+    transition: var(--transition);
+}
+
+.error:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(138, 108, 239, 0.1);
+}
+
+.error__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.error__icon--success {
+    background-color: rgba(92, 219, 149, 0.2);
+    color: var(--color-success);
+}
+
+/* Футер калькулятора */
+.calculator__footer {
+    padding-top: 30px;
+    border-top: 1px solid rgba(138, 108, 239, 0.2);
+}
+
+.examples__title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--color-primary-darkest);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.examples__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+@media (min-width: 768px) {
+    .examples__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.examples__button {
+    padding: 15px 10px;
+    background: white;
+    border: 1px solid var(--color-primary-soft);
+    border-radius: var(--border-radius-small);
+    color: var(--color-text-dark);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.examples__button:hover {
+    background: var(--color-primary-light);
+    border-color: var(--color-primary-medium);
+    transform: translateY(-2px);
+}
+
+/* Информационная карточка */
+.info-card {
+    border-radius: var(--border-radius);
+    padding: 30px;
+    align-self: start;
+}
+
+.info-card__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: var(--color-primary-darkest);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.info-card__icon {
+    color: var(--color-primary-medium);
+    font-size: 1.5rem;
+}
+
+.info-card__list {
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.info-card__item {
+    margin-bottom: 12px;
+    color: var(--color-text-medium);
+}
+
+.info-card__tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(138, 108, 239, 0.1), rgba(197, 179, 255, 0.1));
+    border-radius: var(--border-radius-small);
+    border-left: 4px solid var(--color-primary-medium);
+}
+
+.tip__icon {
+    color: var(--color-primary-medium);
+    font-size: 1.2rem;
+    margin-top: 2px;
+}
+
+.tip__content {
+    flex: 1;
+    color: var(--color-text-dark);
+}
+
+/* Подвал */
+.footer {
+    margin-top: auto;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid rgba(138, 108, 239, 0.2);
+}
+
+.footer__content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary-darkest);
+    margin-bottom: 15px;
+}
+
+.footer__text {
+    color: var(--color-text-medium);
+    margin-bottom: 20px;
+}
+
+.footer__icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer__icon-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary-soft));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary-medium);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.footer__icon-circle:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, var(--color-primary-medium), var(--color-accent-purple));
+    color: white;
+}
+
+/* Модификаторы состояния */
+.result__container--error .result__number {
+    color: var(--color-error);
+}
+
+.result__container--success .result__number {
+    color: var(--color-primary-darkest);
+}
+
+.result__status--error {
+    background-color: rgba(255, 107, 107, 0.1);
+    color: var(--color-error);
+}
+
+.result__status--success {
+    background-color: rgba(92, 219, 149, 0.1);
+    color: var(--color-success);
+}
+
+/* Адаптивность */
+@media (max-width: 767px) {
+    .header__title {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .calculator__card,
+    .info-card {
+        padding: 20px;
+    }
+    
+    .result__value {
+        font-size: 2.2rem;
+    }
+    
+    .examples__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Анимации */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
