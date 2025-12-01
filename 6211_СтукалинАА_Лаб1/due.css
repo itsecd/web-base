@@ -1,0 +1,154 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.task {
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.task-1 .text-block {
+    background-color: #F4BC92; /* Цвет 20 варианта (фон) */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.task-1 .text-block p {
+    color: #ECE870; /* Цвет 20 варианта (текст) */
+    text-align: justify;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.task-2 .images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.image-stack {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.image-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+}
+
+.image-top {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 150px;
+    z-index: 2; 
+    border: 3px solid white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+
+.traffic-light {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 120px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.light {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #666;
+}
+
+.red {
+    background-color: #ff4444;
+}
+
+.yellow {
+    background-color: #ffcc00;
+}
+
+.green {
+    background-color: #44ff44;
+}
+
+.maze {
+    display: inline-block;
+    border: 2px solid #333;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    box-sizing: border-box;
+}
+
+.cell {
+    border: 1px solid transparent;
+}
+
+.cell.top {
+    border-top: 2px solid #333;
+}
+
+.cell.bottom {
+    border-bottom: 2px solid #333;
+}
+
+.cell.left {
+    border-left: 2px solid #333;
+}
+
+.cell.right {
+    border-right: 2px solid #333;
+}
+
+.cell.top.left {
+    border-top: 2px solid #333;
+    border-left: 2px solid #333;
+}
+
+.cell.top.right {
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+}
+
+.cell.bottom.left {
+    border-bottom: 2px solid #333;
+    border-left: 2px solid #333;
+}
+
+.cell.bottom.right {
+    border-bottom: 2px solid #333;
+    border-right: 2px solid #333;
+}
