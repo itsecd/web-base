@@ -1,4 +1,4 @@
-body {
+.page {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
   background: linear-gradient(135deg, #dfe4ff, #f7f8ff);
@@ -12,7 +12,7 @@ body {
   gap: 25px;
 }
 
-.left-panel {
+.resume__left-panel {
   width: 35%;
   background: linear-gradient(180deg, #7382ff, #5866ff);
   color: white;
@@ -21,11 +21,11 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-.avatar-block {
+.resume__avatar-block {
   text-align: center;
 }
 
-.avatar {
+.resume__avatar {
   width: 160px;
   height: 160px;
   border-radius: 50%;
@@ -35,13 +35,13 @@ body {
   margin-bottom: 15px;
 }
 
-.left-panel h1 {
+.resume__name {
   font-size: 24px;
   margin: 10px 0 5px;
   font-weight: 700;
 }
 
-.left-panel h2 {
+.resume__position {
   font-size: 16px;
   opacity: 0.9;
   margin-bottom: 20px;
@@ -55,7 +55,7 @@ body {
   backdrop-filter: blur(6px);
 }
 
-.section h3 {
+.section__title {
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: 600;
@@ -63,17 +63,34 @@ body {
   padding-bottom: 6px;
 }
 
-.section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.section li {
+.section__text {
   margin: 7px 0;
 }
 
-.right-panel {
+.section__link {
+  color: white;
+  text-decoration: none;
+}
+
+.section__link:hover {
+  text-decoration: underline;
+}
+
+.section_type_contacts .section__title {
+  color: white;
+}
+
+.resume__right-panel .section {
+  background: #f4f5ff;
+  color: #333;
+}
+
+.resume__right-panel .section__title {
+  color: #5866ff;
+  border-bottom-color: #e0e4ff;
+}
+
+.resume__right-panel {
   width: 65%;
   background: white;
   padding: 30px;
@@ -82,10 +99,40 @@ body {
   backdrop-filter: blur(5px);
 }
 
-.right-panel h2 {
+.about__title {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 15px;
+}
+
+.about__text {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list__item {
+  margin: 7px 0;
+  padding: 5px 0;
+}
+
+.skills-list_type_soft .skills-list__item,
+.skills-list_type_hobbies .skills-list__item {
+  position: relative;
+  padding-left: 20px;
+}
+
+.skills-list_type_soft .skills-list__item::before,
+.skills-list_type_hobbies .skills-list__item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #5866ff;
 }
 
 .skill-grid {

@@ -6,63 +6,37 @@
     <title>Резюме — Лабораторная 3</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="page">
     <div class="resume">
-      <aside class="left-panel">
-        <div class="avatar-block">
-          <img src="CooLCAt.jpg" alt="" class="avatar" />
-          <h1>Мажитов Латып Ерланович</h1>
-          <h2>Студент ИИК / ИБАС</h2>
+      <aside class="resume__left-panel">
+        <div class="resume__avatar-block">
+          <img src="CooLCAt.jpg" alt="" class="resume__avatar" />
+          <h1 class="resume__name">Мажитов Латып Ерланович</h1>
+          <h2 class="resume__position">Студент ИИК / ИБАС</h2>
         </div>
 
-        <div class="section">
-          <h3>Контакты</h3>
-          <p>📅 <strong>Дата рождения:</strong> 21.08.2006</p>
-          <p>🌍 Самарский университет</p>
-          <p>
+        <div class="section section_type_contacts">
+          <h3 class="section__title">Контакты</h3>
+          <p class="section__text">
+            📅 <strong>Дата рождения:</strong> 21.08.2006
+          </p>
+          <p class="section__text">🌍 Самарский университет</p>
+          <p class="section__text">
             🔗
-            <a href="https://github.com/latyp-tech" target="_blank"
+            <a
+              href="https://github.com/latyp-tech"
+              target="_blank"
+              class="section__link"
               >GitHub профиль</a
             >
           </p>
         </div>
-
-        <div class="section">
-          <h3>Hard Skills</h3>
-          <ul>
-            <li>C++</li>
-            <li>Python</li>
-            <li>Linux / Git</li>
-            <li>HTML & CSS</li>
-          </ul>
-        </div>
-
-        <div class="section">
-          <h3>Soft Skills</h3>
-          <ul>
-            <li>Хорошая память</li>
-            <li>Обучаемость</li>
-            <li>Стрессоустойчивость</li>
-            <li>Коммуникабельность</li>
-            <li>Критическое мышление</li>
-          </ul>
-        </div>
-
-        <div class="section">
-          <h3>Увлечения</h3>
-          <ul>
-            <li>Программирование</li>
-            <li>Гейминг</li>
-            <li>Сон</li>
-            <li>Игра на гитаре</li>
-          </ul>
-        </div>
       </aside>
 
-      <main class="right-panel">
+      <main class="resume__right-panel">
         <section class="about">
-          <h2>О себе</h2>
-          <p>
+          <h2 class="about__title">О себе</h2>
+          <p class="about__text">
             Студент Самарского университета, который ищет не просто задачи, а
             задачи со звёздочкой. Именно в них скрыт настоящий драйв и
             возможность для роста. Верю, что лучшая версия себя рождается в
@@ -70,6 +44,37 @@
             общем, не ищу лёгких путей — ищу интересные.
           </p>
         </section>
+
+        <div class="section section_type_skills">
+          <h3 class="section__title">Hard Skills</h3>
+          <ul class="skills-list">
+            <li class="skills-list__item">C++</li>
+            <li class="skills-list__item">Python</li>
+            <li class="skills-list__item">Linux / Git</li>
+            <li class="skills-list__item">HTML & CSS</li>
+          </ul>
+        </div>
+
+        <div class="section section_type_soft-skills">
+          <h3 class="section__title">Soft Skills</h3>
+          <ul class="skills-list skills-list_type_soft">
+            <li class="skills-list__item">Хорошая память</li>
+            <li class="skills-list__item">Обучаемость</li>
+            <li class="skills-list__item">Стрессоустойчивость</li>
+            <li class="skills-list__item">Коммуникабельность</li>
+            <li class="skills-list__item">Критическое мышление</li>
+          </ul>
+        </div>
+
+        <div class="section section_type_hobbies">
+          <h3 class="section__title">Увлечения</h3>
+          <ul class="skills-list skills-list_type_hobbies">
+            <li class="skills-list__item">Программирование</li>
+            <li class="skills-list__item">Гейминг</li>
+            <li class="skills-list__item">Сон</li>
+            <li class="skills-list__item">Игра на гитаре</li>
+          </ul>
+        </div>
       </main>
     </div>
   </body>
