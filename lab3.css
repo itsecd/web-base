@@ -255,3 +255,58 @@
 .skills__column--soft .skills__item::before {
     color: #e74c3c;
 }
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+        border-width: 2px;
+    }
+    
+    .main__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .skills {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .header {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .header__photo {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 120px;
+        height: 120px;
+    }
+    
+    .header__image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .section__item {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    .qr__image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .contacts__link {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
