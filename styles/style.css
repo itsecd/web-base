@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+}
+
+body {
+    background-color: black;
+    color: #ffffff;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+.resume {
+    max-width: 800px;
+    margin: 0 auto;
+    background: black;
+    padding: 50px;
+   
+}
+
+.resume__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.resume__info {
+    flex: 1;
+}
+
+.resume__name {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.resume__contacts {
+    font-size: 0.875rem;
+    color: white;
+}
+
+.resume__contact-item {
+    margin-bottom: 5px;
+}
+
+.resume__photo {
+    width: 120px;
+    height: 120px;
+    max-width: 25vw;
+    max-height: 25vw;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.resume__section {
+    margin-bottom: 30px;
+}
+
+.resume__section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.resume__item {
+    margin-bottom: 20px;
+}
+
+.resume__item-title {
+    font-weight: 600;
+    color: white;
+}
+
+.resume__item-description {
+    color: white;
+    font-size: 0.9375rem;
+}
+
+.resume__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.resume__skill {
+    color: white;
+    font-size: 0.875rem;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 15px;
+    }
+    
+    .resume {
+        padding: 25px;
+    }
+    
+    .resume__header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .resume__photo {
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+   
+    
+}
