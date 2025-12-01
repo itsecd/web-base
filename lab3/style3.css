@@ -64,7 +64,7 @@ body {
     gap: 8px;
     margin-bottom: 16px;
 }
-.profile__hobby {
+.hobbies__hobby {
     background: #eef;
     padding: 6px 12px;
     border-radius: 20px;
@@ -86,7 +86,7 @@ body {
 	padding-left: 0;
 }
 
-.profile__skill-item {
+.skill-list__skill-item {
 	background: #f5f5f5;
 	padding: 6px 10px;
 	border-radius: 6px;
@@ -116,4 +116,5 @@ body {
 	.profile__hobby {
 				padding: 8px 16px;
 	}
+
 }
