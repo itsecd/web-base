@@ -51,6 +51,9 @@
 }
 
 /* Резюме */
+.nature-photos {
+  margin-top: 20px;
+}
 .resume__item {
   margin-bottom: 16px;
 }
