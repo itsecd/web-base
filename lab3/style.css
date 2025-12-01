@@ -27,7 +27,7 @@ body {
     text-align: center;
 }
 
-.resume__photo {
+.header__photo {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -36,12 +36,12 @@ body {
     object-fit: cover;
 }
 
-.resume__name {
+.header__name {
     font-size: 28px;
     margin-bottom: 5px;
 }
 
-.resume__title {
+.header__sub-title {
     font-size: 18px;
     opacity: 0.8;
     margin-bottom: 10px;
@@ -64,11 +64,11 @@ body {
     padding: 25px;
 }
 
-.left_section {
+.left__left-section {
     margin-bottom: 30px;
 }
 
-.left_section__title {
+.left-section__title {
     font-size: 20px;
     margin-bottom: 15px;
     color: white;
@@ -76,33 +76,33 @@ body {
     padding-bottom: 5px;
 }
 
-.left_section__info {
+.left-section__info {
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.left_section__info strong {
+.left-section__info strong {
     min-width: 120px;
     display: inline-block;
     margin-bottom: 5px;
 }
 
-.left_section__link {
+.left-section__link {
     color: #3498db;
     text-decoration: none;
     font-weight: bold;
 }
 
-.left_section__link:hover {
+.left-section__link:hover {
     text-decoration: underline;
 }
 
-.right_section {
+.right__right-section {
     margin-bottom: 30px;
 }
 
-.right_section__title {
+.right-section__title {
     font-size: 20px;
     margin-bottom: 15px;
     color: #2c3e50;
@@ -110,22 +110,22 @@ body {
     padding-bottom: 5px;
 }
 
-.right_section__info {
+.right-section__info {
     margin-bottom: 10px;
 }
 
-.right_section__list {
+.right-section__list {
     list-style: none;
     padding-left: 0;
 }
 
-.right_section__list li {
+.right-section__list li {
     margin-bottom: 8px;
     padding-left: 20px;
     position: relative;
 }
 
-.right_section__list li:before {
+.right-section__list li:before {
     content: "•";
     color: #3498db;
     font-weight: bold;
