@@ -16,7 +16,7 @@ body{
     object-fit: cover;
     border: 5px solid skyblue;
     box-shadow: 0 4px 12px black;
-    transition: all 0.3s ease
+    transition: all 0.3s ease;
 }
 
 .profile__picture-image:hover{
@@ -29,7 +29,7 @@ body{
     margin-bottom: 10px;
 }
 
-.profile__title{
+.info__title{
     display: inline-block;
     font-size: 25px;
     color: #4B0082;
@@ -38,35 +38,37 @@ body{
     transition: all 0.3s ease, box-shadow 0.2s ease;
 }
 
-.profile__title:hover{
+.info__title:hover{
     transform: scale(1.1);
     box-shadow: 0 0 0 4px rgb(1, 24, 34), 0 0 20px rgb(77, 1, 87);
 }
 
-.profile__text{
+.info__text{
+    font-size: 22px;
     font-weight: bolder;
     color: #1A1A1A;
 }
 
 .profile__section{
+    margin-bottom: 10px;
     margin-top: 35px;
     padding-top: 25px;
     border-top: 2px solid #eeeeee;
 }
 
-.profile__section-title{
-    text-align: left;
+.section__title{
+    text-align: center;
     color: #4B0082;
 }
 
-.profile__list {
+.section__list {
     list-style: none;
     padding: 0;
     max-width: 500px;
     margin: 0 auto 12px;
 }
 
-.profile__list-item {
+.list__list-item {
     background: #ecd4e5;
     padding: 10px 16px;
     margin-bottom: 10px;
@@ -75,14 +77,15 @@ body{
     font-size: 18px;
 }
 
-.profile__skill-type {
+.section__skill-type {
     text-align: center;
     margin: 20px 0 12px;
     color: #2c3e50;
     font-size: 20px;
 }
 
-.profile__text-self {
+.section__text-self {
+    text-align: center;
     max-width: 1000px;
     background: #ecd4e5;
     padding: 10px 16px;
@@ -91,23 +94,33 @@ body{
     border-right: 4px solid #af49df;
     border-radius: 6px 6px 6px 6px;
     font-size: 18px;
+    margin: 0 auto 10px;
 }
 
-.profile__link {
-  display: inline-block;
-  padding: 10px 24px;
-  background: #af49df;              
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(175, 73, 223, 0.4);
-  transition: all 0.3s ease;
+.github {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    text-align: left;
 }
 
-.profile__link:hover {
-  background: #8a2be2;            
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(175, 73, 223);
+.github__title {
+    color: #4B0082;
+    margin-bottom: 12px;
+}
+
+.github__link {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+.github__link::after{
+    background-position: center;
+    position: relative;
+    width: 50px;
+    content: url("https://images.icon-icons.com/2368/PNG/96/github_logo_icon_143772.png");
 }
