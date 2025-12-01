@@ -94,6 +94,10 @@
   line-height: 1.4;
 }
 
+.pets-photos__title {
+  font-weight: normal;
+}
+
 .nature-photos__list,.pets-photos__list {
   display: flex;
   gap: 14px;
