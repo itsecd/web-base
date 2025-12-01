@@ -27,11 +27,11 @@ body {
 }
 
 .left__cap .selection__text{
-    font-size: 40px;
+    font-size: 18px;
 }
 
 .right__selection .selection__text{
-    font-size: 30px;
+    font-size: 18px;
 }
 
 .resume__right {
@@ -68,7 +68,7 @@ body {
 }
 
 .selection__text li{
-    font-size: 30px;
+    font-size: 18px;
     margin: 0;
     color: #ffffff;
 }
@@ -105,7 +105,7 @@ body {
 }
 
 .selection__text .selection__link {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .selection__link:hover {
@@ -115,4 +115,11 @@ body {
 .selection__link::before {
     content: "🔗";
 }
+
+.left__cap .selection__text {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
 
