@@ -33,7 +33,7 @@ calculateBtn.addEventListener("click", () => {
       result = num1 / num2;
       break;
     default:
-      result = "Ошибка";
+      result = "Ошибка!";
   }
 
   resultDiv.textContent = "Результат: " + result;
