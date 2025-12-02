@@ -36,15 +36,17 @@ body {
     margin-bottom: 20px;
 }
 
-.calculator__label {
+.calculator__input-group__label,
+.calculator__operation-group__label,
+.calculator__result-container__label {
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
     color: #555;
 }
 
-.calculator__input,
-.calculator__select {
+.calculator__input-group__input,
+.calculator__operation-group__select {
     width: 100%;
     padding: 12px;
     border: 2px solid #ddd;
@@ -53,14 +55,14 @@ body {
     transition: border-color 0.3s ease;
 }
 
-    .calculator__input:focus,
-    .calculator__select:focus {
-        outline: none;
-        border-color: #4CAF50;
-        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
-    }
+.calculator__input-group__input:focus,
+.calculator__operation-group__select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
 
-.calculator__select {
+.calculator__operation-group__select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -79,14 +81,14 @@ body {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-    .calculator__button:hover {
-        background-color: #45a049;
-        transform: translateY(-2px);
-    }
+.calculator__button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
 
-    .calculator__button:active {
-        transform: translateY(0);
-    }
+.calculator__button:active {
+    transform: translateY(0);
+}
 
 .calculator__result-container {
     margin-top: 25px;
@@ -96,14 +98,14 @@ body {
     text-align: center;
 }
 
-.calculator__result-label {
+.calculator__result-container__label {
+    margin-bottom: 10px;
     font-size: 18px;
     color: #666;
-    margin-bottom: 10px;
     font-weight: 500;
 }
 
-.calculator__result {
+.calculator__result-container__result {
     font-size: 2.5rem;
     font-weight: 700;
     color: #333;
@@ -117,7 +119,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.calculator__result--error {
+.calculator__result-container__result--error {
     background-color: #ffebee;
     color: #c62828;
 }

@@ -11,18 +11,13 @@
         <h1 class="calculator__title">Калькулятор</h1>
 
         <div class="calculator__input-group">
-            <label for="number1" class="calculator__label">Первое число:</label>
-            <input type="number" id="number1" class="calculator__input" placeholder="Введите первое число">
-        </div>
-
-        <div class="calculator__input-group">
-            <label for="number2" class="calculator__label">Второе число:</label>
-            <input type="number" id="number2" class="calculator__input" placeholder="Введите второе число">
+            <label for="number1" class="calculator__input-group__label">Первое число:</label>
+            <input type="number" id="number1" class="calculator__input-group__input" placeholder="Введите первое число">
         </div>
 
         <div class="calculator__operation-group">
-            <label for="operation" class="calculator__label">Операция:</label>
-            <select id="operation" class="calculator__select">
+            <label for="operation" class="calculator__operation-group__label">Операция:</label>
+            <select id="operation" class="calculator__operation-group__select">
                 <option value="add">Сложение (+)</option>
                 <option value="subtract">Вычитание (-)</option>
                 <option value="multiply">Умножение (*)</option>
@@ -30,11 +25,16 @@
             </select>
         </div>
 
+        <div class="calculator__input-group">
+            <label for="number2" class="calculator__input-group__label">Второе число:</label>
+            <input type="number" id="number2" class="calculator__input-group__input" placeholder="Введите второе число">
+        </div>
+
         <button id="calculateBtn" class="calculator__button">Вычислить</button>
 
         <div class="calculator__result-container">
-            <p class="calculator__result-label">Результат:</p>
-            <div id="result" class="calculator__result">-</div>
+            <p class="calculator__result-container__label">Результат:</p>
+            <div id="result" class="calculator__result-container__result">-</div>
         </div>
     </div>
 

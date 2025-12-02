@@ -5,6 +5,11 @@
     const calculateBtn = document.getElementById('calculateBtn');
     const resultDisplay = document.getElementById('result');
 
+    if (!number1Input || !number2Input || !operationSelect || !calculateBtn || !resultDisplay) {
+        console.error('Ошибка: один или несколько необходимых элементов не найдены в DOM.');
+        return;
+    }
+
     function calculate() {
         try {
             const num1 = parseFloat(number1Input.value);
