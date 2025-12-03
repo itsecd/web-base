@@ -1,39 +1,82 @@
-﻿
+﻿/* lab3style.css */
 body {
     margin: 0;
-    background-color: #f5f5f5;
+    background-color: #88aacf;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.profile {
     display: flex;
-    width: 100vw;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
+    padding: 20px;
 }
 
+.resume-card {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #1a2a3a;
+    color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
 
-.profile__sidebar {
+.left-column {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #333;
+    border-right: 2px solid #007bff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-column {
+    flex: 0 0 350px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    width: 300px;
-    background-color: #1a2a3a;
-    padding: 20px;
-    flex-shrink: 0;
-    color: white;
+    gap: 15px;
 }
 
-.sidebar__photo-wrapper {
+.section-title {
+    color: #007bff;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #007bff;
+}
+
+.subsection-title {
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.skill-item,
+.hobby-item {
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.photo-wrapper {
     width: 200px;
     height: 200px;
     overflow: hidden;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border: 4px solid #007bff;
 }
 
-.sidebar__photo {
+.photo {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -41,64 +84,33 @@ body {
     display: block;
 }
 
-.sidebar__name {
+.name {
     font-size: 18px;
     text-align: center;
-    margin: 0 0 20px 0;
+    margin: 0 0 15px 0;
     color: #ffffff;
     font-weight: 600;
 }
 
-.sidebar__github {
+.github-link {
     width: 60px;
     height: 60px;
     display: inline-block;
-    margin-left: -20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-.sidebar__github-icon {
+.github-icon {
     width: 100%;
     height: 100%;
     object-fit: contain;
     display: block;
-    filter: invert(1); 
+    filter: invert(1);
 }
 
-.sidebar__info {
-    width: 100%;
-}
-
-.sidebar__info-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: white;
-    border: 1px solid #007bff;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #333;
-}
-
-.__info__label {
-    white-space: nowrap;
-    font-weight: 600;
-    color: #007bff;
-}
-
-.__info__value {
-    flex-grow: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.sidebar__description {
-    margin-top: 20px;
+.description {
+    margin-top: 15px;
     padding: 12px 16px;
-    background-color: white;
+    background-color: #ffffff;
     border: 1px solid #007bff;
     border-radius: 6px;
     font-size: 16px;
@@ -106,47 +118,37 @@ body {
     width: 100%;
     text-align: left;
     color: #333;
+    max-height: 200px;
+    overflow-y: auto;
 }
 
-
-.profile__content {
-    flex-grow: 1;
-    padding: 20px;
-    background-color: white;
+.info-box {
+    width: 100%;
+    margin-top: 15px;
 }
 
-.content__title {
-    margin-top: 0;
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border: 1px solid #007bff;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.info-label {
+    white-space: nowrap;
+    font-weight: 600;
     color: #007bff;
-    font-size: 24px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #007bff;
 }
 
-.content__skills,
-.content__hobbies {
-    margin-bottom: 25px;
-}
-
-.__skills__subtitle {
-    color: #2c3e50;
-    font-size: 20px;
-    margin-bottom: 12px;
-}
-
-.__skills__list,
-.__hobbies__list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.__list__item {
-    padding: 10px 14px;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 8px;
-    font-size: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+.info-value {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

@@ -1,3 +1,4 @@
+<!-- lab3.html -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -7,68 +8,58 @@
     <link rel="stylesheet" href="lab3style.css" />
 </head>
 <body>
-    <div class="profile">
-        <div class="profile__content">
-            <h2 class="content__title">Мои навыки</h2>
+    <div class="resume-card">
+        <!-- ЛЕВАЯ КОЛОНКА: НАВЫКИ И УВЛЕЧЕНИЯ -->
+        <div class="left-column">
+            <h2 class="section-title">Мои навыки</h2>
 
-            <div class="content__skills">
-                <h3 class="__skills__subtitle">Hard Skills</h3>
-                <ul class="__skills__list">
-                    <li class="__list__item">С++</li>
-                    <li class="__list__item">Python (Pandas, OpenCV, др.)</li>
-                    <li class="__list__item">ООП</li>
-                </ul>
-            </div>
-            <div class="content__skills">
-                <h3 class="__skills__subtitle">Soft Skills</h3>
-                <ul class="__skills__list">
-                    <li class="__list__item">Коммуникабельность</li>
-                    <li class="__list__item">Умение работать в команде</li>
-                    <li class="__list__item">Самоорганизация</li>
-                    <li class="__list__item">Стремление к обучению</li>
-                </ul>
-            </div>
+            <h3 class="subsection-title">Hard Skills</h3>
+            <div class="skill-item">C++</div>
+            <div class="skill-item">Python (Pandas, OpenCV, др.)</div>
+            <div class="skill-item">ООП</div>
 
-            <h2 class="content__title">Мои увлечения</h2>
-            <div class="content__hobbies">
-                <ul class="__hobbies__list">
-                    <li class="__list__item">Картинг</li>
-                    <li class="__list__item">программирование</li>
-                    <li class="__list__item">Защита Манхэттена</li>
-                </ul>
-            </div>
+            <h3 class="subsection-title">Soft Skills</h3>
+            <div class="skill-item">Коммуникабельность</div>
+            <div class="skill-item">Умение работать в команде</div>
+            <div class="skill-item">Самоорганизация</div>
+            <div class="skill-item">Стремление к обучению</div>
+
+            <h2 class="section-title">Мои увлечения</h2>
+            <div class="hobby-item">Картинг</div>
+            <div class="hobby-item">программирование</div>
+            <div class="hobby-item">Защита Манхэттена</div>
         </div>
 
-        
-        <div class="profile__sidebar">
-            <div class="sidebar__photo-wrapper">
-                <img src="my_img1.jpg" alt="Фото Владислава Нуртынова" class="sidebar__photo" />
+        <!-- ПРАВАЯ КОЛОНКА: ФОТО И ИНФОРМАЦИЯ -->
+        <div class="right-column">
+            <div class="photo-wrapper">
+                <img src="my_img1.jpg" alt="Фото Владислава Нуртынова" class="photo" />
             </div>
-            <div class="sidebar__name">Нуртынов Владислав Мансурович</div>
-            <div class="sidebar__github">
+            <div class="name">Нуртынов Владислав Мансурович</div>
+            <div class="github-link">
                 <a href="https://github.com/vladnyry">
-                    <img class="sidebar__github-icon" src="githab.png" alt="GitHub" />
+                    <img class="github-icon" src="github.png" alt="GitHub" />
                 </a>
             </div>
-            <div class="sidebar__description">
-                Я студент второго курса Самарского университета имени С.П. Королёва.
-                Обучаюсь по направлению «Информационная безопасность автоматизированных систем».
-                Увлекаюсь программированием. На данный момент проживаю в Самаре.<br>
+            <div class="description">
+                Я студент второго курса Самарского университета имени С.П. Королёва.<br>
+                Обучаюсь по направлению «Информационная безопасность автоматизированных систем».<br>
+                Увлекаюсь программированием. На данный момент проживаю в Самаре.<br><br>
                 p.s (на фото реально я - ставьте лайки)<br>
                 p.s Вся работа и описываемые блоки являются оригинальными. Любое совпадение с реальными работами или событиями - случайно
             </div>
-            <div class="sidebar__info">
-                <div class="sidebar__info-item">
-                    <span class="__info__label">Возраст:</span>
-                    <span class="__info__value">19</span>
+            <div class="info-box">
+                <div class="info-item">
+                    <span class="info-label">Возраст:</span>
+                    <span class="info-value">19</span>
                 </div>
-                <div class="sidebar__info-item">
-                    <span class="__info__label">Дата рождения:</span>
-                    <span class="__info__value">20.07.2006</span>
+                <div class="info-item">
+                    <span class="info-label">Дата рождения:</span>
+                    <span class="info-value">20.07.2006</span>
                 </div>
-                <div class="sidebar__info-item">
-                    <span class="__info__label">email:</span>
-                    <span class="__info__value">vladnyrtynov7@gmail.com</span>
+                <div class="info-item">
+                    <span class="info-label">email:</span>
+                    <span class="info-value">vladnyrtynov7@gmail.com</span>
                 </div>
             </div>
         </div>
