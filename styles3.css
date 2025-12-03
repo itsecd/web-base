@@ -1,0 +1,379 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.resume {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Заголовок резюме */
+.resume__header {
+    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.resume__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.resume__subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Основной контент */
+.resume__content {
+    padding: 30px;
+}
+
+.resume__section {
+    margin-bottom: 40px;
+}
+
+.resume__section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eaeaea;
+}
+
+/* Персональная информация */
+.resume__personal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.personal__photo-container {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.personal__photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #4b6cb7;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.personal__photo-label {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4b6cb7;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.personal__info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.personal__fullname {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.personal__details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.personal__detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.personal__icon {
+    color: #4b6cb7;
+    font-size: 1.2rem;
+    width: 24px;
+}
+
+.personal__text {
+    font-size: 1.1rem;
+}
+
+/* О себе */
+.about__content {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #4b6cb7;
+}
+
+.about__text {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.about__text:last-child {
+    margin-bottom: 0;
+}
+
+.about__icon {
+    margin-right: 10px;
+    color: #4b6cb7;
+}
+
+/* Увлечения */
+.hobbies__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.hobbies__item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hobbies__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hobbies__item-icon {
+    font-size: 1.5rem;
+    color: #4b6cb7;
+}
+
+.hobbies__item-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.hobbies__icon {
+    margin-right: 10px;
+    color: #4b6cb7;
+}
+
+/* Навыки */
+.skills__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.skills__category {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.skills__category-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+}
+
+.skills__category-icon {
+    margin-right: 10px;
+    color: #4b6cb7;
+}
+
+.skills__list {
+    list-style: none;
+}
+
+.skills__item {
+    margin-bottom: 20px;
+}
+
+.skills__item:last-child {
+    margin-bottom: 0;
+}
+
+.skills__item-name {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.skills__progress {
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skills__progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #4b6cb7, #6a93cb);
+    border-radius: 5px;
+}
+
+.skills__icon {
+    margin-right: 10px;
+    color: #4b6cb7;
+}
+
+/* GitHub */
+.github__content {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #333;
+}
+
+.github__text {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+.github__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #333;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-bottom: 25px;
+}
+
+.github__link:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+.github__link-icon {
+    font-size: 1.5rem;
+}
+
+.github__link-external {
+    font-size: 0.9rem;
+}
+
+.github__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.github__stat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.github__stat-icon {
+    color: #4b6cb7;
+}
+
+.github__stat-text {
+    font-weight: 500;
+}
+
+.github__icon {
+    margin-right: 10px;
+    color: #4b6cb7;
+}
+
+/* Подвал */
+.resume__footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+.resume__footer-text {
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.resume__footer-text:last-child {
+    margin-bottom: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .resume__personal {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .personal__details {
+        align-items: center;
+    }
+    
+    .resume__title {
+        font-size: 2rem;
+    }
+    
+    .personal__fullname {
+        font-size: 1.8rem;
+    }
+    
+    .skills__container {
+        grid-template-columns: 1fr;
+    }
+    
+    .hobbies__list {
+        grid-template-columns: 1fr;
+    }
+    
+    .github__stats {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
