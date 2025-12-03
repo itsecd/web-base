@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Лабораторная работа 1</title>
+  <style>
+    .text-block {
+      width: 600px;
+      margin: 20px auto;
+      background-color: #1962B3;
+      color: #7DCC94;
+      text-align: justify;
+      padding: 20px;
+    }
+
+    .images-wrapper {
+      position: relative;
+      width: 400px;
+      height: 250px;
+      margin: 20px auto;
+    }
+
+    .images-wrapper img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .traffic-light {
+      width: 100px;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #333;
+    }
+
+    .light {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 10px auto;
+    }
+
+    .red    { background-color: red; }
+    .yellow { background-color: yellow; }
+    .green  { background-color: green; }
+
+    .maze {
+      width: 300px;
+      height: 300px;
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .maze-cell {
+      width: 100px;
+      height: 100px;
+      box-sizing: border-box;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+
+<div class="text-block">
+  JavaScript (аббр. JS) — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript (стандарт ECMA-262). JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.
+</div>
+
+<div class="images-wrapper">
+  <img src="https://img2.akspic.ru/crops/8/4/6/4/6/164648/164648-kot-kotenok-privlekatelnost-golova-glaz-3840x2160.jpg" alt="Первая картинка с котенком ">
+  <img src="https://i.pinimg.com/236x/cd/16/12/cd16121609a79d95dffbfa28a326331e.jpg" alt="Вторая картинка с котенком">
+</div>
+
+<div class="traffic-light">
+  <div class="light red"></div>
+  <div class="light yellow"></div>
+  <div class="light green"></div>
+</div>
+
+<div class="maze">
+  <div class="maze-cell"></div>
+  <div class="maze-cell"></div>
+  <div class="maze-cell"></div>
+  <div class="maze-cell"></div>
+  <div class="maze-cell"></div>
+  <div class="maze-cell"></div>
+  <div class="maze-cell"></div>
+  <div class="maze-cell"></div>
+  <div class="maze-cell"></div>
+</div>
+
+</body>
+</html>
