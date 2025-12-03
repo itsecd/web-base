@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="Гайворонская Мария" content="Лабораторная работа № 4" />
+    <title>Мой первый калькулятор</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator-container">
+      <h1>Калькулятор</h1>
+      <input type="number" id="num1" placeholder="Первое число" />
+      <select id="operation">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">×</option>
+        <option value="/">÷</option>
+      </select>
+      <input type="number" id="num2" placeholder="Второе число" />
+      <button onclick="calculate()">Вычислить</button>
+      <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
