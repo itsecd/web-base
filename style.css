@@ -68,14 +68,14 @@ body::before {
   margin-bottom: 25px;
 }
 
-.text__self__image {
+.self__image {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.text__self__text {
+.self__info {
   width: 350px;
   font-size: 1.2em;
   text-align: right;
