@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, rgb(214, 34, 34), #1b0bce);
+  color: #222;
+}
+
+.page {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.profile,
+.skills,
+.hobby,
+.projects,
+.github {
+  background: #4d0000;
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.profile__title,
+.skills__title,
+.hobby__title,
+.projects__title,
+.github__title {
+  margin-top: 0;
+  font-size: 1.8rem;
+  border-left: 6px solid #4678e8;
+  padding-left: 12px;
+}
+
+.profile {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.profile__photo-block {
+  max-width: 220px;
+}
+
+.profile__photo {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.profile__text {
+  margin: 8px 0;
+}
+
+.skills__lists {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.skills__subtitle {
+  margin-bottom: 8px;
+}
+
+.skills__list {
+  padding-left: 20px;
+}
+
+.hobby__list {
+  padding-left: 20px;
+}
+
+.projects__list {
+  list-style: none;
+  padding: 0;
+}
+
+.projects__item {
+  margin: 10px 0;
+}
+
+.projects__link {
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: #4678e8;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.projects__link:hover {
+  background-color: #3456b3;
+}
+
+.github__link {
+  color: #7a0000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+}
