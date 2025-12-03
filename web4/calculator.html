@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор - Лабораторная работа 4</title>
+    <link rel="stylesheet" href="calculator-style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1 class="calculator__title">Калькулятор</h1>
+        
+        <div class="calculator__input-group">
+            <label class="calculator__label" for="num1">Первое число:</label>
+            <input 
+                type="number" 
+                id="num1" 
+                class="calculator__input" 
+                placeholder="Введите число"
+                step="any"
+            >
+            <div class="error-message" id="errorNum1"></div>
+        </div>
+
+        <div class="calculator__input-group">
+            <label class="calculator__label" for="operation">Операция:</label>
+            <select id="operation" class="calculator__select">
+                <option value="+">Сложение (+)</option>
+                <option value="-">Вычитание (-)</option>
+                <option value="*">Умножение (×)</option>
+                <option value="/">Деление (÷)</option>
+            </select>
+        </div>
+
+        <div class="calculator__input-group">
+            <label class="calculator__label" for="num2">Второе число:</label>
+            <input 
+                type="number" 
+                id="num2" 
+                class="calculator__input" 
+                placeholder="Введите число"
+                step="any"
+            >
+            <div class="error-message" id="errorNum2"></div>
+        </div>
+
+        <button class="calculator__button" id="calculateBtn">Вычислить</button>
+        
+        <div class="calculator__result" id="result">
+            Результат появится здесь
+        </div>
+
+        <nav class="lab-navigation">
+            <h2 class="lab-navigation__title">Мои лабораторные работы</h2>
+            <div class="lab-navigation__links">
+                <a href="lab1/index.html" class="lab-navigation__link">Лаб 1</a>
+                <a href="lab2/index.html" class="lab-navigation__link">Лаб 2</a>
+                <a href="resume.html" class="lab-navigation__link">Резюме</a>
+                <span class="lab-navigation__link lab-navigation__link--current">Калькулятор</span>
+            </div>
+        </nav>
+    </div>
+
+    <script src="calculator-script.js"></script>
+</body>
+</html>
