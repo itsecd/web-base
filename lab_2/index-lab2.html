@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Лабораторная: селекторы, transition, псевдоэлементы</title>
+  <link rel="preload" as="image" href="https://ssau.ru/i/logo/logo-white-ru.svg">
+  <link rel="stylesheet" href="style-lab2.css" />
+</head>
+<body class="page__body">
+
+  <!--Cписок: музыкальные жанры -->
+  <section class="card genres">
+    <h3 class="card__title">Популярные музыкальные жанры</h3>
+    <ul class="genres__list">
+    <li class="genres__item">Поп-музыка</li>
+    <li class="genres__item">Хип-хоп</li>
+    <li class="genres__item">Рок</li>
+    <li class="genres__item">Электронная музыка</li>
+    <li class="genres__item">R&B</li>
+    </ul>
+  </section>
+
+   <!--Родители и дети с условиями -->
+ <section class="card family">
+    <h3 class="card__title">Родители и дети — правила окраски</h3>
+
+    <div class="family__grid">
+    <div class="family__col">
+    <div class="family__parent family__parent--1">
+    <strong class="family__parent-title">parent-1</strong>
+    <div class="family__child family__child--1">child-1</div>
+    <div class="family__child family__child--2">child-2</div>
+    <div class="family__child family__child--3">child-3</div>
+    </div>
+
+    <div class="family__parent family__parent--2">
+    <strong class="family__parent-title">parent-2</strong>
+    <div class="family__child family__child--1">child-1</div>
+    <div class="family__child family__child--2">child-2</div>
+    </div>
+
+    <div class="family__parent family__parent--3">
+    <strong class="family__parent-title">parent-3</strong>
+    <div class="family__child family__child--1">child-1</div>
+    <div class="family__child family__child--2">child-2</div>
+    <div class="family__child family__child--2 family__child--purple">child-2</div>
+    </div>
+    </div>
+
+    <div class="family__col">
+    <div class="family__parent family__parent--1">
+    <strong class="family__parent-title">parent-1</strong>
+    <div class="family__child family__child--1">child-1</div>
+    </div>
+
+    <div class="family__parent family__parent--3">
+    <strong class="family__parent-title">parent-3 (между 1 и 2)</strong>
+    <div class="family__child family__child--1">child-1</div>
+    </div>
+
+    <div class="family__parent family__parent--2">
+    <strong class="family__parent-title">parent-2</strong>
+    <div class="family__child family__child--1">child-1</div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+<!-- 3) Текст приложения -->
+  <section class="card article">
+    <h3 class="card__title">Языки программирования</h3>
+
+    <p class="article__text">
+    Языки программирования — это инструменты, с помощью которых разработчики создают программное обеспечение,
+    веб-приложения, игры, алгоритмы и многое другое. Каждый язык имеет свои особенности, синтаксис и сферу применения.
+    Ниже представлены некоторые из наиболее известных языков:
+    </p>
+
+    <ul class="langs langs__list">
+    <li class="langs__item">
+    <a class="langs__link" href="https://www.python.org" target="_blank" rel="noopener">Python</a>
+    – высокоуровневый язык с простым синтаксисом, популярный в Data Science, веб‑разработке и автоматизации.
+    </li>
+    <li class="langs__item">
+    <a class="langs__link" href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank" rel="noopener">JavaScript</a>
+    – основной язык для фронтенд‑разработки, работает в браузерах и на сервере (Node.js).
+    </li>
+    <li class="langs__item">
+    <a class="langs__link" href="https://www.oracle.com/java/" target="_blank" rel="noopener">Java</a>
+    – объектно‑ориентированный язык, широко используется в корпоративных приложениях и Android‑разработке.
+    </li>
+    <li class="langs__item">
+    <a class="langs__link" href="https://isocpp.org/" target="_blank" rel="noopener">C++</a>
+    – мощный язык для системного программирования, игр и высокопроизводительных приложений.
+    </li>
+    <li class="langs__item">
+    <a class="langs__link" href="https://dotnet.microsoft.com/languages/csharp" target="_blank" rel="noopener">C#</a>
+    – язык от Microsoft, применяется в разработке под Windows, играх (Unity) и веб‑приложениях.
+    </li>
+    <li class="langs__item">
+    <a class="langs__link" href="https://go.dev/" target="_blank" rel="noopener">Go (Golang)</a>
+    – созданный Google, язык для высоконагруженных сетевых сервисов и облачных технологий.
+    </li>
+    <li class="langs__item">
+    <a class="langs__link" href="https://www.ruby-lang.org/" target="_blank" rel="noopener">Ruby</a>
+    – известен благодаря фреймворку Ruby on Rails для веб‑разработки.
+    </li>
+    <li class="langs__item">
+    <a class="langs__link" href="https://developer.apple.com/swift/" target="_blank" rel="noopener">Swift</a>
+    – язык Apple для разработки под iOS и macOS.
+    </li>
+    <li class="langs__item">
+    <a class="langs__link" href="https://kotlinlang.org/" target="_blank" rel="noopener">Kotlin</a>
+    – современный язык, официально поддерживаемый для Android‑разработки.
+    </li>
+    <li class="langs__item">
+    <a class="langs__link" href="https://www.rust-lang.org/" target="_blank" rel="noopener">Rust</a>
+    – язык системного программирования с акцентом на безопасность и производительность.
+    </li>
+    </ul>
+
+    <p class="article__text">
+    Это лишь малая часть из множества существующих языков, и выбор зависит от задач, которые нужно решить.
+    </p>
+  </section>
+
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор — Лабораторная работа 4</title>
+  <link rel="stylesheet" href="style-lab4.css">
+</head>
+<body>
+  <div class="calculator">
+    <header class="calculator__header">
+      <h1 class="calculator__title">🧮 Калькулятор</h1>
+      <p class="calculator__subtitle">Лабораторная работа №4</p>
+    </header>
+
+    <form class="calculator__form" id="calculatorForm">
+      <div class="calculator__field">
+        <label class="calculator__label" for="num1">
+          <span class="calculator__label-icon">①</span>
+          Первое число
+        </label>
+        <input 
+          type="number" 
+          id="num1" 
+          class="calculator__input" 
+          placeholder="Введите первое число"
+          step="any"
+          required
+        >
+      </div>
+
+      <div class="calculator__field">
+        <label class="calculator__label" for="operation">
+          <span class="calculator__label-icon">⚙️</span>
+          Операция
+        </label>
+        <select id="operation" class="calculator__select" required>
+          <option value="">Выберите операцию</option>
+          <option value="add">➕ Сложение (+)</option>
+          <option value="subtract">➖ Вычитание (−)</option>
+          <option value="multiply">✖️ Умножение (×)</option>
+          <option value="divide">➗ Деление (÷)</option>
+        </select>
+      </div>
+
+      <div class="calculator__field">
+        <label class="calculator__label" for="num2">
+          <span class="calculator__label-icon">②</span>
+          Второе число
+        </label>
+        <input 
+          type="number" 
+          id="num2" 
+          class="calculator__input" 
+          placeholder="Введите второе число"
+          step="any"
+          required
+        >
+      </div>
+
+      <button type="submit" class="calculator__button">
+        Вычислить
+      </button>
+    </form>
+
+    <div class="calculator__error" id="error"></div>
+
+    <div class="calculator__result" id="result">
+      <div class="calculator__result-label">Результат:</div>
+      <div class="calculator__result-value" id="resultValue">0</div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('calculatorForm');
+    const num1Input = document.getElementById('num1');
+    const num2Input = document.getElementById('num2');
+    const operationSelect = document.getElementById('operation');
+    const resultDiv = document.getElementById('result');
+    const resultValue = document.getElementById('resultValue');
+    const errorDiv = document.getElementById('error');
+
+    // Функция для отображения ошибки
+    function showError(message) {
+      errorDiv.textContent = '⚠️ ' + message;
+      errorDiv.classList.add('calculator__error--visible');
+      resultDiv.classList.remove('calculator__result--visible');
+
+      setTimeout(() => {
+        errorDiv.classList.remove('calculator__error--visible');
+      }, 3000);
+    }
+
+    // Функция для отображения результата
+    function showResult(value) {
+      errorDiv.classList.remove('calculator__error--visible');
+      resultValue.textContent = value;
+      resultDiv.classList.add('calculator__result--visible');
+    }
+
+    // Функция для выполнения вычислений
+    function calculate(num1, num2, operation) {
+      switch (operation) {
+        case 'add':
+          return num1 + num2;
+        case 'subtract':
+          return num1 - num2;
+        case 'multiply':
+          return num1 * num2;
+        case 'divide':
+          if (num2 === 0) {
+            throw new Error('Деление на ноль невозможно!');
+          }
+          return num1 / num2;
+        default:
+          throw new Error('Неизвестная операция');
+      }
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const num1 = parseFloat(num1Input.value);
+      const num2 = parseFloat(num2Input.value);
+      const operation = operationSelect.value;
+
+      if (isNaN(num1) || isNaN(num2)) {
+        showError('Пожалуйста, введите корректные числа!');
+        return;
+      }
+
+      if (!operation) {
+        showError('Пожалуйста, выберите операцию!');
+        return;
+      }
+
+      try {
+        const result = calculate(num1, num2, operation);
+
+        const roundedResult = Math.round(result * 10000000000) / 10000000000;
+
+        showResult(roundedResult);
+
+      } catch (error) {
+        showError(error.message);
+      }
+    });
+
+    [num1Input, num2Input, operationSelect].forEach(element => {
+      element.addEventListener('input', () => {
+        errorDiv.classList.remove('calculator__error--visible');
+      });
+    });
+  </script>
+</body>
+</html>
