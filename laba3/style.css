@@ -25,7 +25,7 @@
   text-align: center;
 }
 
-.resume__avatar {
+.avatar-block__avatar {
   width: 160px;
   height: 160px;
   border-radius: 50%;
@@ -35,19 +35,19 @@
   margin-bottom: 15px;
 }
 
-.resume__name {
+.avatar-block__name {
   font-size: 24px;
   margin: 10px 0 5px;
   font-weight: 700;
 }
 
-.resume__position {
+.avatar-block__position {
   font-size: 16px;
   opacity: 0.9;
   margin-bottom: 20px;
 }
 
-.section {
+.resume__contacts {
   margin-top: 30px;
   background: rgba(255, 255, 255, 0.12);
   padding: 12px 15px;
@@ -55,7 +55,7 @@
   backdrop-filter: blur(6px);
 }
 
-.section__title {
+.contacts__title {
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: 600;
@@ -63,31 +63,17 @@
   padding-bottom: 6px;
 }
 
-.section__text {
+.contacts__text {
   margin: 7px 0;
 }
 
-.section__link {
+.contacts__link {
   color: white;
   text-decoration: none;
 }
 
-.section__link:hover {
+.contacts__link:hover {
   text-decoration: underline;
-}
-
-.section_type_contacts .section__title {
-  color: white;
-}
-
-.resume__right-panel .section {
-  background: #f4f5ff;
-  color: #333;
-}
-
-.resume__right-panel .section__title {
-  color: #5866ff;
-  border-bottom-color: #e0e4ff;
 }
 
 .resume__right-panel {
@@ -97,6 +83,10 @@
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(5px);
+}
+
+.right-panel__about {
+  margin-bottom: 30px;
 }
 
 .about__title {
@@ -110,25 +100,50 @@
   line-height: 1.6;
 }
 
-.skills-list {
+.right-panel__skills,
+.right-panel__soft-skills,
+.right-panel__hobbies {
+  margin-top: 30px;
+  background: #f4f5ff;
+  color: #333;
+  padding: 12px 15px;
+  border-radius: 12px;
+}
+
+.skills__title,
+.soft-skills__title,
+.hobbies__title {
+  color: #5866ff;
+  border-bottom: 1px solid #e0e4ff;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 6px;
+}
+
+.skills__list,
+.soft-skills__list,
+.hobbies__list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.skills-list__item {
+.skills-list__item,
+.soft-skills-list__item,
+.hobbies-list__item {
   margin: 7px 0;
   padding: 5px 0;
 }
 
-.skills-list_type_soft .skills-list__item,
-.skills-list_type_hobbies .skills-list__item {
+.soft-skills-list__item,
+.hobbies-list__item {
   position: relative;
   padding-left: 20px;
 }
 
-.skills-list_type_soft .skills-list__item::before,
-.skills-list_type_hobbies .skills-list__item::before {
+.soft-skills-list__item::before,
+.hobbies-list__item::before {
   content: "•";
   position: absolute;
   left: 0;
