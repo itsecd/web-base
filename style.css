@@ -50,12 +50,12 @@ body {
   margin: 10px 0 0 0;
 }
 
-.resume__section {
+.sidebar__section {
   margin-bottom: 25px;
   width: 100%;
 }
 
-.resume__section-title {
+.section__section-title {
   font-size: 1.4em;
   margin-bottom: 10px;
   padding-bottom: 10px;
@@ -64,20 +64,20 @@ body {
   letter-spacing: 0.5px;
 }
 
-.resume__section-list {
+.section__section-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.resume__section-list-item {
+.section-list__list-item {
   margin-bottom: 10px;
   font-size: 1em;
   display: flex;
   align-items: center;
 }
 
-.resume__section-list-item i {
+.section-list__list-item i {
   margin-right: 10px;
   color: var(--primary-color);
   font-size: 1em;
@@ -85,13 +85,13 @@ body {
   text-align: center;
 }
 
-.resume__link {
+.link {
   color: var(--primary-color);
   font-weight: 600;
   text-decoration: none;
 }
 
-.resume__link:hover {
+.link:hover {
   text-decoration: underline;
 }
 
@@ -100,7 +100,7 @@ body {
   padding: 40px 50px;
 }
 
-.resume__about-title {
+.content__about-title {
   font-size: 2em;
   color: var(--primary-color);
   margin-bottom: 25px;
@@ -108,7 +108,7 @@ body {
   border-bottom: 3px solid var(--primary-color);
 }
 
-.resume__about-text {
+.content__about-text {
   font-size: 1.05em;
   margin-bottom: 20px;
   line-height: 1.6;
