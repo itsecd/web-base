@@ -6,113 +6,117 @@
     <title>Резюме студента</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <header>
-            <div class="profile-img">
-                <img src="c:\Users\User\Desktop\1a683e4bf0dfd58b87dab032990e7da7.jpg">
+<body class="page">
+    <div class="page__container">
+        <header class="header">
+            <div class="header__photo">
+                <img src="../lab3/cat.jpg" alt="Фото Чуракова Семёна" class="header__image">
             </div>
-            <h1>Чураков Семён Сергеевич</h1>
-            <div class="subtitle">Студент ИБАС</div>
+            <h1 class="header__title">Чураков Семён Сергеевич</h1>
+            <div class="header__subtitle">Студент ИБАС</div>
         </header>
         
         <div class="content">
             <aside class="sidebar">
-                <section>
-                    <h2>Личная информация</h2>
-                    <div class="info-item">
-                        <div class="info-label">Дата рождения:</div>
-                        <div>07.02.2007</div>
+                <section class="sidebar__section">
+                    <h2 class="sidebar__title">Личная информация</h2>
+                    <div class="info">
+                        <div class="info__item">
+                            <div class="info__label">Дата рождения:</div>
+                            <div class="info__value">07.02.2007</div>
+                        </div>
+                        <div class="info__item">
+                            <div class="info__label">Город:</div>
+                            <div class="info__value">Самара</div>
+                        </div>
+                        <div class="info__item">
+                            <div class="info__label">Email:</div>
+                            <div class="info__value">semencurakov@gmail.com</div>
+                        </div>
+                        <div class="info__item">
+                            <div class="info__label">Телефон:</div>
+                            <div class="info__value">+7 (927) 018-22-50</div>
+                        </div>
                     </div>
-                    <div class="info-item">
-                        <div class="info-label">Город:</div>
-                        <div>Самара</div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-label">Email:</div>
-                        <div>semencurakov@gmail.com</div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-label">Телефон:</div>
-                        <div>+7 (927) 018-22-50</div>
-                    </div>
-                    <a href="https://github.com/SemyonSuper777" class="github-link" target="_blank">
+                    <a href="https://github.com/SemyonSuper777" class="sidebar__link" target="_blank">
                         Профиль GitHub →
                     </a>
                 </section>
                 
-                <section>
-                    <h2>Skills</h2>
+                <section class="sidebar__section">
+                    <h2 class="sidebar__title">Навыки</h2>
                     <div class="skills">
-                        <div class="skill hard-skill">HTML/CSS</div>
-                        <div class="skill hard-skill">Python</div>
-                        <div class="skill hard-skill">C++</div>
+                        <div class="skills__item skills__item_hard">HTML/CSS</div>
+                        <div class="skills__item skills__item_hard">Python</div>
+                        <div class="skills__item skills__item_hard">C++</div>
                     </div>
                 </section>
                 
-                <section>
-                    <h2>Soft Skills</h2>
+                <section class="sidebar__section">
+                    <h2 class="sidebar__title">Гибкие навыки</h2>
                     <div class="skills">
-                        <div class="skill soft-skill">Коммуникабельность</div>
-                        <div class="skill soft-skill">Работа в команде</div>
-                        <div class="skill soft-skill">Тайм-менеджмент</div>
-                        <div class="skill soft-skill">Критическое мышление</div>
-                        <div class="skill soft-skill">Адаптивность</div>
+                        <div class="skills__item skills__item_soft">Коммуникабельность</div>
+                        <div class="skills__item skills__item_soft">Работа в команде</div>
+                        <div class="skills__item skills__item_soft">Тайм-менеджмент</div>
+                        <div class="skills__item skills__item_soft">Критическое мышление</div>
+                        <div class="skills__item skills__item_soft">Адаптивность</div>
                     </div>
                 </section>
             </aside>
             
-            <main class="main-content">
-                <section>
-                    <h2>О себе</h2>
-                    <p>Студент 2 курса ИБАС. Родился в городе Нефтегорск, сейчас живу в общежитии. Как то так.</p>
+            <main class="main">
+                <section class="main__section">
+                    <h2 class="main__title">О себе</h2>
+                    <p class="main__text">Студент 2 курса ИБАС. Родился в городе Нефтегорск, сейчас живу в общежитии. Увлекаюсь программированием и активными видами спорта.</p>
                 </section>
                 
-                <section>
-                    <h2>Увлечения</h2>
+                <section class="main__section">
+                    <h2 class="main__title">Увлечения</h2>
                     <div class="hobbies">
-                        <div class="hobby">Программирование</div>
-                        <div class="hobby">Компьютерные игры</div>
-                        <div class="hobby">Кёрлинг</div>
-                        <div class="hobby">Шахматы</div>
-                        <div class="hobby">Самбо</div>
-                        <div class="hobby">Бокс</div>
+                        <div class="hobbies__item">Программирование</div>
+                        <div class="hobbies__item">Компьютерные игры</div>
+                        <div class="hobbies__item">Кёрлинг</div>
+                        <div class="hobbies__item">Шахматы</div>
+                        <div class="hobbies__item">Самбо</div>
+                        <div class="hobbies__item">Бокс</div>
                     </div>
                 </section>
                 
-                <section>
-                    <h2>Образование</h2>
-                    <div class="info-item">
-                        <div class="info-label">2024 - н.в.</div>
-                        <div>Самарский национальный исследовательский университет имени академика С.П. Королева</div>
+                <section class="main__section">
+                    <h2 class="main__title">Образование</h2>
+                    <div class="info">
+                        <div class="info__item">
+                            <div class="info__label">2024 - н.в.</div>
+                            <div class="info__value">Самарский национальный исследовательский университет имени академика С.П. Королева</div>
+                        </div>
                     </div>
                 </section>
                 
-                <section>
-                    <h2>Мои проекты</h2>
+                <section class="main__section">
+                    <h2 class="main__title">Мои проекты</h2>
                     <div class="projects">
-                        <a href="c:\Users\User\Desktop\web-base\lab1\lab1.html" class="project-link" target="_blank">
-                            <div class="project-item">
-                                <h3>Лабораторная работа 1</h3>
-                                <p>Основы HTML и CSS</p>
+                        <a href="../lab1/lab1.html" class="projects__link" target="_blank">
+                            <div class="projects__item">
+                                <h3 class="projects__title">Лабораторная работа 1</h3>
+                                <p class="projects__description">Основы HTML и CSS</p>
                             </div>
                         </a>
-                        <a href="c:\Users\User\Desktop\web-base\lab2\index.html" class="project-link" target="_blank">
-                            <div class="project-item">
-                                <h3>Лабораторная работа 2</h3>
-                                <p>Сложные ситуации при верстке</p>
+                        <a href="../lab2/index.html" class="projects__link" target="_blank">
+                            <div class="projects__item">
+                                <h3 class="projects__title">Лабораторная работа 2</h3>
+                                <p class="projects__description">Сложные ситуации при верстке</p>
                             </div>
                         </a>
-                        <a href="index.html" class="project-link" target="_blank">
-                            <div class="project-item">
-                                <h3>Лабораторная работа 3</h3>
-                                <p>Резюме (эта страница)</p>
+                        <a href="index.html" class="projects__link" target="_blank">
+                            <div class="projects__item">
+                                <h3 class="projects__title">Лабораторная работа 3</h3>
+                                <p class="projects__description">Резюме (эта страница)</p>
                             </div>
                         </a>
-                        <a href="C:\Users\User\Desktop\web-base\lab4\index.html" class="project-link" target="_blank">
-                            <div class="project-item">
-                                <h3>Лабораторная работа 4</h3>
-                                <p>Калькулятор</p>
+                        <a href="../lab4/index.html" class="projects__link" target="_blank">
+                            <div class="projects__item">
+                                <h3 class="projects__title">Лабораторная работа 4</h3>
+                                <p class="projects__description">Калькулятор</p>
                             </div>
                         </a>
                     </div>
