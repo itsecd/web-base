@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Резюме студента</title>
-    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -13,165 +13,171 @@
         <!-- Заголовок -->
         <header class="resume__header">
             <h1 class="resume__title">Резюме студента</h1>
+            <p class="resume__subtitle">Лабораторная работа №3 - "Пора заявить о себе"</p>
         </header>
 
         <!-- Основной контент -->
         <main class="resume__content">
             <!-- Блок с фото и основными данными -->
-            <section class="resume__personal personal">
-                <div class="personal__photo-container">
-                    <img src="https://sun9-41.userapi.com/s/v1/ig2/-iNWqLfL9XmfGCSi2E_vlIBj_ktZjGUcExebpxNh1lw8AqB77c8dmHyoQbZpE6_PZnjUyrDrQkreBj_LL70ur5JC.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,960x1280&from=bu&cs=960x0" alt="Фото студента" class="personal__photo">
-                    <div class="personal__photo-label">Студент</div>
+            <section class="resume__personal">
+                <div class="resume__photo-container">
+                    <img src="https://sun9-41.userapi.com/s/v1/ig2/-iNWqLfL9XmfGCSi2E_vlIBj_ktZjGUcExebpxNh1lw8AqB77c8dmHyoQbZpE6_PZnjUyrDrQkreBj_LL70ur5JC.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,960x1280&from=bu&cs=960x0" alt="Фото студента" class="resume__photo">
+                    <div class="resume__photo-label">Студент</div>
                 </div>
                 
-                <div class="personal__info">
-                    <h2 class="personal__fullname">Магров Илья Сергеевич</h2>
-                    <div class="personal__details">
-                        <div class="personal__detail">
-                            <i class="fas fa-birthday-cake personal__icon"></i>
-                            <span class="personal__text">Дата рождения: 02.09.2006</span>
+                <div class="resume__info">
+                    <h2 class="resume__fullname">Магров Илья Сергеевич</h2>
+                    <div class="resume__details">
+                        <div class="resume__detail">
+                            <i class="fas fa-birthday-cake resume__detail-icon"></i>
+                            <span class="resume__detail-text">Дата рождения: 02.09.2006</span>
                         </div>
-                        <div class="personal__detail">
-                            <i class="fas fa-graduation-cap personal__icon"></i>
-                            <span class="personal__text">Студент 2 курса, Самарский государственный университет, Институт Информатики и Кибернетики, направление ИБАС</span>
+                        <div class="resume__detail">
+                            <i class="fas fa-graduation-cap resume__detail-icon"></i>
+                            <span class="resume__detail-text">Студент 2 курса, Самарского национального исследовательского университета имени академика С.П.Королева, Институт Информатики и Кибернетики, направление ИБАС</span>
                         </div>
-                        <div class="personal__detail">
-                            <i class="fas fa-map-marker-alt personal__icon"></i>
-                            <span class="personal__text">г. Самара</span>
+                        <div class="resume__detail">
+                            <i class="fas fa-map-marker-alt resume__detail-icon"></i>
+                            <span class="resume__detail-text">г. Самара</span>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Блок "О себе" -->
-            <section class="resume__section about">
-                <h2 class="about__title resume__section-title">
-                    <i class="fas fa-user about__icon"></i> О себе
+            <section class="resume__about">
+                <h2 class="resume__section-title">
+                    <i class="fas fa-user resume__section-icon"></i> О себе
                 </h2>
-                <div class="about__content">
-                    <p class="about__text">Я студент 2 курса института информатики и кибернетики, увлеченный разработкой программного обеспечения и изучением новых технологий. Стремлюсь к постоянному развитию и совершенствованию своих навыков в сфере IT.</p>
-                    <p class="about__text">Имею опыт в разработке веб-приложений, работал над учебными проектами, включая создание сайтов, мобильных приложений и простых игр.</p>
-                    <p class="about__text">В свободное время изучаю новые фреймворки, читаю техническую литературу и слежу за тенденциями в мире технологий.</p>
+                <div class="resume__about-content">
+                    <p class="resume__about-text">Я студент 2 курса Самарского национального исследовательского университета имени академика С.П.Королева, Института Информатики и Кибернетики, направления ИБАС. Увлечен изучением информационных технологий, программированием и современными IT-тенденциями.</p>
+                    <p class="resume__about-text">В рамках учебной программы осваиваю основы программирования, компьютерных сетей, кибербезопасности и анализа данных. Участвую в университетских проектах и научно-исследовательской деятельности.</p>
+                    <p class="resume__about-text">Стремлюсь к получению глубоких знаний в области информационной безопасности и программирования, планирую развиваться в сфере IT и вносить вклад в развитие технологий.</p>
                 </div>
             </section>
 
             <!-- Блок с увлечениями -->
-            <section class="resume__section hobbies">
-                <h2 class="hobbies__title resume__section-title">
-                    <i class="fas fa-heart hobbies__icon"></i> Любимые увлечения
+            <section class="resume__hobbies">
+                <h2 class="resume__section-title">
+                    <i class="fas fa-heart resume__section-icon"></i> Любимые увлечения
                 </h2>
-                <div class="hobbies__list">
-                    <div class="hobbies__item">
-                        <i class="fas fa-laptop-code hobbies__item-icon"></i>
-                        <span class="hobbies__item-text">Программирование</span>
+                <div class="resume__hobbies-list">
+                    <div class="resume__hobby">
+                        <i class="fas fa-laptop-code resume__hobby-icon"></i>
+                        <span class="resume__hobby-text">Программирование на Python и Java</span>
                     </div>
-                    <div class="hobbies__item">
-                        <i class="fas fa-gamepad hobbies__item-icon"></i>
-                        <span class="hobbies__item-text">Разработка игр</span>
+                    <div class="resume__hobby">
+                        <i class="fas fa-shield-alt resume__hobby-icon"></i>
+                        <span class="resume__hobby-text">Изучение кибербезопасности</span>
                     </div>
-                    <div class="hobbies__item">
-                        <i class="fas fa-music hobbies__item-icon"></i>
-                        <span class="hobbies__item-text">Игра на гитаре</span>
+                    <div class="resume__hobby">
+                        <i class="fas fa-robot resume__hobby-icon"></i>
+                        <span class="resume__hobby-text">Робототехника и автоматизация</span>
                     </div>
-                    <div class="hobbies__item">
-                        <i class="fas fa-hiking hobbies__item-icon"></i>
-                        <span class="hobbies__item-text">Походы и активный отдых</span>
+                    <div class="resume__hobby">
+                        <i class="fas fa-gamepad resume__hobby-icon"></i>
+                        <span class="resume__hobby-text">Разработка игр</span>
                     </div>
+                    <div class="resume__hobby">
+                        <i class="fas fa-dumbbell resume__hobby-icon"></i>
+                        <span class="resume__hobby-text">Спорт и фитнес</span>
+                    </div>
+                    <div class="resume__hobby">
                 </div>
             </section>
 
             <!-- Блок с навыками -->
-            <section class="resume__section skills">
-                <h2 class="skills__title resume__section-title">
-                    <i class="fas fa-chart-bar skills__icon"></i> Навыки
+            <section class="resume__skills">
+                <h2 class="resume__section-title">
+                    <i class="fas fa-chart-bar resume__section-icon"></i> Навыки
                 </h2>
                 
-                <div class="skills__container">
+                <div class="resume__skills-container">
                     <!-- Hard skills -->
-                    <div class="skills__category">
-                        <h3 class="skills__category-title">
-                            <i class="fas fa-cogs skills__category-icon"></i> Hard Skills
+                    <div class="resume__skills-category">
+                        <h3 class="resume__skills-category-title">
+                            <i class="fas fa-cogs resume__skills-category-icon"></i> Hard Skills
                         </h3>
-                        <ul class="skills__list">
-                            <li class="skills__item">
-                                <span class="skills__item-name">HTML5 & CSS3</span>
-                                <div class="skills__progress">
-                                    <div class="skills__progress-bar" style="width: 90%"></div>
+                        <ul class="resume__skills-list">
+                            <li class="resume__skill">
+                                <span class="resume__skill-name">Python</span>
+                                <div class="resume__skill-progress">
+                                    <div class="resume__skill-progress-bar" style="width: 85%"></div>
                                 </div>
                             </li>
-                            <li class="skills__item">
-                                <span class="skills__item-name">JavaScript</span>
-                                <div class="skills__progress">
-                                    <div class="skills__progress-bar" style="width: 85%"></div>
+                            <li class="resume__skill">
+                                <span class="resume__skill-name">Java</span>
+                                <div class="resume__skill-progress">
+                                    <div class="resume__skill-progress-bar" style="width: 75%"></div>
                                 </div>
                             </li>
-                            <li class="skills__item">
-                                <span class="skills__item-name">Python</span>
-                                <div class="skills__progress">
-                                    <div class="skills__progress-bar" style="width: 80%"></div>
+                            <li class="resume__skill">
+                                <span class="resume__skill-name">HTML5 & CSS3</span>
+                                <div class="resume__skill-progress">
+                                    <div class="resume__skill-progress-bar" style="width: 80%"></div>
                                 </div>
                             </li>
-                            <li class="skills__item">
-                                <span class="skills__item-name">React</span>
-                                <div class="skills__progress">
-                                    <div class="skills__progress-bar" style="width: 75%"></div>
+                            <li class="resume__skill">
+                                <span class="resume__skill-name">Базы данных (SQL)</span>
+                                <div class="resume__skill-progress">
+                                    <div class="resume__skill-progress-bar" style="width: 70%"></div>
                                 </div>
                             </li>
-                            <li class="skills__item">
-                                <span class="skills__item-name">Git & GitHub</span>
-                                <div class="skills__progress">
-                                    <div class="skills__progress-bar" style="width: 85%"></div>
+                            <li class="resume__skill">
+                                <span class="resume__skill-name">Git & GitHub</span>
+                                <div class="resume__skill-progress">
+                                    <div class="resume__skill-progress-bar" style="width: 80%"></div>
                                 </div>
                             </li>
-                            <li class="skills__item">
-                                <span class="skills__item-name">Базы данных (SQL)</span>
-                                <div class="skills__progress">
-                                    <div class="skills__progress-bar" style="width: 70%"></div>
+                            <li class="resume__skill">
+                                <span class="resume__skill-name">Основы кибербезопасности</span>
+                                <div class="resume__skill-progress">
+                                    <div class="resume__skill-progress-bar" style="width: 65%"></div>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     
                     <!-- Soft skills -->
-                    <div class="skills__category">
-                        <h3 class="skills__category-title">
-                            <i class="fas fa-users skills__category-icon"></i> Soft Skills
+                    <div class="resume__skills-category">
+                        <h3 class="resume__skills-category-title">
+                            <i class="fas fa-users resume__skills-category-icon"></i> Soft Skills
                         </h3>
-                        <ul class="skills__list">
-                            <li class="skills__item">
-                                <span class="skills__item-name">Коммуникабельность</span>
-                                <div class="skills__progress">
-                                    <div class="skills__progress-bar" style="width: 95%"></div>
+                        <ul class="resume__skills-list">
+                            <li class="resume__skill">
+                                <span class="resume__skill-name">Аналитическое мышление</span>
+                                <div class="resume__skill-progress">
+                                    <div class="resume__skill-progress-bar" style="width: 90%"></div>
                                 </div>
                             </li>
-                            <li class="skills__item">
-                                <span class="skills__item-name">Работа в команде</span>
-                                <div class="skills__progress">
-                                    <div class="skills__progress-bar" style="width: 90%"></div>
+                            <li class="resume__skill">
+                                <span class="resume__skill-name">Работа в команде</span>
+                                <div class="resume__skill-progress">
+                                    <div class="resume__skill-progress-bar" style="width: 85%"></div>
                                 </div>
                             </li>
-                            <li class="skills__item">
-                                <span class="skills__item-name">Тайм-менеджмент</span>
-                                <div class="skills__progress">
-                                    <div class="skills__progress-bar" style="width: 85%"></div>
+                            <li class="resume__skill">
+                                <span class="resume__skill-name">Организация времени</span>
+                                <div class="resume__skill-progress">
+                                    <div class="resume__skill-progress-bar" style="width: 80%"></div>
                                 </div>
                             </li>
-                            <li class="skills__item">
-                                <span class="skills__item-name">Решение проблем</span>
-                                <div class="skills__progress">
-                                    <div class="skills__progress-bar" style="width: 90%"></div>
+                            <li class="resume__skill">
+                                <span class="resume__skill-name">Решение проблем</span>
+                                <div class="resume__skill-progress">
+                                    <div class="resume__skill-progress-bar" style="width: 88%"></div>
                                 </div>
                             </li>
-                            <li class="skills__item">
-                                <span class="skills__item-name">Адаптивность</span>
-                                <div class="skills__progress">
-                                    <div class="skills__progress-bar" style="width: 95%"></div>
+                            <li class="resume__skill">
+                                <span class="resume__skill-name">Адаптивность</span>
+                                <div class="resume__skill-progress">
+                                    <div class="resume__skill-progress-bar" style="width: 92%"></div>
                                 </div>
                             </li>
-                            <li class="skills__item">
-                                <span class="skills__item-name">Критическое мышление</span>
-                                <div class="skills__progress">
-                                    <div class="skills__progress-bar" style="width: 85%"></div>
+                            <li class="resume__skill">
+                                <span class="resume__skill-name">Самообучение</span>
+                                <div class="resume__skill-progress">
+                                    <div class="resume__skill-progress-bar" style="width: 95%"></div>
                                 </div>
                             </li>
                         </ul>
@@ -180,16 +186,16 @@
             </section>
 
             <!-- Блок с ссылкой на GitHub -->
-            <section class="resume__section github">
-                <h2 class="github__title resume__section-title">
-                    <i class="fab fa-github github__icon"></i> GitHub профиль
+            <section class="resume__github">
+                <h2 class="resume__section-title">
+                    <i class="fab fa-github resume__section-icon"></i> GitHub профиль
                 </h2>
-                <div class="github__content">
-                    <p class="github__text">Вы можете ознакомиться с моими проектами и активностью на GitHub:</p>
-                    <a href="https://github.com/ProFootik" target="_blank" class="github__link">
-                        <i class="fab fa-github github__link-icon"></i>
-                        <span class="github__link-text">https://github.com/ProFootik</span>
-                        <i class="fas fa-external-link-alt github__link-external"></i>
+                <div class="resume__github-content">
+                    <p class="resume__github-text">Вы можете ознакомиться с моими учебными проектами и кодом на GitHub:</p>
+                    <a href="https://github.com/ProFootik" target="_blank" class="resume__github-link">
+                        <i class="fab fa-github resume__github-link-icon"></i>
+                        <span class="resume__github-link-text">ProFootik</span>
+                        <i class="fas fa-external-link-alt resume__github-link-external"></i>
                     </a>
                 </div>
             </section>
@@ -198,7 +204,7 @@
         <!-- Подвал -->
         <footer class="resume__footer">
             <p class="resume__footer-text">© 2025 Резюме студента. Лабораторная работа №3.</p>
-            <p class="resume__footer-text">Контактная информация: magrov.iya@gmail.com | +7 (927) 693-79-08</p>
+            <p class="resume__footer-text">Контактная информация: magrov.ilya@gmail.com | +7 (927) 693-79-08</p>
         </footer>
     </div>
 </body>

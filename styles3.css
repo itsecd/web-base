@@ -47,10 +47,6 @@ body {
     padding: 30px;
 }
 
-.resume__section {
-    margin-bottom: 40px;
-}
-
 .resume__section-title {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
@@ -61,6 +57,11 @@ body {
     align-items: center;
     padding-bottom: 10px;
     border-bottom: 2px solid #eaeaea;
+}
+
+.resume__section-icon {
+    margin-right: 10px;
+    color: #4b6cb7;
 }
 
 /* Персональная информация */
@@ -74,12 +75,12 @@ body {
     border-bottom: 1px solid #eaeaea;
 }
 
-.personal__photo-container {
+.resume__photo-container {
     position: relative;
     flex-shrink: 0;
 }
 
-.personal__photo {
+.resume__photo {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -88,7 +89,7 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.personal__photo-label {
+.resume__photo-label {
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -101,12 +102,12 @@ body {
     font-weight: 600;
 }
 
-.personal__info {
+.resume__info {
     flex: 1;
     min-width: 300px;
 }
 
-.personal__fullname {
+.resume__fullname {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.2rem;
     font-weight: 700;
@@ -114,58 +115,61 @@ body {
     margin-bottom: 20px;
 }
 
-.personal__details {
+.resume__details {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.personal__detail {
+.resume__detail {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.personal__icon {
+.resume__detail-icon {
     color: #4b6cb7;
     font-size: 1.2rem;
     width: 24px;
 }
 
-.personal__text {
+.resume__detail-text {
     font-size: 1.1rem;
 }
 
 /* О себе */
-.about__content {
+.resume__about {
+    margin-bottom: 40px;
+}
+
+.resume__about-content {
     background-color: #f8f9fa;
     padding: 25px;
     border-radius: 10px;
     border-left: 5px solid #4b6cb7;
 }
 
-.about__text {
+.resume__about-text {
     margin-bottom: 15px;
     font-size: 1.05rem;
 }
 
-.about__text:last-child {
+.resume__about-text:last-child {
     margin-bottom: 0;
 }
 
-.about__icon {
-    margin-right: 10px;
-    color: #4b6cb7;
+/* Увлечения */
+.resume__hobbies {
+    margin-bottom: 40px;
 }
 
-/* Увлечения */
-.hobbies__list {
+.resume__hobbies-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.hobbies__item {
+.resume__hobby {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -175,40 +179,39 @@ body {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.hobbies__item:hover {
+.resume__hobby:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.hobbies__item-icon {
+.resume__hobby-icon {
     font-size: 1.5rem;
     color: #4b6cb7;
 }
 
-.hobbies__item-text {
+.resume__hobby-text {
     font-size: 1.1rem;
     font-weight: 500;
 }
 
-.hobbies__icon {
-    margin-right: 10px;
-    color: #4b6cb7;
+/* Навыки */
+.resume__skills {
+    margin-bottom: 40px;
 }
 
-/* Навыки */
-.skills__container {
+.resume__skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
 }
 
-.skills__category {
+.resume__skills-category {
     background-color: #f8f9fa;
     padding: 25px;
     border-radius: 10px;
 }
 
-.skills__category-title {
+.resume__skills-category-title {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
     font-weight: 600;
@@ -218,61 +221,60 @@ body {
     align-items: center;
 }
 
-.skills__category-icon {
+.resume__skills-category-icon {
     margin-right: 10px;
     color: #4b6cb7;
 }
 
-.skills__list {
+.resume__skills-list {
     list-style: none;
 }
 
-.skills__item {
+.resume__skill {
     margin-bottom: 20px;
 }
 
-.skills__item:last-child {
+.resume__skill:last-child {
     margin-bottom: 0;
 }
 
-.skills__item-name {
+.resume__skill-name {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
 }
 
-.skills__progress {
+.resume__skill-progress {
     height: 10px;
     background-color: #e0e0e0;
     border-radius: 5px;
     overflow: hidden;
 }
 
-.skills__progress-bar {
+.resume__skill-progress-bar {
     height: 100%;
     background: linear-gradient(90deg, #4b6cb7, #6a93cb);
     border-radius: 5px;
 }
 
-.skills__icon {
-    margin-right: 10px;
-    color: #4b6cb7;
+/* GitHub */
+.resume__github {
+    margin-bottom: 40px;
 }
 
-/* GitHub */
-.github__content {
+.resume__github-content {
     background-color: #f8f9fa;
     padding: 25px;
     border-radius: 10px;
     border-left: 5px solid #333;
 }
 
-.github__text {
+.resume__github-text {
     margin-bottom: 20px;
     font-size: 1.05rem;
 }
 
-.github__link {
+.resume__github-link {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -286,26 +288,26 @@ body {
     margin-bottom: 25px;
 }
 
-.github__link:hover {
+.resume__github-link:hover {
     background-color: #555;
     transform: translateY(-3px);
 }
 
-.github__link-icon {
+.resume__github-link-icon {
     font-size: 1.5rem;
 }
 
-.github__link-external {
+.resume__github-link-external {
     font-size: 0.9rem;
 }
 
-.github__stats {
+.resume__github-stats {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.github__stat {
+.resume__github-stat {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -315,17 +317,12 @@ body {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
-.github__stat-icon {
+.resume__github-stat-icon {
     color: #4b6cb7;
 }
 
-.github__stat-text {
+.resume__github-stat-text {
     font-weight: 500;
-}
-
-.github__icon {
-    margin-right: 10px;
-    color: #4b6cb7;
 }
 
 /* Подвал */
@@ -352,7 +349,7 @@ body {
         text-align: center;
     }
     
-    .personal__details {
+    .resume__details {
         align-items: center;
     }
     
@@ -360,19 +357,19 @@ body {
         font-size: 2rem;
     }
     
-    .personal__fullname {
+    .resume__fullname {
         font-size: 1.8rem;
     }
     
-    .skills__container {
+    .resume__skills-container {
         grid-template-columns: 1fr;
     }
     
-    .hobbies__list {
+    .resume__hobbies-list {
         grid-template-columns: 1fr;
     }
     
-    .github__stats {
+    .resume__github-stats {
         flex-direction: column;
         align-items: flex-start;
     }
