@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.task {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.caption {
+    text-align: center;
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.text-block {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: justify;
+    color: #c8ca67;
+    background-color: #01a263;
+    border-radius: 10px;
+    line-height: 1.5;
+}
+
+.text-block p {
+    margin: 10px 0;
+}
+
+.images {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    margin: 20px auto;
+}
+
+.image-top {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 300px;
+    height: 200px;
+    z-index: 2;
+}
+
+.image-bottom {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 300px;
+    height: 200px;
+    z-index: 1;
+}
+
+.traffic-light {
+    width: 120px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.traffic-light__light {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #666;
+}
+
+.traffic-light__light_red {
+    background-color: #ff4444;
+}
+
+.traffic-light__light_yellow {
+    background-color: #ffff44;
+}
+
+.traffic-light__light_green {
+    background-color: #44ff44;
+}
+
+.maze-section {
+    display: flex;
+    justify-content: center;
+}
+
+.maze {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 0;
+    margin: 30px auto;
+    width: 300px;
+}
+
+.maze__cell {
+    background-color: #f8f9fa;
+    border: 3px solid #333;
+    box-sizing: border-box;
+}
+
+.maze__cell_no-top {
+    border-top: none;
+}
+
+.maze__cell_no-right {
+    border-right: none;
+}
+
+.maze__cell_no-bottom {
+    border-bottom: none;
+}
+
+.maze__cell_no-left {
+    border-left: none;
+}

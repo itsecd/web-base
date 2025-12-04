@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>калькулятор</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌸 калькулятор 🌸</h1>
+        </div>
+        
+        <div class="calculator-card">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="num1" class="input-label">Первое число:</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">🔢</span>
+                        <input type="number" id="num1" class="input-field" placeholder="Введите число...">
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="operation" class="input-label">Что делаем?</label>
+                    <div class="select-wrapper">
+                        <select id="operation" class="operation-select">
+                            <option value="add">Сложение (+)</option>
+                            <option value="subtract">Вычитание (-)</option>
+                            <option value="multiply">Умножение (×)</option>
+                            <option value="divide">Деление (÷)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="num2" class="input-label">Второе число:</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">🔢</span>
+                        <input type="number" id="num2" class="input-field" placeholder="Введите число...">
+                    </div>
+                </div>
+            </div>
+            
+            <button id="calculate-btn" class="calculate-btn">
+                Посчитать результат
+            </button>
+            
+            <div class="result-section">
+                <div class="result-label">
+                    <span class="result-icon">🎀</span>
+                    Результат:
+                </div>
+                <div id="result" class="result-box">0</div>
+            </div>
+            
+            <div id="error-message" class="error-message"></div>
+        </div>
+        
+        <div class="footer">
+            <p>Лабораторная работа 4 | Веб-технологии</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
