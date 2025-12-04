@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+}
+
+.profile {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.profile__sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 300px;
+  background-color: grey;
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+.sidebar__photo-wrapper {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.sidebar__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.sidebar__name {
+  font-size: 18px;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.sidebar__github {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  margin-left: -20px;
+}
+
+.__github__icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.sidebar__info {
+  width: 100%;
+}
+
+.sidebar__info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.__info__label {
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.__info__value {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar__description {
+  margin-top: 20px;
+  padding: 12px 16px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 100%;
+  text-align: left;
+}
+
+.profile__content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.content__title {
+  margin-top: 0;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+.content__skills,
+.content__hobbies {
+  margin-bottom: 25px;
+}
+
+.__skills__subtitle {
+  color: #2c3e50;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.__skills__list,
+.__hobbies__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.__list__item {
+  padding: 10px 14px;
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
