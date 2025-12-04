@@ -1,102 +1,140 @@
-body {
+.page {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 20px;
     padding: 0;
 }
 
-section {
+.page__header {
+    margin-bottom: 30px;
+}
+
+.page__title {
+    font-size: 2rem;
+    color: #333;
+}
+
+.task {
     margin-bottom: 40px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
+.task__title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #222;
+}
 
-.streaming-services li {
+.task__description {
+    margin-bottom: 20px;
+}
+
+.streaming-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.streaming-list__item {
     transition: color 0.7s ease;
     cursor: pointer;
     padding: 5px;
     margin: 5px 0;
 }
 
-.streaming-services li:hover {
+.streaming-list__item:hover {
     color: #ee3030;
 }
-
 
 .parent {
     margin: 15px 0;
     padding: 10px;
     border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
+.parent__label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
 
-.parent-1 .child {
+.parent__child {
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.parent--first .parent__child {
     color: red;
 }
 
-
-.parent-2 {
+.parent--second {
     color: orange;
-
 }
 
-
-.parent-2 .child {
+.parent--second .parent__child {
     color: #b4005a;
-    border: 2px dashed orange; 
+    border: 2px dashed orange;
 }
 
-
-.parent-2 ~ .parent-3 {
+.parent--second ~ .parent--third {
     color: green;
 }
 
-.parent-2 ~ .parent-3 .child {
+.parent--second ~ .parent--third .parent__child {
     color: green;
 }
 
-
-.parent-3:not(.parent-2 ~ .parent-3) {
+.parent--third:not(.parent--second ~ .parent--third) {
     color: initial;
 }
 
-.parent-3:not(.parent-2 ~ .parent-3) .child {
+.parent--third:not(.parent--second ~ .parent--third) .parent__child {
     color: initial;
 }
 
-
-.parent-3 .guest {
+.parent__child--guest {
     color: purple !important;
     border: none !important;
 }
 
+.languages-list {
+    list-style: none;
+    padding-left: 0;
+}
 
-.programming-languages a {
+.languages-list__item {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.languages-list__link {
     font-weight: bold;
     text-decoration: none;
     color: #333;
     position: relative;
+    padding-right: 20px;
 }
 
-
-.programming-languages a:after {
+.languages-list__link::after {
     content: "🌐";
     font-size: 0.9em;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
-
-.programming-languages a:hover {
+.languages-list__link:hover {
     color: #26dee4;
 }
 
-
-.programming-languages:after {
+.languages-list::after {
     content: "";
     display: block;
     margin-top: 15px;
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     background-color: #1e2963;
     border-left: 4px solid #0056b3;
     background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
@@ -104,5 +142,4 @@ section {
     background-position: 15px center;
     background-size: 150px 40px;
     border-radius: 5px;
-
 }
