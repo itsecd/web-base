@@ -3,68 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторная работа - Верстка</title>
+    <title>Лабораторная работа — Верстка</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Более сложные ситуации при верстке</h1>
+<body class="page">
+    <header class="page__header">
+        <h1 class="page__title">Более сложные ситуации при верстке</h1>
+    </header>
 
+    <main class="page__content">
+        <section class="task task--first">
+            <h2 class="task__title">Популярные стриминговые сервисы:</h2>
+            <ul class="streaming-list">
+                <li class="streaming-list__item">Netflix</li>
+                <li class="streaming-list__item">YouTube Premium</li>
+                <li class="streaming-list__item">Spotify</li>
+                <li class="streaming-list__item">Disney+</li>
+                <li class="streaming-list__item">Twitch</li>
+            </ul>
+        </section>
 
-    <section class="task-1">
-        <h2>Популярные стриминговые сервисы:</h2>
-        <ul class="streaming-services">
-            <li>Netflix</li>
-            <li>YouTube Premium</li>
-            <li>Spotify</li>
-            <li>Disney+</li>
-            <li>Twitch</li>
-        </ul>
-    </section>
+        <section class="task task--second">
+            <h2 class="task__title">Задачка о детях и родителях</h2>
 
-    <section class="task-2">
-        <h2>Задачка о детях и родителях</h2>
+            <div class="parent parent--first">
+                <strong class="parent__label">Parent 1</strong>
+                <div class="parent__child">child 1</div>
+                <div class="parent__child">child 2</div>
+                <div class="parent__child">child 3</div>
+                <div class="parent__child">child 4</div>
+            </div>
 
-        <div class="parent parent-1">
-            <strong>Parent 1</strong>
-            <div class="child">child 1</div>
-            <div class="child">child 2</div>
-            <div class="child">child 3</div>
-            <div class="child">child 4</div>
-        </div>
+            <div class="parent parent--third">
+                <strong class="parent__label">Parent 3</strong>
+                <div class="parent__child">child 1</div>
+                <div class="parent__child">child 2</div>
+            </div>
 
-        <div class="parent parent-3">
-            <strong>Parent 3</strong>
-            <div class="child">child 1</div>
-            <div class="child">child 2</div>
-        </div>
+            <div class="parent parent--second">
+                <strong class="parent__label">Parent 2</strong>
+                <div class="parent__child">child 1</div>
+                <div class="parent__child">child 2</div>
+            </div>
 
-        <div class="parent parent-2">
-            <strong>Parent 2</strong>
-            <div class="child">child 1</div>
-            <div class="child">child 2</div>
-        </div>
+            <div class="parent parent--third parent--third--special">
+                <strong class="parent__label">Parent 3</strong>
+                <div class="parent__child">child 1</div>
+                <div class="parent__child">child 2</div>
+                <div class="parent__child parent__child--guest">child 3</div>
+            </div>
+        </section>
 
-        <div class="parent parent-3">
-            <strong>Parent 3</strong>
-            <div class="child">child 1</div>
-            <div class="child">child 2</div>
-            <div class="child guest">child 2</div>
-        </div>
-    </section>
+        <section class="task task--third">
+            <h2 class="task__title">Языки программирования</h2>
+            <p class="task__description">
+                Языки программирования — это инструменты, с помощью которых разработчики создают программное обеспечение, веб-приложения, игры, алгоритмы и многое другое. Каждый язык имеет свои особенности, синтаксис и сферу применения. Ниже представлены некоторые из наиболее известных языков:
+            </p>
 
-
-    <section class="task-3">
-        <h2>Языки программирования</h2>
-        <p>Языки программирования — это инструменты, с помощью которых разработчики создают программное обеспечение, веб-приложения, игры, алгоритмы и многое другое. Каждый язык имеет свои особенности, синтаксис и сферу применения. Ниже представлены некоторые из наиболее известных языков:</p>
-
-        <ul class="programming-languages">
-            <li><a href="#">Python</a> – высокоуровневый язык с простым синтаксисом, популярный в Data Science, веб-разработке и автоматизации.</li>
-            <li><a href="#">JavaScript</a> – основной язык для фронтенд-разработки, работает в браузерах и на сервере (Node.js).</li>
-            <li><a href="#">Java</a> – объектно-ориентированный язык, широко используется в корпоративных приложениях и Android-разработке.</li>
-            <li><a href="#">C++</a> – мощный язык для системного программирования, игр и высокопроизводительных приложений.</li>
-            <li><a href="#">Go (Golang)</a> – созданный Google, язык для высоконагруженных сетевых сервисов и облачных технологий.</li>
-           
-
-    </section>
+            <ul class="languages-list">
+                <li class="languages-list__item">
+                    <a href="#" class="languages-list__link">Python</a> – высокоуровневый язык с простым синтаксисом, популярный в Data Science, веб-разработке и автоматизации.
+                </li>
+                <li class="languages-list__item">
+                    <a href="#" class="languages-list__link">JavaScript</a> – основной язык для фронтенд-разработки, работает в браузерах и на сервере (Node.js).
+                </li>
+                <li class="languages-list__item">
+                    <a href="#" class="languages-list__link">Java</a> – объектно-ориентированный язык, широко используется в корпоративных приложениях и Android-разработке.
+                </li>
+                <li class="languages-list__item">
+                    <a href="#" class="languages-list__link">C++</a> – мощный язык для системного программирования, игр и высокопроизводительных приложений.
+                </li>
+                <li class="languages-list__item">
+                    <a href="#" class="languages-list__link">Go (Golang)</a> – созданный Google, язык для высоконагруженных сетевых сервисов и облачных технологий.
+                </li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>
