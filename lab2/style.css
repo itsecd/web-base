@@ -1,0 +1,155 @@
+body {
+  background: #fff0f6;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  color: #4a0433;
+}
+
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 50px rgba(255, 105, 180, 0.2);
+  border-left: 5px solid #ec4899;
+}
+
+.page__title {
+  text-align: center;
+  color: #be185d;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #f472b6;
+}
+
+.task {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #fff5f9;
+  border-radius: 10px;
+}
+
+.task__title {
+  border-left: 4px solid #f472b6;
+  padding-left: 15px;
+  background: #ffe4ec;
+  color: #a21caf;
+  margin: 0 0 14px;
+}
+
+.list {
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+.list__item {
+  color: #500724;
+  transition: color 0.3s ease-in-out;
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+.list__item:hover {
+  color: #db2777;
+}
+
+.parent-1__child {
+  color: red;
+}
+
+.parent-2 {
+  color: orange;
+}
+
+.parent-2__child {
+  color: #b4005a;
+  border: 2px dotted orange;
+  max-width: 180px;
+  margin: 6px 0;
+  padding: 6px;
+}
+
+.parent-3__child {
+  color: inherit;
+}
+
+.parent-2 ~ .parent-3,
+.parent-2 ~ .parent-3 .parent-3__title,
+.parent-2 ~ .parent-3 .parent-3__child {
+  color: green;
+}
+
+.parent-3 .parent-2__child {
+  border: none !important;
+  color: purple !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.languages {
+  margin: 0 0 0 20px;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+.languages::after {
+  content: "";
+  display: block;
+  background: #0e4c92 url("https://ssau.ru/i/logo/logo-white-ru.svg  ") center/100px no-repeat;
+  width: 140px;
+  height: 72px;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.languages__item {
+  margin: 10px 0;
+  line-height: 1.45;
+  position: relative;
+  padding-left: 24px;
+}
+
+.languages__item::before {
+  content: "🌐";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1em;
+}
+
+.item__link {
+  text-decoration: none;
+  color: #831843;
+  font-weight: bold;
+}
+
+.item__link:hover {
+  color: #db2777;
+}
+
+.task__note {
+  color: #9d174d;
+  margin-top: 12px;
+}
+
+.task__cta {
+  margin-top: 14px;
+}
+
+.cta__pinterest-link {
+  display: inline-block;
+  background: #ec4899;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.cta__pinterest-link:hover {
+  opacity: 0.95;
+  background: #db2777;
+}
