@@ -35,6 +35,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 30% center;
 }
 
 .resume__info {
@@ -81,6 +82,7 @@ body {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
+  font-style: italic;
 }
 
 .skills-columns__list {
