@@ -113,14 +113,41 @@ body {
     grid-row: 3 / 4;
 }
 
-.third-block__info, .fifth-block__info, .fourth-block__info {
+.third-block__info,
+.fifth-block__info,
+.fourth-block__info {
     display: flex;
     flex-direction: column;
     margin: 5%;
 }
 
-.hard-skills__list, .soft-skills__list, .activities__list {
+.hard-skills__list,
+.soft-skills__list,
+.activities__list,
+.projects__list {
     list-style-type: none;
+}
+
+.resume__sixth-block {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+}
+
+.sixth-block__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
+}
+
+.project__link {
+    color: #012E40;
+    text-decoration: none;
+}
+
+.project__link:hover {
+    color: #03A696;
+    text-decoration: underline;
 }
 
 [class^="list__"]::before {
