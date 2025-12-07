@@ -1,0 +1,57 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор - Лабораторная работа 4</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="calculator">
+        <header class="calculator__header">
+            <h1 class="header__title">Простой калькулятор</h1>
+            <p class="header__subtitle">Лабораторная работа 4</p>
+        </header>
+
+        <main class="calculator__main">
+            <div class="calculator__inputs">
+                <div class="inputs__group">
+                    <label for="num1" class="inputs__label">Первое число:</label>
+                    <input type="number" id="num1" class="inputs__input" placeholder="Введите число">
+                </div>
+
+                <div class="inputs__group">
+                    <label for="operation" class="inputs__label">Операция:</label>
+                    <select id="operation" class="inputs__select">
+                        <option value="add">Сложение (+)</option>
+                        <option value="subtract">Вычитание (-)</option>
+                        <option value="multiply">Умножение (×)</option>
+                        <option value="divide">Деление (÷)</option>
+                    </select>
+                </div>
+
+                <div class="inputs__group">
+                    <label for="num2" class="inputs__label">Второе число:</label>
+                    <input type="number" id="num2" class="inputs__input" placeholder="Введите число">
+                </div>
+            </div>
+
+            <div class="calculator__buttons">
+                <button id="calculate" class="buttons__button buttons__button--primary">Вычислить</button>
+                <button id="clear" class="buttons__button buttons__button--secondary">Очистить</button>
+            </div>
+
+            <div class="calculator__result">
+                <h3 class="result__title">Результат:</h3>
+                <div id="result" class="result__value">—</div>
+                <div id="error" class="result__error"></div>
+            </div>
+        </main>
+
+        <footer class="calculator__footer">
+            <a href="index.html" class="footer__link">← Вернуться к резюме</a>
+        </footer>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
