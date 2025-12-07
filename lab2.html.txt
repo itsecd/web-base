@@ -1,0 +1,98 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 2</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Лабораторная работа 2</h1>
+        
+        <section class="task">
+            <h2>Задание 1: Анимированный список</h2>
+            <ul class="music-list">
+                <li class="music-list__item">Пол-музыка</li>
+                <li class="music-list__item">Хил-хол</li>
+                <li class="music-list__item">Рок</li>
+                <li class="music-list__item">Электронная музыка</li>
+                <li class="music-list__item">R&B</li>
+            </ul>
+        </section>
+
+        <section class="task">
+
+<section class="task">
+    <h2>Задание 2: Родители и дети</h2>
+    <div class="parent parent-1">
+        <h3>Parent 1</h3>
+        <div class="parent-1__child">child 1</div>
+        <div class="parent-1__child">child 2</div>
+        <div class="parent-1__child">child 3</div>
+        <div class="parent-1__child">child 4</div>
+    </div>
+
+    <div class="parent parent-3">
+        <h3>Parent 3</h3>
+        <div class="parent-3__child">child 1</div>
+        <div class="parent-3__child">child 2</div>
+    </div>
+
+    <div class="parent parent-2">
+        <h3>Parent 2</h3>
+        <div class="parent-2__child">child 1</div>
+        <div class="parent-2__child">child 2</div>
+    </div>
+
+    <div class="parent parent-3">
+        <h3>Parent 3</h3>
+        <div class="parent-2__child">child 1</div> 
+        <div class="parent-3__child">child 2</div>
+        <div class="parent-3__child">child 2</div>
+    </div>
+</section>
+
+<section class="task">
+    <h2>Задание 3: Текст с языками программирования</h2>
+    <div class="programming-text">
+        <p>Языки программирования — это инструменты, с помощью которых разработчики создают программное обеспечение, веб-приложения, игры, алгоритмы и многое другое. Каждый язык имеет свои особенности, синтаксис и сферу применения. Ниже представлены некоторые из наиболее известных языков:</p>
+        
+        <ul class="programming-text__languages-list">
+            <li class="languages-list__item">
+                <a href="#" class="item__link">Python</a> – высокоуровневый язык с простым синтаксисом, популярный в Data Science, веб-разработке и автоматизации.
+            </li>
+            <li class="languages-list__item">
+                <a href="#" class="item__link">JavaScript</a> – основной язык для фронтенд-разработки, работает в браузерах и на сервере (Node.js).
+            </li>
+            <li class="languages-list__item">
+                <a href="#" class="item__link">Java</a> – объектно-ориентированный язык, широко используется в корпоративных приложениях и Android-разработке.
+            </li>
+            <li class="languages-list__item">
+                <a href="#" class="item__link">C++</a> – мощный язык для системного программирования, игр и высокопроизводительных приложений.
+            </li>
+            <li class="languages-list__item">
+                <a href="#" class="item__link">C#</a> – язык от Microsoft, применяется в разработке под Windows, играх (Unity) и веб-приложениях.
+            </li>
+            <li class="languages-list__item">
+                <a href="#" class="item__link">Go (Golang)</a> – созданный Google, язык для высоконагруженных сетевых сервисов и облачных технологий.
+            </li>
+            <li class="languages-list__item">
+                <a href="#" class="item__link">Ruby</a> – известен благодаря фреймворку Ruby on Rails для веб-разработки.
+            </li>
+            <li class="languages-list__item">
+                <a href="#" class="item__link">Swift</a> – язык Apple для разработки под iOS и macOS.
+            </li>
+            <li class="languages-list__item">
+                <a href="#" class="item__link">Kotlin</a> – современный язык, официально поддерживаемый для Android-разработки.
+            </li>
+            <li class="languages-list__item">
+                <a href="#" class="item__link">Rust</a> – язык системного программирования с акцентом на безопасность и производительность.
+            </li>
+        </ul>
+        
+        <p>Это лишь малая часть из множества существующих языков, и выбор зависит от задач, которые нужно решить.</p>
+    </div>
+</section>
+    </div>
+</body>
+</html>

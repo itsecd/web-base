@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #265a7e;
+    background-color: #f5f5f5;
+}
+
+.resume {
+    display: flex;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.resume__left {
+    flex: 1;
+    background: #265a7e;
+    color: #dce4e9;
+    padding: 30px;
+}
+
+.resume__right {
+    flex: 2;
+    padding: 40px;
+}
+
+.left__photo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.photo__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #1a4661;
+}
+.section__title {
+    font-size: 18px;
+    color: #3498da;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #3498da;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.resume__left .section__title {
+    color: #dce4e9;
+    border-bottom: 2px solid #dce4e9;
+}
+
+.right__header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.header__name {
+    font-size: 32px;
+    color: #265a7e;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.header__position {
+    font-size: 18px;
+    color: #7f8c8d;
+    /* Убрал курсив */
+}
+
+.section__contacts {
+    margin-bottom: 20px;
+}
+
+.contacts__item {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item__label {
+    font-weight: bold;
+    color: #bdc3c7;
+    font-size: 14px;
+}
+
+.item__link, .item__text {
+    color: #dce4e9;
+    text-decoration: none;
+    margin-top: 2px;
+}
+
+.item__link:hover {
+    color: #3498da;
+}
+
+.section__skills, .section__hobbies {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.skills__item, .hobbies__item {
+    background: #1a4661;
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.section__about, .section__goals {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.section__about p, .section__goals p {
+    margin-bottom: 10px;
+}
+
+.section__education {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-left: 4px solid #3498da;
+}
+
+.education__title {
+    font-size: 18px;
+    color: #265a7e;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.education__specialty {
+    color: #7f8c8d;
+    margin-bottom: 5px;
+    /* Убрал курсив */
+}
+
+.education__period {
+    color: #95a5a6;
+    font-size: 14px;
+}
