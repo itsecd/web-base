@@ -1,1 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.task {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.task:last-child {
+    border-bottom: none;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #444;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+
+.music-list {
+    list-style: none;
+    padding: 0;
+}
+
+.music-list__item {
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.music-list__item:hover {
+    color: #ff6b6b;
+}
+
+
+.parent {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+
+.parent-1__child {
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 4px;
+    color: red;
+}
+
+.parent-2 {
+    color: orange;
+}
+
+.parent-2__child {
+    padding: 6px 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    color: #b4085a;
+    border: 2px dashed orange;
+}
+
+.parent-2 ~ .parent-3 {
+    color: green;
+}
+
+.parent-2 ~ .parent-3 .parent-3__child {
+    color: green;
+}
+
+.parent-3__child {
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+
+.parent-3 .parent-2__child,
+.parent-2__child ~ .parent-3 .parent-3__child {
+    color: purple;
+    border: none;
+    padding: 8px 12px;
+}
+
+
+.programming-text {
+    font-size: 16px;
+    color: #333;
+}
+
+.programming-text__languages-list {
+    list-style: none;
+    padding: 0;
+}
+
+.languages-list__item {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.languages-list__item::before {
+    content: "🔍";
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.item__link {
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+}
+
+.item__link:hover {
+    color: #007bff;
+}
+
+
+.programming-text__languages-list::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 60px;
+    margin: 30px auto 0;
+    background: url('https://ssau.ru/i/logo/logo-white-ru.svg') center/contain no-repeat;
+    filter: brightness(0.2);
+}
 
