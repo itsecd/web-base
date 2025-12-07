@@ -47,7 +47,7 @@ body {
     padding: 30px;
 }
 
-.resume__section-title {
+.content__section-title {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
     font-weight: 600;
@@ -59,13 +59,8 @@ body {
     border-bottom: 2px solid #eaeaea;
 }
 
-.resume__section-icon {
-    margin-right: 10px;
-    color: #4b6cb7;
-}
-
-/* Персональная информация */
-.resume__personal {
+/* Блок с персональной информацией */
+.content__personal {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -75,12 +70,12 @@ body {
     border-bottom: 1px solid #eaeaea;
 }
 
-.resume__photo-container {
+.personal__photo-container {
     position: relative;
     flex-shrink: 0;
 }
 
-.resume__photo {
+.photo-container__photo {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -89,7 +84,7 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.resume__photo-label {
+.photo-container__label {
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -102,12 +97,12 @@ body {
     font-weight: 600;
 }
 
-.resume__info {
+.personal__info {
     flex: 1;
     min-width: 300px;
 }
 
-.resume__fullname {
+.info__fullname {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.2rem;
     font-weight: 700;
@@ -115,61 +110,71 @@ body {
     margin-bottom: 20px;
 }
 
-.resume__details {
+.info__details {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.resume__detail {
+.details__detail {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.resume__detail-icon {
+.details__detail-icon {
     color: #4b6cb7;
     font-size: 1.2rem;
     width: 24px;
 }
 
-.resume__detail-text {
+.details__detail-text {
     font-size: 1.1rem;
 }
 
-/* О себе */
-.resume__about {
+/* Блок "О себе" */
+.content__about {
     margin-bottom: 40px;
 }
 
-.resume__about-content {
+.about__icon {
+    margin-right: 10px;
+    color: #4b6cb7;
+}
+
+.about__content {
     background-color: #f8f9fa;
     padding: 25px;
     border-radius: 10px;
     border-left: 5px solid #4b6cb7;
 }
 
-.resume__about-text {
+.about__text {
     margin-bottom: 15px;
     font-size: 1.05rem;
 }
 
-.resume__about-text:last-child {
+.about__text:last-child {
     margin-bottom: 0;
 }
 
-/* Увлечения */
-.resume__hobbies {
+/* Блок с увлечениями */
+.content__hobbies {
     margin-bottom: 40px;
 }
 
-.resume__hobbies-list {
+.hobbies__icon {
+    margin-right: 10px;
+    color: #4b6cb7;
+}
+
+.hobbies__list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.resume__hobby {
+.hobbies__item {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -179,39 +184,44 @@ body {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.resume__hobby:hover {
+.hobbies__item:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.resume__hobby-icon {
+.hobbies__item-icon {
     font-size: 1.5rem;
     color: #4b6cb7;
 }
 
-.resume__hobby-text {
+.hobbies__item-text {
     font-size: 1.1rem;
     font-weight: 500;
 }
 
-/* Навыки */
-.resume__skills {
+/* Блок с навыками */
+.content__skills {
     margin-bottom: 40px;
 }
 
-.resume__skills-container {
+.skills__icon {
+    margin-right: 10px;
+    color: #4b6cb7;
+}
+
+.skills__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
 }
 
-.resume__skills-category {
+.skills__category {
     background-color: #f8f9fa;
     padding: 25px;
     border-radius: 10px;
 }
 
-.resume__skills-category-title {
+.skills__category-title {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
     font-weight: 600;
@@ -221,60 +231,65 @@ body {
     align-items: center;
 }
 
-.resume__skills-category-icon {
+.skills__category-icon {
     margin-right: 10px;
     color: #4b6cb7;
 }
 
-.resume__skills-list {
+.skills__list {
     list-style: none;
 }
 
-.resume__skill {
+.skills__item {
     margin-bottom: 20px;
 }
 
-.resume__skill:last-child {
+.skills__item:last-child {
     margin-bottom: 0;
 }
 
-.resume__skill-name {
+.skills__item-name {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
 }
 
-.resume__skill-progress {
+.skills__progress {
     height: 10px;
     background-color: #e0e0e0;
     border-radius: 5px;
     overflow: hidden;
 }
 
-.resume__skill-progress-bar {
+.skills__progress-bar {
     height: 100%;
     background: linear-gradient(90deg, #4b6cb7, #6a93cb);
     border-radius: 5px;
 }
 
-/* GitHub */
-.resume__github {
+/* Блок с GitHub */
+.content__github {
     margin-bottom: 40px;
 }
 
-.resume__github-content {
+.github__icon {
+    margin-right: 10px;
+    color: #4b6cb7;
+}
+
+.github__content {
     background-color: #f8f9fa;
     padding: 25px;
     border-radius: 10px;
     border-left: 5px solid #333;
 }
 
-.resume__github-text {
+.github__text {
     margin-bottom: 20px;
     font-size: 1.05rem;
 }
 
-.resume__github-link {
+.github__link {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -288,26 +303,26 @@ body {
     margin-bottom: 25px;
 }
 
-.resume__github-link:hover {
+.github__link:hover {
     background-color: #555;
     transform: translateY(-3px);
 }
 
-.resume__github-link-icon {
+.github__link-icon {
     font-size: 1.5rem;
 }
 
-.resume__github-link-external {
+.github__link-external {
     font-size: 0.9rem;
 }
 
-.resume__github-stats {
+.github__stats {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.resume__github-stat {
+.github__stat {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -317,11 +332,11 @@ body {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
-.resume__github-stat-icon {
+.github__stat-icon {
     color: #4b6cb7;
 }
 
-.resume__github-stat-text {
+.github__stat-text {
     font-weight: 500;
 }
 
@@ -344,12 +359,12 @@ body {
 
 /* Адаптивность */
 @media (max-width: 768px) {
-    .resume__personal {
+    .content__personal {
         flex-direction: column;
         text-align: center;
     }
     
-    .resume__details {
+    .info__details {
         align-items: center;
     }
     
@@ -357,19 +372,19 @@ body {
         font-size: 2rem;
     }
     
-    .resume__fullname {
+    .info__fullname {
         font-size: 1.8rem;
     }
     
-    .resume__skills-container {
+    .skills__container {
         grid-template-columns: 1fr;
     }
     
-    .resume__hobbies-list {
+    .hobbies__list {
         grid-template-columns: 1fr;
     }
     
-    .resume__github-stats {
+    .github__stats {
         flex-direction: column;
         align-items: flex-start;
     }
