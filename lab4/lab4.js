@@ -1,0 +1,99 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const firstInput = document.getElementById("number1");
+    const secondInput = document.getElementById("number2");
+    const opSelect = document.getElementById("operation");
+    const btnCalc = document.getElementById("btnCalc");
+    const outResult = document.getElementById("outResult");
+    const outError = document.getElementById("error");
+
+    if (
+        !firstInput ||
+        !secondInput ||
+        !opSelect ||
+        !btnCalc ||
+        !outResult ||
+        !outError
+    ) {
+        throw new Error(
+            "Ошибка: один или нескольких элементов интерфейса не найдено."
+        );
+    }
+
+    function checkNumber(value) {
+        const trimmed = value.trim();
+        if (trimmed === "") {
+            throw new Error("Поле не должно быть пустым");
+        }
+
+        const num = Number(trimmed);
+
+        if (String(num) === "NaN" || !isFinite(num)) {
+            throw new Error("Введите корректное число");
+        }
+
+        return num;
+    }
+
+    function compute(a, b, kind) {
+        switch (kind) {
+            case "add":
+                return a + b;
+
+            case "sub":
+                return a - b;
+
+            case "mul":
+                return a * b;
+
+            case "div":
+                if (b === 0) {
+                    throw new Error("Деление на ноль невозможно");
+                }
+                return a / b;
+
+            default:
+                throw new Error("Неизвестная операция");
+        }
+    }
+
+    function displayError(text) {
+        outError.textContent = text;
+        outResult.textContent = "—";
+    }
+
+    function clearError() {
+        outError.textContent = "";
+    }
+
+    function displayResult(val) {
+        clearError();
+        outResult.textContent = val;
+    }
+
+    function process() {
+        clearError();
+
+        try {
+            const x = checkNumber(firstInput.value);
+            const y = checkNumber(secondInput.value);
+            const op = opSelect.value;
+
+            const res = compute(x, y, op);
+            displayResult(res);
+        } catch (err) {
+            displayError(err.message || err);
+        }
+    }
+
+    btnCalc.addEventListener("click", process);
+
+    [firstInput, secondInput].forEach(function (inp) {
+        inp.addEventListener("keypress", function (ev) {
+            if (ev.key === "Enter") {
+                process();
+            }
+        });
+
+        inp.addEventListener("input", clearError);
+    });
+});

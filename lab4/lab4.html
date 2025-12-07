@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab4 - Калькулятор</title>
+    <link rel="stylesheet" href="lab4.css" />
+</head>
+
+<body>
+    <div class="calculator">
+        <h1 class="calculator__title">Калькулятор</h1>
+
+        <div class="inputs-group">
+            <div class="input-group">
+                <label class="input-group__label" for="number1">Число 1</label>
+                <input type="text" id="number1" class="input-group__input" />
+            </div>
+
+            <div class="input-group">
+                <label class="input-group__label" for="number2">Число 2</label>
+                <input type="text" id="number2" class="input-group__input" />
+            </div>
+        </div>
+
+        <div class="operation-group">
+            <label class="operation-group__label" for="operation">Операция</label>
+            <select id="operation" class="operation-group__select">
+                <option value="add">Сложение</option>
+                <option value="sub">Вычитание</option>
+                <option value="mul">Умножение</option>
+                <option value="div">Деление</option>
+            </select>
+        </div>
+
+        <button id="btnCalc" class="calculator__button">Вычислить</button>
+
+        <div id="error" class="error-box"></div>
+
+        <div class="result-container">
+            <span class="result-container__label">Результат:</span>
+            <span id="outResult" class="result-container__result">—</span>
+        </div>
+    </div>
+
+    <script src="lab4.js"></script>
+</body>
+
+</html>
