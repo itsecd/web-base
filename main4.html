@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лфбораторная работа 4</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Style4.css">
+</head>
+<body>
+    <div class="calculator">
+        <header class="calculator__header">
+            <h1 class="calculator__title">
+                <i class="fas fa-calculator"></i> Калькулятор
+            </h1>
+        </header>
+        
+        <main class="calculator__main">
+            <form class="calculator__form" id="calculatorForm">
+                <!-- Первое число -->
+                <div class="calculator__input-group">
+                    <label class="calculator__label" for="firstNumber">
+                        Первое число
+                    </label>
+                    <input class="calculator__input" 
+                           type="number" 
+                           id="firstNumber" 
+                           placeholder="Введите число"
+                           step="any"
+                           required>
+                </div>
+                
+                <!-- Операция -->
+                <div class="calculator__operation">
+                    <select class="calculator__select" id="operation" required>
+                        <option value="add">Сложение (+)</option>
+                        <option value="subtract">Вычитание (-)</option>
+                        <option value="multiply">Умножение (×)</option>
+                        <option value="divide">Деление (÷)</option>
+                    </select>
+                    <div class="calculator__icon" id="operationIcon">+</div>
+                </div>
+                
+                <!-- Второе число -->
+                <div class="calculator__input-group">
+                    <label class="calculator__label" for="secondNumber">
+                        Второе число
+                    </label>
+                    <input class="calculator__input" 
+                           type="number" 
+                           id="secondNumber" 
+                           placeholder="Введите число"
+                           step="any"
+                           required>
+                </div>
+                
+                <!-- Кнопки -->
+                <div class="calculator__buttons">
+                    <button class="calculator__button calculator__button--calculate" 
+                            type="submit"
+                            id="calculateBtn">
+                        <i class="fas fa-equals"></i> Вычислить
+                    </button>
+                    <button class="calculator__button calculator__button--reset" 
+                            type="button"
+                            id="resetBtn">
+                        <i class="fas fa-redo"></i> Сбросить
+                    </button>
+                </div>
+            </form>
+            
+            <!-- Результат -->
+            <div class="calculator__result">
+                <h3 class="calculator__result-title">Результат:</h3>
+                <div class="calculator__result-value" id="result">
+                    Здесь появится результат
+                </div>
+            </div>
+            
+            <!-- История -->
+            <div class="calculator__history">
+                <h3 class="calculator__history-title">
+                    <i class="fas fa-history"></i> История вычислений
+                </h3>
+                <ul class="calculator__history-list" id="historyList">
+                    <!-- История будет здесь -->
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
