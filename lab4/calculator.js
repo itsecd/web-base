@@ -6,49 +6,68 @@ document.addEventListener("DOMContentLoaded", function () {
   const resultElement = document.getElementById("result");
   const errorElement = document.getElementById("error");
 
-  function calculate() {
-    const num1 = parseFloat(num1Input.value);
-    const num2 = parseFloat(num2Input.value);
-    const operation = operationSelect.value;
-
-    errorElement.classList.remove("calculator__error--visible");
-    errorElement.textContent = "";
-
+  function validateInputs(num1, num2) {
     if (isNaN(num1) || isNaN(num2)) {
-      showError("Пожалуйста, введите оба числа");
-      return;
+      return "Пожалуйста, введите оба числа";
     }
+    return null;
+  }
 
-    let result;
+  function performCalculation(num1, num2, operation) {
     switch (operation) {
       case "+":
-        result = num1 + num2;
-        break;
+        return num1 + num2;
       case "-":
-        result = num1 - num2;
-        break;
+        return num1 - num2;
       case "*":
-        result = num1 * num2;
-        break;
+        return num1 * num2;
       case "/":
         if (num2 === 0) {
-          showError("Деление на ноль невозможно");
-          return;
+          return { error: "Деление на ноль невозможно" };
         }
-        result = num1 / num2;
-        break;
+        return num1 / num2;
       default:
-        showError("Неизвестная операция");
-        return;
+        return { error: "Неизвестная операция" };
     }
+  }
 
+  function updateResult(result) {
     resultElement.textContent = result;
   }
 
   function showError(message) {
     errorElement.textContent = message;
     errorElement.classList.add("calculator__error--visible");
-    resultElement.textContent = "-";
+  }
+
+  function clearError() {
+    errorElement.textContent = "";
+    errorElement.classList.remove("calculator__error--visible");
+  }
+
+  function calculate() {
+    const num1 = parseFloat(num1Input.value);
+    const num2 = parseFloat(num2Input.value);
+    const operation = operationSelect.value;
+
+    clearError();
+
+    const validationError = validateInputs(num1, num2);
+    if (validationError) {
+      showError(validationError);
+      updateResult("-");
+      return;
+    }
+
+    const calculationResult = performCalculation(num1, num2, operation);
+
+    if (typeof calculationResult === "object" && calculationResult.error) {
+      showError(calculationResult.error);
+      updateResult("-");
+      return;
+    }
+
+    updateResult(calculationResult);
   }
 
   calculateButton.addEventListener("click", calculate);
