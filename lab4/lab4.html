@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="lab4.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="number" class="calculator__input calculator__input-number-a" placeholder="Первое число">
+        <input type="number" class="calculator__input calculator__input-number-b" placeholder="Второе число">
+        <div class="calculator__operations">
+            <button class="operations__button" data-operation="+">+</button>
+            <button class="operations__button" data-operation="-">-</button>
+            <button class="operations__button" data-operation="*">*</button>
+            <button class="operations__button" data-operation="/">/</button>
+        </div>
+        
+        <button class="calculator__calc-button">Результат</button>
+        <div class="calculator__output"></div>
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>

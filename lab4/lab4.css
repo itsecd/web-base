@@ -1,0 +1,114 @@
+body {
+  background-color: #e0f7fa;
+}
+
+body.ibas-mode {
+  animation: rainbow 4s ease-in-out infinite;
+}
+
+@keyframes rainbow {
+  0% { background-color: #ff0000; }
+  16.67% { background-color: #ff7f00; }
+  33.33% { background-color: #ffff00; }
+  50% { background-color: #00ff00; }
+  66.67% { background-color: #0000ff; }
+  83.33% { background-color: #4b0082; }
+  100% { background-color: #9400d3; }
+}
+
+.calculator {
+  width: 320px;
+  margin: 50px auto;
+  padding: 24px 20px 28px 20px;
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 7px 22px rgba(0,0,0,0.13);
+  border: 2px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calculator__operations {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.operations__button {
+  background: #2196F3;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 22px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background .2s, box-shadow .2s;
+}
+
+.operations__button:hover {
+  background: #2196F3;
+}
+
+.calculator__calc-button {
+  background: #2196F3;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 22px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background .2s, box-shadow .2s;
+  margin-bottom: 15px;
+}
+
+.calculator__calc-button:hover {
+  background: #2196F3;
+}
+
+.calculator__input {
+  width: 90%;
+  margin-bottom: 15px;
+  padding: 8px;
+  font-size: 1em;
+  border: 2px solid #2196F3;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: #333333;
+}
+
+.calculator__input:focus {
+  border-color: #1565C0;
+  background: #f0f7ff;
+}
+
+.calculator__output {
+  display: block;
+  text-align: center;
+  align-items: center;
+  margin-top: 12px;
+  padding: 10px 0;
+  font-size: 1.2em;
+  background: #4CAF50;
+  color: #ffffff;
+  border-radius: 10px;
+  min-height: 32px;
+  width: 320px;
+}
+
+.operations__button-active {
+  background: #1565C0;
+  color: #ffffff;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
