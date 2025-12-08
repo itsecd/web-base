@@ -29,6 +29,9 @@ body {
   border-radius: 4px;
   cursor: pointer;
   margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .calculator__button:hover {
@@ -41,5 +44,7 @@ body {
   background: #e9f7fe;
   padding: 10px;
   border-radius: 4px;
-  display: inline-block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
