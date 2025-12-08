@@ -1,0 +1,420 @@
+/* Блок: Page */
+.page {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page__container {
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Блок: Header */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header__title {
+    font-size: 2.8rem;
+    background: linear-gradient(90deg, #00b4db, #0083b0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header__icon {
+    font-size: 2.5rem;
+}
+
+.header__subtitle {
+    font-size: 1.2rem;
+    color: #a0a0c0;
+}
+
+/* Блок: Main */
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Блок: Calculator */
+.calculator {
+    background: rgba(25, 25, 40, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.calculator__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.calculator__icon-container {
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.calculator__icon {
+    font-size: 2rem;
+    color: white;
+}
+
+.calculator__info {
+    flex: 1;
+}
+
+.calculator__title {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.calculator__description {
+    color: #a0a0c0;
+    font-size: 1rem;
+}
+
+.calculator__body {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.calculator__inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Блок: Input-group */
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group__label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #d0d0f0;
+    font-size: 1.1rem;
+}
+
+.input-group__icon {
+    color: #00b4db;
+}
+
+.input-group__field {
+    padding: 15px;
+    background: rgba(30, 30, 50, 0.7);
+    border: 2px solid rgba(100, 100, 150, 0.3);
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+.input-group__field:focus {
+    outline: none;
+    border-color: #00b4db;
+    box-shadow: 0 0 0 3px rgba(0, 180, 219, 0.2);
+}
+
+/* Блок: Calculator - Operation */
+.calculator__operation {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.calculator__operation-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: #d0d0f0;
+    font-size: 1.1rem;
+}
+
+.calculator__operation-icon {
+    color: #00b4db;
+}
+
+.calculator__operation-select {
+    padding: 15px;
+    background: rgba(30, 30, 50, 0.7);
+    border: 2px solid rgba(100, 100, 150, 0.3);
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.calculator__operation-select:focus {
+    outline: none;
+    border-color: #00b4db;
+    box-shadow: 0 0 0 3px rgba(0, 180, 219, 0.2);
+}
+
+/* Блок: Operation-icons */
+.operation-icons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.operation-icons__item {
+    background: rgba(40, 40, 60, 0.7);
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: #a0a0c0;
+    cursor: pointer;
+    transition: all 0.3s;
+    flex: 1;
+    min-width: 60px;
+}
+
+.operation-icons__item:hover {
+    background: rgba(0, 180, 219, 0.3);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.operation-icons__item--active {
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: white;
+}
+
+.operation-icons__icon {
+    pointer-events: none;
+}
+
+/* Блок: Calculator - Buttons */
+.calculator__buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+/* Блок: Button */
+.button {
+    flex: 1;
+    padding: 18px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button--primary {
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: white;
+}
+
+.button--primary:hover {
+    background: linear-gradient(135deg, #0083b0, #005f7a);
+    box-shadow: 0 5px 15px rgba(0, 131, 176, 0.4);
+    transform: translateY(-3px);
+}
+
+.button--secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #d0d0f0;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.button--secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.button__icon {
+    font-size: 1.2rem;
+}
+
+/* Блок: Calculator - Result */
+.calculator__result {
+    margin-top: 20px;
+    padding: 25px;
+    background: rgba(30, 30, 50, 0.7);
+    border-radius: 15px;
+    border-left: 5px solid #00b4db;
+    transition: all 0.3s;
+}
+
+.calculator__result--error {
+    border-left-color: #ff6b6b;
+    background: rgba(255, 107, 107, 0.1);
+}
+
+.calculator__result--success {
+    border-left-color: #4cd964;
+    background: rgba(76, 217, 100, 0.1);
+}
+
+.calculator__result-label {
+    font-size: 1.1rem;
+    color: #a0a0c0;
+    margin-bottom: 10px;
+}
+
+.calculator__result-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: white;
+    word-break: break-all;
+    min-height: 50px;
+}
+
+/* Блок: Instructions */
+.instructions {
+    background: rgba(25, 25, 40, 0.9);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.instructions__title {
+    font-size: 1.5rem;
+    color: #00b4db;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.instructions__title::before {
+    content: "ℹ️";
+    font-size: 1.3rem;
+}
+
+.instructions__list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.instructions__item {
+    padding: 10px 0;
+    padding-left: 35px;
+    position: relative;
+    color: #d0d0f0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.instructions__item:last-child {
+    border-bottom: none;
+}
+
+.instructions__item::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4cd964;
+    font-weight: bold;
+}
+
+/* Блок: Footer */
+.footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #707090;
+    font-size: 0.9rem;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__text {
+    margin-bottom: 10px;
+}
+
+.footer__note {
+    font-size: 0.8rem;
+    color: #a0a0c0;
+    font-style: italic;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .page__container {
+        padding: 15px;
+    }
+    
+    .header__title {
+        font-size: 2.2rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .calculator {
+        padding: 20px;
+    }
+    
+    .calculator__header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .calculator__icon-container {
+        margin-right: 0;
+    }
+    
+    .calculator__buttons {
+        flex-direction: column;
+    }
+    
+    .calculator__inputs {
+        grid-template-columns: 1fr;
+    }
+    
+    .operation-icons {
+        justify-content: center;
+    }
+    
+    .calculator__result-value {
+        font-size: 1.8rem;
+    }
+}

@@ -248,6 +248,70 @@ body {
     line-height: 1.5;
 }
 
+/* Projects Section */
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: var(--light);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary);
+}
+
+.project__item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project__icon {
+    font-size: 24px;
+    color: var(--primary);
+    margin-top: 5px;
+}
+
+.project__content {
+    flex: 1;
+}
+
+.project__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+
+.project__description {
+    font-size: 14px;
+    color: var(--secondary);
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.project__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.project__link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
 .project__tags {
     display: flex;
     flex-wrap: wrap;
@@ -309,26 +373,37 @@ body {
     transform: translateY(0);
 }
 
+.project__item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.project__item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
     .resume {
         grid-template-columns: 1fr;
     }
-    
+
     .sidebar {
         text-align: center;
     }
-    
+
     .contact__item {
         justify-content: center;
     }
-    
-    .goal__item {
+
+    .goal__item, .project__item {
         flex-direction: column;
         text-align: center;
     }
-    
-    .goal__icon {
+
+    .goal__icon, .project__icon {
         margin-top: 0;
         margin-bottom: 10px;
     }
@@ -338,21 +413,21 @@ body {
     .main-content {
         padding: 20px;
     }
-    
+
     .profile__image {
         width: 150px;
         height: 150px;
     }
-    
+
     .profile__name {
         font-size: 20px;
     }
-    
-    .goals {
+
+    .goals, .projects {
         gap: 15px;
     }
-    
-    .goal__item {
+
+    .goal__item, .project__item {
         padding: 15px;
     }
 }
@@ -362,7 +437,7 @@ body {
     .resume {
         box-shadow: none;
     }
-    
+
     .social-links {
         display: none;
     }

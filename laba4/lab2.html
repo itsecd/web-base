@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 2</title>
+    <link rel="stylesheet" href="lab2-styles.css">
+</head>
+<body>
+    <!-- Задание 1 - список с анимацией -->
+    <section class="programming">
+        <h2 class="programming__title">Популярные языки программирования:</h2>
+        <ul class="programming-list">
+            <li class="programming-list__item">Python</li>
+            <li class="programming-list__item">JavaScript</li>
+            <li class="programming-list__item">Java</li>
+            <li class="programming-list__item">C++</li>
+            <li class="programming-list__item">Go</li>
+        </ul>
+    </section>
+
+    <!-- Задание 2 - родители и дети -->
+    <section class="family">
+        <div class="family__parent family__parent_type_first">
+            Родитель 1
+            <div class="family__child">Ребенок 1-1</div>
+            <div class="family__child">Ребенок 1-2</div>
+            <div class="family__child">Ребенок 1-3</div>
+        </div>
+
+        <!-- Третий родитель МЕЖДУ первым и вторым - стандартный цвет -->
+        <div class="family__parent family__parent_type_third">
+            Родитель 3 (между 1 и 2) - стандартный цвет
+            <div class="family__child">Ребенок 3-1</div>
+            <div class="family__child">Ребенок 3-2</div>
+            <!-- Дети первого в гостях у третьего -->
+            <div class="family__child family__child_role_first-guest">Ребенок 1-4 (в гостях у 3)</div>
+        </div>
+
+        <div class="family__parent family__parent_type_second">
+            Родитель 2
+            <div class="family__child">Ребенок 2-1</div>
+            <div class="family__child">Ребенок 2-2</div>
+            <div class="family__child">Ребенок 2-3</div>
+            <!-- Дети первого в гостях у второго -->
+            <div class="family__child family__child_role_first-guest">Ребенок 1-5 (в гостях у 2)</div>
+        </div>
+
+        <!-- Третий родитель ПОСЛЕ второго - зеленый -->
+        <div class="family__parent family__parent_type_third">
+            Родитель 3 (после 2) - зеленый
+            <div class="family__child">Ребенок 3-3</div>
+            <div class="family__child">Ребенок 3-4</div>
+            
+            <!-- Дети второго приходят в гости к третьему -->
+            <div class="family__child family__child_role_guest">Ребенок 2-4 (в гостях)</div>
+            <div class="family__child family__child_role_guest">Ребенок 2-5 (в гостях)</div>
+            
+            <!-- Дети первого в гостях у третьего -->
+            <div class="family__child family__child_role_first-guest">Ребенок 1-6 (в гостях у 3)</div>
+        </div>
+    </section>
+
+    <!-- Задание 3 - текст с языками программирования -->
+    <article class="article">
+        <h1 class="article__title">Языки программирования</h1>
+        <p class="article__text">Языки программирования — это инструменты, с помощью которых разработчики создают программное обеспечение, веб-приложения, игры, алгоритмы и многое другое. Каждый язык имеет свои особенности, синтаксис и сферу применения. Ниже представлены некоторые из наиболее известных языков:</p>
+        
+        <ul class="languages-list">
+            <li class="languages-list__item">
+                <a href="#" class="languages-list__link">Python</a> – высокоуровневый язык с простым синтаксисом, популярный в Data Science, веб-разработке и автоматизации.
+            </li>
+            <li class="languages-list__item">
+                <a href="#" class="languages-list__link">JavaScript</a> – основной язык для фронтенд-разработки, работает в браузерах и на сервере (Node.js).
+            </li>
+            <li class="languages-list__item">
+                <a href="#" class="languages-list__link">Java</a> – объектно-ориентированный язык, широко используется в корпоративных приложениях и Android-разработке.
+            </li>
+            <li class="languages-list__item">
+                <a href="#" class="languages-list__link">C++</a> – мощный язык для системного программирования, игр и высокопроизводительных приложений.
+            </li>
+            <li class="languages-list__item">
+                <a href="#" class="languages-list__link">C#</a> – язык от Microsoft, применяется в разработке под Windows, играх (Unity) и веб-приложениях.
+            </li>
+            <li class="languages-list__item">
+                <a href="#" class="languages-list__link">Go (Golang)</a> – созданный Google, язык для высоконагруженных сетевых сервисов и облачных технологий.
+            </li>
+            <li class="languages-list__item">
+                <a href="#" class="languages-list__link">Ruby</a> – известен благодаря фреймворку Ruby on Rails для веб-разработки.
+            </li>
+            <li class="languages-list__item">
+                <a href="#" class="languages-list__link">Swift</a> – язык Apple для разработки под iOS и macOS.
+            </li>
+            <li class="languages-list__item">
+                <a href="#" class="languages-list__link">Kotlin</a> – современный язык, официально поддерживаемый для Android-разработки.
+            </li>
+            <li class="languages-list__item">
+                <a href="#" class="languages-list__link">Rust</a> – язык системного программирования с акцентом на безопасность и производительность.
+            </li>
+        </ul>
+
+        <p class="article__text">Это лишь малая часть из множества существующих языков, и выбор зависит от задач, которые нужно решить.</p>
+    </article>
+</body>
+</html>

@@ -8,29 +8,28 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            
-            // Для целей добавляем задержку для последовательного появления
-            if (entry.target.classList.contains('goal__item')) {
-                const index = Array.from(document.querySelectorAll('.goal__item')).indexOf(entry.target);
-                entry.target.style.transitionDelay = `${index * 0.2}s`;
-            }
         }
     });
 }, observerOptions);
 
-// Применяем анимацию к секциям и целям
+// Применяем анимацию к секциям
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.section');
     const goalItems = document.querySelectorAll('.goal__item');
-    
+    const projectItems = document.querySelectorAll('.project__item');
+
     sections.forEach(section => {
         observer.observe(section);
     });
-    
+
     goalItems.forEach(item => {
         observer.observe(item);
     });
-    
+
+    projectItems.forEach(item => {
+        observer.observe(item);
+    });
+
     // Анимация для прогресс-баров
     animateSkillBars();
 });
@@ -38,29 +37,18 @@ document.addEventListener('DOMContentLoaded', () => {
 // Функция для анимации прогресс-баров
 function animateSkillBars() {
     const skillBars = document.querySelectorAll('.skill__level');
-    
+
     skillBars.forEach(bar => {
         const width = bar.style.width;
         bar.style.width = '0';
-        
+
         setTimeout(() => {
             bar.style.width = width;
         }, 500);
     });
 }
 
-// Добавляем интерактивность для целей
-document.addEventListener('DOMContentLoaded', () => {
-    const goalItems = document.querySelectorAll('.goal__item');
-    
-    goalItems.forEach(item => {
-        item.addEventListener('click', function() {
-            this.classList.toggle('goal__item--active');
-        });
-    });
-});
-
-// Плавная прокрутка для навигации (если добавим якорные ссылки)
+// Плавная прокрутка для навигации
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -73,16 +61,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
-// Обработка отправки формы (если добавим контактную форму)
-function handleFormSubmit(event) {
-    event.preventDefault();
-    // Логика обработки формы
-    console.log('Форма отправлена');
-}
-
-// Добавляем обработчик события для формы (если она будет добавлена)
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', handleFormSubmit);
-}
