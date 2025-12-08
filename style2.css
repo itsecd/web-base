@@ -1,0 +1,126 @@
+.animated {
+    list-style: inside;
+    text-align: center;
+    font-size: 1.15em; 
+}
+
+.animated-list li{
+    transition: all 0.3s ease;
+}
+
+.animated-list__item:hover {
+    transform: translateX(10px);
+    color: blue;
+    font-weight: bold;
+}
+
+.family {
+    padding: 10px;
+    margin: auto;
+    max-width: 100px;
+}
+
+.parent h3 {
+    text-align: center;     
+    font-size: 1.15em;       
+    margin: 10px;       
+}
+
+.parent ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.parent__child {
+    font-size: 0.5em; 
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+.parent-1 .parent-1__child{
+    color: red;
+}
+
+.parent-2 h3{
+    color: orange;
+}
+
+.parent-2 .parent-2__child{
+    color: #b4005a;
+    border: 2px dashed orange;
+}
+
+.parent-3 h3 {
+    color: black;
+}
+
+.parent-3 .parent-3__child{
+    color: black;
+}
+
+.parent-2 + .parent-3 h3 {
+    color: green;
+}
+
+.parent-2 + .parent-3 .parent-3__child{
+    color: green;
+}
+
+.parent-2 + .parent-3 .parent-2__child{
+    color: #b4005a;
+}
+
+.program-block{
+    background-color: #FDDF9D;
+    padding: 25px 10px;
+    max-width: 870px;
+    margin: auto;
+}
+
+.program-block__title {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0 0 15px;
+}
+
+.program-block__text {
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+
+.program-block__list {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+}
+
+.program-block__list a::before {
+    content: "🌐";
+}
+
+.program-block__list a {
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+}
+
+.program-block-list__item {
+  margin: 10px 0;
+  padding: 2px;
+}
+
+.program-block::after {
+    box-shadow: 0 0 0 3px #000;
+    background-color: #5f9eA0;
+    content: "";
+    display: block;
+    height: 75px;
+    width: 200px;
+    margin: 15px;
+    background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+} 
