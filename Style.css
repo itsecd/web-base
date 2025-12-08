@@ -32,21 +32,13 @@ h2 {
 
 
 /* Задание 2: Позиционирование картинок */
-<<<<<<< HEAD
 .image-container {
-=======
-#image-container {
->>>>>>> 8e4fa46aee231e21671022882e9fbe9a9efa55ab
   position: relative;
   height: 500px; 
   background-color: #ffffff;
 }
 
-<<<<<<< HEAD
 .image-item {
-=======
-#image1 {
->>>>>>> 8e4fa46aee231e21671022882e9fbe9a9efa55ab
   position: absolute;
   top: 125px;
   left: 35%;
@@ -56,23 +48,12 @@ h2 {
   display: block;
 }
 
-<<<<<<< HEAD
 .image-top {
   top: 100px;
 }
 
 .image-bottom {
   top: 300px;
-=======
-#image2 {
-  position: absolute;
-  top: 325px; 
-  left: 35%;
-  width: 300px;
-  height: 200px;
-  object-fit: contain;
-  display: block;
->>>>>>> 8e4fa46aee231e21671022882e9fbe9a9efa55ab
 }
 
 
