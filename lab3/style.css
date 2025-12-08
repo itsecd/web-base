@@ -86,3 +86,29 @@ body {
     list-style-type: disc;
     margin-left: 20px;
 }
+
+
+.list__link {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 8px;
+
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+
+    transition: 
+        color 0.25s ease,
+        background-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.list__link:hover {
+    background-color: rgba(74, 108, 247, 0.12);
+    color: #070911;
+
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 108, 247, 0.25);
+}
