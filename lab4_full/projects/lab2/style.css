@@ -1,0 +1,202 @@
+:root {
+    --bg: #0a0b10;
+    --card: #12141f;
+    --accent: #00e0ff;
+    --text: #e5e7ef;
+    --muted: #8a90a3;
+    --radius: 14px;
+    --font-main: system-ui, -apple-system, sans-serif;
+    --demo-red: #ff4444;
+    --demo-orange: #ffcc00;
+    --demo-green: #00ff88;
+    --demo-purple: #d844ff;
+    --demo-blue: #0078ff;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    background: radial-gradient(circle at 50% 20%, #1a2238, var(--bg) 90%);
+    color: var(--text);
+    font-family: var(--font-main);
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.back-link {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.back-link:hover {
+        color: var(--accent);
+        opacity: 1;
+}
+
+.lab-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 800px;
+}
+
+section {
+    background: var(--card);
+    padding: 24px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    margin-top: 0;
+    color: var(--accent);
+    border-bottom: 1px solid rgba(0, 224, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.list__items {
+    list-style-type: none; 
+    padding-left: 0;
+}
+
+.list__item {
+    padding: 8px 12px;
+    border-left: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+    .list__item:hover {
+        color: var(--accent); 
+        border-left-color: var(--accent);
+        background: rgba(0, 224, 255, 0.05);
+        padding-left: 20px; 
+    }
+
+
+.family__parent {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.family__title {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 10px;
+    border: none;
+}
+
+.family__child {
+    margin-left: 20px;
+    padding: 4px 8px;
+    transition: 0.3s;
+}
+
+.family__parent--first .family__child {
+    color: var(--demo-red);
+}
+
+.family__parent--second {
+    border-color: var(--demo-orange);
+}
+
+.family__parent--second .family__title {
+        color: var(--demo-orange);
+}
+.family__parent--second .family__child {
+        color: #fff;
+        background-color: rgba(255, 196, 0, 0.1);
+        border: 1px dotted var(--demo-orange);
+        width: fit-content;
+        margin-bottom: 5px;
+}
+
+.family__parent--second ~ .family__parent--third {
+        border-color: var(--demo-green);
+}
+
+.family__parent--second ~ .family__parent--third .family__title {
+            color: var(--demo-green);
+}
+
+.family__parent--second ~ .family__parent--third .family__child {
+            color: var(--demo-green);
+}
+
+.family__parent--third .family__child--guest {
+    color: var(--demo-purple);
+    margin-left: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.languages {
+    line-height: 1.6;
+}
+
+.languages__list {
+    list-style: none;
+    padding: 0;
+}
+
+.languages__item {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+}
+
+    .languages__item::before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+    }
+
+.languages__link {
+    font-weight: bold;
+    color: var(--accent);
+    transition: 0.2s;
+    border-bottom: 1px solid transparent;
+}
+
+    .languages__link:hover {
+        text-shadow: 0 0 10px var(--accent);
+        border-bottom-color: var(--accent);
+    }
+
+    .languages__link::after {
+        content: " 🌐";
+        font-size: 0.8em;
+        opacity: 0.7;
+    }
+
+.languages__list::after {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    height: 80px;
+    margin: 30px auto 0;
+    background-color: #2780E3;
+    border-radius: 8px;
+    background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    opacity: 0.9;
+}

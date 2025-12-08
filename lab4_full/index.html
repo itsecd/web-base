@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Резюме</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="resume">
+        <header class="resume__header" data-animate="fade-in">
+            <div class="resume__photo-wrapper">
+                <img src="./src/photo.png" alt="Фото" class="resume__photo" />
+            </div>
+
+            <div class="resume__info flex col gap-10">
+                <h1 class="resume__name mb-20">Крылов Даниил Станиславович</h1>
+
+                <div class="resume__detail hover-block hover-block--dob flex row ai-c gap-10">
+                    <div class="hover-block__bg-overlay"></div>
+                    <i data-lucide="cake-slice" class="hover-block__icon icon icon--ghosted"></i>
+                    <div class="flex row stretch gap-10">
+                        <strong>Дата рождения</strong>
+                        <div class="separator separator--vertical"></div>
+                    </div>
+                    <span>1 декабря 2006</span>
+                </div>
+
+                <a href="https://github.com/Dun4uv" target="_blank" rel="noopener" class="resume__detail hover-block hover-block--github flex row ai-c gap-10">
+                    <div class="hover-block__bg-overlay"></div>
+                    <i data-lucide="github" class="hover-block__icon icon icon--ghosted"></i>
+                    <div class="flex row stretch gap-10">
+                        <strong>GitHub</strong>
+                        <div class="separator separator--vertical"></div>
+                    </div>
+                    <span class="hover-block__link">github.com/Dun4uv</span>
+                </a>
+
+                <div class="quote-slider">
+                    <i data-lucide="quote" class="quote-slider__icon icon icon--ghosted"></i>
+                    <button class="quote-slider__control quote-slider__control--next hidden">Next</button>
+
+                    <div class="quote-slider__content">
+                        <div class="quote-slider__item quote-slider__item--active">
+                            <span class="italic">Им кажется, что я сбился с курса. На деле - я вышел за карту.</span>
+                        </div>
+                        <div class="quote-slider__item">
+                            <span class="italic">Они зовут это хаосом. А я - свободой без инструкций.</span>
+                        </div>
+                    </div>
+                    <div class="quote-slider__timer-bar"></div>
+                </div>
+            </div>
+        </header>
+
+        <section class="resume__about" data-animate="slide-up">
+            <div class="heading-block flex row ai-c gap-10">
+                <i data-lucide="search" class="heading-block__icon icon icon--ghosted" style="color: var(--accent);"></i>
+                <h2 class="heading-block__title">О себе</h2>
+            </div>
+            <p class="resume__text">
+                Как меня зовут - не важно, а вот что я делаю - это важно. Так называемый архитектор идей, систем и ритмов. Не ищу простых решений - строю точные, живые конструкции из кода.
+                Вижу структуру там, где хаос, и гармонию там, где алгоритм. Соединяю механику и смысл, железо и воображение -
+                чтобы технологии чувствовались как продолжение человека.
+            </p>
+        </section>
+
+        <section class="resume__projects mt-20" data-animate="slide-up">
+            <div class="heading-block flex row ai-c gap-10 mb-20">
+                <i data-lucide="folder-git-2" class="heading-block__icon icon icon--ghosted" style="color: var(--accent);"></i>
+                <h2 class="heading-block__title">Мои проекты</h2>
+            </div>
+
+            <div class="projects-nav">
+                <button class="projects-nav__btn" onclick="document.querySelector('.projects-grid').scrollBy({left: -300, behavior: 'smooth'})">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+                <button class="projects-nav__btn" onclick="document.querySelector('.projects-grid').scrollBy({left: 300, behavior: 'smooth'})">
+                    <i data-lucide="chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="projects-grid">
+
+                <a href="./projects/lab1/index.html" class="project-card">
+                    <div class="project-card__header">
+                        <i data-lucide="layout-template" class="project-card__icon"></i>
+                        <i data-lucide="arrow-up-right" class="project-card__arrow"></i>
+                    </div>
+                    <h3 class="project-card__title">Лабораторная №1</h3>
+                    <p class="project-card__desc">
+                        Основы веб-верстки. Светофор, лабиринт и адаптивная структура.
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                    </div>
+                </a>
+
+                <a href="./projects/lab2/index.html" class="project-card">
+                    <div class="project-card__header">
+                        <i data-lucide="list-tree" class="project-card__icon"></i>
+                        <i data-lucide="arrow-up-right" class="project-card__arrow"></i>
+                    </div>
+                    <h3 class="project-card__title">Лабораторная №2</h3>
+                    <p class="project-card__desc">
+                        CSS-селекторы, псевдоклассы и работа с наследованием стилей.
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag">Selectors</span>
+                        <span class="tag">Hover</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Dun4uv" class="project-card project-card--active" target="_blank">
+                    <div class="project-card__header">
+                        <i data-lucide="monitor-smartphone" class="project-card__icon"></i>
+                        <span class="badge-live">Live</span>
+                    </div>
+                    <h3 class="project-card__title">Лабораторная №3</h3>
+                    <p class="project-card__desc">
+                        Резюме. Слайдер на JS, темная тема, анимации и Grid-верстка.
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag">JS Classes</span>
+                        <span class="tag">UI/UX</span>
+                    </div>
+                </a>
+
+                <a href="./projects/lab4/index.html" class="project-card">
+                    <div class="project-card__header">
+                        <i data-lucide="calculator" class="project-card__icon"></i>
+                        <i data-lucide="arrow-up-right" class="project-card__arrow"></i>
+                    </div>
+                    <h3 class="project-card__title">Лабораторная №4</h3>
+                    <p class="project-card__desc">
+                        OOP Калькулятор. Валидация, обработка ошибок и динамический интерфейс.
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">DOM</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="resume__columns">
+            <div class="resume__col resume__col--left" data-animate="slide-up">
+                <div class="heading-block flex row ai-c gap-10">
+                    <i data-lucide="heart" class="heading-block__icon icon icon--ghosted" style="color: var(--accent);"></i>
+                    <h3 class="heading-block__title">Любимые увлечения</h3>
+                </div>
+                <ul class="resume__list">
+                    <li class="resume__list-item">Сборка и модификация электроники</li>
+                    <li class="resume__list-item">Звуковой дизайн и эксперименты с частотами</li>
+                    <li class="resume__list-item">Кибер-арт, неон, цифровая архитектура</li>
+                    <li class="resume__list-item resume__list-item--drg">
+                        Deep Rock Galactic и инженерные симуляции
+                        <img class="resume__list-item-sticker" src="./src/LootBug-3266419395.png" draggable="false" alt="" />
+                    </li>
+                </ul>
+
+                <div class="heading-block flex row ai-c gap-10">
+                    <i data-lucide="laptop" class="heading-block__icon icon icon--ghosted" style="color: var(--accent);"></i>
+                    <h3 class="heading-block__title">Hard-скилы</h3>
+                </div>
+                <ul class="resume__list">
+                    <li class="resume__list-item">C++ / CMake - системное мышление в коде</li>
+                    <li class="resume__list-item">Embedded - VS1053, микроконтроллеры, сенсорика</li>
+                    <li class="resume__list-item">SFML / OpenGL / шейдеры - визуализация и логика</li>
+                    <li class="resume__list-item">Git / GoogleTest - контроль, стабильность, тестирование</li>
+                </ul>
+
+                <div class="heading-block flex row ai-c gap-10">
+                    <i data-lucide="message-circle" class="heading-block__icon icon icon--ghosted" style="color: var(--accent);"></i>
+                    <h3 class="heading-block__title">Контакты</h3>
+                </div>
+
+                <a href="mailto:dun4uv@example.com" target="_blank" rel="noopener" class="hover-block hover-block--darkbg hover-block--thin flex row ai-c gap-10">
+                    <div class="hover-block__bg-overlay"></div>
+                    <i data-lucide="mail" class="hover-block__icon icon icon--ghosted"></i>
+                    <div class="flex row stretch gap-10">
+                        <strong>E-Mail</strong>
+                        <div class="separator separator--vertical"></div>
+                    </div>
+                    <span class="hover-block__link">Dun4uv@example.com</span>
+                </a>
+
+                <a href="https://t.me/Dun4uv" target="_blank" rel="noopener" class="hover-block hover-block--darkbg hover-block--thin flex row ai-c gap-10">
+                    <div class="hover-block__bg-overlay"></div>
+                    <i data-lucide="send" class="hover-block__icon icon icon--ghosted"></i>
+                    <div class="flex row stretch gap-10">
+                        <strong>Telegram</strong>
+                        <div class="separator separator--vertical"></div>
+                    </div>
+                    <span class="hover-block__link">@Dun4uv</span>
+                </a>
+
+                <div class="notification-box mt-10">
+                    <p class="notification-box__line">Feel free to message me anytime<span class="notification-box__marker">*</span>! 😊</p>
+                    <p class="notification-box__footnote"><span class="notification-box__marker">*</span> <i><b>anytime</b> may vary</i> ¯\_(ツ)_/¯</p>
+                </div>
+            </div>
+
+            <div class="resume__col resume__col--right" data-animate="slide-up">
+                <div class="heading-block flex row ai-c gap-10">
+                    <i data-lucide="brain" class="heading-block__icon icon icon--ghosted" style="color: var(--accent);"></i>
+                    <h3 class="heading-block__title">Soft-скилы</h3>
+                </div>
+                <ul class="resume__list">
+                    <li class="resume__list-item">Аналитический драйв - вижу закономерности в шуме</li>
+                    <li class="resume__list-item">Креативное мышление - генерирую идеи вне схем</li>
+                    <li class="resume__list-item">Холодный фокус - алгоритмы не паникуют</li>
+                    <li class="resume__list-item">Командная синергия - строю связи, не барьеры</li>
+                </ul>
+
+                <div class="heading-block flex row ai-c gap-10">
+                    <i data-lucide="graduation-cap" class="heading-block__icon icon icon--ghosted" style="color: var(--accent);"></i>
+                    <h3 class="heading-block__title">Образование и опыт</h3>
+                </div>
+                <ul class="resume__list">
+                    <li class="resume__list-item"><strong>Образование:</strong> Институт информатики и кибернетики</li>
+                    <li class="resume__list-item"><strong>Проекты:</strong> голосовой модулятор (VS1053), 2D-движок с AI</li>
+                    <li class="resume__list-item"><strong>Интересы:</strong> безопасность, машинное восприятие, техно-искусство</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./slider.js"></script>
+    <script>
+        lucide.createIcons();
+
+        const slider = new Slider(
+            document.querySelector(".quote-slider"),
+            true 
+        );
+    </script>
+</body>
+</html>

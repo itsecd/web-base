@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator (Lab 4)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+
+    <a href="../../index.html" class="back-link">← Вернуться в резюме</a>
+
+    <main class="calculator">
+        <h2 class="calculator__title">System Calc</h2>
+
+        <div class="calculator__form">
+            <div class="calculator__group">
+                <input type="number" class="calculator__input js-input-a" placeholder="Число А">
+            </div>
+
+            <div class="calculator__group">
+                <select class="calculator__select js-select-op">
+                    <option value="sum">+</option>
+                    <option value="sub">−</option>
+                    <option value="mul">×</option>
+                    <option value="div">÷</option>
+                </select>
+            </div>
+
+            <div class="calculator__group">
+                <input type="number" class="calculator__input js-input-b" placeholder="Число Б">
+            </div>
+
+            <button class="calculator__button js-btn-calc">Вычислить</button>
+        </div>
+
+        <div class="calculator__output">
+            <span class="calculator__label">Результат:</span>
+            <span class="calculator__value js-result-value">Ожидание</span>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
