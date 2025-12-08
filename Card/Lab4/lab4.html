@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Калькулятор</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1 class="calculator__title">Калькулятор</h1>
+        
+        <form class="calculator__form" id="calcForm">
+            <div class="form--group">
+                <label class="group__label" for="firstNumber">Первое число</label>
+                <input 
+                    class="group__input" 
+                    type="number" 
+                    id="firstNumber" 
+                    placeholder="Введите число"
+                    required
+                >
+            </div>
+
+            <div class="form--group">
+                <label class="group__label" for="operation">Операция</label>
+                <select class="group__select" id="operation" required>
+                    <option value="">Выберите операцию</option>
+                    <option value="add">Сложение (+)</option>
+                    <option value="subtract">Вычитание (-)</option>
+                    <option value="multiply">Умножение (×)</option>
+                    <option value="divide">Деление (÷)</option>
+                </select>
+            </div>
+
+            <div class="form--group">
+                <label class="group__label" for="secondNumber">Второе число</label>
+                <input 
+                    class="group__input" 
+                    type="number" 
+                    id="secondNumber" 
+                    placeholder="Введите число"
+                    required
+                >
+            </div>
+
+            <button class="calculator__button" type="submit">Вычислить</button>
+        </form>
+
+        <div class="calculator__result" id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
