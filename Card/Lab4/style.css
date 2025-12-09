@@ -42,7 +42,7 @@ body {
     gap: 16px;
 }
 
-.form--group {
+.form__group {
     display: flex;
     flex-direction: column;
     gap: 8px;
