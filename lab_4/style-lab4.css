@@ -158,6 +158,7 @@ body {
 .calculator__error {
   margin-top: 20px;
   padding: 16px;
+  padding-left: 40px;
   background: #fee;
   border: 2px solid #fcc;
   border-radius: 10px;
@@ -165,6 +166,15 @@ body {
   font-size: 14px;
   text-align: center;
   display: none;
+  position: relative;
+}
+
+.calculator__error::before {
+  content: '⚠️';
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .calculator__error--visible {
