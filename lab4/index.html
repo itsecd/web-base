@@ -4,30 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Калькулятор</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/style.css">
-  <script src="assets/script.js"></script>
+  <script src="assets/script.js" defer></script>
 </head>
 <body>
   <div class="calculator">
     <div class="calculator__title">Калькулятор</div>
 
     <div class="calculator__field">
-      <label class="field__label">Первое число:</label>
+      <label class="field__label">Первое число</label>
       <input type="number" class="field__input" id="num1" />
     </div>
 
     <div class="calculator__field">
-      <label class="field__label">Операция:</label>
+      <label class="field__label">Операция</label>
       <select class="field__select" id="operation">
         <option value="add">+</option>
-        <option value="sub">-</option>
+        <option value="sub">−</option>
         <option value="mul">×</option>
         <option value="div">÷</option>
       </select>
     </div>
 
     <div class="calculator__field">
-      <label class="field__label">Второе число:</label>
+      <label class="field__label">Второе число</label>
       <input type="number" class="field__input" id="num2" />
     </div>
 
