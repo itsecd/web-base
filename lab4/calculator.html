@@ -11,22 +11,15 @@
     <div class="calculator">
         <h1 class="calculator__title">Простой калькулятор</h1>
 
-        <form class="calculator__form" id="calculator-form">
-            <div class="calculator__row">
-                <label class="calculator__label" for="number1">Первое число</label>
-                <input class="calculator__input" id="number1" type="number" step="any"
-                    placeholder="Введите первое число">
+        <form class="form" id="calculator-form">
+            <div class="form__row row">
+                <label class="row__label" for="number1">Первое число</label>
+                <input class="row__input" id="number1" type="number" step="any" placeholder="Введите первое число">
             </div>
 
-            <div class="calculator__row">
-                <label class="calculator__label" for="number2">Второе число</label>
-                <input class="calculator__input" id="number2" type="number" step="any"
-                    placeholder="Введите второе число">
-            </div>
-
-            <div class="calculator__row">
-                <label class="calculator__label" for="operation">Операция</label>
-                <select class="calculator__select" id="operation">
+            <div class="form__row row">
+                <label class="row__label" for="operation">Операция</label>
+                <select class="row__input" id="operation">
                     <option value="add">Сложение (+)</option>
                     <option value="subtract">Вычитание (−)</option>
                     <option value="multiply">Умножение (×)</option>
@@ -34,15 +27,20 @@
                 </select>
             </div>
 
+            <div class="form__row row">
+                <label class="row__label" for="number2">Второе число</label>
+                <input class="row__input" id="number2" type="number" step="any" placeholder="Введите второе число">
+            </div>
+
             <button class="calculator__button" type="button" id="calculate-btn">
                 Вычислить
             </button>
         </form>
 
-        <div class="calculator__output">
-            <p class="calculator__result-label">Результат:</p>
-            <p class="calculator__result" id="result">—</p>
-            <p class="calculator__error" id="error"></p>
+        <div class="output">
+            <p class="output__result-label">Результат:</p>
+            <p class="output__result" id="result">—</p>
+            <p class="output__error" id="error"></p>
         </div>
 
         <a class="calculator__back-link resume__link" href="resume.html">
