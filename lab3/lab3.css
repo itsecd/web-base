@@ -29,36 +29,51 @@ body {
     gap: 30px;
 }
 
-.photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #667eea;
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .header__photo-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
 
-.personal-info {
+.header__photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 5px solid #667eea;
+    filter: hue-rotate(120deg);
+}
+
+.header__personal-info {
     flex: 1;
 }
 
-.name {
+.header__name {
     color: #333;
     margin-bottom: 10px;
     font-size: 2em;
 }
 
-.birthdate, .github {
+.header__birthdate, 
+.header__github {
     margin-bottom: 8px;
     font-size: 1.1em;
 }
 
-.github a {
+.header__github-link {
     color: #667eea;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-.github a:hover {
+.header__github-link:hover {
     color: #764ba2;
     text-decoration: underline;
 }
@@ -75,46 +90,51 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.section h2 {
+.section__title {
     color: #667eea;
     margin-bottom: 15px;
     border-bottom: 2px solid #667eea;
     padding-bottom: 8px;
 }
 
+.section__text {
+    font-size: 1.1em;
+    line-height: 1.7;
+}
+
 .hobbies-list {
     list-style: none;
 }
 
-.hobbies-list li {
+.hobbies-list__item {
     padding: 8px 0;
     font-size: 1.1em;
     border-bottom: 1px solid #eee;
 }
 
-.hobbies-list li:last-child {
+.hobbies-list__item:last-child {
     border-bottom: none;
 }
 
-.skill-item {
+.skills__item {
     margin-bottom: 15px;
 }
 
-.skill-name {
+.skills__name {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     color: #555;
 }
 
-.skill-bar {
+.skills__bar {
     background: #e9e9e9;
     border-radius: 10px;
     overflow: hidden;
     height: 10px;
 }
 
-.skill-level {
+.skills__level {
     background: linear-gradient(90deg, #667eea, #764ba2);
     height: 100%;
     border-radius: 10px;
@@ -127,17 +147,36 @@ body {
     gap: 10px;
 }
 
-.soft-skill {
+.soft-skills__item {
     background: #667eea;
     color: white;
-    padding: 10px 15px;
+    padding: 15px;
     border-radius: 20px;
     text-align: center;
     font-weight: bold;
     transition: transform 0.3s, background 0.3s;
 }
 
-.soft-skill:hover {
+.soft-skills__item:hover {
     background: #764ba2;
     transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .soft-skills {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .header,
+    .section {
+        padding: 20px;
+    }
+    
+    .header__name {
+        font-size: 1.5em;
+    }
 }
