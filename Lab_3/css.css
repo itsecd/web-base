@@ -123,3 +123,50 @@ body::before {
   box-shadow: 0 4px 12px rgba(24, 154, 194, 0.25);
   position: relative;
 }
+
+
+/*  Секция проектов  */
+.projects {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #cccccc;
+}
+
+.projects__title {
+    font-size: 1.6em;
+    color: #1872ad;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.projects__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 10px;
+}
+
+.projects__item {
+    background: rgba(24, 114, 173, 0.08);
+    border-radius: 8px;
+    padding: 10px 14px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.projects__item:hover {
+    background: rgba(24, 114, 173, 0.18);
+    transform: translateY(-3px);
+}
+
+.projects__link {
+    text-decoration: none;
+    color: #0f4a73;
+    font-weight: 500;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.projects__link:hover {
+    color: #1872ad;
+    text-shadow: 0 0 4px rgba(24, 114, 173, 0.5);
+}
