@@ -389,3 +389,92 @@ body {
         align-items: flex-start;
     }
 }
+
+/* Блок с проектами */
+.content__projects {
+    margin-bottom: 40px;
+}
+
+.projects__icon {
+    margin-right: 10px;
+    color: #4b6cb7;
+}
+
+.projects__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.projects__card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eaeaea;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-color: #4b6cb7;
+}
+
+.projects__card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.projects__card-icon {
+    font-size: 2rem;
+    color: #4b6cb7;
+}
+
+.projects__card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.projects__card-description {
+    flex-grow: 1;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.projects__card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    justify-content: center;
+}
+
+.projects__card-link:hover {
+    background: linear-gradient(135deg, #3a5699 0%, #0f1c3a 100%);
+    transform: translateY(-2px);
+}
+
+.projects__card-link-icon {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .projects__grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор - Лабораторная работа 4</title>
+    <link rel="stylesheet" href="calculator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator">
+        <!-- Заголовок калькулятора -->
+        <header class="calculator__header">
+            <h1 class="calculator__title">
+                <i class="fas fa-calculator calculator__title-icon"></i>
+                Калькулятор
+            </h1>
+            <p class="calculator__subtitle">Лабораторная работа №4 - JavaScript калькулятор</p>
+        </header>
+
+        <!-- Основной контент -->
+        <main class="calculator__content">
+            <!-- Информационная панель -->
+            <div class="calculator__info">
+                <div class="calculator__info-card">
+                    <i class="fas fa-info-circle calculator__info-icon"></i>
+                    <p class="calculator__info-text">Калькулятор выполняет основные математические операции: сложение, вычитание, умножение и деление.</p>
+                </div>
+                <div class="calculator__info-card">
+                    <i class="fas fa-exclamation-triangle calculator__info-icon"></i>
+                    <p class="calculator__info-text">Внимание! При делении на ноль будет выведена ошибка. Также проверяйте корректность ввода чисел.</p>
+                </div>
+            </div>
+
+            <!-- Калькулятор -->
+            <div class="calculator__body">
+                <!-- Поля ввода -->
+                <div class="calculator__inputs">
+                    <div class="calculator__input-group">
+                        <label for="number1" class="calculator__input-label">
+                            <i class="fas fa-hashtag calculator__input-icon"></i>
+                            Первое число
+                        </label>
+                        <input type="text" id="number1" class="calculator__input" placeholder="Введите число...">
+                        <div class="calculator__input-hint">Можно вводить целые и дробные числа</div>
+                    </div>
+
+                    <div class="calculator__operation-selector">
+                        <label for="operation" class="calculator__select-label">
+                            <i class="fas fa-sliders-h calculator__select-icon"></i>
+                            Операция
+                        </label>
+                        <select id="operation" class="calculator__select">
+                            <option value="add" class="calculator__option">
+                                <i class="fas fa-plus calculator__option-icon"></i> Сложение (+)
+                            </option>
+                            <option value="subtract" class="calculator__option">
+                                <i class="fas fa-minus calculator__option-icon"></i> Вычитание (-)
+                            </option>
+                            <option value="multiply" class="calculator__option">
+                                <i class="fas fa-times calculator__option-icon"></i> Умножение (×)
+                            </option>
+                            <option value="divide" class="calculator__option">
+                                <i class="fas fa-divide calculator__option-icon"></i> Деление (÷)
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="calculator__input-group">
+                        <label for="number2" class="calculator__input-label">
+                            <i class="fas fa-hashtag calculator__input-icon"></i>
+                            Второе число
+                        </label>
+                        <input type="text" id="number2" class="calculator__input" placeholder="Введите число...">
+                        <div class="calculator__input-hint">Не забудьте проверить ввод</div>
+                    </div>
+                </div>
+
+                <!-- Кнопка вычисления -->
+                <div class="calculator__actions">
+                    <button id="calculate" class="calculator__button calculator__button--primary">
+                        <i class="fas fa-calculator calculator__button-icon"></i>
+                        Вычислить
+                    </button>
+                    <button id="clear" class="calculator__button calculator__button--secondary">
+                        <i class="fas fa-broom calculator__button-icon"></i>
+                        Очистить
+                    </button>
+                </div>
+
+                <!-- Результат -->
+                <div class="calculator__result">
+                    <div class="calculator__result-header">
+                        <i class="fas fa-equals calculator__result-icon"></i>
+                        <h3 class="calculator__result-title">Результат</h3>
+                    </div>
+                    <div id="result" class="calculator__result-value">Ожидание вычисления...</div>
+                    <div id="error" class="calculator__error" style="display: none;">
+                        <i class="fas fa-exclamation-circle calculator__error-icon"></i>
+                        <span class="calculator__error-text"></span>
+                    </div>
+                </div>
+
+                <!-- История вычислений -->
+                <div class="calculator__history">
+                    <div class="calculator__history-header">
+                        <i class="fas fa-history calculator__history-icon"></i>
+                        <h3 class="calculator__history-title">История вычислений</h3>
+                        <button id="clearHistory" class="calculator__history-clear">
+                            <i class="fas fa-trash-alt calculator__history-clear-icon"></i>
+                            Очистить историю
+                        </button>
+                    </div>
+                    <ul id="historyList" class="calculator__history-list">
+                        <li class="calculator__history-item calculator__history-item--empty">История пуста</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!-- Подвал -->
+        <footer class="calculator__footer">
+            <p class="calculator__footer-text">© 2025 Калькулятор. Лабораторная работа №4.</p>
+            <p class="calculator__footer-text">
+                <a href="lab_3.html" class="calculator__footer-link">
+                    <i class="fas fa-arrow-left calculator__footer-link-icon"></i>
+                    Вернуться в резюме
+                </a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
