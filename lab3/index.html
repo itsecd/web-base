@@ -10,7 +10,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- Левая колонка -->
         <div class="sidebar">
             <div class="avatar">
                 <img src="avatar.jpg" alt="Фото">
@@ -42,15 +41,12 @@
             </div>
         </div>
 
-        <!-- Правая колонка -->
         <div class="main">
-            <!-- О себе -->
             <div class="card">
                 <h2><i class="fas fa-user"></i> О себе</h2>
                 <p>Студент IT-специальности. Начинающий frontend-разработчик. Сейчас активно изучаю HTML, CSS, React/Vue и JavaScript. Делаю первые проекты, пробую разные технологии.</p>
             </div>
 
-            <!-- Навыки -->
             <div class="card">
                 <h2><i class="fas fa-code"></i> Hard Skills</h2>
                 <div class="skills">
@@ -64,9 +60,7 @@
                     <span>DaVinci</span>
                 </div>
             </div>
-
-            <!-- Soft Skills -->
-            <div class="card">
+       <div class="card">
                 <h2><i class="fas fa-brain"></i> Soft Skills</h2>
                 <div class="soft-skills">
                     <div class="soft-item">Работа в команде</div>
@@ -76,7 +70,6 @@
                 </div>
             </div>
 
-            <!-- Увлечения -->
             <div class="card">
                 <h2><i class="fas fa-gamepad"></i> Увлечения</h2>
                 <div class="hobbies">
@@ -99,7 +92,6 @@
                 </div>
             </div>
 
-            <!-- Языки -->
             <div class="card">
                 <h2><i class="fas fa-language"></i> Языки</h2>
                 <div class="languages">
@@ -129,7 +121,6 @@
     </div>
 
     <script>
-        // Простой эффект при наведении на карточки
         document.querySelectorAll('.card').forEach(card => {
             card.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-5px)';
