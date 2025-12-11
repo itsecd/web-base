@@ -2,6 +2,8 @@
 
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -9,15 +11,15 @@
 
 <body>
     <header>
-        <img class = "avatar" src="avatar.jpg">
+        <img class = "avatar" src="avatar.jpg" alt="Фото">
         <h1> Иванов Максим Алексеевич</h1>
-        <p class="info">Студент 2 курса Самарского университета</p>
+        <p>Студент 2 курса Самарского университета</p>
         <p class="info">Дата рождения: 28.08.2006</p>
     </header>
 
     <section class="section">
-        <div class="about me">
-            <h2>О себе:</h2>
+        <div class="section__content">
+            <h2 class="section__title">О себе:</h2>
             <p>
                 Учусь в Самарском национальном исследовательском университета имени академика С.П.Королева в институте информатики и кибернетики.
                 Увлекаюсь программированием, моделированием, чтением. В свободное время гуляю, играю в компьютер, читаю книги, смотрю футбол.              
@@ -26,9 +28,9 @@
     </section>
 
     <section class="section">
-         <div class="list">
-            <h2>Hard-скилы:</h2>
-            <ul>
+         <div class="section__content">
+            <h2 class="section__title">Hard-скилы:</h2>
+            <ul class="skills-list">
                 <li>C++</li>
                 <li>HTML</li>
                 <li>Python</li>
@@ -40,9 +42,9 @@
     </section>
 
     <section class="section">
-        <div class="list">
-            <h2>Soft-скилы:</h2>
-            <ul>
+        <div class="section__content">
+            <h2 class="section__title">Soft-скилы:</h2>
+            <ul class="skills-list">
                 <li>Командная работа</li>
                 <li>Адаптивность</li>
                 <li>Умение планировать и организовывать своё время </li>
@@ -52,9 +54,9 @@
     </section>
 
     <section class="section">
-        <div class="list">
-            <h2>Увлечения:</h2>
-            <ul>
+        <div class= "section__content">
+            <h2 class="section__title">Увлечения:</h2>
+            <ul class="skills-list">
                 <li>Программирование</li>
                 <li>Моделирование</li>
                 <li>Чтение</li>
@@ -65,9 +67,9 @@
     </section>
 
     <section class="section">
-        <h2>GitHub</h2>
-        <div class="contact-link">
-            <a href="https://github.com/Gwyn1300">GitHub</a>
+        <div class="section__content"></div>
+            <h2 class="section__title">GitHub</h2>
+            <a href="https://github.com/Gwyn1300" class="link">GitHub</a>
         </div>
     </section>
 </body>
