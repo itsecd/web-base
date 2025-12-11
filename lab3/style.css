@@ -25,7 +25,6 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Левая колонка */
 .sidebar {
     width: 35%;
     background: #151515;
@@ -121,7 +120,6 @@ body {
     color: #aaa;
 }
 
-/* Правая колонка */
 .main {
     width: 65%;
     padding: 40px;
@@ -257,7 +255,6 @@ body {
     background: #00d9ff;
 }
 
-/* Адаптивность */
 @media (max-width: 900px) {
     .container {
         flex-direction: column;
