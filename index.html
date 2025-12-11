@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Левая колонка -->
+        <div class="sidebar">
+            <div class="avatar">
+                <img src="avatar.jpg" alt="Фото">
+                <div class="status"></div>
+            </div>
+            
+            <div class="name">
+                <h1>Тонников<br>Платон<br>Валерьевич</h1>
+                <p class="tag">Frontend Developer</p>
+            </div>
+
+            <div class="info">
+                <div class="info-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>04.03.2007</span>
+                </div>
+
+                <div class="info-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/yourusername">https://github.com/soc1all</a>
+                </div>
+            </div>
+
+            <div class="section">
+
+                <div class="contacts">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Правая колонка -->
+        <div class="main">
+            <!-- О себе -->
+            <div class="card">
+                <h2><i class="fas fa-user"></i> О себе</h2>
+                <p>Студент IT-специальности. Начинающий frontend-разработчик. Сейчас активно изучаю HTML, CSS, React/Vue и JavaScript. Делаю первые проекты, пробую разные технологии.</p>
+            </div>
+
+            <!-- Навыки -->
+            <div class="card">
+                <h2><i class="fas fa-code"></i> Hard Skills</h2>
+                <div class="skills">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                    <span>Git</span>
+                    <span>Python</span>
+                    <span>Figma</span>
+                    <span>DaVinci</span>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="card">
+                <h2><i class="fas fa-brain"></i> Soft Skills</h2>
+                <div class="soft-skills">
+                    <div class="soft-item">Работа в команде</div>
+                    <div class="soft-item">Тайм-менеджмент</div>
+                    <div class="soft-item">Критическое мышление</div>
+                    <div class="soft-item">Адаптивность</div>
+                </div>
+            </div>
+
+            <!-- Увлечения -->
+            <div class="card">
+                <h2><i class="fas fa-gamepad"></i> Увлечения</h2>
+                <div class="hobbies">
+                    <div class="hobby">
+                        <i class="fas fa-laptop-code"></i>
+                        <span>Разработка</span>
+                    </div>
+                    <div class="hobby">
+                        <i class="fas fa-headphones"></i>
+                        <span>Музыка</span>
+                    </div>
+                    <div class="hobby">
+                        <i class="fas fa-hiking"></i>
+                        <span>Спорт</span>
+                    </div>
+                    <div class="hobby">
+                        <i class="fas fa-book"></i>
+                        <span>Фантастика</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Языки -->
+            <div class="card">
+                <h2><i class="fas fa-language"></i> Языки</h2>
+                <div class="languages">
+                    <div class="lang">
+                        <span>Русский</span>
+                        <div class="dots">
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                        </div>
+                    </div>
+                    <div class="lang">
+                        <span>Английский</span>
+                        <div class="dots">
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Простой эффект при наведении на карточки
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
