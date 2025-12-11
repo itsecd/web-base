@@ -109,4 +109,10 @@ button:hover
     background-color: #fceae8;
     min-height: 10px;
     text-align: left;
+    display: none;
+}
+
+.error-message.show
+{
+    display: block;
 }
