@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="calc-container">
+
+
+    <h2>Мини калькулятор</h2>
+
+
+    <input id="num1" type="number" placeholder="Число 1">
+
+
+    <div class="dropdown" id="dropdown">
+        <div class="selected" id="selected-op">+</div>
+        <div class="dropdown-list hidden" id="dropdown-list"></div>
+    </div>
+
+
+    <input id="num2" type="number" placeholder="Число 2">
+
+
+    <button onclick="calculate()">Вычислить</button>
+
+    <div class="result">Результат: <span id="result"></span></div>
+
+
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
