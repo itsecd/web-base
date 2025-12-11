@@ -58,7 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function displayError(text) {
         outError.textContent = text;
-        outResult.textContent = "—";
     }
 
     function clearError() {
@@ -66,12 +65,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function displayResult(val) {
-        clearError();
         outResult.textContent = val;
+    }
+
+    function clearResult() {
+        outResult.textContent = "—";
     }
 
     function process() {
         clearError();
+        clearResult();
 
         try {
             const x = checkNumber(firstInput.value);
