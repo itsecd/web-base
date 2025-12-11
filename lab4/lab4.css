@@ -44,10 +44,19 @@ body.ibas-mode {
   font-size: 1.2em;
   cursor: pointer;
   transition: background .2s, box-shadow .2s;
+  transition: all 0.2s ease;
+  transform: scale(1);
 }
 
 .operations__button:hover {
   background: #2196F3;
+}
+
+.operations__button-active {
+    background: #1565C0;
+    transform: scale(1.15);
+    padding: 12px 28px;
+    font-size: 1.3em;
 }
 
 .calculator__calc-button {
@@ -60,11 +69,13 @@ body.ibas-mode {
   cursor: pointer;
   transition: background .2s, box-shadow .2s;
   margin-bottom: 15px;
+  min-width: 140px;
 }
 
 .calculator__calc-button:hover {
-  background: #2196F3;
+    background: #0d47a1;
 }
+
 
 .calculator__input {
   width: 90%;
