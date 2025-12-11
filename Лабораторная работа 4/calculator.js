@@ -64,7 +64,8 @@ function calculate()
         result = performCalculation(num1, num2, operation);
 
         resultDiv.textContent = result.toFixed(4).replace(/\.?0+$/, '');
-    } catch (e) {
+    } catch (e)
+	{
         displayError(errorDiv, 'Ошибка вычисления: ' + e.message);
         resultDiv.textContent = '---';
     }
