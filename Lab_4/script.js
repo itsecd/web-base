@@ -33,6 +33,22 @@ selectedOp.onclick = () => {
     list.classList.toggle("hidden");
 };
 
+function clearFields() {
+    const num1 = document.getElementById("num1").value;
+    const num2 = document.getElementById("num2").value;
+
+    if (num1 === '' && num2 === '') {
+        alert("Уже и так пусто");
+        return;
+    }
+
+    document.getElementById("num1").value = '';
+    document.getElementById("num2").value = '';
+    document.getElementById("result").innerText = '';
+}
+
+
+
 function calculate() {
     const num1 = parseFloat(document.getElementById("num1").value);
     const num2 = parseFloat(document.getElementById("num2").value);
@@ -40,7 +56,7 @@ function calculate() {
 
 
     if (isNaN(num1) || isNaN(num2)) {
-        document.getElementById("result").innerText = "Ошибка ввода";
+        alert("Ошибка ввода");
         return;
     }
 
@@ -50,7 +66,10 @@ function calculate() {
         case "+": result = num1 + num2; break;
         case "-": result = num1 - num2; break;
         case "*": result = num1 * num2; break;
-        case "/": result = num2 !== 0 ? num1 / num2 : "Деление на 0"; break;
+        case "/":
+            result = num2 !== 0 ? num1 / num2 : NaN;
+            if (isNaN(result)) alert("Деление на 0");
+            break;
     }
 
 
