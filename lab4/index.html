@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab4</title>
+    <link rel="stylesheet"  href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="calculator__input">
+            <input class="input__num" type="number" placeholder="Введите первое число" id="num1">
+            <select class="input__operation" name="operation" id="operations">
+                <option class="select_option" value="+">+</option>
+                <option class="select_option" value="-">-</option>
+                <option class="select_option" value="*">*</option>
+                <option class="select_option" value="/">/</option>
+            </select>
+            <input class="input__num" type="number" placeholder="Введите второе число" id="num2">
+        </div>
+        <button class="calculator__button" id="calc">Вычислить</button>
+        <input class="calculator__output" type="number" placeholder="Результат" id="output" readonly>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;	
+    background-color: rgb(51, 153, 204);
+    border-style: double;
+}
+
+.calculator__output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+input::placeholder {
+    text-align: center;
+}
