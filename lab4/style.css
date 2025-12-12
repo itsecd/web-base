@@ -18,6 +18,7 @@
     gap: 10px;
 }
 
-input::placeholder {
+input {
     text-align: center;
+    overflow-x: auto;
 }
