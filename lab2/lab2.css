@@ -20,38 +20,29 @@
     font-size: 28px;
 }
 
-.main {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Стили секций */
-.task-section {
+/* Стили заданий */
+.task {
     background-color: white;
     margin-bottom: 30px;
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.task-section_type__first {
+.task_type_first {
     border-left: 5px solid #e74c3c;
 }
 
-.task-section_type__second {
+.task_type_second {
     border-left: 5px solid #f39c12;
 }
 
-.task-section_type__third {
+.task_type_third {
     border-left: 5px solid #000000;
     background-color: rgb(205, 205, 205);
 }
 
-.task-section_type__fourth {
-    border-left: 5px solid #9b59b6;
-}
-
-.task-section__title {
+.task__title {
     color: #ff0000;
     margin-top: 0;
     padding-bottom: 10px;
@@ -59,78 +50,87 @@
     text-align: center;
 }
 
-.task-section__text {
+.task__subtitle {
     color: #7300ff;
     margin-top: 0;
     padding-bottom: 10px;
     border-bottom: 2px solid #ecf0f1;
 }
 
-li:hover {
+/* Стили для первого задания */
+.franchises-list {
+    color: black;
+}
+
+.franchises-list li:hover {
     color: #7300ff;
     transition: all 1s ease;
 }
 
-.task-section__words {
-    color: black;
-}
-
-.parent-first {
+/* Стили для второго задания */
+.family {
     text-align: center;
-    color: black;
     font-size: 18px;
+    margin-bottom: 20px;
 }
 
-.parent-second {
-    text-align: center;
+.family_type_first {
+    color: black;
+}
+
+.family_type_second {
     color: orange;
-    font-size: 18px;
 }
 
-.parent-third {
-    text-align: center;
+.family_type_third {
     color: black;
-    font-size: 18px;
 }
 
-.parent-first > p {
-  color: red;
-  font-size: 12px;
-}
-
-.parent-second > p {
-    color: #b4005a;
+.family__child {
     font-size: 12px;
+}
+
+.family_type_first > .family__child {
+    color: red;
+}
+
+.family_type_second > .family__child {
+    color: #b4005a;
     border: 2px dashed orange;
     width: 300px;
     margin: 0 auto;
 }
 
-.parent-third > p {
+.family_type_third > .family__child {
     color: black;
-    font-size: 12px;
 }
 
-.parent-second ~ .parent-third,
-.parent-second ~ .parent-third > p {
+.family_type_second ~ .family_type_third,
+.family_type_second ~ .family_type_third > .family__child {
     color: green;
-    .parent-second__child {
-        color: purple;
-    }
 }
 
-a {
+.family__child_special {
+    color: purple;
+}
+
+/* Стили для третьего задания */
+.task__intro,
+.task__outro {
+    margin: 15px 0;
+}
+
+.language-link {
     color: black;
     text-decoration: none;
     font-weight: bold;
 }
 
-.task-section__proga::before {
-     content: "🌐";
+.language-link::before {
+    content: "🌐";
+    margin-right: 5px;
 }
 
-.task-section__logo::after {
-    content: url("https://ssau.ru/i/logo/logo-white-ru.svg");
-    color: black;
+.languages-list {
+    margin: 20px 0;
 }
-
