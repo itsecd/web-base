@@ -1,0 +1,175 @@
+* { 
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  background-color: #ffffff;
+}
+
+h1 { 
+  margin-bottom: 24px; 
+  color: #3D5D93;
+  background-color: #6F4700;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+section {
+  margin-bottom: 60px;
+  padding: 40px;
+  border: 1px solid #000000;
+  border-radius: 0px;
+  background-color: rgba(255, 255, 255, 0.596);
+}
+
+.languages__title { 
+  margin: 0 0 12px; 
+}
+
+.lang-list {
+  list-style: disc inside;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+
+.lang-list__item {
+  cursor: pointer;
+  padding: 0px 4px;
+  margin: 4px 0;
+  transition: color 1s ease;
+}
+
+.lang-list__item:hover { 
+  color: #0b8307; 
+}
+
+.parent_1 {
+  margin: 16px 0;
+  padding: 4px 8px;
+}
+
+.parent_1__title {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.parent_1__child {
+  margin: 0;
+  color: red;
+}
+
+.parent_2 {
+  margin: 16px 0;
+  padding: 4px 8px;
+  color: orange;
+}
+
+.parent_2__title {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.parent_2__child {
+  margin: 0;
+  color: #b4005a;
+  border: 5px dashed orange;
+  padding: 6px 6px;
+  margin-top: 10px;
+}
+
+
+.family > .parent_3:nth-child(3) .parent_3__title {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: black;
+}
+
+.family > .parent_3:nth-child(3) .parent_3__child {
+  margin: 0;
+  color: black;
+}
+
+.parent_3 {
+  margin: 16px 0;
+  padding: 4px 8px;
+  color: green;
+}
+
+.parent_3__title {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: green;
+}
+
+.parent_3__child {
+  margin: 0;
+  color: green;
+}
+
+.parent_3 .parent_2__child {
+  color: purple;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Задание 3: Ссылки и логотип */
+
+.pl__title { 
+  margin-bottom: 12px; 
+}
+
+.pl__text { 
+  margin-bottom: 16px; 
+}
+
+.pl-list { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+  position: relative;
+}
+
+.pl-list__item { 
+  margin-bottom: 8px; 
+}
+
+.item__link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.item__link::before {
+  content: "🌐";
+  font-size: 1em;
+}
+
+.item__link:hover { 
+  color: #17dd7a; 
+}
+
+.pl-list::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 60px;
+  background-color: #181a85;
+  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  background-size: contain;
+}
+
