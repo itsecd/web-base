@@ -1,0 +1,103 @@
+.resume , .resume__block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: max-content;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #03A696;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resume__header {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    background-color: #E1FF00;
+    border-radius: 10px;
+}
+
+.header__image-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-style: solid;
+    overflow: hidden;
+}
+
+.header__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header__main-info {
+    border-style: dashed;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: auto;
+    align-items: center;
+    align-self: center;
+}
+
+.resume__block {
+    width: 100%;
+    gap: 20px;
+    padding: 10px;
+    background-color: #FDF6E3;
+}
+
+.resume__github {
+    display: inline-flex;
+    border-radius: 10px;
+    align-items: center;
+    border-style: dashed;
+}
+
+.block__contacts, .block__hobbies, 
+.block__info, .block__skills {
+    width: 50%;
+    padding: 5px;
+    border-radius: 10px;
+    border-style: dashed; 
+}
+
+.skills__skills-list,
+.contacts__contacts-list,
+.hobbies__hobbies-list {
+    margin: 3px;
+}
+
+.skills__list-header,
+.contacts__list-header,
+.hobbies__list-header,
+.info__header {
+    margin: 0px;
+    font-weight: bold;
+}
+
+.skills-list__el,
+.contacts-list__el,
+.hobbies-list__el,
+.info__text {
+    margin: 0px;
+}
+
+.github__text {
+    margin: 10px;
+    font-weight: bold;
+}
+
+.main-info__text {
+    margin: 10px;
+    font-size: 20px;
+}
