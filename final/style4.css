@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    font-family: "BBH Sans Bartle", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color:red; 
+    padding: 20px;
+    font-size: 16px; 
+}
+
+.calculator-container {
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s ease;
+}
+
+.calculator-container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: 400;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #ffffff;
+}
+
+.operation-selector {
+    margin-bottom: 30px;
+}
+
+.calculate-btn {
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0); 
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.7s ease;
+    margin-bottom: 25px;
+}
+
+.calculate-btn:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.calculate-btn:active {
+    transform: scale(0.98);
+}
+
+.result-container {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 2px dashed #ddd;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.result-label {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.result-value {
+    font-size: 28px;
+    font-weight: 500;
+    color: #ffffff;
+    word-break: break-all;
+    font-size: 18px;
+}
+
+.error-message {
+    color: #ffffff;
+    font-weight: 500;
+    margin-top: 5px;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+.operations-history {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.history-title {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.history-item {
+    background-color: #f1f8ff;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #444;
+}
+
+.history-empty {
+    color: #999;
+    font-style: italic;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    .calculator-container {
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+}
