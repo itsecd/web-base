@@ -1,0 +1,88 @@
+body {
+    font-family: "Geologica", sans-serif;
+    background: linear-gradient(to right,#744344, #121c2c);
+    padding: 10px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.header {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background: #232e42;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.header__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 50%;
+    color: #eef5ff;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+.header__link:hover {
+    background: #eef5ff;
+    color: #2d3b55;
+}
+
+.header__link:nth-child(1) {
+    border-radius: 15px 0 0 15px;
+}
+
+.header__link:nth-child(2) {
+    border-radius: 0 15px 15px 0;
+}
+
+.header__link__text {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    row-gap: 50px;
+    width: 100%;
+    min-height: 100%;
+    background-color: #2d3b55;
+    box-shadow: 13px 14px 13px -2px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.lab-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 200px;
+    width: 600px;
+    background: #eef5ff;
+    color: #2d3b55;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+.lab-link:hover {
+    background: #2d3b55;
+    color: #eef5ff;
+    border: 10px solid #eef5ff;
+}
+
+.lab-link__text {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
