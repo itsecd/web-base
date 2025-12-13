@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const PRECISION = 5;
+    const ROUND_CONST = 10 ** PRECISION;
+
     const firstInput = document.getElementById("number1");
     const secondInput = document.getElementById("number2");
     const opSelect = document.getElementById("operation");
@@ -81,7 +84,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const y = checkNumber(secondInput.value);
             const op = opSelect.value;
 
-            const res = compute(x, y, op);
+            let res = compute(x, y, op);
+            res = Math.round(res * ROUND_CONST) / ROUND_CONST;
             displayResult(res);
         } catch (err) {
             displayError(err.message || err);
