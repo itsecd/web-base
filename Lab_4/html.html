@@ -6,28 +6,31 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="calc-container">
+<div class="calculator">
 
 
-    <h2>Мини калькулятор</h2>
+    <h2 class="calculator__title">Мини калькулятор</h2>
 
 
-    <input id="num1" type="number" placeholder="Число 1">
+    <input class="calculator__input" id="num1" type="number" placeholder="Число 1">
 
-
-    <div class="dropdown" id="dropdown">
-        <div class="selected" id="selected-op">+</div>
-        <div class="dropdown-list hidden" id="dropdown-list"></div>
+    <div class="calculator__dropdown" id="dropdown">
+        <div class="calculator__dropdown-selected" id="selected-op">+</div>
+        <div class="calculator__dropdown-list calculator__dropdown-list--hidden" id="dropdown-list"></div>
     </div>
 
 
-    <input id="num2" type="number" placeholder="Число 2">
+    <input class="calculator__input" id="num2" type="number" placeholder="Число 2">
 
 
-    <button onclick="calculate()">Вычислить</button>
-    <button onclick="clearFields()">Очистить ввод</button>
+    <button class="calculator__button" onclick="calculate()">Вычислить</button>
 
-    <div class="result">Результат: <span id="result"></span></div>
+    <button class="calculator__button calculator__button--secondary" onclick="clearFields()">Очистить ввод</button>
+
+    <div class="calculator__result">
+        Результат:
+        <span class="calculator__result-value" id="result"></span>
+    </div>
 
 
 </div>
