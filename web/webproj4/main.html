@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Моя лаборатоная работа №4</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="calculator__header">
+        <header>Калькулятор</header>
+      </div>
+      <div class="calculator__input">
+        <div class="calculator__input__value">
+          <input type="number" id="num1" placeholder="введите число" />
+        </div>
+        <div class="calculator__input__operator">
+          <select id="operation" name="operation">
+            <option value="addition">+</option>
+            <option value="subtraction">-</option>
+            <option value="multiplication">*</option>
+            <option value="division">/</option>
+          </select>
+        </div>
+        <div class="calculator__input__value">
+          <input type="number" id="num2" placeholder="введите число" />
+        </div>
+      </div>
+
+      <div class="calculator__button">
+        <button id="btn">Найти результат</button>
+      </div>
+      <div class="calculator__output">
+        <div class="calculator__output__field">
+          <p id="outputField"></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

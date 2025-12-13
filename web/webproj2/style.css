@@ -1,0 +1,97 @@
+html {
+  background-color: aqua;
+}
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+  padding: 50px;
+}
+section {
+  background-color: aquamarine;
+  border: 1px solid black;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+h1 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.list {
+  padding-left: 10px;
+}
+.list__element {
+  font-size: 16px;
+  color: black;
+  transition: color 0.5s ease;
+}
+.list__element:hover {
+  color: blue; /* Цвет при наведении */
+  cursor: pointer;
+}
+
+
+.third-parent__child {
+  font-size: 16px;
+  padding-left: 10px;
+  margin-right: 80%;
+}
+
+.first-parent__child {
+  color: red; 
+  font-size: 16px;
+  padding-left: 10px;
+  margin-right: 80%;
+}
+.second-parent__child {
+  color: #b4005a; 
+  font-size: 16px;
+  padding-left: 10px;
+  margin-right: 80%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: orange dashed 2px;
+}
+.third-parent__child ~ .second-parent__child {
+  border: none;
+  color: #b4005a;
+}
+
+.second-parent {
+  color: orange;
+}
+.second-parent + .third-parent {
+  color: green;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.first-parent + .third-parent {
+  color: black;
+}
+
+.text {
+  font-size: 20px;
+}
+.text__list__link {
+  font-size: 16px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
+}
+.text__list__link::before {
+  content: "🌐";
+}
+.text__list {
+  padding-left: 10px;
+}
+.text__list::after {
+  content: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+}
