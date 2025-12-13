@@ -1,0 +1,206 @@
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 40px;
+    border-bottom: 1px solid #ddd;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.header__photo-container {
+    flex: 0 0 150px;
+}
+
+.header__info {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .header__photo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .header__name {
+        font-size: 28px;
+    }
+}
+
+.about {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about__title {
+    font-size: 28px;
+}
+
+.about__text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.hobbies {
+    padding: 40px 20px;
+    background: #ffffff;
+}
+
+.hobbies__title {
+    text-align: center;
+    font-size: 28px;
+}
+
+.hobbies__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.skills {
+    padding: 40px 20px;
+}
+
+.skills__title {
+    text-align: center;
+    font-size: 28px;
+}
+
+.skills__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills__card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.skills__card h3 {
+    font-size: 22px;
+}
+
+.skills__card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hobbies__item {
+    font-size: 18px;
+    color: #007bff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hobbies__item::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #007bff;
+}
+
+.hobbies__item_music::before   { content: "\f001"; }
+.hobbies__item_book::before    { content: "\f02d"; }
+.hobbies__item_dumbbell::before { content: "\f44b"; }
+
+.header__github {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header__github::before {
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+    content: "\f09b";
+    font-size: 20px;
+}
+
+.projects {
+    padding: 40px 20px;
+    background: #ffffff;
+}
+
+.projects__title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.projects__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects__card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.projects__card:hover {
+    transform: translateY(-5px);
+}
+
+.projects__card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.projects__card p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.projects__link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.projects__link:hover {
+    background: #0056b3;
+}
