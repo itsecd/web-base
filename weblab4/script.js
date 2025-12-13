@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const ROUND_PRECISION = 10000;
+    const MAX_HISTORY_ITEMS = 10;
+    
     const num1Input = document.getElementById('num1');
     const num2Input = document.getElementById('num2');
     const operationSelect = document.getElementById('operation');
@@ -13,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function validateNumber(value, errorDiv) {
         errorDiv.textContent = '';
         
-        if (value === '') {
+        if (value.trim() === '') {
             errorDiv.textContent = 'Поле не может быть пустым';
             return null;
         }
@@ -27,68 +30,47 @@ document.addEventListener('DOMContentLoaded', function() {
         return num;
     }
     
-    function calculate() {
-        // Очистка предыдущих ошибок
-        error1Div.textContent = '';
-        error2Div.textContent = '';
-        resultDiv.textContent = '';
+    function compute(num1, num2, operation) {
+        let result, operationSymbol;
         
-        // Валидация чисел
-        const num1 = validateNumber(num1Input.value, error1Div);
-        const num2 = validateNumber(num2Input.value, error2Div);
-        
-        if (num1 === null || num2 === null) {
-            return;
+        switch(operation) {
+            case 'add':
+                result = num1 + num2;
+                operationSymbol = '+';
+                break;
+            case 'subtract':
+                result = num1 - num2;
+                operationSymbol = '-';
+                break;
+            case 'multiply':
+                result = num1 * num2;
+                operationSymbol = '×';
+                break;
+            case 'divide':
+                if (num2 === 0) {
+                    throw new Error('Деление на ноль невозможно');
+                }
+                result = num1 / num2;
+                operationSymbol = '÷';
+                break;
+            default:
+                throw new Error('Неизвестная операция');
         }
 
-        const operation = operationSelect.value;
-        let result;
-        let operationSymbol;
+        result = Math.round(result * ROUND_PRECISION) / ROUND_PRECISION;
         
-        try {
-            switch(operation) {
-                case 'add':
-                    result = num1 + num2;
-                    operationSymbol = '+';
-                    break;
-                case 'subtract':
-                    result = num1 - num2;
-                    operationSymbol = '-';
-                    break;
-                case 'multiply':
-                    result = num1 * num2;
-                    operationSymbol = '×';
-                    break;
-                case 'divide':
-                    if (num2 === 0) {
-                        throw new Error('Деление на ноль невозможно');
-                    }
-                    result = num1 / num2;
-                    operationSymbol = '÷';
-                    break;
-                default:
-                    throw new Error('Неизвестная операция');
-            }
-            
-
-            result = Math.round(result * 10000) / 10000;
-            
-            resultDiv.textContent = result;
-            resultDiv.style.color = '#333';
-            
-            addToHistory(`${num1} ${operationSymbol} ${num2} = ${result}`);
-            
-        } catch (error) {
-            resultDiv.textContent = 'Ошибка: ' + error.message;
-            resultDiv.style.color = '#e74c3c';
-        }
+        return { result, operationSymbol };
+    }
+    function updateResult(message, isError = false) {
+        resultDiv.textContent = message;
+        resultDiv.style.color = isError ? '#e74c3c' : '#333';
     }
     
-    function addToHistory(calculation) {
-        calculationHistory.unshift(calculation);
+    function addToHistory(num1, operationSymbol, num2, result) {
+        const historyItem = `${num1} ${operationSymbol} ${num2} = ${result}`;
+        calculationHistory.unshift(historyItem);
         
-
-        if (calculationHistory.length > 10) {
+        if (calculationHistory.length > MAX_HISTORY_ITEMS) {
             calculationHistory.pop();
         }
         
@@ -105,9 +87,32 @@ document.addEventListener('DOMContentLoaded', function() {
             historyList.appendChild(historyItem);
         });
     }
-
+    
+    function calculate() {
+        error1Div.textContent = '';
+        error2Div.textContent = '';
+        resultDiv.textContent = '';
+        
+        const num1 = validateNumber(num1Input.value, error1Div);
+        const num2 = validateNumber(num2Input.value, error2Div);
+        
+        if (num1 === null || num2 === null) {
+            return;
+        }
+        
+        const operation = operationSelect.value;
+        
+        try {
+            const { result, operationSymbol } = compute(num1, num2, operation);
+            updateResult(result);
+            addToHistory(num1, operationSymbol, num2, result);
+            
+        } catch (error) {
+            updateResult('Ошибка: ' + error.message, true);
+        }
+    }
+    
     calculateButton.addEventListener('click', calculate);
-
     [num1Input, num2Input].forEach(input => {
         input.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {

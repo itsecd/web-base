@@ -5,7 +5,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.body {
+body {
     background: linear-gradient(135deg, #6e8efb, #396fe3);
     min-height: 100vh;
     display: flex;
@@ -14,8 +14,9 @@
     padding: 20px;
 }
 
+
 .calculator {
-    background-color: rgb(172, 75, 75);
+    background-color: #ffffff; 
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     padding: 30px;
