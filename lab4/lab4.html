@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио студента</title>
+    <link rel="stylesheet" href="lab4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header__photo-section">
+                <img src="ef.jpg" alt="Фото студента" class="header__photo">
+            </div>
+            <div class="header__personal-info">
+                <h1 class="header__name">Васильченко Данила Александрович</h1>
+                <div class="header__birthdate">
+                    <strong>Дата рождения:</strong> 14.06.2006
+                </div>
+                <div class="header__github">
+                    <strong>GitHub:</strong> 
+                    <a href="https://github.com/danonestope" target="_blank" class="header__github-link">https://github.com/danonestope</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="about">
+                <img src="mme.jpeg" alt="Фото студента" class="about__photo">
+                <div class="about__content">
+                    <h2 class="about__title">О себе</h2>
+                    <p class="about__text">Студент 2 курса института информики и кибернетики факультета Информационная Безопасность Автоматизированных Симтем. Увлекаюсь спортом, играми, программированием, изучаю веб-разработку. Стремлюсь к постоянному развитию и получению новых знаний в IT-сфере и не только в ней.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section__title">Любимые увлечения</h2>
+                <ul class="hobbies-list">
+                    <li class="hobbies-list__item">Программирование</li>
+                    <li class="hobbies-list__item">Волейбол</li>
+                    <li class="hobbies-list__item">Спорт зал</li>
+                    <li class="hobbies-list__item">Игры</li>
+                    <li class="hobbies-list__item">Хождение пешком</li>
+                    <li class="hobbies-list__item">РСО</li>
+                </ul>
+            </section>
+
+            <!-- Обновленный блок Hard Skills с круговыми индикаторами -->
+            <section class="section">
+                <h2 class="section__title">Hard Skills</h2>
+                <div class="skills-circles">
+                    <div class="skill-circle">
+                        <div class="skill-circle__chart">
+                            <svg width="120" height="120" viewBox="0 0 120 120">
+                                <circle class="skill-circle__background" cx="60" cy="60" r="50"></circle>
+                                <circle class="skill-circle__progress" cx="60" cy="60" r="50" 
+                                        stroke-dasharray="314" 
+                                        stroke-dashoffset="78.5"></circle>
+                            </svg>
+                            <div class="skill-circle__value">75%</div>
+                        </div>
+                        <div class="skill-circle__name">Программирование на C++, Python, HTML/CSS</div>
+                    </div>
+                    
+                    <div class="skill-circle">
+                        <div class="skill-circle__chart">
+                            <svg width="120" height="120" viewBox="0 0 120 120">
+                                <circle class="skill-circle__background" cx="60" cy="60" r="50"></circle>
+                                <circle class="skill-circle__progress" cx="60" cy="60" r="50" 
+                                        stroke-dasharray="314" 
+                                        stroke-dashoffset="94.2"></circle>
+                            </svg>
+                            <div class="skill-circle__value">70%</div>
+                        </div>
+                        <div class="skill-circle__name">Графические редакторы</div>
+                    </div>
+                    
+                    <div class="skill-circle">
+                        <div class="skill-circle__chart">
+                            <svg width="120" height="120" viewBox="0 0 120 120">
+                                <circle class="skill-circle__background" cx="60" cy="60" r="50"></circle>
+                                <circle class="skill-circle__progress" cx="60" cy="60" r="50" 
+                                        stroke-dasharray="314" 
+                                        stroke-dashoffset="62.8"></circle>
+                            </svg>
+                            <div class="skill-circle__value">80%</div>
+                        </div>
+                        <div class="skill-circle__name">Хорошо поставленный голос</div>
+                    </div>
+                    
+                    <div class="skill-circle">
+                        <div class="skill-circle__chart">
+                            <svg width="120" height="120" viewBox="0 0 120 120">
+                                <circle class="skill-circle__background" cx="60" cy="60" r="50"></circle>
+                                <circle class="skill-circle__progress" cx="60" cy="60" r="50" 
+                                        stroke-dasharray="314" 
+                                        stroke-dashoffset="15.7"></circle>
+                            </svg>
+                            <div class="skill-circle__value">95%</div>
+                        </div>
+                        <div class="skill-circle__name">Высокий уровень грамотности</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section__title">Soft Skills</h2>
+                <div class="soft-skills">
+                    <div class="soft-skills__item">Коммуникабельность</div>
+                    <div class="soft-skills__item">Работа в команде</div>
+                    <div class="soft-skills__item">Тайм-менеджмент</div>
+                    <div class="soft-skills__item">Критическое мышление</div>
+                    <div class="soft-skills__item">Адаптивность</div>
+                    <div class="soft-skills__item">Решение проблем</div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section__title">Мои сайты</h2>
+                <div class="projects">
+                    <div class="project-card">
+                        <div class="project-card__icon">
+                            <i class="fas fa-file-code"></i>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Лабораторная работа 1</h3>
+                            <p class="project-card__description">Первая лабораторная работа по веб-разработке. Создание текста и лабиринта :]</p>
+                            <a href="C:\web-base\web-base\lab1\\lab1.html" class="project-card__link" target="_blank">
+                                Открыть проект
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-card__icon">
+                            <i class="fas fa-layout-group"></i>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Лабораторная работа 2</h3>
+                            <p class="project-card__description">Вторая лабораторная работа по веб-разработке. Создал семьи из Свинки Пеппы.</p>
+                            <a href="C:\web-base\web-base\lab2\\lab2.html" class="project-card__link" target="_blank">
+                                Открыть проект
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-card__icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Интерактивный калькулятор</h3>
+                            <p class="project-card__description">Калькулятор. А что ещё добавлять?</p>
+                            <a href="C:\web-base\web-base\calculate\\calc.html" class="project-card__link" target="_blank">
+                                Использовать калькулятор
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-card__icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Онлайн-резюме</h3>
+                            <p class="project-card__description">Текущий проект - супер резюме с топовой фоткой</p>
+                            <a href="q.html" class="project-card__link project-card__link--current">
+                                Текущая страница
+                                <i class="fas fa-check"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="lab4.js"></script>
+</body>
+</html>
