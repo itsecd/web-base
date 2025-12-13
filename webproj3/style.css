@@ -95,14 +95,15 @@ h2 {
   border-bottom: 1px dashed black;
 }
 
-ul {
+.papersheet__list {
   margin: 0;
   padding-left: 15px;
   font-size: 15px;
   font-weight: lighter;
   border-right: 1px solid black;
 }
-li {
+
+.papersheet__list-item {
   margin-bottom: 5px;
   padding: 5px;
   border-bottom: 1px dashed black;
@@ -120,4 +121,75 @@ li {
 .papersheet__about {
   grid-row: 4;
   border: 2px solid black;
+}
+
+@media screen and (max-width: 768px) {
+  .papersheet {
+    padding: 30px 40px;
+    margin: 20px;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+  
+  /* Упрощаем первую часть на узких экранах */
+  .papersheet__first_part {
+    grid-template-columns: 1fr; /* ← Одноколоночный макет */
+  }
+  
+  .papersheet__firts_part__info {
+    grid-column: 1;
+    border-right: none; /* Убираем вертикальную границу */
+    border-bottom: 1px solid black; /* Добавляем горизонтальную */
+  }
+  
+  .papersheet__first_part__photo {
+    grid-column: 1;
+    grid-row: 2; /* Фото теперь под текстом */
+    padding: 20px 5%;
+  }
+  
+  .papersheet__first_part__photo > img {
+    width: 40%; /* Уменьшаем фото для мобильных */
+  }
+  
+  .papersheet__header {
+    grid-template-columns: 1fr; /* Одноколоночный заголовок */
+  }
+  
+  .papersheet__header__stamp {
+    grid-column: 1;
+    grid-row: 2;
+    justify-content: center; /* Центрируем штамп */
+    padding-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .papersheet {
+    padding: 20px 25px;
+    margin: 10px;
+    gap: 15px;
+  }
+  
+  /* Уменьшаем размеры текста для маленьких экранов */
+  h1 {
+    font-size: 18px;
+    padding: 8px 5px;
+  }
+  
+  h2 {
+    font-size: 14px;
+  }
+  
+  ul, li {
+    font-size: 14px;
+  }
+  
+  .papersheet__header {
+    font-size: 16px;
+  }
+  
+  .papersheet__first_part__photo > img {
+    width: 60%; /* Возвращаем нормальный размер фото */
+  }
 }
