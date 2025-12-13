@@ -64,7 +64,8 @@ body {
 }
 
 .block__contacts, .block__hobbies, 
-.block__info, .block__skills {
+.block__info, .block__skills,
+.block__projects {
     width: 50%;
     padding: 5px;
     border-radius: 10px;
@@ -73,13 +74,15 @@ body {
 
 .skills__skills-list,
 .contacts__contacts-list,
-.hobbies__hobbies-list {
+.hobbies__hobbies-list,
+.projects__projects-list {
     margin: 3px;
 }
 
 .skills__list-header,
 .contacts__list-header,
 .hobbies__list-header,
+.projects__list-header,
 .info__header {
     margin: 0px;
     font-weight: bold;
@@ -88,6 +91,7 @@ body {
 .skills-list__el,
 .contacts-list__el,
 .hobbies-list__el,
+.projects-list__el,
 .info__text {
     margin: 0px;
 }
@@ -100,4 +104,8 @@ body {
 .main-info__text {
     margin: 10px;
     font-size: 20px;
+}
+
+a {
+    color: black;
 }
