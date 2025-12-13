@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+    <header class="header">
+        <h1 class="header__title">Калькулятор</h1>
+    </header>
+
+    <main class="content">
+        <section class="calculator">
+            <h2 class="calculator__title">Калькулятор</h2>
+            <p class="calculator__description">Введите два числа и выберите операцию</p>
+            
+            <div class="calculator__form">
+                <div class="calculator__input-group">
+                    <label for="num1" class="calculator__label">Первое число:</label>
+                    <input type="number" id="num1" class="calculator__input" placeholder="Введите число">
+                </div>
+                
+                <div class="calculator__input-group">
+                    <label for="operation" class="calculator__label">Операция:</label>
+                    <select id="operation" class="calculator__select">
+                        <option value="add">Сложение (+)</option>
+                        <option value="subtract">Вычитание (-)</option>
+                        <option value="multiply">Умножение (×)</option>
+                        <option value="divide">Деление (÷)</option>
+                    </select>
+                </div>
+                
+                <div class="calculator__input-group">
+                    <label for="num2" class="calculator__label">Второе число:</label>
+                    <input type="number" id="num2" class="calculator__input" placeholder="Введите число">
+                </div>
+                
+                <button id="calculate" class="calculator__button">Вычислить</button>
+                
+                <div class="calculator__result">
+                    <h3 class="calculator__result-title">Результат:</h3>
+                    <div id="result" class="calculator__result-value">—</div>
+                </div>
+                
+                <div id="error" class="calculator__error"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
