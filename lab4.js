@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function showResult(result) {
     errorDiv.style.display = "none";
     errorDiv.textContent = "";
-    resultDiv.textContent = result;
+    resultDiv.textContent = parseFloat(result.toFixed(10));
     resultDiv.style.color = "#000000";
   }
 
@@ -68,3 +68,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
