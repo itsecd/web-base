@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Лабораторная работа №4</title>
     <link rel="stylesheet" href="styles/styles.css" />
-    <script src="scripts/script.js"></script>
-</head>
-<body>
-<h1 id = "title_1">Простой калькулятор</h1>
+    
+  </head>
+  <body>
+    <h1 id="title_1">Простой калькулятор</h1>
 
-<div class = "calculator-box">
-    <div class = "calculator-box__data-box flexbox">
-        <input type="number" placeholder="A" id="A" value = "0" class = "calculator-box__data-field calculator-box__data-field_input-field">
-        <input type="number" placeholder="B" id="B" value = "0" class = "calculator-box__data-field calculator-box__data-field_input-field">
-        <output type = "number" id= "f(A,B)" for="A B" value = "0" class = "calculator-box__data-field calculator-box__data-field_output-field"> </output>
-    </div>
+    <div class="calculator-box">
+      <div class="calculator-box__data-box flexbox">
+        <input
+          type="number"
+          placeholder="A"
+          id="A"
+          value="0"
+          class="calculator-box__data-field calculator-box__data-field_input-field"
+        />
+        <input
+          type="number"
+          placeholder="B"
+          id="B"
+          value="0"
+          class="calculator-box__data-field calculator-box__data-field_input-field"
+        />
+        <output
+          type="number"
+          id="result"
+          for="A B"
+          value="0"
+          class="calculator-box__data-field calculator-box__data-field_output-field"
+        >
+        </output>
+      </div>
 
-    <div class = "calculator-box__button-box flexbox">
+      <div class="calculator-box__button-box flexbox">
         <!-- 1st row -->
-    <div class = "calculator-box__button"> + </div>
-    <div class = "calculator-box__button"> - </div>
-    <div class = "calculator-box__button"> * </div>
-    <div class = "calculator-box__button"> / </div>
-    <div class = "calculator-box__button"> A^B </div>
+        <div id="add" class="calculator-box__button">+</div>
+        <div id="substr" class="calculator-box__button">-</div>
+        <div id="mult" class="calculator-box__button">*</div>
+        <div id="divide" class="calculator-box__button">/</div>
+        <div id="power" class="calculator-box__button">A^B</div>
 
         <!-- 2nd row -->
-    <div class = "calculator-box__button"> e^A </div>
-    <div class = "calculator-box__button"> ln(A) </div>
-    <div class = "calculator-box__button"> lg(A) </div>
-    <div class = "calculator-box__button"> log_B(A) </div>
-    
+        <div id="exp" class="calculator-box__button">e^A</div>
+        <div id="ln" class="calculator-box__button">ln(A)</div>
+        <div id="lg" class="calculator-box__button">lg(A)</div>
+        <div id="log_bA" class="calculator-box__button">log_B(A)</div>
 
         <!-- 3rd row -->
-    <div class = "calculator-box__button"> sin(A) </div>
-    <div class = "calculator-box__button"> cos(A) </div>
-    <div class = "calculator-box__button"> tg(A) </div>
-    <div class = "calculator-box__button"> ctg(A) </div>
+        <div id="sin" class="calculator-box__button">sin(A)</div>
+        <div id="cos" class="calculator-box__button">cos(A)</div>
+        <div id="tg" class="calculator-box__button">tg(A)</div>
+        <div id="ctg" class="calculator-box__button">ctg(A)</div>
 
         <!-- 4th row -->
-    <div class = "calculator-box__button"> sh(A) </div>
-    <div class = "calculator-box__button"> ch(A) </div>
-    <div class = "calculator-box__button"> th(A) </div>
-    <div class = "calculator-box__button"> cth(A) </div>
-
-        <!-- 5th row -->
-    <div class = "calculator-box__button"> sec(A) </div>
-    <div class = "calculator-box__button"> cosec(A) </div>
-    
-    
+        <div id="sh" class="calculator-box__button">sh(A)</div>
+        <div id="ch" class="calculator-box__button">ch(A)</div>
+        <div id="th" class="calculator-box__button">th(A)</div>
+        <div id="ctgh" class="calculator-box__button">ctgh(A)</div>
+      </div>
     </div>
-</div>
-
-</body>
+    <script src="scripts/script.js"></script>
+  </body>
 </html>
