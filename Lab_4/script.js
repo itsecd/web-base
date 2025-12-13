@@ -1,5 +1,4 @@
 const ops = ["+", "-", "*", "/"];
-let currentIndex = 0;
 
 
 const selectedOp = document.getElementById("selected-op");
@@ -12,14 +11,13 @@ function buildList() {
 
     ops.forEach((op, index) => {
         const div = document.createElement("div");
-        div.className = "dropdown-item";
+        div.className = "calculator__dropdown-item";
         div.textContent = op;
 
 
         div.onclick = () => {
-            currentIndex = index;
-            selectedOp.textContent = op;
-            list.classList.add("hidden");
+            selectedOp.setAttribute("operation-value", op);
+            list.classList.add("calculator__dropdown-list--hidden");
         };
 
 
@@ -30,8 +28,10 @@ function buildList() {
 
 selectedOp.onclick = () => {
     buildList();
-    list.classList.toggle("hidden");
+    list.classList.toggle("calculator__dropdown-list--hidden");
 };
+
+
 
 function clearFields() {
     const num1 = document.getElementById("num1").value;
@@ -50,9 +50,25 @@ function clearFields() {
 
 
 function calculate() {
-    const num1 = parseFloat(document.getElementById("num1").value);
-    const num2 = parseFloat(document.getElementById("num2").value);
-    const op = ops[currentIndex];
+    const num1El = document.getElementById("num1");
+    const num2El = document.getElementById("num2");
+    const resultEl = document.getElementById("result");
+
+
+    if (!num1El || !num2El || !resultEl || !selectedOp) {
+        alert("Ошибка: один из элементов не найден на странице!");
+        return;
+    }
+
+    const num1 = parseFloat(num1El.value);
+    const num2 = parseFloat(num2El.value);
+    let op = selectedOp.getAttribute("operation-value");
+
+    if (!op) {
+        alert("Ошибка выбора операции, используется + по умолчанию");
+        op = ops[0]; 
+    }
+
 
 
     if (isNaN(num1) || isNaN(num2)) {
