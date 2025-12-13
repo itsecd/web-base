@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="calculator__header">
+            <h2 class="calculator__title">Калькулятор</h2>
+        </div>
+        
+        <div class="calculator__inputs">
+            <div class="calculator__input-group">
+                <label for="num1" class="calculator__label">
+                    <i class="fas fa-hashtag calculator__label-icon"></i>
+                    Первое число
+                </label>
+                <input type="text" id="num1" class="calculator__input" placeholder="Введите число">
+            </div>
+            
+            <div class="calculator__input-group">
+                <label for="num2" class="calculator__label">
+                    <i class="fas fa-hashtag calculator__label-icon"></i>
+                    Второе число
+                </label>
+                <input type="text" id="num2" class="calculator__input" placeholder="Введите число">
+            </div>
+        </div>
+        
+        <div class="calculator__operations">
+            <label class="calculator__label">
+                <i class="fas fa-tasks calculator__label-icon"></i>
+                Выберите операцию
+            </label>
+            <div class="calculator__operation-buttons">
+                <button class="calculator__operation-button calculator__operation-button_type_add" data-operation="add">
+                    +
+                </button>
+                <button class="calculator__operation-button calculator__operation-button_type_subtract" data-operation="subtract">
+                    −
+                </button>
+                <button class="calculator__operation-button calculator__operation-button_type_multiply" data-operation="multiply">
+                    ×
+                </button>
+                <button class="calculator__operation-button calculator__operation-button_type_divide" data-operation="divide">
+                    ÷
+                </button>
+            </div>
+        </div>
+        
+        <button class="calculator__submit-button" id="calculate">
+            <i class="fas fa-equals calculator__submit-icon"></i>
+            Вычислить
+        </button>
+        
+        <div class="calculator__result">
+            <div class="calculator__result-header">
+                <i class="fas fa-poll calculator__result-icon"></i>
+                Результат:
+            </div>
+            <div id="result-value" class="calculator__result-value">—</div>
+        </div>
+    </div>
+
+    <script src="calc.js"></script>
+</body>
+</html>
