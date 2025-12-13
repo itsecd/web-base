@@ -65,7 +65,7 @@ body {
   box-sizing: border-box;
 }
 
-.resume__self {
+.resume__about {
   grid-column: 1;
   grid-row: 1;
 }
@@ -78,7 +78,7 @@ body {
   grid-row: 2;
 }
 
-.resume__self,
+.resume__about,
 .resume__info,
 .resume__project {
   background: rgba(163, 163, 163, 0.801);
@@ -89,21 +89,21 @@ body {
   box-sizing: border-box;
 }
 
-.self__me {
+.about__self {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
   margin-bottom: 25px;
 }
-.me__image {
+.self__image {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.me__text,
+.self__text,
 .info__text,
 .project__text{
   font-size: 1.2em;
@@ -111,7 +111,7 @@ body {
   line-height: 1.4;
 }
 
-.me__text {
+.self__text {
   text-align: center;
 }
 
