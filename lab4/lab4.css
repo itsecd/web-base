@@ -1,0 +1,97 @@
+body {
+  background:
+    linear-gradient(
+      rgba(26, 16, 38, 0.5),
+      rgba(26, 16, 38, 0.5)
+    ),
+    url("https://i.pinimg.com/originals/4d/a9/dc/4da9dcb8bbbdffbacedb93642a2f34d9.png");
+
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.calculator {
+  background: #2a1740;
+  border: 4px solid #8a4fff;
+  box-shadow: 0 0 0 4px #4b2b7f;
+  padding: 20px;
+  width: 320px;
+}
+
+.calculator__title {
+  text-align: center;
+  color: #D562EC;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.calculator__label {
+  color: #e0d1ff;
+  font-size: 10px;
+  display: block;
+  margin-top: 10px;
+}
+
+.calculator__input,
+.calculator__select {
+  font-size: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 4px;
+  padding: 8px;
+  background: #140b20;
+  color: #e0d1ff;
+  border: 3px solid #6a3fc9;
+  outline: none;
+  font-family: inherit;
+}
+
+.calculator__input:focus,
+.calculator__select:focus {
+  border-color: #b084ff;
+}
+
+/* уууродские стрелочки*/
+.calculator__input::-webkit-inner-spin-button,
+.calculator__input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.calculator__input {
+  -moz-appearance: textfield;
+}
+
+.calculator__button {
+  margin-top: 16px;
+  width: 100%;
+  padding: 10px;
+  background: #6a3fc9;
+  color: #e0d1ff;
+  border: 3px solid #b084ff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 10px;
+}
+
+.calculator__button:hover {
+  background: #8a5cff;
+}
+
+.calculator__result {
+  margin-top: 16px;
+  padding: 10px;
+  background: #140b20;
+  border: 3px solid #6a3fc9;
+  color: #caa8ff;
+  min-height: 24px;
+  font-size: 10px;
+}
+
+.calculator__result--error {
+  color: #D562EC;
+}
