@@ -1,0 +1,61 @@
+.sport-list__item {
+    transition: all 2s;
+    cursor: pointer;
+    list-style: none;
+    line-height: 1.5;
+}
+
+.sport-list__item:hover {
+    color: rgb(255, 238, 0);
+}
+
+.parent > div {
+    padding: 15px;
+}
+
+.parent-1 > div {
+    color: red;
+}
+
+.parent-1 + .parent-3 > h1, .parent-1 + .parent-3 > div {
+    color: black;
+}
+
+.parent-2 > h1 {
+    color: orange;
+}
+
+.parent-2__child > span {
+    color: #b4005a;
+    border: 5px orange dotted;
+    padding: 5px;
+}
+
+.parent-3 > div, .parent-3 > h1 {
+    color: green;
+}
+
+.parent-3 > .parent-2__child > span {
+    border: none;
+    color: purple;
+    padding: 0;
+}
+
+.progr-langs__list::after {
+    display: block;
+    content: "";
+    background-image: url(./imgs/logo.png);
+    background-size: cover;
+    width: 200px;
+    height: 100px;
+}
+
+.progr-langs__list__item > a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.progr-langs__list__item > a::before {
+    content: "🌐";
+}
