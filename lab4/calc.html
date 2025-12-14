@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой калькулятор</title>
+    <link rel="stylesheet" href="calc.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator-glass">
+            <div class="calculator-header">
+                <div class="calculator-title">
+                    <h1>Простой калькулятор</h1>
+                    <p>Выполните операцию над двумя числами</p>
+                </div>
+            </div>
+            
+            <div class="calculator-body">
+                <div class="input-section">
+                    <div class="input-group">
+                        <label for="num1">Первое число</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="num1" class="number-input" placeholder="0">
+                        </div>
+                    </div>
+                    
+                    <div class="operation-selector">
+                        <label for="operation-select">Операция</label>
+                        <div class="select-wrapper">
+                            <select id="operation-select" class="operation-select">
+                                <option value="add">Сложение (+)</option>
+                                <option value="subtract">Вычитание (-)</option>
+                                <option value="multiply">Умножение (×)</option>
+                                <option value="divide">Деление (÷)</option>
+                            </select>
+                            <div class="select-arrow"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="num2">Второе число</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="num2" class="number-input" placeholder="0">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calculate-section">
+                    <button id="calculate" class="calculate-button">
+                        <span class="button-text">Вычислить</span>
+                        <span class="button-icon">→</span>
+                    </button>
+                </div>
+                
+                <div class="result-section">
+                    <div class="result-label">Результат:</div>
+                    <div id="result-value" class="result-value">
+                        <div class="result-placeholder">—</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="calc.js"></script>
+</body>
+</html>
