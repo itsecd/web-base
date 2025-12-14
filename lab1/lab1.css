@@ -1,0 +1,84 @@
+.border-top {
+    border-top: 3px solid #000000;
+}
+
+.border-right {
+    border-right: 3px solid #000000;
+}
+
+.border-bottom {
+    border-bottom: 3px solid #000000;
+}
+
+.border-left {
+    border-left: 3px solid #000000;
+}
+
+.traffic-light__circles {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+
+.js-des {
+    background-color: #D490C1;
+}
+
+.js-des p {
+    color: #60E41D;
+    text-align: center;
+}
+
+.imgs {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.imgs__big-cat {
+    max-width: 100%;
+}
+
+.imgs__small-img {
+    position: absolute;
+}
+
+.traffic-light {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    background-color: #000000;
+    width: 150px;
+    padding: 10px 0 10px 0;
+    margin-bottom: 20px;
+}
+
+.traffic-light__light--red {
+    background-color: #ff0000;
+}
+
+.traffic-light__light--yellow {
+    background-color: #eeff00;
+}
+
+.traffic-light__light--green {
+    background-color: #3cff00;
+}
+
+.maze {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    gap: 10px;
+    background: #0000003b;
+    padding: 10px;
+    width: fit-content;
+}
+
+.maze__cell {
+    background: #ffffff;
+}
