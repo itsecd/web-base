@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Калькулятор</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="lab4.css">
+</head>
+<body>
+
+  <div class="calculator">
+    <h1 class="calculator__title">CALCULATOR</h1>
+
+    <label class="calculator__label" for="num1">Первое число</label>
+    <input class="calculator__input" type="number" id="num1">
+
+    <label class="calculator__label" for="num2">Второе число</label>
+    <input class="calculator__input" type="number" id="num2">
+
+    <label class="calculator__label" for="operation">Операция</label>
+    <select class="calculator__select" id="operation">
+      <option value="+">Сложение (+)</option>
+      <option value="-">Вычитание (-)</option>
+      <option value="*">Умножение (*)</option>
+      <option value="/">Деление (/)</option>
+    </select>
+
+    <button class="calculator__button" id="calcBtn"> Вычислить </button>
+
+    <div class="calculator__result" id="result"> Результат </div>
+  </div>
+
+  <script src="lab4.js"></script>
+</body>
+</html>
