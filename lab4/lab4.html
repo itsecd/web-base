@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="calculator">
+        <h1 class="calculator__title">Мой калькулятор.</h1>
+
+        <form class="calculator__form">
+
+            <div class="calculator__form-group">
+                <label class="calculator__form-group__label" for="num1">
+                    Первое число.
+                </label>
+                <input
+                    class="calculator__form-group__input"
+                    type="number"
+                    id="num1"
+                    placeholder="Введите первое число"
+                    step="0.01"
+                />
+            </div>
+
+            <div class="calculator__form-group">
+                <label class="calculator__form-group__label" for="operation">
+                    Операция.
+                </label>
+                <select class="calculator__form-group__select" id="operation">
+                    <option value="add">Сложение (+)</option>
+                    <option value="sub">Вычитание (-)</option>
+                    <option value="mul">Умножение (×)</option>
+                    <option value="div">Деление (÷)</option>
+                </select>
+            </div>
+
+            <div class="calculator__form-group">
+                <label class="calculator__form-group__label" for="num2">
+                    Второе число.
+                </label>
+                <input
+                    class="calculator__form-group__input"
+                    type="number"
+                    id="num2"
+                    placeholder="Введите второе число"
+                    step="0.01"
+                />
+            </div>
+
+            <div class="calculator__actions">
+                <button
+                    class="calculator__actions__button calculator__actions__button--primary"
+                    type="button"
+                    id="calculateBtn"
+                >
+                    Вычислить.
+                </button>
+                <button
+                    class="calculator__actions__button calculator__actions__button--secondary"
+                    type="reset"
+                    id="clearBtn"
+                >
+                    Очистить.
+                </button>
+            </div>
+        </form>
+
+        <div class="calculator__error" id="error"></div>
+
+        <div class="calculator__result">
+            <span class="calculator__result__label">Результат.</span>
+            <div class="calculator__result__value" id="result">—</div>
+        </div>
+    </div>
+
+    <script src="calcul.js"></script>
+</body>
+</html>
