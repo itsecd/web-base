@@ -133,6 +133,41 @@ body {
     left: 0;
 }
 
+right-section__list--projects li:before {
+    display: none;
+}
+
+.project__link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    padding: 8px 10px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.project__link:hover {
+    color: #2980b9;
+    background-color: #f8f9fa;
+    padding-left: 15px;
+    text-decoration: none;
+}
+
+.project__link--current {
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    font-weight: bold;
+}
+
+.project__link--current:hover {
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    padding-left: 10px;
+    cursor: default;
+}
+
 @media (max-width: 768px) {
     .resume__content {
         flex-direction: column;
@@ -144,5 +179,10 @@ body {
     
     .resume__right {
         order: 1;
+    }
+    
+    .project__link {
+        padding: 6px 8px;
+        font-size: 14px;
     }
 }
