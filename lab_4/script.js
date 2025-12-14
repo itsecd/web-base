@@ -18,6 +18,30 @@ class SimpleCalculator {
         });
     }
     
+    roundResult(number) {
+        const rounded = Math.round(number * 10000000000) / 10000000000;
+        
+        return parseFloat(rounded.toFixed(10));
+    }
+    
+    performCalculation(num1, num2, operation) {
+        switch (operation) {
+            case '+':
+                return num1 + num2;
+            case '-':
+                return num1 - num2;
+            case '*':
+                return num1 * num2;
+            case '/':
+                if (num2 === 0) {
+                    throw new Error('Деление на ноль!');
+                }
+                return num1 / num2;
+            default:
+                throw new Error('Неизвестная операция');
+        }
+    }
+    
     calculate() {
         const num1 = parseFloat(this.num1Input.value);
         const num2 = parseFloat(this.num2Input.value);
@@ -31,25 +55,9 @@ class SimpleCalculator {
         let result;
         
         try {
-            switch (operation) {
-                case '+':
-                    result = num1 + num2;
-                    break;
-                case '-':
-                    result = num1 - num2;
-                    break;
-                case '*':
-                    result = num1 * num2;
-                    break;
-                case '/':
-                    if (num2 === 0) {
-                        throw new Error('Деление на ноль!');
-                    }
-                    result = num1 / num2;
-                    break;
-                default:
-                    throw new Error('Неизвестная операция');
-            }
+            result = this.performCalculation(num1, num2, operation);
+            
+            result = this.roundResult(result);
             
             this.showResult(result);
             
@@ -60,19 +68,19 @@ class SimpleCalculator {
     
     showResult(result) {
         this.resultDiv.textContent = `Результат: ${result}`;
-        this.resultDiv.className = 'result success';
+        this.resultDiv.className = 'result result__success';
         this.animateButton();
     }
     
     showError(message) {
         this.resultDiv.textContent = `Ошибка: ${message}`;
-        this.resultDiv.className = 'result error';
+        this.resultDiv.className = 'result result__error';
     }
     
     animateButton() {
-        this.calculateBtn.style.background = 'linear-gradient(135deg, #ff1493, #c71585)';
+        this.calculateBtn.classList.add('button-animate');
         setTimeout(() => {
-            this.calculateBtn.style.background = 'linear-gradient(135deg, #ff69b4, #ff1493)';
+            this.calculateBtn.classList.remove('button-animate');
         }, 500);
     }
 }

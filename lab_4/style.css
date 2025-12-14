@@ -98,6 +98,12 @@ button:active {
     transform: translateY(0);
 }
 
+.button-animate {
+    background: linear-gradient(135deg, #ff1493, #c71585) !important;
+    transform: scale(0.98) !important;
+    box-shadow: 0 2px 10px rgba(255, 105, 180, 0.5) !important;
+}
+
 .result {
     padding: 18px;
     background: #fffafa;
@@ -113,13 +119,13 @@ button:active {
     color: #c71585;
 }
 
-.result.error {
+.result__error {
     background: #ffe4e1;
     color: #dc143c;
     border-color: #dc143c;
 }
 
-.result.success {
+.result__success {
     background: #ffebf3;
     color: #c71585;
     border-color: #ffb6c1;
