@@ -3,7 +3,12 @@ function initCalculator() {
   const secondInput = document.getElementById('calculator__second-number');
   const operationSelect = document.getElementById('calculator__operation');
   const resultOutput = document.getElementById('calculator__result-output');
-  const calculateButton = document.querySelector('.calculator__button');
+  const calculateButton = document.querySelector('.form__button');
+
+  if (!firstInput || !secondInput || !operationSelect || !resultOutput || !calculateButton) {
+    console.error('Один или несколько необходимых элементов не найдены');
+    return;
+  }
 
   calculateButton.addEventListener('click', () => {
     const first = parseFloat(firstInput.value);
