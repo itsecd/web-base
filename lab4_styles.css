@@ -10,7 +10,7 @@ body {
   color: #2d3748;
 }
 
-.calculator {
+.form {
   background: white;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
@@ -21,14 +21,14 @@ body {
   max-width: 460px;
 }
 
-.calculator__title {
+.form__title {
   font-size: 26px;
   font-weight: 600;
   color: #2c5282;
   margin: 0 0 24px;
 }
 
-.calculator__inputs {
+.form__inputs {
   display: flex;
   justify-content: center;
   gap: 14px;
@@ -36,7 +36,7 @@ body {
   margin-bottom: 20px;
 }
 
-.calculator__input {
+.inputs__input {
   padding: 12px;
   font-size: 16px;
   border: 1px solid #cbd5e0;
@@ -46,13 +46,13 @@ body {
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.calculator__input:focus {
+.inputs__input:focus {
   outline: none;
   border-color: #4299e1;
   box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
 }
 
-.calculator__select {
+.inputs__select {
   padding: 12px;
   font-size: 18px;
   border: 1px solid #cbd5e0;
@@ -63,12 +63,12 @@ body {
   transition: border-color 0.2s;
 }
 
-.calculator__select:focus {
+.inputs__select:focus {
   outline: none;
   border-color: #4299e1;
 }
 
-.calculator__button {
+.form__button {
   padding: 12px 32px;
   font-size: 17px;
   font-weight: 600;
@@ -81,14 +81,14 @@ body {
   transition: background 0.2s;
 }
 
-.calculator__button:hover {
+.form__button:hover {
   background: #dbeafe;
 }
 
-.calculator__button:active {
+.form__button:active {
   background: #bfdbfe;
 }
-.calculator__result {
+.form__result {
   font-size: 19px;
   font-weight: 600;
   background: #ebf8ff;
