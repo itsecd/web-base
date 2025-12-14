@@ -11,7 +11,7 @@ function calculate() {
   resultField.classList.remove("calculator__result--error");
 
   if (num1 === "" || num2 === "") {
-    showError("Ошибка: введите оба числа");
+    showError("Ошибочка: введите оба числа");
     return;
   }
 
@@ -48,3 +48,4 @@ function showError(message) {
   resultField.textContent = message;
   resultField.classList.add("calculator__result--error");
 }
+
