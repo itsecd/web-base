@@ -19,6 +19,57 @@ document.addEventListener('DOMContentLoaded', function() {
         'divide': '÷'
     };
     
+    // Функция округления с параметром точности
+    function roundNumber(number, precision = 6) {
+        if (typeof number !== 'number' || isNaN(number)) {
+            return number;
+        }
+        
+        const factor = Math.pow(10, precision);
+        return Math.round(number * factor) / factor;
+    }
+    
+    // Функция для выполнения вычислений
+    function performCalculation(num1, num2, operation) {
+        let result, error = false, status = '';
+        
+        switch(operation) {
+            case 'add':
+                result = num1 + num2;
+                status = 'Сложение выполнено успешно';
+                break;
+            case 'subtract':
+                result = num1 - num2;
+                status = 'Вычитание выполнено успешно';
+                break;
+            case 'multiply':
+                result = num1 * num2;
+                status = 'Умножение выполнено успешно';
+                break;
+            case 'divide':
+                if (num2 === 0) {
+                    error = true;
+                    result = "Ошибка: деление на ноль!";
+                    status = 'Ошибка вычисления';
+                } else {
+                    result = roundNumber(num1 / num2);
+                    status = 'Деление выполнено успешно';
+                }
+                break;
+            default:
+                result = "Неизвестная операция";
+                error = true;
+                status = 'Ошибка вычисления';
+        }
+        
+        // Возвращаем объект вместо отдельных переменных
+        return {
+            result: result,
+            error: error,
+            status: status
+        };
+    }
+    
     // Инициализация значений по умолчанию
     function initializeCalculator() {
         num1Input.value = '15';
@@ -42,46 +93,17 @@ document.addEventListener('DOMContentLoaded', function() {
         if (isNaN(num1)) num1 = 0;
         if (isNaN(num2)) num2 = 0;
         
-        // Определяем операцию и вычисляем результат
-        let result, error = false, status = '';
-        
-        switch(operation) {
-            case 'add':
-                result = num1 + num2;
-                status = 'Сложение выполнено успешно';
-                break;
-            case 'subtract':
-                result = num1 - num2;
-                status = 'Вычитание выполнено успешно';
-                break;
-            case 'multiply':
-                result = num1 * num2;
-                status = 'Умножение выполнено успешно';
-                break;
-            case 'divide':
-                if (num2 === 0) {
-                    error = true;
-                    result = "Ошибка: деление на ноль!";
-                    status = 'Ошибка вычисления';
-                } else {
-                    result = num1 / num2;
-                    // Округляем до 6 знаков после запятой, если нужно
-                    result = Math.round(result * 1000000) / 1000000;
-                    status = 'Деление выполнено успешно';
-                }
-                break;
-            default:
-                result = "Неизвестная операция";
-                error = true;
-                status = 'Ошибка вычисления';
-        }
+        // Выполняем вычисление через отдельную функцию
+        const calculationResult = performCalculation(num1, num2, operation);
         
         // Отображаем результат
-        displayResult(num1, num2, operation, result, error, status);
+        displayResult(num1, num2, operation, calculationResult);
     }
     
     // Функция для отображения результата
-    function displayResult(num1, num2, operation, result, isError, status) {
+    function displayResult(num1, num2, operation, calculationResult) {
+        const { result, error: isError, status } = calculationResult;
+        
         // Скрываем placeholder и показываем результат
         resultPlaceholder.style.display = 'none';
         resultContainer.classList.remove('result__container--hidden');

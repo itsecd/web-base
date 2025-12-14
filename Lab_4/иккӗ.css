@@ -108,7 +108,7 @@
     right: 15%;
 }
 
-/* Эффект матового стекла */
+/* Эффект матового стекла (до сих пор кайфую с него) */
 .calculator__card--glass,
 .info-card--glass {
     background: rgba(255, 255, 255, 0.85);
@@ -430,6 +430,17 @@
     font-weight: 700;
     color: var(--color-primary-darkest);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    width: 100%;
+}
+
+.result__number {
+    display: block;
+    width: 100%;
 }
 
 .result__status {
@@ -653,6 +664,11 @@
 /* Модификаторы состояния */
 .result__container--error .result__number {
     color: var(--color-error);
+    font-size: 1.8rem;
+    word-break: break-word;
+    text-align: center;
+    line-height: 1.3;
+    padding: 5px;
 }
 
 .result__container--success .result__number {
@@ -684,6 +700,10 @@
     
     .result__value {
         font-size: 2.2rem;
+    }
+    
+    .result__container--error .result__number {
+        font-size: 1.5rem;
     }
     
     .examples__grid {
