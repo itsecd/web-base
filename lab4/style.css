@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Блок Calculator */
+.calculator {
+    background: #1b263b;
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid #415a77;
+    width: 320px;
+    color: white;
+}
+
+/* Элемент Header */
+.calculator__header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #415a77;
+}
+
+/* Элемент Title */
+.calculator__title {
+    color: #778da9;
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+/* Элемент Student */
+.calculator__student {
+    color: #a0a4b8;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Элемент Input-group */
+.calculator__input-group {
+    margin-bottom: 15px;
+}
+
+/* Элемент Input */
+.calculator__input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #415a77;
+    border-radius: 5px;
+    background: #0d1b2a;
+    color: white;
+    box-sizing: border-box;
+}
+
+.calculator__input:focus {
+    outline: none;
+    border-color: #4cc9f0;
+}
+
+/* Элемент Select-group */
+.calculator__select-group {
+    margin-bottom: 15px;
+}
+
+/* Элемент Select */
+.calculator__select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #415a77;
+    border-radius: 5px;
+    background: #0d1b2a;
+    color: white;
+    box-sizing: border-box;
+}
+
+.calculator__select:focus {
+    outline: none;
+    border-color: #4cc9f0;
+}
+
+/* Элемент Buttons */
+.calculator__buttons {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Элемент Button */
+.calculator__button {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Модификатор типа Calculate */
+.calculator__button_type_calculate {
+    background: #415a77;
+    color: white;
+}
+
+.calculator__button_type_calculate:hover {
+    background: #4a6488;
+}
+
+/* Модификатор типа Reset */
+.calculator__button_type_reset {
+    background: #5a1e3d;
+    color: white;
+}
+
+.calculator__button_type_reset:hover {
+    background: #6d2548;
+}
+
+/* Элемент Result */
+.calculator__result {
+    background: #0d1b2a;
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid #415a77;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Элемент Result-label */
+.calculator__result-label {
+    font-size: 14px;
+    color: #a0a4b8;
+}
+
+/* Элемент Result-value */
+.calculator__result-value {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+    min-height: 40px;
+}
+
+/* Модификатор Result-value для ошибки */
+.calculator__result-value_error {
+    color: #ff6b6b;
+}
+
+/* Модификатор Result-value для успеха */
+.calculator__result-value_success {
+    color: #4ade80;
+}
+
+/* Элемент Footer */
+.calculator__footer {
+    text-align: center;
+    color: #778da9;
+    font-size: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #415a77;
+}
