@@ -32,24 +32,16 @@
         </div>
         
         <div class="calculator__operations">
-            <label class="calculator__label">
+            <label for="operation-select" class="calculator__label">
                 <i class="fas fa-tasks calculator__label-icon"></i>
                 Выберите операцию
             </label>
-            <div class="calculator__operation-buttons">
-                <button class="calculator__operation-button calculator__operation-button_type_add" data-operation="add">
-                    +
-                </button>
-                <button class="calculator__operation-button calculator__operation-button_type_subtract" data-operation="subtract">
-                    −
-                </button>
-                <button class="calculator__operation-button calculator__operation-button_type_multiply" data-operation="multiply">
-                    ×
-                </button>
-                <button class="calculator__operation-button calculator__operation-button_type_divide" data-operation="divide">
-                    ÷
-                </button>
-            </div>
+            <select id="operation-select" class="calculator__select">
+                <option value="add">Сложение (+)</option>
+                <option value="subtract">Вычитание (−)</option>
+                <option value="multiply">Умножение (×)</option>
+                <option value="divide">Деление (÷)</option>
+            </select>
         </div>
         
         <button class="calculator__submit-button" id="calculate">

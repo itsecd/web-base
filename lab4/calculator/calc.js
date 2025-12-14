@@ -2,35 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Элементы интерфейса калькулятора
     const num1Input = document.getElementById('num1');
     const num2Input = document.getElementById('num2');
-    const operationButtons = document.querySelectorAll('.calculator__operation-button');
+    const operationSelect = document.getElementById('operation-select');
     const calculateButton = document.getElementById('calculate');
     const resultValue = document.getElementById('result-value');
-    
-    // Текущая операция
-    let currentOperation = 'add';
-    
-    // Инициализация: активируем кнопку сложения по умолчанию
-    setActiveOperationButton('add');
-    
-    // Обработчики для кнопок операций
-    operationButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const operation = this.getAttribute('data-operation');
-            setActiveOperationButton(operation);
-            currentOperation = operation;
-        });
-    });
-    
-    // Функция установки активной кнопки операции
-    function setActiveOperationButton(operation) {
-        operationButtons.forEach(button => {
-            if (button.getAttribute('data-operation') === operation) {
-                button.classList.add('calculator__operation-button_active');
-            } else {
-                button.classList.remove('calculator__operation-button_active');
-            }
-        });
-    }
     
     // Обработчик нажатия на кнопку "Вычислить"
     calculateButton.addEventListener('click', calculate);
@@ -66,12 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
+        // Получаем выбранную операцию
+        const operation = operationSelect.value;
         let result;
         let operationSymbol;
         
         // Выполняем выбранную операцию
         try {
-            switch (currentOperation) {
+            switch (operation) {
                 case 'add':
                     result = num1 + num2;
                     operationSymbol = '+';
