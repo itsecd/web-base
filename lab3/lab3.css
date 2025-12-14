@@ -131,3 +131,23 @@ body {
   z-index: -1;
   filter: grayscale(70%);
 }
+
+.projects__list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.projects__item {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.projects__item a {
+  color: #9fd8ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.projects__item a:hover {
+  text-decoration: underline;
+}
