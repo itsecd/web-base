@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="lab_4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator-header">
+            <h1><i class="fas fa-calculator"></i> Умный калькулятор</h1>
+            <p class="subtitle">Простой и удобный инструмент для вычислений</p>
+        </div>
+
+        <div class="calculator-body">
+            <!-- Ввод чисел -->
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <label for="number1"><i class="fas fa-hashtag"></i> Первое число</label>
+                    <input type="text" id="number1" placeholder="Введите число...">
+                </div>
+                
+                <div class="input-wrapper">
+                    <label for="number2"><i class="fas fa-hashtag"></i> Второе число</label>
+                    <input type="text" id="number2" placeholder="Введите число...">
+                </div>
+            </div>
+
+            <!-- Выбор операции -->
+            <div class="operation-selector">
+                <label for="operation"><i class="fas fa-sliders-h"></i> Выберите операцию</label>
+                <div class="select-wrapper">
+                    <select id="operation">
+                        <option value="add">➕ Сложение</option>
+                        <option value="subtract">➖ Вычитание</option>
+                        <option value="multiply">✖️ Умножение</option>
+                        <option value="divide">➗ Деление</option>
+                        <option value="power">⚡ Возведение в степень</option>
+                        <option value="remainder">🔢 Остаток от деления</option>
+                    </select>
+                    <div class="select-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кнопка вычисления -->
+            <div class="calculate-section">
+                <button id="calculateBtn" class="calculate-btn">
+                    <i class="fas fa-bolt"></i> Вычислить
+                </button>
+                <button id="clearBtn" class="clear-btn">
+                    <i class="fas fa-broom"></i> Очистить
+                </button>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-section">
+                <div class="result-header">
+                    <h3><i class="fas fa-chart-line"></i> Результат</h3>
+                    <div class="operation-preview" id="operationPreview">
+                        <span id="previewNum1">0</span>
+                        <span id="previewOperator">+</span>
+                        <span id="previewNum2">0</span>
+                        <span>=</span>
+                    </div>
+                </div>
+                <div class="result-display">
+                    <div class="result-value" id="result">0</div>
+                    <div class="result-status" id="resultStatus">Введите числа и нажмите "Вычислить"</div>
+                </div>
+            </div>
+
+            <!-- История операций -->
+            <div class="history-section">
+                <h3><i class="fas fa-history"></i> История операций</h3>
+                <div class="history-list" id="historyList">
+                    <div class="history-empty">
+                        <i class="fas fa-clock"></i>
+                        <p>Здесь будут отображаться ваши последние вычисления</p>
+                    </div>
+                </div>
+                <button id="clearHistoryBtn" class="history-clear-btn">
+                    <i class="fas fa-trash"></i> Очистить историю
+                </button>
+            </div>
+        </div>
+
+        <div class="calculator-footer">
+            <p><i class="fas fa-exclamation-triangle"></i> Калькулятор обрабатывает ошибки: деление на ноль, некорректный ввод и т.д.</p>
+        </div>
+    </div>
+
+    <script src="lab_4.js"></script>
+</body>
+</html>
