@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <h1 class="calculator__title">Калькулятор</h1>
+
+      <form class="calculator_form">
+        <div class="calculator__form__group">
+          <label class="calculator__form__group__label" for="num1"
+            >Первое число:</label
+          >
+          <input
+            class="calculator__form__group__input"
+            type="number"
+            id="num1"
+            placeholder="Введите первое число"
+          />
+        </div>
+        
+        <div class="calculator__form__group">
+          <label class="calculator__form__group__label" for="operation"
+            >Операция:</label
+          >
+          <select class="calculator__form__group__select" id="operation">
+            <option value="+">Сложение (+)</option>
+            <option value="-">Вычитание (-)</option>
+            <option value="*">Умножение (*)</option>
+            <option value="/">Деление (/)</option>
+          </select>
+        </div>
+
+        <div class="calculator__form__group">
+          <label class="calculator__form__group__label" for="num2"
+            >Второе число:</label
+          >
+          <input
+            class="calculator__form__group__input"
+            type="number"
+            id="num2"
+            placeholder="Введите второе число"
+          />
+        </div>
+
+        <div class="actions">
+          <button
+            class="actions__button actions__button--primary"
+            type="button"
+            id="calculate"
+          >
+            Вычислить
+          </button>
+          <button
+            class="actions__button actions__button--secondary"
+            type="reset"
+          >
+            Очистить
+          </button>
+        </div>
+      </form>
+
+      <div class="result">
+        <span class="result__label">Результат:</span>
+        <div class="result__value" id="result">-</div>
+      </div>
+    </div>
+
+    <script src="calculat.js"></script>
+  </body>
+</html>
