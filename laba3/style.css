@@ -19,6 +19,9 @@
   padding: 25px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .resume__avatar-block {
@@ -47,15 +50,16 @@
   margin-bottom: 20px;
 }
 
-.resume__contacts {
-  margin-top: 30px;
+.resume__contacts,
+.resume__projects {
   background: rgba(255, 255, 255, 0.12);
-  padding: 12px 15px;
+  padding: 15px;
   border-radius: 12px;
   backdrop-filter: blur(6px);
 }
 
-.contacts__title {
+.contacts__title,
+.projects__title {
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: 600;
@@ -74,6 +78,44 @@
 
 .contacts__link:hover {
   text-decoration: underline;
+}
+
+.projects__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projects-list__item {
+  margin: 12px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.projects-list__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.projects__link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 4px;
+  transition: color 0.2s;
+}
+
+.projects__link:hover {
+  color: #ffcc00;
+}
+
+.projects__description {
+  display: block;
+  font-size: 14px;
+  opacity: 0.85;
+  font-style: italic;
 }
 
 .resume__right-panel {
@@ -106,7 +148,7 @@
   margin-top: 30px;
   background: #f4f5ff;
   color: #333;
-  padding: 12px 15px;
+  padding: 15px;
   border-radius: 12px;
 }
 
@@ -170,4 +212,19 @@
 .skill-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .resume {
+    flex-direction: column;
+  }
+
+  .resume__left-panel,
+  .resume__right-panel {
+    width: 100%;
+  }
+
+  .resume__left-panel {
+    gap: 20px;
+  }
 }

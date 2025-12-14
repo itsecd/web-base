@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f7fa;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.exercise {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.prog-lang-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.prog-lang-list__item {
+  padding: 12px 20px;
+  margin-bottom: 8px;
+  background-color: #e8f4f8;
+  border-left: 4px solid #3498db;
+  transition: color 0.5s ease, background-color 0.5s ease;
+  cursor: pointer;
+}
+
+.prog-lang-list__item:hover {
+  color: #e74c3c;
+  background-color: #f9ebea;
+}
+
+.exercise-2 > div {
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.exercise-2 h1 {
+  margin-bottom: 15px;
+  padding: 0;
+  border: none;
+  text-align: left;
+  font-size: 1.8em;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.parent-1__child {
+  color: red;
+  padding: 8px 0;
+  margin: 5px 0;
+}
+
+.parent-2 {
+  color: orange;
+}
+
+.parent-2 h1 {
+  color: orange;
+}
+
+.parent-2__child {
+  color: #b4005a;
+  border: 2px dashed orange;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+.parent-2 + .parent-3 {
+  color: green;
+}
+
+.parent-2 + .parent-3 h1 {
+  color: green;
+}
+
+.parent-2 + .parent-3 .parent-3__child {
+  color: green;
+}
+
+.parent-2 + .parent-3 .parent-2__child {
+  color: purple;
+  border: none;
+  padding: 8px 0;
+}
+
+.langs {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.langs__text {
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.langs__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list__item {
+  margin-top: 10px;
+  padding: 8px 0;
+  line-height: 1.4;
+}
+
+.item__link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.item__link::before {
+  content: "🌐";
+  margin-right: 5px;
+}
+
+.langs::after {
+  content: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  display: block;
+  margin-top: 20px;
+  filter: invert(1);
+  width: 353px;
+  height: 105px;
+  margin-left: auto;
+  margin-right: auto;
+}
