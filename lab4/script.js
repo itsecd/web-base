@@ -5,9 +5,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const calculateBtn = document.getElementById('calculate');
     const resultDiv = document.getElementById('result');
     const errorDiv = document.getElementById('error');
-
-    calculateBtn.addEventListener('click', function() {
+    
+    function hideError() {
         errorDiv.classList.remove('calculator__error_visible');
+    }
+    
+    [num1Input, num2Input].forEach(field => {
+        field.addEventListener('input', hideError);
+    });
+    
+    calculateBtn.addEventListener('click', function() {
+        hideError();
         errorDiv.textContent = '';
         resultDiv.textContent = '—';
         
@@ -43,12 +51,4 @@ document.addEventListener('DOMContentLoaded', function() {
         errorDiv.classList.add('calculator__error_visible');
         resultDiv.textContent = '—';
     }
-    
-    num1Input.addEventListener('input', function() {
-        errorDiv.classList.remove('calculator__error_visible');
-    });
-    
-    num2Input.addEventListener('input', function() {
-        errorDiv.classList.remove('calculator__error_visible');
-    });
 });
