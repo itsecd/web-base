@@ -1,22 +1,59 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Элементы интерфейса калькулятора
+    // Получаем элементы интерфейса с проверкой на существование
     const num1Input = document.getElementById('num1');
     const num2Input = document.getElementById('num2');
     const operationSelect = document.getElementById('operation-select');
     const calculateButton = document.getElementById('calculate');
     const resultValue = document.getElementById('result-value');
     
-    // Обработчик нажатия на кнопку "Вычислить"
-    calculateButton.addEventListener('click', calculate);
+    // Проверяем, что все необходимые элементы найдены
+    if (!num1Input || !num2Input || !operationSelect || !calculateButton || !resultValue) {
+        console.error('Один из необходимых элементов калькулятора не найден');
+        alert('Ошибка загрузки калькулятора. Пожалуйста, перезагрузите страницу.');
+        return;
+    }
     
-    // Также можно вычислять при нажатии Enter в любом поле ввода
-    num1Input.addEventListener('keyup', function(event) {
-        if (event.key === 'Enter') calculate();
-    });
+    // Инициализация калькулятора
+    initCalculator();
     
-    num2Input.addEventListener('keyup', function(event) {
-        if (event.key === 'Enter') calculate();
-    });
+    // Функция инициализации калькулятора
+    function initCalculator() {
+        // Создаем элемент для отображения результата
+        let resultElement = document.createElement('div');
+        resultElement.className = 'result-text';
+        
+        // Добавляем элемент для результата
+        resultValue.appendChild(resultElement);
+        
+        // Инициализация результата
+        updateResult('—', 'placeholder');
+        
+        // Навешиваем обработчики событий
+        setupEventListeners();
+        
+        // Фокус на первом поле при загрузке
+        setTimeout(() => {
+            num1Input.focus();
+        }, 500);
+    }
+    
+    // Функция настройки обработчиков событий
+    function setupEventListeners() {
+        // Обработчик нажатия на кнопку "Вычислить"
+        calculateButton.addEventListener('click', calculate);
+        
+        // Обработчик нажатия Enter в полях ввода
+        num1Input.addEventListener('keyup', handleEnterKey);
+        num2Input.addEventListener('keyup', handleEnterKey);
+        operationSelect.addEventListener('keyup', handleEnterKey);
+    }
+    
+    // Обработчик нажатия клавиши Enter
+    function handleEnterKey(event) {
+        if (event.key === 'Enter') {
+            calculate();
+        }
+    }
     
     // Основная функция вычисления
     function calculate() {
@@ -26,7 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Проверка на пустые поля
         if (num1Str === '' || num2Str === '') {
-            showError('Пожалуйста, заполните оба поля с числами');
+            updateResult('Введите оба числа', 'error');
+            shakeInputs();
             return;
         }
         
@@ -36,36 +74,38 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Проверка на корректность чисел
         if (isNaN(num1) || isNaN(num2)) {
-            showError('Пожалуйста, введите корректные числа');
+            updateResult('Некорректные числа', 'error');
+            shakeInputs();
             return;
         }
         
         // Получаем выбранную операцию
         const operation = operationSelect.value;
-        let result;
-        let operationSymbol;
         
         // Выполняем выбранную операцию
+        performCalculation(num1, num2, operation);
+    }
+    
+    // Функция выполнения расчета
+    function performCalculation(num1, num2, operation) {
+        let result;
+        
         try {
             switch (operation) {
                 case 'add':
                     result = num1 + num2;
-                    operationSymbol = '+';
                     break;
                 case 'subtract':
                     result = num1 - num2;
-                    operationSymbol = '−';
                     break;
                 case 'multiply':
                     result = num1 * num2;
-                    operationSymbol = '×';
                     break;
                 case 'divide':
                     if (num2 === 0) {
                         throw new Error('Деление на ноль');
                     }
                     result = num1 / num2;
-                    operationSymbol = '÷';
                     break;
                 default:
                     throw new Error('Неизвестная операция');
@@ -73,38 +113,136 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Проверка на бесконечность или слишком большое число
             if (!isFinite(result)) {
-                throw new Error('Результат слишком велик или мал');
+                throw new Error('Слишком большое число');
             }
             
+            // Форматируем результат
+            const formattedResult = formatResult(result);
+            
             // Отображаем результат
-            showResult(result);
+            updateResult(formattedResult, 'success');
+            
+            // Анимация успешного вычисления
+            animateSuccess();
             
         } catch (error) {
             // Обработка ошибок
-            if (error.message === 'Деление на ноль') {
-                showError('Ошибка: деление на ноль невозможно');
-            } else if (error.message === 'Результат слишком велик или мал') {
-                showError('Ошибка: результат слишком велик или мал');
-            } else {
-                showError(`Ошибка: ${error.message}`);
-            }
+            handleCalculationError(error);
         }
     }
     
-    // Функция отображения результата
-    function showResult(value) {
-        resultValue.textContent = value;
-        resultValue.className = 'calculator__result-value calculator__result-value_success';
+    // Функция обработки ошибок расчета
+    function handleCalculationError(error) {
+        let errorMessage;
         
-        // Автоматическое скругление для длинных десятичных дробей
-        if (String(value).length > 10) {
-            resultValue.textContent = value.toFixed(6);
+        switch (error.message) {
+            case 'Деление на ноль':
+                errorMessage = 'Деление на ноль невозможно';
+                break;
+            case 'Слишком большое число':
+                errorMessage = 'Слишком большое число';
+                break;
+            default:
+                errorMessage = `Ошибка: ${error.message}`;
         }
+        
+        updateResult(errorMessage, 'error');
+        shakeInputs();
     }
     
-    // Функция отображения ошибки
-    function showError(message) {
-        resultValue.textContent = message;
-        resultValue.className = 'calculator__result-value calculator__result-value_error';
+    // Функция форматирования результата
+    function formatResult(value) {
+        // Если число целое, отображаем без десятичных знаков
+        if (Number.isInteger(value)) {
+            return value.toString();
+        }
+        
+        // Для дробных чисел ограничиваем количество знаков после запятой
+        const rounded = Math.round(value * 1000000) / 1000000;
+        
+        // Преобразуем в строку и удаляем лишние нули
+        let resultStr = rounded.toString();
+        
+        // Если число слишком длинное, используем экспоненциальную запись
+        if (resultStr.length > 12) {
+            return rounded.toExponential(6);
+        }
+        
+        return resultStr;
+    }
+    
+    // Функция обновления результата
+    function updateResult(value, type = 'placeholder') {
+        const resultElement = resultValue.querySelector('.result-text');
+        
+        if (!resultElement) {
+            console.error('Элемент результата не найден');
+            return;
+        }
+        
+        resultElement.textContent = value;
+        resultElement.className = 'result-text';
+        
+        if (type === 'success') {
+            resultElement.classList.add('success');
+        } else if (type === 'error') {
+            resultElement.classList.add('error');
+        }
+        
+        // Анимация появления нового результата
+        resultElement.style.opacity = '0';
+        resultElement.style.transform = 'translateY(10px)';
+        
+        setTimeout(() => {
+            resultElement.style.transition = 'all 0.3s ease';
+            resultElement.style.opacity = '1';
+            resultElement.style.transform = 'translateY(0)';
+        }, 50);
+    }
+    
+    // Анимация встряхивания при ошибке
+    function shakeInputs() {
+        const inputs = [num1Input, num2Input];
+        
+        inputs.forEach(input => {
+            if (!input) return;
+            
+            input.style.transition = 'none';
+            input.style.transform = 'translateX(0)';
+            
+            // Быстрая анимация встряхивания
+            setTimeout(() => {
+                input.style.transition = 'transform 0.1s ease';
+                input.style.transform = 'translateX(-5px)';
+                
+                setTimeout(() => {
+                    input.style.transform = 'translateX(5px)';
+                    
+                    setTimeout(() => {
+                        input.style.transform = 'translateX(-5px)';
+                        
+                        setTimeout(() => {
+                            input.style.transform = 'translateX(5px)';
+                            
+                            setTimeout(() => {
+                                input.style.transform = 'translateX(0)';
+                            }, 50);
+                        }, 50);
+                    }, 50);
+                }, 50);
+            }, 10);
+        });
+    }
+    
+    // Анимация успешного вычисления
+    function animateSuccess() {
+        const resultElement = resultValue.querySelector('.result-text');
+        
+        if (!resultElement) return;
+        
+        resultElement.style.transform = 'scale(1.05)';
+        setTimeout(() => {
+            resultElement.style.transform = 'scale(1)';
+        }, 200);
     }
 });

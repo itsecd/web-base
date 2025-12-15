@@ -10,33 +10,33 @@
 <body>
     <div class="calculator">
         <div class="calculator__header">
-            <h2 class="calculator__title">Калькулятор</h2>
+            <h2 class="calculator__header__title">Калькулятор</h2>
         </div>
         
         <div class="calculator__inputs">
             <div class="calculator__input-group">
-                <label for="num1" class="calculator__label">
-                    <i class="fas fa-hashtag calculator__label-icon"></i>
+                <label for="num1" class="calculator__input-group__label">
+                    <i class="fas fa-hashtag calculator__input-group__label-icon"></i>
                     Первое число
                 </label>
-                <input type="text" id="num1" class="calculator__input" placeholder="Введите число">
+                <input type="text" id="num1" class="calculator__input-group__input" placeholder="Введите число">
             </div>
             
             <div class="calculator__input-group">
-                <label for="num2" class="calculator__label">
-                    <i class="fas fa-hashtag calculator__label-icon"></i>
+                <label for="num2" class="calculator__input-group__label">
+                    <i class="fas fa-hashtag calculator__input-group__label-icon"></i>
                     Второе число
                 </label>
-                <input type="text" id="num2" class="calculator__input" placeholder="Введите число">
+                <input type="text" id="num2" class="calculator__input-group__input" placeholder="Введите число">
             </div>
         </div>
         
         <div class="calculator__operations">
-            <label for="operation-select" class="calculator__label">
-                <i class="fas fa-tasks calculator__label-icon"></i>
+            <label for="operation-select" class="calculator__operations__label">
+                <i class="fas fa-tasks calculator__operations__label-icon"></i>
                 Выберите операцию
             </label>
-            <select id="operation-select" class="calculator__select">
+            <select id="operation-select" class="calculator__operations__select">
                 <option value="add">Сложение (+)</option>
                 <option value="subtract">Вычитание (−)</option>
                 <option value="multiply">Умножение (×)</option>
@@ -44,8 +44,8 @@
             </select>
         </div>
         
-        <button class="calculator__submit-button" id="calculate">
-            <i class="fas fa-equals calculator__submit-icon"></i>
+        <button class="calculator__operations__submit-button" id="calculate">
+            <i class="fas fa-equals calculator__operations__submit-icon"></i>
             Вычислить
         </button>
         
