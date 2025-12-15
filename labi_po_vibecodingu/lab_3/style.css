@@ -42,13 +42,7 @@ body {
         "about fans"
         "hs ss"
         "story-1 story-2"
-        "other other";
-
-
-}
-
-.other {
-    grid-area: other;
+        "other projects";
 }
 
 .right__selection{
@@ -126,3 +120,4 @@ body {
     padding-right: 15px;
     text-align: center;
 }
+
