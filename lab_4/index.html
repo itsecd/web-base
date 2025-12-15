@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор - Лабораторная работа 4</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Калькулятор</h1>
+            <p class="subtitle">Лабораторная работа 4</p>
+        </header>
+
+        <div class="calculator-container">
+            <div class="calculator">
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="num1">Первое число:</label>
+                        <input type="number" id="num1" placeholder="Введите число" />
+                    </div>
+                    <div class="input-field">
+                        <label for="num2">Второе число:</label>
+                        <input type="number" id="num2" placeholder="Введите число" />
+                    </div>
+                </div>
+
+                <div class="operation-group">
+                    <label for="operation">Операция:</label>
+                    <select id="operation">
+                        <option value="add">Сложение (+)</option>
+                        <option value="subtract">Вычитание (-)</option>
+                        <option value="multiply">Умножение (×)</option>
+                        <option value="divide">Деление (÷)</option>
+                    </select>
+                </div>
+
+                <button class="calculate-btn" id="calculate">Вычислить</button>
+
+                <div class="result-container">
+                    <div class="result-label">Результат:</div>
+                    <div class="result" id="result">-</div>
+                    <div class="error" id="error"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
