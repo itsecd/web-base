@@ -22,7 +22,7 @@ body {
     display: flex;
     width: 100%;
     max-width: 100%;
-    height: 100vh; 
+    height: 100vh;
     box-shadow: none;
     border-radius: 0;
     overflow: hidden;
@@ -37,8 +37,8 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 100%; 
-    overflow-y: auto; 
+    height: 100%;
+    overflow-y: auto;
 }
 
 .photo {
@@ -47,7 +47,7 @@ body {
     object-fit: cover;
     border: 4px solid white;
     margin-bottom: 20px;
-    border-radius: 8px; 
+    border-radius: 8px;
 }
 
 .name {
@@ -72,7 +72,7 @@ body {
     align-items: center;
     margin-bottom: 15px;
     padding: 10px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
 }
 
@@ -87,14 +87,14 @@ body {
     padding: 20px;
     background: white;
     overflow-y: auto;
-    height: 100%; 
+    height: 100%;
 }
 
 .section {
     background: white;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     padding: 20px;
 }
 
@@ -107,36 +107,63 @@ body {
     border-bottom: 2px solid #6e8efb;
 }
 
-ul {
+
+.hobbies__list {
     list-style: none;
 }
 
-li {
-    margin-bottom: 8px;
-    padding-left: 15px;
-    position: relative;
+.hobbies__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 12px;
 }
 
-li:before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #6e8efb;
+.hobbies__icon {
+    font-size: 20px;
 }
 
-.skills-grid {
+.hobbies__text {
+    font-size: 16px;
+}
+
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skills__group {
+    background: #f9f9f9;
+    padding: 16px;
+    border-radius: 10px;
+    border-left: 4px solid #6e8efb;
+}
+
+.skills__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #444;
+}
+
+.skills__list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
 }
 
-.skill-card {
-    background: #f8f9fa;
-    padding: 12px;
+.skills__item {
+    background: #f0f4ff;
+    padding: 10px;
     border-radius: 8px;
     text-align: center;
-    border: 1px solid #dee2e6;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #d0d8f8;
 }
+
 
 .github-link {
     display: inline-block;
@@ -150,14 +177,25 @@ li:before {
     text-decoration: underline;
 }
 
-.hobbies-icons {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 15px;
-    flex-wrap: wrap;
-}
 
-.hobby-icon {
-    font-size: 24px;
-    margin: 0 10px;
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .skills__list {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
 }
