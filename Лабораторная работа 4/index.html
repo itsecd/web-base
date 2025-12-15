@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
     <title>Лабораторная работа 3</title>
 </head>
 
 <body>
     <div class="main-block">
         <div class="profile card">
-            <img class="profile__picture" src="cat.WEB" alt="cat :3">
+            <img class="profile__picture" src="img/cat.WEB" alt="cat :3">
             <div class="profile__info">
                 <h1 class="profile__name">Есипов Никита Антонович</h1>
                 <p class="profile__year">28.11.2002</p>
@@ -55,26 +55,42 @@
         </div>
 
         <div class="projects card">
-            <h2 class="projects__title">Пример написанных модификаций</h2>
+            <h2 class="projects__title">Мои проекты</h2>
+            <h3 class="projects__subtitle">Учебные проекты (Лабораторные работы)</h3>
+            <ul class="projects__navigation-list">
+                <li class="projects__navigation-item">
+                    <a class="projects__lab-link" href="lab1.html">Лабораторная работа 1</a>
+                </li>
+                <li class="projects__navigation-item">
+                    <a class="projects__lab-link" href="lab2.html">Лабораторная работа 2</a>
+                </li>
+                <li class="projects__navigation-item">
+                    <a class="projects__lab-link" href="index.html">Лабораторная работа 3 - Резюме</a>
+                </li>
+                <li class="projects__navigation-item">
+                    <a class="projects__lab-link" href="calc.html">Лабораторная работа 4 - Калькулятор</a>
+                </li>
+            </ul>
+            <h3 class="projects__subtitle">Портфолио: Модификации для Minecraft</h3>
             <div class="projects__list">
                 <figure class="projects__item">
-                    <a href="1.png" target="_blank" rel="noopener noreferrer">
-                        <img class="projects__image" src="1.png" alt="fig. 1">
+                    <a href="img/1.png" target="_blank" rel="noopener noreferrer">
+                        <img class="projects__image" src="img/1.png" alt="fig. 1">
                     </a>
                     <figcaption class="projects__caption">Возможность кастомного рендеринга интерактивного меню и
                         рисование
                         объектов в мире.</figcaption>
                 </figure>
                 <figure class="projects__item">
-                    <a href="2.png" target="_blank" rel="noopener noreferrer">
-                        <img class="projects__image" src="2.png" alt="fig. 2">
+                    <a href="img/2.png" target="_blank" rel="noopener noreferrer">
+                        <img class="projects__image" src="img/2.png" alt="fig. 2">
                     </a>
                     <figcaption class="projects__caption">Генерация NavMesh'а для возможности построения путей (Recast4j
                         implementation).</figcaption>
                 </figure>
                 <figure class="projects__item">
-                    <a href="3.png" target="_blank" rel="noopener noreferrer">
-                        <img class="projects__image" src="3.png" alt="fig. 3">
+                    <a href="img/3.png" target="_blank" rel="noopener noreferrer">
+                        <img class="projects__image" src="img/3.png" alt="fig. 3">
                     </a>
                     <figcaption class="projects__caption">Построенный путь (розовым) вокруг препядствий, используя
                         NavMesh.

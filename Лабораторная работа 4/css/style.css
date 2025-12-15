@@ -111,6 +111,34 @@ body {
   transition: color 0.3s ease-in-out;
 }
 
+.projects__navigation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.projects__lab-link {
+  display: block;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects__lab-link:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 .projects__list {
   display: flex;
   flex-direction: column;
@@ -158,6 +186,15 @@ body {
   font-weight: bold;
   margin: 0 0 15px 0;
   text-align: center;
+}
+
+.projects__subtitle {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
 }
 
 @media (max-width: 768px) {
