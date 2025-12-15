@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лабораторная работа №4 - Калькулятор</title>
+    <link rel="stylesheet" href="lab4.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="calc-box">
+        <h1 class="calc-title">Лабораторная работа №4: Калькулятор</h1>
+
+        <div class="calc-form">
+          <div class="calc-field">
+            <label class="calc-label" for="value-one">Первое число:</label>
+            <input
+              class="calc-input"
+              type="number"
+              id="value-one"
+              placeholder="Введите первое число"
+              step="any"
+            />
+          </div>
+
+          <div class="calc-field">
+            <label class="calc-label" for="operation-type">Операция:</label>
+            <select class="calc-select" id="operation-type">
+              <option value="+">Сложение (+)</option>
+              <option value="-">Вычитание (-)</option>
+              <option value="*">Умножение (×)</option>
+              <option value="/">Деление (÷)</option>
+            </select>
+          </div>
+
+          <div class="calc-field">
+            <label class="calc-label" for="value-two">Второе число:</label>
+            <input
+              class="calc-input"
+              type="number"
+              id="value-two"
+              placeholder="Введите второе число"
+              step="any"
+            />
+          </div>
+
+          <button class="calc-btn" id="calc-btn">Вычислить</button>
+
+          <div class="calc-result">
+            <label class="calc-result-label" for="calc-result"
+              >Результат:</label
+            >
+            <input
+              class="calc-result-output"
+              type="text"
+              id="calc-result"
+              readonly
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="lab4.js"></script>
+  </body>
+</html>

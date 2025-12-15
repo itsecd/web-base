@@ -1,0 +1,85 @@
+.texttask {
+  background-color: #f4bc92;
+  text-align: justify;
+  color: #ece870;
+}
+
+.catstask {
+  position: relative;
+}
+
+.catstask_secondcat {
+  position: absolute;
+  top: 120px;
+}
+
+.trafficlight {
+  background-color: #49432d;
+  width: 100px;
+}
+
+.traficlight_size {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+
+.trafficlight_red {
+  background-color: red;
+}
+
+.trafficlight_yellow {
+  background-color: yellow;
+}
+
+.trafficlight_green {
+  background-color: green;
+}
+
+.maze {
+  position: relative;
+}
+
+.maze_cell {
+  width: 100px;
+  height: 100px;
+}
+
+.maze_cell_border-left {
+  border-left: medium solid black;
+}
+
+.maze_cell_border-right {
+  border-right: medium solid black;
+}
+
+.maze_cell_border-top {
+  border-top: medium solid black;
+}
+
+.maze_cell_border-bottom {
+  border-bottom: medium solid black;
+}
+
+.maze_cell_firstline {
+  position: absolute;
+  top: 50px;
+}
+
+.maze_cell_secondline {
+  position: absolute;
+  top: 150px;
+}
+
+.maze_cell_thirdline {
+  position: absolute;
+  top: 250px;
+}
+
+.maze_cell_secondcolumn{
+  left: 100px;
+}
+
+.maze_cell_thirdcolumn{
+  left: 200px;
+}
