@@ -1,0 +1,131 @@
+body {
+    /*Каюсь, согрешил и навайбкодил радугу на фоне*/
+    background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, purple);
+    background-size: 200% 200%;
+    animation: gradient 15s infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.caption {
+    color: white;
+    -webkit-text-stroke: 3px #181818;
+    font-size: 72px;
+    text-align: center;
+    font-family: cursive;
+}
+.calculator {
+    width: 320px;
+    margin: 50px auto;
+    padding: 24px 20px 28px 20px;
+    background-image: url(gym.jpg);
+    box-shadow: 0 7px 22px rgba(0,0,0,0.13);
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calculator__operations {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.operations__button {
+    background: #000000;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #181818;
+    border: 2px solid black;
+    padding: 10px 22px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.operations__button:focus {
+    animation: border-gradient 8s infinite;
+}
+
+@keyframes border-gradient {
+    0% {
+        border-color: red;
+    }
+    14% {
+        border-color: orange;
+    }
+    29% {
+        border-color: yellow;
+    }
+    43% {
+        border-color: green;
+    }
+    57% {
+        border-color: lightblue;
+    }
+    71% {
+        border-color: blue;
+    }
+    88% {
+        border-color: purple;
+    }
+    100% {
+        border-color: red;
+    }
+}
+
+.billy {
+    background-image: url(billy.jpg);
+}
+.kazuya {
+    background-image: url(kazuya.jpg);
+}
+.van {
+    background-image: url(van.jpg);
+}
+.ricardo {
+    background-image: url(ricardo.jpg);
+}
+
+.calculator__input {
+    width: 90%;
+    margin-bottom: 15px;
+    padding: 8px;
+    font-size: 1em;
+    border: 2px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.calculator__input:focus {
+    animation: border-gradient 8s infinite;
+}
+
+.calculator__calculate-button{
+    font-family: cursive;
+}
+
+.calculator__output {
+    display: block;
+    text-align: center;
+    align-items: center;
+    margin-top: 12px;
+    padding: 10px 0;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #464646;
+    color: #ffffff;
+    border: 2px solid black;
+    min-height: 32px;
+    width: 320px;
+}
