@@ -325,7 +325,6 @@ body::before {
         gap: 10px;
     }
 }
-/* === Проекты === */
 
 .projects-list {
     display: grid;

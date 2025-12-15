@@ -15,15 +15,15 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+.calculator__title {
     color: #2c3e50;
     margin-top: 0;
     font-size: 1.8rem;
 }
 
-input,
-select,
-button {
+.calculator__input,
+.calculator__select,
+.calculator__button {
     width: 100%;
     padding: 12px;
     margin: 12px 0;
@@ -33,14 +33,14 @@ button {
     box-sizing: border-box;
 }
 
-input:focus,
-select:focus {
+.calculator__input:focus,
+.calculator__select:focus {
     outline: none;
     border-color: #3498db;
     box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
 }
 
-button {
+.calculator__button {
     background: #3498db;
     color: white;
     cursor: pointer;
@@ -49,16 +49,16 @@ button {
     border: none;
 }
 
-button:hover {
+.calculator__button:hover {
     background: #2980b9;
     transform: translateY(-2px);
 }
 
-button:active {
+.calculator__button:active {
     transform: translateY(0);
 }
 
-.result {
+.calculator__result {
     font-size: 24px;
     font-weight: bold;
     margin-top: 24px;
@@ -71,7 +71,7 @@ button:active {
     justify-content: center;
 }
 
-.error {
+.calculator__result .error {
     color: #e74c3c;
     font-weight: bold;
     animation: shake 0.5s;

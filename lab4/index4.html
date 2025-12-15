@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор — Лаба 4</title>
+    <title>Калькулятор — Лабораторная работа 4</title>
     <link rel="stylesheet" href="style4.css">
 </head>
 <body>
     <div class="calculator">
-        <h1>Простой калькулятор</h1>
-        <input type="number" id="num1" placeholder="Первое число" step="any">
-        <input type="number" id="num2" placeholder="Второе число" step="any">
-        <select id="operation">
+        <h1 class="calculator__title">Простой калькулятор</h1>
+        <input type="number" id="num1" class="calculator__input" placeholder="Первое число" step="any">
+        <input type="number" id="num2" class="calculator__input" placeholder="Второе число" step="any">
+        <select id="operation" class="calculator__select">
             <option value="+">Сложение (+)</option>
             <option value="-">Вычитание (−)</option>
             <option value="*">Умножение (×)</option>
             <option value="/">Деление (÷)</option>
         </select>
-        <button onclick="calculate()">Вычислить</button>
-        <div id="result" class="result">Результат появится здесь</div>
+        <button type="button" onclick="calculate()" class="calculator__button">
+            Вычислить
+        </button>
+        <div id="result" class="calculator__result">
+            Результат появится здесь
+        </div>
     </div>
 
     <script src="java4.js"></script>
