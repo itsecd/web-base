@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lab4.css">
+    <script src="scripts.js" defer></script>
+    <title>Калькулятор</title>
+</head>
+<body>
+    <div class="calculator">
+        <div class="calculator__title"><strong> Мой Калькулятор </strong></div>
+
+        <div class="calculator__field">
+            <label class="field__label">Первое число</label>
+            <input class="field__input" type="number" id="n1" />
+        </div>
+
+        <div class="calculator__field">
+            <select class="field__operations" id="operations">
+                <option value="plus">+</option>
+                <option value="minus">-</option>
+                <option value="multiply">*</option>
+                <option value="divide">/</option>
+            </select>
+        </div>
+
+        <div class="calculator__field">
+            <label class="field__label">Второе число</label>
+            <input class="field__input" type="number" id="n2" />
+        </div>
+
+        <button class="calculator__button" type="button" id="button">Вычислить</button>
+
+        <div class="calculator__result" id="result"> </div>
+
+        <div class="calculator__error" id="error"></div>
+
+    </div>
+</body>

@@ -97,6 +97,27 @@ body{
     margin: 0 auto 10px;
 }
 
+.list__link{
+    background: #ecd4e5;
+    padding: 10px 16px;
+    margin-bottom: 10px;
+    border-left: 4px solid #af49df;
+    border-radius: 0 6px 6px 0;
+    font-size: 18px;
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+.list__link::after{
+    background-position: center;
+    position: relative;
+    width: 50px;
+}
+
 .github {
     margin-top: 30px;
     padding-top: 20px;
