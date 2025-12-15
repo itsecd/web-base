@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме студента - Козленко Екатерина</title>
+    
+    <link rel="stylesheet" href="styles-light.css">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body>
+    
+    <div class="resume-container">
+        
+        <!-- ШАПКА С АВАТАРКОЙ -->
+        <header class="header">
+            <div class="avatar-container">
+                <img src="assets/images/cat-avatar.jpg" alt="человек паук с котом" class="avatar-image">
+                <div class="avatar-frame"></div>
+            </div>
+            
+            <div class="personal-info">
+                <h1>Козленко Екатерина Игоревна</h1>
+                <div class="birthday">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>Дата рождения: 8 июня 2006 года</span>
+                </div>
+                <p>Студентка 2-го курса направления 10.05.03 </p>
+                <p class="cat-note">Любитель комиксов и котов-супергероев</p>
+            </div>
+        </header>
+       
+        <div class="content">
+
+            <div class="left-column">
+                
+                <div class="section" id="hobbies-section">
+                    <h2 class="section-title"><i class="fas fa-heart"></i> Увлечения</h2>
+                    <ul class="hobbies-list">
+                        <li><i class="fas fa-book-reader"></i> Чтение комиксов</li>
+                        <li><i class="fas fa-ghost"></i> Просмотр фильмов ужасов</li>
+                        <li><i class="fas fa-eye"></i> Компьютерное зрение</li>
+                        <li><i class="fas fa-laptop-code"></i> Веб-разработка</li>
+                        <li><i class="fas fa-paint-brush"></i> Цифровая графика</li>
+                    </ul>
+                </div>
+                
+                <div class="section" id="github-section">
+                    <h2 class="section-title"><i class="fas fa-link"></i> GitHub</h2>
+                    <a href="https://github.com/bla6bla6bla6bla6-rgb" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> Перейти в профиль GitHub
+                    </a>
+                    <p class="cat-note">Тут можно найти мои проекты по веб-разработке</p>
+                </div>
+                
+                <div class="section" id="contact-section">
+                    <h2 class="section-title"><i class="fas fa-envelope"></i> Контакты</h2>
+                    <p><i class="fas fa-phone" style="color: var(--primary-light); margin-right: 10px;"></i> +7 (123) 456-78-90</p>
+                    <p><i class="fas fa-envelope" style="color: var(--primary-light); margin-right: 10px;"></i> K.E.I.@yandex.ru</p>
+                    <p><i class="fas fa-map-marker-alt" style="color: var(--primary-light); margin-right: 10px;"></i> г. Самара</p>
+                </div>
+                
+            </div>
+            
+            
+            <div class="right-column">
+                
+                <div class="section" id="about-section">
+                    <h2 class="section-title"><i class="fas fa-user"></i> О себе</h2>
+                    <div class="about-me">
+                        <p>Я студентка 2-го курса, увлеченный веб-технологиями и разработкой программного обеспечения. С детства интересуюсь комиксами и историей супергероев, что вдохновило меня на изучение компьютерной графики и анимации.</p>
+                        <p>Моя цель — выжить.</p>
+                    </div>
+                </div>
+                
+                <div class="section" id="hard-skills-section">
+                    <h2 class="section-title"><i class="fas fa-tools"></i> Hard-скиллы</h2>
+                    <div class="skills-container">
+                        <span class="skill-tag hard-skill">HTML5/CSS3</span>
+                        <span class="skill-tag hard-skill">Python</span>
+                        <span class="skill-tag hard-skill">Git/GitHub</span>
+                        <span class="skill-tag hard-skill">SQL/MySQL</span>
+                        
+                    </div>
+                </div>
+                
+                <div class="section" id="soft-skills-section">
+                    <h2 class="section-title"><i class="fas fa-users"></i> Soft-скиллы</h2>
+                    <div class="skills-container">
+                        <span class="skill-tag soft-skill">Креативное мышление</span>
+                        <span class="skill-tag soft-skill">Работа в команде</span>
+                        <span class="skill-tag soft-skill">Адаптивность</span>
+                        <span class="skill-tag soft-skill">Решение проблем</span>
+                    </div>
+                </div>
+                
+                <div class="section" id="education-section">
+                    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Образование</h2>
+                    <p><strong>Самарский государственный аэрокосмический университет им. С. П. Королёва (СГАУ)</strong></p>
+                    <p>Институт Информатики и Кибернеттики, направление "Информационная Безопасность Автоматизированных Систем"</p>
+                    <p>2024 — настоящее время (2 курс)</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <footer>
+        <p class="footer-text">Резюме студента &copy; <span id="current-year">2023</span>. Все права защищены.</p>
+        <p class="footer-text">Последнее обновление: <span id="current-date">декабрь 2025</span></p>
+    </footer>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
