@@ -1,25 +1,44 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const num1Input = document.getElementById('num1');
-    const num2Input = document.getElementById('num2');
-    const opButtons = document.querySelectorAll('.calc__operation-btn');
-    const calcBtn = document.getElementById('calculate');
-    const resultDiv = document.getElementById('result');
-    
-    let currentOperation = '+';
-    
-    function setActiveOperation(button) {
+const num1Input = document.getElementById('num1');
+const num2Input = document.getElementById('num2');
+const opButtons = document.querySelectorAll('.buttons-container__button');
+const calcBtn = document.getElementById('calculate');
+const resultDiv = document.getElementById('result');
+
+let currentOperation = '+';
+function checkElements() {
+    if (!num1Input || !num2Input || !opButtons.length || !calcBtn || !resultDiv) {
+        console.error('Ошибка: один или несколько элементов не найдены');
+        return false;
+    }
+    return true;
+}
+  
+function setActiveOperation(button) {
         opButtons.forEach(btn => {
-            btn.classList.remove('calc__operation-btn--active');
+            btn.classList.remove('buttons-container__button--active');
         });
-        button.classList.add('calc__operation-btn--active');
+        button.classList.add('buttons-container__button--active');
         currentOperation = button.dataset.op;
     }
-    
-    opButtons.forEach(button => {
-        button.addEventListener('click', () => setActiveOperation(button));
-    });
-    
-    function calculate() {
+
+function handleOperationClick() {
+    setActiveOperation(this);
+}
+
+function handleEnterKey(e) {
+    if (e.key === 'Enter') {
+        calculate();
+    }
+}
+
+function resetError() {
+    if (resultDiv.classList.contains('calc__result-value--error')) {
+        resultDiv.classList.remove('calc__result-value--error');
+        resultDiv.textContent = '—';
+    }
+} 
+
+function calculate() {
         const num1 = parseFloat(num1Input.value);
         const num2 = parseFloat(num2Input.value);
         
@@ -55,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showResult(result);
     }
     
-    function showResult(value) {
+function showResult(value) {
         resultDiv.classList.remove('calc__result-value--error');
         
         if (Number.isInteger(value)) {
@@ -65,23 +84,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    function showError(message) {
+function showError(message) {
         resultDiv.classList.add('calc__result-value--error');
         resultDiv.textContent = message;
     }
+document.addEventListener('DOMContentLoaded', function() {
+    if (!checkElements()) {
+        if (resultDiv) showError('Ошибка загрузки калькулятора');
+        return;
+    }
+    
+    opButtons.forEach(button => {
+        button.addEventListener('click', handleOperationClick); 
+    });
     
     calcBtn.addEventListener('click', calculate);
     
     [num1Input, num2Input].forEach(input => {
-        input.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') calculate();
-        });
-        
-        input.addEventListener('input', function() {
-            if (resultDiv.classList.contains('calc__result-value--error')) {
-                resultDiv.classList.remove('calc__result-value--error');
-                resultDiv.textContent = '—';
-            }
-        });
+        input.addEventListener('keypress', handleEnterKey);
+        input.addEventListener('input', resetError);
     });
+    
+    opButtons[0].classList.add('buttons-container__button--active');
 });

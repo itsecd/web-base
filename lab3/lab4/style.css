@@ -101,13 +101,22 @@ body {
     margin: 25px 0;
 }
 
-.calc__operation-buttons {
+.calc__operation-group__label {
+    display: block;
+    color: #2c3e50;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    padding-left: 5px;
+}
+
+.calc__operation-group__buttons-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
 
-.calc__operation-btn {
+.buttons-container__button {
     padding: 15px 0;
     background: white;
     border: 2px solid #e0e6ed;
@@ -119,13 +128,13 @@ body {
     transition: all 0.2s ease;
 }
 
-.calc__operation-btn:hover {
+.buttons-container__button:hover {
     background: #f7fafc;
     border-color: #3498db;
     transform: translateY(-2px);
 }
 
-.calc__operation-btn--active {
+.buttons-container__button--active {
     background: #3498db;
     color: white;
     border-color: #3498db;
