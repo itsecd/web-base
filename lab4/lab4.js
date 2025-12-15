@@ -1,7 +1,12 @@
 const button = document.getElementById("calcBtn");
 const resultField = document.getElementById("result");
+const resultValue = document.querySelector(".calculator__result-value");
 
-button.addEventListener("click", calculate);
+if (button && resultField) {
+  button.addEventListener("click", calculate);
+} else {
+  console.error("Не найден элемент");
+}
 
 function calculate() {
   const num1 = document.getElementById("num1").value;
@@ -41,11 +46,10 @@ function calculate() {
       return;
   }
 
-  resultField.textContent = "Результат: " + result;
+  resultValue.textContent = result;
 }
 
 function showError(message) {
-  resultField.textContent = message;
+  resultValue.textContent = message;
   resultField.classList.add("calculator__result--error");
 }
-
