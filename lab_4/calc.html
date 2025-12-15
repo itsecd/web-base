@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Cal 👍</title>
+    <link rel="stylesheet" href="calc_style.css">
+</head>
+<body>
+    <main class="calc">
+        <div class="calc__screen">
+            <input type="number" class="calc__input calc__input--first" placeholder="Первое число">
+            <input type="number" class="calc__input calc__input--second" placeholder="Второе число">
+        </div>
+        
+        <div class="calc__actions">
+            <div class="operations">
+                <button class="operations__btn operations__btn--add" data-op="+" title="Сложение">+</button>
+                <button class="operations__btn operations__btn--sub" data-op="-" title="Вычитание">-</button>
+                <button class="operations__btn operations__btn--mul" data-op="*" title="Умножение">x</button>
+                <button class="operations__btn operations__btn--div" data-op="/" title="Деление">÷</button>
+            </div>
+            <button class="calc__submit">Вычислить</button>
+        </div>
+        
+        <div class="calc__result"></div>
+    </main>
+    
+    <script src="calc.js"></script>
+</body>
+</html>
