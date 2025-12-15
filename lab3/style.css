@@ -260,3 +260,59 @@ body {
   background: #ffd700;
   color: #333;
 }
+.resume-projects {
+  margin-top: 40px;
+}
+
+.resume-projects__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.resume-projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.resume-projects__card {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.resume-projects__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.resume-projects__card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.resume-projects__card-desc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.resume-projects__card-link {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #ffd700;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.resume-projects__card-link:hover {
+  background: #ffcc00;
+}

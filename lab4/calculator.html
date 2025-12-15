@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Калькулятор | ЛР №4</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 20px;
+    }
+
+    .calculator {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      padding: 30px;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      color: #2c3e50;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #34495e;
+      font-size: 15px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: #3498db;
+      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background: #2980b9;
+      transform: translateY(-2px);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .result {
+      margin-top: 25px;
+      padding: 16px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #27ae60;
+      min-height: 28px;
+    }
+
+    .result.error {
+      color: #e74c3c;
+      background: #fdf2f2;
+    }
+
+    @media (max-width: 480px) {
+      .calculator {
+        padding: 20px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h2>🧮 Калькулятор</h2>
+
+    <div class="input-group">
+      <label for="num1">Первое число</label>
+      <input type="number" id="num1" placeholder="Например: 10" step="any">
+    </div>
+
+    <div class="input-group">
+      <label for="operation">Операция</label>
+      <select id="operation">
+        <option value="+">Сложение (+)</option>
+        <option value="-">Вычитание (–)</option>
+        <option value="*">Умножение (x)</option>
+        <option value="/">Деление (÷)</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label for="num2">Второе число</label>
+      <input type="number" id="num2" placeholder="Например: 5" step="any">
+    </div>
+
+    <button onclick="calculate()">Вычислить</button>
+
+    <div class="result" id="result">Результат появится здесь</div>
+  </div>
+
+  <script>
+    function calculate() {
+      const num1 = parseFloat(document.getElementById('num1').value);
+      const num2 = parseFloat(document.getElementById('num2').value);
+      const op = document.getElementById('operation').value;
+      const resultEl = document.getElementById('result');
+
+      resultEl.classList.remove('error');
+
+      if (isNaN(num1) || isNaN(num2)) {
+        resultEl.textContent = "Пожалуйста, введите оба числа";
+        resultEl.classList.add('error');
+        return;
+      }
+
+      if (op === '/' && num2 === 0) {
+        resultEl.textContent = "Деление на ноль невозможно";
+        resultEl.classList.add('error');
+        return;
+      }
+
+      let res;
+      switch (op) {
+        case '+': res = num1 + num2; break;
+        case '-': res = num1 - num2; break;
+        case '*': res = num1 * num2; break;
+        case '/': res = num1 / num2; break;
+        default: res = 'Ошибка';
+      }
+
+      const formatted = parseFloat(res.toFixed(10));
+      resultEl.textContent = `= ${formatted}`;
+    }
+  </script>
+</body>
+</html>
