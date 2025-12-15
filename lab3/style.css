@@ -64,15 +64,6 @@ body {
   font-size: 14px;
 }
 
-.resume-sidebar__info-label {
-  font-weight: bold;
-  color: #333;
-}
-
-.resume-sidebar__info-value {
-  color: #555;
-}
-
 .resume-sidebar__section-title {
   font-size: 16px;
   font-weight: bold;
