@@ -6,46 +6,94 @@ const calculateBtn = document.getElementById('calculate');
 const resetBtn = document.getElementById('reset');
 const resultDiv = document.getElementById('result');
 
-// Функция для вычисления
+// Функции для работы с DOM
+function showError(message) {
+    resultDiv.textContent = message;
+    resultDiv.className = "calculator__result-value calculator__result-value_error";
+}
+
+function showSuccess(value) {
+    resultDiv.textContent = value;
+    resultDiv.className = "calculator__result-value calculator__result-value_success";
+}
+
+function resetResult() {
+    resultDiv.textContent = '0';
+    resultDiv.className = "calculator__result-value";
+}
+
+// Функция для получения чисел из полей ввода
+function getNumbers() {
+    const a = parseFloat(num1.value.replace(',', '.'));
+    const b = parseFloat(num2.value.replace(',', '.'));
+    return { a, b };
+}
+
+// Функция валидации чисел
+function validateNumbers(a, b) {
+    if (isNaN(a) || isNaN(b)) {
+        return "Введите числа!";
+    }
+    return null; // Ошибок нет
+}
+
+// Чистая функция вычислений (без DOM операций)
+function calculateOperation(a, b, operationType) {
+    switch(operationType) {
+        case 'add':
+            return a + b;
+        case 'subtract':
+            return a - b;
+        case 'multiply':
+            return a * b;
+        case 'divide':
+            if (b === 0) {
+                throw new Error("На 0 делить нельзя!");
+            }
+            return a / b;
+        default:
+            throw new Error("Неизвестная операция");
+    }
+}
+
+// Функция для форматирования результата
+function formatResult(result) {
+    if (!Number.isInteger(result)) {
+        result = parseFloat(result.toFixed(4));
+        // Убираем лишние нули в конце
+        result = parseFloat(result.toString());
+    }
+    return result;
+}
+
+// Основная функция вычисления
 function calculate() {
     // Получаем числа
-    const a = parseFloat(num1.value);
-    const b = parseFloat(num2.value);
+    const { a, b } = getNumbers();
     
-    // Проверка чисел
-    if (isNaN(a) || isNaN(b)) {
-        resultDiv.textContent = "Введите числа!";
-        resultDiv.className = "calculator__result-value calculator__result-value_error";
+    // Валидация
+    const validationError = validateNumbers(a, b);
+    if (validationError) {
+        showError(validationError);
         return;
     }
     
-    // Выполняем операцию
+    // Получаем операцию
     const op = operation.value;
-    let result;
     
-    if (op === 'add') {
-        result = a + b;
-    } else if (op === 'subtract') {
-        result = a - b;
-    } else if (op === 'multiply') {
-        result = a * b;
-    } else if (op === 'divide') {
-        if (b === 0) {
-            resultDiv.textContent = "На 0 делить нельзя!";
-            resultDiv.className = "calculator__result-value calculator__result-value_error";
-            return;
-        }
-        result = a / b;
+    try {
+        // Вычисляем результат
+        let result = calculateOperation(a, b, op);
+        
+        // Форматируем результат
+        result = formatResult(result);
+        
+        // Показываем результат
+        showSuccess(result);
+    } catch (error) {
+        // Обрабатываем ошибки вычислений
+        showError(error.message);
     }
-    
-    // Округляем если много цифр после запятой
-    if (!Number.isInteger(result)) {
-        result = parseFloat(result.toFixed(4));
-    }
-    
-    // Показываем результат
-    resultDiv.textContent = result;
-    resultDiv.className = "calculator__result-value calculator__result-value_success";
 }
 
 // Функция для сброса
@@ -53,8 +101,7 @@ function reset() {
     num1.value = '';
     num2.value = '';
     operation.value = 'add';
-    resultDiv.textContent = '0';
-    resultDiv.className = "calculator__result-value";
+    resetResult();
     num1.focus();
 }
 
@@ -70,6 +117,14 @@ document.addEventListener('keypress', function(e) {
 });
 
 // Фокусируемся на первом поле при загрузке
-window.addEventListener('load', function() {
+window.addEventListener('DOMContentLoaded', function() {
     num1.focus();
+    
+    // Валидация при вводе
+    [num1, num2].forEach(input => {
+        input.addEventListener('input', function() {
+            // Убираем ошибку при вводе
+            resetResult();
+        });
+    });
 });
