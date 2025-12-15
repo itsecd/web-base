@@ -16,8 +16,8 @@ body {
     margin-bottom: 15px;
 }
 
-.calculator__input,
-.calculator__select {
+.row__input,
+.row__select {
     width: 120px;
     padding: 8px;
     font-size: 16px;
@@ -25,7 +25,7 @@ body {
     border-radius: 4px;
 }
 
-.calculator__button {
+.controls__button {
     padding: 10px 20px;
     font-size: 16px;
     background: #f0f0f0;
@@ -38,11 +38,11 @@ body {
     margin-right: auto;
 }
 
-    .calculator__button:hover {
+    .controls__button:hover {
         background: burlywood;
     }
 
-.calculator__result {
+.controls__result {
     font-size: 20px;
     font-weight: bold;
     background: #e9f7fe;

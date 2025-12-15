@@ -14,7 +14,9 @@ function calculator() {
   const op = operatorSelect.value;
 
   if (isNaN(num1) || isNaN(num2)) {
-    resultDiv.textContent = 'Введите числа';
+    resultDiv.innerHTML = `
+      <img src="67.gif" alt="six" style="height: 50px; margin-right: 10px;">
+    `;
     return;
   }
 
@@ -39,5 +41,5 @@ function calculator() {
       break;
   }
 
-  resultDiv.textContent = result;
+  resultDiv.textContent = "Этот diddy blud насчитал: "+result;
 }
