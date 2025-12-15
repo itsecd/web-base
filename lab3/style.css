@@ -331,6 +331,18 @@ body {
     background: #00d9ff;
 }
 
+/* БЭМ для dots */
+.dots__item {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #333;
+}
+
+.dots__item_active {
+    background: #00d9ff;
+}
+
 @media (max-width: 900px) {
     .container {
         flex-direction: column;
@@ -367,8 +379,4 @@ body {
     .projects {
         grid-template-columns: 1fr;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c496cae9fbc2fc367107d5df660bca95fd75775f
