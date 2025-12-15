@@ -1,0 +1,150 @@
+﻿.list {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.list__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 8px;
+}
+
+.items__item {
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+    .items__item:hover {
+        color: red;
+    }
+
+.parent--first,
+.parent--second,
+.parent--third {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.parent__title {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+
+.parent--first__child {
+    color: red;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.parent--second {
+    color: orange;
+    border-color: orange;
+}
+
+.parent--second__child {
+    width: 100px;
+    color: #b4005a;
+    border: 2px dashed orange;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.parent--third {
+    color: green;
+    border-color: green;
+}
+
+.parent--third__child {
+    color: green;
+    margin: 5px 0;
+    text-align: center;
+}
+
+
+.languages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.languages__item {
+    display: flex;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    max-width: 600px;
+}
+
+
+.item_link {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .item_link::before {
+        content: '🌐 ';
+    }
+
+.text {
+    display: flex;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    padding: 0 20px;
+    margin: 15px 0;
+}
+
+    .text:last-of-type {
+        margin-bottom: 40px;
+    }
+
+
+.page__title {
+    display: flex;
+    justify-content: center;
+    color: black;
+    margin-top: 30px;
+    font-size: 1.5em;
+}
+
+
+.header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.header__text {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+.languages::after {
+    content: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+    display: block;
+    margin-top: 20px;
+    width: auto;
+    max-width: 100%;
+    background-color: #000;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
