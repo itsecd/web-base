@@ -56,9 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
             formatted = result.toFixed(e + 1);
             }
 
-            // Удаляем лишние нули в конце
             result = formatted.replace(/(\.\d*?[1-9])0+$/, "$1").replace(/\.$/, "");
-            //result = Math.round(result * 100) / 100;
             
             return {
                 success: true,
