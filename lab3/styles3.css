@@ -198,4 +198,23 @@ body {
     .skills__list {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
+    .projects__list {
+    list-style: none;
+    padding-left: 0;
+    }
+}
+.projects__item {
+    margin-bottom: 12px;
+}
+
+.projects__item a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.projects__item a:hover {
+    text-decoration: underline;
+    color: #0056b3;
 }
