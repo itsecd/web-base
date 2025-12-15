@@ -25,7 +25,7 @@ body {
     gap: 12px;
 }
 
-.calc__input {
+.screen__input {
     padding: 12px;
     font-size: 16px;
     border: 2px solid #ddd;
@@ -34,7 +34,7 @@ body {
     box-sizing: border-box;
 }
 
-.calc__input:focus {
+.screen__input:focus {
     outline: none;
     border-color: #007bff;
 }
@@ -45,7 +45,7 @@ body {
     gap: 1rem;
 }
 
-.operations {
+.actions__operations {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
@@ -76,7 +76,7 @@ body {
 .operations__btn--mul { border-color: #ffc107; color: #ffc107; }
 .operations__btn--div { border-color: #17a2b8; color: #17a2b8; }
 
-.calc__submit {
+.actions__submit {
     padding: 14px;
     background: #007bff;
     color: white;
@@ -88,7 +88,7 @@ body {
     transition: background 0.2s ease;
 }
 
-.calc__submit:hover {
+.actions__submit:hover {
     background: #0056b3;
 }
 

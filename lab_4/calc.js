@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const firstInput = document.querySelector('.calc__input--first');
-    const secondInput = document.querySelector('.calc__input--second');
+    const firstInput = document.querySelector('.screen__input--first');
+    const secondInput = document.querySelector('.screen__input--second');
     const opButtons = document.querySelectorAll('.operations__btn');
-    const submitBtn = document.querySelector('.calc__submit');
+    const submitBtn = document.querySelector('.actions__submit');
     const resultEl = document.querySelector('.calc__result');
     
     if (!firstInput || !secondInput || !opButtons.length || !submitBtn || !resultEl) {
@@ -15,8 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
     opButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             currentOp = btn.dataset.op;
-            opButtons.forEach(b => b.style.transform = 'scale(1)');
+            opButtons.forEach(b => {
+                b.style.transform = 'scale(1)';
+                b.style.backgroundColor = '';
+                b.style.color = '';
+            });
             btn.style.transform = 'scale(1.05)';
+            btn.style.backgroundColor = '#007bff';
+            btn.style.color = 'white';
         });
     });
     
