@@ -51,6 +51,13 @@
 <td><a href="https://github.com/itsecd/web-base/blob/main/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/pptx/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%206.pptx">pptx</a></td>
 </tr>
 
+
+<td>7</td>
+<td>Bootstrap</td>
+<td><a href="https://github.com/itsecd/web-base/blob/main/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/pdf/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%207.pdf">pdf</a></td>
+<td><a href="https://github.com/itsecd/web-base/blob/main/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/pptx/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%207.pptx">pptx</a></td>
+</tr>
+
 </table>
 
 ## Лабораторные работы
