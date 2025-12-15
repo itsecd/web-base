@@ -35,11 +35,11 @@ body {
     margin-bottom: 25px;
 }
 
-.calculator__form-group {
+.form__form-group {
     margin-bottom: 20px;
 }
 
-.calculator__form-group__label {
+.form-group__label {
     display: block;
     margin-bottom: 8px;
     color: #374151;
@@ -47,8 +47,8 @@ body {
     font-size: 14px;
 }
 
-.calculator__form-group__input,
-.calculator__form-group__select {
+.form-group__input,
+.form-group__select {
     width: 100%;
     padding: 12px 15px;
     border: 2px solid #e5e7eb;
@@ -58,18 +58,18 @@ body {
     font-family: inherit;
 }
 
-.calculator__form-group__input:focus,
-.calculator__form-group__select:focus {
+.form-group__input:focus,
+.form-group__select:focus {
     outline: none;
     border-color: #10b981;
     box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
 }
 
-.calculator__form-group__input::placeholder {
+.form-group__input::placeholder {
     color: #9ca3af;
 }
 
-.calculator__form-group__select {
+.form-group__select {
     cursor: pointer;
     background-color: white;
     appearance: none;
