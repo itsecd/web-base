@@ -4,416 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Калькулятор | Lab 4</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        body {
-            background: #000;
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .calculator {
-            background: linear-gradient(145deg, #1a1a1a, #111);
-            width: 100%;
-            max-width: 450px;
-            border-radius: 24px;
-            padding: 40px 35px;
-            border: 1px solid #333;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .calculator::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #00d4ff, #0099ff, #00d4ff);
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            background: linear-gradient(45deg, #00d4ff, #0099ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: #888;
-            font-size: 14px;
-            margin-bottom: 40px;
-            letter-spacing: 1px;
-        }
-
-        .input-row {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 30px;
-            align-items: center;
-        }
-
-        .input-wrapper {
-            flex: 1;
-            position: relative;
-        }
-
-        .number-input {
-            width: 100%;
-            padding: 20px;
-            font-size: 18px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid #333;
-            border-radius: 16px;
-            color: #fff;
-            transition: all 0.3s;
-            -moz-appearance: textfield;
-        }
-
-        .number-input::-webkit-inner-spin-button,
-        .number-input::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-
-        .number-input:focus {
-            outline: none;
-            border-color: #00d4ff;
-            box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
-        }
-
-        /* Кастомный селект */
-        .custom-select {
-            position: relative;
-            width: 80px;
-        }
-
-        .select-selected {
-            padding: 20px 20px;
-            font-size: 24px;
-            font-weight: 500;
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid #333;
-            border-radius: 16px;
-            color: #00d4ff;
-            cursor: pointer;
-            text-align: center;
-            transition: all 0.3s;
-        }
-
-        .select-selected:hover {
-            border-color: #00d4ff;
-        }
-
-        .select-items {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: #1a1a1a;
-            border: 2px solid #333;
-            border-radius: 16px;
-            margin-top: 5px;
-            overflow: hidden;
-            z-index: 99;
-            display: none;
-        }
-
-        .select-item {
-            padding: 15px;
-            text-align: center;
-            font-size: 22px;
-            color: #888;
-            cursor: pointer;
-            transition: all 0.2s;
-            border-bottom: 1px solid #222;
-        }
-
-        .select-item:last-child {
-            border-bottom: none;
-        }
-
-        .select-item:hover {
-            background: #222;
-            color: #00d4ff;
-        }
-
-        .select-items.show {
-            display: block;
-        }
-
-        .calculate-btn {
-            width: 100%;
-            padding: 22px;
-            font-size: 20px;
-            font-weight: 600;
-            background: linear-gradient(45deg, #00d4ff, #0099ff);
-            border: none;
-            border-radius: 16px;
-            color: #000;
-            cursor: pointer;
-            margin-bottom: 30px;
-            transition: all 0.3s;
-            letter-spacing: 0.5px;
-        }
-
-        .calculate-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
-        }
-
-        .calculate-btn:active {
-            transform: translateY(0);
-        }
-
-        .result-container {
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 16px;
-            padding: 30px;
-            border: 2px solid #333;
-            text-align: center;
-            min-height: 140px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .result-label {
-            color: #888;
-            font-size: 14px;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        #result {
-            color: #fff;
-            font-size: 48px;
-            font-weight: 700;
-            min-height: 56px;
-            transition: all 0.3s;
-        }
-
-        .error {
-            color: #ff3366 !important;
-            font-size: 24px !important;
-        }
-
-        .navigation {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        .nav-btn {
-            padding: 14px 28px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid #333;
-            border-radius: 12px;
-            color: #888;
-            text-decoration: none;
-            font-size: 15px;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .nav-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-            color: #00d4ff;
-            border-color: #00d4ff;
-        }
-
-        /* Анимация результата */
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        .pulse {
-            animation: pulse 0.3s ease;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="calculator">
-        <h1>CALCULATOR</h1>
-        <div class="subtitle">ЛАБОРАТОРНАЯ РАБОТА №4</div>
+        <h1 class="calculator__title">CALCULATOR</h1>
+        <div class="calculator__subtitle">ЛАБОРАТОРНАЯ РАБОТА №4</div>
         
-        <div class="input-row">
-            <div class="input-wrapper">
-                <input type="number" id="num1" class="number-input" placeholder="Первое число">
+        <div class="calculator__input-row">
+            <div class="calculator__input-wrapper">
+                <input type="number" id="num1" class="calculator__number-input" placeholder="Первое число">
             </div>
             
-            <div class="custom-select">
-                <div class="select-selected" id="selectedOp">+</div>
-                <div class="select-items" id="operationsList">
-                    <div class="select-item" data-value="+">+</div>
-                    <div class="select-item" data-value="-">-</div>
-                    <div class="select-item" data-value="*">×</div>
-                    <div class="select-item" data-value="/">÷</div>
+            <div class="calculator__custom-select">
+                <div class="calculator__select-selected" id="selectedOp">+</div>
+                <div class="calculator__select-items" id="operationsList">
+                    <div class="calculator__select-item" data-value="+">+</div>
+                    <div class="calculator__select-item" data-value="-">-</div>
+                    <div class="calculator__select-item" data-value="*">×</div>
+                    <div class="calculator__select-item" data-value="/">÷</div>
                 </div>
             </div>
             
-            <div class="input-wrapper">
-                <input type="number" id="num2" class="number-input" placeholder="Второе число">
+            <div class="calculator__input-wrapper">
+                <input type="number" id="num2" class="calculator__number-input" placeholder="Второе число">
             </div>
         </div>
         
-        <button class="calculate-btn" onclick="calculate()">
+        <button class="calculator__calculate-btn" onclick="calculate()">
             <i class="fas fa-calculator"></i> ВЫЧИСЛИТЬ
         </button>
         
-        <div class="result-container">
-            <div class="result-label">РЕЗУЛЬТАТ</div>
-            <div id="result">—</div>
+        <div class="calculator__result-container">
+            <div class="calculator__result-label">РЕЗУЛЬТАТ</div>
+            <div id="result" class="calculator__result">—</div>
         </div>
         
-        <div class="navigation">
-            <a href="../lab3/index.html" class="nav-btn">
+        <div class="calculator__navigation">
+            <a href="../lab3/index.html" class="calculator__nav-btn">
                 <i class="fas fa-arrow-left"></i> К РЕЗЮМЕ
             </a>
         </div>
     </div>
 
-    <script>
-        // Кастомный селект
-        const selectedOp = document.getElementById('selectedOp');
-        const operationsList = document.getElementById('operationsList');
-        const selectItems = document.querySelectorAll('.select-item');
-        
-        selectedOp.addEventListener('click', () => {
-            operationsList.classList.toggle('show');
-        });
-        
-        selectItems.forEach(item => {
-            item.addEventListener('click', () => {
-                selectedOp.textContent = item.textContent;
-                selectedOp.dataset.value = item.dataset.value;
-                operationsList.classList.remove('show');
-            });
-        });
-        
-        // Закрыть селект при клике вне его
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.custom-select')) {
-                operationsList.classList.remove('show');
-            }
-        });
-        
-        // Расчет
-        function calculate() {
-            const num1 = parseFloat(document.getElementById('num1').value);
-            const num2 = parseFloat(document.getElementById('num2').value);
-            const operation = selectedOp.dataset.value || '+';
-            const resultElement = document.getElementById('result');
-            
-            // Проверки
-            if (isNaN(num1) || isNaN(num2)) {
-                showResult('Введите оба числа', true);
-                return;
-            }
-            
-            let result;
-            let error = false;
-            
-            try {
-                switch(operation) {
-                    case '+':
-                        result = num1 + num2;
-                        break;
-                    case '-':
-                        result = num1 - num2;
-                        break;
-                    case '*':
-                        result = num1 * num2;
-                        break;
-                    case '/':
-                        if (num2 === 0) {
-                            showResult('Деление на ноль!', true);
-                            return;
-                        }
-                        result = num1 / num2;
-                        break;
-                    default:
-                        showResult('Ошибка операции', true);
-                        return;
-                }
-                
-                // Проверка на бесконечность
-                if (!isFinite(result)) {
-                    showResult('Слишком большое число', true);
-                    return;
-                }
-                
-                // Форматирование
-                result = Number.isInteger(result) ? result : parseFloat(result.toFixed(6));
-                
-                // Показ результата
-                showResult(result);
-                
-            } catch (error) {
-                showResult('Ошибка вычисления', true);
-            }
-        }
-        
-        function showResult(value, isError = false) {
-            const resultElement = document.getElementById('result');
-            
-            resultElement.textContent = value;
-            resultElement.className = isError ? 'error' : '';
-            
-            if (!isError) {
-                resultElement.classList.add('pulse');
-                setTimeout(() => {
-                    resultElement.classList.remove('pulse');
-                }, 300);
-            }
-        }
-        
-        // Поддержка Enter
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
-                calculate();
-            }
-        });
-        
-        // Фокус на первое поле
-        document.getElementById('num1').focus();
-        
-        // Красивый placeholder
-        const inputs = document.querySelectorAll('.number-input');
-        inputs.forEach(input => {
-            input.addEventListener('focus', function() {
-                this.style.borderColor = '#00d4ff';
-                this.style.background = 'rgba(255, 255, 255, 0.08)';
-            });
-            
-            input.addEventListener('blur', function() {
-                this.style.borderColor = '#333';
-                this.style.background = 'rgba(255, 255, 255, 0.05)';
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
