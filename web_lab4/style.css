@@ -1,224 +1,145 @@
-.resume {
-  max-width: 800px;
-  margin: 0 auto;
-  background: white;
+.calculator {
+  max-width: 500px;
+  margin: 50px auto;
   padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-.resume__header {
-  display: flex;
-  align-items: center;
+.calculator__title {
+  text-align: center;
   margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid #e0e0e0;
+  font-size: 32px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.resume__photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 8px;
-  object-fit: cover;
-  margin-right: 30px;
-}
-
-.resume__basic-info {
-  flex: 1;
-}
-
-.resume__name {
-  margin: 0 0 10px 0;
-  color: #333;
-  font-size: 24px;
-}
-
-.resume__birthdate {
-  margin: 5px 0;
-  color: #666;
-}
-
-.resume__github {
-  margin: 5px 0;
-  color: #666;
-}
-
-.resume__link {
-  color: #0077cc;
-  text-decoration: none;
-}
-
-.resume__link:hover {
-  text-decoration: underline;
-}
-
-.resume__content {
+.calculator__inputs {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
-.resume__section {
-  margin-bottom: 0;
-}
-
-.resume__section-title {
-  color: #333;
-  border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
-  font-size: 20px;
-}
-
-.resume__list {
-  margin: 0;
-  padding-left: 20px;
-  list-style-type: disc;
-}
-
-.resume__list-item {
-  margin-bottom: 8px;
-  color: #444;
-}
-
-.resume__skills {
+.calculator__input-group {
   display: flex;
-  gap: 40px;
+  flex-direction: column;
 }
 
-.resume__skill-category {
-  flex: 1;
+.calculator__operation {
+  display: flex;
+  flex-direction: column;
 }
 
-.resume__skill-title {
-  color: #555;
-  margin-bottom: 10px;
+.calculator__label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.calculator__input {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.calculator__input:focus {
+  outline: none;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.calculator__select {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.calculator__select:focus {
+  outline: none;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.calculator__button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
   font-size: 18px;
   font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.resume__about-text {
-  text-align: justify;
-  color: #444;
-  margin: 0;
-  line-height: 1.7;
+.calculator__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-.projects {
-  margin-top: 10px;
+.calculator__button:active {
+  transform: translateY(0);
 }
 
-.projects__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.project-card {
-  background: #f9f9f9;
+.calculator__result {
+  text-align: center;
   padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #e0e0e0;
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
 }
 
-.project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.project-card__title {
-  margin: 0 0 10px 0;
-  color: #333;
-  font-size: 18px;
-}
-
-.project-card__description {
+.calculator__result-title {
   margin: 0 0 15px 0;
-  color: #666;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 20px;
+  font-weight: 500;
 }
 
-.project-card__links {
+.calculator__result-value {
+  font-size: 48px;
+  font-weight: bold;
+  min-height: 60px;
   display: flex;
-  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  color: #ffeb3b;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.project-card__link {
-  display: inline-block;
-  padding: 8px 15px;
-  background: #0077cc;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  font-size: 14px;
-  transition: all 0.3s ease;
+.calculator__error {
+  color: #ff6b6b;
+  font-weight: 500;
+  margin-top: 10px;
+  min-height: 24px;
+  font-size: 16px;
 }
 
-.project-card__link:hover {
-  background: #005fa3;
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  .resume {
+@media (max-width: 600px) {
+  .calculator {
+    margin: 20px;
     padding: 20px;
-    margin: 10px;
   }
 
-  .resume__header {
-    flex-direction: column;
-    text-align: center;
+  .calculator__title {
+    font-size: 28px;
   }
 
-  .resume__photo {
-    margin-right: 0;
-    margin-bottom: 20px;
-    width: 120px;
-    height: 120px;
-  }
-
-  .resume__name {
-    font-size: 22px;
-  }
-
-  .resume__skills {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .resume__skill-category {
-    width: 100%;
-  }
-
-  .projects__grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .resume {
-    padding: 15px;
-  }
-
-  .resume__photo {
-    width: 100px;
-    height: 100px;
-  }
-
-  .resume__name {
-    font-size: 20px;
-  }
-
-  .resume__section-title {
-    font-size: 18px;
-  }
-
-  .project-card {
-    padding: 15px;
+  .calculator__result-value {
+    font-size: 36px;
   }
 }

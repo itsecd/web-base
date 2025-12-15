@@ -17,6 +17,21 @@ document.addEventListener('DOMContentLoaded', function() {
         resultElement.textContent = '—';
     }
 
+    function performCalculation(num1, num2, operation) {
+        switch (operation) {
+            case 'add':
+                return num1 + num2;
+            case 'subtract':
+                return num1 - num2;
+            case 'multiply':
+                return num1 * num2;
+            case 'divide':
+                return num1 / num2;
+            default:
+                throw new Error('Неизвестная операция');
+        }
+    }
+
     function calculate() {
         clearError();
         
@@ -34,43 +49,24 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        let result;
-        
-        switch (operation) {
-            case 'add':
-                result = num1 + num2;
-                break;
-            case 'subtract':
-                result = num1 - num2;
-                break;
-            case 'multiply':
-                result = num1 * num2;
-                break;
-            case 'divide':
-                result = num1 / num2;
-                break;
-            default:
-                showError('Неизвестная операция');
-                return;
+        try {
+            const result = performCalculation(num1, num2, operation);
+            resultElement.textContent = Number.isInteger(result) ? result : result.toFixed(4);
+        } catch (error) {
+            showError(error.message);
         }
-        
-        
-        resultElement.textContent = Number.isInteger(result) ? result : result.toFixed(4);
     }
 
-    
     calculateButton.addEventListener('click', calculate);
     
-    
-    num1Input.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') calculate();
+    [num1Input, num2Input].forEach(field => {
+        field.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') calculate();
+        });
     });
     
-    num2Input.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') calculate();
+    [num1Input, num2Input, operationSelect].forEach(element => {
+        element.addEventListener('input', clearError);
+        element.addEventListener('change', clearError);
     });
-    
-    num1Input.addEventListener('input', clearError);
-    num2Input.addEventListener('input', clearError);
-    operationSelect.addEventListener('change', clearError);
 });
