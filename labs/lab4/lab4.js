@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     const PRECISION = 5;
-    const ROUND_CONST = 10 ** PRECISION;
 
     const firstInput = document.getElementById("number1");
     const secondInput = document.getElementById("number2");
@@ -75,6 +74,11 @@ document.addEventListener("DOMContentLoaded", function () {
         outResult.textContent = "—";
     }
 
+    function roundToPrecision(value, precision = PRECISION) {
+        const roundMultiplier = 10 ** precision;
+        return Math.round(value * roundMultiplier) / roundMultiplier;
+    }
+
     function process() {
         clearError();
         clearResult();
@@ -85,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const op = opSelect.value;
 
             let res = compute(x, y, op);
-            res = Math.round(res * ROUND_CONST) / ROUND_CONST;
+            res = roundToPrecision(res);
             displayResult(res);
         } catch (err) {
             displayError(err.message || err);
