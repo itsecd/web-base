@@ -60,14 +60,6 @@ body {
   flex: 1;
 }
 
-.skills__title {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
 .skills__list {
   list-style: none;
   padding: 0;
@@ -110,10 +102,6 @@ body {
   background-position: center;
 }
 
-.about__title {
-  margin-top: 0;
-}
-
 .about__text {
   font-size: 1.5em;
 }
@@ -123,21 +111,76 @@ body {
   transition: color 0.3s ease-in-out;
 }
 
-.showcase {
+.projects__list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
-.showcase__image {
+.projects__item {
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.projects__item:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.projects__image {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.showcase__title,
-.showcase__caption {
+.projects__caption {
   padding-top: 10px;
   text-align: center;
-  color: white;
+  font-style: italic;
+  color: #333;
+  line-height: 1.4;
+}
+
+.about__title,
+.hobby__title,
+.projects__title {
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
+.skills__title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .skills {
+    flex-direction: column;
+  }
+
+  .profile__name {
+    font-size: 2.2em;
+  }
+
+  .github__link {
+    font-size: 1.5em;
+  }
+
+  .about__text,
+  .hobby__text {
+    font-size: 1.1em;
+  }
 }

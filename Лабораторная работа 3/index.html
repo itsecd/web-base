@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <title>Лабораторная работа 3</title>
 </head>
@@ -18,11 +19,11 @@
         </div>
         <div class="hobby card">
             <h2 class="hobby__title">Увлечения</h2>
-            <p class="hoppy__text">Программирование, английск язык, написание модов для игры на Java.</p>
+            <p class="hobby__text">Программирование, английск язык, написание модов для игры на Java.</p>
         </div>
         <div class="skills">
             <div class="skills__group skills__group_hard card">
-                <p class="skills__title">Hard-скилы</p>
+                <h3 class="skills__title">Hard-скилы</h3>
                 <ul class="skills__list">
                     <li class="skills__item">C#/C++</li>
                     <li class="skills__item">Python</li>
@@ -32,7 +33,7 @@
                 </ul>
             </div>
             <div class="skills__group skills__group_soft card">
-                <p class="skills__title">Soft-скилы</p>
+                <h3 class="skills__title">Soft-скилы</h3>
                 <ul class="skills__list">
                     <li class="skills__item">Адаптивность</li>
                     <li class="skills__item">Нахождение информации</li>
@@ -48,33 +49,39 @@
         <div class="about card">
             <h2 class="about__title">О себе</h2>
             <p class="about__text">Студент Саморского университета второго курса, прохожу стажировку в <a
-                    class="about__link" href="https://rt-solar.ru/services/jsoc/">Solar JSOC</a>. Хорошо владею
+                    class="about__link" href="https://rt-solar.ru/services/jsoc/" target="_blank"
+                    rel="noopener noreferrer">Solar JSOC</a>. Хорошо владею
                 английским языком, в свободное время пишу utility модификации для игры minecraft.</p>
         </div>
-        <div class="showcase">
-            <h2 class="showcase__title">Пример написанных модификаций</h2>
-            <figure class="showcase__item">
-                <a href="1.png" target="_blank" rel="noopener noreferrer">
-                    <img class="showcase__image" src="1.png" alt="fig. 1">
-                </a>
-                <figcaption class="showcase__caption">Возможность кастомного рендеринга интерактивного меню и рисование
-                    объектов в мире.</figcaption>
-            </figure>
-            <figure class="showcase__item">
-                <a href="1.png" target="_blank" rel="noopener noreferrer">
-                    <img class="showcase__image" src="2.png" alt="fig. 2">
-                </a>
-                <figcaption class="showcase__caption">Генерация NavMesh'а для возможности построения путей (Recast4j
-                    implementation).</figcaption>
-            </figure>
-            <figure class="showcase__item">
-                <a href="1.png" target="_blank" rel="noopener noreferrer">
-                    <img class="showcase__image" src="3.png" alt="fig. 3">
-                </a>
-                <figcaption class="showcase__caption">Построенный путь (розовым) вокруг препядствий, используя NavMesh.
-                    Это можно использовать как для управления NPC (заместо обычного A*), так и для создания бота.
-                </figcaption>
-            </figure>
+
+        <div class="projects card">
+            <h2 class="projects__title">Пример написанных модификаций</h2>
+            <div class="projects__list">
+                <figure class="projects__item">
+                    <a href="1.png" target="_blank" rel="noopener noreferrer">
+                        <img class="projects__image" src="1.png" alt="fig. 1">
+                    </a>
+                    <figcaption class="projects__caption">Возможность кастомного рендеринга интерактивного меню и
+                        рисование
+                        объектов в мире.</figcaption>
+                </figure>
+                <figure class="projects__item">
+                    <a href="2.png" target="_blank" rel="noopener noreferrer">
+                        <img class="projects__image" src="2.png" alt="fig. 2">
+                    </a>
+                    <figcaption class="projects__caption">Генерация NavMesh'а для возможности построения путей (Recast4j
+                        implementation).</figcaption>
+                </figure>
+                <figure class="projects__item">
+                    <a href="3.png" target="_blank" rel="noopener noreferrer">
+                        <img class="projects__image" src="3.png" alt="fig. 3">
+                    </a>
+                    <figcaption class="projects__caption">Построенный путь (розовым) вокруг препядствий, используя
+                        NavMesh.
+                        Это можно использовать как для управления NPC (заместо обычного A*), так и для создания бота.
+                    </figcaption>
+                </figure>
+            </div>
         </div>
     </div>
 </body>
