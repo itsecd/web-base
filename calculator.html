@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator — Lab 4</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+
+<div class="calc">
+    <h1 class="calc__title">Lapurple Calculator</h1>
+
+    <div class="calc__form">
+        <input type="number" id="a" class="calc__input" placeholder="First number">
+        
+        <select id="op" class="calc__select">
+            <option value="+">+</option>
+            <option value="-">−</option>
+            <option value="*">×</option>
+            <option value="/">÷</option>
+        </select>
+
+        <input type="number" id="b" class="calc__input" placeholder="Second number">
+    </div>
+
+    <button class="calc__button" id="calcBtn">Calculate</button>
+
+    <div class="calc__output">
+        <span class="calc__label">Result:</span>
+        <span class="calc__result" id="result">—</span>
+    </div>
+
+    <div class="calc__error" id="error"></div>
+
+    <a href="lab3.html" class="calc__back">← Back to resume</a>
+</div>
+
+<script src="calculator.js"></script>
+</body>
+</html>
