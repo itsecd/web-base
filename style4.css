@@ -1,0 +1,402 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+    font-family: 'BBH Sans Bartle', 'Segoe UI', sans-serif;
+    padding: 20px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.calculator-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+    padding: 40px 35px;
+    width: 100%;
+    max-width: 480px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.calculator-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #2d3436;
+    margin-bottom: 35px;
+    font-weight: 700;
+    font-size: 2.0rem;
+    position: relative;
+    padding-bottom: 15px;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+    border-radius: 2px;
+}
+
+.input-group {
+    margin-bottom: 28px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #2d3436;
+    font-size: 1.1rem;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+}
+
+input, select {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #e0e6ed;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    background: white;
+    color: #2d3436;
+    font-family: inherit;
+    line-height: 1.5;
+}
+
+input::placeholder {
+    color: #a0aec0;
+    opacity: 0.7;
+}
+
+input:hover, select:hover {
+    border-color: #a0aec0;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #4ecdc4;
+    box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.1);
+    transform: translateY(-1px);
+}
+
+.operation-selector {
+    margin-bottom: 35px;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%232d3436' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 16px;
+    padding-right: 50px;
+    cursor: pointer;
+}
+
+.calculate-btn {
+    background: linear-gradient(135deg, #2d3436 0%, #4a5568 100%);
+    color: white;
+    border: none;
+    padding: 18px;
+    width: 100%;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+.calculate-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s;
+}
+
+.calculate-btn:hover {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+}
+
+.calculate-btn:hover::before {
+    left: 100%;
+}
+
+.calculate-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);
+}
+
+.result-container {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    border: 2px dashed #e2e8f0;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.result-container:hover {
+    border-color: #4ecdc4;
+}
+
+.result-label {
+    font-size: 0.95rem;
+    color: #718096;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.result-value {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #2d3436;
+    word-break: break-all;
+    line-height: 1.2;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.error-message {
+    color: #e53e3e;
+    font-weight: 600;
+    margin-top: 8px;
+    font-size: 0.9rem;
+    min-height: 20px;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    line-height: 1.4;
+}
+
+.error-message::before {
+    content: '⚠';
+    font-size: 1rem;
+}
+
+.operations-history {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 2px solid #edf2f7;
+}
+
+.history-title {
+    font-size: 1.1rem;
+    color: #2d3436;
+    margin-bottom: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1.4;
+}
+
+.history-title::before {
+    content: '📋';
+    font-size: 1.2rem;
+}
+
+.history-item {
+    background: white;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #2d3436;
+    border-left: 4px solid #4ecdc4;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.history-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.history-item::after {
+    content: '→';
+    color: #a0aec0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.history-empty {
+    color: #a0aec0;
+    font-style: italic;
+    text-align: center;
+    padding: 30px 20px;
+    background: #f7fafc;
+    border-radius: 10px;
+    border: 2px dashed #e2e8f0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Анимация для нового элемента истории */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.history-item {
+    animation: slideIn 0.4s ease-out;
+}
+
+/* Улучшения для выравнивания текста внутри контейнеров */
+.input-group, 
+.operation-selector,
+.result-container,
+.operations-history {
+    text-align: left;
+}
+
+/* Фиксы для центрирования текста */
+.calculate-btn,
+.result-label {
+    text-align: center;
+}
+
+/* Фикс для длинных текстов */
+input, select, button, .history-item, .result-value {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.result-value {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .calculator-container {
+        padding: 30px 25px;
+        border-radius: 20px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+        padding-bottom: 12px;
+    }
+    
+    input, select {
+        padding: 14px 18px;
+        font-size: 1rem;
+    }
+    
+    .calculate-btn {
+        padding: 16px;
+        font-size: 1.1rem;
+    }
+    
+    .result-value {
+        font-size: 2rem;
+        padding: 0 5px;
+    }
+    
+    body {
+        padding: 15px;
+    }
+    
+    label {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .calculator-container {
+        padding: 25px 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .result-value {
+        font-size: 1.8rem;
+    }
+    
+    .history-item {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Фиксы для вертикального выравнивания */
+input, select, button {
+    vertical-align: middle;
+}
+
+/* Единый отступ для всех элементов формы */
+.input-group,
+.operation-selector,
+.calculate-btn,
+.result-container,
+.operations-history {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}

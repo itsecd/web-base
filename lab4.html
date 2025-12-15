@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>калькулятор</title>
+     <link href="style4.css" rel="stylesheet" type="text/css" />
+     <link
+      href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>calculator</h1>
+        
+        <div class="input-group">
+            <label for="number1">first number:</label>
+            <input type="number" id="number1" placeholder="enter number" step="any">
+            <div class="error-message" id="error1"></div>
+        </div>
+        
+        <div class="input-group">
+            <label for="number2">second number:</label>
+            <input type="number" id="number2" placeholder="enter number" step="any">
+            <div class="error-message" id="error2"></div>
+        </div>
+        
+        <div class="operation-selector">
+            <label for="operation">operation:</label>
+            <select id="operation">
+                <option value="add">addition (+)</option>
+                <option value="subtract">subtraction (-)</option>
+                <option value="multiply">multiplication (×)</option>
+                <option value="divide">division (÷)</option>
+            </select>
+        </div>
+        
+        <button class="calculate-btn" id="calculate">calculate</button>
+        
+        <div class="result-container">
+            <div class="result-label">Result:</div>
+            <div class="result-value" id="result">—</div>
+        </div>
+        
+        <div class="operations-history">
+            <div class="history-title">Operation history:</div>
+            <div id="history-list"></div>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
