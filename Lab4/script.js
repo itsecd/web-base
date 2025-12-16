@@ -1,22 +1,18 @@
 function sum(lhs, rhs) {
-    let res = +lhs + +rhs
-    console.log(res)
+    let res = lhs + rhs
     return res
 }
 function sub(lhs, rhs) {
-    let res = +lhs - +rhs
-    console.log(res)
+    let res = lhs - rhs
     return res
 }
 function mult(lhs, rhs) {
-    let res = +lhs * +rhs
-    console.log(res)
+    let res = lhs * rhs
     return res
 }
 function div(lhs, rhs) {
     if (rhs != 0) {
-        let res = +lhs / +rhs
-        console.log(res)
+        let res = lhs / rhs
         return res
     }
     else {
@@ -24,15 +20,13 @@ function div(lhs, rhs) {
     }
 }
 function solve() {
-    let lhs = document.getElementById("lhs").value
-    console.log(lhs)
-    let rhs = document.getElementById("rhs").value
-    console.log(rhs)
-    if (lhs == "" || rhs == "") {
+    let lhs = +document.getElementById("lhs").value
+    let rhs = +document.getElementById("rhs").value
+    if (isNaN(lhs) || isNaN(rhs)) {
+        document.getElementById("result").value = "Ошибка!"
         return
     }
     let act = document.getElementById("act").value
-    console.log(act)
     let result = 0
     switch (act) {
         case "sum":
@@ -51,5 +45,14 @@ function solve() {
             return
             break;
     }
-    document.getElementById("result").value = "Результат: " + result
+    if (isNaN(result)) {
+        document.getElementById("result").value = result
+        return
+    }
+    document.getElementById("result").value = "Результат: " + Math.round(result * 100000) / 100000
+}
+function click() {
+    console.log("skdjfnlkn")
+    const button = document.getElementById("calc")
+    button.addEventListener('click', solve)
 }
