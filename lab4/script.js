@@ -9,6 +9,7 @@ class Calculator {
         
         this.initEventListeners();
     }
+    
 
     initEventListeners() {
         this.calculateBtn.addEventListener('click', () => {
