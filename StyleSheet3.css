@@ -1,0 +1,114 @@
+﻿body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #EEE2DC;
+    color: #123C69;
+    display: flex;
+    justify-content: center;
+}
+
+.resume {
+    background-color: #EDC7B7;
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px #123C69;
+}
+
+.resume__top-section {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #123C69;
+    padding-bottom: 30px;
+}
+
+.resume__identity-column {
+    flex: 0 0 250px;
+    text-align: center;
+}
+
+.resume__about-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.resume__avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #AC3B69;
+    margin-bottom: 15px;
+}
+
+.resume__title {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    color: #123C69;
+}
+
+.resume__birth-date {
+    color: #123C69;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.resume__github-link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #123C69;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+    .resume__github-link:hover {
+        background-color: #AC3B69;
+    }
+
+.resume__bottom-section {
+    margin-top: 20px;
+}
+
+.resume__section {
+    margin-bottom: 30px;
+}
+.resume__subtitle {
+    color: #AC3B69;
+    border-left: 4px solid #AC3B69;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.resume__text {
+    line-height: 1.5;
+}
+
+.resume__tags {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+    .resume__tags li {
+        background-color: #EEE2DC;
+        color: #123C69;
+        padding: 5px 12px;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+.resume__skills-category {
+    margin-bottom: 10px;
+    font-weight: bold;
+    display: block;
+}
