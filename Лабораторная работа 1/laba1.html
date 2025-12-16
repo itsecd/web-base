@@ -24,8 +24,8 @@
     <div class="task">
         <h2>Задание 2: Наложение изображений</h2>
         <div class="image-container">
-            <img src="https://img2.akspic.ru/crops/8/4/6/4/6/164648/164648-kot-kotenok-privlekatelnost-golova-glaz-3840x2160.jpg" alt="Изображение 1" class="image1">
-            <img src="https://i.pinimg.com/236x/cd/16/12/cd16121609a79d95dffbfa28a326331e.jpg" alt="Изображение 2" class="image2">
+            <img src="https://img2.akspic.ru/crops/8/4/6/4/6/164648/164648-kot-kotenok-privlekatelnost-golova-glaz-3840x2160.jpg" alt="Изображение 1" class="image-container__image">
+            <img src="https://i.pinimg.com/236x/cd/16/12/cd16121609a79d95dffbfa28a326331e.jpg" alt="Изображение 2" class="image-container__image image-container__image_type_overlay">
         </div>
     </div>
     
@@ -33,25 +33,27 @@
     <div class="task">
         <h2>Задание 3: Светофор</h2>
         <div class="traffic-light">
-            <div class="light red"></div>
-            <div class="light yellow"></div>
-            <div class="light green"></div>
+            <div class="traffic-light__light traffic-light__light_color_red"></div>
+            <div class="traffic-light__light traffic-light__light_color_yellow"></div>
+            <div class="traffic-light__light traffic-light__light_color_green"></div>
         </div>
     </div>
     
-    <!-- Лабирант -->
+    <!-- Лабиринт -->
     <div class="task">
-        <h2>Задание 4: Лабиринт 3x3</h2>
+        <h2>Задание 4: Лабиринт</h2>
         <div class="maze">
-            <div class="cell">1</div>
-            <div class="cell">2</div>
-            <div class="cell">3</div>
-            <div class="cell">4</div>
-            <div class="cell">5</div>
-            <div class="cell">6</div>
-            <div class="cell">7</div>
-            <div class="cell">8</div>
-            <div class="cell">9</div>
+            <div class="maze__cell maze__cell--border_left maze__cell--border_top"></div>          
+            <div class="maze__cell maze__cell--border_bottom"></div>
+            <div class="maze__cell maze__cell--border_top maze__cell--border_right"></div>
+
+            <div class="maze__cell maze__cell--border_bottom maze__cell--border_right maze__cell--border_left"></div>
+            <div class="maze__cell"></div>
+            <div class="maze__cell maze__cell--border_right maze__cell--border_bottom"></div>
+
+            <div class="maze__cell maze__cell--border_left maze__cell--border_bottom"></div>
+            <div class="maze__cell maze__cell--border_bottom"></div>
+            <div class="maze__cell maze__cell--border_bottom"></div>     
         </div>
     </div>
 </body>
