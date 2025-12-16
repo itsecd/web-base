@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Резюме. Лабораторная работа 3</title>
+    <link rel="stylesheet" href="styles/lab3.css" />
+</head>
+<body>
+    <div class="resume">
+        <div class="layout">
+            <div class="main-content">
+                <h1 class="resume__title">RESUME</h1>
+
+                <section class="resume__section">
+                    <h2 class="resume__section-title">Навыки</h2>
+                    <div class="skills-section__container">
+                        <div class="skills-section__column">
+                            <h3 class="skills-section__subtitle">Hard-Skills</h3>
+                            <div class="skills">
+                                <span class="skill skill--hard">Linux and git</span>
+                                <span class="skill skill--hard">TCP/IP, OSI</span>
+                                <span class="skill skill--hard">Wireshark, MaxPatrol</span>
+                                <span class="skill skill--hard">C, C++, Python</span>
+                            </div>
+                        </div>
+                        <div class="skills-section__column">
+                            <h3 class="skills-section__subtitle">Soft-Skills</h3>
+                            <div class="skills">
+                                <span class="skill skill--soft">Тайм-менеджмент</span>
+                                <span class="skill skill--soft">Стрессоустойчивость</span>
+                                <span class="skill skill--soft">Усердство</span>
+                                <span class="skill skill--soft">Работа в команде</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="resume__section">
+                    <h2 class="resume__section-title">Увлечения</h2>
+                    <ul class="hobbies-list">
+                        <li class="hobbies-list__item">
+                            Программирование и веб-разработка
+                        </li>
+                        <li class="hobbies-list__item">Capture The Flag формата Jeopardy</li>
+                        <li class="hobbies-list__item">Социальная инженерия</li>
+                        <li class="hobbies-list__item">Разработка компьютерных игр</li>
+                    </ul>
+                </section>
+
+                <section class="resume__section">
+                    <h2 class="resume__section-title">Мои проекты</h2>
+                    <div class="projects-section">
+                        <div class="projects-grid">
+                            <a href="lab1.html" class="project-card" target="_blank">
+                                <h3 class="project-card__title">Лабораторная работа 1</h3>
+                                <p class="project-card__description">Начало знакомства с версткой</p>
+                                <span class="project-card__link">Перейти →</span>
+                            </a>
+                            <a href="lab2.html" class="project-card" target="_blank">
+                                <h3 class="project-card__title">Лабораторная работа 2</h3>
+                                <p class="project-card__description">Более сложные ситуации при верстке</p>
+                                <span class="project-card__link">Перейти →</span>
+                            </a>
+                            <a href="lab3.html" class="project-card" target="_blank">
+                                <h3 class="project-card__title">Лабораторная работа 3</h3>
+                                <p class="project-card__description">Пора заявить о себе</p>
+                                <span class="project-card__link">Текущая страница</span>
+                            </a>
+                            <a href="lab4.html" class="project-card" target="_blank">
+                                <h3 class="project-card__title">Лабораторная работа 4</h3>
+                                <p class="project-card__description">Добавим JavaScript-а</p>
+                                <span class="project-card__link">Перейти →</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="sidebar">
+                <section class="profile-card">
+                    <img src="images/cat.jpg"
+                         alt="Фото (Дмитриева Алина)"
+                         class="resume__photo" />
+                    <h1 class="profile-card__name">
+                        Дмитриева Алина Александровна
+                    </h1>
+                    <p class="resume__birthdate">29.12.2006</p>
+
+                    <div class="about-section">
+                        <h2 class="resume__section-title">О себе</h2>
+                        <p class="about__text">
+                            Начинающий специалист в сфере IT.
+                            Уверена, что сочетание технических навыков и творческого подхода
+                            позволяет создавать качественные цифровые продукты.
+                            Готова к сложным задачам и командной работе.
+                        </p>
+                    </div>
+
+                    <div class="contact-section">
+                        <a href="https://github.com/shydoke"
+                           class="github__link"
+                           target="_blank">GitHub профиль</a>
+                        <div class="qr-code">
+                            <img src="images/qr-code.png"
+                                 alt="QR-код для GitHub профиля"
+                                 class="qr-code__image" />
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

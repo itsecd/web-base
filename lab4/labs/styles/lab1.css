@@ -1,0 +1,84 @@
+﻿.text-block {
+    background-color: #3F4531;
+    color: #8B2CD3;
+    text-align: left;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-main {
+    width: 300px;
+}
+
+.image-overlay {
+    position: absolute;
+    width: 100px;
+    left: 100px;
+}
+
+.traffic-light {
+    display: inline-block;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.traffic-light__lamp {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+.traffic-light__lamp_red {
+    background: red;
+}
+
+.traffic-light__lamp_yellow {
+    background: yellow;
+}
+
+.traffic-light__lamp_green {
+    background: green;
+}
+
+.maze {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 0;
+    width: fit-content;
+}
+
+.maze__row {
+    display: contents;
+}
+
+.maze__cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.maze__cell_no-top {
+    border-top: none;
+}
+
+.maze__cell_no-bottom {
+    border-bottom: none;
+}
+
+.maze__cell_no-left {
+    border-left: none;
+}
+
+.maze__cell_no-right {
+    border-right: none;
+}
+
+.maze__cell_no-border {
+    border: none;
+}

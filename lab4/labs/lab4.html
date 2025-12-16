@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Милый калькулятор</title>
+    <link rel="stylesheet" href="styles/lab4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">
+                <i class="fas fa-calculator"></i>
+                Милый калькулятор
+            </h1>
+            <p class="subtitle">Выполняйте простые операции в пастельном стиле</p>
+        </header>
+
+        <main class="calculator">
+            <div class="calculator-card">
+                <div class="inputs-section">
+                    <div class="number-inputs">
+                        <div class="input-group">
+                            <label for="num1" class="input-label">
+                                <i class="fas fa-hashtag"></i>
+                                Первое число
+                            </label>
+                            <input type="number" id="num1" class="number-input" placeholder="Введите число" step="any">
+                        </div>
+
+                        <div class="operation-selector">
+                            <label for="operation" class="input-label">
+                                <i class="fas fa-cogs"></i>
+                                Операция
+                            </label>
+                            <select id="operation" class="operation-select">
+                                <option value="add">Сложение</option>
+                                <option value="subtract">Вычитание</option>
+                                <option value="multiply">Умножение</option>
+                                <option value="divide">Деление</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="num2" class="input-label">
+                                <i class="fas fa-hashtag"></i>
+                                Второе число
+                            </label>
+                            <input type="number" id="num2" class="number-input" placeholder="Введите число" step="any">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculate-section">
+                    <button id="calculateBtn" class="calculate-btn">
+                        <i class="fas fa-magic"></i>
+                        Вычислить
+                    </button>
+                </div>
+
+                <div class="result-section">
+                    <div class="result-label">
+                        <i class="fas fa-star"></i>
+                        Результат:
+                    </div>
+                    <div id="resultValue" class="result-value">—</div>
+                </div>
+
+                <div id="errorMessage" class="error-message hidden">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span class="error-text"></span>
+                </div>
+
+                <div class="hint">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Подсказка: вы также можете нажать Enter для вычисления</span>
+                </div>
+            </div>
+
+            <div class="decoration">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+                <div class="circle circle-3"></div>
+                <div class="heart"><i class="fas fa-heart"></i></div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>С любовью создано для лабораторной работы</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
