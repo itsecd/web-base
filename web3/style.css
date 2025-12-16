@@ -111,6 +111,12 @@
     text-align: center;
   }
 
+  .resume__info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  }
+
   .resume__photo {
     margin-right: 0;
     margin-bottom: 20px;
@@ -126,7 +132,12 @@
     flex-direction: column;
     gap: 20px;
   }
-
+  
+  .resume__list {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
   .resume__skill-category {
     width: 100%;
   }
