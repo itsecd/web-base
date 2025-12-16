@@ -42,6 +42,50 @@ document.addEventListener('DOMContentLoaded', function() {
         operationsHistory.push(historyEntry);
         updateHistory();
     }
+
+    // Добавил функцию performCalculation
+    function performCalculation(num1, num2, operation) {
+        let result;
+        
+        switch(operation) {
+            case 'add':
+                result = num1 + num2;
+                break;
+            case 'subtract':
+                result = num1 - num2;
+                break;
+            case 'multiply':
+                result = num1 * num2;
+                break;
+            case 'divide':
+                result = num1 / num2;
+                break;
+            default:
+                result = NaN;
+        }
+        
+        return result;
+    }
+
+    // Добавил функцию showResult
+    function showResult(result) {
+        if (isNaN(result)) {
+            resultElement.textContent = 'Calculation error';
+            resultElement.style.color = '#e74c3c';
+        } else if (!isFinite(result)) {
+            resultElement.textContent = 'Infinity';
+            resultElement.style.color = '#e74c3c';
+        } else {
+            const formattedResult = Math.abs(result) > 1e10 || (Math.abs(result) < 1e-10 && result !== 0) 
+                ? result.toExponential(5) 
+                : parseFloat(result.toFixed(10)).toString();
+            
+            resultElement.textContent = formattedResult;
+            resultElement.style.color = '#ff0000ff';
+            return formattedResult;
+        }
+        return null;
+    }
     
     function validateInput() {
         let isValid = true;
@@ -84,39 +128,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const num2 = parseFloat(number2Input.value);
         const operation = operationSelect.value;
         
-        let result;
+        const result = performCalculation(num1, num2, operation);
+       
+        const formattedResult = showResult(result);
         
-        switch(operation) {
-            case 'add':
-                result = num1 + num2;
-                break;
-            case 'subtract':
-                result = num1 - num2;
-                break;
-            case 'multiply':
-                result = num1 * num2;
-                break;
-            case 'divide':
-                result = num1 / num2;
-                break;
-            default:
-                result = NaN;
-        }
-        
-        if (isNaN(result)) {
-            resultElement.textContent = 'Calculation error';
-            resultElement.style.color = '#e74c3c';
-        } else if (!isFinite(result)) {
-            resultElement.textContent = 'Infinity';
-            resultElement.style.color = '#e74c3c';
-        } else {
-            const formattedResult = Math.abs(result) > 1e10 || (Math.abs(result) < 1e-10 && result !== 0) 
-                ? result.toExponential(5) 
-                : parseFloat(result.toFixed(10)).toString();
-            
-            resultElement.textContent = formattedResult;
-            resultElement.style.color = '#ff0000ff';
-            
+        if (formattedResult !== null) {
             addToHistory(num1, num2, operation, formattedResult);
         }
     }
@@ -133,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     operationSelect.addEventListener('change', function() {
         if (this.value === 'divide' && parseFloat(number2Input.value) === 0) {
-            error2Element.textContent = 'Деление на ноль невозможно';
+            error2Element.textContent = 'Division by zero is impossible';
         } else {
             error2Element.textContent = '';
         }
