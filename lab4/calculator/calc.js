@@ -1,21 +1,100 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Получаем элементы интерфейса с проверкой на существование
-    const num1Input = document.getElementById('num1');
-    const num2Input = document.getElementById('num2');
-    const operationSelect = document.getElementById('operation-select');
-    const calculateButton = document.getElementById('calculate');
-    const resultValue = document.getElementById('result-value');
-    
-    // Проверяем, что все необходимые элементы найдены
-    if (!num1Input || !num2Input || !operationSelect || !calculateButton || !resultValue) {
-        console.error('Один из необходимых элементов калькулятора не найден');
-        alert('Ошибка загрузки калькулятора. Пожалуйста, перезагрузите страницу.');
-        return;
+    // Расширенная проверка элементов интерфейса
+    const elementsToCheck = [
+        { element: 'num1', type: 'input', required: true },
+        { element: 'num2', type: 'input', required: true },
+        { element: 'operation-select', type: 'select', required: true },
+        { element: 'calculate', type: 'button', required: true },
+        { element: 'result-value', type: 'div', required: true }
+    ];
+
+    let validationErrors = [];
+    const foundElements = {};
+
+    // Глубокая проверка каждого элемента
+    elementsToCheck.forEach(item => {
+        const el = document.getElementById(item.element);
+        
+        if (!el) {
+            validationErrors.push(`Элемент с ID "${item.element}" не найден`);
+            return;
+        }
+
+        // Проверка типа элемента
+        if (el.tagName.toLowerCase() !== item.type) {
+            validationErrors.push(`Элемент "${item.element}" должен быть <${item.type}>, а не <${el.tagName.toLowerCase()}>`);
+            return;
+        }
+
+        // Специфические проверки для разных типов элементов
+        switch (item.type) {
+            case 'input':
+                if (el.type !== 'text' && el.type !== 'number') {
+                    validationErrors.push(`Поле ввода "${item.element}" должно быть text или number типа`);
+                }
+                if (!el.hasAttribute('placeholder')) {
+                    console.warn(`Рекомендуется добавить placeholder для "${item.element}"`);
+                }
+                break;
+                
+            case 'select':
+                if (el.options.length === 0) {
+                    validationErrors.push(`Выпадающий список "${item.element}" не содержит опций`);
+                }
+                break;
+                
+            case 'button':
+                if (el.type !== 'button' && el.type !== 'submit') {
+                    validationErrors.push(`Кнопка "${item.element}" должна быть button или submit типа`);
+                }
+                break;
+                
+            case 'div':
+                if (!el.classList.contains('result-container') && !el.classList.contains('result')) {
+                    console.warn(`Контейнер результата "${item.element}" не имеет стилевых классов`);
+                }
+                break;
+        }
+
+        // Проверка видимости элемента
+        const style = window.getComputedStyle(el);
+        if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') {
+            validationErrors.push(`Элемент "${item.element}" скрыт или невидим`);
+        }
+
+        // Проверка доступности
+        if (el.disabled) {
+            validationErrors.push(`Элемент "${item.element}" отключен (disabled)`);
+        }
+
+        foundElements[item.element.replace('-', '')] = el;
+    });
+
+    // Если есть ошибки валидации
+    if (validationErrors.length > 0) {
+        console.error('Ошибки инициализации калькулятора:', validationErrors);
+        
+        const errorMessage = validationErrors.length === 1 
+            ? `Ошибка загрузки калькулятора: ${validationErrors[0]}`
+            : `Ошибка загрузки калькулятора. Обнаружено ${validationErrors.length} проблем:\n${validationErrors.map((err, i) => `${i+1}. ${err}`).join('\n')}`;
+        
+        alert(errorMessage);
+        
+        // Пытаемся восстановить работоспособность, если некоторые элементы есть
+        if (Object.keys(foundElements).length >= 3) {
+            console.warn('Попытка работы с частично доступными элементами');
+        } else {
+            return;
+        }
     }
+
+    // Деструктуризация найденных элементов
+    const { num1: num1Input, num2: num2Input, operationselect: operationSelect, calculate: calculateButton, resultvalue: resultValue } = foundElements;
     
     // Инициализация калькулятора
     initCalculator();
     
+    // Остальной код без изменений...
     // Функция инициализации калькулятора
     function initCalculator() {
         // Создаем элемент для отображения результата
@@ -33,19 +112,25 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Фокус на первом поле при загрузке
         setTimeout(() => {
-            num1Input.focus();
+            if (num1Input && typeof num1Input.focus === 'function') {
+                num1Input.focus();
+            }
         }, 500);
     }
     
     // Функция настройки обработчиков событий
     function setupEventListeners() {
         // Обработчик нажатия на кнопку "Вычислить"
-        calculateButton.addEventListener('click', calculate);
+        if (calculateButton && typeof calculateButton.addEventListener === 'function') {
+            calculateButton.addEventListener('click', calculate);
+        }
         
         // Обработчик нажатия Enter в полях ввода
-        num1Input.addEventListener('keyup', handleEnterKey);
-        num2Input.addEventListener('keyup', handleEnterKey);
-        operationSelect.addEventListener('keyup', handleEnterKey);
+        [num1Input, num2Input, operationSelect].forEach(el => {
+            if (el && typeof el.addEventListener === 'function') {
+                el.addEventListener('keyup', handleEnterKey);
+            }
+        });
     }
     
     // Обработчик нажатия клавиши Enter
