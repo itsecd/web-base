@@ -17,7 +17,7 @@ body {
   margin: 0;
 }
 
-/* ИЗМЕНЕНО: Селектор изменен с .music__element на .music__items__element */
+
 .music__items__element {
   padding: 5px 0;
   color: #333;
@@ -26,7 +26,7 @@ body {
   width: fit-content;
 }
 
-/* ИЗМЕНЕНО: Селектор изменен с .music__element на .music__items__element */
+
 .music__items__element:hover {
   color: #ff6b6b;
 }
@@ -52,9 +52,9 @@ body {
   width: fit-content;
 }
 
-/* ИЗМЕНЕНО: Добавлен селектор для .container__block */
+
 .container__block {
-  margin-bottom: 25px; /* Можно оставить или убрать, если .block уже задает margin-bottom */
+  margin-bottom: 25px; 
 }
 
 .block_first .block__item {
@@ -71,7 +71,7 @@ body {
   border: 1px dashed #ffa500;
 }
 
-/* ИЗМЕНЕНО: Уточнены селекторы для .container__block */
+
 .block_second ~ .container__block.block_third .block__title,
 .block_second ~ .container__block.block_third .block__item {
   color: green;
