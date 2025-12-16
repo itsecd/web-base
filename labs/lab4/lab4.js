@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const num = Number(trimmed);
-
         if (String(num) === "NaN" || !isFinite(num)) {
             throw new Error("Введите корректное число");
         }
@@ -96,15 +95,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function processEnter(ev) {
+        if (ev.key === "Enter") {
+            process();
+        }
+    }
+
     btnCalc.addEventListener("click", process);
 
     [firstInput, secondInput].forEach(function (inp) {
-        inp.addEventListener("keypress", function (ev) {
-            if (ev.key === "Enter") {
-                process();
-            }
-        });
-
+        inp.addEventListener("keypress", processEnter);
         inp.addEventListener("input", clearError);
     });
 });
