@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="calculator">
+        <header class="calculator__header">
+            <h1 class="calculator__title">Калькулятор</h1>
+        </header>
+
+        <main class="calculator__main">
+            <div class="calculator__card">
+                <div class="calculator__inputs">
+                    <div class="calculator__input-group">
+                        <label for="number1" class="calculator__label">Первое число</label>
+                        <input type="number"
+                               id="number1"
+                               class="calculator__input"
+                               placeholder="Введите число"
+                               step="any">
+                        <div class="calculator__error" id="error1"></div>
+                    </div>
+
+                    <div class="calculator__operation">
+                        <label for="operation" class="calculator__label">Операция</label>
+                        <div class="calculator__select-wrapper">
+                            <select id="operation" class="calculator__select">
+                                <option value="add">+</option>
+                                <option value="subtract">-</option>
+                                <option value="multiply">×</option>
+                                <option value="divide">÷</option>
+                            </select>
+                            <span class="calculator__select-icon">▼</span>
+                        </div>
+                    </div>
+
+                    <div class="calculator__input-group">
+                        <label for="number2" class="calculator__label">Второе число</label>
+                        <input type="number"
+                               id="number2"
+                               class="calculator__input"
+                               placeholder="Введите число"
+                               step="any">
+                        <div class="calculator__error" id="error2"></div>
+                    </div>
+                </div>
+
+                <button id="calculate" class="calculator__button">Вычислить</button>
+
+                <div class="calculator__result">
+                    <h3 class="calculator__result-title">Результат</h3>
+                    <div class="calculator__result-value" id="result">
+                        <span class="calculator__placeholder">Введите числа и выберите операцию</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculator__navigation">
+                <a href="resume.html" class="calculator__nav-link">Вернуться к резюме</a>
+            </div>
+        </main>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+﻿body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #EEE2DC;
+    color: #123C69;
+    display: flex;
+    justify-content: center;
+}
+
+.resume {
+    background-color: #EDC7B7;
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px #123C69;
+}
+
+.resume__top-section {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #123C69;
+    padding-bottom: 30px;
+}
+
+.resume__identity-column {
+    flex: 0 0 250px;
+    text-align: center;
+}
+
+.resume__about-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.resume__avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #AC3B69;
+    margin-bottom: 15px;
+}
+
+.resume__title {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    color: #123C69;
+}
+
+.resume__birth-date {
+    color: #123C69;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.resume__github-link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #123C69;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+    .resume__github-link:hover {
+        background-color: #AC3B69;
+    }
+
+.resume__bottom-section {
+    margin-top: 20px;
+}
+
+.resume__section {
+    margin-bottom: 30px;
+}
+.resume__subtitle {
+    color: #AC3B69;
+    border-left: 4px solid #AC3B69;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.resume__text {
+    line-height: 1.5;
+}
+
+.resume__tags {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+    .resume__tags li {
+        background-color: #EEE2DC;
+        color: #123C69;
+        padding: 5px 12px;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+.resume__skills-category {
+    margin-bottom: 10px;
+    font-weight: bold;
+    display: block;
+}
+.resume__projects-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resume__projects-list-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(172, 59, 105, 0.2);
+}
+
+    .resume__projects-list-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+.resume__project-item-title {
+    color: #123C69;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.resume__project-item-description {
+    color: rgba(18, 60, 105, 0.8);
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.resume__project-item-link {
+    color: #AC3B69;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+    .resume__project-item-link:hover {
+        background-color: #AC3B69;
+        color: white;
+    }
