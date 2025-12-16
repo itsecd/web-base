@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab4</title>
+    <link rel="stylesheet" href="lab4.css">
+</head>
+
+<body>
+    <div class="calc">
+
+      <h1 class="calc__title">Калькулятор</h1>
+
+      <div class="calc__inputs">
+
+        <input type="number" placeholder="Введите первое число" class="inputs__num inputs__num--first">
+
+        <select class="inputs__select">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+
+        <input type="number" placeholder="Введите второе число" class="inputs__num inputs__num--second">
+
+      </div>
+      
+      <button class="calc__find" type="button">Вычислить</button>
+
+      <div class="calc__result">Результат:</div>
+
+    </div>
+
+    <script src="lab4.js"></script>
+</body>
+</html>
