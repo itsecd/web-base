@@ -1,23 +1,21 @@
-/* ===== НОВАЯ СВЕТЛАЯ ЦВЕТОВАЯ ПАЛИТРА ===== */
 :root {
-    --primary-color: #f9eaea;          /* Очень светлый бордовый */
-    --primary-light: #fdf5f5;          /* Еще светлее */
-    --primary-lighter: #fffafa;        /* Практически белый */
-    --primary-dark: #f0dada;           /* Немного темнее для контраста */
-    --accent-color: #a82c2e;           /* Акцентный цвет (оставляем яркий бордовый) */
-    --accent-light: #d8a2a3;           /* Светлый акцент */
-    --light-bg: #fefbfb;               /* Фон страницы */
-    --light-border: #e8d6d6;           /* Цвет границ */
-    --text-color: #5a2a2b;             /* Основной текст - темный бордовый */
-    --text-light: #7a4a4b;             /* Светлый текст */
-    --tag-hard: #f5e6e7;               /* Фон hard-скиллов */
-    --tag-hard-text: #701517;          /* Текст hard-скиллов */
-    --tag-soft: #f0e8e8;               /* Фон soft-скиллов */
-    --tag-soft-text: #5a2a2b;          /* Текст soft-скиллов */
-    --shadow-color: rgba(168, 44, 46, 0.1); /* Тени с бордовым оттенком */
+    --primary-color: #f9eaea;          
+    --primary-light: #fdf5f5;          
+    --primary-lighter: #fffafa;        
+    --primary-dark: #f0dada;           
+    --accent-color: #a82c2e;           
+    --accent-light: #d8a2a3;        
+    --light-bg: #fefbfb;              
+    --light-border: #e8d6d6;           
+    --text-color: #5a2a2b;             
+    --text-light: #7a4a4b;          
+    --tag-hard: #f5e6e7;               
+    --tag-hard-text: #701517;          
+    --tag-soft: #f0e8e8;              
+    --tag-soft-text: #5a2a2b;         
+    --shadow-color: rgba(168, 44, 46, 0.1); 
 }
 
-/* ===== СБРОС СТИЛЕЙ И БАЗОВЫЕ НАСТРОЙКИ ===== */
 * {
     margin: 0;
     padding: 0;
@@ -35,7 +33,6 @@ body {
         radial-gradient(circle at 90% 80%, rgba(248, 234, 234, 0.3) 0%, transparent 20%);
 }
 
-/* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
 .resume-container {
     max-width: 1100px;
     margin: 0 auto;
@@ -56,7 +53,6 @@ body {
         0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* ===== ШАПКА (СВЕТЛАЯ ВЕРСИЯ) ===== */
 .header {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     color: var(--text-color);
@@ -69,7 +65,6 @@ body {
     border-bottom: 3px solid var(--accent-light);
 }
 
-/* Декоративные элементы в шапке */
 .header::before {
     content: "";
     position: absolute;
@@ -84,7 +79,6 @@ body {
     pointer-events: none;
 }
 
-/* ===== КОНТЕЙНЕР ДЛЯ АВАТАРКИ ===== */
 .avatar-container {
     width: 200px;
     height: 200px;
@@ -99,7 +93,6 @@ body {
         inset 0 0 20px rgba(168, 44, 46, 0.05);
 }
 
-/* Картинка аватарки */
 .avatar-image {
     width: 100%;
     height: 100%;
@@ -115,7 +108,6 @@ body {
     filter: brightness(1.05) contrast(1.05);
 }
 
-/* Рамка вокруг аватарки */
 .avatar-frame {
     position: absolute;
     top: -10px;
@@ -129,7 +121,6 @@ body {
     animation: pulse 3s infinite alternate;
 }
 
-/* Эффект при наведении на аватарку */
 .avatar-image:hover {
     transform: scale(1.05) rotate(2deg);
     box-shadow: 
@@ -138,7 +129,6 @@ body {
     filter: brightness(1.1) contrast(1.1);
 }
 
-/* ===== ЛИЧНАЯ ИНФОРМАЦИЯ ===== */
 .personal-info h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -157,7 +147,6 @@ body {
     margin-bottom: 5px;
 }
 
-/* ===== ДВУХКОЛОНОЧНАЯ СЕТКА ===== */
 .content {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -165,7 +154,6 @@ body {
     background: linear-gradient(to right, var(--primary-light) 0%, white 30%);
 }
 
-/* Левая колонка */
 .left-column {
     background-color: var(--primary-light);
     padding: 35px;
@@ -173,13 +161,11 @@ body {
     position: relative;
 }
 
-/* Правая колонка */
 .right-column {
     padding: 35px;
     background-color: white;
 }
 
-/* ===== СЕКЦИИ ===== */
 .section {
     margin-bottom: 40px;
     padding: 25px;
@@ -197,7 +183,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Специальные стили для секций в левой колонке */
 .left-column .section {
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
@@ -226,7 +211,6 @@ body {
     justify-content: center;
 }
 
-/* ===== СПИСОК УВЛЕЧЕНИЙ ===== */
 .hobbies-list {
     list-style-type: none;
 }
@@ -261,7 +245,6 @@ body {
     text-align: center;
 }
 
-/* ===== НАВЫКИ ===== */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -313,7 +296,6 @@ body {
     color: var(--tag-soft-text);
 }
 
-/* ===== РАЗДЕЛ "О СЕБЕ" ===== */
 .about-me {
     text-align: justify;
     line-height: 1.8;
@@ -336,8 +318,6 @@ body {
 .about-me p:last-child {
     margin-bottom: 0;
 }
-
-/* ===== ССЫЛКА НА GITHUB ===== */
 .github-link {
     display: inline-flex;
     align-items: center;
@@ -380,7 +360,6 @@ body {
     font-size: 1.3rem;
 }
 
-/* ===== ДАТА РОЖДЕНИЯ ===== */
 .birthday {
     font-size: 1.1rem;
     display: flex;
@@ -401,7 +380,6 @@ body {
     font-size: 1.2rem;
 }
 
-/* ===== ПОДПИСЬ ПРО КОТА ===== */
 .cat-note {
     font-size: 0.9rem;
     margin-top: 10px;
@@ -416,7 +394,6 @@ body {
     border-left: 3px solid var(--accent-light);
 }
 
-/* ===== ПОДВАЛ ===== */
 footer {
     text-align: center;
     margin-top: 40px;
@@ -433,7 +410,6 @@ footer {
     margin-bottom: 5px;
 }
 
-/* ===== АНИМАЦИИ ===== */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -469,7 +445,6 @@ footer {
     animation: fadeInUp 0.6s ease forwards;
 }
 
-/* Эффект перелива для заголовка */
 .personal-info h1 {
     background: linear-gradient(90deg, var(--text-color), var(--accent-color), var(--text-color));
     background-size: 200% auto;
@@ -479,7 +454,7 @@ footer {
     animation: shimmer 3s linear infinite;
 }
 
-/* ===== АДАПТИВНОСТЬ ===== */
+/*АДАПТИВНОСТЬ*/
 
 /* Для планшетов */
 @media (max-width: 900px) {
