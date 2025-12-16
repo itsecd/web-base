@@ -9,6 +9,42 @@ body {
     flex-direction: column;
     box-sizing: border-box;
 }
+.profile__navigation {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed #a1b6f9;
+}
+.nav-list__item {
+  color: #000;
+}
+.navigation__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.navigation__nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.item__link {
+  display: block;
+  padding: 6px 14px;
+  background: #eef;
+  color: #555;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+.navigation__link:hover {
+  background: #a1b6f9;
+  color: white;
+}
 .profile {
     flex: 1;
     border: 2px solid aqua;
@@ -20,7 +56,6 @@ body {
     padding: 20px;
     background-color: whitesmoke;
 }
-
 .profile__photo {
     width: 120px;
     height: 120px;
@@ -29,7 +64,6 @@ body {
     margin: 0 auto 20px;
     border: 3px solid #a1b6f9;
 }
-
 .profile__photo img {
     width: 100%;
     height: 100%;
@@ -116,5 +150,4 @@ body {
 	.profile__hobby {
 				padding: 8px 16px;
 	}
-
 }
