@@ -1,163 +1,96 @@
-/* Общие стили */
-body {
-    font-family: 'Times New Roman', Times, serif, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    background-color: #f5f5f5;
-}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Лабораторная работа 2: Вариант 2</h1>
+    <h2>Выполнил: Тягун Андрей</h2>
 
-h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px;
-}
+    <!-- Анимированный список -->
+    <div class="task">
+        <h2>Задание 1</h2>
+        <ul class="animated-list">
+            <li class="animated-list__item">Поп-музыка</li>
+            <li class="animated-list__item">Хип-хоп</li>
+            <li class="animated-list__item">Рок</li>
+            <li class="animated-list__item">Электронная музыка</li>
+            <li class="animated-list__item">R&B</li>
+        </ul>
+    </div>
 
-h2 {
-    color: #444;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-}
+    <!-- Дети и родители -->
+    <div class="task">
+        <h2>Задание 2</h2>
+        <div class="parents">
+            <div class="parent parent_type_1">
+                Родитель 1
+                <div class="parent__child parent__child_origin_parent-1">Ребенок 1</div>
+                <div class="parent__child parent__child_origin_parent-1">Ребенок 2</div>
+                <div class="parent__child parent__child_origin_parent-1">Ребенок 3</div>
+            </div>
+            
+            <div class="parent parent_type_2">
+                Родитель 2
+                <div class="parent__child parent__child_origin_parent-2">Ребенок 4</div>
+                <div class="parent__child parent__child_origin_parent-2">Ребенок 5</div>
+                <div class="parent__child parent__child_origin_parent-2">Ребенок 6</div>
+            </div>
+            
+            <div class="parent parent_type_3">
+                Родитель 3
+                <div class="parent__child parent__child_origin_parent-3">Ребенок 7</div>
+                <div class="parent__child parent__child_origin_parent-3">Ребенок 8</div>
+                <div class="parent__child parent__child_origin_parent-3">Ребенок 9</div>
+                <div class="parent__child parent__child_origin_parent-3">Ребенок 10</div>
+            </div>
+        </div>
+    </div>
 
-.task {
-    background-color: white;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Задание 1: Анимированный список */
-.animated-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.animated-list li {
-    padding: 15px;
-    margin: 10px 0;
-    background-color: #e3f2fd;
-    border-radius: 5px;
-    border-left: 4px solid #2196f3;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.animated-list li:hover {
-    color: #ff4081;
-    background-color: #fce4ec;
-    border-left-color: #ff4081;
-    transform: translateX(10px);
-}
-
-/* Задание 2: Дети и родители */
-.parents-container {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-}
-
-.parent {
-    flex: 1;
-    padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-}
-
-.child {
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    background-color: #fff;
-}
-
-/* Все дети первого родителя - красные */
-.parent-1 .child {
-    color: red;
-    background-color: #ffebee;
-}
-
-/* Второй родитель оранжевый */
-.parent-2 {
-    color: orange;
-    background-color: #fff3e0 !important;
-}
-
-/* Все дети второго родителя - цвета #b4005a с пунктирными границами */
-.parent-2 .child {
-    color: #b4005a;
-    border: 2px dashed orange;
-    background-color: #fce4ec;
-}
-
-/* Третий родитель и его дети зеленые, но только если идут после вторых */
-.parent-3,
-.parent-3 .child {
-    color: green;
-    background-color: #e8f5e8;
-}
-
-/* Дети, которые идут между первыми и вторыми - стандартный цвет */
-.parent-1 ~ .parent-2 ~ .parent-3 .child {
-    color: inherit;
-    background-color: #fff;
-}
-
-/* Дети второго приходят в гости к третьему - фиолетовые без границ */
-.parent-3 .child.child-4,
-.parent-3 .child.child-5,
-.parent-3 .child.child-6 {
-    color: purple;
-    border: none;
-    background-color: #f3e5f5;
-}
-
-/* Задание 3: Языки программирования */
-.programming-text {
-    line-height: 1.8;
-}
-
-.programming-languages {
-    list-style-type: none;
-    padding: 0;
-}
-
-.programming-languages li {
-    margin-bottom: 15px;
-    padding: 10px;
-    background-color: #f8f9fa;
-    border-radius: 5px;
-    position: relative;
-}
-
-/* Ссылки на языки программирования - жирные */
-.language-link {
-    font-weight: bold;
-    color: #1976d2;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.language-link:hover {
-    color: #ff4081;
-}
-
-/* Псевдоэлемент для ссылок - символ 🌐 */
-.language-link::after {
-    content: " 🌐";
-    font-weight: normal;
-    font-size: 0.9em;
-}
-
-.programming-languages::after {
-  content: "";
-  display: block;
-  width: 200px;
-  height: 60px;
-  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
-  background-size: contain;
-  background-color: black;
-}
-
+    <!-- Текст с языками программирования -->
+    <div class="task">
+        <h2>Задание 3</h2>
+        <div class="programming-text">
+            <p>Языки программирования — это инструменты, с помощью которых разработчики создают программное обеспечение, веб-приложения, игры, алгоритмы и многое другое. Каждый язык имеет свои особенности, синтаксис и сферу применения. Ниже представлены некоторые из наиболее известных языков:</p>
+            
+            <ul class="programming-languages">
+                <li class="programming-languages__item">
+                    <a href="#" class="programming-languages__link">Python</a> – высокоуровневый язык с простым синтаксисом, популярный в Data Science, веб-разработке и автоматизации.
+                </li>
+                <li class="programming-languages__item">
+                    <a href="#" class="programming-languages__link">JavaScript</a> – основной язык для фронтенд-разработки, работает в браузерах и на сервере (Node.js).
+                </li>
+                <li class="programming-languages__item">
+                    <a href="#" class="programming-languages__link">Java</a> – объектно-ориентированный язык, широко используется в корпоративных приложениях и Android-разработке.
+                </li>
+                <li class="programming-languages__item">
+                    <a href="#" class="programming-languages__link">C++</a> – мощный язык для системного программирования, игр и высокопроизводительных приложений.
+                </li>
+                <li class="programming-languages__item">
+                    <a href="#" class="programming-languages__link">C#</a> – язык от Microsoft, применяется в разработке под Windows, играх (Unity) и веб-приложениях.
+                </li>
+                <li class="programming-languages__item">
+                    <a href="#" class="programming-languages__link">Go (Golang)</a> – созданный Google, язык для высоконагруженных сетевых сервисов и облачных технологий.
+                </li>
+                <li class="programming-languages__item">
+                    <a href="#" class="programming-languages__link">Ruby</a> – известен благодаря фреймворку Ruby on Rails для веб-разработки.
+                </li>
+                <li class="programming-languages__item">
+                    <a href="#" class="programming-languages__link">Swift</a> – язык Apple для разработки под iOS и macOS.
+                </li>
+                <li class="programming-languages__item">
+                    <a href="#" class="programming-languages__link">Kotlin</a> – современный язык, официально поддерживаемый для Android-разработки.
+                </li>
+                <li class="programming-languages__item">
+                    <a href="#" class="programming-languages__link">Rust</a> – язык системного программирования с акцентом на безопасность и производительность.
+                </li>
+            </ul>
+            
+            <p>Это лишь малая часть из множества существующих языков, и выбор зависит от задач, которые нужно решить.</p>
+        </div>
+    </div>
+</body>
+</html>
