@@ -8,38 +8,22 @@
 <body class="page">
   <div class="calculator">
     <h2 class="calculator__title">Простой калькулятор</h2>
-    
-    <input 
-      type="number" 
-      class="calculator__input calculator__input--first" 
-      id="num1" 
-      placeholder="Первое число" 
-      step="any" 
-    />
-    
-    <select class="calculator__operation" id="operation">
-      <option value="add">+</option>
-      <option value="subtract">−</option>
-      <option value="multiply">×</option>
-      <option value="divide">÷</option>
-    </select>
-    
-    <input 
-      type="number" 
-      class="calculator__input calculator__input--second" 
-      id="num2" 
-      placeholder="Второе число" 
-      step="any" 
-    />
-
+    <div class="calculator__input-row">
+      <input type="number" class="input-row__input" id="num1" placeholder="Число" step="any" />
+      <select class="input-row__operation" id="operation">
+        <option value="add">+</option>
+        <option value="subtract">−</option>
+        <option value="multiply">×</option>
+        <option value="divide">÷</option>
+      </select>
+      <input type="number" class="input-row__input" id="num2" placeholder="Число" step="any" />
+    </div>
     <button class="calculator__button" id="calculate">Вычислить</button>
-
     <div class="calculator__result-container">
-      <label class="calculator__result-label">Результат:</label>
-      <output class="calculator__result" id="result"></output>
+      <label class="result-container__result-label">Результат:</label>
+      <output class="result-container__result" id="result"></output>
     </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
