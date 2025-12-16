@@ -52,7 +52,6 @@ function solve() {
     document.getElementById("result").value = "Результат: " + Math.round(result * 100000) / 100000
 }
 function click() {
-    console.log("skdjfnlkn")
     const button = document.getElementById("calc")
     button.addEventListener('click', solve)
 }
