@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body class="page">
+    <div class="calculator">
+        <header class="calculator__header">
+            <h1 class="calculator__title">Калькулятор</h1>
+        </header>
+        
+        <div class="calculator__body">
+            <div class="calculator__input-group">
+                <label for="num1" class="calculator__label">Первое число:</label>
+                <input type="number" id="num1" class="calculator__input" step="any" placeholder="Введите число">
+            </div>
+            
+            <div class="calculator__input-group">
+                <label for="operation" class="calculator__label">Операция:</label>
+                <select id="operation" class="calculator__select">
+                    <option value="+">Сложение (+)</option>
+                    <option value="-">Вычитание (-)</option>
+                    <option value="*">Умножение (×)</option>
+                    <option value="/">Деление (÷)</option>
+                </select>
+            </div>
+            
+            <div class="calculator__input-group">
+                <label for="num2" class="calculator__label">Второе число:</label>
+                <input type="number" id="num2" class="calculator__input" step="any" placeholder="Введите число">
+            </div>
+            
+            <button id="calculate" class="calculator__button">Вычислить</button>
+            
+            <div class="calculator__error" id="errorMessage">
+                Ошибка: Неправильный ввод или деление на ноль!
+            </div>
+            
+            <div class="calculator__result">
+                <h3 class="calculator__result-title">Результат:</h3>
+                <div id="resultValue" class="calculator__result-value">-</div>
+            </div>
+        </div>
+        
+        <div class="calculator__footer">
+            <a href="index.html" class="calculator__back-link">← Вернуться в портфолио</a>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
