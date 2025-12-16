@@ -283,6 +283,9 @@ body {
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s, transform 0.2s;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
 }
 
 .project-card__link:hover {

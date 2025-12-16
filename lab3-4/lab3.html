@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио студента</title>
-    <link rel="stylesheet" href="lab4.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="lab3.css">
 </head>
 <body>
     <div class="container">
@@ -125,11 +124,12 @@
                         </div>
                         <div class="project-card__content">
                             <h3 class="project-card__title">Лабораторная работа 1</h3>
-                            <p class="project-card__description">Первая лабораторная работа по веб-разработке. Создание текста и лабиринта :]</p>
-                            <a href="C:\web-base\web-base\lab1\\lab1.html" class="project-card__link" target="_blank">
+                            <p class="project-card__description">Первая лабораторная работа по веб-разработке.</p>
+                            <!-- Используем onclick вместо href -->
+                            <button onclick="window.location.href='../lab1/lab1.html'" class="project-card__link">
                                 Открыть проект
                                 <i class="fas fa-external-link-alt"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                     
@@ -139,11 +139,11 @@
                         </div>
                         <div class="project-card__content">
                             <h3 class="project-card__title">Лабораторная работа 2</h3>
-                            <p class="project-card__description">Вторая лабораторная работа по веб-разработке. Создал семьи из Свинки Пеппы.</p>
-                            <a href="C:\web-base\web-base\lab2\\lab2.html" class="project-card__link" target="_blank">
+                            <p class="project-card__description">Вторая лабораторная работа.</p>
+                            <button onclick="window.location.href='../lab2/lab2.html'" class="project-card__link">
                                 Открыть проект
                                 <i class="fas fa-external-link-alt"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                     
@@ -153,25 +153,11 @@
                         </div>
                         <div class="project-card__content">
                             <h3 class="project-card__title">Интерактивный калькулятор</h3>
-                            <p class="project-card__description">Калькулятор. А что ещё добавлять?</p>
-                            <a href="C:\web-base\web-base\calculate\\calc.html" class="project-card__link" target="_blank">
+                            <p class="project-card__description">Калькулятор.</p>
+                            <button onclick="window.location.href='../calculate/calc.html'" class="project-card__link">
                                 Использовать калькулятор
                                 <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-card__icon">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Онлайн-резюме</h3>
-                            <p class="project-card__description">Текущий проект - супер резюме с топовой фоткой</p>
-                            <a href="q.html" class="project-card__link project-card__link--current">
-                                Текущая страница
-                                <i class="fas fa-check"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>

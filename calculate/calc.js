@@ -60,18 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
         return isValid;
     }
     
-    // Функция для выполнения вычисления
-    function calculate() {
-        if (!validateInputs()) {
-            resultValue.textContent = 'Ошибка!';
-            resultValue.style.color = '#ff4757';
-            return;
-        }
-        
-        const a = parseFloat(firstNumberInput.value);
-        const b = parseFloat(secondNumberInput.value);
-        const operation = operationSelect.value;
-        
+    // Функция для выполнения операции (ИСПРАВЛЕНА)
+    function choose(a, b, operation) {
         let result;
         
         // Выполняем выбранную операцию
@@ -91,6 +81,23 @@ document.addEventListener('DOMContentLoaded', function() {
             default:
                 result = 'Ошибка операции';
         }
+        return result;
+    }
+
+    // Функция для выполнения вычисления
+    function calculate() {
+        if (!validateInputs()) {
+            resultValue.textContent = 'Ошибка!';
+            resultValue.style.color = '#ff4757';
+            return;
+        }
+        
+        const a = parseFloat(firstNumberInput.value);
+        const b = parseFloat(secondNumberInput.value);
+        const operation = operationSelect.value;
+        
+        // Передаем a и b в функцию choose (ИСПРАВЛЕНО)
+        const result = choose(a, b, operation);
         
         // Форматируем результат
         if (typeof result === 'number') {
