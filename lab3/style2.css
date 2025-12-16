@@ -1,0 +1,109 @@
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 40px;
+    color: aquamarine;
+    background-color: black;
+}
+a, input, textarea, select, button{
+    color:aquamarine;
+}
+.task-header{
+    text-align: left;
+    margin: 10px auto;
+}
+.streaming-services{
+    padding:10px 0;
+}
+.streaming-services__item{
+    margin:3px 10px;
+    transform: color ease 0,3s;
+}
+.streaming-services__item:hover{
+    color: aqua;
+}
+.family{
+    margin: 10px auto;
+}
+.family__parent-1{
+    margin: 10px auto;
+}
+.parent-1__child{
+    display: inline-block;
+    border: 2px dashed transparent;
+    padding:2px;
+    margin: 5px auto;
+    color: red;
+}
+.family__parent-2 {
+    margin: 10px auto;
+    color: orange;
+}
+.parent-2__child{
+    display: inline-block;
+    border: 2px dashed transparent;
+    padding:2px;
+    margin: 5px auto;
+}
+.family__parent-2 .parent-2__child{
+    color:#b4005a;
+    border-color: orange;
+}
+.family__parent-3{
+    margin: 10px auto;
+}
+.parent-3__child{
+    display: inline-block;
+    border: 2px dashed transparent;
+    padding:2px;
+    margin: 5px auto;
+}
+.family__parent-2 ~ .family__parent-3,
+.family__parent-2 ~ .family__parent-3 .parent-3__child{
+    color: greenyellow;
+}
+.family__parent-3 .parent-2__child{
+    display: inline-block;
+    border: 2px dashed transparent;
+    padding:2px;
+    margin: 5px auto;
+    color: blueviolet;
+}
+.task-3{
+    border: 2px dashed aquamarine;
+    padding: 10px;
+    margin: 10px auto;
+}
+.task-3__text{
+    font-size: 16px;
+    line-height: 1.6;
+}
+.task-3__list{
+    list-style-type: none;
+    margin: 25px 0;
+}
+.task-3__list::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-image: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20px auto;
+}
+.list__list-item{
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 4px;
+}
+.list-item__description{
+    font-size: 16px;
+    line-height: 1.6;
+}
+.description__link{
+    font-weight: bold;
+    text-decoration: none;
+}
+.description__link::before{
+    content:"🔗";
+}
