@@ -4,6 +4,11 @@ document.getElementById('calculate').addEventListener('click', () => {
   const operation = document.getElementById('operation').value;
   const resultOutput = document.getElementById('result');
 
+  if (!num1Input || !num2Input || !operationSelect || !resultOutput) {
+    console.error('Ошибка: один или несколько элементов калькулятора отсутствуют в HTML.');
+    return;
+  }
+  
   const num1 = parseFloat(num1Input.value);
   const num2 = parseFloat(num2Input.value);
 
@@ -42,4 +47,5 @@ document.getElementById('calculate').addEventListener('click', () => {
   }
 
   resultOutput.textContent = result;
+
 });
