@@ -51,6 +51,103 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     }
     
+    // Функция для выполнения вычисления операции
+    function performCalculation(num1, num2, operation) {
+        let result;
+        let operationSymbol;
+        let description;
+        
+        switch(operation) {
+            case 'add':
+                result = num1 + num2;
+                operationSymbol = '+';
+                description = 'Сложение';
+                break;
+                
+            case 'subtract':
+                result = num1 - num2;
+                operationSymbol = '-';
+                description = 'Вычитание';
+                break;
+                
+            case 'multiply':
+                result = num1 * num2;
+                operationSymbol = '×';
+                description = 'Умножение';
+                break;
+                
+            case 'divide':
+                // Проверка деления на ноль
+                if (num2 === 0) {
+                    throw new Error('Деление на ноль невозможно');
+                }
+                result = num1 / num2;
+                operationSymbol = '÷';
+                description = 'Деление';
+                break;
+                
+            case 'power':
+                result = Math.pow(num1, num2);
+                operationSymbol = '^';
+                description = 'Возведение в степень';
+                break;
+                
+            case 'remainder':
+                // Проверка деления на ноль для остатка
+                if (num2 === 0) {
+                    throw new Error('Деление на ноль невозможно');
+                }
+                result = num1 % num2;
+                operationSymbol = '%';
+                description = 'Остаток от деления';
+                break;
+                
+            default:
+                throw new Error('Неизвестная операция');
+        }
+        
+        return {
+            result,
+            operationSymbol,
+            description
+        };
+    }
+    
+    // Функция для отображения результата
+    function showResult(result, description, isSuccess = true) {
+        if (isSuccess) {
+            // Проверка на бесконечность
+            if (!isFinite(result)) {
+                throw new Error('Результат слишком большой или бесконечный');
+            }
+            
+            // Форматируем результат
+            let formattedResult;
+            if (Number.isInteger(result)) {
+                formattedResult = result.toString();
+            } else {
+                // Ограничиваем количество знаков после запятой
+                formattedResult = parseFloat(result.toFixed(10)).toString();
+            }
+            
+            // Отображаем результат
+            resultDisplay.textContent = formattedResult;
+            resultDisplay.classList.add('result-pulse');
+            
+            // Устанавливаем статус
+            resultStatus.textContent = `${description} выполнено успешно`;
+            resultStatus.style.color = '#28a745';
+            
+            return formattedResult;
+        } else {
+            // Отображение ошибки
+            resultDisplay.textContent = 'Ошибка';
+            resultStatus.textContent = `Ошибка: ${result}`;
+            resultStatus.style.color = '#dc3545';
+            return null;
+        }
+    }
+    
     // Функция для выполнения вычисления
     function calculate() {
         // Сбрасываем стили ошибок
@@ -86,91 +183,19 @@ document.addEventListener('DOMContentLoaded', function() {
         const num2 = validation2.value || 0;
         const operation = operationSelect.value;
         
-        let result;
-        let operationSymbol;
-        let description;
-        
-        // Выполняем операцию в зависимости от выбора
         try {
-            switch(operation) {
-                case 'add':
-                    result = num1 + num2;
-                    operationSymbol = '+';
-                    description = 'Сложение';
-                    break;
-                    
-                case 'subtract':
-                    result = num1 - num2;
-                    operationSymbol = '-';
-                    description = 'Вычитание';
-                    break;
-                    
-                case 'multiply':
-                    result = num1 * num2;
-                    operationSymbol = '×';
-                    description = 'Умножение';
-                    break;
-                    
-                case 'divide':
-                    // Проверка деления на ноль
-                    if (num2 === 0) {
-                        throw new Error('Деление на ноль невозможно');
-                    }
-                    result = num1 / num2;
-                    operationSymbol = '÷';
-                    description = 'Деление';
-                    break;
-                    
-                case 'power':
-                    result = Math.pow(num1, num2);
-                    operationSymbol = '^';
-                    description = 'Возведение в степень';
-                    break;
-                    
-                case 'remainder':
-                    // Проверка деления на ноль для остатка
-                    if (num2 === 0) {
-                        throw new Error('Деление на ноль невозможно');
-                    }
-                    result = num1 % num2;
-                    operationSymbol = '%';
-                    description = 'Остаток от деления';
-                    break;
-                    
-                default:
-                    result = 0;
-            }
+            // Используем новую функцию для выполнения вычисления
+            const calculation = performCalculation(num1, num2, operation);
             
-            // Проверка на бесконечность
-            if (!isFinite(result)) {
-                throw new Error('Результат слишком большой или бесконечный');
-            }
-            
-            // Форматируем результат
-            let formattedResult;
-            if (Number.isInteger(result)) {
-                formattedResult = result.toString();
-            } else {
-                // Ограничиваем количество знаков после запятой
-                formattedResult = parseFloat(result.toFixed(10)).toString();
-            }
-            
-            // Отображаем результат
-            resultDisplay.textContent = formattedResult;
-            resultDisplay.classList.add('result-pulse');
-            
-            // Устанавливаем статус
-            resultStatus.textContent = `${description} выполнено успешно`;
-            resultStatus.style.color = '#28a745';
+            // Используем функцию для отображения результата
+            const formattedResult = showResult(calculation.result, calculation.description, true);
             
             // Добавляем операцию в историю
-            addToHistory(num1, num2, operationSymbol, formattedResult, description);
+            addToHistory(num1, num2, calculation.operationSymbol, formattedResult, calculation.description);
             
         } catch (error) {
             // Обработка ошибок вычисления
-            resultDisplay.textContent = 'Ошибка';
-            resultStatus.textContent = `Ошибка: ${error.message}`;
-            resultStatus.style.color = '#dc3545';
+            showResult(error.message, '', false);
         }
         
         // Удаляем класс анимации через время
