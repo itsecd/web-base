@@ -66,3 +66,12 @@ body {
     color: #3be821;
 }
 
+.item__link{
+    color: black;
+    text-decoration: none;
+    transition: color 1s;
+}
+
+.item__link:hover{
+    color: rgb(246, 114, 13);
+}
