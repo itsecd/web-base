@@ -24,11 +24,16 @@ if (calcButton) {
         const inputA = document.querySelector('.calculator__input-first');
         const inputB = document.querySelector('.calculator__input-second');
 
+        if (!inputA || !inputB) {
+            output.textContent = "Поля ввода не найдены, увы(";
+            return;
+        }
+        
         const a = parseFloat(inputA?.value);
         const b = parseFloat(inputB?.value);
 
         const output = document.querySelector('.calculator__output');
-
+        
         if (selectedOperation === '/' && b === 0) {
             output.textContent = "Деление на ноль(";
             output.classList.add("error");
@@ -50,4 +55,5 @@ if (calcButton) {
     });
 } else {
     console.error('Кнопка не найдена, увынск(');
+
 }
