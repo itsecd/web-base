@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<title>lab 2</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+
+  ul.games {
+    list-style: disc inside;
+    max-width: 400px;
+    margin: 30px auto 40px;
+    padding-left: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  ul.games li {
+    color: black;
+    transition: color 0.4s ease;
+    cursor: pointer;
+    padding: 5px 0;
+  }
+
+  ul.games li:hover {
+    color: #1962b3;
+  }
+
+  ul.languages {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul.languages li a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  ul.languages li a::after {
+    content: " 🌐";
+    font-size: 0.9em;
+  }
+
+  ul.languages li a:hover {
+    color: #1962b3;
+  }
+
+  ul.languages::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 50px;
+    margin-top: 20px;
+    background-image: url('https://ssau.ru/i/logo/logo-white-ru.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(1);
+  }
+</style>
+</head>
+<body>
+
+<ul class="games">
+  <li>Minecraft</li>
+  <li>Fortnite</li>
+  <li>GTA V</li>
+  <li>Call of Duty</li>
+  <li>Among Us</li>
+</ul>
+
+<p>Языки программирования — это инструменты, с помощью которых разработчики создают программное обеспечение, веб-приложения, игры, алгоритмы и многое другое. Каждый язык имеет свои особенности, синтаксис и сферу применения.</p>
+
+<ul class="languages">
+  <li><a href="#">Python</a> – высокоуровневый язык с простым синтаксисом, популярный в Data Science, веб-разработке и автоматизации.</li>
+  <li><a href="#">JavaScript</a> – основной язык для фронтенд-разработки, работает в браузерах и на сервере (Node.js).</li>
+  <li><a href="#">Java</a> – объектно-ориентированный язык, широко используется в корпоративных приложениях и Android-разработке.</li>
+  <li><a href="#">C++</a> – мощный язык для системного программирования, игр и высокопроизводительных приложений.</li>
+  <li><a href="#">C#</a> – язык от Microsoft, применяется в разработке под Windows, играх (Unity) и веб-приложениях.</li>
+  <li><a href="#">Go (Golang)</a> – созданный Google, язык для высоконагруженных сетевых сервисов и облачных технологий.</li>
+  <li><a href="#">Ruby</a> – известен благодаря фреймворку Ruby on Rails для веб-разработки.</li>
+  <li><a href="#">Swift</a> – язык Apple для разработки под iOS и macOS.</li>
+  <li><a href="#">Kotlin</a> – современный язык, официально поддерживаемый для Android-разработки.</li>
+  <li><a href="#">Rust</a> – язык системного программирования с акцентом на безопасность и производительность.</li>
+</ul>
+
+</body>
+</html>
