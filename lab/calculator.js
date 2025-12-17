@@ -1,27 +1,53 @@
 function calculate() {
-    let num1 = Number(document.getElementById("num1").value);
-    let num2 = Number(document.getElementById("num2").value);
-    let operation = document.getElementById("operation").value;
-    let result;
+  const num1El = document.getElementById("num1");
+  const num2El = document.getElementById("num2");
+  const operationEl = document.getElementById("operation");
+  const resultEl = document.getElementById("result");
+  const errorEl = document.getElementById("error");
 
-    if (isNaN(num1) || isNaN(num2)) {
-        document.getElementById("result").innerText = "Ошибка: введите числа";
+  if (!num1El || !num2El || !operationEl || !resultEl || !errorEl) {
+    return;
+  }
+
+  errorEl.textContent = "";
+  resultEl.textContent = "Результат:";
+
+  if (num1El.value === "" || num2El.value === "") {
+    errorEl.textContent = "Ошибка: заполните оба поля";
+    return;
+  }
+
+  const num1 = Number(num1El.value);
+  const num2 = Number(num2El.value);
+  const operation = operationEl.value;
+
+  let result;
+
+  switch (operation) {
+    case "+":
+      result = num1 + num2;
+      break;
+
+    case "-":
+      result = num1 - num2;
+      break;
+
+    case "*":
+      result = num1 * num2;
+      break;
+
+    case "/":
+      if (num2 === 0) {
+        errorEl.textContent = "Ошибка: деление на ноль";
         return;
-    }
+      }
+      result = num1 / num2;
+      break;
 
-    if (operation === "+") {
-        result = num1 + num2;
-    } else if (operation === "-") {
-        result = num1 - num2;
-    } else if (operation === "*") {
-        result = num1 * num2;
-    } else if (operation === "/") {
-        if (num2 === 0) {
-            document.getElementById("result").innerText = "Ошибка: деление на ноль";
-            return;
-        }
-        result = num1 / num2;
-    }
+    default:
+      errorEl.textContent = "Неизвестная операция";
+      return;
+  }
 
-    document.getElementById("result").innerText = "Результат: " + result;
+  resultEl.textContent = "Результат: " + result;
 }
