@@ -154,6 +154,29 @@ body {
     color: var(--text-light);
     margin-bottom: 5px;
 }
+.header__birthday {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 3;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.header__birthday-icon {
+    margin-right: 12px;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+.header__birthday-text {
+    color: var(--text-color);
+}
 
 .content {
     display: grid;
@@ -221,6 +244,15 @@ body {
     justify-content: center;
 }
 
+.section__text {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.section__text:last-child {
+    margin-bottom: 0;
+}
+
 .list {
     list-style-type: none;
 }
@@ -254,16 +286,12 @@ body {
     font-size: 1.2rem;
     text-align: center;
 }
-
-.skills {
+.tags-list {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
 }
-
-.skills__tag {
-    background: linear-gradient(135deg, var(--tag-hard) 0%, var(--primary-color) 100%);
-    color: var(--tag-hard-text);
+.tag {
     padding: 10px 18px;
     border-radius: 25px;
     font-size: 0.9rem;
@@ -275,7 +303,7 @@ body {
     overflow: hidden;
 }
 
-.skills__tag::before {
+.tag::before {
     content: '';
     position: absolute;
     top: 0;
@@ -286,22 +314,20 @@ body {
     transition: left 0.5s;
 }
 
-.skills__tag:hover {
+.tag:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(168, 44, 46, 0.15);
     border-color: var(--accent-color);
 }
 
-.skills__tag:hover::before {
+.tag:hover::before {
     left: 100%;
 }
-
-.skills__tag_hard {
+.tag_type_hard {
     background: linear-gradient(135deg, var(--tag-hard) 0%, #f5e6e7 100%);
     color: var(--tag-hard-text);
 }
-
-.skills__tag_soft {
+.tag_type_soft {
     background: linear-gradient(135deg, var(--tag-soft) 0%, #f0e8e8 100%);
     color: var(--tag-soft-text);
 }
@@ -373,28 +399,7 @@ body {
     margin-right: 12px;
     font-size: 1.3rem;
 }
-
-.birthday {
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 3;
-    padding: 10px 15px;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 8px;
-    border-left: 4px solid var(--accent-color);
-}
-
-.birthday__icon {
-    margin-right: 12px;
-    color: var(--accent-color);
-    font-size: 1.2rem;
-}
-
-.note {
+.text-note {
     font-size: 0.9rem;
     margin-top: 10px;
     color: var(--accent-color);
@@ -423,17 +428,30 @@ body {
     color: var(--text-light);
     margin-bottom: 5px;
 }
-
-.contact {
+.contact-item {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+    padding: 10px;
+    background: var(--primary-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
-.contact__icon {
-    color: var(--primary-light);
-    margin-right: 10px;
-    width: 20px;
+.contact-item:hover {
+    background: var(--primary-dark);
+    transform: translateX(5px);
+}
+.contact-item__icon {
+    color: var(--accent-color);
+    margin-right: 12px;
+    width: 24px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.contact-item__text {
+    color: var(--text-color);
 }
 
 @keyframes fadeInUp {
@@ -519,12 +537,10 @@ body {
         padding: 15px;
         margin-bottom: 25px;
     }
-    
-    .skills {
+    .tags-list {
         gap: 8px;
     }
-    
-    .skills__tag {
+    .tag {
         padding: 8px 14px;
         font-size: 0.85rem;
     }

@@ -34,7 +34,7 @@ function animateSections() {
 }
 
 function initSkillTags() {
-    const skillTags = document.querySelectorAll('.skills__tag');
+    const skillTags = document.querySelectorAll('.tag');
     
     skillTags.forEach(tag => {
         tag.addEventListener('mouseenter', function() {
@@ -133,7 +133,7 @@ function init() {
     
     updateFooterDates();
     animateSections();
-    initSkillTags();
+    initSkillTags(); 
     initGitHubLink();
     initAvatar();
     initHobbyItems();
