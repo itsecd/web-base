@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2, h3, h4 {
+  font-size: 24px;    
+  font-weight: bold;  
+  margin-bottom: 10px;
+}
+
+.task {
+  margin-bottom: 40px;
+}
+
+.shiny {
+    transition: color 1.5s ease;
+}
+.shiny:hover {
+  color: #00ff59;             
+}
+
+a{
+    color: inherit;          
+    text-decoration: none;
+}
+
+a::after{
+    content: " 🌐";
+}
+
+/* Задание 2 - Родители и дети */
+.parents-and-kids {
+  margin: 20px 0;
+}
+
+.parent {
+  margin: 15px 0;
+  padding: 10px;
+}
+
+.parent__child {
+  margin: 5px 0;
+  padding: 5px;
+}
+
+/* Родитель 1 */
+.parent_1 {
+  color: inherit;
+}
+
+.parent__child_origin_parent-1 {
+  color: red;
+}
+
+/* Родитель 2 */
+.parent_2 {
+  color: orange;
+}
+
+.parent__child_origin_parent-2 {
+  color: #b4005a;
+  border: 2px dotted orange;
+  display: block;
+  width: fit-content;
+  margin: 4px 0;
+  padding: 2px 6px;
+}
+
+/* Родитель 3 после второго родителя */
+.parent_3--after-second {
+  color: green;
+}
+
+.parent_3--after-second .parent__child_origin_parent-3 {
+  color: green;
+}
+
+/* Убираем рамку у child 2 в parent 3 */
+.parent_3 .parent__child_origin_parent-2 {
+  border: none;
+  color: purple;
+}
+
+/* Родитель 3 после первого родителя */
+.parent_1 + .parent_3:not(.parent_3--after-second) {
+  color: black;
+}
+
+.parent_1 + .parent_3:not(.parent_3--after-second) .parent__child_origin_parent-3 {
+  color: black;
+}
+
+/* Задание 3 - Список языков */
+.languages-list {
+  padding-right: 0; 
+}
+
+.text p:last-child::after {
+  content: "";
+  display: block;
+  width: 400px; 
+  height: 200px; 
+  margin: 30px auto; 
+  background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: #0056b3;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px; 
+}
