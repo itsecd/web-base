@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визитка - Тягун Андрей</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .projects-section {
+            background: linear-gradient(135deg, #8a0017 0%, #6a0015 100%);
+            padding: 30px;
+            border-radius: 14px;
+            margin-top: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(182, 174, 127, 0.15);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .project-card {
+            background-color: rgba(90, 0, 15, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(182, 174, 127, 0.2);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            background-color: rgba(106, 0, 21, 0.9);
+        }
+        
+        .project-card h3 {
+            margin-top: 0;
+            color: #b6ae7f;
+            border-bottom: 2px solid rgba(182, 174, 127, 0.3);
+            padding-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .project-card p {
+            color: #d4cc9f;
+            line-height: 1.5;
+            flex-grow: 1;
+            margin: 0 0 15px 0;
+            padding: 0;
+            font-size: 1rem;
+        }
+        
+        .project-link {
+            display: inline-block;
+            margin-top: auto;
+            padding: 10px 15px;
+            background: linear-gradient(135deg, #5a000f 0%, #6a0015 100%);
+            color: #b6ae7f;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: 1px solid rgba(182, 174, 127, 0.15);
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        .project-link:hover {
+            background: linear-gradient(135deg, #6a0015 0%, #7a001b 100%);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+            color: #d4cc9f;
+        }
+        
+        .calculator-card {
+            border-left: 5px solid rgba(0, 150, 255, 0.7);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
+        
+        .skills-section {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .skills-section ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        .skills-section li {
+            padding: 8px 0;
+            border-bottom: 1px dashed rgba(182, 174, 127, 0.3);
+            position: relative;
+        }
+        
+        .skills-section li:before {
+            content: "✓";
+            color: #b6ae7f;
+            font-weight: bold;
+            position: absolute;
+            left: -20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block header-block">
+            <h1>Визитка</h1>
+            <p>Данная визитка создана студентом Самарского Университета гр. 6211-100503D</p>
+        </div>
+        
+        <div class="block">
+            <h2>Вводная информация:</h2>
+            <div class="content">
+                <img src="mypic.jpg" alt="Мое фото" class="profile-img">
+                <div class="profile-info">
+                    <p><strong>Тягун Андрей Романович</strong></p>
+                    <p>Дата рождения: 30.07.2006</p>
+                    <p>Любимые увлечения: автомобили, программирование</p>
+                    <p>Ссылка на github:</p>
+                    <a href="https://github.com/HLLDRGN" class="button">github</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="block">
+            <h2>О себе</h2>
+            <p>Меня зовут Андрей, я являюсь студентом группы 6211 прекрасного направления ИБАС. В данной лабораторной работе я реализовал большую часть навыков, полученных в результате изучения предмета "Web".</p>
+        </div>
+        
+        <div class="block">
+            <h2>Скиллы</h2>
+            <div class="skills-container">
+                <div class="skills-section">
+                    <h3>Hard-скиллы</h3>
+                    <ul>
+                        <li>C++ - Junior</li>
+                        <li>Python - Junior</li>
+                        <li>Web - Junior</li>
+                        <li>C - Junior</li>
+                    </ul>
+                </div>
+                <div class="skills-section">
+                    <h3>Soft-скиллы</h3>
+                    <ul>
+                        <li>Коммуникативность</li>
+                        <li>Умение работать в команде</li>
+                        <li>Умение исправлять ошибки</li>
+                        <li>Адекватная реакция на критику</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Новый раздел "Мои проекты" -->
+        <div class="block projects-section">
+            <h2>Мои проекты</h2>
+            <p>Ниже представлены ссылки на лабораторные работы, выполненные в рамках курса "Web":</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Лабораторная работа 1</h3>
+                    <p>HTML и CSS: форматирование текста, наложение изображений, создание светофора и лабиринта.</p>
+                    <a href="./lab1/laba1.html" class="project-link">Перейти к проекту →</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Лабораторная работа 2</h3>
+                    <p>CSS анимации, работа с позиционированием, стилизация текста и списков.</p>
+                    <a href="laba2.html" class="project-link">Перейти к проекту →</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Лабораторная работа 3</h3>
+                    <p>Создание визитки с использованием HTML и CSS (текущая страница).</p>
+                    <a href="main.html" class="project-link">Перейти к проекту →</a>
+                </div>
+                
+                <div class="project-card calculator-card">
+                    <h3>Лабораторная работа 4</h3>
+                    <p>JavaScript калькулятор с обработкой ошибок и красивым интерфейсом.</p>
+                    <a href="./lab4/calculator.html" class="project-link">Открыть калькулятор →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

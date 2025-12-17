@@ -1,0 +1,186 @@
+/* Общие стили */
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #444;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.task {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Задание 1: Анимированный список */
+.animated-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.animated-list__item {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+    border-left: 4px solid #2196f3;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.animated-list__item:hover {
+    color: #ff4081;
+    background-color: #fce4ec;
+    border-left-color: #ff4081;
+    transform: translateX(10px);
+}
+
+/* Задание 2: Дети и родители */
+.parents {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.parent {
+    flex: 1;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.parent__child {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+/* Все дети первого родителя - красные */
+.parent__child_origin_parent-1 {
+    color: red;
+    background-color: #ffebee;
+}
+
+/* Второй родитель оранжевый */
+.parent_type_2 {
+    color: orange;
+    background-color: #fff3e0 !important;
+}
+
+/* Все дети второго родителя - цвета #b4005a с пунктирными границами */
+.parent__child_origin_parent-2 {
+    color: #b4005a;
+    border: 2px dashed orange;
+    background-color: #fce4ec;
+}
+
+/* Третий родитель и его дети зеленые */
+.parent_type_3,
+.parent__child_origin_parent-3 {
+    color: green;
+    background-color: #e8f5e8;
+}
+
+/* Дети третьего родителя, которые идут после вторых - стандартный цвет */
+.parent_type_2 ~ .parent_type_3 .parent__child_origin_parent-3 {
+    color: inherit;
+    background-color: #fff;
+}
+
+/* Дети второго приходят в гости к третьему - фиолетовые без границ */
+.parent_type_3 .parent__child_origin_parent-2 {
+    color: purple;
+    border: none;
+    background-color: #f3e5f5;
+}
+
+/* Задание 3: Языки программирования */
+.programming-text {
+    line-height: 1.8;
+}
+
+.programming-languages {
+    list-style-type: none;
+    padding: 0;
+}
+
+.programming-languages__item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Ссылки на языки программирования - жирные */
+.programming-languages__link {
+    font-weight: bold;
+    color: #1976d2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.programming-languages__link:hover {
+    color: #ff4081;
+}
+
+/* Псевдоэлемент для ссылок - символ 🌐 */
+.programming-languages__link::after {
+    content: " 🌐";
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.programming-languages::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 60px;
+    background-image: url("https://ssau.ru/i/logo/logo-white-ru.svg");
+    background-size: contain;
+    background-color: black;
+}
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #5a000f 0%, #6a0015 100%);
+    color: #b6ae7f;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    transition: all 0.3s;
+    border: 1px solid rgba(182, 174, 127, 0.15);
+}
+
+.nav-link:hover {
+    background: linear-gradient(135deg, #6a0015 0%, #7a001b 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
