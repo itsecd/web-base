@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const operation = operationSelect.value;
 
         if (!validateInput(num1, num2)) {
-            displayError('Р’РІРµРґРёС‚Рµ РєРѕСЂСЂРµРєС‚РЅС‹Рµ С‡РёСЃР»Р° РІ РѕР±Р° РїРѕР»СЏ');
+            displayError('Введите корректные числа в оба поля');
             return;
         }
 
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (num2 === 0) {
                     return {
                         success: false,
-                        error: 'Р”РµР»РµРЅРёРµ РЅР° РЅРѕР»СЊ РЅРµРІРѕР·РјРѕР¶РЅРѕ'
+                        error: 'Деление на ноль невозможно'
                     };
                 }
                 result = num1 / num2;
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
             default:
                 return {
                     success: false,
-                    error: 'РќРµРёР·РІРµСЃС‚РЅР°СЏ РѕРїРµСЂР°С†РёСЏ'
+                    error: 'Неизвестная операция'
                 };
         }
 
@@ -74,7 +74,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function displayResult(result) {
-        resultDiv.textContent = result;
+        const roundedResult = Math.round(result * 1e10) / 1e10;
+        resultDiv.textContent = parseFloat(roundedResult.toFixed(10));
     }
 
     function displayError(errorMessage) {

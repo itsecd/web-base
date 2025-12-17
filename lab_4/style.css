@@ -24,19 +24,19 @@ body {
     overflow: hidden;
 }
 
-header {
+.header {
     background: linear-gradient(to right, #76e11c, #c0ef1a);
     color: white;
     padding: 30px;
     text-align: center;
 }
 
-h1 {
+.header__title {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-.subtitle {
+.header__subtitle {
     font-size: 1.2rem;
     opacity: 0.9;
 }
@@ -52,27 +52,27 @@ h1 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-.input-group {
+.calculator__input-group {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 25px;
 }
 
-.input-field {
+.calculator__input-field {
     flex: 1;
     min-width: 200px;
 }
 
-label {
+.calculator__label {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
     color: #495057;
 }
 
-input,
-select {
+.calculator__input,
+.calculator__select {
     width: 100%;
     padding: 12px 15px;
     border: 2px solid #76e11c;
@@ -81,18 +81,18 @@ select {
     transition: all 0.3s;
 }
 
-    input:focus,
-    select:focus {
+    .calculator__input:focus,
+    .calculator__select:focus {
         border-color: #c0ef1a;
         outline: none;
         box-shadow: 0 0 0 3px rgba(74, 0, 224, 0.1);
     }
 
-.operation-group {
+.calculator__operation-group {
     margin-bottom: 25px;
 }
 
-.calculate-btn {
+.calculator__calculate-btn {
     display: block;
     width: 100%;
     padding: 15px;
@@ -107,16 +107,16 @@ select {
     margin-bottom: 25px;
 }
 
-    .calculate-btn:hover {
+    .calculator__calculate-btn:hover {
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(74, 0, 224, 0.3);
     }
 
-    .calculate-btn:active {
+    .calculator__calculate-btn:active {
         transform: translateY(0);
     }
 
-.result-container {
+.calculator__result-container {
     background-color: white;
     border-radius: 10px;
     padding: 20px;
@@ -124,20 +124,20 @@ select {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
-.result-label {
+.calculator__result-label {
     font-size: 1rem;
     color: #09ee11;
     margin-bottom: 10px;
 }
 
-.result {
+.calculator__result {
     font-size: 2rem;
     font-weight: 700;
     color: #09ee11;
     min-height: 48px;
 }
 
-.error {
+.calculator__error {
     color: #09ee11;
     font-size: 1rem;
     margin-top: 10px;
@@ -145,11 +145,11 @@ select {
 }
 
 @media (max-width: 600px) {
-    .input-group {
+    .calculator__input-group {
         flex-direction: column;
     }
 
-    h1 {
+    .header__title {
         font-size: 2rem;
     }
 }
