@@ -26,16 +26,24 @@ class Calculator {
             return;
         }
         
-        const result = this.performOperation(num1, num2, operation);
+        const operationResult = this.performOperation(num1, num2, operation);
         
-        if (typeof result === 'string' && result.startsWith('Ошибка:')) {
-            this.showError(result.replace('Ошибка:', '').trim());
+        if (operationResult.error) {
+            this.showError(operationResult.error);
             return;
         }
         
-        this.displayResult(num1, num2, operation, result);
+        const roundedResult = this.roundToReasonable(operationResult.value);
+        this.displayResult(num1, num2, operation, roundedResult);
     }
-    
+
+    roundToReasonable(value, maxDecimals = 10) {
+        if (!Number.isFinite(value)) return value;
+        
+        const rounded = Number(value.toFixed(maxDecimals));
+        return Number.isInteger(rounded) ? Math.round(rounded) : rounded;
+    }
+
     validateInput(num1, num2) {
         if (isNaN(num1) || isNaN(num2)) {
             this.showError('Пожалуйста, введите оба числа');
@@ -47,18 +55,18 @@ class Calculator {
     performOperation(num1, num2, operation) {
         switch(operation) {
             case '+':
-                return num1 + num2;
+                return {value: num1 + num2, error: null };
             case '-':
-                return num1 - num2;
+                return {value: num1 - num2, error: null };
             case '*':
-                return num1 * num2;
+                return {value: num1 * num2, error: null };
             case '/':
                 if (num2 === 0) {
-                    return 'Ошибка: Деление на ноль невозможно!';
+                    return {value: null, error:'Деление на ноль невозможно!'};
                 }
-                return num1 / num2;
+                return {value: num1 / num2, error: null };
             default:
-                return 'Ошибка: Неизвестная операция';
+                return { value: null, error: 'Неизвестная операция'};
         }
     }
     
