@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой калькулятор</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <header class="calculator-header">
+            <h1><i class="fas fa-calculator"></i> Калькулятор</h1>
+            <p class="subtitle">Калькулятор для выполнения основных математических операций</p>
+        </header>
+        
+        <main class="calculator-main">
+            <div class="input-group">
+                <label for="num1">
+                    <i class="fas fa-hashtag"></i> Первое число:
+                </label>
+                <input type="number" id="num1" placeholder="Введите число" step="any">
+                <div class="input-hint" id="hint1">Введи любое число</div>
+            </div>
+            
+            <div class="operation-container">
+                <label for="operation">
+                    <i class="fas fa-cogs"></i> Операция:
+                </label>
+                <select id="operation">
+                    <option value="add">Сложение (+)</option>
+                    <option value="subtract">Вычитание (-)</option>
+                    <option value="multiply">Умножение (×)</option>
+                    <option value="divide">Деление (÷)</option>
+                </select>
+                <div class="operation-icon" id="operation-icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="num2">
+                    <i class="fas fa-hashtag"></i> Второе число:
+                </label>
+                <input type="number" id="num2" placeholder="Введите число" step="any">
+                <div class="input-hint" id="hint2">
+                    <p>Введи любое число</p>
+                </div>
+            </div>
+            
+            <div class="button-container">
+                <button class="calculate-btn" id="calculate-btn">
+                    <i class="fas fa-calculator"></i> Вычислить
+                </button>
+                <button class="clear-btn" id="clear-btn">
+                    <i class="fas fa-broom"></i> Очистить
+                </button>
+            </div>
+            
+            <div class="result-container">
+                <div class="result-header">
+                    <i class="fas fa-poll"></i>
+                    <span class="result-label">Результат:</span>
+                </div>
+                <div id="result" class="info">
+                    <p>1) введи числа</p>
+                    <p>2) выбери операцию</p>
+                </div>
+                <div id="calculation-info" class="calculation-info"></div>
+            </div>
+            
+            <div class="operation-examples">
+                <div class="example">
+                    <div class="example-icon">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <div class="example-title">Сложение</div>
+                    <div class="example-formula">1 + 1 = 2</div>
+                </div>
+                <div class="example">
+                    <div class="example-icon">
+                        <i class="fas fa-minus-circle"></i>
+                    </div>
+                    <div class="example-title">Вычитание</div>
+                    <div class="example-formula">1 - 1 = 0</div>
+                </div>
+                <div class="example">
+                    <div class="example-icon">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+                    <div class="example-title">Умножение</div>
+                    <div class="example-formula">1 × 1 = 1</div>
+                </div>
+                <div class="example">
+                    <div class="example-icon">
+                        <i class="fas fa-divide-circle"></i>
+                    </div>
+                    <div class="example-title">Деление</div>
+                    <div class="example-formula">1 ÷ 1 = 1</div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="calculator-footer">
+            <p><i class="fas fa-code"></i> Калькулятор с обработкой ошибок &copy; 2025</p>
+            <p class="footer-hint">Используй Enter для быстрого вычисления</p>
+        </footer>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>

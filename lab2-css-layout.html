@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная 2: CSS верстка</title>
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      
+      .page-header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 20px;
+        background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+        color: white;
+        border-radius: 10px;
+      }
+      
+      .task-section {
+        background: white;
+        padding: 25px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+      
+      .task-title {
+        color: #ff7e5f;
+        border-bottom: 2px solid #ff7e5f;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+      
+      .back-link {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 10px 20px;
+        background: #ff7e5f;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      
+      .back-link:hover {
+        background: #feb47b;
+      }
+    </style>
+</head>
+<body>
+    
+  <div class="page-header">
+    <h1>Лабораторная работа 2</h1>
+    <h2>CSS верстка и позиционирование</h2>
+    <p>Работа с CSS Grid, Flexbox, позиционированием и наложением элементов</p>
+  </div>
+
+  <!-- Задание 1: Текст -->
+  <div class="task-section">
+    <h2 class="task-title">Задание 1: Стилизация текста</h2>
+    <div class="text-block">
+      <p>JavaScript (аббр. JS) — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript (стандарт ECMA-262).</p>
+      <p>JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.</p>
+    </div>
+  </div>
+
+  <!-- Задание 2: Наложение изображений -->
+  <div class="task-section">
+    <h2 class="task-title">Задание 2: Наложение изображений</h2>
+    <p>Использование абсолютного позиционирования для наложения одного изображения на другое:</p>
+    <div class="image-container">
+      <img src="https://img2.akspic.ru/crops/8/4/6/4/6/164648/164648-kot-kotenok-privlekatelnost-golava-glaz-3840x2160.jpg" alt="Изображение 1" class="image-base">
+      <img src="https://i.pinimg.com/236x/cd/16/12/cd16121609a79d95dffbfa28a326331e.jpg" alt="Изображение 2" class="image-overlay">
+    </div>
+  </div>
+
+  <!-- Задание 3: Светофор -->
+  <div class="task-section">
+    <h2 class="task-title">Задание 3: Светофор</h2>
+    <p>Создание светофора с использованием Flexbox:</p>
+    <div class="traffic-light">
+      <div class="light red"></div>
+      <div class="light yellow"></div>
+      <div class="light green"></div>
+    </div>
+  </div>
+
+  <!-- Задание 4: Лабиринт 3x3 -->
+  <div class="task-section">
+    <h2 class="task-title">Задание 4: Лабиринт 3x3</h2>
+    <p>Создание лабиринта с использованием CSS Grid и границ:</p>
+    <div class="maze">
+      <div class="cell border-top border-bottom"></div>
+      <div class="cell border-top border-bottom-"></div>
+      <div class="cell border-top border-right"></div>
+
+      <div class="cell border-left"></div>
+      <div class="cell border-bottom border-top"></div>
+      <div class="cell border-right"></div>
+      
+      <div class="cell border-bottom border-left"></div>
+      <div class="cell border-bottom"></div>
+      <div class="cell border-left border-right"></div>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-link">← Вернуться к резюме</a>
+
+</body>
+</html>

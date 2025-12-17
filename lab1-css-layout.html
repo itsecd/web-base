@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 1: CSS верстка</title>
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .lab-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #1962B3;
+        }
+        
+        .lab-header h1 {
+            color: #1962B3;
+            margin-bottom: 5px;
+        }
+        
+        .lab-header h2 {
+            color: #333;
+            font-weight: normal;
+        }
+        
+        .back-button {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #1962B3;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .back-button:hover {
+            background-color: #134a8a;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="lab-header">
+        <h1>Лабораторная работа 1</h1>
+        <h2>CSS верстка и позиционирование</h2>
+    </div>
+
+    <!-- Задание 1: Текст -->
+    <div class="text-block">
+        <p>JavaScript (аббр. JS) — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript (стандарт ECMA-262).</p>
+        <p>JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.</p>
+    </div>
+
+    <!-- Задание 2: Наложение изображений -->
+    <div class="image-container">
+        <img src="https://img2.akspic.ru/crops/8/4/6/4/6/164648/164648-kot-kotenok-privlekatelnost-golava-glaz-3840x2160.jpg" alt="Изображение 1" class="image-base">
+        <img src="https://i.pinimg.com/236x/cd/16/12/cd16121609a79d95dffbfa28a326331e.jpg" alt="Изображение 2" class="image-overlay">
+    </div>
+
+    <!-- Задание 3: Светофор -->
+    <div class="traffic-light">
+        <div class="light red"></div>
+        <div class="light yellow"></div>
+        <div class="light green"></div>
+    </div>
+
+    <!-- Задание 4: Лабиринт 3x3 -->
+    <div class="maze">
+
+        <div class="cell border-top border-bottom"></div>
+        <div class="cell border-top border-bottom-"></div>
+        <div class="cell border-top  border-right"></div>
+
+        <div class="cell border-left"></div>
+        <div class="cell border-bottom border-top"></div>
+        <div class="cell border-right"></div>
+        
+        <div class="cell border-bottom border-left"></div>
+        <div class="cell border-bottom"></div>
+        <div class="cell border-left border-right"></div>
+    </div>
+
+    <a href="index.html" class="back-button">Вернуться к резюме</a>
+
+</body>
+</html>

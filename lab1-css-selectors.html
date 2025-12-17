@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторная 1: CSS селекторы</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    
+    .page-header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 20px;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: white;
+      border-radius: 10px;
+    }
+    
+    .lab-section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #2575fc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    
+    .back-link:hover {
+      background: #6a11cb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <h1>Лабораторная работа 1</h1>
+    <h2>CSS селекторы и наследование</h2>
+    <p>Изучение различных CSS селекторов и принципов наследования стилей</p>
+  </div>
+
+  <div class="lab-section">
+    <h2>Популярные видеоигры:</h2>
+    <ul class="list__items">
+      <li class="list__item">Minecraft</li>
+      <li class="list__item">Fortnite</li>
+      <li class="list__item">GTA V</li>
+      <li class="list__item">Call of Duty</li>
+      <li class="list__item">Among Us</li>
+    </ul>
+  </div>
+
+  <div class="lab-section">
+    <h2>Семейство элементов (CSS наследование):</h2>
+    
+    <div class="family__parent family__parent--first">
+      <h3 class="family__title">Parent 1</h3>
+      <div class="family__child">child 1</div>
+      <div class="family__child">child 2</div>
+      <div class="family__child">child 3</div>
+      <div class="family__child">child 4</div>
+    </div>
+
+    <div class="family__parent family__parent--third">
+      <h3 class="family__title">Parent 3</h3>
+      <div class="family__child">child 1</div>
+      <div class="family__child">child 2</div>
+    </div>
+
+    <div class="family__parent family__parent--second">
+      <h3 class="family__title">Parent 2</h3>
+      <div class="family__child">child 1</div>
+      <div class="family__child">child 2</div>
+    </div>
+
+    <div class="family__parent family__parent--third">
+      <h3 class="family__title">Parent 3</h3>
+      <div class="family__child">child 1</div>
+      <div class="family__child">child 2</div>
+      <div class="family__child--guest">child 2</div>
+    </div>
+  </div>
+
+  <div class="lab-section">
+    <h2>Языки программирования:</h2>
+    <ul class="languages__list">
+      <li class="languages__item"><a class="languages__link" href="https://ru.wikipedia.org/wiki/Python">Python</a> – высокоуровневый язык с простым синтаксисом</li>
+      <li class="languages__item"><a class="languages__link" href="https://ru.wikipedia.org/wiki/JavaScript">JavaScript</a> – основной язык для фронтенд-разработки</li>
+      <li class="languages__item"><a class="languages__link" href="https://ru.wikipedia.org/wiki/Java">Java</a> – объектно-ориентированный язык</li>
+      <li class="languages__item"><a class="languages__link" href="https://ru.wikipedia.org/wiki/C%2B%2B">C++</a> – мощный язык для системного программирования</li>
+      <li class="languages__item"><a class="languages__link" href="https://ru.wikipedia.org/wiki/C_Sharp">C#</a> – язык от Microsoft</li>
+    </ul>
+  </div>
+
+  <a href="index.html" class="back-link">← Вернуться к резюме</a>
+
+</body>
+</html>

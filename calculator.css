@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #5a0b4d, #8a1c7c, #c44569);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: gradientShift 15s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.calculator-container {
+    background-color: #ffe6e6; /* Светло-бордовый фон */
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(139, 0, 0, 0.3);
+    width: 100%;
+    max-width: 550px;
+    padding: 40px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 230, 230, 0.3);
+}
+
+.calculator-header h1 {
+    color: #800020; /* Темно-бордовый для заголовка */
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.subtitle {
+    color: #a0525d; /* Средне-бордовый для подзаголовка */
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: #5d001e; /* Темно-бордовый для меток */
+    font-weight: 600;
+    font-size: 0.95rem;
+    gap: 8px;
+}
+
+.input-hint {
+    font-size: 0.85rem;
+    color: #a0525d; /* Средне-бордовый для подсказок */
+    margin-top: 5px;
+    height: 20px;
+}
+
+input, select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #d8a7a7; /* Светло-бордовая рамка */
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #fff5f5; /* Очень светлый бордовый фон */
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #800020; /* Темно-бордовый при фокусе */
+    box-shadow: 0 0 0 3px rgba(128, 0, 32, 0.2);
+    background-color: white;
+}
+
+.operation-container {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.operation-container label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: #5d001e; /* Темно-бордовый для меток */
+    font-weight: 600;
+    font-size: 0.95rem;
+    gap: 8px;
+}
+
+.operation-icon {
+    font-size: 2rem;
+    color: #800020; /* Темно-бордовый для иконки операции */
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.calculate-btn, .clear-btn {
+    flex: 1;
+    padding: 18px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    color: white;
+    background: linear-gradient(to right, #800020, #a52a5a); /* Темно-бордовый градиент для обеих кнопок */
+}
+
+.calculate-btn:hover, .clear-btn:hover {
+    background: linear-gradient(to right, #5d001e, #800020); /* Более темный бордовый при наведении */
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(128, 0, 32, 0.4);
+}
+
+.calculate-btn:active, .clear-btn:active {
+    transform: translateY(0);
+}
+
+.result-container {
+    margin-top: 30px;
+    background: linear-gradient(to right, #fff0f0, #ffe6e6); /* Светло-бордовый градиент */
+    border-radius: 15px;
+    padding: 25px;
+    text-align: left;
+    border-left: 5px solid #800020; /* Темно-бордовая полоса слева */
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.result-label {
+    font-size: 1.1rem;
+    color: #5d001e; /* Темно-бордовый */
+    font-weight: 600;
+}
+
+#result {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #5d001e; /* Темно-бордовый для результата */
+    min-height: 3rem;
+    word-break: break-all;
+    transition: all 0.3s ease;
+}
+
+.calculation-info {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #a0525d; /* Средне-бордовый для информации */
+    min-height: 20px;
+}
+
+.error {
+    color: #c41e3a !important; /* Бордово-красный для ошибок */
+}
+
+.success {
+    color: #228b22 !important; /* Зеленый для успеха, чтобы контрастировал с бордовым */
+}
+
+.info {
+    color: #800020 !important; /* Темно-бордовый для информационного текста */
+}
+
+.operation-examples {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.example {
+    background-color: #fff5f5; /* Очень светлый бордовый фон */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid #d8a7a7; /* Светло-бордовая рамка */
+}
+
+.example:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(128, 0, 32, 0.2);
+    background-color: #ffe6e6;
+}
+
+.example-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #800020; /* Темно-бордовый для иконок примеров */
+}
+
+.example-title {
+    font-weight: 600;
+    color: #5d001e; /* Темно-бордовый */
+    margin-bottom: 5px;
+}
+
+.example-formula {
+    color: #a0525d; /* Средне-бордовый для формул */
+    font-size: 0.9rem;
+}
+
+.calculator-footer {
+    margin-top: 30px;
+    color: #a0525d; /* Средне-бордовый */
+    font-size: 0.9rem;
+}
+
+.calculator-footer p {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.footer-hint {
+    font-size: 0.8rem;
+    color: #b56576; /* Светло-бордовый для подсказки в футере */
+}
+
+@media (max-width: 600px) {
+    .calculator-container {
+        padding: 25px 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .operation-examples {
+        grid-template-columns: 1fr;
+    }
+    
+    .button-container {
+        flex-direction: column;
+    }
+}

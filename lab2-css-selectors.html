@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 2: CSS селекторы</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .lab-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #0078ff;
+        }
+        
+        .lab-header h1 {
+            color: #0078ff;
+            margin-bottom: 5px;
+        }
+        
+        .lab-header h2 {
+            color: #333;
+            font-weight: normal;
+        }
+        
+        .back-button {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #0078ff;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .back-button:hover {
+            background-color: #0056cc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lab-header">
+        <h1>Лабораторная работа 2</h1>
+        <h2>CSS селекторы и наследование</h2>
+    </div>
+
+    <section class="list">
+        <h2 class="list__title">Популярные видеоигры:</h2>
+        <ul class="list__items">
+            <li class="list__item">Minecraft</li>
+            <li class="list__item">Fortnite</li>
+            <li class="list__item">GTA V</li>
+            <li class="list__item">Call of Duty</li>
+            <li class="list__item">Among Us</li>
+        </ul>
+    </section>
+
+    <section class="family">
+        <div class="family__parent family__parent--first">
+            <h2 class="family__title">Parent 1</h2>
+            <div class="family__child">child 1</div>
+            <div class="family__child">child 2</div>
+            <div class="family__child">child 3</div>
+            <div class="family__child">child 4</div>
+        </div>
+
+        <div class="family__parent family__parent--third">
+            <h2 class="family__title">Parent 3</h2>
+            <div class="family__child">child 1</div>
+            <div class="family__child">child 2</div>
+        </div>
+
+        <div class="family__parent family__parent--second">
+            <h2 class="family__title">Parent 2</h2>
+            <div class="family__child">child 1</div>
+            <div class="family__child">child 2</div>
+        </div>
+
+        <div class="family__parent family__parent--third">
+            <h2 class="family__title">Parent 3</h2>
+            <div class="family__child">child 1</div>
+            <div class="family__child">child 2</div>
+            <div class="family__child--guest">child 2</div>
+        </div>
+        <div class="family__parent family__parent--third">
+            <h2 class="family__title">Parent 3</h2>
+            <div class="family__child">child 1</div>
+            <div class="family__child">child 2</div>
+            <div class="family__child--guest">child 2</div>
+        </div>
+        <div class="family__parent family__parent--third">
+            <h2 class="family__title">Parent 3</h2>
+            <div class="family__child">child 1</div>
+            <div class="family__child">child 2</div>
+            <div class="family__child--guest">child 2</div>
+        </div>
+    </section>
+
+    <section class="languages">
+        <p class="languages__text">
+            Языки программирования — это инструменты, с помощью которых разработчики создают программное обеспечение, веб-приложения, игры, алгоритмы и многое другое.
+            Каждый язык имеет свои особенности, синтаксис и сферу применения. Ниже представлены некоторые из наиболее известных языков:
+        </p>
+
+        <ul class="languages__list">
+            <li class="languages__item"><a class="languages__link" href="https://ru.wikipedia.org/wiki/Python">Python</a> – высокоуровневый язык с простым синтаксисом, популярный в Data Science, веб-разработке и автоматизации.</li>
+            <li class="languages__item"><a class="languages__link" href="https://ru.wikipedia.org/wiki/JavaScript">JavaScript</a> – основной язык для фронтенд-разработки, работает в браузерах и на сервере (Node.js).</li>
+            <li class="languages__item"><a class="languages__link" href="https://ru.wikipedia.org/wiki/Java">Java</a> – объектно-ориентированный язык, широко используется в корпоративных приложениях и Android-разработке.</li>
+            <li class="languages__item"><a class="languages__link" href="https://ru.wikipedia.org/wiki/C%2B%2B">C++</a> – мощный язык для системного программирования, игр и высокопроизводительных приложений.</li>
+            <li class="languages__item"><a class="languages__link" href="https://ru.wikipedia.org/wiki/C_Sharp">C#</a> – язык от Microsoft, применяется в разработке под Windows, играх (Unity) и веб-приложениях.</li>
+        </ul>
+
+        <p class="languages__text">
+            Это лишь малая часть из множества существующих языков, и выбор зависит от задач, которые нужно решить.
+        </p>
+    </section>
+
+    <a href="index.html" class="back-button">Вернуться к резюме</a>
+
+</body>
+</html>
