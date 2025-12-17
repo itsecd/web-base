@@ -10,7 +10,7 @@ function get_A() {
 }
 
 const inputB = document.getElementById('B');
-function get_A() {
+function get_B() {
   return inputB.valueAsNumber;
 }
 
@@ -135,15 +135,14 @@ function init_buttons() {
     { id: 'ch', handler: ch },
     { id: 'th', handler: th },
     { id: 'ctgh', handler: ctgh }
-  ];
+  ]
 
-  buttons.forEach(({ id, handler }) => {
-    const element = document.getElementById(id);
+  for (const btn of buttons){
+    const element = document.getElementById(btn.id);
     if (element) {
-      element.addEventListener('click', handler);
+      element.addEventListener('click', btn.handler);
     } else {
-      console.warn(`Элемент с id="${id}" не найден!`);
+      console.warn('Элемент с id="${id}" не найден!');
     }
-  });
+  }
 }
-
