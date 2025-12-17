@@ -1,3 +1,7 @@
+//БЛОК ВЫПОЛНЕНИЯ
+init_buttons()
+
+
 //БЛОК ОБЩИХ ФУНКЦИЙ
 //Блок чтения чисел
 const inputA = document.getElementById('A');
@@ -142,7 +146,4 @@ function init_buttons() {
     }
   });
 }
-
-
-init_buttons()
 
