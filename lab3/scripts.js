@@ -1,22 +1,17 @@
-
 function updateFooterDates() {
-    // Текущая дата и год
     const now = new Date();
     const currentYear = now.getFullYear();
     
-    // Месяцы на русском
     const months = [
         'январь', 'февраль', 'март', 'апрель', 'май', 'июнь',
         'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'
     ];
     
-    // Обновляем год в подвале
     const yearElement = document.getElementById('current-year');
     if (yearElement) {
         yearElement.textContent = currentYear;
     }
     
-    // Обновляем дату в подвале
     const dateElement = document.getElementById('current-date');
     if (dateElement) {
         const currentMonth = months[now.getMonth()];
@@ -31,17 +26,17 @@ function animateSections() {
     
     sections.forEach((section, index) => {
         setTimeout(() => {
-            section.classList.add('animated');
+            section.classList.add('section_animated');
         }, 100 + index * 150);
     });
     
     console.log(`Анимировано ${sections.length} секций`);
 }
+
 function initSkillTags() {
-    const skillTags = document.querySelectorAll('.skill-tag');
+    const skillTags = document.querySelectorAll('.skills__tag');
     
     skillTags.forEach(tag => {
-        
         tag.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-3px) scale(1.05)';
             this.style.boxShadow = '0 6px 12px rgba(72, 6, 7, 0.2)';
@@ -65,10 +60,9 @@ function initSkillTags() {
 }
 
 function initGitHubLink() {
-    const githubLink = document.querySelector('.github-link');
+    const githubLink = document.querySelector('.link_github');
     
     if (githubLink) {
-        
         githubLink.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-3px)';
         });
@@ -88,10 +82,9 @@ function initGitHubLink() {
 }
 
 function initAvatar() {
-    const avatarImage = document.querySelector('.avatar-image');
+    const avatarImage = document.querySelector('.header__avatar-image');
     
     if (avatarImage) {
-       
         avatarImage.addEventListener('click', function() {
             this.style.transform = 'scale(0.95) rotate(5deg)';
             
@@ -108,7 +101,6 @@ function initAvatar() {
         
         avatarImage.addEventListener('error', function() {
             console.error('Ошибка загрузки изображения аватарки');
-         
             this.alt = 'Изображение не загружено';
             this.style.border = '2px dashed #a82c2e';
         });
@@ -116,7 +108,7 @@ function initAvatar() {
 }
 
 function initHobbyItems() {
-    const hobbyItems = document.querySelectorAll('.hobbies-list li');
+    const hobbyItems = document.querySelectorAll('.list__item');
     
     hobbyItems.forEach(item => {
         item.addEventListener('mouseenter', function() {
@@ -140,15 +132,10 @@ function init() {
     console.log('Инициализация страницы резюме...');
     
     updateFooterDates();
-    
     animateSections();
-    
     initSkillTags();
-    
     initGitHubLink();
-    
     initAvatar();
-    
     initHobbyItems();
     
     console.log('Страница полностью инициализирована!');

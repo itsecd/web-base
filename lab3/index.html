@@ -1,105 +1,136 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Резюме студента - Козленко Екатерина</title>
     
     <link rel="stylesheet" href="styles-light.css">
-    
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
 </head>
 <body>
     
-    <div class="resume-container">
+    <div class="resume">
         
-        <!-- ШАПКА С АВАТАРКОЙ -->
+        <!-- Блок: header -->
         <header class="header">
-            <div class="avatar-container">
-                <img src="assets/images/cat-avatar.jpg" alt="человек паук с котом" class="avatar-image">
-                <div class="avatar-frame"></div>
+            <div class="header__avatar-container">
+                <img src="assets/images/cat-avatar.jpg" alt="человек паук с котом" class="header__avatar-image">
+                <div class="header__avatar-frame"></div>
             </div>
             
-            <div class="personal-info">
-                <h1>Козленко Екатерина Игоревна</h1>
+            <div class="header__personal-info">
+                <h1 class="header__title">Козленко Екатерина Игоревна</h1>
                 <div class="birthday">
-                    <i class="fas fa-birthday-cake"></i>
+                    <i class="fas fa-birthday-cake birthday__icon"></i>
                     <span>Дата рождения: 8 июня 2006 года</span>
                 </div>
-                <p>Студентка 2-го курса направления 10.05.03 </p>
-                <p class="cat-note">Любитель комиксов и котов-супергероев</p>
+                <p class="header__description">Студентка 2-го курса направления 10.05.03</p>
+                <p class="note">Любитель комиксов и котов-супергероев</p>
             </div>
         </header>
        
         <div class="content">
 
-            <div class="left-column">
+            <div class="column column_left">
                 
                 <div class="section" id="hobbies-section">
-                    <h2 class="section-title"><i class="fas fa-heart"></i> Увлечения</h2>
-                    <ul class="hobbies-list">
-                        <li><i class="fas fa-book-reader"></i> Чтение комиксов</li>
-                        <li><i class="fas fa-ghost"></i> Просмотр фильмов ужасов</li>
-                        <li><i class="fas fa-eye"></i> Компьютерное зрение</li>
-                        <li><i class="fas fa-laptop-code"></i> Веб-разработка</li>
-                        <li><i class="fas fa-paint-brush"></i> Цифровая графика</li>
+                    <h2 class="section__title">
+                        <i class="fas fa-heart section__title-icon"></i> Увлечения
+                    </h2>
+                    <ul class="list">
+                        <li class="list__item">
+                            <i class="fas fa-book-reader list__icon"></i> Чтение комиксов
+                        </li>
+                        <li class="list__item">
+                            <i class="fas fa-ghost list__icon"></i> Просмотр фильмов ужасов
+                        </li>
+                        <li class="list__item">
+                            <i class="fas fa-eye list__icon"></i> Компьютерное зрение
+                        </li>
+                        <li class="list__item">
+                            <i class="fas fa-laptop-code list__icon"></i> Веб-разработка
+                        </li>
+                        <li class="list__item">
+                            <i class="fas fa-paint-brush list__icon"></i> Цифровая графика
+                        </li>
                     </ul>
                 </div>
                 
                 <div class="section" id="github-section">
-                    <h2 class="section-title"><i class="fas fa-link"></i> GitHub</h2>
-                    <a href="https://github.com/bla6bla6bla6bla6-rgb" target="_blank" class="github-link">
-                        <i class="fab fa-github"></i> Перейти в профиль GitHub
+                    <h2 class="section__title">
+                        <i class="fas fa-link section__title-icon"></i> GitHub
+                    </h2>
+                    <a href="https://github.com/bla6bla6bla6bla6-rgb" target="_blank" class="link link_github">
+                        <i class="fab fa-github link__icon"></i> Перейти в профиль GitHub
                     </a>
-                    <p class="cat-note">Тут можно найти мои проекты по веб-разработке</p>
+                    <p class="note">Тут можно найти мои проекты по веб-разработке</p>
                 </div>
                 
                 <div class="section" id="contact-section">
-                    <h2 class="section-title"><i class="fas fa-envelope"></i> Контакты</h2>
-                    <p><i class="fas fa-phone" style="color: var(--primary-light); margin-right: 10px;"></i> +7 (123) 456-78-90</p>
-                    <p><i class="fas fa-envelope" style="color: var(--primary-light); margin-right: 10px;"></i> K.E.I.@yandex.ru</p>
-                    <p><i class="fas fa-map-marker-alt" style="color: var(--primary-light); margin-right: 10px;"></i> г. Самара</p>
+                    <h2 class="section__title">
+                        <i class="fas fa-envelope section__title-icon"></i> Контакты
+                    </h2>
+                    <div class="contact">
+                        <i class="fas fa-phone contact__icon"></i>
+                        <span>+7 (123) 456-78-90</span>
+                    </div>
+                    <div class="contact">
+                        <i class="fas fa-envelope contact__icon"></i>
+                        <span>K.E.I.@yandex.ru</span>
+                    </div>
+                    <div class="contact">
+                        <i class="fas fa-map-marker-alt contact__icon"></i>
+                        <span>г. Самара</span>
+                    </div>
                 </div>
                 
             </div>
             
             
-            <div class="right-column">
+            <div class="column column_right">
                 
                 <div class="section" id="about-section">
-                    <h2 class="section-title"><i class="fas fa-user"></i> О себе</h2>
-                    <div class="about-me">
-                        <p>Я студентка 2-го курса, увлеченный веб-технологиями и разработкой программного обеспечения. С детства интересуюсь комиксами и историей супергероев, что вдохновило меня на изучение компьютерной графики и анимации.</p>
-                        <p>Моя цель — выжить.</p>
+                    <h2 class="section__title">
+                        <i class="fas fa-user section__title-icon"></i> О себе
+                    </h2>
+                    <div class="about">
+                        <p class="about__text">Я студентка 2-го курса, увлеченный веб-технологиями и разработкой программного обеспечения. С детства интересуюсь комиксами и историей супергероев, что вдохновило меня на изучение компьютерной графики и анимации.</p>
+                        <p class="about__text">В рамках учебных проектов я создала несколько веб-приложений, включая калькулятор с обработкой ошибок, страницы с различными CSS-эффектами и анализировала алгоритмы сортировки.</p>
+                        <p class="about__text">Моя цель — выжить.</p>
                     </div>
                 </div>
                 
                 <div class="section" id="hard-skills-section">
-                    <h2 class="section-title"><i class="fas fa-tools"></i> Hard-скиллы</h2>
-                    <div class="skills-container">
-                        <span class="skill-tag hard-skill">HTML5/CSS3</span>
-                        <span class="skill-tag hard-skill">Python</span>
-                        <span class="skill-tag hard-skill">Git/GitHub</span>
-                        <span class="skill-tag hard-skill">SQL/MySQL</span>
-                        
+                    <h2 class="section__title">
+                        <i class="fas fa-tools section__title-icon"></i> Hard-скиллы
+                    </h2>
+                    <div class="skills">
+                        <span class="skills__tag skills__tag_hard">HTML5/CSS3</span>
+                        <span class="skills__tag skills__tag_hard">Python</span>
+                        <span class="skills__tag skills__tag_hard">Git/GitHub</span>
+                        <span class="skills__tag skills__tag_hard">SQL/MySQL</span>
+                        <span class="skills__tag skills__tag_hard">JavaScript</span>
+                        <span class="skills__tag skills__tag_hard">Алгоритмы</span>
                     </div>
                 </div>
                 
                 <div class="section" id="soft-skills-section">
-                    <h2 class="section-title"><i class="fas fa-users"></i> Soft-скиллы</h2>
-                    <div class="skills-container">
-                        <span class="skill-tag soft-skill">Креативное мышление</span>
-                        <span class="skill-tag soft-skill">Работа в команде</span>
-                        <span class="skill-tag soft-skill">Адаптивность</span>
-                        <span class="skill-tag soft-skill">Решение проблем</span>
+                    <h2 class="section__title">
+                        <i class="fas fa-users section__title-icon"></i> Soft-скиллы
+                    </h2>
+                    <div class="skills">
+                        <span class="skills__tag skills__tag_soft">Креативное мышление</span>
+                        <span class="skills__tag skills__tag_soft">Работа в команде</span>
+                        <span class="skills__tag skills__tag_soft">Адаптивность</span>
+                        <span class="skills__tag skills__tag_soft">Решение проблем</span>
                     </div>
                 </div>
                 
                 <div class="section" id="education-section">
-                    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Образование</h2>
+                    <h2 class="section__title">
+                        <i class="fas fa-graduation-cap section__title-icon"></i> Образование
+                    </h2>
                     <p><strong>Самарский государственный аэрокосмический университет им. С. П. Королёва (СГАУ)</strong></p>
                     <p>Институт Информатики и Кибернеттики, направление "Информационная Безопасность Автоматизированных Систем"</p>
                     <p>2024 — настоящее время (2 курс)</p>
@@ -110,9 +141,9 @@
     </div>
     
     
-    <footer>
-        <p class="footer-text">Резюме студента &copy; <span id="current-year">2023</span>. Все права защищены.</p>
-        <p class="footer-text">Последнее обновление: <span id="current-date">декабрь 2025</span></p>
+    <footer class="footer">
+        <p class="footer__text">Резюме студента &copy; <span id="current-year">2023</span>. Все права защищены.</p>
+        <p class="footer__text">Последнее обновление: <span id="current-date">декабрь 2025</span></p>
     </footer>
     
     <script src="scripts.js"></script>
