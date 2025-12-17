@@ -1,66 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Лабораторная работа №4</title>
-    <link rel="stylesheet" href="styles/styles.css" />
-    
-  </head>
-  <body>
-    <h1 id="title_1">Простой калькулятор</h1>
 
-    <div class="calculator-box">
-      <div class="calculator-box__data-box flexbox">
-        <input
-          type="number"
-          placeholder="A"
-          id="A"
-          value="0"
-          class="calculator-box__data-field calculator-box__data-field_input-field"
-        />
-        <input
-          type="number"
-          placeholder="B"
-          id="B"
-          value="0"
-          class="calculator-box__data-field calculator-box__data-field_input-field"
-        />
-        <output
-          type="number"
-          id="result"
-          for="A B"
-          value="0"
-          class="calculator-box__data-field calculator-box__data-field_output-field"
-        >
-        </output>
-      </div>
+<head>
+    <title>ЛР №3</title>
+    <link rel="stylesheet" href="3_resume/styles/styles.css" />
+</head>
 
-      <div class="calculator-box__button-box flexbox">
-        <!-- 1st row -->
-        <div id="add" class="calculator-box__button">+</div>
-        <div id="substr" class="calculator-box__button">-</div>
-        <div id="mult" class="calculator-box__button">*</div>
-        <div id="divide" class="calculator-box__button">/</div>
-        <div id="power" class="calculator-box__button">A^B</div>
+<body>
+    <div class="row-box">
+        <div class="person-card">
+            <div class="person-box">
+                <div class="person-box__avatar-box"> </div>
+                <div class="person-box__FIO">Барабанов Иван Сергеевич</div>
+                <div class="person-box__date-birth">2 ноября 2006 года</div>
+                <a class="person-box__github" href="https://github.com/barabanovis">GitHub</a>
+            </div>
+            <div class="hobby-box">
+                <div class="hobby-box__math">Всевозможные зарядки для ума</div>
+                <div class="hobby-box__tourism">ПВД по всей Самарской Луке</div>
+                <div class="hobby-box__public">Люблю вести длительные беседы о вечном</div>
+            </div>
+            <div class = "project-box">
+                <ol>
+                    <li><a href = "1_introduction/index.html">Базовые понятия веб-программирования</a></li>
+                    <li><a href = "2_pseudoelements/index.html">"Дети и родители"</a></li>
+                    <li><a>Резюме (это)</a></li>
+                    <li><a href = "4_calculator/index.html">Калькулятор</a></li>
+                </ol>
+            </div>
+        </div>
+        <div>
+            <div class="skill-box">
+                <div class="row-box">
+                    <div class="skill-box__hard-skills">
+                        <ul class="hard-list">
+                            <li>Высшая математика:
+                                <ul class="math-list">
+                                    <li>Линейная алгебра</li>
+                                    <li>Математический анализ</li>
+                                </ul>
+                            </li>
+                            <li>Десятипальцевая слепая печать</li>
+                        </ul>
+                    </div>
+                    <div class="skill-box__soft-skills">
+                        <ul class="soft-list">
+                            <li>Доносчивость</li>
+                            <li>Пунктуальность</li>
+                            <li>Умение вести рабочие заметки/планы</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-        <!-- 2nd row -->
-        <div id="exp" class="calculator-box__button">e^A</div>
-        <div id="ln" class="calculator-box__button">ln(A)</div>
-        <div id="lg" class="calculator-box__button">lg(A)</div>
-        <div id="log_bA" class="calculator-box__button">log_B(A)</div>
+            <div class="achievements">
+                <div class="row-box">
+                    <img src="3_resume/images/achiv/knowledge_medal.jpg">
+                    <img src="3_resume/images/achiv/gold_medal.jpg">
+                    <img src="3_resume/images/achiv/portal_gun.jpg">
+                </div>
 
-        <!-- 3rd row -->
-        <div id="sin" class="calculator-box__button">sin(A)</div>
-        <div id="cos" class="calculator-box__button">cos(A)</div>
-        <div id="tg" class="calculator-box__button">tg(A)</div>
-        <div id="ctg" class="calculator-box__button">ctg(A)</div>
-
-        <!-- 4th row -->
-        <div id="sh" class="calculator-box__button">sh(A)</div>
-        <div id="ch" class="calculator-box__button">ch(A)</div>
-        <div id="th" class="calculator-box__button">th(A)</div>
-        <div id="ctgh" class="calculator-box__button">ctgh(A)</div>
-      </div>
+            </div>
+        </div>
     </div>
-    <script src="scripts/script.js"></script>
-  </body>
+    <div class="about-box">
+        Я очень ответственный и компетентный в вопросах высшей математики. Умею
+        разбираться в подобных вопросах и соответственно -- литературе. Очень увлекаюсь различными
+        играми головоломками: Portal, The Talos Principle, Witness, SuperLiminal, The Entropy Centre.
+    </div>
+</body>
+
 </html>

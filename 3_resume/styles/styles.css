@@ -1,0 +1,228 @@
+body {
+    background-color: grey;
+    font-size: 3ch;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../images/wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.row-box {
+    display: inline-flex;
+    width: 100%;
+}
+
+.person-card {
+    width: 30%;
+    display: inline-block;
+}
+
+/*Main info*/
+.person-box {
+    font-style: italic;
+    border: 3px dotted olive;
+}
+
+.person-box__github::before {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-size: contain;
+    background-position: center;
+    background-image: url('../images/icons/github_logo.jpg');
+    background-repeat: no-repeat;
+}
+
+.person-box__avatar-box {
+    width: 100%;
+    height: 300px;
+    display: block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 3px;
+    background-image: url('../images/cat_image.jpg');
+}
+
+.person-box__FIO {
+    width: fit-content;
+    height: fit-content;
+}
+
+.person-box__FIO::before {
+    content: "ФИО: ";
+    color: blue;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.person-box__date-birth::before {
+    content: "Дата рождения: ";
+    color: blue;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.project-box{
+    border: 3px groove aqua;
+    width: 100%;
+    height: fit-content;
+}
+
+.project-box::before{
+    content: "Мои проекты";
+    display: block;
+    white-space: pre;
+    width: 100%;
+    height: fit-content;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px double aqua;
+}
+
+.project-box > ol{
+    list-style-type: upper-roman;
+}
+
+/*Hobby*/
+.hobby-box {
+    font-style: normal;
+    border: 3px double green;
+}
+
+.hobby-box__math::before {
+    content: "Математика: ";
+    color: grey;
+}
+
+.hobby-box__tourism::before {
+    content: "Пешеходный туризм: ";
+    color: grey;
+}
+
+.hobby-box__public::before {
+    content: "Выступления на публику: ";
+    color: grey;
+}
+
+/* Skills */
+.skill-box {
+    width: 70%;
+    height: fit-content;
+    display: block;
+    border: solid purple;
+}
+
+.skill-box::before {
+    content: "MY SKILLS";
+    display: block;
+    white-space: pre;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    border-bottom: 2px double plum;
+}
+
+.skill-box__hard-skills {
+    width: 50%;
+    display: inline-block;
+}
+
+.skill-box__hard-skills::before {
+    content: "Hard-Skills";
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    white-space: pre;
+    border-bottom: 3px dashed gold
+}
+
+.skill-box__soft-skills {
+    width: 50%;
+    display: inline-block;
+    border-left: 2px dashed black;
+}
+
+.skill-box__soft-skills::before {
+    content: "Soft-Skills";
+    display: block;
+    white-space: pre;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 3px dashed gold;
+}
+
+.achievements {
+    border: 4px double cadetblue;
+    display: block;
+}
+
+.achievements::before {
+    content: "My Achievements";
+    display: block;
+    white-space: pre;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    border-bottom: 2px double powderblue;
+}
+
+.achievements>img {
+    display: block;
+}
+
+.hard-list {
+    list-style: none;
+}
+
+
+.hard-list>li::before {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-image: url('../images/icons/arrow.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.math-list>li::marker {
+    content: "∫ ";
+}
+
+.soft-list {
+    list-style: none;
+}
+
+.soft-list>li::before {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-image: url('../images/icons/arrow_pencil.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* About me */
+.about-box {
+    border: dashed white;
+    display: block;
+    width: 100%;
+    height: fit-content;
+}
+
+.about-box::before {
+    content: "About ME";
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
