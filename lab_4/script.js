@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const operation = operationSelect.value;
 
         if (!validateInput(num1, num2)) {
-            displayError('Введите корректные числа в оба поля');
+            displayError('Р’РІРµРґРёС‚Рµ РєРѕСЂСЂРµРєС‚РЅС‹Рµ С‡РёСЃР»Р° РІ РѕР±Р° РїРѕР»СЏ');
             return;
         }
 
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (num2 === 0) {
                     return {
                         success: false,
-                        error: 'Деление на ноль невозможно'
+                        error: 'Р”РµР»РµРЅРёРµ РЅР° РЅРѕР»СЊ РЅРµРІРѕР·РјРѕР¶РЅРѕ'
                     };
                 }
                 result = num1 / num2;
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
             default:
                 return {
                     success: false,
-                    error: 'Неизвестная операция'
+                    error: 'РќРµРёР·РІРµСЃС‚РЅР°СЏ РѕРїРµСЂР°С†РёСЏ'
                 };
         }
 
