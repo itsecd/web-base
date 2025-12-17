@@ -10,7 +10,11 @@ function calculate() {
     const num2Input = document.getElementById('num2');
     const operationSelect = document.getElementById('operation');
     const resultElement = document.getElementById('result');
-
+    if (!num1Input || !num2Input || !operationSelect || !resultElement) {
+        console.error('Один из элементов не найден.');
+        resultElement.innerHTML = '<span class="error" Ошибка!!! Обновите страницу.</span>';
+        return;
+    }
     const num1 = parseFloat(num1Input.value);
     const num2 = parseFloat(num2Input.value);
     const operation = operationSelect.value;
