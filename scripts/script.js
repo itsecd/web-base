@@ -17,7 +17,7 @@ function get_A() {
 // Вывод результата на экран
 const outputF=document.getElementById('result')
 function set_result(x){
-    outputF.textContent=x.toFixed(5);
+    outputF.textContent=x.toFixed(8);
 }
 
 function show_error(text){
