@@ -10,7 +10,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 
@@ -104,14 +104,12 @@ body {
     font-weight: 400;
 }
 
-.section__link {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 13px;
+.section--place_sidebar .section__link{
+    color: #d690dc;
 }
 
 .section--place_sidebar .section__link:hover {
-    text-decoration: underline;
+    color: #ffffff;
 }
 
 
@@ -182,4 +180,14 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+.section--place_main .section__link{
+  color: rgb(72, 72, 72);
+  text-decoration: none;
+}
+
+.section--place_main .section__link:hover {
+  color: #a64aad;
+  text-decoration: underline;
 }

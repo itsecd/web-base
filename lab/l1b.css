@@ -20,20 +20,23 @@ body{ margin:0; font-family: Arial, sans-serif; line-height:1.6; }
 .text__p{ margin:0 0 12px; }
 .text__p:last-child{ margin-bottom:0; }
 
-
 .overlay{
   position: relative;
-  display: inline-block;          
+  display: inline-block; 
+  width: 500px;       
 }
+
 .overlay__img{
   display: block;                 
-  max-width: none;                 
+  max-width: 100%;
+  height: auto;              
 }
 
 .overlay__img--top{
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);  
+  width: 200px;
   z-index: 2;                   
 }
 
@@ -64,7 +67,7 @@ body{ margin:0; font-family: Arial, sans-serif; line-height:1.6; }
   margin: 12px 0;
 }
 .maze__cell {
-  width: 80px; height: 80 px;
+  width: 80px; height: 80px;
   border: 3px solid black;
 }
 .cut-t { border-top: none; } 
