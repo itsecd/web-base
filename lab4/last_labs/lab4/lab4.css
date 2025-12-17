@@ -5,7 +5,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.page-wrapper {
+.page {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #333;
   min-height: 100vh;
@@ -15,7 +15,7 @@
   padding: 20px;
 }
 
-.calc-box {
+.calc {
   background-color: white;
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
@@ -24,7 +24,7 @@
   max-width: 500px;
 }
 
-.calc-title {
+.calc__title {
   text-align: center;
   margin-bottom: 30px;
   color: #2c3e50;
@@ -32,27 +32,27 @@
   font-weight: 700;
 }
 
-.calc-form {
+.calc__form {
   display: flex;
   flex-direction: column;
   gap: 25px;
   margin-bottom: 25px;
 }
 
-.calc-field {
+.calc__field {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.calc-label {
+.calc__label {
   font-weight: 600;
   color: #2c3e50;
   font-size: 16px;
 }
 
-.calc-input,
-.calc-select {
+.calc__input,
+.calc__select {
   padding: 15px;
   border: 2px solid #e1e8ed;
   border-radius: 10px;
@@ -61,15 +61,15 @@
   background-color: #f8f9fa;
 }
 
-.calc-input:focus,
-.calc-select:focus {
+.calc__input:focus,
+.calc__select:focus {
   border-color: #667eea;
   outline: none;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
   background-color: white;
 }
 
-.calc-select {
+.calc__select {
   cursor: pointer;
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23667eea' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
@@ -78,7 +78,7 @@
   background-size: 14px;
 }
 
-.calc-btn {
+.calc__btn {
   background: linear-gradient(to right, #667eea, #764ba2);
   color: white;
   border: none;
@@ -91,16 +91,16 @@
   margin-top: 10px;
 }
 
-.calc-btn:hover {
+.calc__btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
 }
 
-.calc-result {
+.calc__result {
   margin-top: 20px;
 }
 
-.calc-result-label {
+.calc__result-label {
   display: block;
   font-weight: 600;
   color: #2c3e50;
@@ -108,7 +108,7 @@
   font-size: 16px;
 }
 
-.calc-result-output {
+.calc__result-output {
   width: 100%;
   padding: 15px;
   border: 2px solid #e1e8ed;
@@ -121,12 +121,12 @@
   transition: all 0.3s;
 }
 
-.calc-error {
+.calc__input_error {
   border-color: #ff4757 !important;
   background-color: #fff5f5 !important;
 }
 
-.calc-error-msg {
+.calc__error-msg {
   color: #ff4757;
   font-size: 14px;
   margin-top: 8px;
@@ -139,20 +139,20 @@
     padding: 15px;
   }
 
-  .calc-box {
+  .calc {
     padding: 30px;
   }
 
-  .calc-title {
+  .calc__title {
     font-size: 24px;
   }
 
-  .calc-input,
-  .calc-select {
+  .calc__input,
+  .calc__select {
     padding: 14px;
   }
 
-  .calc-btn {
+  .calc__btn {
     padding: 15px;
     font-size: 16px;
   }

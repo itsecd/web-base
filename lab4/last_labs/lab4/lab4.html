@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="lab4.css" />
   </head>
   <body>
-    <div class="page-wrapper">
-      <div class="calc-box">
-        <h1 class="calc-title">Лабораторная работа №4: Калькулятор</h1>
+    <div class="page">
+      <div class="calc">
+        <h1 class="calc__title">Лабораторная работа №4: Калькулятор</h1>
 
-        <div class="calc-form">
-          <div class="calc-field">
-            <label class="calc-label" for="value-one">Первое число:</label>
+        <form class="calc__form">
+          <div class="calc__field">
+            <label class="calc__label" for="value-one">Первое число:</label>
             <input
-              class="calc-input"
+              class="calc__input"
               type="number"
               id="value-one"
               placeholder="Введите первое число"
@@ -23,9 +23,9 @@
             />
           </div>
 
-          <div class="calc-field">
-            <label class="calc-label" for="operation-type">Операция:</label>
-            <select class="calc-select" id="operation-type">
+          <div class="calc__field">
+            <label class="calc__label" for="operation-type">Операция:</label>
+            <select class="calc__select" id="operation-type">
               <option value="+">Сложение (+)</option>
               <option value="-">Вычитание (-)</option>
               <option value="*">Умножение (×)</option>
@@ -33,10 +33,10 @@
             </select>
           </div>
 
-          <div class="calc-field">
-            <label class="calc-label" for="value-two">Второе число:</label>
+          <div class="calc__field">
+            <label class="calc__label" for="value-two">Второе число:</label>
             <input
-              class="calc-input"
+              class="calc__input"
               type="number"
               id="value-two"
               placeholder="Введите второе число"
@@ -44,20 +44,22 @@
             />
           </div>
 
-          <button class="calc-btn" id="calc-btn">Вычислить</button>
+          <button class="calc__btn" id="calc-btn" type="button">
+            Вычислить
+          </button>
 
-          <div class="calc-result">
-            <label class="calc-result-label" for="calc-result"
+          <div class="calc__result">
+            <label class="calc__result-label" for="calc-result"
               >Результат:</label
             >
             <input
-              class="calc-result-output"
+              class="calc__result-output"
               type="text"
               id="calc-result"
               readonly
             />
           </div>
-        </div>
+        </form>
       </div>
     </div>
 
