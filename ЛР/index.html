@@ -1,102 +1,76 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <title>Лабораторная работа 2</title>
-        <link href="style.css" rel="stylesheet" type="text/css" />
-    </head>
-
-    <body>
-        <div>
-            <h2>Задание 1</h2>
-            <p>Популярные стриминговые сервисы:</p>
-            <ul class="streaming-services-list">
-                <li class="streaming-services-list__item">Netflix</li>
-                <li class="streaming-services-list__item">YouTube Premium</li>
-                <li class="streaming-services-list__item">Spotify</li>
-                <li class="streaming-services-list__item">Disney+</li>
-                <li class="streaming-services-list__item">Twitch</li>
-            </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Структура страницы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="resume">
+            <main class="resume__main">
+                <section class="resume__main__profile-section">
+                    <div class="profile__info">
+                        <div class="profile__info__avatar">
+                            <img src="mememe.jpg" alt="Not me :c" class="profile__info__avatar-picture">
+                        </div>
+                        <div class="profile__info__name">
+                            <h1>Смирнов Михаил Вячеславович</h1>
+                            <h3>Студент (очевидно, ненадолго)</h3>
+                        </div>
+                    </div>
+                </section>
+                <section class="resume__main__about-section">
+                    <h2>О себе</h2>
+                    <div class="about__content">
+                        Хочу спать
+                    </div>
+                </section>
+                <section class="resume__main__contacts-section">
+                    <h2>Контакты</h2>
+                    <div class="contacts__content">
+                        <ul class="content__list">
+                            <li class="content__list-item">kuzhuc@mail.ru</li>
+                            <li class="content__list-item"><a href="https://github.com/Kuzhuc">GitHub</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+            <aside class="resume__sidebar">
+                <section class="resume__sidebar__soft-section">
+                    <h2>Софтскиллы</h2>
+                    <div class="soft__content">
+                        <ul class="content__list">
+                            <li class="content__list-item">Тайм-менеджмент</li>
+                            <li class="content__list-item">Воображение</li>
+                            <li class="content__list-item">Трудолюбие</li>
+                            <li class="content__list-item">Честность</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="resume__sidebar__hard-section">
+                    <h2>Хардскиллы</h2>
+                    <div class="hard__content">
+                        <ul class="content__list">
+                            <li class="content__list-item">Алфавит</li>
+                            <li class="content__list-item">Таблица умножения</li>
+                            <li class="content__list-item">Деление столбиком</li>
+                            <li class="content__list-item">Кумир</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="resume__sidebar__projects-section">
+                    <h2>Портфолио</h2>
+                    <div class="projects__content">
+                        <ul class="content__list">
+                            <li class="content__list-item"><a href="https://github.com/Kuzhuc/web-base">Лабораторная 1 (где-то)</a></li>
+                            <li class="content__list-item"><a href="https://github.com/Kuzhuc/web-base/tree/main/ЛР">Лабораторная 2</a></li>
+                            <li class="content__list-item">Калькулятор (почти)</li>
+                            <li class="content__list-item"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">GTA 6</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </aside>
         </div>
-
-        <div>
-            <h2>Задание 2</h2>
-            <div>
-                <div class="parent-1">
-                    <h3>Parent 1</h3>
-                    <div class="parent-1__child">child 1</div>
-                    <div class="parent-1__child">child 2</div>
-                    <div class="parent-1__child">child 3</div>
-                    <div class="parent-1__child">child 4</div>
-                </div>
-                <div class="parent-3">
-                    <h3>Parent 3</h3>
-                    <div class="parent-3__child">child 1</div>
-                    <div class="parent-3__child">child 2</div>
-                </div>
-                <div class="parent-2">
-                    <h3>Parent 2</h3>
-                    <div class="parent-2__child">child 1</div>
-                    <div class="parent-2__child">child 2</div>
-                </div>
-                <div class="parent-3">
-                    <h3>Parent 3</h3>
-                    <div class="parent-3__child">child 1</div>
-                    <div class="parent-3__child">child 2</div>
-                    <div class="parent-2__child">child 2</div>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <h2>Задание 3</h2>
-            <p>
-                Языки программирования — это инструменты, с помощью которых разработчики создают программное обеспечение,
-                веб-приложения, игры, алгоритмы и многое другое. Каждый язык имеет свои особенности, синтаксис и сферу применения.
-                Ниже представлены некоторые из наиболее известных языков:
-            </p>
-            <ul class="langs-list">
-                <li class="langs-list__item">
-                    <a href="https://www.python.org">Python</a>
-                    – высокоуровневый язык с простым синтаксисом, популярный в Data Science, веб-разработке и автоматизации.
-                </li>
-                <li class="langs-list__item">
-                    <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript">JavaScript</a>
-                    – основной язык для фронтенд-разработки, работает в браузерах и на сервере (Node.js).
-                </li>
-                <li class="langs-list__item">
-                    <a href="https://www.java.com/ru">Java</a>
-                    – объектно-ориентированный язык, широко используется в корпоративных приложениях и Android-разработке.
-                </li>
-                <li class="langs-list__item">
-                    <a href="https://cppreference.com">C++</a>
-                    – мощный язык для системного программирования, игр и высокопроизводительных приложений.
-                </li>
-                <li class="langs-list__item">
-                    <a href="https://learn.microsoft.com/ru-ru/dotnet/csharp">C#</a>
-                    – язык от Microsoft, применяется в разработке под Windows, играх (Unity) и веб-приложениях.
-                </li>
-                <li class="langs-list__item">
-                    <a href="https://go.dev">Go (Golang)</a>
-                    – созданный Google, язык для высоконагруженных сетевых сервисов и облачных технологий.
-                </li>
-                <li class="langs-list__item">
-                    <a href="https://www.ruby-lang.org/ru">Ruby</a>
-                    – известен благодаря фреймворку Ruby on Rails для веб-разработки.
-                </li>
-                <li class="langs-list__item">
-                    <a href="https://www.swift.org">Swift</a>
-                    – язык Apple для разработки под iOS и macOS.
-                </li>
-                <li class="langs-list__item">
-                    <a href="https://kotlinlang.org">Kotlin</a>
-                    – современный язык, официально поддерживаемый для Android-разработки.
-                </li>
-                <li class="langs-list__item">
-                    <a href="https://rust-lang.org">Rust</a>
-                    – язык системного программирования с акцентом на безопасность и производительность.
-                </li>
-            </ul>
-            <p>Это лишь малая часть из множества существующих языков, и выбор зависит от задач, которые нужно решить.</p>
-        </div>
-    </body>
+</body>
 </html>
