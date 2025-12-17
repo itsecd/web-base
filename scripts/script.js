@@ -112,24 +112,35 @@ function ctgh(){
 
 // БЛОК ИНИЦИАЛИЗАЦИИ ОБРАБОТЧИКОВ
 // Создадим привязки к каждой кнопке
-function init_buttons(){
-    document.getElementById('add').onclick=add;
-    document.getElementById('substr').onclick=substract;
-    document.getElementById('mult').onclick=mult;
-    document.getElementById('divide').onclick=divide;
-    document.getElementById('sin').onclick=sin;
-    document.getElementById('cos').onclick=cos;
-    document.getElementById('tg').onclick=tg;
-    document.getElementById('ctg').onclick=ctg;
-    document.getElementById('ln').onclick=ln;
-    document.getElementById('lg').onclick=lg;
-    document.getElementById('log_bA').onclick=log_bA;
-    document.getElementById('exp').onclick=exp;
-    document.getElementById('power').onclick=power;
-    document.getElementById('sh').onclick=sh;
-    document.getElementById('ch').onclick=ch;
-    document.getElementById('th').onclick=th;
-    document.getElementById('ctgh').onclick=ctgh;
+function init_buttons() {
+  const buttons = [
+    { id: 'add', handler: add },
+    { id: 'substr', handler: substract },
+    { id: 'mult', handler: mult },
+    { id: 'divide', handler: divide },
+    { id: 'sin', handler: sin },
+    { id: 'cos', handler: cos },
+    { id: 'tg', handler: tg },
+    { id: 'ctg', handler: ctg },
+    { id: 'ln', handler: ln },
+    { id: 'lg', handler: lg },
+    { id: 'log_bA', handler: log_bA },
+    { id: 'exp', handler: exp },
+    { id: 'power', handler: power },
+    { id: 'sh', handler: sh },
+    { id: 'ch', handler: ch },
+    { id: 'th', handler: th },
+    { id: 'ctgh', handler: ctgh }
+  ];
+
+  buttons.forEach(({ id, handler }) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.addEventListener('click', handler);
+    } else {
+      console.warn(`Элемент с id="${id}" не найден!`);
+    }
+  });
 }
 
 
