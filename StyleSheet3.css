@@ -23,19 +23,19 @@
     padding-bottom: 30px;
 }
 
-.resume__identity-column {
+.top-section__identity-column {
     flex: 0 0 250px;
     text-align: center;
 }
 
-.resume__about-column {
+.top-section__about-column {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.resume__avatar {
+.identity-column__avatar {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -44,19 +44,19 @@
     margin-bottom: 15px;
 }
 
-.resume__title {
+.identity-column__title {
     margin: 10px 0 5px;
     font-size: 20px;
     color: #123C69;
 }
 
-.resume__birth-date {
+.identity-column__birth-date {
     color: #123C69;
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.resume__github-link {
+.identity-column__github-link {
     display: inline-block;
     text-decoration: none;
     background-color: #123C69;
@@ -67,7 +67,7 @@
     transition: background 0.3s;
 }
 
-    .resume__github-link:hover {
+    .identity-column__github-link:hover {
         background-color: #AC3B69;
     }
 
@@ -75,10 +75,10 @@
     margin-top: 20px;
 }
 
-.resume__section {
+.bottom-section__bottom-element {
     margin-bottom: 30px;
 }
-.resume__subtitle {
+.about-column__subtitle {
     color: #AC3B69;
     border-left: 4px solid #AC3B69;
     padding-left: 10px;
@@ -86,28 +86,30 @@
     font-size: 1.4rem;
 }
 
-.resume__text {
+.about-column__text {
     line-height: 1.5;
 }
-
-.resume__tags {
+.bottom-element__subtitle {
+    border-left: 4px solid;
+    padding-left: 10px;
+}
+.bottom-element__tags {
     list-style: none;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
+.tags__item {
+    background-color: #EEE2DC;
+    color: #123C69;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
 
-    .resume__tags li {
-        background-color: #EEE2DC;
-        color: #123C69;
-        padding: 5px 12px;
-        border-radius: 5px;
-        font-size: 20px;
-        font-weight: 600;
-    }
-
-.resume__skills-category {
+.bottom-element__skills-category {
     margin-bottom: 10px;
     font-weight: bold;
     display: block;
