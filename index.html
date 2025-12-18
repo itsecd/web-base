@@ -50,10 +50,13 @@
             </div>
         </section>
 
-        <section class="task-4">
+                <section class="task-4">
             <h2 class="section-title">Лабиринт 3x3</h2>
             <div class="maze">
-                <div class="maze__cell maze__cell_open-top maze__cell_open-right"></div>
+                <!-- Вход - верхняя левая клетка -->
+                <div class="maze__cell maze__cell_open-top maze__cell_open-right maze__cell--entry">
+                    <span class="maze__label">Вход</span>
+                </div>
                 <div class="maze__cell maze__cell_open-top maze__cell_open-left"></div>
                 <div class="maze__cell maze__cell_open-top maze__cell_open-bottom"></div>
 
@@ -63,7 +66,10 @@
 
                 <div class="maze__cell maze__cell_open-right"></div>
                 <div class="maze__cell maze__cell_open-left maze__cell_open-bottom"></div>
-                <div class="maze__cell maze__cell_open-top maze__cell_open-left"></div>
+                <!-- Выход - нижняя правая клетка -->
+                <div class="maze__cell maze__cell_open-top maze__cell_open-left maze__cell--exit">
+                    <span class="maze__label">Выход</span>
+                </div>
             </div>
         </section>
     </div>
