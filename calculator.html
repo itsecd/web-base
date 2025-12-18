@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор - Лабораторная работа 4</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1 class="calculator-title">Лабораторная работа 4</h1>
+        <p class="calculator-subtitle">Интерактивный калькулятор на JavaScript</p>
+        
+        <div class="calculator">
+            <div class="calculator__display" id="display">0</div>
+            
+            <div class="calculator__controls">
+                <div class="calculator__input-group">
+                    <label for="num1">Первое число:</label>
+                    <input type="number" id="num1" class="calculator__input" placeholder="Введите число">
+                </div>
+                
+                <div class="calculator__input-group">
+                    <label for="operation">Операция:</label>
+                    <select id="operation" class="calculator__select">
+                        <option value="add">+ Сложение</option>
+                        <option value="subtract">- Вычитание</option>
+                        <option value="multiply">× Умножение</option>
+                        <option value="divide">÷ Деление</option>
+                    </select>
+                </div>
+                
+                <div class="calculator__input-group">
+                    <label for="num2">Второе число:</label>
+                    <input type="number" id="num2" class="calculator__input" placeholder="Введите число">
+                </div>
+            </div>
+            
+            <button id="calculate" class="calculator__button">Вычислить</button>
+            <button id="clear" class="calculator__button calculator__button_secondary">Очистить</button>
+            
+            <div class="calculator__result">
+                <h3>Результат:</h3>
+                <div id="result" class="calculator__result-value">-</div>
+            </div>
+            
+            <div id="error" class="calculator__error"></div>
+            
+            <div class="calculator__features">
+                <h3>📋 Требования задания:</h3>
+                <ul>
+                    <li>✓ Два поля для ввода числа</li>
+                    <li>✓ Выпадающий список для выбора операции</li>
+                    <li>✓ Кнопка "Вычислить"</li>
+                    <li>✓ Поле с результатом действия</li>
+                    <li>✓ Обработка ошибок (деление на ноль и др.)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <a href="index.html" class="nav-link">← Лабораторная 1</a>
+            <a href="lab2.html" class="nav-link">← Лабораторная 2</a>
+            <a href="laba3veb.html" class="nav-link">← Лабораторная 3</a>
+        </div>
+    </div>
+    
+    <script src="calculator.js"></script>
+</body>
+</html>
