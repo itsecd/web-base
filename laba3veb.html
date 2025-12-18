@@ -4,287 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Резюме - Сухова Юлия Сергеевна</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ffe6f2; /* Розовый фон */
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-        }
-
-        .resume-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #ff66b2, #ff99cc);
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        .content {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 30px;
-        }
-
-        .left-column {
-            flex: 1;
-            min-width: 300px;
-            padding-right: 30px;
-        }
-
-        .right-column {
-            flex: 2;
-            min-width: 300px;
-            border-left: 2px solid #ff99cc;
-            padding-left: 30px;
-        }
-
-        .photo-container {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #ff99cc;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
-        .section-title {
-            color: #ff66b2;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid #ffccdd;
-        }
-
-        .info-item {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .info-label {
-            font-weight: bold;
-            min-width: 150px;
-            color: #ff66b2;
-        }
-
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .skill {
-            background-color: #ffccdd;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-
-        .hobbies-list {
-            list-style-type: none;
-        }
-
-        .hobbies-list li {
-            margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .hobbies-list li:before {
-            content: "♥";
-            color: #ff66b2;
-            position: absolute;
-            left: 0;
-        }
-
-        .about-text {
-            text-align: justify;
-            line-height: 1.8;
-        }
-
-        .github-link {
-            display: inline-block;
-            background-color: #ff66b2;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 10px;
-            transition: background-color 0.3s;
-        }
-
-        .github-link:hover {
-            background-color: #e0559c;
-        }
-
-        @media (max-width: 768px) {
-            .content {
-                flex-direction: column;
-            }
-            
-            .right-column {
-                border-left: none;
-                border-top: 2px solid #ff99cc;
-                padding-left: 0;
-                padding-top: 30px;
-                margin-top: 20px;
-            }
-            
-            .left-column {
-                padding-right: 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="resume-container">
-        <div class="header">
-            <h1>Сухова Юлия Сергеевна</h1>
-            <p>Студентка • Начинающий разработчик</p>
-        </div>
+    <div class="resume">
+        <header class="resume__header">
+            <h1 class="resume__title">Сухова Юлия Сергеевна</h1>
+            <p class="resume__subtitle">Студентка • Начинающий разработчик</p>
+        </header>
         
-        <div class="content">
-            <div class="left-column">
-                <div class="photo-container">
-                    <img src="photo_2024-11-15_00-26-55.jpg" alt="Фото" class="photo">
+        <div class="resume__content">
+            <div class="resume__left-column">
+                <div class="photo">
+                    <img src="photo_2024-11-15_00-26-55.jpg" alt="Фото" class="photo__image">
                 </div>
                 
-                <div class="section">
-                    <h2 class="section-title">Личная информация</h2>
+                <section class="section">
+                    <h2 class="section__title">Личная информация</h2>
                     <div class="info-item">
-                        <div class="info-label">Дата рождения:</div>
-                        <div>15.08.2006</div>
+                        <div class="info-item__label">Дата рождения:</div>
+                        <div class="info-item__value">15.08.2006</div>
                     </div>
                     <div class="info-item">
-                        <div class="info-label">GitHub:</div>
-                        <div>
+                        <div class="info-item__label">GitHub:</div>
+                        <div class="info-item__value">
                             <a href="https://github.com/sukhovaay" class="github-link" target="_blank">sukhovaay</a>
                         </div>
                     </div>
-                </div>
+                </section>
                 
-                <div class="section">
-                    <h2 class="section-title">Hard Skills</h2>
-                    <div class="skills-container">
-                        <div class="skill">HTML</div>
-                        <div class="skill">CSS</div>
-                        <div class="skill">JavaScript</div>
-                        <div class="skill">Python</div>
-                        <div class="skill">Git</div>
-                        <div class="skill">Figma</div>
+                <section class="section">
+                    <h2 class="section__title">Hard Skills</h2>
+                    <div class="skills">
+                        <div class="skills__item">HTML</div>
+                        <div class="skills__item">CSS</div>
+                        <div class="skills__item">JavaScript</div>
+                        <div class="skills__item">Python</div>
+                        <div class="skills__item">Git</div>
+                        <div class="skills__item">Figma</div>
                     </div>
-                </div>
+                </section>
                 
-                <div class="section">
-                    <h2 class="section-title">Soft Skills</h2>
-                    <div class="skills-container">
-                        <div class="skill">Коммуникабельность</div>
-                        <div class="skill">Работа в команде</div>
-                        <div class="skill">Тайм-менеджмент</div>
-                        <div class="skill">Креативность</div>
-                        <div class="skill">Адаптивность</div>
-                        <div class="skill">Решение проблем</div>
+                <section class="section">
+                    <h2 class="section__title">Soft Skills</h2>
+                    <div class="skills">
+                        <div class="skills__item">Коммуникабельность</div>
+                        <div class="skills__item">Работа в команде</div>
+                        <div class="skills__item">Тайм-менеджмент</div>
+                        <div class="skills__item">Креативность</div>
+                        <div class="skills__item">Адаптивность</div>
+                        <div class="skills__item">Решение проблем</div>
                     </div>
-                </div>
+                </section>
             </div>
             
-            <div class="right-column">
-                <div class="section">
-                    <h2 class="section-title">О себе</h2>
+            <div class="resume__right-column">
+                <section class="section">
+                    <h2 class="section__title">О себе</h2>
                     <p class="about-text">
                         Студентка, увлеченная программированием и веб-разработкой. Имею базовые знания в HTML, CSS и JavaScript, 
                         стремлюсь развивать свои навыки и изучать новые технологии. Ответственно подхожу к выполнению задач, 
                         умею работать в команде и быстро обучаюсь. В свободное время занимаюсь танцами и спортом, что помогает 
                         поддерживать баланс между учебой и личной жизнью.
                     </p>
-                </div>
+                </section>
                 
-                <div class="section">
-                    <h2 class="section-title">Увлечения</h2>
+                <section class="section">
+                    <h2 class="section__title">Увлечения</h2>
                     <ul class="hobbies-list">
-                        <li>Программирование</li>
-                        <li>Танцы</li>
-                        <li>Спортзал</li>
-                        <li>Изучение новых технологий</li>
-                        <li>Чтение IT-литературы</li>
+                        <li class="hobbies-list__item">Программирование</li>
+                        <li class="hobbies-list__item">Танцы</li>
+                        <li class="hobbies-list__item">Спортзал</li>
+                        <li class="hobbies-list__item">Изучение новых технологий</li>
+                        <li class="hobbies-list__item">Чтение IT-литературы</li>
                     </ul>
-                </div>
+                </section>
                 
-                <div class="section">
-                    <h2 class="section-title">Образование</h2>
+                <section class="section">
+                    <h2 class="section__title">Образование</h2>
                     <div class="info-item">
-                        <div class="info-label">Учебное заведение:</div>
-                        <div>Самарский Университет</div>
+                        <div class="info-item__label">Учебное заведение:</div>
+                        <div class="info-item__value">Самарский Университет</div>
                     </div>
                     <div class="info-item">
-                        <div class="info-label">Направление:</div>
-                        <div>Информационная безопасность автоматизированных систем</div>
+                        <div class="info-item__label">Направление:</div>
+                        <div class="info-item__value">Информационная безопасность автоматизированных систем</div>
                     </div>
                     <div class="info-item">
-                        <div class="info-label">Год поступления:</div>
-                        <div>2024</div>
+                        <div class="info-item__label">Год поступления:</div>
+                        <div class="info-item__value">2024</div>
                     </div>
-                </div>
+                </section>
                 
-                <div class="section">
-                    <h2 class="section-title">Проекты</h2>
+                <section class="section">
+                    <h2 class="section__title">Проекты</h2>
                     <div class="info-item">
-                        <div class="info-label">Лабораторная 1:</div>
-                        <div>Основы верстки HTML/CSS</div>
+                        <div class="info-item__label">Лабораторная 1:</div>
+                        <div class="info-item__value">Основы верстки HTML/CSS</div>
                     </div>
                     <div class="info-item">
-                        <div class="info-label">Лабораторная 2:</div>
-                        <div>Продвинутая верстка с анимациями</div>
+                        <div class="info-item__label">Лабораторная 2:</div>
+                        <div class="info-item__value">Продвинутая верстка с анимациями</div>
                     </div>
                     <div class="info-item">
-                        <div class="info-label">Текущий проект:</div>
-                        <div>Разработка персонального резюме</div>
+                        <div class="info-item__label">Текущий проект:</div>
+                        <div class="info-item__value">Разработка персонального резюме</div>
                     </div>
-                </div>
+                </section>
                 
-                <div class="section">
-                    <h2 class="section-title">Цели</h2>
+                <section class="section">
+                    <h2 class="section__title">Цели</h2>
                     <p class="about-text">
                         В ближайшем будущем планирую углубить знания в JavaScript. В долгосрочной перспективе - стать 
                         full-stack разработчиком и работать над интересными проектами.
                     </p>
-                </div>
+                </section>
             </div>
         </div>
     </div>

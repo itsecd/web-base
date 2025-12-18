@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffe6f2;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.resume {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.resume__header {
+    background: linear-gradient(135deg, #ff66b2, #ff99cc);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.resume__title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.resume__subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.resume__content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.resume__left-column {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 30px;
+}
+
+.resume__right-column {
+    flex: 2;
+    min-width: 300px;
+    border-left: 2px solid #ff99cc;
+    padding-left: 30px;
+}
+
+/* Блок photo */
+.photo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.photo__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ff99cc;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Блок section */
+.section {
+    margin-bottom: 30px;
+}
+
+.section__title {
+    color: #ff66b2;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ffccdd;
+}
+
+/* Блок info-item */
+.info-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.info-item__label {
+    font-weight: bold;
+    min-width: 150px;
+    color: #ff66b2;
+}
+
+.info-item__value {
+    flex: 1;
+}
+
+/* Блок skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.skills__item {
+    background-color: #ffccdd;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Блок hobbies-list */
+.hobbies-list {
+    list-style-type: none;
+}
+
+.hobbies-list__item {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.hobbies-list__item::before {
+    content: "♥";
+    color: #ff66b2;
+    position: absolute;
+    left: 0;
+}
+
+/* Блок about-text */
+.about-text {
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Блок github-link */
+.github-link {
+    display: inline-block;
+    background-color: #ff66b2;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.github-link:hover {
+    background-color: #e0559c;
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+    .resume__content {
+        flex-direction: column;
+    }
+    
+    .resume__right-column {
+        border-left: none;
+        border-top: 2px solid #ff99cc;
+        padding-left: 0;
+        padding-top: 30px;
+        margin-top: 20px;
+    }
+    
+    .resume__left-column {
+        padding-right: 0;
+    }
+}
+
+/* Дополнительный блок для placeholder изображения */
+.photo__placeholder {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ffccdd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 5px solid #ff99cc;
+    color: #ff66b2;
+    font-weight: bold;
+}
