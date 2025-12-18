@@ -3,36 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Калькулятор — Лабораторная №4</title>
+  <title>Калькулятор — Лабораторная работа 4</title>
   <link rel="stylesheet" href="calculator.css" />
 </head>
 <body>
   <div class="calculator">
-    <h1>Калькулятор</h1>
+    <h1 class="calculator__title">Калькулятор</h1>
 
-    <div class="input-group">
-      <label for="num1">Первое число:</label>
-      <input type="number" id="num1" placeholder="Введите число" step="any" />
+    <div class="calculator__input-group">
+      <label for="calculator__num1" class="calculator__label">Число 1:</label>
+      <input type="number" id="calculator__num1" class="calculator__input" placeholder="Введите первое число">
     </div>
 
-    <div class="input-group">
-      <label for="operation">Операция:</label>
-      <select id="operation">
+    <div class="calculator__input-group">
+      <label for="calculator__num2" class="calculator__label">Число 2:</label>
+      <input type="number" id="calculator__num2" class="calculator__input" placeholder="Введите второе число">
+    </div>
+
+    <div class="calculator__input-group">
+      <label for="calculator__operation" class="calculator__label">Операция:</label>
+      <select id="calculator__operation" class="calculator__select">
         <option value="+">Сложение (+)</option>
-        <option value="-">Вычитание (−)</option>
-        <option value="*">Умножение (×)</option>
-        <option value="/">Деление (÷)</option>
+        <option value="-">Вычитание (-)</option>
+        <option value="*">Умножение (*)</option>
+        <option value="/">Деление (/)</option>
       </select>
     </div>
 
-    <div class="input-group">
-      <label for="num2">Второе число:</label>
-      <input type="number" id="num2" placeholder="Введите число" step="any" />
+    <button class="calculator__button" id="calculator__button">Вычислить</button>
+
+    <div class="calculator__result" id="calculator__result">
+      Результат: <span id="calculator__result-value">—</span>
     </div>
-
-    <button id="calculateBtn">Вычислить</button>
-
-    <div id="result" class="result"></div>
   </div>
 
   <script src="calculator.js"></script>

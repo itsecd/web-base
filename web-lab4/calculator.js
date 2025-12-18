@@ -1,73 +1,58 @@
-function calculateOperation(num1, num2, operation) {
-  const a = parseFloat(num1);
-  const b = parseFloat(num2);
+document.addEventListener("DOMContentLoaded", () => {
+  const num1Input = document.getElementById("calculator__num1");
+  const num2Input = document.getElementById("calculator__num2");
+  const operationSelect = document.getElementById("calculator__operation");
+  const button = document.getElementById("calculator__button");
+  const resultValue = document.getElementById("calculator__result-value");
 
-  switch (operation) {
-    case "+":
-      return a + b;
-    case "-":
-      return a - b;
-    case "*":
-      return a * b;
-    case "/":
-      if (b === 0) {
-        throw new Error("Деление на ноль невозможно");
-      }
-      return a / b;
-    default:
-      throw new Error("Неверная операция");
-  }
-}
-
-function validateInput(num1, num2) {
-  if (!num1.trim() || !num2.trim()) {
-    return "Ошибка: введите оба числа";
-  }
-
-  if (isNaN(parseFloat(num1)) || isNaN(parseFloat(num2))) {
-    return "Ошибка: введите корректные числа";
-  }
-
-  return null;
-}
-
-function handleCalculate() {
-  const num1 = document.getElementById("num1").value;
-  const num2 = document.getElementById("num2").value;
-  const operation = document.getElementById("operation").value;
-  const resultElement = document.getElementById("result");
-
-  const validationError = validateInput(num1, num2);
-  if (validationError) {
-    resultElement.textContent = validationError;
-    resultElement.className = "result error";
+ 
+  if (!num1Input || !num2Input || !operationSelect || !button || !resultValue) {
+    console.error("Ошибка: один или несколько HTML-элементов отсутствуют.");
     return;
   }
 
-  try {
-    const result = calculateOperation(num1, num2, operation);
-    resultElement.textContent = result;
-    resultElement.className = "result";
-  } catch (error) {
-    resultElement.textContent = error.message;
-    resultElement.className = "result error";
+
+  function calculate() {
+    const num1 = parseFloat(num1Input.value);
+    const num2 = parseFloat(num2Input.value);
+    const op = operationSelect.value;
+
+
+    if (isNaN(num1) || isNaN(num2)) {
+      resultValue.textContent = "Ошибка: введите числа!";
+      return;
+    }
+
+    let result;
+    switch (op) {
+      case "+":
+        result = num1 + num2;
+        break;
+      case "-":
+        result = num1 - num2;
+        break;
+      case "*":
+        result = num1 * num2;
+        break;
+      case "/":
+        if (num2 === 0) {
+          resultValue.textContent = "Ошибка: деление на ноль!";
+          return;
+        }
+        result = num1 / num2;
+        break;
+      default:
+        resultValue.textContent = "Ошибка: выберите операцию!";
+        return;
+    }
+
+    resultValue.textContent = result;
   }
-}
 
-function initCalculator() {
-  const calculateButton = document.getElementById("calculateBtn");
-  if (calculateButton) {
-    calculateButton.addEventListener("click", handleCalculate);
-  }
 
-  const inputs = document.querySelectorAll("#num1, #num2");
-  inputs.forEach((input) => {
-    input.addEventListener("keypress", (e) => {
-      if (e.key === "Enter") {
-        handleCalculate();
-      }
-    });
-  });
-}
+  button.addEventListener("click", calculate);
 
-document.addEventListener("DOMContentLoaded", initCalculator);
+
+  num1Input.addEventListener("keypress", e => e.key === "Enter" && calculate());
+  num2Input.addEventListener("keypress", e => e.key === "Enter" && calculate());
+});
