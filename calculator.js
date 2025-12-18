@@ -7,6 +7,11 @@
     const error1Div = document.getElementById('error1');
     const error2Div = document.getElementById('error2');
 
+    if (!number1Input || !number2Input || !operationSelect ||
+        !calculateButton || !resultDiv || !error1Div || !error2Div) {
+        console.error('Один или несколько элементов калькулятора не найдены');
+        return;
+    }
     function validateNumber(input, errorDiv) {
         const value = input.value.trim();
 
@@ -57,7 +62,7 @@
 
     function displayResult(operationString, result) {
         resultDiv.innerHTML = `
-                    <div class="calculator__result-equation">${operationString}</div>
+                    <div class="result-value__result-equation">${operationString}</div>
                     <div>= ${result}</div>
                 `;
     }
@@ -70,7 +75,7 @@
         const num1 = validateNumber(number1Input, error1Div);
         const num2 = validateNumber(number2Input, error2Div);
         if (num1 === null || num2 === null) {
-            resultDiv.innerHTML = '<span class="calculator__placeholder">Исправьте ошибки ввода</span>';
+            resultDiv.innerHTML = '<span class="result-value__placeholder">Исправьте ошибки ввода</span>';
             return;
         }
 

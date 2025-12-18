@@ -11,51 +11,62 @@
 .family {
     display: block;
 }
-.family__parent {
+.family__parent1 {
     margin: 10px;
     padding: 5px;
 }
-.family__child {
+
+.parent1__child {
+    padding: 5px;
+    margin: 5px 10px;
+    color: red;
+}
+.family__parent2 {
+    color: orange;
+    margin: 10px;
+    padding: 5px;
+}
+.parent2__child {
+        color: #b4005a;
+        border: 1px dashed orange;
+        padding: 5px;
+        margin: 5px 10px;
+}
+.family__parent3 {
+    margin: 10px;
+    padding: 5px;
+    color: initial;
+}
+.parent3__child {
+    color: initial;
     padding: 5px;
     margin: 5px 10px;
 }
-.family__parent--type-1 .family__child {
-    color: red;
-}
-.family__parent--type-2 {
-    color: orange;
-}
-    .family__parent--type-2 .family__child {
-        color: #b4005a;
-        border: 1px dashed orange;
-    }
-.family__parent--type-3,
-.family__parent--type-3 .family__child {
-    color: initial;
-}
-.family__parent--type-2 ~ .family__parent--type-3,
-.family__parent--type-2 ~ .family__parent--type-3 .family__child {
+.family__parent2 ~ .family__parent3,
+.family__parent2 ~ .family__parent3 .parent3__child {
     color: green;
 }
-    .family__parent--type-2 ~ .family__parent--type-3 .family__child.family__child--child-from-p2 {
+.family__parent2 ~ .family__parent3 .parent2__child {
         color: purple;
         border: none;
-    }
+}
 .programming-text {
     font-size: 16px;
 }
 .programming-text__link {
+    list-style-type: none;
     text-decoration: none;
     color: inherit;
     font-weight: bold;
 }
-    .programming-text__link::after {
+    .programming-text__link::before {
         content: "🌐";
         font-size: 10px;
     }
 .programming-list {
     position: relative;
     padding-bottom: 20px;
+    list-style-type: none
 }
     .programming-list::after {
         content: "";

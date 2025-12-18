@@ -13,54 +13,54 @@
         </header>
 
         <main class="calculator__main">
-            <div class="calculator__card">
-                <div class="calculator__inputs">
-                    <div class="calculator__input-group">
-                        <label for="number1" class="calculator__label">Первое число</label>
+            <div class="main__card">
+                <div class="card__inputs">
+                    <div class="inputs__input-group">
+                        <label for="number1" class="input-group__label">Первое число</label>
                         <input type="number"
                                id="number1"
-                               class="calculator__input"
+                               class="input-group__input"
                                placeholder="Введите число"
                                step="any">
-                        <div class="calculator__error" id="error1"></div>
+                        <div class="input-group__error" id="error1"></div>
                     </div>
 
-                    <div class="calculator__operation">
-                        <label for="operation" class="calculator__label">Операция</label>
-                        <div class="calculator__select-wrapper">
-                            <select id="operation" class="calculator__select">
+                    <div class="inputs__operation">
+                        <label for="operation" class="input-group__label">Операция</label>
+                        <div class="operation__select-wrapper">
+                            <select id="operation" class="select-wrapper__operation-select">
                                 <option value="add">+</option>
                                 <option value="subtract">-</option>
                                 <option value="multiply">×</option>
                                 <option value="divide">÷</option>
                             </select>
-                            <span class="calculator__select-icon">▼</span>
+                            <span class="select-wrapper__select-icon">▼</span>
                         </div>
                     </div>
 
-                    <div class="calculator__input-group">
-                        <label for="number2" class="calculator__label">Второе число</label>
+                    <div class="inputs__input-group">
+                        <label for="number2" class="input-group__label">Второе число</label>
                         <input type="number"
                                id="number2"
-                               class="calculator__input"
+                               class="input-group__input"
                                placeholder="Введите число"
                                step="any">
-                        <div class="calculator__error" id="error2"></div>
+                        <div class="input-group__error" id="error2"></div>
                     </div>
                 </div>
 
-                <button id="calculate" class="calculator__button">Вычислить</button>
+                <button id="calculate" class="card__button">Вычислить</button>
 
-                <div class="calculator__result">
-                    <h3 class="calculator__result-title">Результат</h3>
-                    <div class="calculator__result-value" id="result">
-                        <span class="calculator__placeholder">Введите числа и выберите операцию</span>
+                <div class="card__result">
+                    <h3 class="result__result-title">Результат</h3>
+                    <div class="result__result-value" id="result">
+                        <span class="result-value__placeholder">Введите числа и выберите операцию</span>
                     </div>
                 </div>
             </div>
 
-            <div class="calculator__navigation">
-                <a href="resume.html" class="calculator__nav-link">Вернуться к резюме</a>
+            <div class="main__navigation">
+                <a href="resume.html" class="navigation__nav-link">Вернуться к резюме</a>
             </div>
         </main>
     </div>
