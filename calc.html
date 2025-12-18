@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вычислительный модуль | Lab 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-calc">
+    <div class="resume"> <header class="resume__header">
+            <div class="resume__title">
+                <div class="status-container">
+                    <span class="status-dot"></span>
+                    <span class="status-text">System Online</span>
+                </div>
+                <h1 class="resume__name">Calculator.exe</h1>
+                <p class="resume__role-container" style="color: var(--text-muted);">
+                    Лабораторная работа №4: JavaScript Logic
+                </p>
+            </div>
+        </header>
+
+        <div class="terminal">
+            <div class="terminal__header">
+                <span class="terminal__dot"></span><span class="terminal__dot"></span><span class="terminal__dot"></span>
+                <span class="terminal__title">root@math_module:~</span>
+            </div>
+            
+            <div class="terminal__body">
+                <div class="calc-form">
+                    <div class="calc-form__row">
+                        <span class="terminal__prompt">input_a:~$</span>
+                        <input type="number" id="num1" class="calc-form__input" placeholder="0.00">
+                    </div>
+
+                    <div class="calc-form__row">
+                        <span class="terminal__prompt">select_op:~$</span>
+                        <select id="operator" class="calc-form__input calc-form__input--select">
+                            <option value="add">Сложение (+)</option>
+                            <option value="sub">Вычитание (-)</option>
+                            <option value="mul">Умножение (*)</option>
+                            <option value="div">Деление (/)</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-form__row">
+                        <span class="terminal__prompt">input_b:~$</span>
+                        <input type="number" id="num2" class="calc-form__input" placeholder="0.00">
+                    </div>
+
+                    <button id="calculateBtn" class="calc-form__btn">EXECUTE_CALCULATION</button>
+                    
+                    <div class="calc-form__result" id="result">
+                        <span class="terminal__prompt">output:~$</span> <span class="blink">_</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="resume__footer">
+            <a href="index.html" class="resume__link">← Вернуться в главное меню</a>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

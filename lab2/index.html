@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №2 | Продвинутая верстка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="section-container">
+        <h2 class="section-title">Анимация элементов списка</h2>
+        <ul class="animated-list">
+            <li class="animated-list__item">Веб-технологии</li>
+            <li class="animated-list__item">Дизайн интерфейсов</li>
+            <li class="animated-list__item">Алгоритмы</li>
+            <li class="animated-list__item">Базы данных</li>
+        </ul>
+    </section>
+
+    <section class="section-container">
+        <h2 class="section-title">Иерархия и контекстные стили</h2>
+        <div class="family-tree">
+            
+            <div class="family-tree__parent family-tree__parent--first">
+                Родитель 1
+                <div class="family-tree__child">Ребенок 1.1</div>
+                <div class="family-tree__child">Ребенок 1.2</div>
+            </div>
+
+            <div class="family-tree__parent family-tree__parent--third">
+                Родитель 3 (Контекст: до Parent 2)
+                <div class="family-tree__child">Ребенок 3.1</div>
+            </div>
+
+            <div class="family-tree__parent family-tree__parent--second">
+                Родитель 2 (Источник контекста) 
+                <div class="family-tree__child">Ребенок 2.1</div>
+                <div class="family-tree__child">Ребенок 2.2</div>
+            </div>
+
+            <div class="family-tree__parent family-tree__parent--third">
+                Родитель 3 (Контекст: после Parent 2)
+                <div class="family-tree__child">Ребенок 3.2</div>
+                <div class="family-tree__child family-tree__child--guest">Ребенок 2 (В гостях)</div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="promo">
+        <h2 class="section-title">Языки программирования</h2>
+        <p class="promo__text">
+            Языки программирования — это инструменты, с помощью которых разработчики создают программное обеспечение...
+        </p>
+        <ul class="promo__list">
+            <li class="promo__item"><a href="#" class="promo__link">Python</a> – популярный в Data Science.</li>
+            <li class="promo__item"><a href="#" class="promo__link">JavaScript</a> – основной язык для фронтенда.</li>
+            <li class="promo__item"><a href="#" class="promo__link">Java</a> – объектно-ориентированный язык.</li>
+            <li class="promo__item"><a href="#" class="promo__link">C++</a> – мощный язык для систем.</li>
+            <li class="promo__item"><a href="#" class="promo__link">C#</a> – язык от Microsoft.</li>
+            <li class="promo__item"><a href="#" class="promo__link">Go</a> – язык для облачных технологий.</li>
+            <li class="promo__item"><a href="#" class="promo__link">Ruby</a> – известен фреймворком Rails.</li>
+            <li class="promo__item"><a href="#" class="promo__link">Swift</a> – язык Apple.</li>
+            <li class="promo__item"><a href="#" class="promo__link">Kotlin</a> – для Android-разработки.</li>
+            <li class="promo__item"><a href="#" class="promo__link">Rust</a> – акцент на безопасность.</li>
+        </ul>
+    </section>
+
+</body>
+</html>

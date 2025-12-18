@@ -1,0 +1,136 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #f0f2f5;
+}
+
+.section-container {
+    background: #ffffff;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+}
+
+
+.animated-list {
+    list-style: none;
+    padding: 0;
+}
+
+.animated-list__item {
+    padding: 8px 0;
+    font-size: 1.1rem;
+    cursor: pointer;
+    /* Плавное изменение цвета при ховере */
+    transition: color 0.3s ease-in-out;
+}
+
+.animated-list__item:hover {
+    color: #007bff;
+}
+
+
+.family-tree {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.family-tree__parent {
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.family-tree__child {
+    margin: 10px 0 0 30px;
+    padding: 10px;
+    font-weight: normal;
+    background: rgba(0,0,0,0.02);
+}
+
+/* Правило: Дети первого родителя */
+.family-tree__parent--first .family-tree__child {
+    color: #d9534f;
+}
+
+/* Правило: Специфические стили для второго родителя и его детей */
+.family-tree__parent--second {
+    color: #f0ad4e; /* orange */
+}
+
+.family-tree__parent--second .family-tree__child {
+    color: #b4005a;
+    border: 1px dotted #f0ad4e;
+}
+
+/* КОНТЕКСТНОЕ ПРАВИЛО (General Sibling Combinator):
+   Стилизует Parent 3 и его потомков, только если Parent 3 стоит после Parent 2.
+*/
+.family-tree__parent--second ~ .family-tree__parent--third,
+.family-tree__parent--second ~ .family-tree__parent--third .family-tree__child {
+    color: #5cb85c; /* green */
+}
+
+/* ПЕРЕОПРЕДЕЛЕНИЕ СТИЛЕЙ (Specificity):
+   Для "гостей" убираем рамки и меняем цвет на purple.
+*/
+.family-tree__child--guest {
+    color: #6f42c1 !important;
+    border: none !important;
+    background: transparent;
+}
+
+.promo {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.promo__list {
+    list-style: none;
+    padding: 0;
+}
+
+.promo__link {
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Индикация ссылки через псевдоэлемент */
+.promo__link::after {
+    content: " 🌐";
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+/* ФУТЕР СЕКЦИИ: Логотип университета.
+   Используем псевдоэлемент списка для размещения декоративного элемента в конце.
+*/
+.promo__list::after {
+    content: "";
+    display: block;
+    margin: 60px auto 10px auto; /* Центрирование блочного элемента */
+    width: 100%;
+    max-width: 450px;
+    height: 120px;
+    
+    background-image: url('https://ssau.ru/pagefiles/of_docs/logo_osnovnoy_RUS.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
