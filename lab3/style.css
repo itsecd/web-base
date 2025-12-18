@@ -78,27 +78,27 @@ body {
     margin: 30px 0;
 }
 
-.info-item {
+.info__item {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
     font-size: 0.95rem;
 }
 
-.info-item i {
+.info__item i {
     color: #00d9ff;
     width: 20px;
     margin-right: 12px;
     font-size: 1rem;
 }
 
-.info-item a {
+.info__item a {
     color: #e0e0e0;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-.info-item a:hover {
+.info__item a:hover {
     color: #00d9ff;
 }
 
@@ -114,7 +114,7 @@ body {
     border-bottom: 2px solid #333;
 }
 
-.contact-item {
+.contacts__item {
     display: flex;
     align-items: center;
     margin-bottom: 12px;
@@ -122,7 +122,7 @@ body {
     font-size: 0.95rem;
 }
 
-.contact-item i {
+.contacts__item i {
     color: #00d9ff;
     margin-right: 10px;
     width: 20px;
@@ -162,7 +162,7 @@ body {
     margin-right: 10px;
 }
 
-.card p {
+.card__description {
     color: #aaa;
     line-height: 1.6;
     font-size: 0.95rem;
@@ -175,7 +175,7 @@ body {
     margin-top: 20px;
 }
 
-.project-card {
+.projects__card {
     background: #222;
     padding: 25px;
     border-radius: 15px;
@@ -190,17 +190,17 @@ body {
     position: relative;
 }
 
-.project-card:hover {
+.projects__card:hover {
     border-color: #00d9ff;
     transform: translateY(-5px);
 }
 
-.project-card.current {
+.projects__card_current {
     border-color: #00ff9d;
     background: rgba(0, 255, 157, 0.1);
 }
 
-.project-icon {
+.projects__icon {
     font-size: 2.5rem;
     color: #00d9ff;
     margin-bottom: 15px;
@@ -213,20 +213,20 @@ body {
     border-radius: 12px;
 }
 
-.project-card h3 {
+.projects__title {
     color: white;
     margin-bottom: 10px;
     font-size: 1.2rem;
 }
 
-.project-card p {
+.projects__description {
     color: #aaa;
     font-size: 0.9rem;
     margin-bottom: 15px;
     line-height: 1.5;
 }
 
-.project-status {
+.projects__status {
     background: #333;
     color: #00d9ff;
     padding: 5px 12px;
@@ -242,7 +242,7 @@ body {
     gap: 10px;
 }
 
-.skills span {
+.skills__item {
     background: #222;
     color: #00d9ff;
     padding: 8px 15px;
@@ -252,7 +252,7 @@ body {
     transition: all 0.3s;
 }
 
-.skills span:hover {
+.skills__item:hover {
     background: #00d9ff;
     color: #111;
 }
@@ -263,7 +263,7 @@ body {
     gap: 15px;
 }
 
-.soft-item {
+.soft-skills__item {
     background: #222;
     padding: 12px;
     border-radius: 10px;
@@ -273,7 +273,7 @@ body {
     transition: all 0.3s;
 }
 
-.soft-item:hover {
+.soft-skills__item:hover {
     border-color: #00d9ff;
 }
 
@@ -283,7 +283,7 @@ body {
     gap: 15px;
 }
 
-.hobby {
+.hobbies__item {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -294,11 +294,11 @@ body {
     transition: all 0.3s;
 }
 
-.hobby:hover {
+.hobbies__item:hover {
     border-color: #00d9ff;
 }
 
-.hobby i {
+.hobbies__item i {
     color: #00d9ff;
     font-size: 1.2rem;
 }
@@ -309,7 +309,7 @@ body {
     gap: 20px;
 }
 
-.lang {
+.languages__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -320,18 +320,6 @@ body {
     gap: 8px;
 }
 
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #333;
-}
-
-.dot.active {
-    background: #00d9ff;
-}
-
-/* БЭМ для dots */
 .dots__item {
     width: 12px;
     height: 12px;
