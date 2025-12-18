@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const resultDiv = document.getElementById('result');
     const errorDiv = document.getElementById('error');
 
+    if (!num1Input || !num2Input || !operationSelect || !calculateBtn || !resultDiv || !errorDiv) {
+        return;
+    }
+
     calculateBtn.addEventListener('click', handleCalculation);
 
     function handleCalculation() {
