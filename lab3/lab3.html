@@ -6,149 +6,143 @@
   <title>Резюме студента</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page">
   <div class="resume">
 
     <!-- Левая панель -->
-<aside class="resume-sidebar">
-  <img src="https://i.pinimg.com/736x/a8/05/34/a805344956fc43ef7741f075b302a9bd.jpg" alt="Фото студента" class="resume-sidebar__avatar">
-  <div class="resume-sidebar__name">Шакин Даниил Вадимович</div>
-  <div class="resume-sidebar__status">Студент института информационной безопасности автоматизированных систем</div>
+    <aside class="resume__sidebar resume-sidebar">
+      <img src="https://i.pinimg.com/736x/a8/05/34/a805344956fc43ef7741f075b302a9bd.jpg" alt="Фото студента" class="resume-sidebar__avatar">
 
-  <div class="resume-sidebar__info">
-    <div class="resume-sidebar__info-row">
-      <span class="resume-sidebar__info-row__info-label">Возраст:</span>
-      <span class="resume-sidebar__info-row__info-value">18 лет</span>
-    </div>
-    <div class="resume-sidebar__info-row">
-      <span class="resume-sidebar__info-row__info-label">Дата рождения:</span>
-      <span class="resume-sidebar__info-row__info-value">29 декабря 2006</span>
-    </div>
-    <div class="resume-sidebar__info-row">
-      <span class="resume-sidebar__info-row__info-label">Город:</span>
-      <span class="resume-sidebar__info-row__info-value">Самара</span>
-    </div>
-  </div>
+      <h2 class="resume-sidebar__name">Шакин Даниил Вадимович</h2>
+      <p class="resume-sidebar__status">Студент института информационной безопасности автоматизированных систем</p>
 
-  <div class="resume-sidebar__section">
-    <h3 class="resume-sidebar__section-title">Языки</h3>
-    <div class="resume-sidebar__language">
-      <span class="resume-sidebar__language-name">Русский</span>
-    </div>
-    <div class="resume-sidebar__language">
-      <span class="resume-sidebar__language-name">Английский</span>
-    </div>
-    <div class="resume-sidebar__language">
-      <span class="resume-sidebar__language-name">C++</span>
-    </div>
-  </div>
-
-  <div class="resume-sidebar__section">
-    <h3 class="resume-sidebar__section-title">Hard Skills</h3>
-    <ul class="resume-sidebar__skills-list">
-      <li class="resume-sidebar__skills-item">HTML / CSS</li>
-      <li class="resume-sidebar__skills-item">JavaScript</li>
-      <li class="resume-sidebar__skills-item">Python (Django)</li>
-      <li class="resume-sidebar__skills-item">Git / GitHub</li>
-      <li class="resume-sidebar__skills-item">SQL</li>
-    </ul>
-  </div>
-
-  <div class="resume-sidebar__section">
-    <h3 class="resume-sidebar__section-title">Soft Skills</h3>
-    <ul class="resume-sidebar__skills-list">
-      <li class="resume-sidebar__skills-item">Коммуникабельность</li>
-      <li class="resume-sidebar__skills-item">Работа в команде</li>
-      <li class="resume-sidebar__skills-item">Тайм-менеджмент</li>
-      <li class="resume-sidebar__skills-item">Критическое мышление</li>
-    </ul>
-  </div>
-
-  <div class="resume-sidebar__section">
-    <h3 class="resume-sidebar__section-title">Увлечения</h3>
-    <ul class="resume-sidebar__skills-list">
-      <li class="resume-sidebar__skills-item">Программирование</li>
-      <li class="resume-sidebar__skills-item">Игры</li>
-      <li class="resume-sidebar__skills-item">Зальчик</li>
-      <li class="resume-sidebar__skills-item">Дзюдо</li>
-    </ul>
-  </div>
-  <div class="resume-projects">
-  <h2 class="resume-projects__title">Мои проекты</h2>
-  <div class="resume-projects__grid">
-
-    <div class="resume-projects__card">
-      <h3 class="resume-projects__card-title">Лабораторная работа 1</h3>
-      <a href="https://github.com/kapystapro/web-base/blob/main/idex.html" target="_blank" class="resume-projects__card-link">Посмотреть проект →</a>
-    </div>
-
-    <div class="resume-projects__card">
-      <h3 class="resume-projects__card-title">Лабораторная работа 2</h3>
-      <a href="https://github.com/kapystapro/web-base/blob/main/lab2_21/lalal.html" target="_blank" class="resume-projects__card-link">Посмотреть проект →</a>
-    </div>
-
-    <div class="resume-projects__card">
-      <h3 class="resume-projects__card-title">Лабораторная работа 3</h3>
-      <a href="https://github.com/kapystapro/web-base/blob/main/lab3/lab3.html" target="_blank" class="resume-projects__card-link">Посмотреть проект →</a>
-    </div>
-
-    <div class="resume-projects__card">
-      <h3 class="resume-projects__card-title">Лабораторная работа 4</h3>
-      <a href="https://github.com/kapystapro/web-base/blob/main/lab4/calculator.html" target="_blank" class="resume-projects__card-link">Посмотреть проект →</a>
-    </div>
-  </div>
-</div>
-
-  <a href="https://github.com/kapystapro" target="_blank" class="resume-sidebar__github-link">GitHub →</a>
-</aside>
-
-<!-- Центральная часть -->
-<main class="resume-main">
-  <div class="resume-main__header">
-    <img src="https://i.pinimg.com/736x/a8/05/34/a805344956fc43ef7741f075b302a9bd.jpg" alt="Большое фото" class="resume-main__avatar">
-    <div class="resume-main__intro">
-      <h1 class="resume-main__name">Шакин Даниил Вадимович</h1>
-      <h2 class="resume-main__title">Студент IT-факультета</h2>
-      <p class="resume-main__description">
-        Целеустремлённый студент Аэрокоса ИБАСа, увлечённый разработкой и технологиями. Умею быстро учиться новому, работать в команде и находить нестандартные решения.
-      </p>
-      <a href="mailto:danil.shakin2016@yandex.ru" class="resume-main__contact-btn">Связаться со мной</a>
-    </div>
-  </div>
-\
-  <div class="resume-skills">
-    <h2 class="resume-skills__title">Любимые увлечения</h2>
-    <div class="resume-skills__grid">
-      <div class="resume-skills__card">
-        <div class="resume-skills__icon">💻</div>
-        <h3 class="resume-skills__card-title">Web Development</h3>
-        <p class="resume-skills__card-desc">Создание сайтов, JavaScript, React</p>
+      <div class="resume-sidebar__info">
+        <div class="resume-sidebar__info-row">
+          <span class="resume-sidebar__info-label">Возраст:</span>
+          <span class="resume-sidebar__info-value">18 лет</span>
+        </div>
+        <div class="resume-sidebar__info-row">
+          <span class="resume-sidebar__info-label">Дата рождения:</span>
+          <span class="resume-sidebar__info-value">29 декабря 2006</span>
+        </div>
+        <div class="resume-sidebar__info-row">
+          <span class="resume-sidebar__info-label">Город:</span>
+          <span class="resume-sidebar__info-value">Самара</span>
+        </div>
       </div>
-      <div class="resume-skills__card">
-        <div class="resume-skills__icon">🏋️‍♂️</div>
-        <h3 class="resume-skills__card-title">Спортзальчик</h3>
-        <p class="resume-skills__card-desc">жим 150</p>
+
+      <div class="resume-sidebar__section">
+        <h3 class="resume-sidebar__section-title">Языки</h3>
+        <ul class="resume-sidebar__languages">
+          <li class="resume-sidebar__language">Русский</li>
+          <li class="resume-sidebar__language">Английский</li>
+          <li class="resume-sidebar__language">C++</li>
+        </ul>
       </div>
-      <div class="resume-skills__card">
-        <div class="resume-skills__icon">🤼</div>
-        <h3 class="resume-skills__card-title">Дзюдо</h3>
-        <p class="resume-skills__card-desc"></p>
+
+      <div class="resume-sidebar__section">
+        <h3 class="resume-sidebar__section-title">Hard Skills</h3>
+        <ul class="resume-sidebar__skills">
+          <li class="resume-sidebar__skill">HTML / CSS</li>
+          <li class="resume-sidebar__skill">JavaScript</li>
+          <li class="resume-sidebar__skill">Python (Django)</li>
+          <li class="resume-sidebar__skill">Git / GitHub</li>
+          <li class="resume-sidebar__skill">SQL</li>
+        </ul>
       </div>
-      <div class="resume-skills__card">
-        <div class="resume-skills__icon">🎮</div>
-        <h3 class="resume-skills__card-title">Компьютерные игры</h3>
-        <p class="resume-skills__card-desc">9 lvl faceit</p>
+
+      <div class="resume-sidebar__section">
+        <h3 class="resume-sidebar__section-title">Soft Skills</h3>
+        <ul class="resume-sidebar__skills">
+          <li class="resume-sidebar__skill">Коммуникабельность</li>
+          <li class="resume-sidebar__skill">Работа в команде</li>
+          <li class="resume-sidebar__skill">Тайм-менеджмент</li>
+          <li class="resume-sidebar__skill">Критическое мышление</li>
+        </ul>
       </div>
-      <div class="resume-skills__card">
-        <div class="resume-skills__icon">🧠</div>
-        <h3 class="resume-skills__card-title">Problem Solving</h3>
-        <p class="resume-skills__card-desc">Аналитическое мышление, алгоритмы, логика</p>
+
+      <div class="resume-sidebar__section">
+        <h3 class="resume-sidebar__section-title">Увлечения</h3>
+        <ul class="resume-sidebar__hobbies">
+          <li class="resume-sidebar__hobby">Программирование</li>
+          <li class="resume-sidebar__hobby">Игры</li>
+          <li class="resume-sidebar__hobby">Зальчик</li>
+          <li class="resume-sidebar__hobby">Дзюдо</li>
+        </ul>
       </div>
-      <div class="resume-skills__card">
-        <div class="resume-skills__icon">💬</div>
-        <h3 class="resume-skills__card-title">Communication</h3>
-        <p class="resume-skills__card-desc">Презентации, командная работа, переговоры</p>
+
+
+      <div class="resume-sidebar__projects resume-projects">
+        <h3 class="resume-projects__title">Мои проекты</h3>
+        <ul class="resume-projects__list">
+          <li class="resume-projects__item">
+            <a href="https://github.com/kapystapro/web-base/blob/main/idex.html" target="_blank" class="resume-projects__link">Лабораторная работа 1</a>
+          </li>
+          <li class="resume-projects__item">
+            <a href="https://github.com/kapystapro/web-base/blob/main/lab2_21/lalal.html" target="_blank" class="resume-projects__link">Лабораторная работа 2</a>
+          </li>
+          <li class="resume-projects__item">
+            <a href="https://github.com/kapystapro/web-base/blob/main/lab3/lab3.html" target="_blank" class="resume-projects__link">Лабораторная работа 3</a>
+          </li>
+          <li class="resume-projects__item">
+            <a href="https://github.com/kapystapro/web-base/blob/main/lab4/calculator.html" target="_blank" class="resume-projects__link">Лабораторная работа 4</a>
+          </li>
+        </ul>
       </div>
-    </div>
+
+      <a href="https://github.com/kapystapro" target="_blank" class="resume-sidebar__github-link">GitHub →</a>
+    </aside>
+
+    <!-- Основной контент -->
+    <main class="resume__main resume-main">
+      <header class="resume-main__header">
+        <img src="https://i.pinimg.com/736x/a8/05/34/a805344956fc43ef7741f075b302a9bd.jpg" alt="Большое фото" class="resume-main__avatar">
+        <div class="resume-main__intro">
+          <h1 class="resume-main__name">Шакин Даниил Вадимович</h1>
+          <p class="resume-main__position">Студент IT-факультета</p>
+          <p class="resume-main__description">
+            Целеустремлённый студент Аэрокоса ИБАСа, увлечённый разработкой и технологиями. Умею быстро учиться новому, работать в команде и находить нестандартные решения.
+          </p>
+          <a href="mailto:danil.shakin2016@yandex.ru" class="resume-main__contact-btn">Связаться со мной</a>
+        </div>
+      </header>
+
+      <section class="resume-main__skills resume-skills">
+        <h2 class="resume-skills__title">Любимые увлечения</h2>
+        <div class="resume-skills__grid">
+          <div class="resume-skills__card">
+            <div class="resume-skills__icon">💻</div>
+            <h3 class="resume-skills__card-title">Web Development</h3>
+            <p class="resume-skills__card-desc">Создание сайтов, JavaScript, React</p>
+          </div>
+          <div class="resume-skills__card">
+            <div class="resume-skills__icon">🏋️‍♂️</div>
+            <h3 class="resume-skills__card-title">Спортзальчик</h3>
+            <p class="resume-skills__card-desc">жим 150</p>
+          </div>
+          <div class="resume-skills__card">
+            <div class="resume-skills__icon">🤼</div>
+            <h3 class="resume-skills__card-title">Дзюдо</h3>
+            <p class="resume-skills__card-desc"></p>
+          </div>
+          <div class="resume-skills__card">
+            <div class="resume-skills__icon">🎮</div>
+            <h3 class="resume-skills__card-title">Компьютерные игры</h3>
+            <p class="resume-skills__card-desc">9 lvl faceit</p>
+          </div>
+          <div class="resume-skills__card">
+            <div class="resume-skills__icon">🧠</div>
+            <h3 class="resume-skills__card-title">Problem Solving</h3>
+            <p class="resume-skills__card-desc">Аналитическое мышление, алгоритмы, логика</p>
+          </div>
+          <div class="resume-skills__card">
+            <div class="resume-skills__icon">💬</div>
+            <h3 class="resume-skills__card-title">Communication</h3>
+            <p class="resume-skills__card-desc">Презентации, командная работа, переговоры</p>
+          </div>
+        </div>
+      </section>
+    </main>
   </div>
-</main>
+</body>
+</html>

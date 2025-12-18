@@ -6,18 +6,18 @@
   <title>Калькулятор | ЛР №4</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page">
   <div class="calculator">
-    <h2>🧮 Калькулятор</h2>
+    <h2 class="calculator__title">🧮 Калькулятор</h2>
 
-    <div class="input-group">
-      <label for="num1">Первое число</label>
-      <input type="number" id="num1" placeholder="Например: 10" step="any">
+    <div class="calculator__input-group input-group">
+      <label for="num1" class="input-group__label">Первое число</label>
+      <input type="number" id="num1" class="input-group__input" placeholder="Например: 10" step="any">
     </div>
 
-    <div class="input-group">
-      <label for="operation">Операция</label>
-      <select id="operation">
+    <div class="calculator__input-group input-group">
+      <label for="operation" class="input-group__label">Операция</label>
+      <select id="operation" class="input-group__select">
         <option value="+">Сложение (+)</option>
         <option value="-">Вычитание (–)</option>
         <option value="*">Умножение (x)</option>
@@ -25,14 +25,14 @@
       </select>
     </div>
 
-    <div class="input-group">
-      <label for="num2">Второе число</label>
-      <input type="number" id="num2" placeholder="Например: 5" step="any">
+    <div class="calculator__input-group input-group">
+      <label for="num2" class="input-group__label">Второе число</label>
+      <input type="number" id="num2" class="input-group__input" placeholder="Например: 5" step="any">
     </div>
 
-    <button onclick="calculate()">Вычислить</button>
+    <button class="calculator__button" type="button" onclick="calculate()">Вычислить</button>
 
-    <div class="result" id="result">Результат появится здесь</div>
+    <div class="calculator__result result" id="result">Результат появится здесь</div>
   </div>
 
   <script src="script.js"></script>
