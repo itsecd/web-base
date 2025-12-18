@@ -1,0 +1,85 @@
+.task1 {
+    text-align: center;
+    color: #ABC0B0;
+    background-color: #A91FA3;
+}
+.task2 {
+    position: relative;
+    width: 50%;
+    height: 400px; 
+}
+
+.image1, .image2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.image1 {
+    width: 80%; 
+}
+
+.task3{
+    width: 125px;
+    height: 100%;
+}
+
+.red, .green, .yellow {
+    width: 100px;
+    height: 100px;
+}
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: green;
+
+}
+
+.task4{
+    margin-top: 1%;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+}
+
+.cell1, .cell2,.cell3,.cell4,.cell5,.cell6,.cell7,.cell8,.cell9{
+    width: 100px;
+    height: 100px;
+}
+.cell1{
+    border-top: 2px black solid;
+}
+.cell2{
+    border-left: 2px black solid;
+}
+.cell3{
+    border-right: 2px black solid;
+    border-top: 2px black solid;
+}
+.cell4{
+    border-left: 2px black solid;
+    border-bottom: 2px black solid;
+}
+.cell5{
+    border-right: 2px black solid;
+    border-top: 2px black solid;
+}
+.cell6{
+    border-right: 2px black solid;
+}
+.cell7{
+    border-left: 2px black solid;
+    border-bottom: 2px black solid;
+}
+.cell8{
+    border-bottom: 2px black solid;
+}
+.cell9{
+    border-right: 2px black solid;
+    border-bottom: 2px black solid;
+}
