@@ -1,102 +1,70 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <title>Лабораторная работа 2</title>
-        <link href="style.css" rel="stylesheet" type="text/css" />
-    </head>
-
-    <body>
-        <div>
-            <h2>Задание 1</h2>
-            <p>Популярные стриминговые сервисы:</p>
-            <ul class="streaming-services-list">
-                <li class="streaming-services-list__item">Netflix</li>
-                <li class="streaming-services-list__item">YouTube Premium</li>
-                <li class="streaming-services-list__item">Spotify</li>
-                <li class="streaming-services-list__item">Disney+</li>
-                <li class="streaming-services-list__item">Twitch</li>
-            </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой калькулятор</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="header">
+            <h1><i class="fas fa-calculator"></i> Калькулятор</h1>
         </div>
-
-        <div>
-            <h2>Задание 2</h2>
-            <div>
-                <div class="parent-1">
-                    <h3>Parent 1</h3>
-                    <div class="parent-1__child">child 1</div>
-                    <div class="parent-1__child">child 2</div>
-                    <div class="parent-1__child">child 3</div>
-                    <div class="parent-1__child">child 4</div>
+        
+        <div class="input-group">
+            <label for="num1">Первое число:</label>
+            <input type="number" id="num1" class="input-field" placeholder="Введите число" step="any" value="15">
+        </div>
+        
+        <div class="input-group">
+            <label for="num2">Второе число:</label>
+            <input type="number" id="num2" class="input-field" placeholder="Введите число" step="any" value="5">
+        </div>
+        
+        <div class="operation-selector">
+            <label for="operation">Операция:</label>
+            <select id="operation" class="operation-select">
+                <option value="add">Сложение (+)</option>
+                <option value="subtract">Вычитание (-)</option>
+                <option value="multiply">Умножение (×)</option>
+                <option value="divide">Деление (÷)</option>
+            </select>
+            
+            <div class="operation-icons">
+                <div class="operation-icon" data-operation="add">
+                    <i class="fas fa-plus"></i>
+                    <span>Сложение</span>
                 </div>
-                <div class="parent-3">
-                    <h3>Parent 3</h3>
-                    <div class="parent-3__child">child 1</div>
-                    <div class="parent-3__child">child 2</div>
+                <div class="operation-icon" data-operation="subtract">
+                    <i class="fas fa-minus"></i>
+                    <span>Вычитание</span>
                 </div>
-                <div class="parent-2">
-                    <h3>Parent 2</h3>
-                    <div class="parent-2__child">child 1</div>
-                    <div class="parent-2__child">child 2</div>
+                <div class="operation-icon" data-operation="multiply">
+                    <i class="fas fa-times"></i>
+                    <span>Умножение</span>
                 </div>
-                <div class="parent-3">
-                    <h3>Parent 3</h3>
-                    <div class="parent-3__child">child 1</div>
-                    <div class="parent-3__child">child 2</div>
-                    <div class="parent-2__child">child 2</div>
+                <div class="operation-icon" data-operation="divide">
+                    <i class="fas fa-divide"></i>
+                    <span>Деление</span>
+                </div>
+                <div class="operation-icon" data-operation="clear">
+                    <i class="fas fa-broom"></i>
+                    <span>Очистить</span>
                 </div>
             </div>
         </div>
-
-        <div>
-            <h2>Задание 3</h2>
-            <p>
-                Языки программирования — это инструменты, с помощью которых разработчики создают программное обеспечение,
-                веб-приложения, игры, алгоритмы и многое другое. Каждый язык имеет свои особенности, синтаксис и сферу применения.
-                Ниже представлены некоторые из наиболее известных языков:
-            </p>
-            <ul class="langs-list">
-                <li class="langs-list__item">
-                    <a href="https://www.python.org">Python</a>
-                    – высокоуровневый язык с простым синтаксисом, популярный в Data Science, веб-разработке и автоматизации.
-                </li>
-                <li class="langs-list__item">
-                    <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript">JavaScript</a>
-                    – основной язык для фронтенд-разработки, работает в браузерах и на сервере (Node.js).
-                </li>
-                <li class="langs-list__item">
-                    <a href="https://www.java.com/ru">Java</a>
-                    – объектно-ориентированный язык, широко используется в корпоративных приложениях и Android-разработке.
-                </li>
-                <li class="langs-list__item">
-                    <a href="https://cppreference.com">C++</a>
-                    – мощный язык для системного программирования, игр и высокопроизводительных приложений.
-                </li>
-                <li class="langs-list__item">
-                    <a href="https://learn.microsoft.com/ru-ru/dotnet/csharp">C#</a>
-                    – язык от Microsoft, применяется в разработке под Windows, играх (Unity) и веб-приложениях.
-                </li>
-                <li class="langs-list__item">
-                    <a href="https://go.dev">Go (Golang)</a>
-                    – созданный Google, язык для высоконагруженных сетевых сервисов и облачных технологий.
-                </li>
-                <li class="langs-list__item">
-                    <a href="https://www.ruby-lang.org/ru">Ruby</a>
-                    – известен благодаря фреймворку Ruby on Rails для веб-разработки.
-                </li>
-                <li class="langs-list__item">
-                    <a href="https://www.swift.org">Swift</a>
-                    – язык Apple для разработки под iOS и macOS.
-                </li>
-                <li class="langs-list__item">
-                    <a href="https://kotlinlang.org">Kotlin</a>
-                    – современный язык, официально поддерживаемый для Android-разработки.
-                </li>
-                <li class="langs-list__item">
-                    <a href="https://rust-lang.org">Rust</a>
-                    – язык системного программирования с акцентом на безопасность и производительность.
-                </li>
-            </ul>
-            <p>Это лишь малая часть из множества существующих языков, и выбор зависит от задач, которые нужно решить.</p>
+        
+        <button id="calculate" class="calculate-button">
+            <i class="fas fa-equals"></i> Вычислить
+        </button>
+        
+        <div class="result-container">
+            <span class="result-label">Результат:</span>
+            <div id="result" class="result-value">20</div>
         </div>
-    </body>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
