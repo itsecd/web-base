@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Антон Родионов | CV</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="resume">
+        <header class="resume__header">
+            <div class="resume__avatar-container">
+                <img src="avatar.jpg" alt="Rodionov Anton" class="resume__avatar">
+            </div>
+            <div class="resume__title">
+                                <div class="status-container">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Available for projects</span>
+                </div>
+                <h1 class="resume__name">Родионов Антон</h1>
+                <p class="resume__role-container">
+                    <span class="resume__role"></span><span class="cursor">|</span>
+                </p>
+                <p class="resume__date">13 марта 2006 (19 лет) • Самара</p>
+            </div>
+        </header>
+
+        <main class="resume__content">
+            <section class="resume__section about">
+                <h2 class="resume__section-title">О себе</h2>
+                <p class="about__text">
+                    Студент ИБАС Самарского Университета. Сочетаю технический склад ума специалиста по информационной безопасности со страстью к веб-разработке и системному администрированию. 
+                    Увлекаюсь CTF и прототипированием на Arduino. Имею опыт творческой работы в фото-салоне, что помогает мне находить баланс между функциональностью и эстетикой. 
+                    Свободное время посвящаю музыке и ведению блога, рассматривая код как еще один способ творческого самовыражения.
+                </p>
+                
+                <div class="terminal">
+                    <div class="terminal__header">
+                        <span class="terminal__dot"></span><span class="terminal__dot"></span><span class="terminal__dot"></span>
+                        <span class="terminal__title">bash — 80x24</span>
+                    </div>
+                    <div class="terminal__body">
+                        <p><span class="terminal__prompt">anton@samara_univ:~$</span> whoami</p>
+                        <p>Student, Musician, Tech-enthusiast.</p>
+                        <p><span class="terminal__prompt">anton@samara_univ:~$</span> ls passions/</p>
+                        <p>cyber_sec  web_dev  arduino  music_production</p>
+                        <p><span class="terminal__prompt">anton@samara_univ:~$</span> <span class="blink">_</span></p>
+                        <p><span class="terminal__prompt">anton@samara_univ:~$</span> cat contacts.txt</p>
+<p>TG: @Br0dy64 | Mail: rodionovaa1412@gmail.com</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resume__section skills">
+                <h2 class="resume__section-title">Навыки</h2>
+                <div class="skills__grid">
+                    <div class="skills__category">
+                        <h3>Hard Skills</h3>
+                        
+                        <div class="skills__item">
+                            <div class="skills__info"><span>Python / C / C++</span><span>45%</span></div>
+                            <div class="skills__progress-bg">
+                                <div class="skills__progress-fill" data-percent="45%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skills__item">
+                            <div class="skills__info"><span>Linux / Git</span><span>60%</span></div>
+                            <div class="skills__progress-bg">
+                                <div class="skills__progress-fill" data-percent="60%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skills__item">
+                            <div class="skills__info"><span>HTML / CSS</span><span>50%</span></div>
+                            <div class="skills__progress-bg">
+                                <div class="skills__progress-fill" data-percent="50%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skills__item">
+                            <div class="skills__info"><span>Security / CTF</span><span>40%</span></div>
+                            <div class="skills__progress-bg">
+                                <div class="skills__progress-fill" data-percent="40%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills__category">
+                        <h3>Soft Skills</h3>
+                        <ul class="skills__simple-list">
+                            <li>Системный подход (видеть проблему целиком)</li>
+                            <li>Аналитическое мышление</li>
+                            <li>Креативность и находчивость</li>
+                            <li>Стрессоустойчивость и быстрая обучаемость</li>
+                            <li>Опыт работы с клиентами в фото-салоне</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resume__section hobbies">
+                <h2 class="resume__section-title">Увлечения</h2>
+                <div class="hobbies__list">
+                    <span>Музыка</span><span>Фотография</span><span>Блогинг</span>
+                    <span>Arduino / Робототехника</span><span>Майнкрафт</span>
+                    <span>Кулинария</span><span>Садоводство</span><span>Рукоделие</span>
+                </div>
+            </section>
+        </main>
+
+        <footer class="resume__footer">
+    <div class="footer__contacts">
+        <a href="mailto:rodionovaa1412@email.com" class="resume__link">Email</a> • 
+        <a href="https://t.me/Br0dy64" class="resume__link">Telegram</a> • 
+        <a href="https://github.com/Brodyga63" target="_blank" class="resume__link">GitHub</a>
+    </div>
+    <script>
+        // 1. Печатающая машинка
+        const textElement = document.querySelector(".resume__role");
+        const roles = ["Студент ИБАС", "Junior Web Developer", "Musician", "CTF Player"];
+        let roleIndex = 0; let charIndex = 0; let isDeleting = false;
+
+        function type() {
+            const currentRole = roles[roleIndex];
+            textElement.textContent = isDeleting 
+                ? currentRole.substring(0, charIndex - 1) 
+                : currentRole.substring(0, charIndex + 1);
+            
+            charIndex = isDeleting ? charIndex - 1 : charIndex + 1;
+            let typeSpeed = isDeleting ? 40 : 80;
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                typeSpeed = 2000; isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                typeSpeed = 500;
+            }
+            setTimeout(type, typeSpeed);
+        }
+
+        // 2. Прогресс-бары
+        function initBars() {
+            const bars = document.querySelectorAll('.skills__progress-fill');
+            bars.forEach(bar => bar.style.width = '0');
+            setTimeout(() => {
+                bars.forEach(bar => {
+                    bar.style.width = bar.getAttribute('data-percent');
+                });
+            }, 600);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            type();
+            initBars();
+        });
+    </script>
+
+</body>
+</html>
