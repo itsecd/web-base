@@ -74,7 +74,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function displayResult(result) {
-        resultDiv.textContent = result;
+        const roundedResult = Math.round(result * 1e10) / 1e10;
+        resultDiv.textContent = parseFloat(roundedResult.toFixed(10));
     }
 
     function displayError(errorMessage) {
