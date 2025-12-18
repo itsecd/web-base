@@ -34,38 +34,42 @@ class Calculator {
         const num2 = parseFloat(this.num2Input.value);
         const operation = this.operationSelect.value;
 
+        if (this.validateInput(num1, num2)) {
+            const result = this.calculateResult(num1, num2, operation);
+            this.updateDisplay(result);
+        }
+    }
+
+    validateInput(num1, num2) {
         if (isNaN(num1) || isNaN(num2)) {
             this.display.textContent = 'Введите числа';
-            return;
+            return false;
         }
+        return true;
+    }
 
-        let result;
-        let error = false;
-
+    calculateResult(num1, num2, operation) {
         switch (operation) {
             case 'add':
-                result = num1 + num2;
-                break;
+                return num1 + num2;
             case 'subtract':
-                result = num1 - num2;
-                break;
+                return num1 - num2;
             case 'multiply':
-                result = num1 * num2;
-                break;
+                return num1 * num2;
             case 'divide':
                 if (num2 === 0) {
                     this.display.textContent = 'Ошибка: деление на 0';
-                    error = true;
-                } else {
-                    result = num1 / num2;
+                    return null;
                 }
-                break;
+                return num1 / num2;
             default:
                 this.display.textContent = 'Неизвестная операция';
-                error = true;
+                return null;
         }
+    }
 
-        if (!error) {
+    updateDisplay(result) {
+        if (result !== null) {
             result = Math.round(result * 10000000000) / 10000000000;
             this.display.textContent = result;
         }

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Калькулятор</title>
@@ -9,26 +8,26 @@
 </head>
 <body>
     <div class="calculator">
-        <h1>Калькулятор</h1>
+        <h1 class="calculator__title">Калькулятор</h1>
         
-        <div class="input-group">
-            <input type="number" id="num1" class="number-input">
-            <select id="operation" class="operation-select">
+        <div class="calculator__input-group">
+            <input type="number" id="num1" class="calculator__input calculator__input_number">
+            <select id="operation" class="calculator__select">
                 <option value="add">+</option>
                 <option value="subtract">-</option>
                 <option value="multiply">×</option>
                 <option value="divide">÷</option>
             </select>
-            <input type="number" id="num2" class="number-input">
+            <input type="number" id="num2" class="calculator__input calculator__input_number">
         </div>
 
-        <button class="btn equals" id="calculate">Вычислить</button>
+        <button class="calculator__btn calculator__btn_equals" id="calculate">Вычислить</button>
 
-        <div class="display">
-            <div class="result" id="display">0</div>
+        <div class="calculator__display">
+            <div class="calculator__result" id="display">0</div>
         </div>
 
-        <button class="btn clear" id="clear">Очистить</button>
+        <button class="calculator__btn calculator__btn_clear" id="clear">Очистить</button>
     </div>
     <script src="script.js"></script>
 </body>
