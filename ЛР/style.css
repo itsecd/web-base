@@ -24,20 +24,20 @@ body {
     flex-direction: column;
 }
 
-.resume__main__profile-section,
-.resume__main__about-section,
-.resume__main__contacts-section {
+.main__profile-section,
+.main__about-section,
+.main__contacts-section {
     border: 1px solid #ddd;
     padding: 20px;
     margin: 10px;
 }
 
-.profile__info {
+.profile-section__info {
     display: flex;
     align-items: center;
 }
 
-.profile__info__avatar {
+.info__avatar {
     width: 100px;
     height: 100px;
     background-color: #eee;
@@ -47,14 +47,14 @@ body {
     margin-right: 20px;
 }
 
-.profile__info__avatar-picture {
+.info__avatar-picture {
     width: 100px;
     height: auto;
     border-radius: 50%;
     outline: 1px solid black;
 }
 
-.profile__info__name {
+.info__name {
     flex: 1;
 }
 
@@ -64,9 +64,9 @@ body {
     flex-direction: column;
 }
 
-.resume__sidebar__soft-section,
-.resume__sidebar__hard-section,
-.resume__sidebar__projects-section {
+.sidebar__soft-section,
+.sidebar__hard-section,
+.sidebar__projects-section {
     border: 1px solid #ddd;
     padding: 20px;
     margin: 10px;
@@ -81,11 +81,11 @@ h3 {
     color: #666;
 }
 
-.about__content,
-.contacts__content,
-.soft__content,
-.hard__content,
-.projects__content {
+.about-section__content,
+.contacts-section__content,
+.soft-section__content,
+.hard-section__content,
+.projects-section__content {
     min-height: 100px;
     background-color: #f5f5f5;
     display: flex;
