@@ -8,10 +8,24 @@ body {
     font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
     background: linear-gradient(135deg, #ffd6e7 0%, #ffc2d6 100%);
     min-height: 100vh;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 182, 193, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 105, 180, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255, 192, 203, 0.1) 0%, transparent 50%);
+    z-index: -1;
 }
 
 .container {
@@ -30,12 +44,6 @@ h1 {
     font-size: 32px;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(255, 102, 163, 0.2);
-}
-
-.subtitle {
-    color: #ff80ab;
-    font-size: 16px;
-    font-style: italic;
 }
 
 .calculator-card {
@@ -62,13 +70,13 @@ h1 {
     font-size: 16px;
 }
 
-.input-wrapper, .select-wrapper {
+.input-wrapper {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-.input-icon, .select-icon {
+.input-icon {
     position: absolute;
     left: 15px;
     color: #ff66a3;
@@ -96,6 +104,22 @@ h1 {
 .operation-select {
     appearance: none;
     cursor: pointer;
+    padding-left: 50px;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::before {
+    content: "➡️";
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff66a3;
+    font-size: 18px;
+    z-index: 1;
 }
 
 .calculate-btn {
@@ -108,10 +132,6 @@ h1 {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
     transition: all 0.3s ease;
     margin-bottom: 30px;
     box-shadow: 0 8px 20px rgba(255, 102, 163, 0.3);
@@ -121,14 +141,6 @@ h1 {
     transform: translateY(-3px);
     box-shadow: 0 12px 25px rgba(255, 102, 163, 0.4);
     background: linear-gradient(135deg, #ff80ab 0%, #ff66a3 100%);
-}
-
-.calculate-btn:active {
-    transform: translateY(-1px);
-}
-
-.btn-icon {
-    font-size: 20px;
 }
 
 .result-section {
@@ -157,6 +169,17 @@ h1 {
     min-height: 70px;
     word-break: break-all;
     text-shadow: 2px 2px 4px rgba(255, 102, 163, 0.2);
+}
+
+.result-box.error {
+    color: #ff3366;
+    animation: error-shake 0.5s ease-in-out;
+}
+
+@keyframes error-shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
 }
 
 .error-message {
