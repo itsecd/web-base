@@ -8,27 +8,27 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Калькулятор</h1>
-            <p class="subtitle">Лабораторная работа 4</p>
+        <header class="header">
+            <h1 class="header__title">Калькулятор</h1>
+            <p class="header__subtitle">Лабораторная работа 4</p>
         </header>
 
         <div class="calculator-container">
             <div class="calculator">
-                <div class="input-group">
-                    <div class="input-field">
-                        <label for="num1">Первое число:</label>
-                        <input type="number" id="num1" placeholder="Введите число" />
+                <div class="calculator__input-group">
+                    <div class="calculator__input-field">
+                        <label for="num1" class="calculator__label">Первое число:</label>
+                        <input type="number" id="num1" class="calculator__input" placeholder="Введите число" />
                     </div>
-                    <div class="input-field">
-                        <label for="num2">Второе число:</label>
-                        <input type="number" id="num2" placeholder="Введите число" />
+                    <div class="calculator__input-field">
+                        <label for="num2" class="calculator__label">Второе число:</label>
+                        <input type="number" id="num2" class="calculator__input" placeholder="Введите число" />
                     </div>
                 </div>
 
-                <div class="operation-group">
-                    <label for="operation">Операция:</label>
-                    <select id="operation">
+                <div class="calculator__operation-group">
+                    <label for="operation" class="calculator__label">Операция:</label>
+                    <select id="operation" class="calculator__select">
                         <option value="add">Сложение (+)</option>
                         <option value="subtract">Вычитание (-)</option>
                         <option value="multiply">Умножение (×)</option>
@@ -36,12 +36,12 @@
                     </select>
                 </div>
 
-                <button class="calculate-btn" id="calculate">Вычислить</button>
+                <button class="calculator__calculate-btn" id="calculate">Вычислить</button>
 
-                <div class="result-container">
-                    <div class="result-label">Результат:</div>
-                    <div class="result" id="result">-</div>
-                    <div class="error" id="error"></div>
+                <div class="calculator__result-container">
+                    <div class="calculator__result-label">Результат:</div>
+                    <div class="calculator__result" id="result">-</div>
+                    <div class="calculator__error" id="error"></div>
                 </div>
             </div>
         </div>
