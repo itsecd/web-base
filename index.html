@@ -3,49 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторная работа 1 — вариант 25</title>
+    <title>Резюме - Тудаков Родион Алексеевич</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <div class="header">
-        <h1>Лабораторная работа №1</h1>
-        <p>РАБОТУ ВЫПОЛНИЛ<br>ТУДАКОВ РОДИОН<br>ГРУППА 6212-10.05.03D</p>
+    <div class="container">
+        <!-- Боковая панель -->
+        <aside class="sidebar">
+            <img src="https://img.freepik.com/free-vector/sweet-eyed-kitten-cartoon-character_1308-133242.jpg?w=740" alt="Аватарка" class="avatar">
+            <h1>Тудаков Родион Алексеевич</h1>
+            <p class="profession">Студент-программист</p>
+            
+            <div class="section">
+                <h3>Контакты</h3>
+                <ul>
+                    <li>Email: example@student.ru</li>
+                    <li>Телефон: +7 (XXX) XXX-XX-XX</li>
+                    <li>GitHub: <a href="https://github.com/itsecd/web-base.git" target="_blank">github.com/itsecd/web-base</a></li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3>Hard Skills</h3>
+                <ul>
+                    <li>HTML5 / CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>Python</li>
+                    <li>Git & GitHub</li>
+                    <li>Figma (основы дизайна)</li>
+                    <li>SQL (основы)</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Ответственность и дисциплина</li>
+                    <li>Умение работать в команде</li>
+                    <li>Быстрая обучаемость</li>
+                    <li>Аналитическое мышление</li>
+                    <li>Тайм-менеджмент</li>
+                </ul>
+            </div>
+        </aside>
+        
+        <!-- Основная часть -->
+        <main class="main">
+            <section>
+                <h2>О себе</h2>
+                <p>Привет! Я — Родион, студент, увлечённый веб-разработкой и программированием. С интересом изучаю фронтенд и бэкенд технологии, стараюсь писать чистый и понятный код. Люблю решать задачи, которые требуют творческого подхода, и постоянно развиваюсь через личные проекты и лабораторные работы. Цель — стать квалифицированным full-stack разработчиком и участвовать в реальных проектах. Открыт к новым знаниям, стажировкам и сотрудничеству!</p>
+            </section>
+            
+            <section>
+                <h2>Дата рождения</h2>
+                <p>16 сентября 2005 г.</p>
+            </section>
+            
+            <section>
+                <h2>Любимые увлечения</h2>
+                <ul>
+                    <li>Веб-разработка и создание личных сайтов</li>
+                    <li>Изучение новых технологий и фреймворков</li>
+                    <li>Компьютерные игры (особенно стратегии и RPG)</li>
+                    <li>Просмотр научно-популярных видео и документалистики</li>
+                    <li>Спорт: бег и тренажёрный зал</li>
+                    <li>Общение с друзьями и путешествия по городу</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Дополнительно</h2>
+                <p>Готов к junior-позициям и стажировкам. Всегда рад обратной связи и новым вызовам!</p>
+            </section>
+        </main>
     </div>
-
-    <h2>Задание 1</h2>
-    <div class="text-container">
-        JavaScript (сокр. JS) — мультипарадигмальный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript (стандарт ECMA-262).<br><br>
-        JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение он находит в браузерах как язык сценариев для придания веб-страницам интерактивности.
-    </div>
-
-    <h2>Задание 2</h2>
-    <div class="image-overlay">
-        <img src="image1.png" alt="Картинка 1" class="image-overlay__img image-overlay__img--back">
-        <img src="image2.png" alt="Картинка 2" class="image-overlay__img image-overlay__img--front">
-    </div>
-
-    <h2>Задание 3</h2>
-    <div class="traffic-light">
-        <div class="traffic-light__light traffic-light__light--red"></div>
-        <div class="traffic-light__light traffic-light__light--yellow"></div>
-        <div class="traffic-light__light traffic-light__light--green"></div>
-    </div>
-
-    <h2>Задание 4</h2>
-    <div class="maze">
-        <div class="maze__cell maze__cell--start maze__cell--wall-top maze__cell--wall-right"></div>
-        <div class="maze__cell maze__cell--wall-top maze__cell--wall-left maze__cell--wall-right"></div>
-        <div class="maze__cell maze__cell--wall-top maze__cell--wall-left"></div>
-
-        <div class="maze__cell maze__cell--wall-bottom maze__cell--wall-right"></div>
-        <div class="maze__cell maze__cell--wall-left"></div>
-        <div class="maze__cell maze__cell--wall-bottom maze__cell--wall-right"></div>
-
-        <div class="maze__cell maze__cell--wall-right"></div>
-        <div class="maze__cell maze__cell--wall-bottom maze__cell--wall-left maze__cell--wall-right"></div>
-        <div class="maze__cell maze__cell--end maze__cell--wall-bottom maze__cell--wall-left"></div>
-    </div>
-
 </body>
 </html>
