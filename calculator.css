@@ -23,7 +23,7 @@ body {
 }
 
 .calculator-container {
-    background-color: #ffe6e6; /* Светло-бордовый фон */
+    background-color: #ffe6e6;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(139, 0, 0, 0.3);
     width: 100%;
@@ -35,7 +35,7 @@ body {
 }
 
 .calculator-header h1 {
-    color: #800020; /* Темно-бордовый для заголовка */
+    color: #800020;
     margin-bottom: 10px;
     font-size: 2.2rem;
     display: flex;
@@ -45,7 +45,7 @@ body {
 }
 
 .subtitle {
-    color: #a0525d; /* Средне-бордовый для подзаголовка */
+    color: #a0525d;
     margin-bottom: 30px;
     font-size: 1rem;
 }
@@ -59,7 +59,7 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
-    color: #5d001e; /* Темно-бордовый для меток */
+    color: #5d001e;
     font-weight: 600;
     font-size: 0.95rem;
     gap: 8px;
@@ -67,7 +67,7 @@ body {
 
 .input-hint {
     font-size: 0.85rem;
-    color: #a0525d; /* Средне-бордовый для подсказок */
+    color: #a0525d; 
     margin-top: 5px;
     height: 20px;
 }
@@ -75,16 +75,16 @@ body {
 input, select {
     width: 100%;
     padding: 15px;
-    border: 2px solid #d8a7a7; /* Светло-бордовая рамка */
+    border: 2px solid #d8a7a7;
     border-radius: 10px;
     font-size: 1rem;
     transition: all 0.3s ease;
-    background-color: #fff5f5; /* Очень светлый бордовый фон */
+    background-color: #fff5f5;
 }
 
 input:focus, select:focus {
     outline: none;
-    border-color: #800020; /* Темно-бордовый при фокусе */
+    border-color: #800020; 
     box-shadow: 0 0 0 3px rgba(128, 0, 32, 0.2);
     background-color: white;
 }
@@ -98,7 +98,7 @@ input:focus, select:focus {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
-    color: #5d001e; /* Темно-бордовый для меток */
+    color: #5d001e;
     font-weight: 600;
     font-size: 0.95rem;
     gap: 8px;
@@ -106,7 +106,7 @@ input:focus, select:focus {
 
 .operation-icon {
     font-size: 2rem;
-    color: #800020; /* Темно-бордовый для иконки операции */
+    color: #800020; 
     margin: 15px 0;
     display: flex;
     justify-content: center;
@@ -134,11 +134,10 @@ input:focus, select:focus {
     gap: 10px;
     border: none;
     color: white;
-    background: linear-gradient(to right, #800020, #a52a5a); /* Темно-бордовый градиент для обеих кнопок */
-}
+    background: linear-gradient(to right, #800020, #a52a5a); 
 
 .calculate-btn:hover, .clear-btn:hover {
-    background: linear-gradient(to right, #5d001e, #800020); /* Более темный бордовый при наведении */
+    background: linear-gradient(to right, #5d001e, #800020); 
     transform: translateY(-2px);
     box-shadow: 0 7px 14px rgba(128, 0, 32, 0.4);
 }
@@ -149,11 +148,11 @@ input:focus, select:focus {
 
 .result-container {
     margin-top: 30px;
-    background: linear-gradient(to right, #fff0f0, #ffe6e6); /* Светло-бордовый градиент */
+    background: linear-gradient(to right, #fff0f0, #ffe6e6); 
     border-radius: 15px;
     padding: 25px;
     text-align: left;
-    border-left: 5px solid #800020; /* Темно-бордовая полоса слева */
+    border-left: 5px solid #800020; 
 }
 
 .result-header {
@@ -165,36 +164,55 @@ input:focus, select:focus {
 
 .result-label {
     font-size: 1.1rem;
-    color: #5d001e; /* Темно-бордовый */
+    color: #5d001e; 
     font-weight: 600;
 }
 
 #result {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #5d001e; /* Темно-бордовый для результата */
     min-height: 3rem;
     word-break: break-all;
     transition: all 0.3s ease;
+    margin: 10px 0;
+}
+
+#result.info {
+    color: #800020 !important;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+#result.info p {
+    margin: 5px 0;
+    font-weight: normal;
+}
+
+#result.error {
+    color: #c41e3a !important;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#result.success {
+    color: #228b22 !important; 
+    font-size: 2.5rem;
+    font-weight: 800;
 }
 
 .calculation-info {
     margin-top: 10px;
     font-size: 0.9rem;
-    color: #a0525d; /* Средне-бордовый для информации */
+    color: #a0525d; 
     min-height: 20px;
 }
 
-.error {
-    color: #c41e3a !important; /* Бордово-красный для ошибок */
+@keyframes scalePulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
-.success {
-    color: #228b22 !important; /* Зеленый для успеха, чтобы контрастировал с бордовым */
-}
-
-.info {
-    color: #800020 !important; /* Темно-бордовый для информационного текста */
+.result-animate {
+    animation: scalePulse 0.3s ease;
 }
 
 .operation-examples {
@@ -205,12 +223,12 @@ input:focus, select:focus {
 }
 
 .example {
-    background-color: #fff5f5; /* Очень светлый бордовый фон */
+    background-color: #fff5f5; 
     border-radius: 10px;
     padding: 15px;
     text-align: center;
     transition: transform 0.3s ease;
-    border: 1px solid #d8a7a7; /* Светло-бордовая рамка */
+    border: 1px solid #d8a7a7; 
 }
 
 .example:hover {
@@ -222,23 +240,23 @@ input:focus, select:focus {
 .example-icon {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #800020; /* Темно-бордовый для иконок примеров */
+    color: #800020;
 }
 
 .example-title {
     font-weight: 600;
-    color: #5d001e; /* Темно-бордовый */
+    color: #5d001e; 
     margin-bottom: 5px;
 }
 
 .example-formula {
-    color: #a0525d; /* Средне-бордовый для формул */
+    color: #a0525d; 
     font-size: 0.9rem;
 }
 
 .calculator-footer {
     margin-top: 30px;
-    color: #a0525d; /* Средне-бордовый */
+    color: #a0525d; 
     font-size: 0.9rem;
 }
 
@@ -252,7 +270,7 @@ input:focus, select:focus {
 
 .footer-hint {
     font-size: 0.8rem;
-    color: #b56576; /* Светло-бордовый для подсказки в футере */
+    color: #b56576; 
 }
 
 @media (max-width: 600px) {
@@ -260,7 +278,7 @@ input:focus, select:focus {
         padding: 25px 20px;
     }
     
-    h1 {
+    .calculator-header h1 {
         font-size: 1.8rem;
     }
     
@@ -271,4 +289,16 @@ input:focus, select:focus {
     .button-container {
         flex-direction: column;
     }
-}
+    
+    #result.info {
+        font-size: 1rem;
+    }
+    
+    #result.error {
+        font-size: 1.5rem;
+    }
+    
+    #result.success {
+        font-size: 2rem;
+    }
+}}

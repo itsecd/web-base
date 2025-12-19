@@ -1,4 +1,3 @@
-// Основные элементы DOM
 const num1Input = document.getElementById('num1');
 const num2Input = document.getElementById('num2');
 const operationSelect = document.getElementById('operation');
@@ -9,8 +8,6 @@ const operationIcon = document.getElementById('operation-icon');
 const calculationInfo = document.getElementById('calculation-info');
 const hint1 = document.getElementById('hint1');
 const hint2 = document.getElementById('hint2');
-
-// Обновление иконки операции при изменении выбора
 operationSelect.addEventListener('change', updateOperationIcon);
 
 function updateOperationIcon() {
@@ -35,11 +32,9 @@ function updateOperationIcon() {
     operationIcon.innerHTML = `<i class="${iconClass}"></i>`;
 }
 
-// Функция для валидации ввода
 function validateInputs() {
     let isValid = true;
     
-    // Проверка первого числа
     if (num1Input.value.trim() === '') {
         showHintError(hint1, 'Введите первое число');
         highlightInputError(num1Input);
@@ -53,7 +48,6 @@ function validateInputs() {
         highlightInputSuccess(num1Input);
     }
     
-    // Проверка второго числа
     if (num2Input.value.trim() === '') {
         showHintError(hint2, 'Введите второе число');
         highlightInputError(num2Input);
@@ -70,7 +64,6 @@ function validateInputs() {
     return isValid;
 }
 
-// Вспомогательные функции для отображения подсказок
 function showHintError(hintElement, message) {
     hintElement.textContent = message;
     hintElement.style.color = '#7a1c24ff';
@@ -91,7 +84,6 @@ function highlightInputSuccess(inputElement) {
     inputElement.style.boxShadow = '0 0 0 3px rgba(46, 213, 115, 0.2)';
 }
 
-// Функция для сброса стилей ввода
 function resetInputStyles() {
     [num1Input, num2Input].forEach(input => {
         input.style.borderColor = '#e0e0e0';
@@ -99,31 +91,34 @@ function resetInputStyles() {
     });
     
     [hint1, hint2].forEach(hint => {
-        hint.textContent = 'Введите любое число';
+        hint.textContent = 'Введи любое число';
         hint.style.color = '#777';
     });
 }
 
-// Основная функция вычисления
 function calculate() {
-    // Сначала валидируем ввод
+ 
     if (!validateInputs()) {
-        resultElement.textContent = 'Ошибка ввода';
+        resultElement.innerHTML = 'Ошибка ввода';
         resultElement.className = 'error';
         calculationInfo.textContent = 'Пожалуйста, исправьте ошибки в полях ввода';
         return;
     }
     
-    // Получаем значения
     const num1 = parseFloat(num1Input.value);
     const num2 = parseFloat(num2Input.value);
     const operation = operationSelect.value;
     
+    const calculationResult = performCalculation(num1, num2, operation);
+    
+    handleCalculationResult(calculationResult, num1, num2);
+}
+
+function performCalculation(num1, num2, operation) {
     let result;
     let operationSymbol = '';
     let errorMessage = '';
     
-    // Выполняем выбранную операцию
     switch(operation) {
         case 'add':
             result = num1 + num2;
@@ -138,63 +133,90 @@ function calculate() {
             operationSymbol = '×';
             break;
         case 'divide':
-            // Проверка деления на ноль
             if (num2 === 0) {
-                errorMessage = 'Деление на ноль невозможно';
-                resultElement.textContent = 'Ошибка: Деление на ноль';
-                resultElement.className = 'error';
-                calculationInfo.textContent = errorMessage;
-                highlightInputError(num2Input);
-                showHintError(hint2, 'Нельзя делить на ноль');
-                return;
+                return {
+                    type: 'division_by_zero_error',
+                    errorMessage: 'Деление на ноль невозможно',
+                    displayMessage: 'Ошибка: Деление на ноль'
+                };
             }
             result = num1 / num2;
             operationSymbol = '÷';
             break;
         default:
-            errorMessage = 'Неизвестная операция';
+            return {
+                type: 'unknown_operation_error',
+                errorMessage: 'Неизвестная операция',
+                displayMessage: 'Ошибка: Неизвестная операция'
+            };
     }
     
-    // Если не было ошибок, отображаем результат
-    if (!errorMessage) {
-        // Форматируем результат
-        const formattedResult = parseFloat(result.toFixed(10));
-        resultElement.textContent = formattedResult;
-        resultElement.className = 'success';
-        
-        // Показываем информацию о вычислении
-        calculationInfo.textContent = `${num1} ${operationSymbol} ${num2} = ${formattedResult}`;
-        
-        // Добавляем небольшую анимацию к результату
-        resultElement.style.transform = 'scale(1.1)';
-        setTimeout(() => {
-            resultElement.style.transform = 'scale(1)';
-        }, 300);
+    return {
+        type: 'success',
+        result: result,
+        operationSymbol: operationSymbol
+    };
+}
+
+function handleCalculationResult(calculationResult, num1, num2) {
+    if (calculationResult.type === 'division_by_zero_error') {
+       
+        resultElement.innerHTML = calculationResult.displayMessage;
+        resultElement.className = 'error';
+        calculationInfo.textContent = calculationResult.errorMessage;
+        highlightInputError(num2Input);
+        showHintError(hint2, 'Нельзя делить на ноль');
+        return;
+    }
+    
+    if (calculationResult.type === 'unknown_operation_error') {
+        resultElement.innerHTML = calculationResult.displayMessage;
+        resultElement.className = 'error';
+        calculationInfo.textContent = calculationResult.errorMessage;
+        return;
+    }
+    
+    if (calculationResult.type === 'success') {
+        displaySuccessResult(
+            calculationResult.result,
+            calculationResult.operationSymbol,
+            num1,
+            num2
+        );
     }
 }
 
-// Функция для очистки всех полей
+function displaySuccessResult(result, operationSymbol, num1, num2) {
+    const formattedResult = parseFloat(result.toFixed(10));
+    resultElement.innerHTML = formattedResult;
+    resultElement.className = 'success';
+    
+    calculationInfo.textContent = `${num1} ${operationSymbol} ${num2} = ${formattedResult}`;
+    
+    resultElement.classList.add('result-animate');
+    setTimeout(() => {
+        resultElement.classList.remove('result-animate');
+    }, 300);
+}
+
 function clearAll() {
     num1Input.value = '';
     num2Input.value = '';
     operationSelect.selectedIndex = 0;
-    resultElement.textContent = 'Введите числа и выберите операцию';
+    resultElement.innerHTML = '<p>1) введи числа</p><p>2) выбери операцию</p>';
     resultElement.className = 'info';
     calculationInfo.textContent = '';
     
     resetInputStyles();
     updateOperationIcon();
     
-    // Фокус на первое поле ввода
     num1Input.focus();
 }
 
-// Обработчики событий
 calculateBtn.addEventListener('click', calculate);
 
 clearBtn.addEventListener('click', clearAll);
 
-// Обработчик нажатия клавиши Enter
 function handleEnterKey(event) {
     if (event.key === 'Enter') {
         calculate();
@@ -205,10 +227,9 @@ num1Input.addEventListener('keypress', handleEnterKey);
 num2Input.addEventListener('keypress', handleEnterKey);
 operationSelect.addEventListener('keypress', handleEnterKey);
 
-// Сброс результата при изменении ввода
 function resetResultOnInput() {
     if (resultElement.className !== 'info') {
-        resultElement.textContent = 'Введите числа и выберите операцию';
+        resultElement.innerHTML = '<p>1) введи числа</p><p>2) выбери операцию</p>';
         resultElement.className = 'info';
         calculationInfo.textContent = '';
         resetInputStyles();
@@ -219,19 +240,16 @@ num1Input.addEventListener('input', resetResultOnInput);
 num2Input.addEventListener('input', resetResultOnInput);
 operationSelect.addEventListener('change', resetResultOnInput);
 
-// Инициализация при загрузке страницы
 window.addEventListener('DOMContentLoaded', function() {
     updateOperationIcon();
     num1Input.focus();
-    
-    // Добавляем подсказки при фокусе
     num1Input.addEventListener('focus', function() {
         hint1.textContent = 'Можно использовать десятичные числа (например: 3.14)';
     });
     
     num1Input.addEventListener('blur', function() {
         if (num1Input.value.trim() === '') {
-            hint1.textContent = 'Введите любое число';
+            hint1.textContent = 'Введи любое число';
         }
     });
     
@@ -241,7 +259,7 @@ window.addEventListener('DOMContentLoaded', function() {
     
     num2Input.addEventListener('blur', function() {
         if (num2Input.value.trim() === '') {
-            hint2.textContent = 'Введите любое число';
+            hint2.textContent = 'Введи любое число';
         }
     });
 });
