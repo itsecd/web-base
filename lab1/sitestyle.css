@@ -3,83 +3,84 @@
     color: #ABC0B0;
     background-color: #A91FA3;
 }
+
 .task2 {
-    position: relative;
     width: 50%;
-    height: 400px; 
+    margin: 20px auto;
 }
 
-.image1, .image2{
+.task2__image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+}
+
+.task2__image1, .task2__image2 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
-.image1 {
-    width: 80%; 
+
+.task2__image1 {
+    width: 80%;
+    z-index: 1;
 }
 
+.task2__image2 {
+    width: 60%;
+    z-index: 2;
+}
 .task3{
     width: 125px;
     height: 100%;
 }
 
-.red, .green, .yellow {
+.task3__red, .task3__green, .task3__yellow {
     width: 100px;
     height: 100px;
 }
-.red{
+.task3__red{
     background-color: red;
 }
-.yellow{
+.task3__yellow{
     background-color: yellow;
 }
-.green{
+.task3__green{
     background-color: green;
-
 }
 
-.task4{
-    margin-top: 1%;
+.maze {
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
+    gap: 0;
 }
 
-.cell1, .cell2,.cell3,.cell4,.cell5,.cell6,.cell7,.cell8,.cell9{
+.maze__cell {
     width: 100px;
     height: 100px;
+    box-sizing: border-box;
 }
-.cell1{
-    border-top: 2px black solid;
+
+.maze__cell_border-top {
+    border-top: 2px solid black;
 }
-.cell2{
-    border-left: 2px black solid;
+
+.maze__cell_border-right {
+    border-right: 2px solid black;
 }
-.cell3{
-    border-right: 2px black solid;
-    border-top: 2px black solid;
+
+.maze__cell_border-bottom {
+    border-bottom: 2px solid black;
 }
-.cell4{
-    border-left: 2px black solid;
-    border-bottom: 2px black solid;
-}
-.cell5{
-    border-right: 2px black solid;
-    border-top: 2px black solid;
-}
-.cell6{
-    border-right: 2px black solid;
-}
-.cell7{
-    border-left: 2px black solid;
-    border-bottom: 2px black solid;
-}
-.cell8{
-    border-bottom: 2px black solid;
-}
-.cell9{
-    border-right: 2px black solid;
-    border-bottom: 2px black solid;
+
+.maze__cell_border-left {
+    border-left: 2px solid black;
 }
