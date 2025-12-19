@@ -3,49 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторная работа 1 — вариант 25</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Калькулятор - Лабораторная работа 4</title>
+    <link rel="stylesheet" href="calc-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="calc-container">
+        <h1>Калькулятор</h1>
+        <p>Простой и надёжный инструмент для вычислений</p>
 
-    <div class="header">
-        <h1>Лабораторная работа №1</h1>
-        <p>РАБОТУ ВЫПОЛНИЛ<br>ТУДАКОВ РОДИОН<br>ГРУППА 6212-10.05.03D</p>
+        <div class="calc-form">
+            <input type="number" id="num1" placeholder="Первое число" step="any" required>
+            
+            <select id="operation">
+                <option value="+" selected>+ Сложение</option>
+                <option value="-">- Вычитание</option>
+                <option value="*">× Умножение</option>
+                <option value="/">÷ Деление</option>
+            </select>
+            
+            <input type="number" id="num2" placeholder="Второе число" step="any" required>
+            
+            <button id="calculate">Вычислить</button>
+        </div>
+
+        <div class="result" id="result">
+            Результат появится здесь
+        </div>
+
+        <a href="index.html" class="back-link">← Вернуться к резюме</a>
     </div>
 
-    <h2>Задание 1</h2>
-    <div class="text-container">
-        JavaScript (сокр. JS) — мультипарадигмальный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript (стандарт ECMA-262).<br><br>
-        JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение он находит в браузерах как язык сценариев для придания веб-страницам интерактивности.
-    </div>
+    <script>
+        const num1Input = document.getElementById('num1');
+        const num2Input = document.getElementById('num2');
+        const operationSelect = document.getElementById('operation');
+        const calculateBtn = document.getElementById('calculate');
+        const resultDiv = document.getElementById('result');
 
-    <h2>Задание 2</h2>
-    <div class="image-overlay">
-        <img src="image1.png" alt="Картинка 1" class="image-overlay__img image-overlay__img--back">
-        <img src="image2.png" alt="Картинка 2" class="image-overlay__img image-overlay__img--front">
-    </div>
+        calculateBtn.addEventListener('click', () => {
+            const num1 = parseFloat(num1Input.value);
+            const num2 = parseFloat(num2Input.value);
+            const operation = operationSelect.value;
 
-    <h2>Задание 3</h2>
-    <div class="traffic-light">
-        <div class="traffic-light__light traffic-light__light--red"></div>
-        <div class="traffic-light__light traffic-light__light--yellow"></div>
-        <div class="traffic-light__light traffic-light__light--green"></div>
-    </div>
+            resultDiv.className = 'result';
 
-    <h2>Задание 4</h2>
-    <div class="maze">
-        <div class="maze__cell maze__cell--start maze__cell--wall-top maze__cell--wall-right"></div>
-        <div class="maze__cell maze__cell--wall-top maze__cell--wall-left maze__cell--wall-right"></div>
-        <div class="maze__cell maze__cell--wall-top maze__cell--wall-left"></div>
+            if (isNaN(num1) || isNaN(num2)) {
+                resultDiv.textContent = 'Ошибка: введите корректные числа в оба поля';
+                resultDiv.classList.add('error');
+                return;
+            }
 
-        <div class="maze__cell maze__cell--wall-bottom maze__cell--wall-right"></div>
-        <div class="maze__cell maze__cell--wall-left"></div>
-        <div class="maze__cell maze__cell--wall-bottom maze__cell--wall-right"></div>
+            let result;
+            switch (operation) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 === 0) {
+                        resultDiv.textContent = 'Ошибка: деление на ноль невозможно';
+                        resultDiv.classList.add('error');
+                        return;
+                    }
+                    result = num1 / num2;
+                    break;
+            }
 
-        <div class="maze__cell maze__cell--wall-right"></div>
-        <div class="maze__cell maze__cell--wall-bottom maze__cell--wall-left maze__cell--wall-right"></div>
-        <div class="maze__cell maze__cell--end maze__cell--wall-bottom maze__cell--wall-left"></div>
-    </div>
-
+            resultDiv.textContent = `Результат: ${result}`;
+            resultDiv.classList.add('success');
+        });
+    </script>
 </body>
 </html>
