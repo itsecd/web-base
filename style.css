@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --bg-color: #0a0a0a;
+    --card-bg: #141414;
+    --text-main: #e0e0e0;
+    --text-muted: #666666;
+    --accent: #bb86fc;
+    --white: #ffffff;
+    --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: radial-gradient(circle, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 30px 30px;
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    padding: 60px 20px;
+    margin: 0;
+}
+
+.resume { max-width: 800px; margin: 0 auto; }
+
+
+/* Статус Live */
+.status-container { display: flex; align-items: center; margin-bottom: 10px; }
+.status-dot {
+    width: 6px; height: 6px; background: #00ff88; border-radius: 50%;
+    margin-right: 8px; box-shadow: 0 0 8px #00ff88; animation: pulse 2s infinite;
+}
+.status-text { font-size: 0.7rem; color: #00ff88; text-transform: uppercase; letter-spacing: 1px; }
+@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+
+/* Шапка и Сканер */
+.resume__header { display: flex; align-items: center; gap: 40px; margin-bottom: 60px; }
+.resume__avatar-container { position: relative; width: 140px; height: 140px; }
+.resume__avatar { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 1px solid #333; }
+.resume__avatar-container::after {
+    content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+    background: var(--accent); box-shadow: 0 0 10px var(--accent);
+    animation: scan 4s linear infinite; opacity: 0.5;
+}
+@keyframes scan { 0% { top: 0; opacity: 0; } 50% { opacity: 1; } 100% { top: 100%; opacity: 0; } }
+
+.resume__name { font-size: 2.4rem; color: var(--white); margin: 0; }
+.resume__role-container { font-size: 1rem; color: var(--accent); margin: 5px 0; min-height: 1.5em; }
+.cursor { animation: blink 0.8s infinite; color: var(--accent); font-weight: bold; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Терминал */
+.terminal { background: #050505; border: 1px solid #222; border-radius: 6px; margin-top: 25px; overflow: hidden; }
+.terminal__header { background: #1a1a1a; padding: 8px 12px; display: flex; align-items: center; gap: 6px; }
+.terminal__dot { width: 8px; height: 8px; border-radius: 50%; background: #333; }
+.terminal__title { color: #555; font-size: 0.7rem; margin-left: auto; font-family: monospace; }
+.terminal__body { padding: 15px; font-family: 'Courier New', monospace; font-size: 0.85rem; color: #00ff88; }
+.terminal__prompt { color: var(--accent); }
+.blink { animation: blink 1s infinite; }
+
+/* Секции */
+.resume__section { margin-bottom: 50px; }
+.resume__section-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 3px; color: var(--text-muted); margin-bottom: 25px; display: flex; align-items: center; }
+.resume__section-title::after { content: ""; height: 1px; flex-grow: 1; background: #222; margin-left: 20px; }
+
+/* Навыки */
+.skills__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.skills__item { margin-bottom: 15px; }
+.skills__info { display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px; }
+.skills__progress-bg { background: #1a1a1a; height: 3px; border-radius: 2px; }
+.skills__progress-fill { background: var(--accent); height: 100%; width: 0; transition: width 1.5s ease-out; }
+
+.skills__simple-list { list-style: none; padding: 0; }
+.skills__simple-list li { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px; padding-left: 12px; border-left: 1px solid var(--accent); }
+
+/* Хобби */
+.hobbies__list { display: flex; flex-wrap: wrap; gap: 8px; }
+.hobbies__list span { padding: 5px 12px; background: var(--card-bg); font-size: 0.75rem; border: 1px solid #222; border-radius: 3px; transition: 0.3s; }
+.hobbies__list span:hover { border-color: var(--accent); color: var(--accent); }
+
+.resume__footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #222; }
+.resume__link { color: var(--text-muted); text-decoration: none; font-size: 0.8rem; transition: var(--transition); }
+.resume__link:hover { color: var(--white); }
+
+/* Анимация появления */
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.resume__header, .resume__section, .resume__footer { animation: fadeInUp 1s ease-out forwards; }
+
+@media (max-width: 600px) {
+    .resume__header { flex-direction: column; text-align: center; }
+    .skills__grid { grid-template-columns: 1fr; }
+    .download-btn { display: none; }
+}
+
+/* Стили для формы калькулятора внутри терминала */
+.calc-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.calc-form__row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.calc-form__input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    color: var(--accent);
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    padding: 5px;
+    width: 100%;
+    transition: var(--transition);
+}
+
+.calc-form__input:focus {
+    outline: none;
+    border-bottom-color: var(--accent);
+    background: rgba(187, 134, 252, 0.05);
+}
+
+.calc-form__input--select {
+    cursor: pointer;
+    background: #0a0a0a;
+}
+
+.calc-form__btn {
+    background: var(--accent);
+    color: var(--bg-color);
+    border: none;
+    padding: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: var(--transition);
+    margin-top: 10px;
+}
+
+.calc-form__btn:hover {
+    box-shadow: 0 0 15px var(--accent);
+    transform: translateY(-2px);
+}
+
+.calc-form__result {
+    padding-top: 15px;
+    border-top: 1px solid #222;
+    font-family: 'Courier New', monospace;
+    min-height: 1.5em;
+}
+
+/* Переиспользуем анимацию fadeInUp для всей страницы */
+.page-calc .resume {
+    animation: fadeInUp 0.8s ease-out;
+}
+/* Блок проектов по БЭМ */
+.projects__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.projects__card {
+    background: var(--card-bg);
+    border: 1px solid #222;
+    padding: 20px;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.projects__card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(187, 134, 252, 0.1);
+}
+
+.projects__name {
+    color: var(--accent);
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+}
+
+.projects__description {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    min-height: 3em;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 1 (БЭМ)</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    
+    <h2>Задание 1: Текстовый блок</h2>
+    <div class="text-block">
+        <p class="text-block__paragraph">JavaScript (аббр. JS) — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript (стандарт ECMA-262).</p>
+        <p class="text-block__paragraph">JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.</p>
+    </div>
+
+
+    <h2>Задание 2: Картинки одна поверх другой</h2>
+    <div class="images">
+        <img src="image2.jpg" alt="Большое изображение" class="images__item images__item--size_big">
+        <img src="image1.jpg" alt="Малое изображение" class="images__item images__item--size_small"> 
+    </div>
+
+
+    <h2>Задание 3: Светофор</h2>
+    <div class="traffic-light">
+        <div class="traffic-light__light traffic-light__light--color_red"></div>
+        <div class="traffic-light__light traffic-light__light--color_yellow"></div>
+        <div class="traffic-light__light traffic-light__light--color_green"></div>
+    </div>
+
+
+    <h2>Задание 4: Лабиринт</h2>
+    <div class="maze">
+        <div class="maze__cell maze__cell--border_left maze__cell--border_top"></div>          
+        <div class="maze__cell maze__cell--border_bottom"></div>
+        <div class="maze__cell maze__cell--border_top maze__cell--border_right"></div>
+
+
+        <div class="maze__cell maze__cell--border_bottom maze__cell--border_right maze__cell--border_left"></div>
+        <div class="maze__cell"></div>
+        <div class="maze__cell maze__cell--border_right maze__cell--border_bottom"></div>
+
+
+        <div class="maze__cell maze__cell--border_left maze__cell--border_bottom"></div>
+        <div class="maze__cell maze__cell--border_bottom"></div>
+        <div class="maze__cell maze__cell--border_bottom"></div>     
+    </div>
+
+</body>
+</html>
