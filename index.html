@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор - Лабораторная работа 4</title>
+    <link rel="stylesheet" href="calc-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calc-container">
+        <h1>Калькулятор</h1>
+        <p>Простой и надёжный инструмент для вычислений</p>
+
+        <div class="calc-form">
+            <input type="number" id="num1" placeholder="Первое число" step="any" required>
+            
+            <select id="operation">
+                <option value="+" selected>+ Сложение</option>
+                <option value="-">- Вычитание</option>
+                <option value="*">× Умножение</option>
+                <option value="/">÷ Деление</option>
+            </select>
+            
+            <input type="number" id="num2" placeholder="Второе число" step="any" required>
+            
+            <button id="calculate">Вычислить</button>
+        </div>
+
+        <div class="result" id="result">
+            Результат появится здесь
+        </div>
+
+        <a href="index.html" class="back-link">← Вернуться к резюме</a>
+    </div>
+
+    <script>
+        const num1Input = document.getElementById('num1');
+        const num2Input = document.getElementById('num2');
+        const operationSelect = document.getElementById('operation');
+        const calculateBtn = document.getElementById('calculate');
+        const resultDiv = document.getElementById('result');
+
+        calculateBtn.addEventListener('click', () => {
+            const num1 = parseFloat(num1Input.value);
+            const num2 = parseFloat(num2Input.value);
+            const operation = operationSelect.value;
+
+            resultDiv.className = 'result';
+
+            if (isNaN(num1) || isNaN(num2)) {
+                resultDiv.textContent = 'Ошибка: введите корректные числа в оба поля';
+                resultDiv.classList.add('error');
+                return;
+            }
+
+            let result;
+            switch (operation) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 === 0) {
+                        resultDiv.textContent = 'Ошибка: деление на ноль невозможно';
+                        resultDiv.classList.add('error');
+                        return;
+                    }
+                    result = num1 / num2;
+                    break;
+            }
+
+            resultDiv.textContent = `Результат: ${result}`;
+            resultDiv.classList.add('success');
+        });
+    </script>
+</body>
+</html>
