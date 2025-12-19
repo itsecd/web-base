@@ -7,55 +7,70 @@ document.addEventListener("DOMContentLoaded", function () {
   const calculateButton = document.getElementById("btn");
   const resultElement = document.getElementById("outputField");
 
-  // Установка начальных значений для удобства тестирования
   num1Input.value = "15";
   num2Input.value = "5";
 
-  // Функция вычисления результата
-  function calculate() {
-    // Получаем значения из полей ввода
-    const num1 = parseFloat(num1Input.value);
-    const num2 = parseFloat(num2Input.value);
-    const operation = operationSelect.value;
-
-    // Проверяем, что оба числа введены корректно
-    if (isNaN(num1) || isNaN(num2)) {
-      resultElement.textContent = "Ошибка: введите оба числа";
-      resultElement.className = "error";
-      return;
-    }
-
-    let result;
-
+  function calculateResult(num1, num2, operation) {
     switch (operation) {
       case "addition":
-        result = num1 + num2;
-        break;
+        return num1 + num2;
       case "subtraction":
-        result = num1 - num2;
-        break;
+        return num1 - num2;
       case "multiplication":
-        result = num1 * num2;
-        break;
+        return num1 * num2;
       case "division":
-        // Проверка деления на ноль
         if (num2 === 0) {
-          resultElement.textContent = "Ошибка: деление на ноль";
-          resultElement.className = "error";
-          return;
+          throw new Error("Деление на ноль");
         }
-        result = num1 / num2;
-        break;
+        return num1 / num2;
+      default:
+        throw new Error("Неизвестная операция");
     }
+  }
 
-    // Форматируем результат (убираем лишние нули после запятой)
-    const formattedResult = parseFloat(result.toFixed(10));
+  function validateInputs(num1Str, num2Str) {
+    const num1 = parseFloat(num1Str);
+    const num2 = parseFloat(num2Str);
+    
+    if (isNaN(num1) || isNaN(num2)) {
+      throw new Error("Введите оба числа");
+    }
+    
+    return { num1, num2 };
+  }
 
-    // Отображаем результат
-    resultElement.textContent = `${formattedResult}`;
+  // Форматирование результата
+  function formatResult(result) {
+    return parseFloat(result.toFixed(10));
+  }
+
+  // Работа с DOM: отображение результата
+  function displayResult(value) {
+    resultElement.textContent = `${value}`;
     resultElement.className = "";
   }
 
-  // Назначаем обработчик события на кнопку "Вычислить"
-  calculateButton.addEventListener("click", calculate);
+  // Работа с DOM: отображение ошибки
+  function displayError(message) {
+    resultElement.textContent = `Ошибка: ${message}`;
+    resultElement.className = "error";
+  }
+
+  // Основная функция-обработчик
+  function handleCalculation() {
+    try {
+      const { num1, num2 } = validateInputs(num1Input.value, num2Input.value);
+      const operation = operationSelect.value;
+      
+      const result = calculateResult(num1, num2, operation);
+      
+      const formattedResult = formatResult(result);
+      displayResult(formattedResult);
+      
+    } catch (error) {
+      displayError(error.message);
+    }
+  }
+
+  calculateButton.addEventListener("click", handleCalculation);
 });
