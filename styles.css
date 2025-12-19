@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #2c3e50;
+    color: white;
+    border-radius: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 20px;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+.lang-list {
+    list-style: none;
+    padding: 0;
+    max-width: 350px;
+}
+
+.lang-list li {
+    padding: 14px 20px;
+    margin: 12px 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    font-size: 18px;
+    transition: color 0.4s ease;        /* только цвет */
+}
+
+.lang-list li:hover {
+    color: #e74c3c;                     /* плавно меняется только цвет */
+}
+
+.parent-1 .child { color: red; }
+
+.parent-2 { color: orange; }
+.parent-2 .child {
+    color: #b4005a;
+    border: 2px dashed orange;
+    padding: 8px 14px;
+    display: inline-block;
+    margin: 6px 4px;
+}
+
+.parent-2 ~ .parent-3,
+.parent-2 ~ .parent-3 .child {
+    color: green !important;
+}
+
+.parent-3 .parent-2 .child {
+    color: purple !important;
+    border: none !important;
+}
+
+.parent-1, .parent-2, .parent-3 {
+    margin: 35px 0;
+    padding

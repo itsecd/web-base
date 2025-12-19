@@ -3,49 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторная работа 1 — вариант 25</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Лабораторная работа 2 – Вариант 25</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="header">
-        <h1>Лабораторная работа №1</h1>
-        <p>РАБОТУ ВЫПОЛНИЛ<br>ТУДАКОВ РОДИОН<br>ГРУППА 6212-10.05.03D</p>
-    </div>
+    <header>
+        <h1>РАБОТУ ВЫПОЛНИЛ ТУДАКОВ РОДИОН</h1>
+        <p>ГРУППА 6212-10.05.03D</p>
+    </header>
 
-    <h2>Задание 1</h2>
-    <div class="text-container">
-        JavaScript (сокр. JS) — мультипарадигмальный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript (стандарт ECMA-262).<br><br>
-        JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение он находит в браузерах как язык сценариев для придания веб-страницам интерактивности.
-    </div>
+    <section class="task1">
+        <h2>Задание 1. Список с анимацией при наведении</h2>
+        <ul class="lang-list">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Java</li>
+            <li>C++</li>
+            <li>Go</li>
+        </ul>
+    </section>
 
-    <h2>Задание 2</h2>
-    <div class="image-overlay">
-        <img src="image1.png" alt="Картинка 1" class="image-overlay__img image-overlay__img--back">
-        <img src="image2.png" alt="Картинка 2" class="image-overlay__img image-overlay__img--front">
-    </div>
+    <hr>
 
-    <h2>Задание 3</h2>
-    <div class="traffic-light">
-        <div class="traffic-light__light traffic-light__light--red"></div>
-        <div class="traffic-light__light traffic-light__light--yellow"></div>
-        <div class="traffic-light__light traffic-light__light--green"></div>
-    </div>
+    <section class="task2">
+        <h2>Задание 2. Родители и дети</h2>
 
-    <h2>Задание 4</h2>
-    <div class="maze">
-        <div class="maze__cell maze__cell--start maze__cell--wall-top maze__cell--wall-right"></div>
-        <div class="maze__cell maze__cell--wall-top maze__cell--wall-left maze__cell--wall-right"></div>
-        <div class="maze__cell maze__cell--wall-top maze__cell--wall-left"></div>
+        <div class="parent-1">
+            <strong>Parent 1</strong>
+            <div class="child">child 1</div>
+            <div class="child">child 2</div>
+            <div class="child">child 3</div>
+            <div class="child">child 4</div>
+        </div>
 
-        <div class="maze__cell maze__cell--wall-bottom maze__cell--wall-right"></div>
-        <div class="maze__cell maze__cell--wall-left"></div>
-        <div class="maze__cell maze__cell--wall-bottom maze__cell--wall-right"></div>
+        <div class="parent-3">
+            <strong>Parent 3</strong>
+            <div class="child">child 1</div>
+            <div class="child">child 2</div>
+        </div>
 
-        <div class="maze__cell maze__cell--wall-right"></div>
-        <div class="maze__cell maze__cell--wall-bottom maze__cell--wall-left maze__cell--wall-right"></div>
-        <div class="maze__cell maze__cell--end maze__cell--wall-bottom maze__cell--wall-left"></div>
-    </div>
+        <div class="parent-2">
+            <strong>Parent 2</strong>
+            <div class="child">child 1</div>
+            <div class="child">child 2</div>
+        </div>
+
+        <div class="parent-3">
+            <strong>Parent 3</strong>
+            <div class="child">child 1</div>
+            <div class="child">child 2</div>
+            <div class="child">child 2</div>
+            <div class="parent-2">
+                <div class="child">child 1</div>
+                <div class="child">child 2</div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="task3">
+        <h2>Задание 3. Текст со ссылками и логотипом</h2>
+        <div class="text">
+            <p>Языки программирования — это инструменты, с помощью которых разработчики создают программное обеспечение, веб-приложения, игры, алгоритмы и многое другое. Каждый язык имеет свои особенности, синтаксис и сферу применения. Ниже представлены некоторые из наиболее известных языков:</p>
+
+            <ul>
+                <li><a href="https://python.org">Python</a> – высокоуровневый язык с простым синтаксисом, популярный в Data Science, веб-разработке и автоматизации.</li>
+                <li><a href="https://developer.mozilla.org">JavaScript</a> – основной язык для фронтенд-разработки, работает в браузерах и на сервере (Node.js).</li>
+                <li><a href="https://java.com">Java</a> – объектно-ориентированный язык, широко используется в корпоративных приложениях и Android-разработке.</li>
+                <li><a href="https://isocpp.org">C++</a> – мощный язык для системного программирования, игр и высокопроизводительных приложений.</li>
+                <li><a href="https://learn.microsoft.com">C#</a> – язык от Microsoft, применяется в разработке под Windows, играх (Unity) и веб-приложениях.</li>
+                <li><a href="https://go.dev">Go (Golang)</a> – созданный Google, язык для высоконагруженных сетевых сервисов и облачных технологий.</li>
+                <li><a href="https://ruby-lang.org">Ruby</a> – известен благодаря фреймворку Ruby on Rails для веб-разработки.</li>
+                <li><a href="https://developer.apple.com/swift">Swift</a> – язык Apple для разработки под iOS и macOS.</li>
+                <li><a href="https://kotlinlang.org">Kotlin</a> – современный язык, официально поддерживаемый для Android-разработки.</li>
+                <li><a href="https://rust-lang.org">Rust</a> – язык системного программирования с акцентом на безопасность и производительность.</li>
+            </ul>
+
+            <p>Это лишь малая часть из множества существующих языков, и выбор зависит от задач, которые нужно решить.</p>
+        </div>
+    </section>
 
 </body>
 </html>
