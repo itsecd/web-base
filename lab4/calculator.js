@@ -1,17 +1,56 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const num1Input = document.getElementById('num1');
-    const num2Input = document.getElementById('num2');
-    const operationSelect = document.getElementById('operation');
-    const calculateBtn = document.getElementById('calculate');
-    const resetBtn = document.getElementById('reset');
-    const resultDisplay = document.getElementById('result');
-    const historyList = document.getElementById('history');
+    // Получаем элементы с проверкой
+    const elements = {
+        num1: document.getElementById('num1'),
+        num2: document.getElementById('num2'),
+        operation: document.getElementById('operation'),
+        calculateBtn: document.getElementById('calculate'),
+        resetBtn: document.getElementById('reset'),
+        resultDisplay: document.getElementById('result'),
+        historyList: document.getElementById('history')
+    };
+
+    // Проверяем, все ли элементы найдены
+    const missingElements = [];
+    for (const [key, element] of Object.entries(elements)) {
+        if (!element) {
+            missingElements.push(key);
+            console.error(`Элемент с id="${key}" не найден на странице`);
+        }
+    }
+
+    // Если какие-то элементы не найдены, выводим сообщение и останавливаем выполнение
+    if (missingElements.length > 0) {
+        const errorMessage = `Не удалось найти элементы: ${missingElements.join(', ')}. 
+                             Калькулятор не может работать корректно.`;
+        
+        if (elements.resultDisplay) {
+            elements.resultDisplay.innerHTML = `
+                <div class="calculator__result-error">
+                    <div style="font-size: 3rem; color: #ff416c; margin-bottom: 10px;">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div style="font-size: 1.2rem; font-weight: bold; color: #dc3545;">
+                        Ошибка загрузки!
+                    </div>
+                    <div style="margin-top: 10px; color: #6c757d; font-size: 0.9rem;">
+                        ${errorMessage}
+                    </div>
+                </div>
+            `;
+        } else {
+            // Если даже resultDisplay не найден, выводим в консоль
+            console.error(errorMessage);
+            alert('Ошибка загрузки калькулятора. Проверьте консоль для подробностей.');
+        }
+        return; // Прекращаем выполнение скрипта
+    }
 
     // Функция для вычисления результата
     function calculate() {
-        const num1 = parseFloat(num1Input.value);
-        const num2 = parseFloat(num2Input.value);
-        const operation = operationSelect.value;
+        const num1 = parseFloat(elements.num1.value);
+        const num2 = parseFloat(elements.num2.value);
+        const operation = elements.operation.value;
 
         // Проверка на валидность ввода
         if (isNaN(num1) || isNaN(num2)) {
@@ -67,8 +106,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Функция для отображения результата
     function showResult(result, expression) {
-        resultDisplay.innerHTML = `
-            <div class="result-success">
+        elements.resultDisplay.innerHTML = `
+            <div class="calculator__result-success">
                 <div style="font-size: 0.9rem; color: #6c757d; margin-bottom: 5px;">
                     <i class="fas fa-calculator"></i> ${expression} =
                 </div>
@@ -84,8 +123,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Функция для отображения ошибки
     function showError(message) {
-        resultDisplay.innerHTML = `
-            <div class="result-error">
+        elements.resultDisplay.innerHTML = `
+            <div class="calculator__result-error">
                 <div style="font-size: 3rem; color: #ff416c; margin-bottom: 10px;">
                     <i class="fas fa-exclamation-triangle"></i>
                 </div>
@@ -102,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Функция для добавления в историю
     function addToHistory(expression, result, type) {
         const historyItem = document.createElement('div');
-        historyItem.className = `history-item ${type}`;
+        historyItem.className = `calculator__history-item calculator__history-item--${type}`;
         
         const now = new Date();
         const time = now.toLocaleTimeString('ru-RU', { 
@@ -135,11 +174,11 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
         }
 
-        historyList.insertBefore(historyItem, historyList.firstChild);
+        elements.historyList.insertBefore(historyItem, elements.historyList.firstChild);
 
         // Ограничиваем историю 10 записями
-        if (historyList.children.length > 10) {
-            historyList.removeChild(historyList.lastChild);
+        if (elements.historyList.children.length > 10) {
+            elements.historyList.removeChild(elements.historyList.lastChild);
         }
     }
 
@@ -157,37 +196,48 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Функция для сброса
     function resetCalculator() {
-        num1Input.value = '';
-        num2Input.value = '';
-        operationSelect.value = 'add';
-        resultDisplay.innerHTML = `
-            <div class="result-placeholder">
+        elements.num1.value = '';
+        elements.num2.value = '';
+        elements.operation.value = 'add';
+        elements.resultDisplay.innerHTML = `
+            <div class="calculator__result-placeholder">
                 <i class="fas fa-arrow-down"></i>
                 <p>Здесь появится результат вычислений</p>
             </div>
         `;
-        historyList.innerHTML = '';
-        num1Input.focus();
+        elements.historyList.innerHTML = '';
+        elements.num1.focus();
     }
 
-    // Обработчики событий
-    calculateBtn.addEventListener('click', calculate);
-    resetBtn.addEventListener('click', resetCalculator);
+    // Обработчики событий (добавляем проверку на существование)
+    if (elements.calculateBtn) {
+        elements.calculateBtn.addEventListener('click', calculate);
+    }
+    
+    if (elements.resetBtn) {
+        elements.resetBtn.addEventListener('click', resetCalculator);
+    }
 
     // Обработка нажатия Enter
-    [num1Input, num2Input, operationSelect].forEach(input => {
-        input.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                calculate();
-            }
-        });
+    [elements.num1, elements.num2, elements.operation].forEach(input => {
+        if (input) {
+            input.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    calculate();
+                }
+            });
+        }
     });
 
     // Фокусировка на первом поле при загрузке
-    num1Input.focus();
+    if (elements.num1) {
+        elements.num1.focus();
+    }
 
     // Добавляем пример в историю при загрузке
     setTimeout(() => {
-        addToHistory('5 + 3', 8, 'success');
+        if (elements.historyList) {
+            addToHistory('5 + 3', 8, 'success');
+        }
     }, 1000);
 });
