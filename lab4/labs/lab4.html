@@ -8,34 +8,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <header class="header">
-            <h1 class="title">
-                <i class="fas fa-calculator"></i>
+<body class="page">
+    <div class="page__container container">
+        <header class="header container__header">
+            <h1 class="header__title">
+                <i class="header__icon fas fa-calculator"></i>
                 Милый калькулятор
             </h1>
-            <p class="subtitle">Выполняйте простые операции в пастельном стиле</p>
+            <p class="header__subtitle">Выполняйте простые операции в пастельном стиле</p>
         </header>
 
-        <main class="calculator">
-            <div class="calculator-card">
-                <div class="inputs-section">
-                    <div class="number-inputs">
-                        <div class="input-group">
-                            <label for="num1" class="input-label">
-                                <i class="fas fa-hashtag"></i>
+        <main class="calculator container__calculator">
+            <div class="calculator__card">
+                <div class="calculator__inputs">
+                    <div class="calculator__number-inputs">
+                        <div class="input-group calculator__input-group">
+                            <label for="num1" class="input-group__label">
+                                <i class="input-group__icon fas fa-hashtag"></i>
                                 Первое число
                             </label>
-                            <input type="number" id="num1" class="number-input" placeholder="Введите число" step="any">
+                            <input type="number" id="num1" class="input-group__input number-input" placeholder="Введите число" step="any">
                         </div>
 
-                        <div class="operation-selector">
-                            <label for="operation" class="input-label">
-                                <i class="fas fa-cogs"></i>
+                        <div class="operation-selector calculator__operation-selector">
+                            <label for="operation" class="operation-selector__label">
+                                <i class="operation-selector__icon fas fa-cogs"></i>
                                 Операция
                             </label>
-                            <select id="operation" class="operation-select">
+                            <select id="operation" class="operation-selector__select">
                                 <option value="add">Сложение</option>
                                 <option value="subtract">Вычитание</option>
                                 <option value="multiply">Умножение</option>
@@ -43,52 +43,54 @@
                             </select>
                         </div>
 
-                        <div class="input-group">
-                            <label for="num2" class="input-label">
-                                <i class="fas fa-hashtag"></i>
+                        <div class="input-group calculator__input-group">
+                            <label for="num2" class="input-group__label">
+                                <i class="input-group__icon fas fa-hashtag"></i>
                                 Второе число
                             </label>
-                            <input type="number" id="num2" class="number-input" placeholder="Введите число" step="any">
+                            <input type="number" id="num2" class="input-group__input number-input" placeholder="Введите число" step="any">
                         </div>
                     </div>
                 </div>
 
-                <div class="calculate-section">
-                    <button id="calculateBtn" class="calculate-btn">
-                        <i class="fas fa-magic"></i>
-                        Вычислить
+                <div class="calculator__calculate-section">
+                    <button id="calculateBtn" class="calculator__button button">
+                        <i class="button__icon fas fa-magic"></i>
+                        <span class="button__text">Вычислить</span>
                     </button>
                 </div>
 
-                <div class="result-section">
-                    <div class="result-label">
-                        <i class="fas fa-star"></i>
-                        Результат:
+                <div class="calculator__result">
+                    <div class="calculator__result-label">
+                        <i class="calculator__result-icon fas fa-star"></i>
+                        <span class="calculator__result-text">Результат:</span>
                     </div>
-                    <div id="resultValue" class="result-value">—</div>
+                    <div id="resultValue" class="calculator__result-value">—</div>
                 </div>
 
-                <div id="errorMessage" class="error-message hidden">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <span class="error-text"></span>
+                <div id="errorMessage" class="calculator__error error-message error-message--hidden">
+                    <i class="error-message__icon fas fa-exclamation-triangle"></i>
+                    <span class="error-message__text"></span>
                 </div>
 
-                <div class="hint">
-                    <i class="fas fa-lightbulb"></i>
-                    <span>Подсказка: вы также можете нажать Enter для вычисления</span>
+                <div class="calculator__hint hint">
+                    <i class="hint__icon fas fa-lightbulb"></i>
+                    <span class="hint__text">Подсказка: вы также можете нажать Enter для вычисления</span>
                 </div>
             </div>
 
-            <div class="decoration">
-                <div class="circle circle-1"></div>
-                <div class="circle circle-2"></div>
-                <div class="circle circle-3"></div>
-                <div class="heart"><i class="fas fa-heart"></i></div>
+            <div class="calculator__decoration">
+                <div class="calculator__circle calculator__circle--1"></div>
+                <div class="calculator__circle calculator__circle--2"></div>
+                <div class="calculator__circle calculator__circle--3"></div>
+                <div class="calculator__heart">
+                    <i class="calculator__heart-icon fas fa-heart"></i>
+                </div>
             </div>
         </main>
 
-        <footer class="footer">
-            <p>С любовью создано для лабораторной работы</p>
+        <footer class="footer container__footer">
+            <p class="footer__text">С любовью создано для лабораторной работы</p>
         </footer>
     </div>
 

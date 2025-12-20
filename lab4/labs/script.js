@@ -1,19 +1,34 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
-    const num1Input = document.getElementById('num1');
-    const num2Input = document.getElementById('num2');
-    const operationSelect = document.getElementById('operation');
-    const calculateBtn = document.getElementById('calculateBtn');
-    const resultValue = document.getElementById('resultValue');
-    const errorMessage = document.getElementById('errorMessage');
-    const errorText = document.querySelector('.error-text');
+    const elements = {
+        num1Input: document.getElementById('num1'),
+        num2Input: document.getElementById('num2'),
+        operationSelect: document.getElementById('operation'),
+        calculateBtn: document.getElementById('calculateBtn'),
+        resultValue: document.getElementById('resultValue'),
+        errorMessage: document.getElementById('errorMessage'),
+        errorText: document.querySelector('.error-message__text')
+    };
+
+    const missingElements = [];
+    for (const [key, element] of Object.entries(elements)) {
+        if (!element) {
+            missingElements.push(key);
+            console.error(`Элемент ${key} не найден на странице`);
+        }
+    }
+
+    if (missingElements.length > 0) {
+        console.error('Не удалось найти элементы:', missingElements.join(', '));
+        return;
+    }
 
     function hideError() {
-        errorMessage.classList.add('hidden');
+        elements.errorMessage.classList.add('error-message--hidden');
     }
 
     function showError(message) {
-        errorText.textContent = message;
-        errorMessage.classList.remove('hidden');
+        elements.errorText.textContent = message;
+        elements.errorMessage.classList.remove('error-message--hidden');
     }
 
     function validateInputs(a, b) {
@@ -50,20 +65,15 @@
     }
 
     function formatResult(result) {
-        if (!Number.isInteger(result)) {
-            const rounded = parseFloat(result.toFixed(10));
-            return rounded.toString().replace(/(\.\d*?[1-9])0+$/, "$1").replace(/\.$/, "");
-        }
         return result.toString();
     }
 
     function calculate() {
         hideError();
 
-        const a = num1Input.value;
-        const b = num2Input.value;
-        const operation = operationSelect.value;
-
+        const a = elements.num1Input.value;
+        const b = elements.num2Input.value;
+        const operation = elements.operationSelect.value;
 
         const validation = validateInputs(a, b);
         if (!validation.isValid) {
@@ -71,7 +81,6 @@
             updateResultDisplay('—');
             return;
         }
-
 
         try {
             const result = performCalculation(a, b, operation);
@@ -83,19 +92,18 @@
         }
     }
 
-
     function updateResultDisplay(value) {
-        resultValue.textContent = value;
-        resultValue.classList.add('pulse');
+        elements.resultValue.textContent = value;
+        elements.resultValue.classList.add('pulse');
 
         setTimeout(() => {
-            resultValue.classList.remove('pulse');
+            elements.resultValue.classList.remove('pulse');
         }, 500);
     }
 
-    calculateBtn.addEventListener('click', calculate);
+    elements.calculateBtn.addEventListener('click', calculate);
 
-    [num1Input, num2Input, operationSelect].forEach(element => {
+    [elements.num1Input, elements.num2Input, elements.operationSelect].forEach(element => {
         element.addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 calculate();
@@ -103,13 +111,13 @@
         });
     });
 
-    num1Input.focus();
+    elements.num1Input.focus();
 
     function clearErrorOnInput() {
         hideError();
     }
 
-    num1Input.addEventListener('input', clearErrorOnInput);
-    num2Input.addEventListener('input', clearErrorOnInput);
-    operationSelect.addEventListener('change', clearErrorOnInput);
+    elements.num1Input.addEventListener('input', clearErrorOnInput);
+    elements.num2Input.addEventListener('input', clearErrorOnInput);
+    elements.operationSelect.addEventListener('change', clearErrorOnInput);
 });
